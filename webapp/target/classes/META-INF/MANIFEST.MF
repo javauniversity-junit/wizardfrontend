@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
-Built-By: s16715d
-Build-Jdk: 9
+Built-By: andrewhinton
+Build-Jdk: 10.0.1
 Implementation-Title: SpringBootSigninSignupExample
 Implementation-Version: 0.0.1-SNAPSHOT
 Implementation-Vendor-Id: com.jackrutorial
