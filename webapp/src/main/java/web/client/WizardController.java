@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class WizardController {
 	@GetMapping(path = "/wizard") 
 	public String wizard() {
+		
 		return "wizard";
 	}
 }
