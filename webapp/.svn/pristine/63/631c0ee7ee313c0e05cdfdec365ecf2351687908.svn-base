@@ -1,0 +1,34 @@
+https://spring.io/guides/gs/serving-web-content/
+https://spring.io/projects/spring-framework
+https://spring.io/guides/gs/securing-web/
+
+
+ /*<![CDATA[*/
+
+             $scope.records  = /*[[${category.toString()}]]*/
+              
+
+              /*]]>*/
+              
+              
+              [
+        	       {
+        	            "name" : "Alfreds Futterkiste",
+        	            "Country" : "Germany"
+        	        },{
+        	            "name" : "Berglunds snabbköp",
+        	            "Country" : "Sweden"
+        	        },{
+        	            "name" : "Centro comercial Moctezuma",
+        	            "Country" : "Mexico"
+        	        },{
+        	            "name" : "Ernst Handel",
+        	            "Country" : "Austria"
+        	        }
+        	    ]
+        	    
+        	    
+        	    
+        	    
+        	    
+        	    [{\"id\":3,\"name\":\"test\",\"url\":\"adsfads\",\"request\":\"                           \\r\\n            yrtyrtyrt\",\"authorId\":2,\"categoryId\":1,\"header\":\"{\\\"headerList\\\":[{\\\"key\\\":\\\"Content-Type\\\",\\\"value\\\":\\\"application\/xml\\\"}]}\"},{\"id\":4,\"name\":\"test\",\"url\":\"adsfads\",\"request\":\"                           \\r\\n            ddddfdf\",\"authorId\":2,\"categoryId\":1,\"header\":\"{\\\"headerList\\\":[{\\\"key\\\":\\\"Content-Type\\\",\\\"value\\\":\\\"application\/xml\\\"}]}\"},{\"id\":5,\"name\":\"testaaaa\",\"url\":\"adsfads\",\"request\":\"                           \\r\\n            hiohjiohji\",\"authorId\":2,\"categoryId\":1,\"header\":\"{\\\"headerList\\\":[{\\\"key\\\":\\\"Content-Type\\\",\\\"value\\\":\\\"application\/xml\\\"}]}\"},{\"id\":6,\"name\":\"ad\",\"url\":\"http:\/\/192.168.252.240\/OnlineaccessADBridge\/ADservices.svc\",\"request\":\"\\u003csoapenv:Envelope xmlns:soapenv\\u003d\\\"http:\/\/schemas.xmlsoap.org\/soap\/envelope\/\\\" xmlns:tem\\u003d\\\"http:\/\/tempuri.org\/\\\"\\u003e\\r\\n   \\u003csoapenv:Header\/\\u003e\\r\\n   \\u003csoapenv:Body\\u003e\\r\\n      \\u003ctem:DoesUserExist\\u003e\\r\\n         \\u003ctem:userId\\u003easdsecu9\\u003c\/tem:userId\\u003e\\r\\n      \\u003c\/tem:DoesUserExist\\u003e\\r\\n   \\u003c\/soapenv:Body\\u003e\\r\\n\\u003c\/soapenv:Envelope\\u003e\",\"authorId\":2,\"categoryId\":1,\"header\":\"{\\\"headerList\\\":[{\\\"key\\\":\\\"Content-Type\\\",\\\"value\\\":\\\"application\/xml\\\"},{\\\"key\\\":\\\"SOAPAction\\\",\\\"value\\\":\\\"http:\/\/tempuri.org\/IADservices\/DoesUserExist\\\"}]}\"},{\"id\":7,\"name\":\"test\",\"url\":\"http:\/\/192.168.252.240\/OnlineaccessADBridge\/ADservices.svc?WSDL\",\"request\":\"\\u003csoapenv:Envelope xmlns:soapenv\\u003d\\\"http:\/\/schemas.xmlsoap.org\/soap\/envelope\/\\\" xmlns:tem\\u003d\\\"http:\/\/tempuri.org\/\\\"\\u003e\\r\\n   \\u003csoapenv:Header\/\\u003e\\r\\n   \\u003csoapenv:Body\\u003e\\r\\n      \\u003ctem:DoesUserExist\\u003e\\r\\n         \\u003ctem:userId\\u003easdsecu9\\u003c\/tem:userId\\u003e\\r\\n      \\u003c\/tem:DoesUserExist\\u003e\\r\\n   \\u003c\/soapenv:Body\\u003e\\r\\n\\u003c\/soapenv:Envelope\\u003e\\r\\n            \",\"authorId\":2,\"categoryId\":1,\"header\":\"{\\\"headerList\\\":[{\\\"key\\\":\\\"Content-Type\\\",\\\"value\\\":\\\"text\/xml\\\"},{\\\"key\\\":\\\"SOAPAction\\\",\\\"value\\\":\\\"http:\/\/tempuri.org\/IADservices\/DoesUserExist\\\"}]}\"},{\"id\":8,\"name\":\"test\",\"url\":\"http:\/\/192.168.252.240\/OnlineaccessADBridge\/ADservices.svc?WSDL\",\"request\":\"\\u003csoapenv:Envelope xmlns:soapenv\\u003d\\\"http:\/\/schemas.xmlsoap.org\/soap\/envelope\/\\\" xmlns:tem\\u003d\\\"http:\/\/tempuri.org\/\\\"\\u003e\\r\\n   \\u003csoapenv:Header\/\\u003e\\r\\n   \\u003csoapenv:Body\\u003e\\r\\n      \\u003ctem:DoesUserExist\\u003e\\r\\n         \\u003ctem:userId\\u003easdsecu9\\u003c\/tem:userId\\u003e\\r\\n      \\u003c\/tem:DoesUserExist\\u003e\\r\\n   \\u003c\/soapenv:Body\\u003e\\r\\n\\u003c\/soapenv:Envelope\\u003e\\r\\n            \\r\\n            \",\"authorId\":2,\"categoryId\":1,\"header\":\"{\\\"headerList\\\":[{\\\"key\\\":\\\"Content-Type\\\",\\\"value\\\":\\\"text\/xml\\\"},{\\\"key\\\":\\\"SOAPAction\\\",\\\"value\\\":\\\"http:\/\/tempuri.org\/IADservices\/DoesUserExist\\\"}]}\"},{\"id\":9,\"name\":\"test\",\"url\":\"http:\/\/192.168.252.240\/OnlineaccessADBridge\/ADservices.svc?WSDL\",\"request\":\"\\u003csoapenv:Envelope xmlns:soapenv\\u003d\\\"http:\/\/schemas.xmlsoap.org\/soap\/envelope\/\\\" xmlns:tem\\u003d\\\"http:\/\/tempuri.org\/\\\"\\u003e\\r\\n   \\u003csoapenv:Header\/\\u003e\\r\\n   \\u003csoapenv:Body\\u003e\\r\\n      \\u003ctem:DoesUserExist\\u003e\\r\\n         \\u003ctem:userId\\u003easdsecu9\\u003c\/tem:userId\\u003e\\r\\n      \\u003c\/tem:DoesUserExist\\u003e\\r\\n   \\u003c\/soapenv:Body\\u003e\\r\\n\\u003c\/soapenv:Envelope\\u003e\\r\\n            \\r\\n            \",\"authorId\":2,\"categoryId\":1,\"header\":\"{\\\"headerList\\\":[{\\\"key\\\":\\\"Content-Type\\\",\\\"value\\\":\\\"text\/xml\\\"},{\\\"key\\\":\\\"SOAPAction\\\",\\\"value\\\":\\\"http:\/\/tempuri.org\/IADservices\/DoesUserExist\\\"}]}\"},{\"id\":10,\"name\":\"test\",\"url\":\"http:\/\/192.168.252.240\/OnlineaccessADBridge\/ADservices.svc?WSDL\",\"request\":\"\\u003csoapenv:Envelope xmlns:soapenv\\u003d\\\"http:\/\/schemas.xmlsoap.org\/soap\/envelope\/\\\" xmlns:tem\\u003d\\\"http:\/\/tempuri.org\/\\\"\\u003e\\r\\n   \\u003csoapenv:Header\/\\u003e\\r\\n   \\u003csoapenv:Body\\u003e\\r\\n      \\u003ctem:DoesUserExist\\u003e\\r\\n         \\u003ctem:userId\\u003easdsecu9\\u003c\/tem:userId\\u003e\\r\\n      \\u003c\/tem:DoesUserExist\\u003e\\r\\n   \\u003c\/soapenv:Body\\u003e\\r\\n\\u003c\/soapenv:Envelope\\u003e\",\"authorId\":2,\"categoryId\":1,\"header\":\"{\\\"headerList\\\":[{\\\"key\\\":\\\"Content-Type\\\",\\\"value\\\":\\\"text\/xml\\\"},{\\\"key\\\":\\\"SOAPAction\\\",\\\"value\\\":\\\"http:\/\/tempuri.org\/IADservices\/DoesUserExist\\\"}]}\"},{\"id\":11,\"name\":\"test\",\"url\":\"http:\/\/192.168.252.240\/OnlineaccessADBridge\/ADservices.svc?WSDL\",\"request\":\"\\u003csoapenv:Envelope xmlns:soapenv\\u003d\\\"http:\/\/schemas.xmlsoap.org\/soap\/envelope\/\\\" xmlns:tem\\u003d\\\"http:\/\/tempuri.org\/\\\"\\u003e\\r\\n   \\u003csoapenv:Header\/\\u003e\\r\\n   \\u003csoapenv:Body\\u003e\\r\\n      \\u003ctem:DoesUserExist\\u003e\\r\\n         \\u003ctem:userId\\u003easdsecu9\\u003c\/tem:userId\\u003e\\r\\n      \\u003c\/tem:DoesUserExist\\u003e\\r\\n   \\u003c\/soapenv:Body\\u003e\\r\\n\\u003c\/soapenv:Envelope\\u003e\\r\\n            \\r\\n            \",\"authorId\":2,\"categoryId\":1,\"header\":\"{\\\"headerList\\\":[{\\\"key\\\":\\\"Content-Type\\\",\\\"value\\\":\\\"text\/xml\\\"},{\\\"key\\\":\\\"SOAPAction\\\",\\\"value\\\":\\\"http:\/\/tempuri.org\/IADservices\/DoesUserExist\\\"}]}\"}]"                        

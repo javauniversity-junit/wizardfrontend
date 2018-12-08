@@ -1,0 +1,327 @@
+package web.client;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLConnection;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
+import java.security.Security;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
+import java.util.List;
+import java.util.logging.Level;
+import javax.net.ssl.HttpsURLConnection;
+
+import java.util.logging.Logger;
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSession;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
+
+import web.client.model.WebClient;
+
+public class SoapManager {
+	/**
+     * class logger
+     */
+    private static Logger log = Logger.getLogger("SoapManager");
+
+    //ignore the certificate checks
+    public static void ignoreCertificateCheck() {
+        Security.addProvider(new com.sun.net.ssl.internal.ssl.Provider());
+        //Create a trust manager that does not validate certificate chains:
+        TrustManager[] trustAllCerts = new TrustManager[]{
+            new X509TrustManager() {
+
+                public X509Certificate[] getAcceptedIssuers() {
+                    return null;
+                }
+
+                public void checkServerTrusted(X509Certificate[] certs, String authType) throws CertificateException {
+                    return;
+                }
+
+                public void checkClientTrusted(X509Certificate[] certs, String authType) throws CertificateException {
+                    return;
+                }
+            }//X509TrustManager
+        };//TrustManager[]
+        //Install the all-trusting trust manager:
+        SSLContext sc = null;
+        try {
+            sc = SSLContext.getInstance("SSL");
+        } catch (NoSuchAlgorithmException ex) {
+            Logger.getLogger(SoapManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            sc.init(null, trustAllCerts, new SecureRandom());
+        } catch (KeyManagementException ex) {
+            Logger.getLogger(SoapManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+
+        //avoid "HTTPS hostname wrong: should be <myhostname>" exception:
+        HostnameVerifier hv = new HostnameVerifier() {
+
+            public boolean verify(String urlHostName, SSLSession session) {
+                if (!urlHostName.equalsIgnoreCase(session.getPeerHost())) {
+                    System.out.println("Warning: URL host '" + urlHostName + "' is different to SSLSession host '" + session.getPeerHost() + "'.");
+                }
+                return true; //also accept different hostname (e.g. domain name instead of IP address)
+            }
+        };
+        HttpsURLConnection.setDefaultHostnameVerifier(hv);
+
+
+    }
+    /**
+     * remove carriage return and new line
+     *
+     * @return string
+     */
+    public static String getFormattedMessage(String message) {
+       
+        //covert message to character
+        String line = "";
+        char character[] = message.toCharArray();
+        //loop thru character and remove carriage return and new line
+        for (int x = 0; x < character.length; x++) {
+            char oneCharacter = character[x];
+            if (!Character.isIdentifierIgnorable(oneCharacter) && (oneCharacter != '\n' || oneCharacter != '\r')) {
+                line = line + oneCharacter;
+            }
+
+        }
+        return line;
+    }
+    /**
+     * <p>
+     * Send soap message to web service
+     * </p>
+     *
+     */
+    public static String send(WebClient soap ) {
+    	 String response = null;
+        StringBuffer buffer = new StringBuffer(); // log buffer
+        StringBuffer messageBuffer = new StringBuffer();// soap message builder
+        try {
+
+            log.log(Level.INFO,"#######################  Start wed service debugging");
+            buffer.append("#######################  Start wed service debugging");
+            buffer.append("\n\r");
+            // First create the connection
+            log.log(Level.INFO,"#######################  try to create Soap Connection");
+            URL url = new URL(soap.getUrl().trim());
+            HttpURLConnection urlConnection = null;
+
+            //determine if http or https connection
+            int SSLIndex = soap.getUrl().trim().indexOf("https");
+            //http connection
+            if (SSLIndex == -1) {
+                urlConnection = (HttpURLConnection)url.openConnection(); //http request
+            } else {
+                //https connection
+                ignoreCertificateCheck();
+                urlConnection = (HttpsURLConnection) url.openConnection();
+
+            }
+
+            //HttpsURLConnection urlConnection = url.openConnection();
+//			HttpURLConnection httpConnection = (HttpURLConnection) urlConnection;
+            // establish connection parameters
+            log.log(Level.INFO,"#######################  try to create Soap Connection");
+            urlConnection.setDoOutput(true);
+            urlConnection.setDoInput(true);
+            //these are doNet or java web service
+            urlConnection.setRequestProperty("Content-type", "text/xml");
+
+            /*
+            String authorization = null;
+            if (soap.getBasicAuthenticationUserName() != null && soap.getBasicAuthenticationUserPassword() != null) {
+                authorization = soap.getBasicAuthenticationUserName() + ":" + soap.getBasicAuthenticationUserPassword();
+            }
+             log.log(Level.SEVERE,"Authorization is it null [" + authorization + "]");
+            if (authorization != null) {
+                byte[] encodedBytes;
+                
+                org.apache.commons.codec.binary.Base64 base64 = new org.apache.commons.codec.binary.Base64();
+                encodedBytes = base64.encode(authorization.getBytes());
+                String authStringEnc = new String(encodedBytes);
+
+               
+                
+                 authorization = "Basic " + authStringEnc;
+                //authorization = "Basic " +"Vk9ZTU1XUzpDVjdZNEVYTQ==";
+                urlConnection.setRequestProperty("Authorization", authorization);
+                //"
+                log.log(Level.SEVERE,"Authorization [" + authorization + "]");
+            }
+*/
+            // set operation is passed in by form
+           @SuppressWarnings("unchecked")
+			
+            HeaderMaster headerMaster = (HeaderMaster)WebClientHeader.convertFromJson(soap.getHeader());
+            
+             
+            
+            
+            for (Header header : headerMaster.getHeaderList()) {
+            	urlConnection.setRequestProperty(header.getKey(), header.getValue());
+            	log.info("##################### header [" + header.getKey().trim() + " " +   header.getValue() + "]");
+            }
+            
+            // setup message
+            OutputStream outputStream = urlConnection.getOutputStream();
+            Writer messageWriter = new OutputStreamWriter(outputStream);
+            // write to message object
+            messageBuffer.append("");
+            log.log(Level.INFO,"#######################  try to write to soap message stream");
+
+            if (soap.getRequest() != null) {
+                String formatted = getFormattedMessage(soap.getRequest());
+                messageBuffer.append(formatted);
+                }
+
+            // write to the message stream
+            log.log(Level.INFO,"#######################  write to the message stream");
+
+            messageWriter.write(messageBuffer.toString());
+            
+            
+
+//log message
+            // send the message
+            log.log(Level.INFO,"#######################  send the message");
+            messageWriter.flush();
+            messageWriter.close();
+
+            // save the entire message for display
+            java.io.ByteArrayOutputStream outMessageStream = new java.io.ByteArrayOutputStream();
+            InputStream inputStream = urlConnection.getInputStream();
+          
+         
+            int c;
+            while ((c = inputStream.read()) != -1) {
+                outMessageStream.write(c);
+                
+            }
+
+          //  log.info("###########;############  get the soap request [ " + request + "]");
+            inputStream.close();
+
+           
+            outMessageStream.close();
+            log.log(Level.INFO,"###########;############  get the soap reply [ " + outMessageStream.toString() + "]");
+            response = outMessageStream.toString();
+
+        } catch (Exception e) {
+            String errorMessage = "<error>"
+                    + e.getMessage() + "</error>";
+            log.log(Level.SEVERE,errorMessage);
+            response = errorMessage;
+
+            e.printStackTrace();
+
+        }
+        return response;
+    }
+    
+    
+    
+    public static String sendSSL(WebClient soap) {
+        StringBuffer buffer = new StringBuffer(); // log buffer
+        String response = null;
+        StringBuffer messageBuffer = new StringBuffer();// soap message builder
+        try {
+            log.info("#######################  Start wed service debugging");
+            buffer.append("#######################  Start wed service debugging");
+            buffer.append("\n\r");
+            // First create the connection
+            log.info("#######################  try to create Soap Connection");
+            URL url = new URL(soap.getUrl().trim());
+            HttpsURLConnection urlConnection = (HttpsURLConnection) url.openConnection();
+
+            //URLConnection urlConnection = url.openConnection();
+            // establish connection parameters
+            log.info("#######################  try to create Soap Connection");
+            urlConnection.setDoOutput(true);
+            urlConnection.setDoInput(true);
+            //these are doNet or java web service
+           // urlConnection.setRequestProperty("Content-type", "text/xml");
+            // set operation is passed in by form
+            //build header information
+            @SuppressWarnings("unchecked")
+			
+            HeaderMaster headerMaster = (HeaderMaster)WebClientHeader.convertFromJson(soap.getHeader());
+            
+             
+            
+            
+            for (Header header : headerMaster.getHeaderList()) {
+            	urlConnection.setRequestProperty(header.getKey(), header.getValue());
+            	log.info("##################### header [" + header.getKey().trim() + " " +   header.getValue() + "]");
+            }
+            
+            
+           
+            
+            
+            
+            
+            // setup message
+            OutputStream outputStream = urlConnection.getOutputStream();
+            Writer messageWriter = new OutputStreamWriter(outputStream);
+            // write to message object
+            messageBuffer.append("");
+            log.info("#######################  try to write to soap message stream");
+            if (soap.getRequest() != null) {
+            String formatted = getFormattedMessage(soap.getRequest());
+            messageBuffer.append(formatted);
+            }
+            // write to the message stream
+            log.info("#######################  write to the message stream");
+            messageWriter.write(messageBuffer.toString());
+             
+            log.info("##################### message ");
+            log.info(messageBuffer.toString());
+          
+            // send the message
+            log.info("#######################  send the message");
+            messageWriter.flush();
+            messageWriter.close();
+            // get the soap reply
+            log.info("#######################  get the soap reply");
+            // save the entire message for display
+            java.io.ByteArrayOutputStream outMessageStream = new java.io.ByteArrayOutputStream();
+            InputStream inputStream = urlConnection.getInputStream();
+
+
+            int c;
+            while ((c = inputStream.read()) != -1) {
+                outMessageStream.write(c);
+            }
+            inputStream.close();
+
+            response = outMessageStream.toString();
+            outMessageStream.close();
+            log.info("###########;############  get the soap reply [ " + outMessageStream.toString() + "]");
+
+
+        } catch (Exception e) {
+            String errorMessage = "<error>"
+                    + e.getMessage() + "</error>";
+            log.severe(errorMessage);
+           
+
+            e.printStackTrace();
+
+        }
+        return response;
+    }
+
+}

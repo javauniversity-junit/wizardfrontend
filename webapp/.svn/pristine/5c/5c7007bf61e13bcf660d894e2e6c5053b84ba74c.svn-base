@@ -1,0 +1,218 @@
+<!DOCTYPE>
+<html  ng-app="myapp" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Web Client</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+
+
+    <style type="text/css">
+        body > .container {
+            padding-top: 40px;
+        }
+        
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 30px;
+            padding-top: 5px;
+            background-color: #3c3c3c;
+            color: #e8e3e3;
+        }
+        
+        .border {
+            border: 1px solid;
+        }
+        
+        .fixed-height {
+            position: fixed;
+            top: 140px;
+            bottom: 40px;
+            overflow-y: scroll;
+        }
+        
+        .message {
+            border-bottom: 1px solid #bebebe;
+            padding: 10px;
+        }
+        
+        .message .sender {
+            font-size: 13px;
+        }
+        
+        .message .subject {
+            font-size: 14px;
+            color: #807e7e;
+        }
+        
+        .message .date {
+            font-size: 11px;
+            color: #333232;
+        }
+        
+        .email-header {
+            position: fixed;
+            width: 100%;
+            padding: 20px;
+            background-color: #d9d6d6;
+            color: #5a5959;
+        }
+        
+        .email-header .row div:first-child {
+            color: #000 !important;
+        }
+        
+        .email-body {
+            padding-top: 100px;
+        }
+        
+        @media screen and (max-width: 1000px) {
+            .email-body {
+                padding-top: 160px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a>
+                    </li>
+                    <li><a href="/allCategories">Categories</a>
+                    </li>
+                    <li><a href="/allUsers">Users</a>
+                    </li>
+
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <!-- Begin page content -->
+    <div class="container">
+        <div class="page-header">
+           
+            <a href="/pages/createWebService.htm" class="btn btn-info" role="button">Create Web Service</a>
+        </div>
+        <br/>
+        <div class="row" style="padding-top: 10%;">
+            <div class="col-md-4 col-sm-4 col-xs-4 border fixed-height">
+
+                <div ng-controller="TabsDemoCtrl">
+
+                    <tabset>
+                        <tab heading="Inbox">
+                            <div class="message row" ng-repeat="i in getNumber(number) track by $index">
+                                <div class="sender col-md-10">Sender {{ $index+1 }}</div>
+                                <div class="date col-md-2">Yesterday</div>
+                                <div class="subject col-md-12">This is my email subject for email #{{ $index+1 }}</div>
+                            </div>
+
+                        </tab>
+
+                        <tab heading="Sent">
+
+                            <div class="message row" ng-repeat="i in getNumber(number) track by $index">
+                                <div class="sender col-md-10">Recepient {{ $index+1 }}</div>
+                                <div class="date col-md-2">Yesterday</div>
+                                <div class="subject col-md-12">Email sent to recipient #{{ $index+1 }}</div>
+                            </div>
+                        </tab>
+                    </tabset>
+
+
+                </div>
+            </div>
+            <div class="col-md-7 col-sm-7 col-xs-8 col-xs-offset-4 col-md-offset-4 col-sm-offset-4 border fixed-height">
+                <div class="row email-header">
+                    <div class="row">
+                        <div class="col-md-1 col-md-offset-1">From</div>
+                        <div class="col-md-10">Sender 1</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1 col-md-offset-1">Date</div>
+                        <div class="col-md-10">Thursday, 26 February 2015 8:46 pm</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-1 col-md-offset-1">Subject</div>
+                        <div class="col-md-10">Developing CSS for Email Client like View</div>
+                    </div>
+
+                </div>
+                <div class="email-body">
+
+                    <h4>Hi <i>XYZ,</i></h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et dignissim urna. Donec purus eros, egestas non gravida in, elementum a diam. Nunc mattis, erat non semper tempor, purus est mollis leo, eu tempor metus lectus vitae metus. Etiam ut odio luctus, condimentum tellus eu, maximus diam. Suspendisse ullamcorper nibh gravida finibus cursus. Pellentesque at diam a orci gravida dapibus non eu eros. Aenean feugiat rhoncus ligula, eget porta odio congue sed. Duis mollis blandit tempor. Vestibulum id tincidunt ex. Sed rhoncus sem enim, nec ullamcorper ligula condimentum sit amet. Etiam congue erat et sem imperdiet rhoncus. Ut quam ligula, consectetur facilisis ante non, faucibus lobortis massa. Nullam vestibulum tincidunt faucibus. Donec efficitur est purus, vel aliquet magna consequat in. Donec auctor faucibus nibh in condimentum.
+                    </p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet</li>
+                        <li>Consectetur adipiscing elit</li>
+                        <li>Integer molestie lorem at massa</li>
+                        <li>Facilisis in pretium nisl aliquet</li>
+                        <li>Nulla volutpat aliquam velit
+                            <ul>
+                                <li>Phasellus iaculis neque</li>
+                                <li>Purus sodales ultricies</li>
+                                <li>Vestibulum laoreet porttitor sem</li>
+                                <li>Ac tristique libero volutpat at</li>
+                            </ul>
+                        </li>
+                        <li>Faucibus porta lacus fringilla vel</li>
+                        <li>Aenean sit amet erat nunc</li>
+                        <li>Eget porttitor lorem</li>
+                    </ul>
+                    <p>
+                        Regards,
+                        <br><b>ABC</b>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Footer content here.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.1/ui-bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.1/ui-bootstrap-tpls.min.js"></script>
+
+    <script type="text/javascript">
+        var app = angular.module('myapp', ['ui.bootstrap'])
+            .controller('TabsDemoCtrl', function ($scope, $window) {
+
+                // Demo Logic to Manipulate No of Objects on left
+                $scope.number = 16;
+                $scope.getNumber = function (num) {
+                    return new Array(num);
+                }
+            });
+    </script>
+</body>
+
+</html>

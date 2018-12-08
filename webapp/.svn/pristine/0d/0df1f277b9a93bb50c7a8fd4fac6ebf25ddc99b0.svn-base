@@ -1,0 +1,103 @@
+package web.client;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+@Entity // This tells Hibernate to make a table out of this class
+@Table(name = "webclient")
+public class WebClient {
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Integer id;
+    
+    @NotNull
+    @Column(name="name")
+    private String name;
+    
+   @NotNull 
+    @Column(name="url")  
+    private String url;
+    @Column(name="request")
+    @Size(max = 1004)
+    private String request;
+    public String getRequest() {
+		return request;
+	}
+
+	public void setRequest(String request) {
+		this.request = request;
+	}
+
+	@NotNull // JSR303 
+    @Column(name="author_id") 
+    private Integer authorId;
+     @NotNull // JSR303 
+     @Column(name="category_id")
+    private Integer categoryId;
+    @NotNull // JSR303 
+    @Column(name="header")
+    private String header;
+
+
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
+
+	
+
+	public Integer getAuthorId() {
+		return authorId;
+	}
+
+	public void setAuthorId(Integer authorId) {
+		this.authorId = authorId;
+	}
+
+	public Integer getCategoryId() {
+		return categoryId;
+	}
+
+	public void setCategoryId(Integer categoryId) {
+		this.categoryId = categoryId;
+	}
+
+	public String getHeader() {
+		return header;
+	}
+
+	public void setHeader(String header) {
+		this.header = header;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+    
+    
+}
+

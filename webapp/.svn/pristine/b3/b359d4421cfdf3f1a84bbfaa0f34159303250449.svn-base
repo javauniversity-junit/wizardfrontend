@@ -1,0 +1,54 @@
+package web.client;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.*;
+
+
+
+@Entity // This tells Hibernate to make a table out of this class
+public class Category {
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    private Integer id;
+
+    private String name;	
+
+    @OneToMany
+    @JoinTable(
+            name="webclient",
+            joinColumns = @JoinColumn( name="id"),
+            inverseJoinColumns = @JoinColumn( name="category_id")
+    )
+    private List<WebClient> mWebClients = new ArrayList<WebClient>();
+
+	public List<WebClient> getmWebClients() {
+		return mWebClients;
+	}
+
+	public void setmWebClients(List<WebClient> mWebClients) {
+		this.mWebClients = mWebClients;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+    
+    
+}
+

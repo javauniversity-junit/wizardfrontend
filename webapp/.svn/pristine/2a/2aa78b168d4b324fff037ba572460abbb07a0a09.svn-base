@@ -1,0 +1,26 @@
+package web.client;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.google.gson.Gson;
+
+public class WebClientHeader implements  java.io.Serializable{
+	
+	private Map<String, String> mMap = new HashMap<String, String>();
+	private Gson gson = new Gson();
+	
+	public void add(String headerKey, String headerValue) {
+		mMap.put(headerKey, headerValue);
+	}
+	
+	
+	public String convertToJson() {
+		String json = null;
+		 // convert map to JSON String
+       json = gson.toJson(mMap);
+		return json;
+	}
+	
+
+}
