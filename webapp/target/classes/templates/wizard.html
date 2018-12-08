@@ -65,71 +65,10 @@
 				</div>
 
 <h3>HTML</h3>
-<pre class="prettyprint linenums">
-&lt;div id="rootwizard">
-	&lt;div class="navbar">
-	  &lt;div class="navbar-inner">
-	    &lt;div class="container">
-	&lt;ul>
-	  	&lt;li>&lt;a href="#tab1" data-toggle="tab">First&lt;/a>&lt;/li>
-		&lt;li>&lt;a href="#tab2" data-toggle="tab">Second&lt;/a>&lt;/li>
-		&lt;li>&lt;a href="#tab3" data-toggle="tab">Third&lt;/a>&lt;/li>
-		&lt;li>&lt;a href="#tab4" data-toggle="tab">Forth&lt;/a>&lt;/li>
-		&lt;li>&lt;a href="#tab5" data-toggle="tab">Fifth&lt;/a>&lt;/li>
-		&lt;li>&lt;a href="#tab6" data-toggle="tab">Sixth&lt;/a>&lt;/li>
-		&lt;li>&lt;a href="#tab7" data-toggle="tab">Seventh&lt;/a>&lt;/li>
-	&lt;/ul>
-	 &lt;/div>
-	  &lt;/div>
-	&lt;/div>
-	&lt;div class="tab-content">
-	    &lt;div class="tab-pane" id="tab1">
-	      1
-	    &lt;/div>
-	    &lt;div class="tab-pane" id="tab2">
-	      2
-	    &lt;/div>
-		&lt;div class="tab-pane" id="tab3">
-			3
-	    &lt;/div>
-		&lt;div class="tab-pane" id="tab4">
-			4
-	    &lt;/div>
-		&lt;div class="tab-pane" id="tab5">
-			5
-	    &lt;/div>
-		&lt;div class="tab-pane" id="tab6">
-			6
-	    &lt;/div>
-		&lt;div class="tab-pane" id="tab7">
-			7
-	    &lt;/div>
-		&lt;ul class="pager wizard">
-			&lt;li class="previous first">&lt;a href="javascript:;">First&lt;/a>&lt;/li>
-			&lt;li class="previous">&lt;a href="javascript:;">Previous&lt;/a>&lt;/li>
-			&lt;li class="next last">&lt;a href="javascript:;">Last&lt;/a>&lt;/li>
-		  	&lt;li class="next">&lt;a href="javascript:;">Next&lt;/a>&lt;/li>
-			&lt;li class="finish">&lt;a href="javascript:;">Finish&lt;/a>&lt;/li>
-		&lt;/ul>
-	&lt;/div>
-&lt;/div>
-</pre>
+
 
 <h3>JS</h3>
-<pre class="prettyprint linenums">
-$(document).ready(function() {
-  	$('#rootwizard').bootstrapWizard({onTabShow: function(tab, navigation, index) {
-		var $total = navigation.find('li').length;
-		var $current = index+1;
-		var $percent = ($current/$total) * 100;
-		$('#rootwizard').find('.bar').css({width:$percent+'%'});
-	}});
-	$('#rootwizard .finish').click(function() {
-		alert('Finished!, Starting over!');
-		$('#rootwizard').find("a[href*='tab1']").trigger('click');
-	});
-});
-</pre>
+
 
 			</section>
 	</div>
