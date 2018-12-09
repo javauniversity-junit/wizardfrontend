@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html>
+<html ng-app="myapp" xmlns:th="http://www.thymeleaf.org">
   <head>
     <title>Wizard With Finish Button On last tab</title>
     <!-- Bootstrap -->
@@ -32,10 +31,14 @@
 					 </div>
 					  </div>
 					</div>
+					
+					
+					
+					
+					
 					<div class="tab-content">
-					    <div class="tab-pane" id="tab1">
-					      1
-					    </div>
+					    <div th:replace="/data/demographic :: demographic"></div>
+					    
 					    <div class="tab-pane" id="tab2">
 					      2
 					    </div>
