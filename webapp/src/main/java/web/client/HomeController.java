@@ -32,10 +32,7 @@ public class HomeController {
 	private WebClientRepository mWebClientRepository;
 
 	
-	@GetMapping("/hh")
-	public String defaultPage() {
-		return "redirect:/index.html";
-	}
+
 	
 	@RequestMapping(path = "/home", method = RequestMethod.GET, produces = "text/html")
 	 public String home( Model model) {
