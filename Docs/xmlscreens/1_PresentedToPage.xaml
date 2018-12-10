@@ -1,0 +1,55 @@
+﻿<xctk:WizardPage x:Class="SCRWizard2015.PresentedToPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:local="clr-namespace:SCRWizard2015"
+             mc:Ignorable="d" d:DesignHeight="600" d:DesignWidth="800"
+             Title="(1) Presented To"
+             Description="This Wizard is designed to help you create a Summary, Conclusions and Recommendations (SCR). Follow the prompts on the screen. Use the tab key to go from one field to the next and to format your data."
+                 >
+    <Grid  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <xctk:Zoombox x:Name="ZoomBx" ViewStackIndex="0" ViewStackMode="Auto" ZoomOn="View" Grid.Row="0" Scale="{Binding ElementName=uiScaleSlider,Path=Value}">
+        <Grid x:Name="DisplayFrid" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <!---->
+                    <Label Grid.Row="0" Grid.Column="0">Presentation To</Label>
+                    <TextBox Grid.Row="0" Grid.Column="1" Width="250" Text="{Binding ClientContactName}" ></TextBox>
+                    <!---->
+                    <Label Grid.Row="1" Grid.Column="0">Business Name</Label>
+                <TextBox Width="250" Grid.Row="1" Grid.Column="1" Text="{Binding ClientBusinessName}"></TextBox>
+                    <!---->
+                    <Label Grid.Row="2" Grid.Column="0">Integrated Media Specialist Name</Label>
+                    <TextBox Width="250" Grid.Row="2" Grid.Column="1" Text="{Binding PortfolioManagerName}"></TextBox>
+                    <!---->
+                    <Label Grid.Row="4" Grid.Column="0">Phone Number</Label>
+                <xctk:MaskedTextBox  Grid.Row="4" Grid.Column="1" Text="{Binding PortfolioPhoneNumber}" x:Name="PhoneNumner" Mask="(000) 000-0000" HorizontalAlignment="Left" />
+                    <!---->
+                    <Label Grid.Row="5" Grid.Column="0">Station/Media Group</Label>
+                    <TextBox Grid.Row="5" Grid.Column="1" Width="250" Text="{Binding Station}"></TextBox>
+                </Grid>         
+        </xctk:Zoombox>
+        <Image Grid.Row="0" x:Name="ZoomBoxLocator" Width="30" Height="30" Grid.ZIndex="-1" VerticalAlignment="Bottom" HorizontalAlignment="Right" 
+               Source="/SCRWizard2015;component/images/arrow-big-four-way-128.png" ></Image>
+        <Slider Grid.Column="0"  Grid.Row="1"
+            x:Name="uiScaleSlider" 
+            ToolTip="Slide to Scale"
+            Value="1" Minimum="0.1" Maximum="4" ValueChanged="uiScaleSlider_ValueChanged" />
+    </Grid>    
+</xctk:WizardPage>

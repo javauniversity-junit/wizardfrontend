@@ -1,0 +1,97 @@
+﻿<xctk:WizardPage x:Class="SCRWizard2015.StrategicMarketringTwoPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:local="clr-namespace:SCRWizard2015"
+             mc:Ignorable="d" d:DesignHeight="600" d:DesignWidth="800"
+                 Title="(7) Strategic Marketing II">
+    <Grid  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <xctk:Zoombox x:Name="ZoomBx" ViewStackIndex="0" ViewStackMode="Auto" ZoomOn="View" Grid.Row="0" Scale="{Binding ElementName=uiScaleSlider,Path=Value}">
+            <Grid x:Name="DisplayGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" MinWidth="375"></ColumnDefinition>
+                    <ColumnDefinition Width="*" MinWidth="375"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <!---->
+                <Label  Grid.Row="0" Grid.Column="0" Content="4. Who is the main competition?" ></Label>
+                <StackPanel  Grid.Row="1" Grid.Column="0" Orientation="Horizontal"  >
+                    <Label Content="( A )" ></Label>
+                    <TextBox Width="350" Text="{Binding CompetitionA}" ></TextBox>
+                </StackPanel>
+                <!---->
+                <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal"  >
+                    <Label Content="( B )"></Label>
+                    <TextBox Width="350" Text="{Binding CompetitionB}"></TextBox>
+                </StackPanel>
+                <!---->
+                <Label Grid.Row="2" Grid.Column="0" Content="What are their strengths?"></Label> 
+                <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal">
+                    <Label Content="( A )"></Label>
+                    <TextBox Height="50"  Width="350" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding CompetitionStrengthA}"></TextBox>
+                </StackPanel>
+                <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
+                    <Label Content="( B )"></Label>
+                    <TextBox Height="50"  Width="350" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding CompetitionStrengthB}"></TextBox>
+                </StackPanel>
+                <!---->
+                <Label Grid.Row="4" Grid.Column="0" Content="What are their weaknesses?"></Label>
+                <StackPanel Grid.Row="5" Grid.Column="0" Orientation="Horizontal">
+                    <Label Content="( A )"></Label>
+                    <TextBox Height="50"  Width="350" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding CompetitionWeaknessA}"></TextBox>
+                </StackPanel>
+                <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
+                    <Label Content="( B )"></Label>
+                    <TextBox Height="50"  Width="350" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding CompetitionWeaknessB}"></TextBox>
+                </StackPanel>
+                <!---->
+                <StackPanel Grid.Row="6" Grid.Column="0" Orientation="Vertical" Grid.ColumnSpan="2">
+                    <Label Content="5. What image does the client want the company's name to project to their customers / consumers?"></Label>
+                    <TextBox  Width="775"  VerticalScrollBarVisibility="Auto" Height="100" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding CompanyNameProjectImage}"></TextBox>
+                </StackPanel>
+                <!---->
+                <StackPanel Grid.Row="7" Grid.Column="0" Orientation="Vertical" Grid.ColumnSpan="2">
+                    <Label Content="Current Company Slogan:"></Label>
+                    <TextBox  Width="775"  VerticalScrollBarVisibility="Auto" Height="50" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding CurrentCompanySlogan}"></TextBox>
+                </StackPanel>
+                <!---->
+                <StackPanel Grid.Row="8" Grid.Column="0" Orientation="Horizontal" Grid.ColumnSpan="2">
+                    <Label Content="Does their current slogan project the same image?" ></Label>
+                    <RadioButton VerticalAlignment="Center" IsChecked="{Binding CompanySloganProjectImageYes}">yes</RadioButton>
+                    <RadioButton VerticalAlignment="Center" IsChecked="{Binding CompanySloganProjectImageNo}">no</RadioButton>
+                </StackPanel>
+            </Grid>
+        </xctk:Zoombox>
+        <Image Grid.Row="0" x:Name="ZoomBoxLocator" Width="30" Height="30" Grid.ZIndex="-1" VerticalAlignment="Bottom" HorizontalAlignment="Right" 
+               Source="/SCRWizard2015;component/images/arrow-big-four-way-128.png" ></Image>
+        <Slider Grid.Column="0"  Grid.Row="1"
+            x:Name="uiScaleSlider" 
+            ToolTip="Slide to Scale"
+            Value="1" Minimum="0.1" Maximum="4" ValueChanged="uiScaleSlider_ValueChanged" />
+    </Grid>
+</xctk:WizardPage>
