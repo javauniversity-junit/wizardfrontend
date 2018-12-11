@@ -16,7 +16,7 @@ public class DemographicController {
 	Logger mlogger = Logger.getLogger(this.getClass().getName());
 	
 	//@RequestMapping(path = "/wizard/demographic", method = RequestMethod.GET, produces = "text/html")
-	@RequestMapping(path = Pages.WebURLConstants.WEBURL_DEMOGRAPHIC_VALUE, method = RequestMethod.POST, produces = "text/html")
+	@RequestMapping(path = Pages.WebURLConstants.WEBURL_DEMOGRAPHIC_VALUE, method = RequestMethod.GET, produces = "text/html")
 	public String populatePage(@RequestParam(name ="guuid", required=false) String guuid) 
 	{ 
 		 mlogger.info(new Object(){}.getClass().getEnclosingMethod().getName() + " beginning " + Pages.DEMOGRAPHIC.getDatabaseType());

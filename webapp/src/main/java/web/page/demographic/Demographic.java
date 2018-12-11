@@ -1,19 +1,27 @@
 package web.page.demographic;
 
 public class Demographic {
-	private String title;
-	private String description;
-	public String getTitle() {
-		return title;
+	private String presentedTo;
+	private String presentedBusiness;
+	private String presentedBy;
+	public String getPresentedTo() {
+		return presentedTo;
 	}
-	public void setTitle(String title) {
-		this.title = title;
+	public void setPresentedTo(String presentedTo) {
+		this.presentedTo = presentedTo;
 	}
-	public String getDescription() {
-		return description;
+	public String getPresentedBusiness() {
+		return presentedBusiness;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+	public void setPresentedBusiness(String presentedBusiness) {
+		this.presentedBusiness = presentedBusiness;
 	}
+	public String getPresentedBy() {
+		return presentedBy;
+	}
+	public void setPresentedBy(String presentedBy) {
+		this.presentedBy = presentedBy;
+	}
+	
 
 }
