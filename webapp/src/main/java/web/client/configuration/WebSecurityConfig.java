@@ -10,7 +10,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
-
+//.antMatchers("/css/**", "/js/**", "/img/**").permitAll().anyRequest().permitAll()    
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -19,8 +19,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http
             .authorizeRequests()
                 .antMatchers("/").permitAll()
-                .anyRequest().authenticated()
-                .antMatchers("/css/**", "/js/**", "/img/**").permitAll().anyRequest().permitAll()                
+                .antMatchers("/css/**", "/vendor/**", "/js/**", "/img/**").permitAll().anyRequest().permitAll() 
+                .anyRequest().authenticated()            
                 .and()
             .formLogin()
                 .loginPage("/login")
