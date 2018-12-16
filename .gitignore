@@ -1,0 +1,10 @@
+
+webapp/target/classes/static/css/error.css
+webapp/target/classes/static/index.html
+webapp/target/classes/static/login.html
+webapp/target/classes/static/vendor/fontawesome-free/less/_animated.less
+webapp/target/classes/static/index.html
+webapp/target/classes/static/login.html
+webapp/target/classes/static/vendor/fontawesome-free/less/_bordered-pulled.less
+webapp/target/classes/static/vendor/fontawesome-free/scss/_animated.scss
+*.html
