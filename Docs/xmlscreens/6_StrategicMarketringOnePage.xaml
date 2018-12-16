@@ -1,0 +1,91 @@
+﻿<xctk:WizardPage x:Class="SCRWizard2015.StrategicMarketingOnePage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:local="clr-namespace:SCRWizard2015"
+             mc:Ignorable="d" d:DesignHeight="600" d:DesignWidth="800"
+                 Title="(6) Strategic Marketing I" Enter="WizardPage_Enter">
+    <Grid  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <xctk:Zoombox x:Name="ZoomBx" ViewStackIndex="0" ViewStackMode="Auto" ZoomOn="View" Grid.Row="0" Scale="{Binding ElementName=uiScaleSlider,Path=Value}" Margin="0,-39,0,0">
+            <Grid x:Name="DisplayGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" MinWidth="600"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <!---->
+                <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+                    <Label Content="1. How long has the client been in business?"></Label>
+                    <xctk:DecimalUpDown Value="{Binding YearsInBusiness}" Text="{Binding YearsInBusiness}"></xctk:DecimalUpDown>
+                </StackPanel>
+                <!---->
+                <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+                    <Label Content="How many locations?"></Label>
+                    <xctk:DecimalUpDown Value="{Binding NumberOfLocations}" Text="{Binding NumberOfLocations}"></xctk:DecimalUpDown>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
+                    <Label Content="Plans to expand?" ></Label>
+                    <ComboBox x:Name="PlanToExpand" Width="50" SelectionChanged="PlanToExpand_SelectionChanged">
+                        <ComboBoxItem>No</ComboBoxItem>
+                        <ComboBoxItem>Yes</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+                <!---->
+                <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Vertical">
+                    <Label Content="2. What are the biggest misconceptions consumers have about the business?" ></Label>
+                    <TextBox  Width="775"  VerticalScrollBarVisibility="Auto" Height="50" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding Misconceptions}"></TextBox>
+                </StackPanel>
+                <!---->
+                <StackPanel Grid.Row="4" Grid.Column="0" Orientation="Vertical">
+                    <Label Content="3. What are the clients most distinctive selling advantages?" ></Label>
+                    <TextBox  Width="775"  VerticalScrollBarVisibility="Auto" Height="50" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding SellingAdvantages}"></TextBox>
+                </StackPanel>
+                
+                <!-- tms -->
+
+                <!---->
+                <StackPanel Grid.Row="6" Grid.Column="0" Orientation="Vertical" Grid.ColumnSpan="2">
+                    <Label Content="4. What image does the client want the company's name to project to their customers / consumers?"></Label>
+                    <TextBox  Width="775"  VerticalScrollBarVisibility="Auto" Height="50" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding CompanyNameProjectImage}"></TextBox>
+                </StackPanel>
+                <!---->
+                <StackPanel Grid.Row="7" Grid.Column="0" Orientation="Vertical" Grid.ColumnSpan="2">
+                    <Label Content="Current Company Slogan:"></Label>
+                    <TextBox  Width="775"  VerticalScrollBarVisibility="Auto" Height="25" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding CurrentCompanySlogan}"></TextBox>
+                </StackPanel>
+                <!---->
+                <StackPanel Grid.Row="8" Grid.Column="0" Orientation="Horizontal" Grid.ColumnSpan="2">
+                    <Label Content="Does their current slogan project the same image?" ></Label>
+                    <RadioButton VerticalAlignment="Center" IsChecked="{Binding CompanySloganProjectImageYes}">yes</RadioButton>
+                    <RadioButton VerticalAlignment="Center" IsChecked="{Binding CompanySloganProjectImageNo}">no</RadioButton>
+                </StackPanel>
+                
+                <!-- tms -->
+            </Grid>
+        </xctk:Zoombox>
+        <Image Grid.Row="0" x:Name="ZoomBoxLocator" Width="30" Height="30" Grid.ZIndex="-1" VerticalAlignment="Bottom" HorizontalAlignment="Right" 
+               Source="/SCRWizard2015;component/images/arrow-big-four-way-128.png" ></Image>
+        <Slider Grid.Column="0"  Grid.Row="1"
+            x:Name="uiScaleSlider" 
+            ToolTip="Slide to Scale"
+            Value="1" Minimum="0.1" Maximum="4" ValueChanged="uiScaleSlider_ValueChanged" />
+    </Grid>
+</xctk:WizardPage>
