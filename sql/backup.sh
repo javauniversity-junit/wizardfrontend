@@ -1,7 +1,7 @@
 #!/bin/sh
 now="$(date +'%d_%m_%Y_%H_%M_%S')"
 filename="db_backup_$now".gz
-backupfolder="/var/www/vhosts/example.com/httpdocs/backups"
+backupfolder="/home/databasebackup"
 fullpathbackupfile="$backupfolder/$filename"
 logfile="$backupfolder/"backup_log_"$(date +'%Y_%m')".txt
 echo "mysqldump started at $(date +'%d-%m-%Y %H:%M:%S')" >> "$logfile"
