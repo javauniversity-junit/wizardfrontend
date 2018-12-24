@@ -27,7 +27,7 @@ private AgentRepository agentRepository;
 		
 		Iterable<Agent> agents = agentRepository.findAll(sort);
 	
-		
+		//add to model
 		model.addAttribute("agents", agents);
 
 		return "agents";
