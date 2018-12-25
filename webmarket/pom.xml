@@ -4,8 +4,8 @@
  <modelVersion>4.0.0</modelVersion>
 
  <groupId>com.jackrutorial</groupId>
- <artifactId>SpringBootSigninSignupExample</artifactId>
- <version>0.0.1-SNAPSHOT</version>
+ <artifactId>webmarket</artifactId>
+ <version>0.0.1</version>
  <packaging>war</packaging>
 
  <name>SpringBootSigninSignupExample</name>
@@ -80,10 +80,19 @@
 
  <build>
   <plugins>
-   <plugin>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-maven-plugin</artifactId>
-   </plugin>
+       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.2</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+            </manifest>
+          </archive>
+          <warSourceDirectory>src/main/webapp</warSourceDirectory>
+        </configuration>
+      </plugin>
   </plugins>
  </build>
 </project>
