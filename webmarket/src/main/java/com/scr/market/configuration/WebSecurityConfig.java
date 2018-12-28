@@ -10,12 +10,15 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import java.util.logging.Logger;
 //.antMatchers("/css/**", "/js/**", "/img/**").permitAll().anyRequest().permitAll()    
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+    private static final Logger mLog = Logger.getLogger(WebSecurityConfig.class.getName());
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        mLog.info("starting configure");
         http
             .authorizeRequests()
                 .antMatchers("/").permitAll()
@@ -33,9 +36,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     @Override
     public UserDetailsService userDetailsService() {
+        mLog.info("starting userDetailService");
         UserDetails user =
              User.withDefaultPasswordEncoder()
-                .username("user")
+                .username("a@aol.com")
                 .password("password")
                 .roles("USER")
                 .build();
