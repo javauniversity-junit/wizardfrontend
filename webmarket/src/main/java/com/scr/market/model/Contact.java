@@ -96,6 +96,13 @@ public class Contact {
 	public void setStreetaddress(String streetaddress) {
 		this.streetaddress = streetaddress;
 	}
+	
+	public String getEmailaddress() {
+		return emailaddress;
+	}
+	public void setEmailaddress(String emailaddress) {
+		this.emailaddress = emailaddress;
+	}
 	public String getCity() {
 		return city;
 	}
@@ -132,6 +139,7 @@ public class Contact {
     private Timestamp usageDate;
     private Timestamp endDate;
     private String address;
+    private String emailaddress;
     private String streetaddress;
     private String city;
     private String state;
