@@ -7,6 +7,6 @@ import com.scr.market.model.Agent;
 import com.scr.market.model.Contact;;
 
 public interface ContactRepository extends CrudRepository<Contact, Integer> {
-	public Agent findByAddressAndPassword(@Param("address") String address, @Param("password") String password);
+	public Contact findByEmailaddress(String emailaddress);
 
 }

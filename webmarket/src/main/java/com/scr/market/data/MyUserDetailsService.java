@@ -6,20 +6,22 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import com.scr.market.model.Agent;
+import com.scr.market.model.Contact;
 import com.scr.market.repository.AgentRepository;
+import com.scr.market.repository.ContactRepository;
 
 public class MyUserDetailsService implements UserDetailsService {
 
 	@Autowired
-	private AgentRepository mAgentRepository;
+	private ContactRepository mContactRepository;
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
-		Agent agent = mAgentRepository.findByAddress(username);
-		if (agent == null) {
+		Contact contact = mContactRepository.findByEmailaddress(username);
+		if (contact == null) {
             throw new UsernameNotFoundException(username);
         }
-        return new MyUserPrincipal(agent);
+        return new MyUserPrincipal(contact);
 		
 	}
 	

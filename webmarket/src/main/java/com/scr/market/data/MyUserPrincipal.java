@@ -3,33 +3,35 @@ package com.scr.market.data;
 import java.util.Collection;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import com.scr.market.model.Agent;
+import com.scr.market.model.Contact;
 
 public class MyUserPrincipal implements UserDetails {
-	 private Agent agent;
+	 private Contact contact;
 	 
-	    public MyUserPrincipal(Agent agent) {
-	        this.agent = agent;
+	    public MyUserPrincipal(Contact contact) {
+	        this.contact = contact;
 	    }
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
-		return null;
+		return AuthorityUtils.createAuthorityList("ROLE_USER");
+		
 	}
 
 	@Override
 	public String getPassword() {
-		String password = agent.getPassword();
+		String password = contact.getPassword();
 		return password;
 	}
 
 	@Override
 	public String getUsername() {
 		// TODO Auto-generated method stub
-		return agent.getAddress();
+		return contact.getEmailaddress();
 	}
 
 	@Override
