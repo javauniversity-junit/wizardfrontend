@@ -10,5 +10,6 @@ import com.scr.market.model.Agent;
 
 public interface AgentRepository extends CrudRepository<Agent, Integer> {
 	Iterable<Agent> findAll(Sort sort);
+	Agent findByAddress(String address);
 
 }
