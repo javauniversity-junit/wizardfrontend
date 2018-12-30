@@ -32,14 +32,14 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
     public Authentication authenticate(final Authentication authentication) throws AuthenticationException {
         final String name = authentication.getName();
         final String password = authentication.getCredentials().toString();
-        if (name.equals("admin") && password.equals("system")) {
+        if (name.equals("admin") && password.equals("admin")) {
             final List<GrantedAuthority> grantedAuths = new ArrayList<>();
             grantedAuths.add(new SimpleGrantedAuthority("ROLE_USER"));
             final UserDetails principal = new User(name, password, grantedAuths);
             final Authentication auth = new UsernamePasswordAuthenticationToken(principal, password, grantedAuths);
             return auth;
         } else {
-        	Contact contact = mContactRepository.findFirstEmailAddressAndPasswordBy(name,password);
+        	Contact contact = mContactRepository.findByEmailaddressAndPassword(name,password);
         	
         	if (contact == null ) {
         		return null;
