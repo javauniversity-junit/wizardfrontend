@@ -39,12 +39,12 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
             final Authentication auth = new UsernamePasswordAuthenticationToken(principal, password, grantedAuths);
             return auth;
         } else {
-        	List<Contact> contactList = mContactRepository.findByEmailaddress(name,password);
+        	Contact contact = mContactRepository.findFirstEmailAddressAndPasswordBy(name,password);
         	
-        	if (contactList == null ) {
+        	if (contact == null ) {
         		return null;
         	}
-        	Contact contact = contactList.get(0);
+        	//Contact contact = contactList.get(0);
         	final List<GrantedAuthority> grantedAuths = new ArrayList<>();
             grantedAuths.add(new SimpleGrantedAuthority("ROLE_USER"));
             MyUserPrincipal myUserPrincipal = new MyUserPrincipal(contact);
