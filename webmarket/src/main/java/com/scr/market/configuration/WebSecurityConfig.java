@@ -20,8 +20,10 @@ import java.util.logging.Logger;
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-	@Autowired
-	private MyUserDetailsService mUserDetailsService;
+	
+	
+	  @Autowired
+	    private CustomAuthenticationProvider authProvider;
     private static final Logger mLog = Logger.getLogger(WebSecurityConfig.class.getName());
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -40,11 +42,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll();
     }
 
+   
     @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(mUserDetailsService);
-
+    protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
+        auth.authenticationProvider(authProvider);
     }
+
     
     /*
     @Bean

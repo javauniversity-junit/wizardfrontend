@@ -17,7 +17,7 @@ public class MyUserDetailsService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
-		Contact contact = mContactRepository.findByEmailaddress(username);
+		Contact contact = null;
 		if (contact == null) {
             throw new UsernameNotFoundException(username);
         }
