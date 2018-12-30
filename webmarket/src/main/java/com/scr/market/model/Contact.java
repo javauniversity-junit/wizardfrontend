@@ -127,6 +127,7 @@ public class Contact {
 	public void setActive(Boolean active) {
 		this.active = active;
 	}
+	 @Column(name="password")
 	private String password;
     private String name;
     private String uuid;
@@ -139,6 +140,7 @@ public class Contact {
     private Timestamp usageDate;
     private Timestamp endDate;
     private String address;
+    @Column(name="emailaddress")
     private String emailaddress;
     private String streetaddress;
     private String city;
