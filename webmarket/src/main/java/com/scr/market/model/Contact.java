@@ -8,8 +8,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.SessionScope;
+
 @Entity // This tells Hibernate to make a table out of this class
 @Table(name="contact")
+@SessionScope
+@Component
 //@Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class Contact {
 	@Id
