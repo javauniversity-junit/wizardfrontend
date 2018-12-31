@@ -9,6 +9,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 @Entity // This tells Hibernate to make a table out of this class
 @Table(name="contact")
+//@Bean
+//@Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
+
 public class Contact {
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
