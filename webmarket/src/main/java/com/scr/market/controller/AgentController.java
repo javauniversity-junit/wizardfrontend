@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.Authentication;
-
+import java.security.Principal;
 import com.scr.market.model.Agent;
 import com.scr.market.repository.AgentRepository;
 import java.util.logging.Logger;
@@ -25,19 +25,25 @@ private static final Logger mLog = Logger.getLogger(AgentController.class.getNam
 //@Autowired
  //   private IAuthenticationFacade authenticationFacade;
 	
-	@GetMapping(path = "/index")
-	public String getAll(Model model) {
+	@GetMapping(path = "/agents")
+	public String getAll(Model model, Principal principal) {
 	     mLog.info("starting getAll");
+	     String principalName = "unKnown";
+	     if (principal != null) {
+	         principalName = principal.getName();
+	           mLog.info("starting getAll");
+	     }
+	       mLog.info("principalName [" + principalName + "]");
 	//	Authentication authentication = authenticationFacade.getAuthentication();
 		//sort by nameAuthentication authentication = authenticationFacade.getAuthentication();
-		Sort sort = new Sort(Direction.ASC, "name");
+		Sort sort = new Sort(Direction.ASC, "address");
 		
 		Iterable<Agent> agents = agentRepository.findAll(sort);
 	
 		//add to model
 		model.addAttribute("agents", agents);
 
-		return "index";
+		return "agents";
 
 	}
 
