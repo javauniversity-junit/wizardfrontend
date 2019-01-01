@@ -63,14 +63,22 @@
 		<div>
 
 			<form method="get" action="/add">
-				<div class="form-group">
-					<label for="exampleInputEmail1">Email</label> 
-					<input required="required"
-						type="text" class="form-control" id="name" name="name"
-						aria-describedby="nameHelp" placeholder="Enter name"> 
-						<small
-						id="nameHelp" class="form-text text-muted">Please enter a descriptive name.</small>
+				<div class="form-group row">
+                                  <label for="example-email-input" class="col-2 col-form-label">Email</label>
+  				  <div class="col-10">
+    					<input placeholder="Enter name" required="required"  class="form-control" type="email"  id="example-email-input">
+  				  </div>
 				</div>
+					
+				<div class="form-group row">
+                                  <label for="example-email-input" class="col-2 col-form-label">Password</label>
+  				  <div class="col-10">
+    					<input placeholder="Enter name" required="required"  class="form-control" type="text"  id="example-email-input">
+  				  </div>
+				</div>					
+					
+					
+					
 				
 				
 				<button type="submit" class="btn btn-primary">Submit</button>
