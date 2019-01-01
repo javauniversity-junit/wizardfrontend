@@ -30,7 +30,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         mLog.info("starting configure");
         http
             .authorizeRequests()
-                .antMatchers("/").permitAll()
+                .antMatchers("/","/index.html").permitAll()
                 .antMatchers("/css/**", "/vendor/**", "/js/**", "/img/**").permitAll().anyRequest().permitAll() 
                 .anyRequest().authenticated()            
                 .and()

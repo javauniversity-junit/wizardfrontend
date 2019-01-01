@@ -11,7 +11,7 @@ import org.springframework.security.core.Authentication;
 
 import com.scr.market.model.Agent;
 import com.scr.market.repository.AgentRepository;
-
+import java.util.logging.Logger;
 
 
 
@@ -22,13 +22,13 @@ public class AgentController  {
 private AgentRepository agentRepository;
 private static final Logger mLog = Logger.getLogger(AgentController.class.getName());
 
-@Autowired
-    private IAuthenticationFacade authenticationFacade;
+//@Autowired
+ //   private IAuthenticationFacade authenticationFacade;
 	
 	@GetMapping(path = "/index")
 	public String getAll(Model model) {
 	     mLog.info("starting getAll");
-		Authentication authentication = authenticationFacade.getAuthentication();
+	//	Authentication authentication = authenticationFacade.getAuthentication();
 		//sort by nameAuthentication authentication = authenticationFacade.getAuthentication();
 		Sort sort = new Sort(Direction.ASC, "name");
 		
