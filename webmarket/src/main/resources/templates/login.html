@@ -5,7 +5,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <title>Spring Security  </title>
+        <title>Logon</title>
           
           <style>
                 body#LoginForm{ background-image:url("https://hdwallsource.com/img/2014/9/blur-26347-27038-hd-wallpapers.jpg"); background-repeat:no-repeat; background-position:center; background-size:cover; padding:10px;}
@@ -75,14 +75,14 @@
       
       <body id="LoginForm">
             
-             <div th:if="${param.error}">
+             <div class="alert alert-danger" th:if="${param.error}">
             Invalid user name and password entered.
         </div>
         <div th:if="${param.logout}">
             You have been logged out.
         </div>
 <div class="container">
-<h1 class="form-heading">login Form</h1>
+
 <div class="login-form">
 <div class="main-div">
     <div class="panel">
@@ -110,7 +110,7 @@
         <input class="btn btn-primary" type="submit" value="Sign In"/>
     </form>
     </div>
-<p class="botto-text"> Designed by Sunil Rajput</p>
+
 </div></div></div>
 
 
