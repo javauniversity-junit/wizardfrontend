@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
@@ -18,8 +19,8 @@ import org.springframework.web.context.annotation.SessionScope;
 @Table(name="contact")
 @SessionScope
 @Component
-//@Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)
-public class Contact {
+//need to serialize for  session
+public class Contact implements Serializable {
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer contactId;
