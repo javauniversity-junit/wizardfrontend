@@ -45,7 +45,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         		return null;
         	}
 		//determine if contact is valid
-		boolean isValid = com.scr.market.util.CalendarHelper.hasNotExpired(contact.,contact.);
+		boolean isValid = com.scr.market.util.CalendarHelper.hasNotExpired(contact.getStartDate(),contact.getEndDate());
 		
         	//Contact contact = contactList.get(0);
         	final List<GrantedAuthority> grantedAuths = new ArrayList<>();
