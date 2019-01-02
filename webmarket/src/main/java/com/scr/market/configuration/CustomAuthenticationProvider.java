@@ -21,6 +21,7 @@ import java.util.logging.Logger;
 
 @Component
 public class CustomAuthenticationProvider implements AuthenticationProvider {
+	private static final Logger mLog = Logger.getLogger(CustomAuthenticationProvider.class.getName());
 	@Autowired
 	private ContactRepository mContactRepository;
     public CustomAuthenticationProvider() {
