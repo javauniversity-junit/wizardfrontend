@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 import com.scr.market.data.MyUserPrincipal;
 import com.scr.market.model.Contact;
 import com.scr.market.repository.ContactRepository;
+import java.util.logging.Logger;
 
 @Component
 public class CustomAuthenticationProvider implements AuthenticationProvider {
