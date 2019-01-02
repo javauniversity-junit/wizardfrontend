@@ -1,0 +1,72 @@
+//https://www.tutorialspoint.com/compile_java_online.php
+
+
+import java.sql.Timestamp;
+import java.util.*;
+import java.text.*;
+
+public class HelloWorld{
+      static SimpleDateFormat dateFormat = new SimpleDateFormat(
+            "yyyy-MM-dd hh:mm:ss");
+  
+     public static void main(String []args){
+        System.out.println("Hello World");
+        //2017-01-04 00:10:00
+        //2022-01-30 00:09:00
+        try {
+        
+          
+
+    //Date parsedTimeStamp = dateFormat.parse("2014-08-22 15:02:51:580");
+    
+Date endparsedTimeStamp = dateFormat.parse("2020-01-30 00:09:00");
+    Timestamp end = new Timestamp(endparsedTimeStamp.getTime());
+        
+        Date startparsedTimeStamp = dateFormat.parse("2017-01-04 00:10:00");
+    Timestamp start = new Timestamp(startparsedTimeStamp.getTime());
+        
+ System.out.println(" start " + start);
+        System.out.println(" end   " + end);
+        
+        boolean expired = hasExpired(start, end);
+        System.out.println("HAS  Expired " + expired);
+        
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
+     }
+     
+     
+     public static boolean hasExpired(Timestamp startTime, Timestamp endTime) {
+       
+          Calendar start = Calendar.getInstance();
+          start.setTimeInMillis( startTime.getTime() );
+          
+          System.out.println(" cal start "  + dateFormat.format(start.getTime()));
+         // System.out.println(dateFormat.format(start));
+          
+          Calendar end = Calendar.getInstance();
+          end.setTimeInMillis( endTime.getTime() );
+           System.out.println(" cal end "  +dateFormat.format(end.getTime()));
+          Calendar currentTime = Calendar.getInstance();
+          
+
+	System.out.println( " today " +dateFormat.format(currentTime.getTime())); //2016/11/16 12:08:43
+          
+          
+          
+          boolean isCurrentTimeAfterStartTime = currentTime.after(start);
+          boolean isCurrentTimeBeforEndTime  = currentTime.before(end);
+          
+          System.out.println("currentTime.after(start) " + isCurrentTimeAfterStartTime);
+          System.out.println("currentTime.before(end) " + isCurrentTimeBeforEndTime);
+          
+          boolean expired = true;
+          if (isCurrentTimeAfterStartTime &&  isCurrentTimeBeforEndTime) {
+              return false;
+          }
+   
+          
+        return expired; 
+     }
+}
