@@ -5,8 +5,10 @@ import java.util.Calendar;
 public class CalendarHelper 
 {
 
-     public boolean hasExpired() {
+     public boolean hasExpired(Timestamp startTime, Timestamp endTime) {
        
+          Calendar start = Calendar.getInstance();
+          start.setTimeInMillis( startTime.getTime() );
         return false; 
      }
 
