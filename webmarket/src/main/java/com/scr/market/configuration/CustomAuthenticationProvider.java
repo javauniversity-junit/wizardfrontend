@@ -32,6 +32,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 
     @Override
     public Authentication authenticate(final Authentication authentication) throws AuthenticationException {
+	     mLog.info("starting authenticate");
         final String name = authentication.getName();
         final String password = authentication.getCredentials().toString();
         if (name.equals("admin") && password.equals("admin")) {
@@ -48,7 +49,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         	}
 		//determine if contact is valid
 		boolean isValid = com.scr.market.util.CalendarHelper.hasNotExpired(contact.getStartDate(),contact.getEndDate());
-		
+		 mLog.info("Has a valid license [" + isValid + "]" );
         	//Contact contact = contactList.get(0);
         	final List<GrantedAuthority> grantedAuths = new ArrayList<>();
             grantedAuths.add(new SimpleGrantedAuthority("ROLE_USER"));
