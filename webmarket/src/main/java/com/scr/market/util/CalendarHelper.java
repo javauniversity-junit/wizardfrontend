@@ -12,6 +12,8 @@ public class CalendarHelper
           
           Calendar end = Calendar.getInstance();
           start.setTimeInMillis( endTime.getTime() );
+          
+          Calendar currentTime = Calendar.getInstance();
    
           
         return false; 
