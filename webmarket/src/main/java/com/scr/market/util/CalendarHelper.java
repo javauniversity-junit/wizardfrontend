@@ -14,6 +14,8 @@ public class CalendarHelper
           start.setTimeInMillis( endTime.getTime() );
           
           Calendar currentTime = Calendar.getInstance();
+          
+          boolean expired = currentTime.after(startTime) && currentTime.before(endTime);
    
           
         return false; 
