@@ -5,7 +5,7 @@ import java.util.Calendar;
 public class CalendarHelper 
 {
 
-     public boolean hasNotExpired(Timestamp startTime, Timestamp endTime) {
+     public static boolean hasNotExpired(Timestamp startTime, Timestamp endTime) {
        
           Calendar start = Calendar.getInstance();
           start.setTimeInMillis( startTime.getTime() );
