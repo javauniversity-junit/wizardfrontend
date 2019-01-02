@@ -9,6 +9,11 @@ public class CalendarHelper
        
           Calendar start = Calendar.getInstance();
           start.setTimeInMillis( startTime.getTime() );
+          
+          Calendar end = Calendar.getInstance();
+          start.setTimeInMillis( endTime.getTime() );
+   
+          
         return false; 
      }
 
