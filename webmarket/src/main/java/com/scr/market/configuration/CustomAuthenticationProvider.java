@@ -44,6 +44,9 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         	if (contact == null ) {
         		return null;
         	}
+		//determine if contact is valid
+		boolean isValid = xxxx.cccc(xxxx,xxxxx);
+		
         	//Contact contact = contactList.get(0);
         	final List<GrantedAuthority> grantedAuths = new ArrayList<>();
             grantedAuths.add(new SimpleGrantedAuthority("ROLE_USER"));
