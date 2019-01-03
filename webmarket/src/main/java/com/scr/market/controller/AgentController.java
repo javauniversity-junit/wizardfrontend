@@ -40,7 +40,10 @@ private static final Logger mLog = Logger.getLogger(AgentController.class.getNam
 	public String add(@RequestParam String email, @RequestParam String password) {
 		// @ResponseBody means the returned String is the response, not a view name
 		// @RequestParam means it is a parameter from the GET or POST request
-
+             mLog.info("starting add");
+		mLog.info("email " + email);
+		mLog.info("password " + password);
+		mLog.info("contact.getContactId() " + contact.getContactId());
 		Agent agent = new Agent();
 		agent.setAddress(email);
 		agent.setPassword(password);
