@@ -36,7 +36,7 @@ private static final Logger mLog = Logger.getLogger(AgentController.class.getNam
 		// @RequestParam means it is a parameter from the GET or POST request
 
 		Agent agent = new Agent();
-		agent.setName(email);
+		agent.setAddress(email);
 		agent.SetPassword(password);
 
 		agentRepository.save(agent);
