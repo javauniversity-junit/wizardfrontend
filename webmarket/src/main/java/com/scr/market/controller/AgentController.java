@@ -47,6 +47,7 @@ private static final Logger mLog = Logger.getLogger(AgentController.class.getNam
 		Sort sort = new Sort(Direction.ASC, "address");
 		
 		Iterable<Agent> agents = agentRepository.findAll(sort);
+		long size = agents.spliterator().getExactSizeIfKnown();
 	
 		//add to model
 		model.addAttribute("agents", agents);
