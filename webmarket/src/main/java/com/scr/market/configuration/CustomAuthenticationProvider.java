@@ -48,9 +48,9 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         		return null;
         	}
 		//determine if contact is valid
-		boolean isValid = com.scr.market.util.CalendarHelper.hasExpired(contact.getStartDate(),contact.getEndDate());
-		 mLog.info("Has an invalid license [" + isValid + "]" );
-		if (inValid) {
+		boolean hasExpired = com.scr.market.util.CalendarHelper.hasExpired(contact.getStartDate(),contact.getEndDate());
+		 mLog.info("Has an invalid license [" + hasExpired + "]" );
+		if (hasExpired) {
 			return null;
 		}
         	//Contact contact = contactList.get(0);
