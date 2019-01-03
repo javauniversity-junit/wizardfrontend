@@ -55,20 +55,16 @@
     <section class="page-section clearfix">
 	    
 	    <!-- IF CUSTOMER IS ANONYMOUS -->
-<div th:if="${hasRows}">
-   <div>Welcome, Guest</div>
-</div>
-<!-- ELSE -->
-<div>
-   <div>Hi, User</div>
-</div>
+
 	    
 	    
      <div class="container" style="background-color: #2f170f;color:white;">
   <h2 style="background-color: #2f170f;color:white;">Agents</h2>
-  <a href="add.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Add Agent</a>          
-  <table class="table" style="background-color: #2f170f;color:white;">
-    <thead>
+  <a href="add.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Add Agent</a> 
+	     
+<div th:if="${hasRows}">
+     <table class="table" style="background-color: #2f170f;color:white;">
+      <thead>
       <tr>
         <th>Email</th>
         <th>Password</th>
@@ -87,6 +83,21 @@
 		</tr>
      </tbody>
   </table>
+</div>
+<!-- ELSE -->
+<div>
+   <h1>No Agents Created</h1>
+</div>
+	     
+	     
+	     
+	     
+   
+	     
+	     
+	     
+	     
+	     
 </div>
 
     </section>
