@@ -47,6 +47,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
         auth.authenticationProvider(authProvider);
     }
+	
+  @Override
+  protected void configure(HttpSecurity http) throws Exception {
+    http
+      .csrf().disable();
+  }
 
     
     /*
