@@ -66,19 +66,15 @@
     </thead>
     
     <tbody>
-				<tr th:each="agent : ${agents}">
-				   <td>
-				   <a th:href="@{'/detailCategory?ID=' + ${agent.agentidd}}">View</a>
-					</td>
+	<tr th:each="agent : ${agents}">
+		 <td>
+		   <a th:href="@{'/detailCategory?ID=' + ${agent.agentidd}}">View</a>
+		</td>
 					
-					<td th:text="${agent.address}">2</td>
+		<td th:text="${agent.address}">2</td>
                   
-				</tr>
-			</tbody>
-    
-    
-    
-
+		</tr>
+     </tbody>
   </table>
 </div>
 
