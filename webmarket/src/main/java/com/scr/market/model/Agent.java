@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 public class Agent {
 	@Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+        @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer agentid;
 	
 	private Integer contactId;
