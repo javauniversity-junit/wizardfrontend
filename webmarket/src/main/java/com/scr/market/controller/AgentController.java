@@ -34,7 +34,8 @@ private static final Logger mLog = Logger.getLogger(AgentController.class.getNam
  //   private IAuthenticationFacade authenticationFacade;
 	
 	
-       @RequestMapping(path = "/add",method=RequestMethod.POST) // Map ONLY GET Requests
+       
+	@RequestMapping(value="/add",method=RequestMethod.POST)
 	public String add(@RequestParam String email, @RequestParam String password) {
 		// @ResponseBody means the returned String is the response, not a view name
 		// @RequestParam means it is a parameter from the GET or POST request
