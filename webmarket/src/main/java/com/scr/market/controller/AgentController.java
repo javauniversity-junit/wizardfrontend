@@ -31,13 +31,13 @@ private static final Logger mLog = Logger.getLogger(AgentController.class.getNam
 	
 	
 		@GetMapping(path = "/add") // Map ONLY GET Requests
-	public String add(@RequestParam String email, @RequestParam String password) {
+	public String add(@RequestParam String email-input, @RequestParam String password-input) {
 		// @ResponseBody means the returned String is the response, not a view name
 		// @RequestParam means it is a parameter from the GET or POST request
 
 		Agent agent = new Agent();
-		agent.setAddress(email);
-		agent.SetPassword(password);
+		agent.setAddress(email-input);
+		agent.SetPassword(password-input);
 		agent.setContactId(contact.getContactId());
 
 		agentRepository.save(agent);
