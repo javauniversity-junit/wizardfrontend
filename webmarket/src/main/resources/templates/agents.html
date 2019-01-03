@@ -59,28 +59,26 @@
   <table class="table" style="background-color: #2f170f;color:white;">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
         <th>Email</th>
+        <th>Password</th>
+        
       </tr>
     </thead>
+    
     <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
+				<tr th:each="category : ${categories}">
+				   <td>
+				   <a th:href="@{'/detailCategory?ID=' + ${category.id}}">View</a>
+					</td>
+					
+					<td th:text="${category.name}">2</td>
+                  
+				</tr>
+			</tbody>
+    
+    
+    
+
   </table>
 </div>
 
