@@ -75,7 +75,7 @@
     <tbody>
 	<tr th:each="agent : ${agents}">
 		 <td>
-		   <a th:href="@{'/detailCategory?ID=' + ${agent.agentidd}}">View</a>
+		   <a th:href="@{'/detail?ID=' + ${agent.agentid}}">View</a>
 		</td>
 					
 		<td th:text="${agent.address}">2</td>
