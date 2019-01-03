@@ -29,6 +29,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         mLog.info("starting configure");
         http
+	    .csrf().disable()
             .authorizeRequests()
                 .antMatchers("/","/index.html","/add").permitAll()
                 .antMatchers("/css/**", "/vendor/**", "/js/**", "/img/**").permitAll().anyRequest().permitAll() 
@@ -48,11 +49,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         auth.authenticationProvider(authProvider);
     }
 	
-  @Override
-  protected void configure(HttpSecurity http) throws Exception {
-    http
-      .csrf().disable();
-  }
+
 
     
     /*
