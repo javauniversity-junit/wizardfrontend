@@ -49,7 +49,10 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         	}
 		//determine if contact is valid
 		boolean isValid = com.scr.market.util.CalendarHelper.hasExpired(contact.getStartDate(),contact.getEndDate());
-		 mLog.info("Has a valid license [" + isValid + "]" );
+		 mLog.info("Has an invalid license [" + isValid + "]" );
+		if (inValid) {
+			return null;
+		}
         	//Contact contact = contactList.get(0);
         	final List<GrantedAuthority> grantedAuths = new ArrayList<>();
             grantedAuths.add(new SimpleGrantedAuthority("ROLE_USER"));
