@@ -29,6 +29,21 @@ private static final Logger mLog = Logger.getLogger(AgentController.class.getNam
 //@Autowired
  //   private IAuthenticationFacade authenticationFacade;
 	
+	
+		@GetMapping(path = "/add") // Map ONLY GET Requests
+	public String add(@RequestParam String email, @RequestParam String password) {
+		// @ResponseBody means the returned String is the response, not a view name
+		// @RequestParam means it is a parameter from the GET or POST request
+
+		Agent agent = new Agent();
+		agent.setName(email);
+		agent.SetPassword(password);
+
+		agentRepository.save(agent);
+
+		return "agents";
+	}
+	
 	@GetMapping(path = "/agents")
 	public String getAll(Model model, Principal principal) {
 	     mLog.info("starting getAll");
