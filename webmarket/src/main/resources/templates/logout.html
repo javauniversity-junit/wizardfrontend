@@ -61,7 +61,7 @@
              <h1 style="background-color: #2f170f;color:white;" th:inline="text">Login  [[${#httpServletRequest.remoteUser}]]!</h1>
   
           <form th:action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
+            <input class="btn btn-primary btn-lg" type="submit" value="Sign Out"/>
         </form>
           </div>
 
