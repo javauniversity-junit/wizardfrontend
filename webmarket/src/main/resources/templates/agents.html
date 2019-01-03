@@ -68,10 +68,10 @@
     <tbody>
 				<tr th:each="agent : ${agents}">
 				   <td>
-				   <a th:href="@{'/detailCategory?ID=' + ${category.id}}">View</a>
+				   <a th:href="@{'/detailCategory?ID=' + ${agent.agentidd}}">View</a>
 					</td>
 					
-					<td th:text="${category.name}">2</td>
+					<td th:text="${agent.address}">2</td>
                   
 				</tr>
 			</tbody>
