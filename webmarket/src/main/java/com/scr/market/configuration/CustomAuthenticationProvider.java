@@ -55,7 +55,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 		}
         	//Contact contact = contactList.get(0);
         	final List<GrantedAuthority> grantedAuths = new ArrayList<>();
-            grantedAuths.add(new SimpleGrantedAuthority("ROLE_USER"));
+            grantedAuths.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
             MyUserPrincipal myUserPrincipal = new MyUserPrincipal(contact);
             final Authentication auth = new UsernamePasswordAuthenticationToken(myUserPrincipal, password, grantedAuths);
             return auth;
