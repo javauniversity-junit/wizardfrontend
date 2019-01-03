@@ -47,10 +47,19 @@ private static final Logger mLog = Logger.getLogger(AgentController.class.getNam
 		Sort sort = new Sort(Direction.ASC, "address");
 		
 		Iterable<Agent> agents = agentRepository.findAll(sort);
-		long size = agents.spliterator().getExactSizeIfKnown();
+		boolean hasRows = false;
+		if (agents != null ) {
+		     long size = agents.spliterator().getExactSizeIfKnown();
+		     if (size > 0 ) {
+			     hasRows =true;
+		     }
+		}
 	
 		//add to model
 		model.addAttribute("agents", agents);
+			//add to model
+		model.addAttribute("hasRows", hasRows);
+		
 
 		return "agents";
 
