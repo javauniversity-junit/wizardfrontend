@@ -41,7 +41,7 @@ private static final Logger mLog = Logger.getLogger(AgentController.class.getNam
 
 		Agent agent = new Agent();
 		agent.setAddress(email);
-		agent.SetPassword(password);
+		agent.setPassword(password);
 		agent.setContactId(contact.getContactId());
 
 		agentRepository.save(agent);
