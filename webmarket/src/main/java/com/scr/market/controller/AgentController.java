@@ -80,6 +80,7 @@ private static final Logger mLog = Logger.getLogger(AgentController.class.getNam
 		     }
 		}
 	
+		mLog.info("has rows [" + hasRows + "]");
 		//add to model
 		model.addAttribute("agents", agents);
 			//add to model
