@@ -50,8 +50,11 @@ private static final Logger mLog = Logger.getLogger(AgentController.class.getNam
 		agent.setContactId(contact.getContactId());
 
 		agentRepository.save(agent);
+		
+		
+		return "redirect:/agents";
 
-		return "agents";
+	
 	}
 	
 	@GetMapping(path = "/agents")
