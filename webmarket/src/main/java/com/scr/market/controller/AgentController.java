@@ -74,7 +74,7 @@ private static final Logger mLog = Logger.getLogger(AgentController.class.getNam
 		//sort by nameAuthentication authentication = authenticationFacade.getAuthentication();
 		Sort sort = new Sort(Direction.ASC, "address");
 		
-		Iterable<Agent> agents = agentRepository.findAll(sort);
+		Iterable<Agent> agents = agentRepository.findByContactId(contact.getContactId(););
 		boolean hasRows = false;
 		if (agents != null ) {
 		     long size = agents.spliterator().getExactSizeIfKnown();
