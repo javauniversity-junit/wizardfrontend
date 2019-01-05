@@ -46,6 +46,22 @@ public class AgentController {
 		model.addAttribute("agent", agent);
 		return "detail";
 	}
+	
+	
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
+	public String update(@RequestParam String ID, @RequestParam String email, @RequestParam String password) {
+		mLog.info("starting update");
+		Integer agentId = Integer.parseInt(ID);
+		Agent agent  = new Agent();
+		agent.setAgentid(agentId);
+		agent.setAddress(email);
+		agent.setPassword(password);
+		agent.setContactId(contact.getContactId());
+
+		agentRepository.save(agent);
+
+		return "redirect:/agents";
+	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
 	public String add(@RequestParam String email, @RequestParam String password) {
