@@ -1,6 +1,7 @@
 package com.scr.market.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Controller;
@@ -14,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.Authentication;
 import java.security.Principal;
+import java.sql.SQLException;
+
 import com.scr.market.model.*;
 import com.scr.market.repository.*;
 
@@ -49,7 +52,8 @@ public class AgentController {
 	
 	
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
-	public String update(@RequestParam String ID, @RequestParam String email, @RequestParam String password) {
+	public String update(@RequestParam String ID, @RequestParam String email, @RequestParam String password) throws SQLException
+	{
 		mLog.info("starting update");
 		Integer agentId = Integer.parseInt(ID);
 		Agent agent  = new Agent();
@@ -57,14 +61,17 @@ public class AgentController {
 		agent.setAddress(email);
 		agent.setPassword(password);
 		agent.setContactId(contact.getContactId());
-
+        try {
 		agentRepository.save(agent);
+        } catch (Exception ex) {
+        	throw new DataIntegrityViolationException("Duplicate email address");
+        }
 
 		return "redirect:/agents";
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public String add(@RequestParam String email, @RequestParam String password) {
+	public String add(@RequestParam String email, @RequestParam String password) throws SQLException {
 		// @ResponseBody means the returned String is the response, not a view name
 		// @RequestParam means it is a parameter from the GET or POST request
 		mLog.info("starting add");
@@ -76,7 +83,11 @@ public class AgentController {
 		agent.setPassword(password);
 		agent.setContactId(contact.getContactId());
 
+        try {
 		agentRepository.save(agent);
+        } catch (Exception ex) {
+        	throw new DataIntegrityViolationException("Duplicate email address");
+        }
 
 		return "redirect:/agents";
 
