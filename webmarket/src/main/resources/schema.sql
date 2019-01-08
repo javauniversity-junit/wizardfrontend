@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS agent;
 
-create table agent (
+
+create table IF NOT EXISTS  agent (
         agentid integer NOT NULL AUTO_INCREMENT,
         address varchar(255),
         contact_id integer,
@@ -8,9 +8,9 @@ create table agent (
         primary key (agentid)
     );
 
-DROP TABLE IF EXISTS contact;
 
-create table contact (
+
+create table IF NOT EXISTS contact (
         contact_id integer NOT NULL AUTO_INCREMENT,
         active bit,
         address varchar(255),
