@@ -102,8 +102,7 @@
               <addClasspath>true</addClasspath>
             </manifest>
           </archive>
-          <warSourceDirectory>src/main/webapp</warSourceDirectory>
-	<outputDirectory>/home/user/tomcat8/webapps</outputDirectory>	
+          <warSourceDirectory>src/main/webapp</warSourceDirectory>	
         </configuration>
       </plugin>
   </plugins>
