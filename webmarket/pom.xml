@@ -103,6 +103,7 @@
             </manifest>
           </archive>
           <warSourceDirectory>src/main/webapp</warSourceDirectory>
+	<outputDirectory>/home/user/tomcat8/webapps</outputDirectory>	
         </configuration>
       </plugin>
   </plugins>
