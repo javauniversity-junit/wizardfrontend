@@ -32,7 +32,8 @@ create table IF NOT EXISTS contact (
         zipcode varchar(255),
         primary key (contact_id)
     );
-    
+ DROP INDEX index_agent_address ON agent;
+ 
 CREATE UNIQUE INDEX  index_agent_address ON agent(address);
 
 --insert---
