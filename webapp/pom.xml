@@ -4,8 +4,8 @@
  <modelVersion>4.0.0</modelVersion>
 
  <groupId>com.jackrutorial</groupId>
- <artifactId>SpringBootSigninSignupExample</artifactId>
- <version>0.0.1-SNAPSHOT</version>
+ <artifactId>wizard</artifactId>
+ <version>0.0.1</version>
  <packaging>war</packaging>
 
  <name>SpringBootSigninSignupExample</name>
@@ -29,12 +29,28 @@
    <groupId>org.springframework.boot</groupId>
    <artifactId>spring-boot-starter-data-jpa</artifactId>
   </dependency>
+  
+  <dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-tomcat</artifactId>
+		<scope>provided</scope>
+	</dependency>
+	 <dependency>
+    <groupId>javax.el</groupId>
+    <artifactId>javax.el-api</artifactId>
+    <version>3.0.0</version>
+</dependency>
 
 <dependency>
  <groupId>org.hibernate</groupId>
  <artifactId>hibernate-core</artifactId>
  <version> 5.2.1.Final</version>
 </dependency>
+ <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+
 
   <dependency>
    <groupId>org.springframework.boot</groupId>
@@ -43,6 +59,7 @@
   <dependency>
    <groupId>org.springframework.boot</groupId>
    <artifactId>spring-boot-starter-web</artifactId>
+     <version>2.1.1.RELEASE</version>
   </dependency>
   <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -80,18 +97,19 @@
 
  <build>
   <plugins>
-  <plugin>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-maven-plugin</artifactId>
-    <version>1.4.3.RELEASE</version>
-    <executions>
-     <execution>
-      <goals>
-       <goal>repackage</goal>
-      </goals>
-     </execution>
-    </executions>
-   </plugin>
+       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.2</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+            </manifest>
+          </archive>
+          <warSourceDirectory>src/main/webapp</warSourceDirectory>	
+        </configuration>
+      </plugin>
   </plugins>
  </build>
 </project>
