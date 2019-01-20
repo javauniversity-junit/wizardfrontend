@@ -1,4 +1,4 @@
-package com.scr.market.configuration;
+package web.client.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
