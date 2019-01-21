@@ -12,10 +12,27 @@ import web.model.Contact;
 
 
 public class MyUserPrincipal implements UserDetails {
-	 private Agent agent;
-	 
-	    public MyUserPrincipal(Agent agent) {
+	 public Agent getAgent() {
+		return agent;
+	}
+
+	public void setAgent(Agent agent) {
+		this.agent = agent;
+	}
+
+	public Contact getContact() {
+		return contact;
+	}
+
+	public void setContact(Contact contact) {
+		this.contact = contact;
+	}
+
+	private Agent agent;
+	 private Contact contact;
+	    public MyUserPrincipal(Agent agent, Contact contact) {
 	        this.agent = agent;
+	        this.contact = contact;
 	    }
 
 	@Override

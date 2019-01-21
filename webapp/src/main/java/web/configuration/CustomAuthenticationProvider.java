@@ -39,6 +39,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
     @Override
     public Authentication authenticate(final Authentication authentication) throws AuthenticationException {
 	     mLog.info("starting authenticate");
+	     Contact contact = null;
         final String name = authentication.getName();
         final String password = authentication.getCredentials().toString();
         if (name.equals("admin") && password.equals("admin")) {
@@ -55,7 +56,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         		return null;
         	}
         	Optional<Contact> contactOpt = mContactRepository.findById(agent.getContactId());
-        	Contact contact = contactOpt.orElse(null);
+        	contact = contactOpt.orElse(null);
         if (contact == null) {
         	mLog.info("could not find contact");
         	return null;
@@ -69,7 +70,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         	//Contact contact = contactList.get(0);
         	final List<GrantedAuthority> grantedAuths = new ArrayList<>();
             grantedAuths.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
-            MyUserPrincipal myUserPrincipal = new MyUserPrincipal(agent);
+            MyUserPrincipal myUserPrincipal = new MyUserPrincipal(agent, contact);
             final Authentication auth = new UsernamePasswordAuthenticationToken(myUserPrincipal, password, grantedAuths);
             return auth;
         }
