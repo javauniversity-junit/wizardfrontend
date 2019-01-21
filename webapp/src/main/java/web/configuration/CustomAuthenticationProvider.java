@@ -51,11 +51,15 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         	Agent agent = mAgentRepository.findByAddressAndPassword(name,password);
         	
         	if (agent == null ) {
+        		mLog.info("could not find contact");
         		return null;
         	}
         	Optional<Contact> contactOpt = mContactRepository.findById(agent.getContactId());
         	Contact contact = contactOpt.orElse(null);
-        
+        if (contact == null) {
+        	mLog.info("could not find contact");
+        	return null;
+        }
 		//determine if contact is valid
 		boolean hasExpired = web.util.CalendarHelper.hasExpired(contact.getStartDate(),contact.getEndDate());
 		 mLog.info("Has an invalid license [" + hasExpired + "]" );
