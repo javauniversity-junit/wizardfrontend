@@ -66,7 +66,7 @@ public class WizardController {
 	
 	@GetMapping(path = "/wizards")
 	public String getAll(Model model) {
-		mLog.info("starting getAll");
+		mLog.info("starting getAll wizards");
 		
 
 		// Authentication authentication = authenticationFacade.getAuthentication();
