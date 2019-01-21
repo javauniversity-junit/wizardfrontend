@@ -30,83 +30,41 @@
   </head>
   <body>
    
-    <!-- intro end-->
-    <!-- navbar-->
-    <header class="header">
-      <nav class="navbar navbar-expand-lg">
-        <div class="container"><a href="#intro" class="navbar-brand link-scroll"><img src="./img/logo.png" alt="" class="img-fluid" width="160" height="40"></a>
-          <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
-          <div id="navbarSupportedContent" class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a href="index.html" class="nav-link link-scroll">Home</a></li>
-              <li class="nav-item"><a href="wizards" class="nav-link link-scroll">Wizards </a></li>
-              <li class="nav-item"><a href="logout" class="nav-link link-scroll">Logout</a></li>
-              
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-   
-   
-   
-    <section class="page-section clearfix">
-	    
-	    <!-- IF CUSTOMER IS ANONYMOUS -->
-
-	    
-	    
-     <div class="container" style="background-color: white;color:black;">
-  
-  <a href="add.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Add Wizard</a> 
-	     
-<div th:if="${hasRows}">
-     <table class="table" style="background-color: white;color:black;">
-      <thead>
-      <tr>
-	<th></th>  
-	<th></th>     
-        <th>Name</th>
-      
-        
-      </tr>
-    </thead>
     
-    <tbody>
-	<tr th:each="wizard : ${wizards}">
-	     <td> 
-		   <a class="btn btn-primary" th:href="@{'/wizardDemographic?ID=' + ${wizard.wizardid}}">Wizard Data</a>
-		</td>
-		 <td>
-		   <a class="btn btn-primary" th:href="@{'/detail?ID=' + ${wizard.wizardid}}">Edit Wizard Name</a>
-		</td>
-					
-		<td th:text="${wizard.name}">2</td>
-                  
-		</tr>
-     </tbody>
-  </table>
-</div>
-<!-- ELSE -->
-	    
-<div th:unless="${hasRows}">
-   <h3>No Agents Created</h3>
-</div>	     
-	     
-</div>
-</section>
-<footer style="background-color: #111;">
-      <div class="container"> 
-        <div class="row copyright">
-          <div class="col-md-6">
-            <p class="mb-md-0 text-center text-md-left">&copy;2018 The Guld Resource Group</p>
-          </div>
-          <div class="col-md-6">
-            <!-- Please do not remove the backlink to us. It is part of the licence conditions. Thanks for understanding :)-->
-          </div>
-        </div>
-      </div>
-    </footer>
+
+    <section class="page-section clearfix">
+	<!-- Begin page content -->
+	<div class="container">
+		
+        <h2 class="text-center">Marketing Solutions</h2>
+
+
+		<div>
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+			
+
+		</div>
+
+	</div>
+
+    </section>
+
+  
     <!-- JavaScript files-->
     <script src="https://d19m59y37dris4.cloudfront.net/blackandwhite/2-0-0/vendor/jquery/jquery.min.js"></script>
     <script src="https://d19m59y37dris4.cloudfront.net/blackandwhite/2-0-0/vendor/popper.js/umd/popper.min.js"> </script>
@@ -118,4 +76,4 @@
     <script src="https://d19m59y37dris4.cloudfront.net/blackandwhite/2-0-0/js/front.js"></script>
   </body>
 </html>
- 
+   
