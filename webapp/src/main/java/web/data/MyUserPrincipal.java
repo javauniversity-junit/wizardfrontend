@@ -6,8 +6,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import web.client.model.Agent;
-import web.client.model.Contact;
+import web.model.Agent;
+import web.model.Contact;
 
 
 

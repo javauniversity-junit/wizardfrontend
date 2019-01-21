@@ -1,4 +1,4 @@
-package web.client;
+package web;
 
 
 import org.springframework.boot.SpringApplication;

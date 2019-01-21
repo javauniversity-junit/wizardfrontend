@@ -1,4 +1,4 @@
-package web.client.repository;
+package web.repository;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
-import web.client.model.Contact;
+import web.model.Contact;
 
 
 

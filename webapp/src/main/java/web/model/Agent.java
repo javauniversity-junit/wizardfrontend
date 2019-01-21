@@ -1,4 +1,4 @@
-package web.client.model;
+package web.model;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

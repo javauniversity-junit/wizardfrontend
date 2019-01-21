@@ -1,18 +1,18 @@
-package web.client.repository;
+package web.repository;
 
 
 
 import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.CrudRepository;
 
-import web.client.model.Role;
+import web.model.User;
 
 // This will be AUTO IMPLEMENTED by Spring into a Bean called userRepository
 // CRUD refers Create, Read, Update, Delete
-public interface RoleRepository extends CrudRepository<Role, Integer> {
+public interface UserRepository extends CrudRepository<User, Integer> {
 	
-	 Iterable<Role> findAll(Sort sort);
-	 Role findByRole(String role);
+	 Iterable<User> findAll(Sort sort);
+	User findByName(String name);
    
 
 }

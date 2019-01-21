@@ -1,4 +1,4 @@
-package web.client.configuration;
+package web.configuration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,11 +15,11 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
-import web.client.model.Agent;
-import web.client.model.Contact;
-import web.client.repository.AgentRepository;
-import web.client.repository.ContactRepository;
 import web.data.MyUserPrincipal;
+import web.model.Agent;
+import web.model.Contact;
+import web.repository.AgentRepository;
+import web.repository.ContactRepository;
 
 import java.util.logging.Logger;
 

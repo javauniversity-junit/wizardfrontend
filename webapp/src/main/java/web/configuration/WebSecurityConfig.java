@@ -1,4 +1,4 @@
-package web.client.configuration;
+package web.configuration;
 
 import java.util.logging.Logger;
 

@@ -1,12 +1,12 @@
-package web.client.repository;
+package web.repository;
 
 
 import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
-import web.client.model.Agent;
-import web.client.model.Contact;
+import web.model.Agent;
+import web.model.Contact;
 
 import java.util.logging.Logger;
 

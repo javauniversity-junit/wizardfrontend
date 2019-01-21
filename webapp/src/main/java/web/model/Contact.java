@@ -1,4 +1,4 @@
-package web.client.model;
+package web.model;
 import java.sql.Timestamp;
 
 import javax.persistence.Column;
