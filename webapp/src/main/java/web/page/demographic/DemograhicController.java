@@ -53,9 +53,12 @@ public class DemograhicController {
 			wizardData.setWizarddataid(Integer.getInteger(wizarddataid));
 		}
 		wizardData.setWizardid(Integer.getInteger(wizardId));
-		
+		Demographic demographic  = new Demographic(presentedtoId,presentedBusinessId, presentedById);
+		String pageData = DemographicManager.convertToJson(demographic);
+		wizardData.setPagedata(pageData);
+		wizardDataRepository.save(wizardData);
 		//model.addAttribute("wizard", wizard);
-		return "pages/Demographic";
+		return nextPage;
 	}
 	
 }

@@ -1,6 +1,12 @@
 package web.page.demographic;
 
 public class Demographic {
+	public Demographic(String presentedTo, String presentedBusiness, String presentedBy) {
+		super();
+		this.presentedTo = presentedTo;
+		this.presentedBusiness = presentedBusiness;
+		this.presentedBy = presentedBy;
+	}
 	private String presentedTo;
 	private String presentedBusiness;
 	private String presentedBy;
