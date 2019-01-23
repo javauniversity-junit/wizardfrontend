@@ -33,6 +33,14 @@ public class DemograhicController {
 		//get wizard header 
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
+		WizardData wizardData = wizardDataRepository.findByPagesequenceAndWizardid(Pages.DEMOGRAPHIC.getPageSequence(), wizard.getWizardid());
+		Demographic demographic = null;
+		if (wizardData != null) {
+			demographic = DemographicManager.convertFromJson(wizardData.getPagedata());
+		}
+		//DemographicManager.convertFromJson(json)
+		model.addAttribute("wizardData", wizardData);
+		model.addAttribute("demographic", demographic);
 		model.addAttribute("wizard", wizard);
 		return "pages/Demographic";
 	}
@@ -50,9 +58,11 @@ public class DemograhicController {
 		wizardData.setPagename(Pages.DEMOGRAPHIC.getPageName());
 		wizardData.setPagesequence(Pages.DEMOGRAPHIC.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0 ) {
-			wizardData.setWizarddataid(Integer.getInteger(wizarddataid));
+			Integer wizardDataInt = Integer.valueOf(wizarddataid);
+			wizardData.setWizarddataid(wizardDataInt);
 		}
-		wizardData.setWizardid(Integer.getInteger(wizardId));
+		Integer wizardIdInt = Integer.valueOf(wizardId);
+		wizardData.setWizardid(wizardIdInt);
 		Demographic demographic  = new Demographic(presentedtoId,presentedBusinessId, presentedById);
 		String pageData = DemographicManager.convertToJson(demographic);
 		wizardData.setPagedata(pageData);

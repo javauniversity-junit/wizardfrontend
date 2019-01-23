@@ -43,14 +43,14 @@
 					<label for="presentedtoId">Presented to</label>
 					<input
 						type="text" class="form-control" id="presentedtoId" name="presentedtoId" required
-						aria-describedby="presentedtoIdHelp" placeholder="Enter Presented to"/> <small>
+						aria-describedby="presentedtoIdHelp" placeholder="Enter Presented to"/> <small
 						id="presentedtoIdHelp" class="form-text text-muted">We'll never
 						share your data with anyone else.</small>
 				</div>
 				<div class="form-group">
 					<label for="presentedBusinessId">Presented Business</label> 
 					<input
-						type="text" required class="form-control" id="presentedBusinessId" name="presentedBusinessId"
+						type="text" th:value="${demographic.presentedTo}" required class="form-control" id="presentedBusinessId" name="presentedBusinessId"
 						placeholder="Business"/>
 				</div>
 							<div class="form-group">
@@ -61,7 +61,7 @@
 				</div>
 				 <input type="hidden" id="nextPage" value="teamCommit"  name="nextPage"/ >
 				 <input type="hidden" id="wizardId" th:value="${wizard.wizardid}"  name="wizardId" />
-				 <input type="hidden" id="wizarddataid"   name="wizarddataid" />
+				 <input type="hidden" id=""   name="wizarddataid" />
 				
 				
 				<button type="submit" class="btn btn-primary">Next</button>
