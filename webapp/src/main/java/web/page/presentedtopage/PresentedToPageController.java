@@ -28,7 +28,7 @@ public class PresentedToPageController {
 	private WizardDataRepository wizardDataRepository;
 
 	private static final Logger mLog = Logger.getLogger(PresentedToPageController.class.getName());
-	@RequestMapping(value = "/wizardDemographic", method = RequestMethod.GET)
+	@RequestMapping(value = "/wizardPresentedToPage", method = RequestMethod.GET)
 	public String detail(Model model, @RequestParam String ID) {
 		mLog.info("starting detail");
 		//get wizard header 
@@ -44,10 +44,10 @@ public class PresentedToPageController {
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("demographic", demographic);
 		model.addAttribute("wizard", wizard);
-		return "pages/Demographic";
+		return "pages/PresentedToPage";
 	}
 	
-	@RequestMapping(value = "/saveDemographic", method = RequestMethod.POST)
+	@RequestMapping(value = "/savePresentedToPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
 			,@RequestParam String presentedtoId
 			,@RequestParam String presentedBusinessId
