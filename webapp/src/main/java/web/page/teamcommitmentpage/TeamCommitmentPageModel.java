@@ -1,7 +1,7 @@
-package web.page.demographic;
+package web.page.teamcommitmentpage;
 
-public class Demographic {
-	public Demographic(String presentedTo, String presentedBusiness, String presentedBy) {
+public class TeamCommitmentPageModel {
+	public TeamCommitmentPageModel(String presentedTo, String presentedBusiness, String presentedBy) {
 		super();
 		this.presentedTo = presentedTo;
 		this.presentedBusiness = presentedBusiness;
