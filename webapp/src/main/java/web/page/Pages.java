@@ -6,8 +6,8 @@ public enum Pages {
 	
 	
 	
-	PRESENTEDTOPAGE(DatabaseConstants.DATABASE_PRESENTEDTOPAGE_VALUE, PageSequence.PRESENTEDTOPAGE_SEQUENCE);
-	
+	PRESENTEDTOPAGE(DatabaseConstants.DATABASE_PRESENTEDTOPAGE_VALUE, PageSequence.PRESENTEDTOPAGE_SEQUENCE),
+	TEAMCOMMITMENTPAGE(DatabaseConstants.DATABASE_TEAMCOMMITMENTPAGE_VALUE, PageSequence.TEAMCOMMITMENTPAGE_SEQUENCE);
 	
 	private String pageName;
 	private Integer pageSequence;
@@ -31,13 +31,14 @@ public enum Pages {
 	}
 	public static class PageSequence {
         public static final Integer PRESENTEDTOPAGE_SEQUENCE = 1;
+        public static final Integer TEAMCOMMITMENTPAGE_SEQUENCE= 2;
       
     }
 	
 
 	public static class DatabaseConstants {
         public static final String DATABASE_PRESENTEDTOPAGE_VALUE = "PresentedToPage";
-      
+        public static final String DATABASE_TEAMCOMMITMENTPAGE_VALUE = "TeamCommitmentPage";
     }
 	
 }

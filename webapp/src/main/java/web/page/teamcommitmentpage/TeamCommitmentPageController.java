@@ -35,7 +35,7 @@ public class TeamCommitmentPageController {
 		//get wizard header 
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
-		WizardData wizardData = wizardDataRepository.findByPagesequenceAndWizardid(Pages.DEMOGRAPHIC.getPageSequence(), wizard.getWizardid());
+		WizardData wizardData = wizardDataRepository.findByPagesequenceAndWizardid(Pages.TEAMCOMMITMENTPAGE.getPageSequence(), wizard.getWizardid());
 		TeamCommitmentPageModel teamCommitmentPageModel = null;
 		if (wizardData != null) {
 			teamCommitmentPageModel =(TeamCommitmentPageModel) JSONManager.convertFromJson(wizardData.getPagedata(),TeamCommitmentPageModel.class);
@@ -57,8 +57,8 @@ public class TeamCommitmentPageController {
 		mLog.info("starting save");
 		 
 		WizardData wizardData = new WizardData();
-		wizardData.setPagename(Pages.DEMOGRAPHIC.getPageName());
-		wizardData.setPagesequence(Pages.DEMOGRAPHIC.getPageSequence());
+		wizardData.setPagename(Pages.TEAMCOMMITMENTPAGE.getPageName());
+		wizardData.setPagesequence(Pages.TEAMCOMMITMENTPAGE.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0 ) {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
