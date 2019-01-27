@@ -29,7 +29,7 @@ public class TeamCommitmentPageController {
 	private WizardDataRepository wizardDataRepository;
 
 	private static final Logger mLog = Logger.getLogger(TeamCommitmentPageController.class.getName());
-	@RequestMapping(value = "/wizardTeamCommitmentPage", method = RequestMethod.GET)
+	@RequestMapping(value = "/TeamCommitmentPage", method = RequestMethod.GET)
 	public String detail(Model model, @RequestParam String ID) {
 		mLog.info("starting detail");
 		//get wizard header 

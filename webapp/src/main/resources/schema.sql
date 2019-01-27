@@ -59,7 +59,8 @@ create table IF NOT EXISTS contact (
 -- Indexes for dumped tables
 --
 
-
+--ALTER TABLE `license`.`wizarddata` 
+--ADD UNIQUE INDEX `pageDataIndex` (`wizardid` ASC, `pagename` ASC) VISIBLE;
 
     
 -- DROP INDEX index_agent_address ON agent;

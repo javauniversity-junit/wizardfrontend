@@ -75,7 +75,7 @@
     <tbody>
 	<tr th:each="wizard : ${wizards}">
 	     <td> 
-		   <a class="btn btn-primary" th:href="@{'/wizardDemographic?ID=' + ${wizard.wizardid}}">Wizard Data</a>
+		   <a class="btn btn-primary" th:href="@{'/PresentedToPage?ID=' + ${wizard.wizardid}}">Wizard Data</a>
 		</td>
 		 <td>
 		   <a class="btn btn-primary" th:href="@{'/detail?ID=' + ${wizard.wizardid}}">Edit Wizard Name</a>

@@ -54,12 +54,13 @@ public class WizardController {
 		
 
         try {
-        	wizardRepository.save(wizard);
+        	wizard= wizardRepository.save(wizard);
         } catch (Exception ex) {
         	throw new DataIntegrityViolationException("Duplicate name");
         }
-
-		return "redirect:/wizards";
+        String nextPage = "/PresentedToPage?ID=" + wizard.getWizardid();
+////PresentedToPage?ID=
+		return nextPage;
 
 	}
 	

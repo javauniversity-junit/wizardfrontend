@@ -6,7 +6,7 @@ public enum Pages {
 	
 	
 	
-	DEMOGRAPHIC(DatabaseConstants.DATABASE_DEMOGRAPHIC_VALUE, PageSequence.DEMOGRAPHIC_SEQUENCE);
+	PRESENTEDTOPAGE(DatabaseConstants.DATABASE_PRESENTEDTOPAGE_VALUE, PageSequence.PRESENTEDTOPAGE_SEQUENCE);
 	
 	
 	private String pageName;
@@ -30,13 +30,13 @@ public enum Pages {
 		this.pageSequence = pageSequence;
 	}
 	public static class PageSequence {
-        public static final Integer DEMOGRAPHIC_SEQUENCE = 1;
+        public static final Integer PRESENTEDTOPAGE_SEQUENCE = 1;
       
     }
 	
 
 	public static class DatabaseConstants {
-        public static final String DATABASE_DEMOGRAPHIC_VALUE = "demographic";
+        public static final String DATABASE_PRESENTEDTOPAGE_VALUE = "PresentedToPage";
       
     }
 	

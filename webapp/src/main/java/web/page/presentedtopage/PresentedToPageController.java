@@ -28,13 +28,13 @@ public class PresentedToPageController {
 	private WizardDataRepository wizardDataRepository;
 
 	private static final Logger mLog = Logger.getLogger(PresentedToPageController.class.getName());
-	@RequestMapping(value = "/wizardPresentedToPage", method = RequestMethod.GET)
+	@RequestMapping(value = "/PresentedToPage", method = RequestMethod.GET)
 	public String detail(Model model, @RequestParam String ID) {
 		mLog.info("starting detail");
 		//get wizard header 
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
-		WizardData wizardData = wizardDataRepository.findByPagesequenceAndWizardid(Pages.DEMOGRAPHIC.getPageSequence(), wizard.getWizardid());
+		WizardData wizardData = wizardDataRepository.findByPagesequenceAndWizardid(Pages.PRESENTEDTOPAGE.getPageSequence(), wizard.getWizardid());
 		PresentedToPageModel demographic = null;
 		if (wizardData != null) {
 			demographic =(PresentedToPageModel)JSONManager.convertFromJson(wizardData.getPagedata(), PresentedToPageModel.class);
@@ -57,8 +57,8 @@ public class PresentedToPageController {
 		mLog.info("starting save");
 		 
 		WizardData wizardData = new WizardData();
-		wizardData.setPagename(Pages.DEMOGRAPHIC.getPageName());
-		wizardData.setPagesequence(Pages.DEMOGRAPHIC.getPageSequence());
+		wizardData.setPagename(Pages.PRESENTEDTOPAGE.getPageName());
+		wizardData.setPagesequence(Pages.PRESENTEDTOPAGE.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0 ) {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
