@@ -49,6 +49,7 @@ public class PresentedToPageController {
 	
 	@RequestMapping(value = "/savePresentedToPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
+			,@RequestParam String phoneNumber
 			,@RequestParam String presentedTo
 			,@RequestParam String presentedBusiness
 			,@RequestParam String presentedBy
@@ -65,7 +66,7 @@ public class PresentedToPageController {
 		}
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
-		PresentedToPageModel demographic  = new PresentedToPageModel(presentedTo,presentedBusiness, presentedBy);
+		PresentedToPageModel demographic  = new PresentedToPageModel(phoneNumber,presentedTo,presentedBusiness, presentedBy);
 		String pageData = JSONManager.convertToJson(demographic);
 		
 		wizardData.setPagedata(pageData);

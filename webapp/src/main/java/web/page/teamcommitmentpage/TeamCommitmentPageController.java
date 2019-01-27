@@ -36,22 +36,36 @@ public class TeamCommitmentPageController {
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
 		WizardData wizardData = wizardDataRepository.findByPagesequenceAndWizardid(Pages.TEAMCOMMITMENTPAGE.getPageSequence(), wizard.getWizardid());
-		TeamCommitmentPageModel teamCommitmentPageModel = null;
+		TeamCommitmentPageModel dataPageModel = null;
 		if (wizardData != null) {
-			teamCommitmentPageModel =(TeamCommitmentPageModel) JSONManager.convertFromJson(wizardData.getPagedata(),TeamCommitmentPageModel.class);
+			dataPageModel =(TeamCommitmentPageModel) JSONManager.convertFromJson(wizardData.getPagedata(),TeamCommitmentPageModel.class);
 		}
 		//DemographicManager.convertFromJson(json)
 		model.addAttribute("wizardData", wizardData);
-		model.addAttribute("demographic", teamCommitmentPageModel);
+		model.addAttribute("dataPageModel", dataPageModel);
 		model.addAttribute("wizard", wizard);
-		return "pages/Demographic";
+		return "pages/TeamCommitmentPage";
 	}
-	
+	/*
+	 * ivate String ;
+	private String ;
+	private String ;
+	private String ;
+	private String thirdLevelName;
+	private String ;
+	private String ;
+	private String fourthLevelTitle;
+	 */
 	@RequestMapping(value = "/saveTeamCommitmentPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
-			,@RequestParam String presentedtoId
-			,@RequestParam String presentedBusinessId
-			,@RequestParam String presentedById
+			,@RequestParam String topLevelName
+			,@RequestParam String topLevelTitle
+			,@RequestParam String secondLevelName
+			,@RequestParam String secondLevelTitle
+			,@RequestParam String thirdLevelName
+			,@RequestParam String thirdLevelTitle
+			,@RequestParam String fourthLevelName
+			,@RequestParam String fourthLevelTitle
 			,@RequestParam String wizarddataid
 			,@RequestParam String nextPage) {
 		mLog.info("starting save");
@@ -65,7 +79,9 @@ public class TeamCommitmentPageController {
 		}
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
-		PresentedToPageModel demographic  = new PresentedToPageModel(presentedtoId,presentedBusinessId, presentedById);
+		TeamCommitmentPageModel demographic  = new TeamCommitmentPageModel(topLevelName, topLevelTitle, secondLevelName,
+				secondLevelTitle, thirdLevelName, thirdLevelTitle, fourthLevelName,
+				fourthLevelTitle);
 		String pageData = JSONManager.convertToJson(demographic);
 		wizardData.setPagedata(pageData);
 		wizardDataRepository.save(wizardData);

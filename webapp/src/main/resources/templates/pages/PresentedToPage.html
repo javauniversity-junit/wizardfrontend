@@ -35,7 +35,7 @@
 	<div class="container">
 
 		<div>
-			<form method="post" action="saveDemographic">
+			<form method="post" action="savePresentedToPage">
 				<fieldset>
 					<legend>
 						Marketing Solutions - <span th:text="${wizard.name}"></span>
@@ -61,11 +61,14 @@
 							class="form-control" id="presentedBy" name="presentedBy"
 							placeholder="By" />
 					</div>
-					<input type="hidden" id="nextPage" value="TeamCommitmentPage"
-						name="nextPage"/ > <input type="hidden" id="wizardId"
-						th:value="${wizard.wizardid}" name="wizardId" /> <input
+					<input type="hidden" id="nextPage" th:value="'redirect:/TeamCommitmentPage?ID=' + ${wizard.wizardid}" 
+						name="nextPage"/> 
+						
+					<input type="hidden" id="wizardId"
+						th:value="${wizard.wizardid}" name="wizardId" />
+					 <input
 						type="hidden" id="wizarddataid"
-						th:value="${wizarddata?.wizarddataid}" name="wizarddataid" />
+						th:value="${wizardData?.wizarddataid}" name="wizarddataid" />
 
 
 					<button type="submit" class="btn btn-primary">Next</button>

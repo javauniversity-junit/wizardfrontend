@@ -1,11 +1,22 @@
 package web.page.presentedtopage;
 
 public class PresentedToPageModel {
-	public PresentedToPageModel(String presentedTo, String presentedBusiness, String presentedBy) {
+
+	
+	public PresentedToPageModel(String phoneNumber, String presentedTo, String presentedBusiness, String presentedBy) {
 		super();
+		this.phoneNumber = phoneNumber;
 		this.presentedTo = presentedTo;
 		this.presentedBusiness = presentedBusiness;
 		this.presentedBy = presentedBy;
+	}
+
+	private String phoneNumber;
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 	private String presentedTo;
 	private String presentedBusiness;
