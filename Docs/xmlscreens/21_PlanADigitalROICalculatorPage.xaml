@@ -1,0 +1,90 @@
+﻿<xctk:WizardPage x:Class="SCRWizard2015.PlanADigitalROICalculatorPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:local="clr-namespace:SCRWizard2015"
+             mc:Ignorable="d" d:DesignHeight="600" d:DesignWidth="800"
+                 Title="(14) Plan A Digital ROI Calculator">
+    <Grid  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <xctk:Zoombox x:Name="ZoomBx" ViewStackIndex="0" ViewStackMode="Auto" ZoomOn="View" Grid.Row="0" Scale="{Binding ElementName=uiScaleSlider,Path=Value}">
+            <Grid x:Name="DisplayGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"></ColumnDefinition>
+                    <ColumnDefinition Width="400" ></ColumnDefinition>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <!---->
+                <Label Grid.Row="1" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="A. Monthly Digital Investment"></Label>
+                <TextBox Grid.Row="1" Grid.Column="2" MinWidth="150" VerticalAlignment="Bottom" Text="{Binding PlanAMonthlyDigitalInvestment, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right"></TextBox>
+                <!---->
+                <Label Grid.Row="2" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="B. Cost Per Thousand (CPM)"></Label>
+                <TextBox Grid.Row="2" Grid.Column="2" MinWidth="150" VerticalAlignment="Bottom" Text="{Binding PlanACostPerThousand, StringFormat=C2, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right"></TextBox>
+                <!---->
+                <Label  Grid.Row="3" Grid.Column="1" Width="280"  Margin="0,10,0,0" VerticalAlignment="Bottom"  HorizontalAlignment="Left" Content="C. Monthly Impressions (A/B * 1,000)"></Label>
+                <TextBox Grid.Row="3" Grid.Column="2" MinWidth="150" VerticalAlignment="Bottom" Text="{Binding PlanAClosingPctNumber, StringFormat=N0, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right" IsReadOnly="True" Background="#FFE6E6E6"></TextBox>
+                <!---->
+                <Label Grid.Row="4" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="D. Click Through Rate (.01%, .1%, etc.)"></Label>
+                <xctk:DecimalUpDown Grid.Row="4" Grid.Column="2" MinWidth="75"  FormatString="P2" Increment=".0001" VerticalAlignment="Bottom" HorizontalAlignment="Right"  
+                                    Value="{Binding PlanAClickThroughRate, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right"></xctk:DecimalUpDown>
+                <!---->
+                <Label Grid.Row="5" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="E. Monthly # Clicks (C*D)"></Label>
+                <TextBox  Grid.Row="5" Grid.Column="2" MinWidth="150" VerticalAlignment="Bottom" IsTabStop="False" Text="{Binding PlanAMonthlyClicks, StringFormat=N0, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right" IsReadOnly="True" Background="#FFE6E6E6"></TextBox>
+                <!---->
+                <Label Grid.Row="6" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="F. Cost Per Clicks (A/E)"></Label>
+                <TextBox Grid.Row="6" Grid.Column="2" MinWidth="150" VerticalAlignment="Bottom" IsTabStop="False" Text="{Binding PlanACostPerClicks, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right" IsReadOnly="True" Background="#FFE6E6E6"></TextBox>
+                <!---->
+                <Label Grid.Row="7" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="G. Sales Conversion Percentage (2%, 10%, etc.)"></Label>
+                <xctk:DecimalUpDown Grid.Row="7" Grid.Column="2" MinWidth="75"  FormatString="P0" Increment=".01" VerticalAlignment="Bottom" HorizontalAlignment="Right"  
+                                    Value="{Binding PlanASalesConversionPercentage, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right"></xctk:DecimalUpDown>                       
+                <!---->
+                <Label Grid.Row="8" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="H. Monthly Number of Conversions (E*G)"></Label>
+                <TextBox  Grid.Row="8" Grid.Column="2" MinWidth="150" VerticalAlignment="Bottom" IsTabStop="False" Text="{Binding PlanAMonthlyConversions, StringFormat=N0, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right" IsReadOnly="True" Background="#FFE6E6E6"></TextBox>
+                <!---->
+                <Label Grid.Row="9" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="I. Cost Per Conversion (A/H)"></Label>
+                  <TextBox  Grid.Row="9" Grid.Column="2" MinWidth="150" VerticalAlignment="Bottom" IsTabStop="False" Text="{Binding PlanACostPerConversion, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right" IsReadOnly="True" Background="#FFE6E6E6"></TextBox>                
+                <!---->
+                <Label Grid.Row="10" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="J. Projected Gross Profit Per Conversion ($100, $1,000, etc.)"></Label>
+                <TextBox Grid.Row="10" Grid.Column="2" MinWidth="150" VerticalAlignment="Bottom" IsTabStop="False" Text="{Binding PlanAProjectedGrossProfit, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right"></TextBox>
+                <!---->
+                <Label Grid.Row="11" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="K. Monthly Gross Profit Generated from all Conversions (H*J)"></Label>
+                <TextBox Grid.Row="11" Grid.Column="2" MinWidth="150" VerticalAlignment="Bottom" IsTabStop="False" Text="{Binding PlanAMonthlyGrossProfit, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right" IsReadOnly="True" Background="#FFE6E6E6"></TextBox> 
+                                                <!---->
+                <Label Grid.Row="12" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="L. $ Monthly Return on Investment (K-A)"></Label>
+                <TextBox Grid.Row="12" Grid.Column="2" MinWidth="150" VerticalAlignment="Bottom" IsTabStop="False" Text="{Binding PlanAMonthlyROID, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right" IsReadOnly="True" Background="#FFE6E6E6"></TextBox>
+                <!---->
+                <Label Grid.Row="13" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="M. % Monthly Return on Investment (L/A)"></Label>
+                <TextBox Grid.Row="13" Grid.Column="2" MinWidth="150" VerticalAlignment="Bottom" IsTabStop="False" Text="{Binding PlanAMonthlyROIP, StringFormat=P0, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right" IsReadOnly="True" Background="#FFE6E6E6"></TextBox>
+            </Grid>
+        </xctk:Zoombox>
+        <Image Grid.Row="0" x:Name="ZoomBoxLocator" Width="30" Height="30" Grid.ZIndex="-1" VerticalAlignment="Bottom" HorizontalAlignment="Right" 
+               Source="/SCRWizard2015;component/images/arrow-big-four-way-128.png" ></Image>
+        <Slider Grid.Column="0"  Grid.Row="1"
+            x:Name="uiScaleSlider" 
+            ToolTip="Slide to Scale"
+            Value="1" Minimum="0.1" Maximum="4" ValueChanged="uiScaleSlider_ValueChanged" />
+    </Grid>
+</xctk:WizardPage>

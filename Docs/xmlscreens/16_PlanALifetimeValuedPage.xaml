@@ -1,0 +1,82 @@
+﻿<xctk:WizardPage x:Class="SCRWizard2015.PlanALifetimeValuedPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:local="clr-namespace:SCRWizard2015"
+             mc:Ignorable="d" d:DesignHeight="600" d:DesignWidth="800"
+                 Title="(13) Plan A Lifetime Value Analysis" Enter="WizardPage_Enter">
+    <Grid  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <xctk:Zoombox x:Name="ZoomBx" ViewStackIndex="0" ViewStackMode="Auto" ZoomOn="View" Grid.Row="0" Scale="{Binding ElementName=uiScaleSlider,Path=Value}">
+            <Grid x:Name="DisplayGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"></ColumnDefinition>
+                    <ColumnDefinition Width="400" ></ColumnDefinition>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <!--A-->
+                <Label Grid.Row="1" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="A. Average sale (ticket, transaction, invoice)"></Label>
+                <TextBox Grid.Row="1" Grid.Column="1" Width="150" VerticalAlignment="Bottom" HorizontalAlignment="Right" Text="{Binding AverageSale, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right" Grid.ColumnSpan="2" Margin="399,0,1,35" Grid.RowSpan="2"></TextBox>
+                <!--B-->
+                <Label Grid.Row="2" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="B. Times gross profit margin on average sale (sale less cost of goods sold)"></Label>
+                <xctk:DecimalUpDown Grid.Row="2" Grid.Column="2" MinWidth="75"  FormatString="P0" Increment=".01" VerticalAlignment="Bottom" HorizontalAlignment="Right"  
+                                    Value="{Binding GrossProfitMargin, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right"></xctk:DecimalUpDown>
+                <!--C-->
+                <Label  Grid.Row="3" Grid.Column="1" Width="280"  Margin="0,10,0,0" VerticalAlignment="Bottom"  HorizontalAlignment="Left" Content="C. Equals gross profit per average sale (A*B)"></Label>
+                <TextBox  Grid.Row="3" Grid.Column="2" Width="150" VerticalAlignment="Bottom" IsTabStop="False"  HorizontalAlignment="Right" Text="{Binding GrossProfitPerSale, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right" IsReadOnly="True" Background="#FFE6E6E6"></TextBox>
+                <!--D-->
+                <Label Grid.Row="4" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="D. Times the average repeat sales per year (per customer/client)"></Label>
+                <TextBox Grid.Row="4" Grid.Column="1" Width="150" VerticalAlignment="Bottom" HorizontalAlignment="Right" Text="{Binding AverageRepeatSales,StringFormat=N0, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right" Grid.ColumnSpan="2" Margin="399,0,1,35" Grid.RowSpan="2"></TextBox>
+                <!--E-->
+                <Label Grid.Row="5" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="E. Equals the average customer/client value per year (C*D)"></Label>
+                <TextBox  Grid.Row="5" Grid.Column="2"  Width="150" VerticalAlignment="Bottom" IsTabStop="False"  HorizontalAlignment="Right"  Text="{Binding AverageCustomerValue, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right" IsReadOnly="True" Background="#FFE6E6E6"></TextBox>
+                <!--F-->
+                <Label Grid.Row="6" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="F. Times the average number of years of patronage"></Label>
+                <TextBox Grid.Row="6" Grid.Column="1" Width="150" VerticalAlignment="Bottom" HorizontalAlignment="Right" Text="{Binding YearsOfPatronage, StringFormat=N0,UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right" Grid.ColumnSpan="2" Margin="399,0,1,35" Grid.RowSpan="2"></TextBox>
+                <!--G-->
+                <Label Grid.Row="7" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="G. Equals the lifetime value of one customer/client (E*F)"></Label>
+                <TextBox  Grid.Row="7" Grid.Column="2"  Width="150" VerticalAlignment="Bottom" IsTabStop="False"  HorizontalAlignment="Right"  
+                          Text="{Binding LifetimeValuePerCustomer, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right" 
+                          IsReadOnly="True" Background="#FFE6E6E6"></TextBox>
+                <!--H-->
+                <Label Grid.Row="8" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="H. So if your base monthly advertising investment averages"></Label>
+                <TextBox Grid.Row="8" Grid.Column="1" Width="150" VerticalAlignment="Bottom" IsTabStop="False" HorizontalAlignment="Right" 
+                         Text="{Binding MonthlyInvestmentAverage, StringFormat=C0,UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right" 
+                         Grid.ColumnSpan="2" Margin="399,0,1,35" Grid.RowSpan="2"
+                         IsReadOnly="True" Background="#FFE6E6E6"></TextBox>
+                <!--I-->
+                <Label Grid.Row="9" Grid.Column="1"  Margin="0,10,0,0" VerticalAlignment="Bottom"  Content="I. Then monthly customers/clients needed to break even (H/G)"></Label>
+                <TextBox  Grid.Row="9" Grid.Column="2"  Width="150" VerticalAlignment="Bottom" IsTabStop="False"   HorizontalAlignment="Right"  Text="{Binding ProspectsNeededToBreakEven, StringFormat=N1, UpdateSourceTrigger=PropertyChanged }" TextAlignment="Right" IsReadOnly="True" Background="#FFE6E6E6"></TextBox>
+
+            </Grid>
+        </xctk:Zoombox>
+        <Image Grid.Row="0" x:Name="ZoomBoxLocator" Width="30" Height="30" Grid.ZIndex="-1" VerticalAlignment="Bottom" HorizontalAlignment="Right" 
+               Source="/SCRWizard2015;component/images/arrow-big-four-way-128.png" ></Image>
+        <Slider Grid.Column="0"  Grid.Row="1"
+            x:Name="uiScaleSlider" 
+            ToolTip="Slide to Scale"
+            Value="1" Minimum="0.1" Maximum="4" ValueChanged="uiScaleSlider_ValueChanged" />
+    </Grid>
+</xctk:WizardPage>
