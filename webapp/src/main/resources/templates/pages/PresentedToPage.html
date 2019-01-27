@@ -24,49 +24,53 @@
 </head>
 <body>
 
- 
-	<!-- Begin page content -->
-	   <!--- start header container -->
-       
-        <div id="headerId"></div>
 
-	
+	<!-- Begin page content -->
+	<!--- start header container -->
+
+	<div id="headerId"></div>
+
+
 
 	<div class="container">
-	
+
 		<div>
 			<form method="post" action="saveDemographic">
-			 <fieldset>
-			 <legend>Marketing
-				Solutions - <span th:text="${wizard.name}"></span></legend>
-				<div class="form-group">
-					<label for="presentedtoId">Presented to</label>
-					<input
-						type="text" class="form-control" id="presentedtoId" name="presentedtoId" required
-						aria-describedby="presentedtoIdHelp" placeholder="Enter Presented to"/> <small
-						id="presentedtoIdHelp" class="form-text text-muted">We'll never
-						share your data with anyone else.</small>
-				</div>
-				<div class="form-group">
-					<label for="presentedBusinessId">Presented Business</label> 
-					<input
-						type="text" th:value="${demographic.presentedTo}" required class="form-control" id="presentedBusinessId" name="presentedBusinessId"
-						placeholder="Business"/>
-				</div>
-							<div class="form-group">
-					<label for="presentedById">Presented By</label> 
-					<input
-						type="text" required class="form-control" id="presentedById" name="presentedById" 
-						placeholder="By"/>
-				</div>
-				 <input type="hidden" id="nextPage" value="TeamCommitmentPage"  name="nextPage"/ >
-				 <input type="hidden" id="wizardId" th:value="${wizard.wizardid}"  name="wizardId" />
-				 <input type="hidden" id="wizarddataid" th:value="${wizarddata.wizarddataid}"  name="wizarddataid" />
-				
-				
-				<button type="submit" class="btn btn-primary">Next</button>
-				<button type="submit" class="btn btn-primary">Publish</button>
-			 </fieldset>
+				<fieldset>
+					<legend>
+						Marketing Solutions - <span th:text="${wizard.name}"></span>
+					</legend>
+					<div class="form-group">
+						<label for="presentedTo">Presented to</label> <input
+							th:value="${dataPageModel?.presentedTo}" type="text"
+							class="form-control" id="presentedTo" name="presentedTo"
+							required aria-describedby="presentedtoIdHelp"
+							placeholder="Enter Presented to" /> <small id="presentedtoIdHelp"
+							class="form-text text-muted">We'll never share your data
+							with anyone else.</small>
+					</div>
+					<div class="form-group">
+						<label for="presentedBusiness">Presented Business</label> <input
+							type="text" th:value="${dataPageModel?.presentedBusiness}" required
+							class="form-control" id="presentedBusiness"
+							name="presentedBusiness" placeholder="Business" />
+					</div>
+					<div class="form-group">
+						<label for="presentedById">Presented By</label> <input type="text"
+							th:value="${dataPageModel?.presentedBy}" required
+							class="form-control" id="presentedBy" name="presentedBy"
+							placeholder="By" />
+					</div>
+					<input type="hidden" id="nextPage" value="TeamCommitmentPage"
+						name="nextPage"/ > <input type="hidden" id="wizardId"
+						th:value="${wizard.wizardid}" name="wizardId" /> <input
+						type="hidden" id="wizarddataid"
+						th:value="${wizarddata?.wizarddataid}" name="wizarddataid" />
+
+
+					<button type="submit" class="btn btn-primary">Next</button>
+					<button type="submit" class="btn btn-primary">Publish</button>
+				</fieldset>
 			</form>
 
 
@@ -78,7 +82,8 @@
 
 
 	<!-- JavaScript files-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
@@ -88,14 +93,14 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
 		integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
 		crossorigin="anonymous"></script>
-		
-		 <script>
-            $(function () {
-                $("#headerId").load("header.html");
-            });
-        </script>
-        
-  
+
+	<script>
+		$(function() {
+			$("#headerId").load("header.html");
+		});
+	</script>
+
+
 
 
 

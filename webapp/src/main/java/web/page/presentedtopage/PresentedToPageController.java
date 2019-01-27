@@ -35,23 +35,23 @@ public class PresentedToPageController {
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
 		WizardData wizardData = wizardDataRepository.findByPagesequenceAndWizardid(Pages.PRESENTEDTOPAGE.getPageSequence(), wizard.getWizardid());
-		PresentedToPageModel demographic = null;
+		PresentedToPageModel dataPageModel = null;
 		if (wizardData != null) {
-			demographic =(PresentedToPageModel)JSONManager.convertFromJson(wizardData.getPagedata(), PresentedToPageModel.class);
+			dataPageModel =(PresentedToPageModel)JSONManager.convertFromJson(wizardData.getPagedata(), PresentedToPageModel.class);
 			
 		}
 		//DemographicManager.convertFromJson(json)
 		model.addAttribute("wizardData", wizardData);
-		model.addAttribute("demographic", demographic);
+		model.addAttribute("dataPageModel", dataPageModel);
 		model.addAttribute("wizard", wizard);
 		return "pages/PresentedToPage";
 	}
 	
 	@RequestMapping(value = "/savePresentedToPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
-			,@RequestParam String presentedtoId
-			,@RequestParam String presentedBusinessId
-			,@RequestParam String presentedById
+			,@RequestParam String presentedTo
+			,@RequestParam String presentedBusiness
+			,@RequestParam String presentedBy
 			,@RequestParam String wizarddataid
 			,@RequestParam String nextPage) {
 		mLog.info("starting save");
@@ -65,7 +65,7 @@ public class PresentedToPageController {
 		}
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
-		PresentedToPageModel demographic  = new PresentedToPageModel(presentedtoId,presentedBusinessId, presentedById);
+		PresentedToPageModel demographic  = new PresentedToPageModel(presentedTo,presentedBusiness, presentedBy);
 		String pageData = JSONManager.convertToJson(demographic);
 		
 		wizardData.setPagedata(pageData);
