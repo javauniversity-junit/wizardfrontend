@@ -1,0 +1,161 @@
+﻿<xctk:WizardPage x:Class="SCRWizard2015.TargetMarketingPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:local="clr-namespace:SCRWizard2015"
+             mc:Ignorable="d" d:DesignHeight="600" d:DesignWidth="800"
+                 Title="(8) Target Marketing" Enter="WizardPage_Enter">
+    <Grid  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <xctk:Zoombox x:Name="ZoomBx" ViewStackIndex="0" ViewStackMode="Auto" ZoomOn="View" Grid.Row="0" Scale="{Binding ElementName=uiScaleSlider,Path=Value}">
+            <Grid x:Name="DisplayGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+ 
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"></ColumnDefinition>
+                    <ColumnDefinition Width="500"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Label MaxWidth="200">
+                        <TextBlock TextWrapping="WrapWithOverflow">What percentage of the client's "target" consumers are men?</TextBlock>
+                    </Label>
+                    <xctk:DecimalUpDown x:Name="pctMen" Height="25" DefaultValue="{Binding pctMen}" FormatString="N0" Maximum="100" Text="50" ValueChanged="pctMen_ValueChanged"></xctk:DecimalUpDown>
+                    <Label VerticalAlignment="Center">Women?</Label>
+                    <xctk:DecimalUpDown x:Name="pctWomen" Height="25" DefaultValue="{Binding pctWomen}" FormatString="N0" Maximum="100" Text="50" ValueChanged="pctWomen_ValueChanged"></xctk:DecimalUpDown>
+                </StackPanel>
+                <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Label Content='What is the perceived household income of your "target" consumers?'></Label>
+                    <ListBox x:Name="HouseholdIncome" SelectionChanged="HouseholdIncome_SelectionChanged">
+                        <ListBox.Resources>
+                            <Style TargetType="{x:Type ListBoxItem}">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                            <Border x:Name="Bd"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        Background="{TemplateBinding Background}"
+                                        Padding="{TemplateBinding Padding}"
+                                        SnapsToDevicePixels="true">
+                                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                            </Border>
+                                            <ControlTemplate.Triggers>
+                                                <MultiTrigger>
+                                                    <MultiTrigger.Conditions>
+                                                        <Condition Property="Selector.IsSelectionActive"
+                                                        Value="False" />
+                                                        <Condition Property="IsSelected"
+                                                        Value="True" />
+                                                    </MultiTrigger.Conditions>
+                                                    <Setter Property="Background"
+                                                TargetName="Bd"
+                                                Value="LightSteelBlue" />
+                                                </MultiTrigger>
+                                                <MultiTrigger>
+                                                    <MultiTrigger.Conditions>
+                                                        <Condition Property="Selector.IsSelectionActive"
+                                                        Value="True" />
+                                                        <Condition Property="IsSelected"
+                                                        Value="True" />
+                                                    </MultiTrigger.Conditions>
+                                                    <Setter Property="Background"
+                                                TargetName="Bd"
+                                                Value="LightSteelBlue" />
+                                                </MultiTrigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ListBox.Resources>
+                        <ListBoxItem IsSelected="True" x:Name="Above150">$150,000 +</ListBoxItem>
+                        <ListBoxItem x:Name="OneHundredToOneFourtyNine">$100,000 - 149,000</ListBoxItem>
+                        <ListBoxItem x:Name="FiftyToNinetyNine">$50,000 - 99,000</ListBoxItem>
+                        <ListBoxItem x:Name="Under50">under $50,000</ListBoxItem>
+                    </ListBox>
+                </StackPanel>
+                
+                <!-- tms -->
+                <StackPanel Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="5" Orientation="Vertical" >
+                    <Label Content='How else would you describe your ideal "target" consumer (i.e., geo-targeting, home value, behavior, lifestyle, interests, family structure, etc.)?'></Label>
+                    <TextBox  Width="775"  VerticalScrollBarVisibility="Auto" Height="50" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding DescribeIdealTargetConsumer}"></TextBox>
+                </StackPanel>
+                
+                <!-- tms -->            
+                
+                <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Left">
+                    <Label Content="Lenograph" FontSize="16" FontWeight="Bold"></Label>
+                    <Label Content="A picture of consumption by target expressed by ratings 1-10, with 10 being the highest"></Label>
+                </StackPanel>
+                <Grid Grid.Row="5" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" >Age Group</Label>
+                    <Label Grid.Row="0" Grid.Column="1" FontWeight="Bold">12-18</Label>
+                    <Label Grid.Row="0" Grid.Column="2" FontWeight="Bold">19-25</Label>
+                    <Label Grid.Row="0" Grid.Column="3" FontWeight="Bold">26-35</Label>
+                    <Label Grid.Row="0" Grid.Column="4" FontWeight="Bold">36-45</Label>
+                    <Label Grid.Row="0" Grid.Column="5" FontWeight="Bold">46-55</Label>
+                    <Label Grid.Row="0" Grid.Column="6" FontWeight="Bold">55+</Label>
+                    <!---->
+                    <Label Grid.Row="1" Grid.Column="0">Have</Label>
+                    <xctk:DecimalUpDown DefaultValue="0" FormatString="N0" Maximum="10" Text="{Binding have12to18, UpdateSourceTrigger=PropertyChanged }" Grid.Row="1" Grid.Column="1"></xctk:DecimalUpDown>
+                    <xctk:DecimalUpDown DefaultValue="0" FormatString="N0" Maximum="10" Text="{Binding have19to25, UpdateSourceTrigger=PropertyChanged }" Grid.Row="1" Grid.Column="2"></xctk:DecimalUpDown>
+                    <xctk:DecimalUpDown DefaultValue="0" FormatString="N0" Maximum="10" Text="{Binding have26to35, UpdateSourceTrigger=PropertyChanged }" Grid.Row="1" Grid.Column="3"></xctk:DecimalUpDown>
+                    <xctk:DecimalUpDown DefaultValue="0" FormatString="N0" Maximum="10" Text="{Binding have36to45, UpdateSourceTrigger=PropertyChanged }" Grid.Row="1" Grid.Column="4"></xctk:DecimalUpDown>
+                    <xctk:DecimalUpDown DefaultValue="0" FormatString="N0" Maximum="10" Text="{Binding have46to55, UpdateSourceTrigger=PropertyChanged }" Grid.Row="1" Grid.Column="5"></xctk:DecimalUpDown>
+                    <xctk:DecimalUpDown DefaultValue="0" FormatString="N0" Maximum="10" Text="{Binding have56Plus, UpdateSourceTrigger=PropertyChanged }" Grid.Row="1" Grid.Column="6"></xctk:DecimalUpDown>
+                    <!---->
+                    <Label Grid.Row="2" Grid.Column="0">Want</Label>
+                    <xctk:DecimalUpDown DefaultValue="0" FormatString="N0" Maximum="10" Text="{Binding want12to18, UpdateSourceTrigger=PropertyChanged }" Grid.Row="2" Grid.Column="1"></xctk:DecimalUpDown>
+                    <xctk:DecimalUpDown DefaultValue="0" FormatString="N0" Maximum="10" Text="{Binding want19to25, UpdateSourceTrigger=PropertyChanged }" Grid.Row="2" Grid.Column="2"></xctk:DecimalUpDown>
+                    <xctk:DecimalUpDown DefaultValue="0" FormatString="N0" Maximum="10" Text="{Binding want26to35, UpdateSourceTrigger=PropertyChanged }" Grid.Row="2" Grid.Column="3"></xctk:DecimalUpDown>
+                    <xctk:DecimalUpDown DefaultValue="0" FormatString="N0" Maximum="10" Text="{Binding want36to45, UpdateSourceTrigger=PropertyChanged }" Grid.Row="2" Grid.Column="4"></xctk:DecimalUpDown>
+                    <xctk:DecimalUpDown DefaultValue="0" FormatString="N0" Maximum="10" Text="{Binding want46to55, UpdateSourceTrigger=PropertyChanged }" Grid.Row="2" Grid.Column="5"></xctk:DecimalUpDown>
+                    <xctk:DecimalUpDown DefaultValue="0" FormatString="N0" Maximum="10" Text="{Binding want55Plus, UpdateSourceTrigger=PropertyChanged }" Grid.Row="2" Grid.Column="6"></xctk:DecimalUpDown>
+                </Grid>
+            </Grid>
+        </xctk:Zoombox>
+        <Image Grid.Row="0" x:Name="ZoomBoxLocator" Width="30" Height="30" Grid.ZIndex="-1" VerticalAlignment="Bottom" HorizontalAlignment="Right" 
+               Source="/SCRWizard2015;component/images/arrow-big-four-way-128.png" ></Image>
+        <Slider Grid.Column="0"  Grid.Row="1"
+            x:Name="uiScaleSlider" 
+            ToolTip="Slide to Scale"
+            Value="1" Minimum="0.1" Maximum="4" ValueChanged="uiScaleSlider_ValueChanged" />
+    </Grid>
+</xctk:WizardPage>

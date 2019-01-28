@@ -1,0 +1,333 @@
+﻿<xctk:WizardPage x:Class="SCRWizard2015.PlanBMediaPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             xmlns:local="clr-namespace:SCRWizard2015"
+             mc:Ignorable="d" d:DesignHeight="600" d:DesignWidth="900"
+                 Title="(20) Plan B Proposed 12 Month Media Investment" Enter="WizardPage_Enter">
+    <ContentControl.Resources>
+        <Style x:Key="TextBoxStyle" TargetType="{x:Type TextBox}">
+            <EventSetter Event="GotFocus" Handler="TextBox_GotFocus"/>
+        </Style>
+    </ContentControl.Resources>
+    <Grid  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <xctk:Zoombox x:Name="ZoomBx" ViewStackIndex="0" ViewStackMode="Auto" ZoomOn="View" Grid.Row="0" Scale="{Binding ElementName=uiScaleSlider,Path=Value}">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                <ListView Grid.Row="0" Name="lvMediaInvestment" SelectionChanged="lvMediaInvestment_SelectionChanged" SelectionMode="Single">
+                    <ListView.View>
+                        <GridView AllowsColumnReorder="False">
+                            <GridViewColumn Width="75" Header="Media" DisplayMemberBinding="{Binding Station}" />
+                            <GridViewColumn Width="55" Header="Jan" >
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock TextAlignment="Right" Text="{Binding Path=Jan, StringFormat='{}{0:C0}'}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="55" Header="Feb"  >
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock TextAlignment="Right" Text="{Binding Path=Feb, StringFormat='{}{0:C0}'}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="55" Header="Mar" >
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock TextAlignment="Right" Text="{Binding Path=Mar, StringFormat='{}{0:C0}'}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="55" Header="Apr"  >
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock TextAlignment="Right" Text="{Binding Path=Apr, StringFormat='{}{0:C0}'}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="55" Header="May"   >
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock TextAlignment="Right" Text="{Binding Path=May, StringFormat='{}{0:C0}'}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="55" Header="June"   >
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock TextAlignment="Right" Text="{Binding Path=June, StringFormat='{}{0:C0}'}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="55" Header="July" >
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock TextAlignment="Right" Text="{Binding Path=July, StringFormat='{}{0:C0}'}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="55" Header="Aug"  >
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock TextAlignment="Right" Text="{Binding Path=Aug, StringFormat='{}{0:C0}'}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="55" Header="Sept" >
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock TextAlignment="Right" Text="{Binding Path=Sept, StringFormat='{}{0:C0}'}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="55" Header="Oct"   >
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock TextAlignment="Right" Text="{Binding Path=Oct, StringFormat='{}{0:C0}'}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="55" Header="Nov"  >
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock TextAlignment="Right" Text="{Binding Path=Nov, StringFormat='{}{0:C0}'}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="55" Header="Dec"  >
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock TextAlignment="Right" Text="{Binding Path=Dec, StringFormat='{}{0:C0}'}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                            <GridViewColumn Width="75" Header="Total" >
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock TextAlignment="Right" Text="{Binding Path=Total, StringFormat='{}{0:C0}'}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+                <Grid Margin="0,2,0,2" Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75"></ColumnDefinition>
+                        <ColumnDefinition Width="55"></ColumnDefinition>
+                        <ColumnDefinition Width="55"></ColumnDefinition>
+                        <ColumnDefinition Width="55"></ColumnDefinition>
+                        <ColumnDefinition Width="55"></ColumnDefinition>
+                        <ColumnDefinition Width="55"></ColumnDefinition>
+                        <ColumnDefinition Width="55"></ColumnDefinition>
+                        <ColumnDefinition Width="55"></ColumnDefinition>
+                        <ColumnDefinition Width="55"></ColumnDefinition>
+                        <ColumnDefinition Width="55"></ColumnDefinition>
+                        <ColumnDefinition Width="55"></ColumnDefinition>
+                        <ColumnDefinition Width="55"></ColumnDefinition>
+                        <ColumnDefinition Width="55"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center">Volume:</Label>
+                    <Label Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center">Jan</Label>
+                    <Label Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center">Feb</Label>
+                    <Label Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center">Mar</Label>
+                    <Label Grid.Row="0" Grid.Column="4" HorizontalAlignment="Center">Apr</Label>
+                    <Label Grid.Row="0" Grid.Column="5" HorizontalAlignment="Center">May</Label>
+                    <Label Grid.Row="0" Grid.Column="6" HorizontalAlignment="Center">Jun</Label>
+                    <Label Grid.Row="0" Grid.Column="7" HorizontalAlignment="Center">Jul</Label>
+                    <Label Grid.Row="0" Grid.Column="8" HorizontalAlignment="Center">Aug</Label>
+                    <Label Grid.Row="0" Grid.Column="9" HorizontalAlignment="Center">Sept</Label>
+                    <Label Grid.Row="0" Grid.Column="10" HorizontalAlignment="Center">Oct</Label>
+                    <Label Grid.Row="0" Grid.Column="11" HorizontalAlignment="Center">Nov</Label>
+                    <Label Grid.Row="0" Grid.Column="12" HorizontalAlignment="Center">Dec</Label>
+                    <ComboBox Name="JanSpikeEnum" Margin="1" Grid.Column="1" Grid.Row="1"  Text="{Binding SpikeEnumJan}">
+                        <ComboBoxItem >Base</ComboBoxItem>
+                        <ComboBoxItem >Slow</ComboBoxItem>
+                        <ComboBoxItem >Spike</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox  Name="FebSpikeEnum" Margin="1" Grid.Column="2" Grid.Row="1" Text="{Binding SpikeEnumFeb}">
+                        <ComboBoxItem >Base</ComboBoxItem>
+                        <ComboBoxItem >Slow</ComboBoxItem>
+                        <ComboBoxItem >Spike</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Name="MarSpikeEnum" Margin="1"  Grid.Column="3" Grid.Row="1" Text="{Binding SpikeEnumMar}">
+                        <ComboBoxItem >Base</ComboBoxItem>
+                        <ComboBoxItem >Slow</ComboBoxItem>
+                        <ComboBoxItem >Spike</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox  Name="AprSpikeEnum" Margin="1"  Grid.Column="4" Grid.Row="1" Text="{Binding SpikeEnumApr}">
+                        <ComboBoxItem >Base</ComboBoxItem>
+                        <ComboBoxItem >Slow</ComboBoxItem>
+                        <ComboBoxItem >Spike</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Name="MaySpikeEnum" Margin="1"  Grid.Column="5" Grid.Row="1" Text="{Binding SpikeEnumMay}">
+                        <ComboBoxItem >Base</ComboBoxItem>
+                        <ComboBoxItem >Slow</ComboBoxItem>
+                        <ComboBoxItem >Spike</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox  Name="JunSpikeEnum" Margin="1"  Grid.Column="6" Grid.Row="1" Text="{Binding SpikeEnumJun}">
+                        <ComboBoxItem >Base</ComboBoxItem>
+                        <ComboBoxItem >Slow</ComboBoxItem>
+                        <ComboBoxItem >Spike</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Name="JulSpikeEnum" Margin="1"  Grid.Column="7" Grid.Row="1" Text="{Binding SpikeEnumJul}">
+                        <ComboBoxItem >Base</ComboBoxItem>
+                        <ComboBoxItem >Slow</ComboBoxItem>
+                        <ComboBoxItem >Spike</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox  Name="AugSpikeEnum" Margin="1" Grid.Column="8" Grid.Row="1" Text="{Binding SpikeEnumAug}">
+                        <ComboBoxItem >Base</ComboBoxItem>
+                        <ComboBoxItem >Slow</ComboBoxItem>
+                        <ComboBoxItem >Spike</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Name="SeptSpikeEnum" Margin="1"  Grid.Column="9" Grid.Row="1" Text="{Binding SpikeEnumSept}">
+                        <ComboBoxItem >Base</ComboBoxItem>
+                        <ComboBoxItem >Slow</ComboBoxItem>
+                        <ComboBoxItem >Spike</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Name="OctSpikeEnum" Margin="1"  Grid.Column="10" Grid.Row="1" Text="{Binding SpikeEnumOct}">
+                        <ComboBoxItem >Base</ComboBoxItem>
+                        <ComboBoxItem >Slow</ComboBoxItem>
+                        <ComboBoxItem >Spike</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Name="NovSpikeEnum" Margin="1" Grid.Column="11" Grid.Row="1" Text="{Binding SpikeEnumNov}">
+                        <ComboBoxItem >Base</ComboBoxItem>
+                        <ComboBoxItem >Slow</ComboBoxItem>
+                        <ComboBoxItem >Spike</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox  Name="DecSpikeEnum" Margin="1" Grid.Column="12" Grid.Row="1" Text="{Binding SpikeEnumDec}">
+                        <ComboBoxItem >Base</ComboBoxItem>
+                        <ComboBoxItem >Slow</ComboBoxItem>
+                        <ComboBoxItem >Spike</ComboBoxItem>
+                    </ComboBox>
+                </Grid>
+                <Grid Margin="0,3,0,3" Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"></ColumnDefinition>
+                        <ColumnDefinition Width="200"></ColumnDefinition>
+                        <ColumnDefinition Width="200"></ColumnDefinition>
+                        <ColumnDefinition Width="110" ></ColumnDefinition>
+                        <ColumnDefinition Width="*" ></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                        <Label Width="70" >Media</Label>
+                        <TextBox  Style="{StaticResource TextBoxStyle}" Name="txtStation"  Width="100" ></TextBox>
+                    </StackPanel>
+
+                    <!--Left Column-->
+                    <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                        <Label Width="70" >January</Label>
+                        <TextBox Text="{Binding txtJan, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }" x:Name="txtJan" Width="100" ></TextBox>
+                        <Button x:Name="fillMonths" Click="fillMonths_Click">**fill</Button>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2" Grid.Column="1"  Orientation="Horizontal">
+                        <Label Width="70" >February</Label>
+                        <TextBox Text="{Binding txtFeb, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }" x:Name="txtFeb"  Width="100"  ></TextBox>
+                    </StackPanel>
+                    <StackPanel Grid.Row="3" Grid.Column="1"  Orientation="Horizontal">
+                        <Label Width="70" >March</Label>
+                        <TextBox Text="{Binding txtMar, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }"  x:Name="txtMar"  Width="100" ></TextBox>
+                    </StackPanel>
+                    <StackPanel Grid.Row="4" Grid.Column="1"  Orientation="Horizontal">
+                        <Label Width="70" >April</Label>
+                        <TextBox  Text="{Binding txtApr, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }"  Name="txtApr"  Width="100" ></TextBox>
+                    </StackPanel>
+                    <StackPanel Grid.Row="5" Grid.Column="1"  Orientation="Horizontal">
+                        <Label Width="70" >May</Label>
+                        <TextBox Text="{Binding txtMay, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }" Name="txtMay"  Width="100"  ></TextBox>
+                    </StackPanel>
+                    <StackPanel Grid.Row="6" Grid.Column="1"  Orientation="Horizontal">
+                        <Label Width="70" >June</Label>
+                        <TextBox Text="{Binding txtJune, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }" Name="txtJune"  Width="100"  ></TextBox>
+                    </StackPanel>
+
+                    <!--Right Column-->
+                    <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal">
+                        <Label Width="70" >July</Label>
+                        <TextBox Text="{Binding txtJuly, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }"  Name="txtJuly" Width="100" ></TextBox>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2" Grid.Column="2"  Orientation="Horizontal">
+                        <Label Width="70" >August</Label>
+                        <TextBox Text="{Binding txtAug, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }" Name="txtAug"  Width="100" ></TextBox>
+                    </StackPanel>
+                    <StackPanel Grid.Row="3" Grid.Column="2"  Orientation="Horizontal">
+                        <Label Width="70" >September</Label>
+                        <TextBox Text="{Binding txtSept, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }" Name="txtSept"  Width="100" ></TextBox>
+                    </StackPanel>
+                    <StackPanel Grid.Row="4" Grid.Column="2"  Orientation="Horizontal">
+                        <Label Width="70" >October</Label>
+                        <TextBox  Text="{Binding txtOct, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }" Name="txtOct"  Width="100"  ></TextBox>
+                    </StackPanel>
+                    <StackPanel Grid.Row="5" Grid.Column="2"  Orientation="Horizontal">
+                        <Label Width="70" >November</Label>
+                        <TextBox  Text="{Binding txtNov, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }" Name="txtNov"  Width="100" ></TextBox>
+                    </StackPanel>
+                    <StackPanel Grid.Row="6" Grid.Column="2"  Orientation="Horizontal">
+                        <Label Width="70" >December</Label>
+                        <TextBox   Text="{Binding txtDec, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }" Name="txtDec"  Width="100" ></TextBox>
+                    </StackPanel>
+                    <StackPanel Grid.Row="7" Grid.Column="2"  Orientation="Horizontal">
+                        <Label Width="70" >Total</Label>
+                        <TextBox IsEnabled="False"  Name="txtTotal" Text="{Binding txtTotal, StringFormat=C0, UpdateSourceTrigger=PropertyChanged }"  Width="100" ></TextBox>
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Grid.Column="4" Grid.RowSpan="7" HorizontalAlignment="Left" 
+                       Name="textBlock1" VerticalAlignment="Top" >
+                        <Label>•	Highlight row under “Media” with “0’s”</Label>
+                        <Label>•	Fill in media name in “Media” box</Label>
+                        <Label>•	Click “Save to Selected”</Label>
+                        <Label>•	To add a duplicate schedule line click “Add as New”</Label>
+                        <Label>•	To add a new empty schedule line click “Add New Empty"</Label>
+                        <Label>•	Change to Media name then “Save to Selected”</Label>
+                        <Label>•	Add monthly advertising $ then “Save to Selected”</Label>
+                        <Label>•	To delete – highlight row then “Delete Selected”</Label>
+                    </StackPanel>
+                    <StackPanel VerticalAlignment="Top" Grid.Row="1" Grid.Column="3" Grid.RowSpan="7"  Orientation= "Vertical" HorizontalAlignment="Right" >
+                        <Button  Margin="0,0,5,5" IsEnabled="False" Content="Save to Selected" Height="23"  Name="btnSave" VerticalAlignment="Bottom" Width="100" Click="btnSave_Click"  />
+                        <Button Grid.Row="2" Margin="0,0,5,5" Content="Add as New" Height="23"  Name="btnAddNew" VerticalAlignment="Bottom" Width="100" Click="btnAddNew_Click" />
+                        <Button Grid.Row="2" Margin="0,0,5,5" Content="Add New Empty" Height="23"  Name="btnAddNewEmpty" VerticalAlignment="Bottom" Width="100" Click="btnAddNewEmpty_Click"    />
+                        <Button Margin="0,0,5,5" IsEnabled="False" Content="Delete Selected" Height="23"  Name="btnDelete" VerticalAlignment="Bottom" Width="100" Click="btnDelete_Click"  />
+                    </StackPanel>
+                    <Button Name="PlanAImport" Grid.Row="7" Grid.Column="3" Click="ImportPlanA_Click">Import Plan A</Button>
+                </Grid>
+
+            </Grid>
+        </xctk:Zoombox>
+        <Image Grid.Row="0" x:Name="ZoomBoxLocator" Width="30" Height="30" Grid.ZIndex="-1" VerticalAlignment="Bottom" HorizontalAlignment="Right" 
+               Source="/SCRWizard2015;component/images/arrow-big-four-way-128.png" ></Image>
+        <Slider Grid.Column="0"  Grid.Row="1"
+            x:Name="uiScaleSlider" 
+            ToolTip="Slide to Scale"
+            Value="1" Minimum="0.1" Maximum="4" ValueChanged="uiScaleSlider_ValueChanged" />
+    </Grid>    
+</xctk:WizardPage>
