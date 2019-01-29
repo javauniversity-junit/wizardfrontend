@@ -16,6 +16,8 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
 	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
 	crossorigin="anonymous" />
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.css" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 
 <!-- Favicon-->
@@ -61,6 +63,14 @@
 							class="form-control" id="presentedBy" name="presentedBy"
 							placeholder="By" />
 					</div>
+					<div class="form-group">
+						<label for=phoneNumber>Phone Number</label> <input type="text"
+							th:value="${dataPageModel?.phoneNumber}" required
+							class="form-control input-medium bfh-phone" data-format="+1 (ddd) ddd-dddd" id="phoneNumber" name="phoneNumber"
+							 />
+					</div>
+					
+					
 					<input type="hidden" id="nextPage" th:value="'redirect:/TeamCommitmentPage?ID=' + ${wizard.wizardid}" 
 						name="nextPage"/> 
 						
@@ -96,6 +106,9 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
 		integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
 		crossorigin="anonymous"></script>
+		
+		<script
+		   src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js"></script>
 
 	<script>
 		$(function() {
