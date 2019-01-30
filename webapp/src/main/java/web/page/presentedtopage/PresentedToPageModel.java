@@ -3,41 +3,51 @@ package web.page.presentedtopage;
 public class PresentedToPageModel {
 
 	
-	public PresentedToPageModel(String phoneNumber, String presentedTo, String presentedBusiness, String presentedBy) {
+	public PresentedToPageModel(String portfolioPhoneNumber, String portfolioManagerName, String clientBusinessName
+			, String clientContactName, String station) {
 		super();
-		this.phoneNumber = phoneNumber;
-		this.presentedTo = presentedTo;
-		this.presentedBusiness = presentedBusiness;
-		this.presentedBy = presentedBy;
+		this.portfolioPhoneNumber = portfolioPhoneNumber;
+		this.portfolioManagerName = portfolioManagerName;
+		this.clientBusinessName = clientBusinessName;
+		this.clientContactName = clientContactName;
+		this.station = station;
 	}
 
-	private String phoneNumber;
-	public String getPhoneNumber() {
-		return phoneNumber;
+	private String portfolioPhoneNumber;
+	public String getPortfolioPhoneNumber() {
+		return portfolioPhoneNumber;
 	}
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
+	public void setPortfolioPhoneNumber(String portfolioPhoneNumber) {
+		this.portfolioPhoneNumber = portfolioPhoneNumber;
 	}
-	private String presentedTo;
-	private String presentedBusiness;
-	private String presentedBy;
-	public String getPresentedTo() {
-		return presentedTo;
+	private String portfolioManagerName;
+	private String clientBusinessName;
+	private String clientContactName;
+	public String getStation() {
+		return station;
 	}
-	public void setPresentedTo(String presentedTo) {
-		this.presentedTo = presentedTo;
+	public void setStation(String station) {
+		this.station = station;
 	}
-	public String getPresentedBusiness() {
-		return presentedBusiness;
+
+	private String station;
+	public String getPortfolioManagerName() {
+		return portfolioManagerName;
 	}
-	public void setPresentedBusiness(String presentedBusiness) {
-		this.presentedBusiness = presentedBusiness;
+	public void setPortfolioManagerName(String portfolioManagerName) {
+		this.portfolioManagerName = portfolioManagerName;
 	}
-	public String getPresentedBy() {
-		return presentedBy;
+	public String getClientBusinessName() {
+		return clientBusinessName;
 	}
-	public void setPresentedBy(String presentedBy) {
-		this.presentedBy = presentedBy;
+	public void setClientBusinessName(String clientBusinessName) {
+		this.clientBusinessName = clientBusinessName;
+	}
+	public String getClientContactName() {
+		return clientContactName;
+	}
+	public void setClientContactName(String clientContactName) {
+		this.clientContactName = clientContactName;
 	}
 	
 

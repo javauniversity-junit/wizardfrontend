@@ -49,10 +49,11 @@ public class PresentedToPageController {
 	
 	@RequestMapping(value = "/savePresentedToPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
-			,@RequestParam String phoneNumber
-			,@RequestParam String presentedTo
-			,@RequestParam String presentedBusiness
-			,@RequestParam String presentedBy
+			,@RequestParam String portfolioPhoneNumber
+			,@RequestParam String portfolioManagerName
+			,@RequestParam String clientBusinessName
+			,@RequestParam String clientContactName
+			,@RequestParam String station
 			,@RequestParam String wizarddataid
 			,@RequestParam String nextPage) {
 		mLog.info("starting save");
@@ -66,7 +67,8 @@ public class PresentedToPageController {
 		}
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
-		PresentedToPageModel demographic  = new PresentedToPageModel(phoneNumber,presentedTo,presentedBusiness, presentedBy);
+		PresentedToPageModel demographic  = new PresentedToPageModel(portfolioPhoneNumber
+				,portfolioManagerName,clientBusinessName, clientContactName, station);
 		String pageData = JSONManager.convertToJson(demographic);
 		
 		wizardData.setPagedata(pageData);

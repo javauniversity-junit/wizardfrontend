@@ -35,7 +35,7 @@
 	<div class="container">
 	
 		<div>
-			<form method="post" action="saveDemographic">
+			<form method="post" action="saveTeamCommitmentPage">
 			 <fieldset>
 			 <legend>Marketing
 				Solutions - <span th:text="${wizard.name}"></span></legend>
@@ -50,7 +50,7 @@
 				<div class="form-group">
 					<label for="presentedBusinessId">Presented Business</label> 
 					<input
-						type="text" th:value="${demographic.presentedTo}" required class="form-control" id="presentedBusinessId" name="presentedBusinessId"
+						type="text" th:value="${dataPageModel?.presentedTo}" required class="form-control" id="presentedBusinessId" name="presentedBusinessId"
 						placeholder="Business"/>
 				</div>
 							<div class="form-group">

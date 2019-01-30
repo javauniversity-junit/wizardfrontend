@@ -16,12 +16,13 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
 	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
 	crossorigin="anonymous" />
-	
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.css" />
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.css" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 
 <!-- Favicon-->
-<link rel="shortcut icon" href="./img/icon.png">
+<link rel="shortcut icon" href="./img/tools_wizard.png">
 
 </head>
 <body>
@@ -40,43 +41,47 @@
 			<form method="post" action="savePresentedToPage">
 				<fieldset>
 					<legend>
-						Marketing Solutions - <span th:text="${wizard.name}"></span>
+						Presented To - <span th:text="${wizard.name}"></span>
 					</legend>
 					<div class="form-group">
 						<label for="presentedTo">Presented to</label> <input
-							th:value="${dataPageModel?.presentedTo}" type="text"
-							class="form-control" id="presentedTo" name="presentedTo"
-							required aria-describedby="presentedtoIdHelp"
-							placeholder="Enter Presented to" /> <small id="presentedtoIdHelp"
-							class="form-text text-muted">We'll never share your data
-							with anyone else.</small>
+							th:value="${dataPageModel?.clientContactName}" type="text"
+							class="form-control" id="clientContactName"
+							name="clientContactName" required
+							aria-describedby="clientBusinessName"
+							placeholder="Enter Presented to" />
 					</div>
 					<div class="form-group">
-						<label for="presentedBusiness">Presented Business</label> <input
-							type="text" th:value="${dataPageModel?.presentedBusiness}" required
-							class="form-control" id="presentedBusiness"
-							name="presentedBusiness" placeholder="Business" />
+						<label for="clientBusinessName">Business Name</label> <input
+							type="text" th:value="${dataPageModel?.clientBusinessName}"
+							required class="form-control" id="clientBusinessName"
+							name="clientBusinessName" placeholder="Enter Business Name" />
 					</div>
 					<div class="form-group">
-						<label for="presentedById">Presented By</label> <input type="text"
-							th:value="${dataPageModel?.presentedBy}" required
-							class="form-control" id="presentedBy" name="presentedBy"
-							placeholder="By" />
+						<label for="presentedById">Integrated Media Specialist
+							Name</label> <input type="text"
+							th:value="${dataPageModel?.portfolioManagerName}" required
+							class="form-control" id="portfolioManagerName"
+							name="portfolioManagerName" placeholder="Enter Specialist Name" />
 					</div>
 					<div class="form-group">
-						<label for=phoneNumber>Phone Number</label> <input type="text"
-							th:value="${dataPageModel?.phoneNumber}" required
-							class="form-control input-medium bfh-phone" data-format="+1 (ddd) ddd-dddd" id="phoneNumber" name="phoneNumber"
-							 />
+						<label for=portfolioPhoneNumber>Phone Number</label> <input
+							type="text" th:value="${dataPageModel?.portfolioPhoneNumber}"
+							required class="form-control input-medium bfh-phone"
+							data-format="+1 (ddd) ddd-dddd" id="portfolioPhoneNumber"
+							name="portfolioPhoneNumber" />
 					</div>
-					
-					
-					<input type="hidden" id="nextPage" th:value="'redirect:/TeamCommitmentPage?ID=' + ${wizard.wizardid}" 
-						name="nextPage"/> 
-						
-					<input type="hidden" id="wizardId"
-						th:value="${wizard.wizardid}" name="wizardId" />
-					 <input
+					<div class="form-group">
+						<label for=portfolioPhoneNumber>Station/Media Group</label> <input
+							type="text" th:value="${dataPageModel?.station}" required
+							placeholder="Enter Group" class="form-control" id="station"
+							name="station" />
+					</div>
+
+					<input type="hidden" id="nextPage"
+						th:value="'redirect:/TeamCommitmentPage?ID=' + ${wizard.wizardid}"
+						name="nextPage" /> <input type="hidden" id="wizardId"
+						th:value="${wizard.wizardid}" name="wizardId" /> <input
 						type="hidden" id="wizarddataid"
 						th:value="${wizardData?.wizarddataid}" name="wizarddataid" />
 
@@ -85,7 +90,14 @@
 					<button type="submit" class="btn btn-primary">Publish</button>
 				</fieldset>
 			</form>
+			<div class="container" style="padding-top:2%;">
 
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="5"
+						aria-valuemin="0" aria-valuemax="100"
+						style="width: 5%; background-color: #C0B879;">5%</div>
+				</div>
+			</div>
 
 		</div>
 
@@ -106,9 +118,9 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
 		integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
 		crossorigin="anonymous"></script>
-		
-		<script
-		   src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js"></script>
+
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js"></script>
 
 	<script>
 		$(function() {
