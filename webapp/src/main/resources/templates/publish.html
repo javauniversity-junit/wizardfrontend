@@ -23,9 +23,23 @@
 
 <!-- Favicon-->
 <link rel="shortcut icon" href="./img/tools_wizard.png">
+<style>
+.grad {
+	padding: 10%;
+	color: white;
+	background-image: linear-gradient(green, black);
+	/* Standard syntax (must be last) */
+}
 
+.whiteGrad {
+	padding: 5%;
+	color: black;
+	background-image: linear-gradient(white, white);
+	/* Standard syntax (must be last) */
+}
+</style>
 </head>
 <body>
-<div th:replace="fragments/PresentedToPage :: PresentedToPage">
+	<div th:replace="fragments/PresentedToPage :: PresentedToPage">
 </body>
 </html>
