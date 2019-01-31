@@ -34,6 +34,20 @@
 	background-image: linear-gradient(white, white);
 	/* Standard syntax (must be last) */
 }
+@media print {
+  .pageBreakBefore { 
+    display: block;
+    page-break-before: always;
+  }
+  .pageBreakAfter {
+    page-break-after: avoid;
+  }
+  .pageBreakInside {
+    page-break-inside: avoid;
+  }
+}
+
+
 </style>
 </head>
 <body>
