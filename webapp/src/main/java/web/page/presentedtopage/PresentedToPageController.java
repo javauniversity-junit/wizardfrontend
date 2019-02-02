@@ -57,7 +57,7 @@ public class PresentedToPageController {
 			,@RequestParam String wizarddataid
 			,@RequestParam String nextPage
 			,@RequestParam String publishNextPage
-			,@RequestParam(required=false, value="next") String next)
+			,@RequestParam(required=false, value="next") String next
 	        ,@RequestParam(required=false, value="publish") String publish){
 		mLog.info("starting save");
 		
