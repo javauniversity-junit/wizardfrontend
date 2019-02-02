@@ -80,14 +80,19 @@
 
 					<input type="hidden" id="nextPage"
 						th:value="'redirect:/TeamCommitmentPage?ID=' + ${wizard.wizardid}"
-						name="nextPage" /> <input type="hidden" id="wizardId"
-						th:value="${wizard.wizardid}" name="wizardId" /> <input
+						name="nextPage" /> 
+				   <input type="hidden" id="publishNextPage"
+						th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
+						name="nextPage" /> 	
+						<input type="hidden" id="wizardId"
+						th:value="${wizard.wizardid}" name="wizardId" /> 
+						<input
 						type="hidden" id="wizarddataid"
 						th:value="${wizardData?.wizarddataid}" name="wizarddataid" />
 
 
-					<button type="submit" class="btn btn-primary" style="background-color: #C0B879;">Next</button>
-					<button type="submit" class="btn btn-primary" style="background-color: #C0B879;">Publish</button>
+					<input name="next" type="submit" class="btn btn-primary" style="background-color: #C0B879;">Next</input>
+					<input name="publish" type="submit" class="btn btn-primary" style="background-color: #C0B879;">Publish</input>
 				</fieldset>
 			</form>
 			<div class="container" style="padding-top:2%;">

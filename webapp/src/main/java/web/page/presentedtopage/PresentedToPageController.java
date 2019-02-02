@@ -55,9 +55,18 @@ public class PresentedToPageController {
 			,@RequestParam String clientContactName
 			,@RequestParam String station
 			,@RequestParam String wizarddataid
-			,@RequestParam String nextPage) {
+			,@RequestParam String nextPage
+			,@RequestParam String publishNextPage
+			,@RequestParam(required=false, value="next") String next)
+	        ,@RequestParam(required=false, value="publish") String publish){
 		mLog.info("starting save");
-		 
+		
+		//internal next page or publish
+		String internalNextPage = nextPage;
+		if (publish != null) {
+			internalNextPage= nextPage;
+		}
+		
 		WizardData wizardData = new WizardData();
 		wizardData.setPagename(Pages.PRESENTEDTOPAGE.getPageName());
 		wizardData.setPagesequence(Pages.PRESENTEDTOPAGE.getPageSequence());
