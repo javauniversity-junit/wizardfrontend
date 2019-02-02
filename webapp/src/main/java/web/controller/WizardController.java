@@ -58,8 +58,8 @@ public class WizardController {
         } catch (Exception ex) {
         	throw new DataIntegrityViolationException("Duplicate name");
         }
-        String nextPage = "/PresentedToPage?ID=" + wizard.getWizardid();
-////PresentedToPage?ID=
+        String nextPage = "redirect:/PresentedToPage?ID=" + wizard.getWizardid();
+////PresentedToPage?ID=PresentedToPage
 		return nextPage;
 
 	}
