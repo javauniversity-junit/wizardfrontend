@@ -24,49 +24,103 @@
 </head>
 <body>
 
- 
-	<!-- Begin page content -->
-	   <!--- start header container -->
-       
-        <div id="headerId"></div>
 
-	
+	<!-- Begin page content -->
+	<!--- start header container -->
+
+	<div id="headerId"></div>
+
+
+
+
+
+
 
 	<div class="container">
-	
+
 		<div>
 			<form method="post" action="saveTeamCommitmentPage">
-			 <fieldset>
-			 <legend>Marketing
-				Solutions - <span th:text="${wizard.name}"></span></legend>
-				<div class="form-group">
-					<label for="presentedtoId">Presented to</label>
-					<input
-						type="text" class="form-control" id="presentedtoId" name="presentedtoId" required
-						aria-describedby="presentedtoIdHelp" placeholder="Enter Presented to"/> <small
-						id="presentedtoIdHelp" class="form-text text-muted">We'll never
-						share your data with anyone else.</small>
-				</div>
-				<div class="form-group">
-					<label for="presentedBusinessId">Presented Business</label> 
-					<input
-						type="text" th:value="${dataPageModel?.presentedTo}" required class="form-control" id="presentedBusinessId" name="presentedBusinessId"
-						placeholder="Business"/>
-				</div>
-							<div class="form-group">
-					<label for="presentedById">Presented By</label> 
-					<input
-						type="text" required class="form-control" id="presentedById" name="presentedById" 
-						placeholder="By"/>
-				</div>
-				 <input type="hidden" id="nextPage" value="teamCommit"  name="nextPage"/ >
-				 <input type="hidden" id="wizardId" th:value="${wizard.wizardid}"  name="wizardId" />
-				 <input type="hidden" id=""   name="wizarddataid" />
-				
-				
-				<button type="submit" class="btn btn-primary">Next</button>
-				<button type="submit" class="btn btn-primary">Publish</button>
-			 </fieldset>
+				<fieldset>
+					<legend>
+						Marketing Solutions - <span th:text="${wizard.name}"></span>
+					</legend>
+					<div class="w3-panel w3-border">
+						<div class="form-group">
+							<label for="topLevelName">Top Level Name</label> <input
+								type="text" class="form-control" id="topLevelName"
+								th:value="${dataPageModel?.topLevelName}"
+								name="topLevelName" required aria-describedby="topLevelName"
+								placeholder="Enter Top Level Name" />
+						</div>
+						<div class="form-group">
+							<label for="topLevelTitle">Top Level Title</label> <input
+								type="text" th:value="${dataPageModel?.topLevelTitle}" required
+								class="form-control" id="topLevelTitle" name="topLevelTitle"
+								placeholder="Top Level Title" />
+						</div>
+					</div>
+
+					<div class="w3-panel w3-border">
+						<div class="form-group">
+							<label for="secondLevelName">Second Level Name</label> <input
+								type="text" class="form-control" id="secondLevelName"
+								name="secondLevelName" required
+								aria-describedby="secondLevelName"
+								placeholder="Enter Second Level Name" />
+						</div>
+						<div class="form-group">
+							<label for="secondLevelTitle">Second Level Title</label> <input
+								type="text" th:value="${dataPageModel?.secondLevelTitle}"
+								required class="form-control" id="secondLevelTitle"
+								name="secondLevelTitle" placeholder="Second Level Title" />
+						</div>
+					</div>
+
+					<div class="w3-panel w3-border">
+						<div class="form-group">
+							<label for="thirdLevelName">Third Level Name</label> <input
+								type="text" class="form-control" id="thirdLevelName"
+								th:value="${dataPageModel?.thirdLevelName}"
+								name="thirdLevelName" required aria-describedby="thirdLevelName"
+								placeholder="Enter Third Level Name" />
+						</div>
+						<div class="form-group">
+							<label for="thirdLevelTitle">Third Level Title</label> <input
+								type="text" th:value="${dataPageModel?.thirdLevelTitle}"
+								required class="form-control" id="thirdLevelTitle"
+								name="thirdLevelTitle" placeholder="Third Level Title" />
+						</div>
+					</div>
+
+					<div class="w3-panel w3-border">
+						<div class="form-group">
+							<label for="fourthLevelName">Fourth Level Name</label> <input
+								type="text" class="form-control" id="fourthLevelName"
+								th:value="${dataPageModel?.fourthLevelName}"
+								name="fourthLevelName" required
+								aria-describedby="fourthLevelName"
+								placeholder="Enter Fourth Level Name" />
+						</div>
+						<div class="form-group">
+							<label for="fourthLevelTitle">Fourth Level Title</label> <input
+								type="text" th:value="${dataPageModel?.fourthLevelTitle}"
+								required class="form-control" id="fourthLevelTitle"
+								name="fourthLevelTitle" placeholder="Third Level Title" />
+						</div>
+					</div>
+
+					<input type="hidden" id="nextPage"
+						th:value="'redirect:/PresentedToPage?ID=' + ${wizard.wizardid}"
+						name="nextPage" /> <input type="hidden" id="wizardId"
+						th:value="${wizard.wizardid}" name="wizardId" /> <input
+						type="hidden" id="wizarddataid"
+						th:value="${wizardData?.wizarddataid}" name="wizarddataid" />
+						
+
+
+					<button type="submit" class="btn btn-primary">Next</button>
+					<button type="submit" class="btn btn-primary">Publish</button>
+				</fieldset>
 			</form>
 
 
@@ -78,7 +132,8 @@
 
 
 	<!-- JavaScript files-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
@@ -88,14 +143,14 @@
 		src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
 		integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
 		crossorigin="anonymous"></script>
-		
-		 <script>
-            $(function () {
-                $("#headerId").load("header.html");
-            });
-        </script>
-        
-  
+
+	<script>
+		$(function() {
+			$("#headerId").load("header.html");
+		});
+	</script>
+
+
 
 
 
