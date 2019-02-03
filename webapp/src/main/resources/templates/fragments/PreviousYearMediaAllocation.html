@@ -1,52 +1,75 @@
-<div th:fragment="PreviosYearMediaAllocation" class="grad container pageBreakInside"
-	style="height: 100%;">
-	<div> 
-	<a id="PreviosYearMediaAllocation"></a>
+<div th:fragment="PreviosYearMediaAllocation"
+	class="grad container pageBreakInside" style="height: 100%;">
+	<div>
+		<a id="PreviosYearMediaAllocation"></a>
 		<p class="text-justify">
 		<h1 class="text-center">Previous Year Media Allocation</h1>
 		</p>
-		<p class="text-justify">
-		<h2 class="text-center">Summary, Conclusions, and Recommendations</h2>
-		</p>
+		
 	</div>
-<div id="piechart"></div>
+	<style>
+#chart_wrap {
+	position: relative;
+	padding-bottom: 100%;
+	height: 0;
+	overflow: hidden;
+}
 
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
+#chart_div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+</style>
+	<div id="chart_wrap">
+		<div id="chart_div"></div>
+	</div>
 <script type="text/javascript">
-// Load google charts
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
 
-// Draw the chart and set the chart values
 function drawChart() {
   var data = google.visualization.arrayToDataTable([
-  ['Task', 'Hours per Day'],
-  ['Work', 8],
-  ['Eat', 2],
-  ['TV', 4],
-  ['Gym', 2],
-  ['Sleep', 8]
-]);
+    ['Task', 'Hours per Day'],
+    ['Value 1',     11],
+    ['Value 2',      2],
+    ['Value 3',  2],
+    ['Value 4', 2],
+    ['Value 5',    7]
+  ]);
 
-  // Optional; add a title and set the width and height of the chart
-  var options = {'title':'My Average Day', 'width':550, 'height':500};
+  var options = {
+    title: 'Total Advertising Investment'
+  };
 
-  // Display the chart inside the <div> element with id="piechart"
-  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
   chart.draw(data, options);
 }
+
+$(window).on("throttledresize", function (event) {
+    var options = {
+        width: '100%',
+        height: '100%'
+    };
+
+    var data = google.visualization.arrayToDataTable([]);
+    drawChart(data, options);
+});
 </script>
+
 
 
 	<div class="container d-print-none" style="padding-top: 2%;">
 		<nav aria-label="Page navigation example">
 			<ul class="pagination">
 				<li class="page-item"><a class="page-link" href="#">Previous</a></li>
-				<li class="page-item"><a class="page-link" href="#TeamCommitmentPage">Next</a></li>
+				<li class="page-item"><a class="page-link"
+					href="#TeamCommitmentPage">Next</a></li>
 				<li class="page-item"><a class="page-link" href="#">Print</a></li>
 				<li class="page-item"><a class="page-link" href="#">End</a></li>
-				
+
 			</ul>
 		</nav>
 	</div>
