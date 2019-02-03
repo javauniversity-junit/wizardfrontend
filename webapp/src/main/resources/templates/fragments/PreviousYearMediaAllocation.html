@@ -7,24 +7,9 @@
 		</p>
 		
 	</div>
-	<style>
-#chart_wrap {
-	position: relative;
-	padding-bottom: 100%;
-	height: 0;
-	overflow: hidden;
-}
 
-#chart_div {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-</style>
 	<div id="chart_wrap">
-		<div id="chart_div"></div>
+		<div class ="chart_div" id="PreviousYearMediaAllocation_chart_div"></div>
 	</div>
 <script type="text/javascript">
 google.load("visualization", "1", {packages:["corechart"]});
@@ -44,7 +29,7 @@ function drawChart() {
     title: 'Total Advertising Investment'
   };
 
-  var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+  var chart = new google.visualization.PieChart(document.getElementById('PreviousYearMediaAllocation_chart_div'));
   chart.draw(data, options);
 }
 

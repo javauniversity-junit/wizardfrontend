@@ -13,73 +13,98 @@
 
 <!-- Bootstrap CSS-->
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+<script type="text/javascript"
+	src="https://www.gstatic.com/charts/loader.js"></script>
 <script type="text/javascript">
-/*
- * throttledresize: special jQuery event that happens at a reduced rate compared to "resize"
- *
- * latest version and complete README available on Github:
- * https://github.com/louisremi/jquery-smartresize
- *
- * Copyright 2012 @louis_remi
- * Licensed under the MIT license.
- *
- * This saved you an hour of work? 
- * Send me music http://www.amazon.co.uk/wishlist/HNTU0468LQON
- */
-(function($) {
+	/*
+	 * throttledresize: special jQuery event that happens at a reduced rate compared to "resize"
+	 *
+	 * latest version and complete README available on Github:
+	 * https://github.com/louisremi/jquery-smartresize
+	 *
+	 * Copyright 2012 @louis_remi
+	 * Licensed under the MIT license.
+	 *
+	 * This saved you an hour of work? 
+	 * Send me music http://www.amazon.co.uk/wishlist/HNTU0468LQON
+	 */
+	(function($) {
 
-var $event = $.event,
-	$special,
-	dummy = {_:0},
-	frame = 0,
-	wasResized, animRunning;
+		var $event = $.event, $special, dummy = {
+			_ : 0
+		}, frame = 0, wasResized, animRunning;
 
-$special = $event.special.throttledresize = {
-	setup: function() {
-		$( this ).on( "resize", $special.handler );
-	},
-	teardown: function() {
-		$( this ).off( "resize", $special.handler );
-	},
-	handler: function( event, execAsap ) {
-		// Save the context
-		var context = this,
-			args = arguments;
+		$special = $event.special.throttledresize = {
+			setup : function() {
+				$(this).on("resize", $special.handler);
+			},
+			teardown : function() {
+				$(this).off("resize", $special.handler);
+			},
+			handler : function(event, execAsap) {
+				// Save the context
+				var context = this, args = arguments;
 
-		wasResized = true;
+				wasResized = true;
 
-		if ( !animRunning ) {
-			setInterval(function(){
-				frame++;
+				if (!animRunning) {
+					setInterval(function() {
+						frame++;
 
-				if ( frame > $special.threshold && wasResized || execAsap ) {
-					// set correct event type
-					event.type = "throttledresize";
-					$event.dispatch.apply( context, args );
-					wasResized = false;
-					frame = 0;
+						if (frame > $special.threshold && wasResized
+								|| execAsap) {
+							// set correct event type
+							event.type = "throttledresize";
+							$event.dispatch.apply(context, args);
+							wasResized = false;
+							frame = 0;
+						}
+						if (frame > 9) {
+							$(dummy).stop();
+							animRunning = false;
+							frame = 0;
+						}
+					}, 30);
+					animRunning = true;
 				}
-				if ( frame > 9 ) {
-					$(dummy).stop();
-					animRunning = false;
-					frame = 0;
-				}
-			}, 30);
-			animRunning = true;
-		}
-	},
-	threshold: 0
-};
+			},
+			threshold : 0
+		};
 
-})(jQuery);
+	})(jQuery);
 </script>
 <link rel="shortcut icon" href="./img/tools_wizard.png">
 <style>
+#chart_wrap {
+	position: relative;
+	padding-bottom: 100%;
+	height: 0;
+	overflow: hidden;
+}
+
+.chart_div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	}
+
 .grad {
 	padding: 10%;
 	color: white;
@@ -93,25 +118,29 @@ $special = $event.special.throttledresize = {
 	background-image: linear-gradient(white, white);
 	/* Standard syntax (must be last) */
 }
+
 @media print {
-  .pageBreakBefore { 
-    display: block;
-    page-break-before: always;
-  }
-  .pageBreakAfter {
-    page-break-after: avoid;
-  }
-  .pageBreakInside {
-    page-break-inside: avoid;
-  }
+	.pageBreakBefore {
+		display: block;
+		page-break-before: always;
+	}
+	.pageBreakAfter {
+		page-break-after: avoid;
+	}
+	.pageBreakInside {
+		page-break-inside: avoid;
+	}
 }
-
-
 </style>
 </head>
 <body>
 	<div th:replace="fragments/PresentedToPage :: PresentedToPage"></div>
 	<div th:replace="fragments/TeamCommitmentPage :: TeamCommitmentPage"></div>
-<div th:replace="fragments/PreviousYearMediaAllocation :: PreviosYearMediaAllocation"></div>
+	<div
+		th:replace="fragments/PreviousYearMediaAllocation :: PreviosYearMediaAllocation"></div>
+			<div
+		th:replace="fragments/ProposedSchedulePlanA :: ProposedSchedulePlanA"></div>
+		
+		
 </body>
 </html>
