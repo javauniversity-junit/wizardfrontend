@@ -13,6 +13,7 @@ import web.model.Wizard;
 import web.model.WizardData;
 import web.page.Pages;
 import web.page.JSONManager;
+import web.page.PageNameEnum;
 import web.repository.WizardDataRepository;
 import web.repository.WizardRepository;
 
@@ -68,7 +69,7 @@ public class PresentedToPageController {
 		}
 		
 		WizardData wizardData = new WizardData();
-		wizardData.setPagename(Pages.PRESENTEDTOPAGE.getPageName());
+		wizardData.setPagename(PageNameEnum.PresentedToPage.toString());
 		wizardData.setPagesequence(Pages.PRESENTEDTOPAGE.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0 ) {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);

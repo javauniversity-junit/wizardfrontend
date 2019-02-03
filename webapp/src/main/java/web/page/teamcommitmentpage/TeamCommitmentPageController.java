@@ -13,6 +13,7 @@ import web.model.Wizard;
 import web.model.WizardData;
 import web.page.Pages;
 import web.page.JSONManager;
+import web.page.PageNameEnum;
 import web.page.presentedtopage.PresentedToPageModel;
 import web.repository.WizardDataRepository;
 import web.repository.WizardRepository;
@@ -71,7 +72,7 @@ public class TeamCommitmentPageController {
 		mLog.info("starting save");
 		 
 		WizardData wizardData = new WizardData();
-		wizardData.setPagename(Pages.TEAMCOMMITMENTPAGE.getPageName());
+		wizardData.setPagename(PageNameEnum.TeamCommitmentPage.toString());
 		wizardData.setPagesequence(Pages.TEAMCOMMITMENTPAGE.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0 ) {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);

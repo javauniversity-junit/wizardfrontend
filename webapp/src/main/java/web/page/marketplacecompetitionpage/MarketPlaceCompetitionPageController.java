@@ -70,7 +70,7 @@ public class MarketPlaceCompetitionPageController {
 		}
 		
 		WizardData wizardData = new WizardData();
-		wizardData.setPagename(Pages.PRESENTEDTOPAGE.getPageName());
+		//wizardData.setPagename(Pages.PRESENTEDTOPAGE.getPageName());
 		wizardData.setPagesequence(Pages.PRESENTEDTOPAGE.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0 ) {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);

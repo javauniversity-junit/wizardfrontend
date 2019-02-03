@@ -6,22 +6,23 @@ public enum Pages {
 	
 	
 	
-	PRESENTEDTOPAGE(DatabaseConstants.DATABASE_PRESENTEDTOPAGE_VALUE, PageSequence.PRESENTEDTOPAGE_SEQUENCE),
-	TEAMCOMMITMENTPAGE(DatabaseConstants.DATABASE_TEAMCOMMITMENTPAGE_VALUE, PageSequence.TEAMCOMMITMENTPAGE_SEQUENCE),
-	MARKETPLACECOMPETITIONPAGE(DatabaseConstants.DATABASE_MARKETPLACECOMPETITIONPAGE_VALUE, PageSequence.MARKETPLACECOMPETITIONPAGE_SEQUENCE);
+	PRESENTEDTOPAGE(PageNameEnum.PresentedToPage, PageSequenceEnum.PRESENTEDTOPAGE_SEQUENCE.getDatabaseValue()),
+	TEAMCOMMITMENTPAGE(PageNameEnum.TeamCommitmentPage, PageSequenceEnum.TEAMCOMMITMENTPAGE_SEQUENCE.getDatabaseValue()),
+	MARKETPLACECOMPETITIONPAGE(PageNameEnum.MarketPlaceCompetitionPage
+			, PageSequenceEnum.MARKETPLACECOMPETITIONPAGE_SEQUENCE.getDatabaseValue());
 	
-	private String pageName;
+	private PageNameEnum pageName;
 	private Integer pageSequence;
 	
 	
-	private Pages(String pageName, Integer pageSequence) {
+	private Pages(PageNameEnum pageName, Integer pageSequence) {
 		this.pageName = pageName;
 		this.pageSequence = pageSequence;
 	}
-	public String getPageName() {
+	public PageNameEnum getPageName() {
 		return pageName;
 	}
-	public void setPageName(String pageName) {
+	public void setPageName(PageNameEnum pageName) {
 		this.pageName = pageName;
 	}
 	public Integer getPageSequence() {
@@ -30,19 +31,10 @@ public enum Pages {
 	public void setPageSequence(Integer pageSequence) {
 		this.pageSequence = pageSequence;
 	}
-	public static class PageSequence {
-        public static final Integer PRESENTEDTOPAGE_SEQUENCE = 1;
-        public static final Integer TEAMCOMMITMENTPAGE_SEQUENCE= 2;
-        public static final Integer MARKETPLACECOMPETITIONPAGE_SEQUENCE= 3;  
-      
-    }
+	
 	
 
-	public static class DatabaseConstants {
-        public static final String DATABASE_PRESENTEDTOPAGE_VALUE = "PresentedToPage";
-        public static final String DATABASE_TEAMCOMMITMENTPAGE_VALUE = "TeamCommitmentPage";
-        public static final String DATABASE_MARKETPLACECOMPETITIONPAGE_VALUE = "MarketPlaceCompetitionPage";
-    }
+	
 	
 }
 
