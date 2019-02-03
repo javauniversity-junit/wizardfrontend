@@ -31,8 +31,13 @@ public class PublishController {
 	    for (WizardData data : dataPages) {
 	    	//pull of data model
 	    	PageNameEnum pageName = PageNameEnum.valueOf(data.getPagename());
+	    	mLog.info("page name = " + pageName);
 	    	switch (pageName) {
 	    	case PresentedToPage:
+	    		mLog.info("found page PresentedToPage");
+	    		break;
+	    	case TeamCommitmentPage:
+	    		mLog.info("found page PresentedToPage");
 	    		break;
 	    	}
 	    	
