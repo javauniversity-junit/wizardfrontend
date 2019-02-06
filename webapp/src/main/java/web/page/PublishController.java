@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.logging.Logger;
 import web.page.*;
 import web.model.WizardData;
-import web.page.PageSequence;
 import web.page.presentedtopage.PresentedToPageController;
+import web.page.presentedtopage.PresentedToPageModel;
 import web.repository.WizardDataRepository;
 
 @Controller    // This means that this class is a Controller
@@ -34,6 +34,11 @@ public class PublishController {
 	    	mLog.info("page name = " + pageName);
 	    	switch (pageName) {
 	    	case PresentedToPage:
+	    		PresentedToPageModel presentedToPageModel = null;
+	    		
+	    		presentedToPageModel =(PresentedToPageModel)JSONManager.convertFromJson(data.getPagedata(), PresentedToPageModel.class);
+	    		model.addAttribute("PresentedToPage", presentedToPageModel);	
+	    		
 	    		mLog.info("found page PresentedToPage");
 	    		break;
 	    	case TeamCommitmentPage:
