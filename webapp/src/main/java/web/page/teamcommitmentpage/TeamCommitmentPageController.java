@@ -68,8 +68,22 @@ public class TeamCommitmentPageController {
 			,@RequestParam String fourthLevelName
 			,@RequestParam String fourthLevelTitle
 			,@RequestParam String wizarddataid
+			,@RequestParam String previousPage
+			,@RequestParam String publishPage
+			,@RequestParam(required=false, value="next") String next
+			,@RequestParam(required=false, value="publish") String publish
+			,@RequestParam(required=false, value="previous") String previous
 			,@RequestParam String nextPage) {
 		mLog.info("starting save");
+		
+		//internal next page or publish
+		String internalNextPage = nextPage;
+		if (publish != null) {
+					internalNextPage= publishPage;
+		}
+		if (previous != null) {
+			internalNextPage= previousPage;
+        }
 		 
 		WizardData wizardData = new WizardData();
 		wizardData.setPagename(PageNameEnum.TeamCommitmentPage.toString());
@@ -87,7 +101,7 @@ public class TeamCommitmentPageController {
 		wizardData.setPagedata(pageData);
 		wizardDataRepository.save(wizardData);
 		//model.addAttribute("wizard", wizard);
-		return nextPage;
+		return internalNextPage;
 	}
 	
 }
