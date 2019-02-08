@@ -14,6 +14,7 @@ import web.page.*;
 import web.model.WizardData;
 import web.page.presentedtopage.PresentedToPageController;
 import web.page.presentedtopage.PresentedToPageModel;
+import web.page.teamcommitmentpage.TeamCommitmentPageModel;
 import web.repository.WizardDataRepository;
 
 @Controller    // This means that this class is a Controller
@@ -42,7 +43,11 @@ public class PublishController {
 	    		mLog.info("found page PresentedToPage");
 	    		break;
 	    	case TeamCommitmentPage:
-	    		mLog.info("found page PresentedToPage");
+	    		TeamCommitmentPageModel teamCommitmentPageModel = null;
+	    		
+	    		teamCommitmentPageModel =(TeamCommitmentPageModel)JSONManager.convertFromJson(data.getPagedata(), TeamCommitmentPageModel.class);
+	    		model.addAttribute("TeamCommitmentPage", teamCommitmentPageModel);
+	    		mLog.info("found page TeamCommitmentPage");
 	    		break;
 	    	}
 	    	
