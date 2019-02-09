@@ -17,6 +17,7 @@ import web.page.PageNameEnum;
 import web.page.presentedtopage.PresentedToPageModel;
 import web.repository.WizardDataRepository;
 import web.repository.WizardRepository;
+@Controller    // This means that this class is a Controller
 public class ClientObjectivesOnePageControl {
 
 }
