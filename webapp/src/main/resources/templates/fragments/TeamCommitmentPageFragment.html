@@ -1,50 +1,93 @@
-<div th:fragment="TeamCommitmentPage" class="grad container pageBreakBefore"
-	style="height: 100%;">
+<div th:fragment="TeamCommitmentPage"
+	class="grad container pageBreakBefore" style="height: 100%;">
 	<div>
-	<a id="TeamCommitmentPage"></a>
-	
+		<a id="TeamCommitmentPage"></a>
+
 		<p class="text-justify">
 		<h1 class="text-center">Team Commitment</h1>
 		</p>
 		<p class="text-justify">
-		<h2 class="text-center">The following proposal will be submitted to</h2>
+		<h2 class="text-center">The following proposal will be submitted
+			to</h2>
 		</p>
 	</div>
 
 	<div class="whiteGrad">
 		<p>
-		<h2>The following proposal will be submitted to​</h2>
+		<h2>The following proposal will be submitted to</h2>
 		</p>
 		<p>
-		Your department will be involved in providing these services. 
-		Please read our proposal, recommend and bring to our attention any 
-		ways in which you feel we can more adequately satisfy our client’s needs. 
-		When you are prepared to commit to our clients the necessary effort to 
-		make them “more than satisfied,” with the results of our plan, 
-		please sign the 
-		following certification on behalf of you and your team.
+		   <h3 th:text="${PresentedToPage?.clientContactName}"></h3>
 		</p>
-		
+		<p>Your department will be involved in providing these services.
+			Please read our proposal, recommend and bring to our attention any
+			ways in which you feel we can more adequately satisfy our client’s
+			needs. When you are prepared to commit to our clients the necessary
+			effort to make them “more than satisfied,” with the results of our
+			plan, please sign the following certification on behalf of you and
+			your team.</p>
+
 	</div>
-	<div class="container">
-     <div class="row">
- 				<div class="col-sm-12">
-					<hr>
-				</div>
-          <div>
-          </div>
-     </div>
+	<div class="container whiteGrad">
+		<div class="row">
+			<div class="col-sm-12">
+				<hr>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-sm-4" th:text="${TeamCommitmentPage?.topLevelName}"></div>
+			<div class="col-sm-4" th:text="${TeamCommitmentPage?.topLevelTitle}"></div>
+			<div class="col-sm-4">Date</div>
+		</div>
+		<div class="row" style="padding-top: 5%;">
+			<div class="col-sm-12">
+				<hr>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-sm-4" th:text="${TeamCommitmentPage?.secondLevelName}"></div>
+			<div class="col-sm-4" th:text="${TeamCommitmentPage?.secondLevelTitle}"></div>
+			<div class="col-sm-4">Date</div>
+		</div>
+		<div class="row" style="padding-top: 5%;">
+			<div class="col-sm-12">
+				<hr>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-sm-4" th:text="${TeamCommitmentPage?.thirdLevelName}"></div>
+			<div class="col-sm-4" th:text="${TeamCommitmentPage?.thirdLevelTitle}"></div>
+			<div class="col-sm-4">Date</div>
+		</div>
+		<div class="row" style="padding-top: 5%;">
+			<div class="col-sm-12">
+				<hr>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-sm-4" th:text="${TeamCommitmentPage?.fourthLevelName}"></div>
+			<div class="col-sm-4" th:text="${TeamCommitmentPage?.fourthLevelTitle}"></div>
+			<div class="col-sm-4">Date</div>
+		</div>
 	</div>
-	<div class="container d-print-none"  style="padding-top: 2%;">
+	<div class="container d-print-none" style="padding-top: 2%;">
 		<nav aria-label="Page navigation example">
 			<ul class="pagination">
-				<li class="page-item"><a class="page-link" href="#PresentedToPage">Previous</a></li>
-				<li class="page-item"><a class="page-link" href="#TeamCommitmentPage">Next</a></li>
-				<li class="page-item"><a class="page-link" href="javascript:window.print();">Print</a></li>
-				<li class="page-item"><a class="page-link" href="javascript:window.history.back();">End</a></li>
-				
+				<li class="page-item"><a class="page-link"
+					href="#PresentedToPage">Previous</a></li>
+				<li class="page-item"><a class="page-link"
+					href="#TeamCommitmentPage">Next</a></li>
+				<li class="page-item"><a class="page-link"
+					href="javascript:window.print();">Print</a></li>
+				<li class="page-item"><a class="page-link"
+					href="javascript:window.history.back();">End</a></li>
+
 			</ul>
 		</nav>
 	</div>
-	
+
 </div>
