@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import java.util.logging.Logger;
 import web.page.*;
+import web.page.marketplacecompetitionpage.MarketPlaceCompetitionPageModel;
 import web.model.WizardData;
 import web.page.presentedtopage.PresentedToPageController;
 import web.page.presentedtopage.PresentedToPageModel;
@@ -48,6 +49,13 @@ public class PublishController {
 	    		teamCommitmentPageModel =(TeamCommitmentPageModel)JSONManager.convertFromJson(data.getPagedata(), TeamCommitmentPageModel.class);
 	    		model.addAttribute("TeamCommitmentPage", teamCommitmentPageModel);
 	    		mLog.info("found page TeamCommitmentPage");
+	    		break;
+	    	case MarketPlaceCompetitionPage:
+	    		MarketPlaceCompetitionPageModel marketPlaceCompetitionPageModel = null;
+	    		
+	    		marketPlaceCompetitionPageModel =(MarketPlaceCompetitionPageModel)JSONManager.convertFromJson(data.getPagedata(), MarketPlaceCompetitionPageModel.class);
+	    		model.addAttribute("MarketPlaceCompetitionPageModel", marketPlaceCompetitionPageModel);
+	    		mLog.info("found page MarketPlaceCompetitionPageModel");
 	    		break;
 	    	}
 	    	

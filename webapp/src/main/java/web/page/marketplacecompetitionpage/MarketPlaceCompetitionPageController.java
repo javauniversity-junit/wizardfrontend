@@ -64,7 +64,7 @@ public class MarketPlaceCompetitionPageController {
 		//internal next page or publish
 		String internalNextPage = nextPage;
 		if (publish != null) {
-			internalNextPage= nextPage;
+			internalNextPage= publishNextPage;
 		}
 		
 		WizardData wizardData = new WizardData();
@@ -85,6 +85,6 @@ public class MarketPlaceCompetitionPageController {
 		wizardData.setPagedata(pageData);
 		wizardDataRepository.save(wizardData);
 		//model.addAttribute("wizard", wizard);
-		return nextPage;
+		return internalNextPage;
 	}
 }
