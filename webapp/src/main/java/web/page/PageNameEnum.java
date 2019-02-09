@@ -1,5 +1,5 @@
 package web.page;
 
 public enum PageNameEnum {
-	PresentedToPage,TeamCommitmentPage,MarketPlaceCompetitionPage;
+	PresentedToPage,TeamCommitmentPage,MarketPlaceCompetitionPage,ClientObjectivesOne;
 }
