@@ -38,7 +38,7 @@
 	<div class="container">
 
 		<div>
-			<form method="post" action="savePresentedToPage">
+			<form method="post" action="saveMarketPlaceCompetitionPage">
 				<fieldset>
 					<legend>
 						(3) Marketplace Competition - <span th:text="${wizard.name}"></span>
@@ -84,7 +84,7 @@
 						name="nextPage" /> 
 				   <input type="hidden" id="publishNextPage"
 						th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
-						name="nextPage" /> 	
+						name="publishNextPage" /> 	
 						<input type="hidden" id="wizardId"
 						th:value="${wizard.wizardid}" name="wizardId" /> 
 						<input
