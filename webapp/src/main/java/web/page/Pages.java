@@ -8,7 +8,7 @@ public enum Pages {
 	
 	PRESENTEDTOPAGE(PageNameEnum.PresentedToPage, PageSequenceEnum.PRESENTEDTOPAGE_SEQUENCE.getDatabaseValue())
 	,TEAMCOMMITMENTPAGE(PageNameEnum.TeamCommitmentPage, PageSequenceEnum.TEAMCOMMITMENTPAGE_SEQUENCE.getDatabaseValue())
-	,CLIENTOBJECTIVESONEPAGE(PageNameEnum.ClientObjectivesOne, PageSequenceEnum.CLIENTOBJECTIVESONEPAGE_SEQUENCE.getDatabaseValue())
+	,CLIENTOBJECTIVESONEPAGE(PageNameEnum.ClientObjectivesOnePage, PageSequenceEnum.CLIENTOBJECTIVESONEPAGE_SEQUENCE.getDatabaseValue())
 	,MARKETPLACECOMPETITIONPAGE(PageNameEnum.MarketPlaceCompetitionPage
 			, PageSequenceEnum.MARKETPLACECOMPETITIONPAGE_SEQUENCE.getDatabaseValue());
 	

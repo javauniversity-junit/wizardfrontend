@@ -1,6 +1,39 @@
 package web.page.clientobjectivesonepage;
 
 public class ClientObjectivesOnePageModel {
+	public ClientObjectivesOnePageModel(boolean introduceNewDepartment, boolean featureSpecificProducts,
+			boolean callAttentiontoBrandsPrivateLabelsCarried, boolean promoteOffPriceItemsServices,
+			boolean retainCurrentConsumers, boolean increaseCustomerVisits, boolean increaseTrafficLeadCalls,
+			boolean expandTargetConsumers, boolean changeConsumerAttitudes, boolean makePromotionalEventsStronger,
+			boolean increaseDigitalMobileOnlineResponse, boolean developAQuarterlySpike,
+			boolean developDatabaseMarketing, boolean initiateCauseMarketingProgram,
+			boolean developSpeciallyStagedEvent, boolean maintainMarketDominance, boolean improveBusinessNameBrand,
+			boolean establishorReestablishBusinessImage, boolean createPentUpDemand, boolean increaseMarketShare,
+			boolean other) {
+		super();
+		this.introduceNewDepartment = introduceNewDepartment;
+		this.featureSpecificProducts = featureSpecificProducts;
+		this.callAttentiontoBrandsPrivateLabelsCarried = callAttentiontoBrandsPrivateLabelsCarried;
+		this.promoteOffPriceItemsServices = promoteOffPriceItemsServices;
+		this.retainCurrentConsumers = retainCurrentConsumers;
+		this.increaseCustomerVisits = increaseCustomerVisits;
+		this.increaseTrafficLeadCalls = increaseTrafficLeadCalls;
+		this.expandTargetConsumers = expandTargetConsumers;
+		this.changeConsumerAttitudes = changeConsumerAttitudes;
+		this.makePromotionalEventsStronger = makePromotionalEventsStronger;
+		this.increaseDigitalMobileOnlineResponse = increaseDigitalMobileOnlineResponse;
+		this.developAQuarterlySpike = developAQuarterlySpike;
+		this.developDatabaseMarketing = developDatabaseMarketing;
+		this.initiateCauseMarketingProgram = initiateCauseMarketingProgram;
+		this.developSpeciallyStagedEvent = developSpeciallyStagedEvent;
+		this.maintainMarketDominance = maintainMarketDominance;
+		this.improveBusinessNameBrand = improveBusinessNameBrand;
+		this.establishorReestablishBusinessImage = establishorReestablishBusinessImage;
+		this.createPentUpDemand = createPentUpDemand;
+		this.increaseMarketShare = increaseMarketShare;
+		this.other = other;
+	}
+
 	private boolean introduceNewDepartment;
 	private boolean featureSpecificProducts;
 	private boolean callAttentiontoBrandsPrivateLabelsCarried;
