@@ -37,73 +37,245 @@
 
 
 	<div class="container">
+	<style>
+	  fieldset { padding-bottom: 2%;
+	  }
+	</style>
 
 		<div>
-			<form method="post" action="saveTeamCommitmentPage">
+			<form method="post" action="saveClientObjectivesOnePage">
 				<fieldset>
 					<legend>
 						Client Objectives - <span th:text="${wizard.name}"></span>
 					</legend>
-					
-						<fieldset>
-							<legend>PRODUCT / SERVICE</legend>
-							<div class="form-group">
 
-								<div class="checkbox">
-									<label><input name="introduceNewDepartment"
-										type="checkbox"
-										th:checked="${dataPageModel?.introduceNewDepartment}">
-										Introduce New Department/Products/Services</label>
-								</div>
+					<fieldset>
+						<legend>PRODUCT / SERVICE</legend>
+						<div class="form-group">
 
-							</div>
-							<div class="form-group">
-
-								<div class="checkbox">
-									<label><input name="featureSpecificProducts"
-										type="checkbox"
-										th:checked="${dataPageModel?.featureSpecificProducts}">
-										Feature Specific Products/Services</label>
-								</div>
-
-							</div>
-							<div class="form-group">
-
-								<div class="checkbox">
-									<label><input name="callAttentiontoBrandsPrivateLabelsCarriedt"
-										type="checkbox"
-										th:checked="${dataPageModel?.callAttentiontoBrandsPrivateLabelsCarried}">
-										Call Attention to Brands/Private Labels Carried</label>
-								</div>
-
-							</div>
-							<div class="form-group">
-
-								<div class="checkbox">
-									<label><input name="promoteOffPriceItemsServices"
-										type="checkbox"
-										th:checked="${dataPageModel?.promoteOffPriceItemsServices}">
-										Promote Off-price Items/Services</label>
-								</div>
-
-							</div>
-							<div class="form-group">
-
-								<div class="checkbox">
-									<label><input name="retainCurrentConsumers"
-										type="checkbox"
-										th:checked="${dataPageModel?.retainCurrentConsumers}">
-										Utilize Co-op/Vendor Dollars</label>
-								</div>
-
+							<div class="checkbox">
+								<label><input name="introduceNewDepartment"
+									type="checkbox"
+									th:checked="${dataPageModel?.introduceNewDepartment}">
+									Introduce New Department/Products/Services</label>
 							</div>
 
-						</fieldset>
-					
+						</div>
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label><input name="featureSpecificProducts"
+									type="checkbox"
+									th:checked="${dataPageModel?.featureSpecificProducts}">
+									Feature Specific Products/Services</label>
+							</div>
+
+						</div>
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label><input
+									name="callAttentiontoBrandsPrivateLabelsCarried"
+									type="checkbox"
+									th:checked="${dataPageModel?.callAttentiontoBrandsPrivateLabelsCarried}">
+									Call Attention to Brands/Private Labels Carried</label>
+							</div>
+
+						</div>
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label><input name="promoteOffPriceItemsServices"
+									type="checkbox"
+									th:checked="${dataPageModel?.promoteOffPriceItemsServices}">
+									Promote Off-price Items/Services</label>
+							</div>
+
+						</div>
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label><input name="retainCurrentConsumers"
+									type="checkbox"
+									th:checked="${dataPageModel?.retainCurrentConsumers}">
+									Utilize Co-op/Vendor Dollars</label>
+							</div>
+
+						</div>
+
+					</fieldset>
+
+					<fieldset>
+						<legend>CONSUMER</legend>
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label><input name="retainCurrentConsumers"
+									type="checkbox"
+									th:checked="${dataPageModel?.retainCurrentConsumers}">
+									Retain/Recapture Consumers</label>
+							</div>
+
+						</div>
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label><input name="IncreaseCustomerVisits"
+									type="checkbox"
+									th:checked="${dataPageModel?.increaseCustomerVisits}">
+									Increase Frequency of Customer Visits</label>
+							</div>
+
+						</div>
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label><input name="increaseTrafficLeadCalls"
+									type="checkbox"
+									th:checked="${dataPageModel?.increaseTrafficLeadCalls}">
+									Grow New Traffic/Lead Calls</label>
+							</div>
+
+						</div>
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label><input name="expandTargetConsumers"
+									type="checkbox"
+									th:checked="${dataPageModel?.expandTargetConsumers}">
+									Expand Target Consumers (by age, sex, geography)</label>
+							</div>
+
+						</div>
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label><input name="changeConsumerAttitudes"
+									type="checkbox"
+									th:checked="${dataPageModel?.changeConsumerAttitudes}">
+									Change Consumer Attitudes</label>
+							</div>
+
+						</div>
+
+					</fieldset>
 
 
+					<fieldset>
+						<legend>PROMOTION</legend>
+						<div class="form-group">
 
+							<div class="checkbox">
+								<label><input name="makePromotionalEventsStronger"
+									type="checkbox"
+									th:checked="${dataPageModel?.makePromotionalEventsStronger}">
+									Make Promotional Events Stronger</label>
+							</div>
 
+						</div>
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label><input name="increaseDigitalMobileOnlineResponse"
+									type="checkbox"
+									th:checked="${dataPageModel?.increaseDigitalMobileOnlineResponse}">
+									Develop Digital/Mobile/Social Strategies</label>
+							</div>
+
+						</div>
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label><input name="developDatabaseMarketing"
+									type="checkbox"
+									th:checked="${dataPageModel?.developDatabaseMarketing}">
+									Develop Database Marketing (Email and Text)</label>
+							</div>
+
+						</div>
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label><input name="initiateCauseMarketingProgram"
+									type="checkbox"
+									th:checked="${dataPageModel?.initiateCauseMarketingProgram}">
+									Initiate Cause Marketing Programs</label>
+							</div>
+
+						</div>
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label><input name="developSpeciallyStagedEvent"
+									type="checkbox"
+									th:checked="${dataPageModel?.developSpeciallyStagedEvent}">
+									Develop Specially Staged Events</label>
+							</div>
+
+						</div>
+
+					</fieldset>
+
+					<fieldset>
+						<legend>BRAND</legend>
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label><input name="maintainMarketDominance"
+									type="checkbox"
+									th:checked="${dataPageModel?.maintainMarketDominance}">
+									Maintain Market Dominance</label>
+							</div>
+
+						</div>
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label><input name="improveBusinessNameBrand"
+									type="checkbox"
+									th:checked="${dataPageModel?.improveBusinessNameBrand}">
+									Elevate Business Brand/Image</label>
+							</div>
+
+						</div>
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label><input name="establishorReestablishBusinessImage"
+									type="checkbox"
+									th:checked="${dataPageModel?.establishorReestablishBusinessImage}">
+									Improve Reputation and Listing Management</label>
+							</div>
+
+						</div>
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label><input name="createPentUpDemand" type="checkbox"
+									th:checked="${dataPageModel?.createPentUpDemand}">
+									Enhance Website (Mobile, Response, SEO, SEM)</label>
+							</div>
+
+						</div>
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label><input name="increaseMarketShare" type="checkbox"
+									th:checked="${dataPageModel?.increaseMarketShare}">
+									Increase Market Share</label>
+							</div>
+
+						</div>
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label><input name="other" type="checkbox"
+									th:checked="${dataPageModel?.other}"> Other:</label>
+							</div>
+
+						</div>
+
+					</fieldset>
 
 
 					<input type="hidden" id="nextPage"
