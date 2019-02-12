@@ -80,8 +80,7 @@ public class ClientObjectivesOnePageControl {
 			,@RequestParam(defaultValue = "false") boolean createPentUpDemand
 			,@RequestParam(defaultValue = "false") boolean increaseMarketShare
 			,@RequestParam(defaultValue = "false") boolean other
-			   
-			 ,@RequestParam(defaultValue = "0") int introduceNewDepartmentSortOrder
+			,@RequestParam(defaultValue = "0") int introduceNewDepartmentSortOrder
 			,@RequestParam(defaultValue = "0") int  featureSpecificProductsSortOrder
 			,@RequestParam(defaultValue = "0") int  callAttentiontoBrandsPrivateLabelsCarriedSortOrder
 			,@RequestParam(defaultValue = "0") int  promoteOffPriceItemsServicesSortOrder
