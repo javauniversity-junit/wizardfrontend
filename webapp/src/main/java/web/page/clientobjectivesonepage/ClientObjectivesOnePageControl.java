@@ -137,7 +137,15 @@ public class ClientObjectivesOnePageControl {
 				developDatabaseMarketing, initiateCauseMarketingProgram,
 				developSpeciallyStagedEvent, maintainMarketDominance, improveBusinessNameBrand,
 				establishorReestablishBusinessImage, createPentUpDemand, increaseMarketShare,
-				other);
+				other,introduceNewDepartmentSortOrder, featureSpecificProductsSortOrder,
+				callAttentiontoBrandsPrivateLabelsCarriedSortOrder, promoteOffPriceItemsServicesSortOrder,
+				retainCurrentConsumersSortOrder, increaseCustomerVisitsSortOrder, increaseTrafficLeadCallsSortOrder,
+				expandTargetConsumersSortOrder, changeConsumerAttitudesSortOrder, makePromotionalEventsStrongerSortOrder,
+				increaseDigitalMobileOnlineResponseSortOrder, developAQuarterlySpikeSortOrder,
+				developDatabaseMarketingSortOrder, initiateCauseMarketingProgramSortOrder,
+				developSpeciallyStagedEventSortOrder, maintainMarketDominanceSortOrder, improveBusinessNameBrandSortOrder,
+				establishorReestablishBusinessImageSortOrder, createPentUpDemandSortOrder, increaseMarketShareSortOrder,
+				otherSortOrder);
 
 		String pageData = JSONManager.convertToJson(pageModel);
 		wizardData.setPagedata(pageData);
