@@ -63,7 +63,7 @@ public class ClientObjectivesOnePageModel {
 	private int introduceNewDepartmentSortOrder;
 	private int featureSpecificProductsSortOrder;
 	private int callAttentiontoBrandsPrivateLabelsCarriedSortOrder;
-	private int promoteOffPriceItemsServices;
+	private int promoteOffPriceItemsServicesSortOrder;
 
 	private int retainCurrentConsumersSortOrder;
 	private int increaseCustomerVisitsSortOrder;
