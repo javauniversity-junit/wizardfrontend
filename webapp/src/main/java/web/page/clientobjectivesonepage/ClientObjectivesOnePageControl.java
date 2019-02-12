@@ -79,7 +79,29 @@ public class ClientObjectivesOnePageControl {
 			,@RequestParam(defaultValue = "false") boolean establishorReestablishBusinessImage
 			,@RequestParam(defaultValue = "false") boolean createPentUpDemand
 			,@RequestParam(defaultValue = "false") boolean increaseMarketShare
-			,@RequestParam(defaultValue = "false") boolean other	
+			,@RequestParam(defaultValue = "false") boolean other
+			   
+			 ,@RequestParam(defaultValue = "0") int introduceNewDepartmentSortOrder
+			,@RequestParam(defaultValue = "0") int  featureSpecificProductsSortOrder
+			,@RequestParam(defaultValue = "0") int  callAttentiontoBrandsPrivateLabelsCarriedSortOrder
+			,@RequestParam(defaultValue = "0") int  promoteOffPriceItemsServicesSortOrder
+			,@RequestParam(defaultValue = "0") int  retainCurrentConsumersSortOrder
+			,@RequestParam(defaultValue = "0") int increaseCustomerVisitsSortOrder
+			,@RequestParam(defaultValue = "0") int  increaseTrafficLeadCallsSortOrder
+			,@RequestParam(defaultValue = "0") int  expandTargetConsumersSortOrder
+			,@RequestParam(defaultValue = "0") int  changeConsumerAttitudesSortOrder
+			,@RequestParam(defaultValue = "0") int makePromotionalEventsStrongerSortOrder
+			,@RequestParam(defaultValue = "0") int increaseDigitalMobileOnlineResponseSortOrder
+			,@RequestParam(defaultValue = "0") int developAQuarterlySpikeSortOrder
+			,@RequestParam(defaultValue = "0") int developDatabaseMarketingSortOrder
+			,@RequestParam(defaultValue = "0") int initiateCauseMarketingProgramSortOrder
+			,@RequestParam(defaultValue = "0") int developSpeciallyStagedEventSortOrder
+			,@RequestParam(defaultValue = "0") int maintainMarketDominanceSortOrder
+			,@RequestParam(defaultValue = "0") int improveBusinessNameBrandSortOrder
+			,@RequestParam(defaultValue = "0") int establishorReestablishBusinessImageSortOrder
+			,@RequestParam(defaultValue = "0") int createPentUpDemandSortOrder
+			,@RequestParam(defaultValue = "0") int increaseMarketShareSortOrder
+			,@RequestParam(defaultValue = "0") int otherSortOrder  
 			,@RequestParam String wizarddataid
 			,@RequestParam String previousPage
 			,@RequestParam String publishPage
