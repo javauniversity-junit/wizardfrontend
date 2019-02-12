@@ -59,6 +59,34 @@ public class ClientObjectivesOnePageModel {
 	private boolean increaseMarketShare;
 
 	private boolean other;
+	
+	private int introduceNewDepartmentSortOrder;
+	private int featureSpecificProductsSortOrder;
+	private int callAttentiontoBrandsPrivateLabelsCarriedSortOrder;
+	private int promoteOffPriceItemsServices;
+
+	private int retainCurrentConsumersSortOrder;
+	private int increaseCustomerVisitsSortOrder;
+	private int increaseTrafficLeadCallsSortOrder;
+	private int expandTargetConsumersSortOrder;
+	private int changeConsumerAttitudesSortOrder;
+
+	private int makePromotionalEventsStrongerSortOrder;
+	private int increaseDigitalMobileOnlineResponseSortOrder;
+	private int developAQuarterlySpikeSortOrder;
+	private int developDatabaseMarketingSortOrder;
+	private int initiateCauseMarketingProgramSortOrder;
+	private int developSpeciallyStagedEventSortOrder;
+
+	private int maintainMarketDominanceSortOrder;
+	private int improveBusinessNameBrandSortOrder;
+	private int establishorReestablishBusinessImageSortOrder;
+	private int createPentUpDemandSortOrder;
+	private int increaseMarketShareSortOrder;
+
+	private boolean otherSortOrder;
+	
+	
 
 	public boolean isIntroduceNewDepartment() {
 		return introduceNewDepartment;
