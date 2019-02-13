@@ -1,4 +1,6 @@
 package web.page.clientobjectivesonepage;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
 
@@ -46,6 +48,40 @@ public class ClientObjectivesOnePageControl {
 		model.addAttribute("dataPageModel", dataPageModel);
 		model.addAttribute("wizard", wizard);
 		return "pages/ClientObjectivesOnePage";
+	}
+	
+	
+	@RequestMapping(value = "/ClientObjectivesOnePageTwo", method = RequestMethod.GET)
+	public String detailPageTwo(Model model, @RequestParam String ID) {
+		mLog.info("starting detail");
+		//get wizard header 
+		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
+		Wizard wizard = wizardOpt.orElse(null);
+		WizardData wizardData = wizardDataRepository.findByPagesequenceAndWizardid(Pages.CLIENTOBJECTIVESONEPAGE.getPageSequence(), wizard.getWizardid());
+		ClientObjectivesOnePageModel clientObjectivesOnePageModel = null;
+		if (wizardData != null) {
+			clientObjectivesOnePageModel =(ClientObjectivesOnePageModel) JSONManager.convertFromJson(wizardData.getPagedata(),ClientObjectivesOnePageModel.class);
+		}
+		List<ClientObjectivesOnePageTwoModel> orderList = new ArrayList<ClientObjectivesOnePageTwoModel>();
+		if (clientObjectivesOnePageModel.isIntroduceNewDepartment()) {
+			ClientObjectivesOnePageTwoModel introduceNewDepartment = 
+					new ClientObjectivesOnePageTwoModel("introduceNewDepartment",clientObjectivesOnePageModel.getIntroduceNewDepartmentSortOrder());
+			orderList.add(introduceNewDepartment);
+		
+		}
+		if (clientObjectivesOnePageModel.isFeatureSpecificProducts()) {
+			ClientObjectivesOnePageTwoModel featureSpecificProducts = 
+					new ClientObjectivesOnePageTwoModel("featureSpecificProducts",clientObjectivesOnePageModel.getFeatureSpecificProductsSortOrder());
+			orderList.add(featureSpecificProducts);
+		
+		}
+		
+		
+		//DemographicManager.convertFromJson(json)
+		model.addAttribute("wizardData", wizardData);
+		model.addAttribute("orderList", orderList);
+		model.addAttribute("wizard", wizard);
+		return "pages/ClientObjectivesOnePageTwo";
 	}
 	/*
 	 * ivate String ;
