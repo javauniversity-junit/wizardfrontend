@@ -48,7 +48,7 @@ create table IF NOT EXISTS contact (
   
   CREATE TABLE IF NOT EXISTS `wizarddata` (
   `wizarddataid` int(11) NOT NULL AUTO_INCREMENT,
-  `pagedata` varchar(1000) NOT NULL,
+  `pagedata` varchar(2000) NOT NULL,
   `wizardid` int(11) NOT NULL,
   `pagename` varchar(50) NOT NULL,
   `pagesequence` int(11) NOT NULL,

@@ -1,6 +1,9 @@
 package web.page.clientobjectivesonepage;
 
 public class ClientObjectivesOnePageModel {
+
+
+	
 	public ClientObjectivesOnePageModel(boolean introduceNewDepartment, boolean featureSpecificProducts,
 			boolean callAttentiontoBrandsPrivateLabelsCarried, boolean promoteOffPriceItemsServices,
 			boolean retainCurrentConsumers, boolean increaseCustomerVisits, boolean increaseTrafficLeadCalls,
@@ -9,7 +12,16 @@ public class ClientObjectivesOnePageModel {
 			boolean developDatabaseMarketing, boolean initiateCauseMarketingProgram,
 			boolean developSpeciallyStagedEvent, boolean maintainMarketDominance, boolean improveBusinessNameBrand,
 			boolean establishorReestablishBusinessImage, boolean createPentUpDemand, boolean increaseMarketShare,
-			boolean other) {
+			boolean other, int introduceNewDepartmentSortOrder, int featureSpecificProductsSortOrder,
+			int callAttentiontoBrandsPrivateLabelsCarriedSortOrder, int promoteOffPriceItemsServicesSortOrder,
+			int retainCurrentConsumersSortOrder, int increaseCustomerVisitsSortOrder,
+			int increaseTrafficLeadCallsSortOrder, int expandTargetConsumersSortOrder,
+			int changeConsumerAttitudesSortOrder, int makePromotionalEventsStrongerSortOrder,
+			int increaseDigitalMobileOnlineResponseSortOrder, int developAQuarterlySpikeSortOrder,
+			int developDatabaseMarketingSortOrder, int initiateCauseMarketingProgramSortOrder,
+			int developSpeciallyStagedEventSortOrder, int maintainMarketDominanceSortOrder,
+			int improveBusinessNameBrandSortOrder, int establishorReestablishBusinessImageSortOrder,
+			int createPentUpDemandSortOrder, int increaseMarketShareSortOrder, int otherSortOrder) {
 		super();
 		this.introduceNewDepartment = introduceNewDepartment;
 		this.featureSpecificProducts = featureSpecificProducts;
@@ -32,6 +44,196 @@ public class ClientObjectivesOnePageModel {
 		this.createPentUpDemand = createPentUpDemand;
 		this.increaseMarketShare = increaseMarketShare;
 		this.other = other;
+		this.introduceNewDepartmentSortOrder = introduceNewDepartmentSortOrder;
+		this.featureSpecificProductsSortOrder = featureSpecificProductsSortOrder;
+		this.callAttentiontoBrandsPrivateLabelsCarriedSortOrder = callAttentiontoBrandsPrivateLabelsCarriedSortOrder;
+		this.promoteOffPriceItemsServicesSortOrder = promoteOffPriceItemsServicesSortOrder;
+		this.retainCurrentConsumersSortOrder = retainCurrentConsumersSortOrder;
+		this.increaseCustomerVisitsSortOrder = increaseCustomerVisitsSortOrder;
+		this.increaseTrafficLeadCallsSortOrder = increaseTrafficLeadCallsSortOrder;
+		this.expandTargetConsumersSortOrder = expandTargetConsumersSortOrder;
+		this.changeConsumerAttitudesSortOrder = changeConsumerAttitudesSortOrder;
+		this.makePromotionalEventsStrongerSortOrder = makePromotionalEventsStrongerSortOrder;
+		this.increaseDigitalMobileOnlineResponseSortOrder = increaseDigitalMobileOnlineResponseSortOrder;
+		this.developAQuarterlySpikeSortOrder = developAQuarterlySpikeSortOrder;
+		this.developDatabaseMarketingSortOrder = developDatabaseMarketingSortOrder;
+		this.initiateCauseMarketingProgramSortOrder = initiateCauseMarketingProgramSortOrder;
+		this.developSpeciallyStagedEventSortOrder = developSpeciallyStagedEventSortOrder;
+		this.maintainMarketDominanceSortOrder = maintainMarketDominanceSortOrder;
+		this.improveBusinessNameBrandSortOrder = improveBusinessNameBrandSortOrder;
+		this.establishorReestablishBusinessImageSortOrder = establishorReestablishBusinessImageSortOrder;
+		this.createPentUpDemandSortOrder = createPentUpDemandSortOrder;
+		this.increaseMarketShareSortOrder = increaseMarketShareSortOrder;
+		this.otherSortOrder = otherSortOrder;
+	}
+
+	public int getIntroduceNewDepartmentSortOrder() {
+		return introduceNewDepartmentSortOrder;
+	}
+
+	public void setIntroduceNewDepartmentSortOrder(int introduceNewDepartmentSortOrder) {
+		this.introduceNewDepartmentSortOrder = introduceNewDepartmentSortOrder;
+	}
+
+	public int getFeatureSpecificProductsSortOrder() {
+		return featureSpecificProductsSortOrder;
+	}
+
+	public void setFeatureSpecificProductsSortOrder(int featureSpecificProductsSortOrder) {
+		this.featureSpecificProductsSortOrder = featureSpecificProductsSortOrder;
+	}
+
+	public int getCallAttentiontoBrandsPrivateLabelsCarriedSortOrder() {
+		return callAttentiontoBrandsPrivateLabelsCarriedSortOrder;
+	}
+
+	public void setCallAttentiontoBrandsPrivateLabelsCarriedSortOrder(
+			int callAttentiontoBrandsPrivateLabelsCarriedSortOrder) {
+		this.callAttentiontoBrandsPrivateLabelsCarriedSortOrder = callAttentiontoBrandsPrivateLabelsCarriedSortOrder;
+	}
+
+	public int getPromoteOffPriceItemsServicesSortOrder() {
+		return promoteOffPriceItemsServicesSortOrder;
+	}
+
+	public void setPromoteOffPriceItemsServicesSortOrder(int promoteOffPriceItemsServicesSortOrder) {
+		this.promoteOffPriceItemsServicesSortOrder = promoteOffPriceItemsServicesSortOrder;
+	}
+
+	public int getRetainCurrentConsumersSortOrder() {
+		return retainCurrentConsumersSortOrder;
+	}
+
+	public void setRetainCurrentConsumersSortOrder(int retainCurrentConsumersSortOrder) {
+		this.retainCurrentConsumersSortOrder = retainCurrentConsumersSortOrder;
+	}
+
+	public int getIncreaseCustomerVisitsSortOrder() {
+		return increaseCustomerVisitsSortOrder;
+	}
+
+	public void setIncreaseCustomerVisitsSortOrder(int increaseCustomerVisitsSortOrder) {
+		this.increaseCustomerVisitsSortOrder = increaseCustomerVisitsSortOrder;
+	}
+
+	public int getIncreaseTrafficLeadCallsSortOrder() {
+		return increaseTrafficLeadCallsSortOrder;
+	}
+
+	public void setIncreaseTrafficLeadCallsSortOrder(int increaseTrafficLeadCallsSortOrder) {
+		this.increaseTrafficLeadCallsSortOrder = increaseTrafficLeadCallsSortOrder;
+	}
+
+	public int getExpandTargetConsumersSortOrder() {
+		return expandTargetConsumersSortOrder;
+	}
+
+	public void setExpandTargetConsumersSortOrder(int expandTargetConsumersSortOrder) {
+		this.expandTargetConsumersSortOrder = expandTargetConsumersSortOrder;
+	}
+
+	public int getChangeConsumerAttitudesSortOrder() {
+		return changeConsumerAttitudesSortOrder;
+	}
+
+	public void setChangeConsumerAttitudesSortOrder(int changeConsumerAttitudesSortOrder) {
+		this.changeConsumerAttitudesSortOrder = changeConsumerAttitudesSortOrder;
+	}
+
+	public int getMakePromotionalEventsStrongerSortOrder() {
+		return makePromotionalEventsStrongerSortOrder;
+	}
+
+	public void setMakePromotionalEventsStrongerSortOrder(int makePromotionalEventsStrongerSortOrder) {
+		this.makePromotionalEventsStrongerSortOrder = makePromotionalEventsStrongerSortOrder;
+	}
+
+	public int getIncreaseDigitalMobileOnlineResponseSortOrder() {
+		return increaseDigitalMobileOnlineResponseSortOrder;
+	}
+
+	public void setIncreaseDigitalMobileOnlineResponseSortOrder(int increaseDigitalMobileOnlineResponseSortOrder) {
+		this.increaseDigitalMobileOnlineResponseSortOrder = increaseDigitalMobileOnlineResponseSortOrder;
+	}
+
+	public int getDevelopAQuarterlySpikeSortOrder() {
+		return developAQuarterlySpikeSortOrder;
+	}
+
+	public void setDevelopAQuarterlySpikeSortOrder(int developAQuarterlySpikeSortOrder) {
+		this.developAQuarterlySpikeSortOrder = developAQuarterlySpikeSortOrder;
+	}
+
+	public int getDevelopDatabaseMarketingSortOrder() {
+		return developDatabaseMarketingSortOrder;
+	}
+
+	public void setDevelopDatabaseMarketingSortOrder(int developDatabaseMarketingSortOrder) {
+		this.developDatabaseMarketingSortOrder = developDatabaseMarketingSortOrder;
+	}
+
+	public int getInitiateCauseMarketingProgramSortOrder() {
+		return initiateCauseMarketingProgramSortOrder;
+	}
+
+	public void setInitiateCauseMarketingProgramSortOrder(int initiateCauseMarketingProgramSortOrder) {
+		this.initiateCauseMarketingProgramSortOrder = initiateCauseMarketingProgramSortOrder;
+	}
+
+	public int getDevelopSpeciallyStagedEventSortOrder() {
+		return developSpeciallyStagedEventSortOrder;
+	}
+
+	public void setDevelopSpeciallyStagedEventSortOrder(int developSpeciallyStagedEventSortOrder) {
+		this.developSpeciallyStagedEventSortOrder = developSpeciallyStagedEventSortOrder;
+	}
+
+	public int getMaintainMarketDominanceSortOrder() {
+		return maintainMarketDominanceSortOrder;
+	}
+
+	public void setMaintainMarketDominanceSortOrder(int maintainMarketDominanceSortOrder) {
+		this.maintainMarketDominanceSortOrder = maintainMarketDominanceSortOrder;
+	}
+
+	public int getImproveBusinessNameBrandSortOrder() {
+		return improveBusinessNameBrandSortOrder;
+	}
+
+	public void setImproveBusinessNameBrandSortOrder(int improveBusinessNameBrandSortOrder) {
+		this.improveBusinessNameBrandSortOrder = improveBusinessNameBrandSortOrder;
+	}
+
+	public int getEstablishorReestablishBusinessImageSortOrder() {
+		return establishorReestablishBusinessImageSortOrder;
+	}
+
+	public void setEstablishorReestablishBusinessImageSortOrder(int establishorReestablishBusinessImageSortOrder) {
+		this.establishorReestablishBusinessImageSortOrder = establishorReestablishBusinessImageSortOrder;
+	}
+
+	public int getCreatePentUpDemandSortOrder() {
+		return createPentUpDemandSortOrder;
+	}
+
+	public void setCreatePentUpDemandSortOrder(int createPentUpDemandSortOrder) {
+		this.createPentUpDemandSortOrder = createPentUpDemandSortOrder;
+	}
+
+	public int getIncreaseMarketShareSortOrder() {
+		return increaseMarketShareSortOrder;
+	}
+
+	public void setIncreaseMarketShareSortOrder(int increaseMarketShareSortOrder) {
+		this.increaseMarketShareSortOrder = increaseMarketShareSortOrder;
+	}
+
+	public int getOtherSortOrder() {
+		return otherSortOrder;
+	}
+
+	public void setOtherSortOrder(int otherSortOrder) {
+		this.otherSortOrder = otherSortOrder;
 	}
 
 	private boolean introduceNewDepartment;
@@ -84,7 +286,7 @@ public class ClientObjectivesOnePageModel {
 	private int createPentUpDemandSortOrder;
 	private int increaseMarketShareSortOrder;
 
-	private boolean otherSortOrder;
+	private int otherSortOrder;
 	
 	
 
