@@ -58,7 +58,14 @@
 								<label><input name="introduceNewDepartment"
 									type="checkbox"
 									th:checked="${dataPageModel?.introduceNewDepartment}">
-									Introduce New Department/Products/Services</label>
+									
+									<span id="introduceNewDepartmentLabel">
+									<script>
+									addLabel("introduceNewDepartmentLabel");
+									</script>
+									
+									</span>
+									</label>
 							</div>
 
 						</div>
@@ -84,7 +91,12 @@
 									name="callAttentiontoBrandsPrivateLabelsCarried"
 									type="checkbox"
 									th:checked="${dataPageModel?.callAttentiontoBrandsPrivateLabelsCarried}">
-									Call Attention to Brands/Private Labels Carried</label>
+									<span id="callAttentiontoBrandsPrivateLabelsCarriedLabel">
+									<script>
+									addLabel("callAttentiontoBrandsPrivateLabelsCarriedLabel");
+									</script>
+									
+									</span></label>
 							</div>
 
 						</div>
@@ -94,17 +106,27 @@
 								<label><input name="promoteOffPriceItemsServices"
 									type="checkbox"
 									th:checked="${dataPageModel?.promoteOffPriceItemsServices}">
-									Promote Off-price Items/Services</label>
+									<span id="promoteOffPriceItemsServicesLabel">
+									<script>
+									addLabel("promoteOffPriceItemsServicesLabel");
+									</script>
+									
+									</span></label>
 							</div>
 
 						</div>
 						<div class="form-group">
 
 							<div class="checkbox">
-								<label><input name="retainCurrentConsumers"
+								<label><input name="utilizeCoopVendorDollars"
 									type="checkbox"
-									th:checked="${dataPageModel?.retainCurrentConsumers}">
-									Utilize Co-op/Vendor Dollars</label>
+									th:checked="${dataPageModel?.utilizeCoopVendorDollars}">
+									<span id="utilizeCoopVendorDollarsLabel">
+									<script>
+									addLabel("utilizeCoopVendorDollarsLabel");
+									</script>
+									
+									</span></label>
 							</div>
 
 						</div>
@@ -119,7 +141,12 @@
 								<label><input name="retainCurrentConsumers"
 									type="checkbox"
 									th:checked="${dataPageModel?.retainCurrentConsumers}">
-									Retain/Recapture Consumers</label>
+									<span id="retainCurrentConsumersLabel">
+									<script>
+									addLabel("retainCurrentConsumersLabel");
+									</script>
+									
+									</span></label>
 							</div>
 
 						</div>

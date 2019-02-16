@@ -1,10 +1,15 @@
 const map = new Map();
-map.set('introduceNewDepartment', 'Introduce New Department/Products/Services');
+map.set('introduceNewDepartmentLabel', 'Introduce New Department/Products/Services');
 map.set('featureSpecificProductsLabel', 'Feature Specific Products/Services');
-map.set('callAttentiontoBrandsPrivateLabelsCarried', 'Call Attention to Brands/Private Labels Carried');
-map.set('promoteOffPriceItemsServices', 'Promote Off-price Items/Services');
+map.set('callAttentiontoBrandsPrivateLabelsCarriedLabel', 'Call Attention to Brands/Private Labels Carried');
+map.set('promoteOffPriceItemsServicesLabel', 'Promote Off-price Items/Services');
 
-/*
+
+map.set('utilizeCoopVendorDollarsLabel', 'Utilize Co-op/Vendor Dollars');
+map.set('retainCurrentConsumersLabel', 'Retain/Recapture Consumers');
+map.set('introduceNewDepartment', 'Introduce New Department/Products/Services');
+map.set('introduceNewDepartment', 'Introduce New Department/Products/Services');
+map.set('introduceNewDepartLabment', 'Introduce New Department/Products/Services');
 map.set('introduceNewDepartment', 'Introduce New Department/Products/Services');
 map.set('introduceNewDepartment', 'Introduce New Department/Products/Services');
 map.set('introduceNewDepartment', 'Introduce New Department/Products/Services');
@@ -20,12 +25,7 @@ map.set('introduceNewDepartment', 'Introduce New Department/Products/Services');
 map.set('introduceNewDepartment', 'Introduce New Department/Products/Services');
 map.set('introduceNewDepartment', 'Introduce New Department/Products/Services');
 map.set('introduceNewDepartment', 'Introduce New Department/Products/Services');
-map.set('introduceNewDepartment', 'Introduce New Department/Products/Services');
-map.set('introduceNewDepartment', 'Introduce New Department/Products/Services');
-map.set('introduceNewDepartment', 'Introduce New Department/Products/Services');
-map.set('introduceNewDepartment', 'Introduce New Department/Products/Services');
-map.set('introduceNewDepartment', 'Introduce New Department/Products/Services');
-*/
+
 
 function addLabel(key) {
 	

@@ -4,12 +4,26 @@ public class ClientObjectivesOnePageModel {
 
 
 	
+
+
+	public boolean isUtilizeCoopVendorDollars() {
+		return utilizeCoopVendorDollars;
+	}
+
+	public void setUtilizeCoopVendorDollars(boolean utilizeCoopVendorDollars) {
+		this.utilizeCoopVendorDollars = utilizeCoopVendorDollars;
+	}
+
+	public int getIntroduceNewDepartmentSortOrder() {
+		return introduceNewDepartmentSortOrder;
+	}
+
 	public ClientObjectivesOnePageModel(boolean introduceNewDepartment, boolean featureSpecificProducts,
 			boolean callAttentiontoBrandsPrivateLabelsCarried, boolean promoteOffPriceItemsServices,
-			boolean retainCurrentConsumers, boolean increaseCustomerVisits, boolean increaseTrafficLeadCalls,
-			boolean expandTargetConsumers, boolean changeConsumerAttitudes, boolean makePromotionalEventsStronger,
-			boolean increaseDigitalMobileOnlineResponse, boolean developAQuarterlySpike,
-			boolean developDatabaseMarketing, boolean initiateCauseMarketingProgram,
+			boolean utilizeCoopVendorDollars, boolean retainCurrentConsumers, boolean increaseCustomerVisits,
+			boolean increaseTrafficLeadCalls, boolean expandTargetConsumers, boolean changeConsumerAttitudes,
+			boolean makePromotionalEventsStronger, boolean increaseDigitalMobileOnlineResponse,
+			boolean developAQuarterlySpike, boolean developDatabaseMarketing, boolean initiateCauseMarketingProgram,
 			boolean developSpeciallyStagedEvent, boolean maintainMarketDominance, boolean improveBusinessNameBrand,
 			boolean establishorReestablishBusinessImage, boolean createPentUpDemand, boolean increaseMarketShare,
 			boolean other, int introduceNewDepartmentSortOrder, int featureSpecificProductsSortOrder,
@@ -27,6 +41,7 @@ public class ClientObjectivesOnePageModel {
 		this.featureSpecificProducts = featureSpecificProducts;
 		this.callAttentiontoBrandsPrivateLabelsCarried = callAttentiontoBrandsPrivateLabelsCarried;
 		this.promoteOffPriceItemsServices = promoteOffPriceItemsServices;
+		this.utilizeCoopVendorDollars = utilizeCoopVendorDollars;
 		this.retainCurrentConsumers = retainCurrentConsumers;
 		this.increaseCustomerVisits = increaseCustomerVisits;
 		this.increaseTrafficLeadCalls = increaseTrafficLeadCalls;
@@ -65,10 +80,6 @@ public class ClientObjectivesOnePageModel {
 		this.createPentUpDemandSortOrder = createPentUpDemandSortOrder;
 		this.increaseMarketShareSortOrder = increaseMarketShareSortOrder;
 		this.otherSortOrder = otherSortOrder;
-	}
-
-	public int getIntroduceNewDepartmentSortOrder() {
-		return introduceNewDepartmentSortOrder;
 	}
 
 	public void setIntroduceNewDepartmentSortOrder(int introduceNewDepartmentSortOrder) {
@@ -240,6 +251,7 @@ public class ClientObjectivesOnePageModel {
 	private boolean featureSpecificProducts;
 	private boolean callAttentiontoBrandsPrivateLabelsCarried;
 	private boolean promoteOffPriceItemsServices;
+	private boolean utilizeCoopVendorDollars;
 
 	private boolean retainCurrentConsumers;
 	private boolean increaseCustomerVisits;

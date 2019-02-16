@@ -99,6 +99,7 @@ public class ClientObjectivesOnePageControl {
 			,@RequestParam(defaultValue = "false") boolean featureSpecificProducts
 			,@RequestParam(defaultValue = "false") boolean callAttentiontoBrandsPrivateLabelsCarried
 			,@RequestParam(defaultValue = "false") boolean promoteOffPriceItemsServices
+			,@RequestParam(defaultValue = "false") boolean utilizeCoopVendorDollars
 			,@RequestParam(defaultValue = "false") boolean retainCurrentConsumers
 			,@RequestParam(defaultValue = "false") boolean increaseCustomerVisits
 			,@RequestParam(defaultValue = "false") boolean increaseTrafficLeadCalls
@@ -166,7 +167,7 @@ public class ClientObjectivesOnePageControl {
 		wizardData.setWizardid(wizardIdInt);
 		
 		ClientObjectivesOnePageModel pageModel = new ClientObjectivesOnePageModel(introduceNewDepartment, featureSpecificProducts,
-				callAttentiontoBrandsPrivateLabelsCarried, promoteOffPriceItemsServices,
+				callAttentiontoBrandsPrivateLabelsCarried, promoteOffPriceItemsServices,utilizeCoopVendorDollars,
 				retainCurrentConsumers, increaseCustomerVisits, increaseTrafficLeadCalls,
 				expandTargetConsumers, changeConsumerAttitudes, makePromotionalEventsStronger,
 				increaseDigitalMobileOnlineResponse, developAQuarterlySpike,
