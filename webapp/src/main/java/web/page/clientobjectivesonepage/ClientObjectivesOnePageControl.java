@@ -63,10 +63,123 @@ public class ClientObjectivesOnePageControl {
 			clientObjectivesOnePageModel =(ClientObjectivesOnePageModel) JSONManager.convertFromJson(wizardData.getPagedata(),ClientObjectivesOnePageModel.class);
 		}
 		List<ClientObjectivesOnePageTwoModel> orderList = new ArrayList<ClientObjectivesOnePageTwoModel>();
-		if (clientObjectivesOnePageModel.isIntroduceNewDepartment()) {
-			ClientObjectivesOnePageTwoModel introduceNewDepartment = 
-					new ClientObjectivesOnePageTwoModel("introduceNewDepartment",clientObjectivesOnePageModel.getIntroduceNewDepartmentSortOrder());
-			orderList.add(introduceNewDepartment);
+		if (clientObjectivesOnePageModel.isCallAttentiontoBrandsPrivateLabelsCarried()) {
+			ClientObjectivesOnePageTwoModel callAttentiontoBrandsPrivateLabelsCarried = 
+					new ClientObjectivesOnePageTwoModel("callAttentiontoBrandsPrivateLabelsCarried",clientObjectivesOnePageModel.getCallAttentiontoBrandsPrivateLabelsCarriedSortOrder());
+			orderList.add(callAttentiontoBrandsPrivateLabelsCarried);
+		
+		}
+
+		if (clientObjectivesOnePageModel.isChangeConsumerAttitudes()) {
+			ClientObjectivesOnePageTwoModel changeConsumerAttitudes = 
+					new ClientObjectivesOnePageTwoModel("changeConsumerAttitudes",clientObjectivesOnePageModel.getChangeConsumerAttitudesSortOrder());
+			orderList.add(changeConsumerAttitudes);
+		
+		}	
+		if (clientObjectivesOnePageModel.isDevelopAQuarterlySpike()) {
+			ClientObjectivesOnePageTwoModel modelObj = 
+					new ClientObjectivesOnePageTwoModel("developAQuarterlySpike",clientObjectivesOnePageModel.getDevelopAQuarterlySpikeSortOrder());
+			orderList.add(modelObj);
+		
+		}
+		if (clientObjectivesOnePageModel.isDevelopDatabaseMarketing()) {
+			ClientObjectivesOnePageTwoModel modelObj = 
+					new ClientObjectivesOnePageTwoModel("developDatabaseMarketing",clientObjectivesOnePageModel.getDevelopDatabaseMarketingSortOrder());
+			orderList.add(modelObj);
+		
+		}
+		if (clientObjectivesOnePageModel.isDevelopSpeciallyStagedEvent()) {
+			ClientObjectivesOnePageTwoModel modelObj = 
+					new ClientObjectivesOnePageTwoModel("developSpeciallyStagedEvent",clientObjectivesOnePageModel.getDevelopSpeciallyStagedEventSortOrder());
+			orderList.add(modelObj);
+		
+		}
+		if (clientObjectivesOnePageModel.isEstablishorReestablishBusinessImage()) {
+			ClientObjectivesOnePageTwoModel modelObj = 
+					new ClientObjectivesOnePageTwoModel("establishorReestablishBusinessImage",clientObjectivesOnePageModel.getEstablishorReestablishBusinessImageSortOrder());
+			orderList.add(modelObj);
+		
+		}
+		
+		if (clientObjectivesOnePageModel.isExpandTargetConsumers()) {
+			ClientObjectivesOnePageTwoModel modelObj = 
+					new ClientObjectivesOnePageTwoModel("expandTargetConsumers",clientObjectivesOnePageModel.getExpandTargetConsumersSortOrder());
+			orderList.add(modelObj);
+		
+		}
+		if (clientObjectivesOnePageModel.isImproveBusinessNameBrand()) {
+			ClientObjectivesOnePageTwoModel modelObj = 
+					new ClientObjectivesOnePageTwoModel("improveBusinessNameBrand",clientObjectivesOnePageModel.getImproveBusinessNameBrandSortOrder());
+			orderList.add(modelObj);
+		
+		}
+		if (clientObjectivesOnePageModel.isIncreaseCustomerVisits()) {
+			ClientObjectivesOnePageTwoModel modelObj = 
+					new ClientObjectivesOnePageTwoModel("increaseCustomerVisits",clientObjectivesOnePageModel.getIncreaseCustomerVisitsSortOrder());
+			orderList.add(modelObj);
+		
+		}	
+		if (clientObjectivesOnePageModel.isIncreaseDigitalMobileOnlineResponse()) {
+			ClientObjectivesOnePageTwoModel modelObj = 
+					new ClientObjectivesOnePageTwoModel("increaseDigitalMobileOnlineResponse",clientObjectivesOnePageModel.getIncreaseDigitalMobileOnlineResponseSortOrder());
+			orderList.add(modelObj);
+		
+		}
+		if (clientObjectivesOnePageModel.isIncreaseMarketShare()) {
+			ClientObjectivesOnePageTwoModel modelObj = 
+					new ClientObjectivesOnePageTwoModel("increaseMarketShare",clientObjectivesOnePageModel.getIncreaseMarketShareSortOrder());
+			orderList.add(modelObj);
+		
+		}
+		
+		if (clientObjectivesOnePageModel.isIncreaseTrafficLeadCalls()) {
+			ClientObjectivesOnePageTwoModel modelObj = 
+					new ClientObjectivesOnePageTwoModel("increaseTrafficLeadCalls",clientObjectivesOnePageModel.getIncreaseTrafficLeadCallsSortOrder());
+			orderList.add(modelObj);
+		
+		}
+		
+		if (clientObjectivesOnePageModel.isInitiateCauseMarketingProgram()) {
+			ClientObjectivesOnePageTwoModel modelObj = 
+					new ClientObjectivesOnePageTwoModel("initiateCauseMarketingProgram",clientObjectivesOnePageModel.getInitiateCauseMarketingProgramSortOrder());
+			orderList.add(modelObj);
+		
+		}
+		if (clientObjectivesOnePageModel.isMaintainMarketDominance()) {
+			ClientObjectivesOnePageTwoModel modelObj = 
+					new ClientObjectivesOnePageTwoModel("maintainMarketDominance",clientObjectivesOnePageModel.getMaintainMarketDominanceSortOrder());
+			orderList.add(modelObj);
+		
+		}
+		if (clientObjectivesOnePageModel.isMakePromotionalEventsStronger()) {
+			ClientObjectivesOnePageTwoModel modelObj = 
+					new ClientObjectivesOnePageTwoModel("makePromotionalEventsStronger",clientObjectivesOnePageModel.getMakePromotionalEventsStrongerSortOrder());
+			orderList.add(modelObj);
+		
+		}
+		
+		if (clientObjectivesOnePageModel.isOther()) {
+			ClientObjectivesOnePageTwoModel modelObj = 
+					new ClientObjectivesOnePageTwoModel("other",clientObjectivesOnePageModel.getOtherSortOrder());
+			orderList.add(modelObj);
+		
+		}
+		if (clientObjectivesOnePageModel.isPromoteOffPriceItemsServices()) {
+			ClientObjectivesOnePageTwoModel modelObj = 
+					new ClientObjectivesOnePageTwoModel("promoteOffPriceItemsServices",clientObjectivesOnePageModel.getPromoteOffPriceItemsServicesSortOrder());
+			orderList.add(modelObj);
+		
+		}
+		if (clientObjectivesOnePageModel.isRetainCurrentConsumers()) {
+			ClientObjectivesOnePageTwoModel modelObj = 
+					new ClientObjectivesOnePageTwoModel("retainCurrentConsumers",clientObjectivesOnePageModel.getUtilizeCoopVendorDollarsSortOrder());
+			orderList.add(modelObj);
+		
+		}
+		if (clientObjectivesOnePageModel.isUtilizeCoopVendorDollars()) {
+			ClientObjectivesOnePageTwoModel modelObj = 
+					new ClientObjectivesOnePageTwoModel("utilizeCoopVendorDollars",clientObjectivesOnePageModel.getRetainCurrentConsumersSortOrder());
+			orderList.add(modelObj);
 		
 		}
 		if (clientObjectivesOnePageModel.isFeatureSpecificProducts()) {
@@ -75,7 +188,12 @@ public class ClientObjectivesOnePageControl {
 			orderList.add(featureSpecificProducts);
 		
 		}
+		if (clientObjectivesOnePageModel.isIntroduceNewDepartment()) {
+			ClientObjectivesOnePageTwoModel introduceNewDepartment = 
+					new ClientObjectivesOnePageTwoModel("introduceNewDepartment",clientObjectivesOnePageModel.getIntroduceNewDepartmentSortOrder());
+			orderList.add(introduceNewDepartment);
 		
+		}
 		
 		//DemographicManager.convertFromJson(json)
 		model.addAttribute("wizardData", wizardData);
@@ -137,7 +255,9 @@ public class ClientObjectivesOnePageControl {
 			,@RequestParam(defaultValue = "0") int establishorReestablishBusinessImageSortOrder
 			,@RequestParam(defaultValue = "0") int createPentUpDemandSortOrder
 			,@RequestParam(defaultValue = "0") int increaseMarketShareSortOrder
-			,@RequestParam(defaultValue = "0") int otherSortOrder  
+			,@RequestParam(defaultValue = "0") int otherSortOrder 
+			,@RequestParam(defaultValue = "0") int utilizeCoopVendorDollarsSortOrderortOrder 
+			
 			,@RequestParam String wizarddataid
 			,@RequestParam String previousPage
 			,@RequestParam String publishPage
@@ -182,7 +302,7 @@ public class ClientObjectivesOnePageControl {
 				developDatabaseMarketingSortOrder, initiateCauseMarketingProgramSortOrder,
 				developSpeciallyStagedEventSortOrder, maintainMarketDominanceSortOrder, improveBusinessNameBrandSortOrder,
 				establishorReestablishBusinessImageSortOrder, createPentUpDemandSortOrder, increaseMarketShareSortOrder,
-				otherSortOrder);
+				otherSortOrder,utilizeCoopVendorDollarsSortOrderortOrder);
 
 		String pageData = JSONManager.convertToJson(pageModel);
 		wizardData.setPagedata(pageData);

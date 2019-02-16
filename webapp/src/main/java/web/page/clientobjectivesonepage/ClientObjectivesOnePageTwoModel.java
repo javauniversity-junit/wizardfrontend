@@ -3,6 +3,14 @@ package web.page.clientobjectivesonepage;
 public class ClientObjectivesOnePageTwoModel {
 	private String key;
 	private int sortOrder;
+	private String label;
+	public String getLabel() {
+		label = key + "Label";
+		return label;
+	}
+	public void setLabel(String label) {
+		this.label = label;
+	}
 	public String getKey() {
 		return key;
 	}
@@ -20,6 +28,8 @@ public class ClientObjectivesOnePageTwoModel {
 		this.key = key;
 		this.sortOrder = sortOrder;
 	}
+	
+	
 	
 
 }

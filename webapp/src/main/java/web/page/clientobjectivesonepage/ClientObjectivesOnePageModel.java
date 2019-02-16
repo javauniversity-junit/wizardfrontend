@@ -18,6 +18,8 @@ public class ClientObjectivesOnePageModel {
 		return introduceNewDepartmentSortOrder;
 	}
 
+
+
 	public ClientObjectivesOnePageModel(boolean introduceNewDepartment, boolean featureSpecificProducts,
 			boolean callAttentiontoBrandsPrivateLabelsCarried, boolean promoteOffPriceItemsServices,
 			boolean utilizeCoopVendorDollars, boolean retainCurrentConsumers, boolean increaseCustomerVisits,
@@ -35,7 +37,8 @@ public class ClientObjectivesOnePageModel {
 			int developDatabaseMarketingSortOrder, int initiateCauseMarketingProgramSortOrder,
 			int developSpeciallyStagedEventSortOrder, int maintainMarketDominanceSortOrder,
 			int improveBusinessNameBrandSortOrder, int establishorReestablishBusinessImageSortOrder,
-			int createPentUpDemandSortOrder, int increaseMarketShareSortOrder, int otherSortOrder) {
+			int createPentUpDemandSortOrder, int increaseMarketShareSortOrder, int otherSortOrder,
+			int utilizeCoopVendorDollarsSortOrder) {
 		super();
 		this.introduceNewDepartment = introduceNewDepartment;
 		this.featureSpecificProducts = featureSpecificProducts;
@@ -80,6 +83,7 @@ public class ClientObjectivesOnePageModel {
 		this.createPentUpDemandSortOrder = createPentUpDemandSortOrder;
 		this.increaseMarketShareSortOrder = increaseMarketShareSortOrder;
 		this.otherSortOrder = otherSortOrder;
+		this.utilizeCoopVendorDollarsSortOrder = utilizeCoopVendorDollarsSortOrder;
 	}
 
 	public void setIntroduceNewDepartmentSortOrder(int introduceNewDepartmentSortOrder) {
@@ -299,8 +303,17 @@ public class ClientObjectivesOnePageModel {
 	private int increaseMarketShareSortOrder;
 
 	private int otherSortOrder;
+	private int utilizeCoopVendorDollarsSortOrder;
 	
 	
+
+	public int getUtilizeCoopVendorDollarsSortOrder() {
+		return utilizeCoopVendorDollarsSortOrder;
+	}
+
+	public void setUtilizeCoopVendorDollarsSortOrder(int utilizeCoopVendorDollarsSortOrder) {
+		this.utilizeCoopVendorDollarsSortOrder = utilizeCoopVendorDollarsSortOrder;
+	}
 
 	public boolean isIntroduceNewDepartment() {
 		return introduceNewDepartment;
