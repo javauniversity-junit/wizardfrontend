@@ -156,7 +156,12 @@
 								<label><input name="IncreaseCustomerVisits"
 									type="checkbox"
 									th:checked="${dataPageModel?.increaseCustomerVisits}">
-									Increase Frequency of Customer Visits</label>
+									<span id="increaseCustomerVisitsLabel">
+									<script>
+									addLabel("increaseCustomerVisitsLabel");
+									</script>
+									
+									</span></label>
 							</div>
 
 						</div>
@@ -166,7 +171,12 @@
 								<label><input name="increaseTrafficLeadCalls"
 									type="checkbox"
 									th:checked="${dataPageModel?.increaseTrafficLeadCalls}">
-									Grow New Traffic/Lead Calls</label>
+									<span id="increaseTrafficLeadCallsLabel">
+									<script>
+									addLabel("increaseTrafficLeadCallsLabel");
+									</script>
+									
+									</span></label>
 							</div>
 
 						</div>
