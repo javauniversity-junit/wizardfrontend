@@ -17,7 +17,8 @@
 	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
 	crossorigin="anonymous" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-
+<script src="js/ClientObjectivesOnePageControl.js">
+</script>
 <!-- Favicon-->
 <link rel="shortcut icon" href="./img/icon.png">
 
@@ -67,7 +68,12 @@
 								<label><input name="featureSpecificProducts"
 									type="checkbox"
 									th:checked="${dataPageModel?.featureSpecificProducts}">
-									Feature Specific Products/Services</label>
+									<span id="featureSpecificProductsLabel">
+									<script>
+									addLabel("featureSpecificProductsLabel");
+									</script>
+									
+									</span></label>
 							</div>
 
 						</div>
