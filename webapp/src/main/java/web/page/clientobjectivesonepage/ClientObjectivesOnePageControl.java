@@ -235,28 +235,28 @@ public class ClientObjectivesOnePageControl {
 			,@RequestParam(defaultValue = "false") boolean createPentUpDemand
 			,@RequestParam(defaultValue = "false") boolean increaseMarketShare
 			,@RequestParam(defaultValue = "false") boolean other
-			,@RequestParam(defaultValue = "0") int introduceNewDepartmentSortOrder
-			,@RequestParam(defaultValue = "0") int  featureSpecificProductsSortOrder
-			,@RequestParam(defaultValue = "0") int  callAttentiontoBrandsPrivateLabelsCarriedSortOrder
-			,@RequestParam(defaultValue = "0") int  promoteOffPriceItemsServicesSortOrder
-			,@RequestParam(defaultValue = "0") int  retainCurrentConsumersSortOrder
-			,@RequestParam(defaultValue = "0") int increaseCustomerVisitsSortOrder
-			,@RequestParam(defaultValue = "0") int  increaseTrafficLeadCallsSortOrder
-			,@RequestParam(defaultValue = "0") int  expandTargetConsumersSortOrder
-			,@RequestParam(defaultValue = "0") int  changeConsumerAttitudesSortOrder
-			,@RequestParam(defaultValue = "0") int makePromotionalEventsStrongerSortOrder
-			,@RequestParam(defaultValue = "0") int increaseDigitalMobileOnlineResponseSortOrder
-			,@RequestParam(defaultValue = "0") int developAQuarterlySpikeSortOrder
-			,@RequestParam(defaultValue = "0") int developDatabaseMarketingSortOrder
-			,@RequestParam(defaultValue = "0") int initiateCauseMarketingProgramSortOrder
-			,@RequestParam(defaultValue = "0") int developSpeciallyStagedEventSortOrder
-			,@RequestParam(defaultValue = "0") int maintainMarketDominanceSortOrder
-			,@RequestParam(defaultValue = "0") int improveBusinessNameBrandSortOrder
-			,@RequestParam(defaultValue = "0") int establishorReestablishBusinessImageSortOrder
-			,@RequestParam(defaultValue = "0") int createPentUpDemandSortOrder
-			,@RequestParam(defaultValue = "0") int increaseMarketShareSortOrder
-			,@RequestParam(defaultValue = "0") int otherSortOrder 
-			,@RequestParam(defaultValue = "0") int utilizeCoopVendorDollarsSortOrderortOrder 
+			,@RequestParam(defaultValue = "0") String introduceNewDepartmentSortOrderStr
+			,@RequestParam(defaultValue = "0") String  featureSpecificProductsSortOrderStr
+			,@RequestParam(defaultValue = "0") String  callAttentiontoBrandsPrivateLabelsCarriedSortOrderStr
+			,@RequestParam(defaultValue = "0") String  promoteOffPriceItemsServicesSortOrderStr
+			,@RequestParam(defaultValue = "0") String  retainCurrentConsumersSortOrderStr
+			,@RequestParam(defaultValue = "0") String increaseCustomerVisitsSortOrderStr
+			,@RequestParam(defaultValue = "0") String  increaseTrafficLeadCallsSortOrderStr
+			,@RequestParam(defaultValue = "0") String  expandTargetConsumersSortOrderStr
+			,@RequestParam(defaultValue = "0") String  changeConsumerAttitudesSortOrderStr
+			,@RequestParam(defaultValue = "0") String makePromotionalEventsStrongerSortOrderStr
+			,@RequestParam(defaultValue = "0") String increaseDigitalMobileOnlineResponseSortOrderStr
+			,@RequestParam(defaultValue = "0") String developAQuarterlySpikeSortOrderStr
+			,@RequestParam(defaultValue = "0") String developDatabaseMarketingSortOrderStr
+			,@RequestParam(defaultValue = "0") String initiateCauseMarketingProgramSortOrderStr
+			,@RequestParam(defaultValue = "0") String developSpeciallyStagedEventSortOrderStr
+			,@RequestParam(defaultValue = "0") String maintainMarketDominanceSortOrderStr
+			,@RequestParam(defaultValue = "0") String improveBusinessNameBrandSortOrderStr
+			,@RequestParam(defaultValue = "0") String establishorReestablishBusinessImageSortOrderStr
+			,@RequestParam(defaultValue = "0") String createPentUpDemandSortOrderStr
+			,@RequestParam(defaultValue = "0") String increaseMarketShareSortOrderStr
+			,@RequestParam(defaultValue = "0") String otherSortOrderStr 
+			,@RequestParam(defaultValue = "0") String utilizeCoopVendorDollarsSortOrderortOrderStr 
 			
 			,@RequestParam String wizarddataid
 			,@RequestParam String previousPage
@@ -266,6 +266,44 @@ public class ClientObjectivesOnePageControl {
 			,@RequestParam(required=false, value="previous") String previous
 			,@RequestParam String nextPage) {
 		mLog.info("starting save");
+		
+		int  introduceNewDepartmentSortOrder = Integer.parseInt(introduceNewDepartmentSortOrderStr);
+		int  featureSpecificProductsSortOrder = Integer.parseInt(featureSpecificProductsSortOrderStr);
+		int  callAttentiontoBrandsPrivateLabelsCarriedSortOrder = Integer.parseInt(callAttentiontoBrandsPrivateLabelsCarriedSortOrderStr);
+		int  promoteOffPriceItemsServicesSortOrder = Integer.parseInt(promoteOffPriceItemsServicesSortOrderStr);
+		int  retainCurrentConsumersSortOrder = Integer.parseInt(retainCurrentConsumersSortOrderStr);
+		int  increaseCustomerVisitsSortOrder = Integer.parseInt(increaseCustomerVisitsSortOrderStr);
+		int  increaseTrafficLeadCallsSortOrder = Integer.parseInt(increaseTrafficLeadCallsSortOrderStr);
+		int  expandTargetConsumersSortOrder = Integer.parseInt(expandTargetConsumersSortOrderStr);
+		int  changeConsumerAttitudesSortOrder = Integer.parseInt(changeConsumerAttitudesSortOrderStr);
+		
+
+		
+		
+		int  makePromotionalEventsStrongerSortOrder = Integer.parseInt(makePromotionalEventsStrongerSortOrderStr);
+		int  increaseDigitalMobileOnlineResponseSortOrder = Integer.parseInt(increaseDigitalMobileOnlineResponseSortOrderStr);
+		int  developAQuarterlySpikeSortOrder = Integer.parseInt(developAQuarterlySpikeSortOrderStr);
+		int  developDatabaseMarketingSortOrder = Integer.parseInt(developDatabaseMarketingSortOrderStr);
+		int  initiateCauseMarketingProgramSortOrder = Integer.parseInt(initiateCauseMarketingProgramSortOrderStr);
+		int  developSpeciallyStagedEventSortOrder = Integer.parseInt(developSpeciallyStagedEventSortOrderStr);
+		int  maintainMarketDominanceSortOrder = Integer.parseInt(maintainMarketDominanceSortOrderStr);
+		int  improveBusinessNameBrandSortOrder = Integer.parseInt(improveBusinessNameBrandSortOrderStr);
+		int  establishorReestablishBusinessImageSortOrder = Integer.parseInt(establishorReestablishBusinessImageSortOrderStr);
+		
+		int  createPentUpDemandSortOrder = Integer.parseInt(createPentUpDemandSortOrderStr);
+		int  increaseMarketShareSortOrder = Integer.parseInt(increaseMarketShareSortOrderStr);
+		int  otherSortOrder = Integer.parseInt(otherSortOrderStr);
+		int  utilizeCoopVendorDollarsSortOrderortOrder = Integer.parseInt(utilizeCoopVendorDollarsSortOrderortOrderStr);
+		
+		
+
+	 
+		
+		
+		
+		
+		
+		
 		
 		//internal next page or publish
 		String internalNextPage = nextPage;
