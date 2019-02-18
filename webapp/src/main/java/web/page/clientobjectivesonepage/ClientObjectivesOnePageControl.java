@@ -198,6 +198,7 @@ public class ClientObjectivesOnePageControl {
 		//DemographicManager.convertFromJson(json)
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("orderList", orderList);
+		model.addAttribute("dataPageModel", clientObjectivesOnePageModel);
 		model.addAttribute("wizard", wizard);
 		return "pages/ClientObjectivesOnePageTwo";
 	}
@@ -294,16 +295,6 @@ public class ClientObjectivesOnePageControl {
 		int  increaseMarketShareSortOrder = Integer.parseInt(increaseMarketShareSortOrderStr);
 		int  otherSortOrder = Integer.parseInt(otherSortOrderStr);
 		int  utilizeCoopVendorDollarsSortOrderortOrder = Integer.parseInt(utilizeCoopVendorDollarsSortOrderortOrderStr);
-		
-		
-
-	 
-		
-		
-		
-		
-		
-		
 		
 		//internal next page or publish
 		String internalNextPage = nextPage;

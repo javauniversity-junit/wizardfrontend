@@ -17,7 +17,8 @@
 	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
 	crossorigin="anonymous" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-
+<script src="js/ClientObjectivesOnePageControl.js">
+</script>
 <!-- Favicon-->
 <link rel="shortcut icon" href="./img/icon.png">
 
@@ -57,14 +58,48 @@ fieldset {
 
 
 					<div class="form-group">
+					 <h2>Client Objectives</h2>
+ 					 <p>Order the client objectives that were selected on the previous page</p> 
+					
+					  <table class="table">
+    					<thead>
+      					<tr>
+        					<th>Objective</th>
+        					<th>Order</th>
 
-						<div class="checkbox">
-							<label><<input min="0" max="22" type="number"
-								id="introduceNewDepartmentSortOrder"
-								th:value="${dataPageModel?.introduceNewDepartmentSortOrder}"
-								name="introduceNewDepartmentSortOrder" /> Other:
-							</label>
-						</div>
+      					</tr>
+    					</thead>
+    					<tbody>
+     					 <tr th:each="selectedModel : ${orderList}">
+        					<td><span th:id="${selectedModel?.label}">
+									
+									
+									<script th:inline="javascript">
+									/*<![CDATA[*/
+
+   									 var message = /*[[${selectedModel?.label}]]*/ 'default';
+									//message = "'" + message + "'";
+    								addLabel(message);
+
+									/*]]>*/
+									</script>
+									
+									</span>	</td>
+        					
+        					<td>	
+        					       <input min="0" max="22" type="number"
+								th:id="${selectedModel?.key}"
+								th:name="${selectedModel?.key}"
+								th:value="${selectedModel?.sortOrder}" />
+								</td>
+
+      					</tr>
+    
+    
+    				</tbody>
+  					</table>
+
+						
 
 					</div>
 
@@ -134,7 +169,7 @@ fieldset {
 					
 					 <input name="other" type="hidden" th:value="${dataPageModel?.other}" />
 					
-					 <input	th:value="'redirect:/MarketPlaceCompetitionPage?ID=' + ${wizard.wizardid}"
+					 <input	type="hidden" th:value="'redirect:/MarketPlaceCompetitionPage?ID=' + ${wizard.wizardid}"
 					name="nextPage" /> 
 					
 					<input type="hidden" id="previousPage"
