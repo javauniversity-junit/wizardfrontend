@@ -88,6 +88,24 @@
 					<hr>
 				</div>
 			</div>
+			
+			
+	<div th:if="${hasRows}">
+ <div class="card" style="width: 100%;" th:each="wizard : ${wizards}">
+
+  <div class="card-body">
+    <a th:href="@{'/detail?ID=' + ${wizard.wizardid}}"><span
+									style="font-size: 20px;"
+									th:text="@{'Change ' + ${wizard.name}  + ' name'}">
+										Change a SCR Name</span> </a>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a th:href="@{'/PresentedToPage?ID=' + ${wizard.wizardid}}" class="btn btn-primary">Open a Summary, Conclusions and
+							Recommendations (SCR)</a>
+
+  </div>
+</div> 
+</div>
+
 
 			<div th:if="${hasRows}">
 
