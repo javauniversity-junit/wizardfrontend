@@ -88,58 +88,37 @@
 					<hr>
 				</div>
 			</div>
-			
-			
-	<div th:if="${hasRows}">
- <div class="card" style="width: 100%;" th:each="wizard : ${wizards}">
-
-  <div class="card-body">
-    <a th:href="@{'/detail?ID=' + ${wizard.wizardid}}"><span
-									style="font-size: 20px;"
-									th:text="@{'Change ' + ${wizard.name}  + ' name'}">
-										Change a SCR Name</span> </a>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a th:href="@{'/PresentedToPage?ID=' + ${wizard.wizardid}}" class="btn btn-primary">Open a Summary, Conclusions and
-							Recommendations (SCR)</a>
-
-  </div>
-</div> 
-</div>
 
 
 			<div th:if="${hasRows}">
+				<div class="card" style="width: 100%;" th:each="wizard : ${wizards}">
 
-				<div class="container">
-					<div class="row" th:each="wizard : ${wizards}">
-						<div class="col-sm-6">
-							<a th:href="@{'/PresentedToPage?ID=' + ${wizard.wizardid}}">
-								<i class="fa fa-address-card fa-10x w3-teal"
-								style="font-size: 20px; padding: 35px; height: 50px;"> <span
-									style="font-size: 20px;" th:text="@{'Open ' + ${wizard.name} }">
-										Open a SCR</span>
-							</i>
-							</a>
-						</div>
-						<div class="col-sm-6">
-							<a th:href="@{'/detail?ID=' + ${wizard.wizardid}}"> <i
-								class="fa fa-address-card fa-10x w3-teal"
-								style="font-size: 20px; padding: 35px; height: 50px;"> <span
-									style="font-size: 20px;"
-									th:text="@{'Change ' + ${wizard.name}  + ' name'}">
-										Change a SCR Name</span>
-							</i>
-							</a>
-						</div>
-						<div class="col-sm-12">
-							<hr>
+					<div class="card-body ">
+						<div class="container">
+							<div class="row">
+								<a th:href="@{'/detail?ID=' + ${wizard.wizardid}}">
+									<p class="fa fa-address-card fa-10x w3-teal"
+										style="font-size: 20px; padding: 35px; height: 50px;"
+										th:text="@{'&ensp; Change (' + ${wizard.name}  + ') name'}">Change
+										a SCR Name</p>
+								</a>
+							</div>
+							<div class="row">
+								<a th:href="@{'/PresentedToPage?ID=' + ${wizard.wizardid}}">
+									<p class="fa fa-address-card fa-10x w3-teal"
+										style="font-size: 20px; padding: 35px; height: 50px;"
+										th:text="@{'&ensp; Open a Summary, Conclusions and Recommendation for (' + ${wizard.name} + ')' }">
+										Open a SCR</p>
+								</a>
+							</div>
 						</div>
 
 					</div>
 				</div>
-
-
-
 			</div>
+
+
+			
 			<!-- ELSE -->
 
 			<div th:unless="${hasRows}">
