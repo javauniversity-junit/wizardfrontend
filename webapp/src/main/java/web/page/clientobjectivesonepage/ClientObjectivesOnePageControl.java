@@ -171,15 +171,15 @@ public class ClientObjectivesOnePageControl {
 			orderList.add(modelObj);
 		
 		}
-		if (clientObjectivesOnePageModel.isRetainCurrentConsumers()) {
+		if (clientObjectivesOnePageModel.isUtilizeCoopVendorDollars()) {
 			ClientObjectivesOnePageTwoModel modelObj = 
-					new ClientObjectivesOnePageTwoModel("retainCurrentConsumers",clientObjectivesOnePageModel.getUtilizeCoopVendorDollarsSortOrder());
+					new ClientObjectivesOnePageTwoModel("utilizeCoopVendorDollars",clientObjectivesOnePageModel.getUtilizeCoopVendorDollarsSortOrder());
 			orderList.add(modelObj);
 		
 		}
-		if (clientObjectivesOnePageModel.isUtilizeCoopVendorDollars()) {
+		if (clientObjectivesOnePageModel.isRetainCurrentConsumers()) {
 			ClientObjectivesOnePageTwoModel modelObj = 
-					new ClientObjectivesOnePageTwoModel("utilizeCoopVendorDollars",clientObjectivesOnePageModel.getRetainCurrentConsumersSortOrder());
+					new ClientObjectivesOnePageTwoModel("retainCurrentConsumers",clientObjectivesOnePageModel.getRetainCurrentConsumersSortOrder());
 			orderList.add(modelObj);
 		
 		}
