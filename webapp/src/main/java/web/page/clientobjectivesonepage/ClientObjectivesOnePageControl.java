@@ -336,6 +336,7 @@ public class ClientObjectivesOnePageControl {
 		String pageData = JSONManager.convertToJson(pageModel);
 		wizardData.setPagedata(pageData);
 		wizardDataRepository.save(wizardData);
+		mLog.info("saved data " + pageData);
 		//model.addAttribute("wizard", wizard);
 		return internalNextPage;
 	}

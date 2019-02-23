@@ -88,8 +88,8 @@ fieldset {
         					
         					<td>	
         					       <input min="0" max="22" type="number"
-								th:id="${selectedModel?.key}"
-								th:name="${selectedModel?.key}"
+								th:id="${selectedModel?.inputNameId}"
+								th:name="${selectedModel?.inputNameId}"
 								th:value="${selectedModel?.sortOrder}" />
 								</td>
 
@@ -173,7 +173,7 @@ fieldset {
 					name="nextPage" /> 
 					
 					<input type="hidden" id="previousPage"
-					th:value="'redirect:/PresentedToPage?ID=' + ${wizard.wizardid}"
+					th:value="'redirect:/ClientObjectivesOnePage?ID=' + ${wizard.wizardid}"
 					name="previousPage" />
 					
 					 <input type="hidden" id="publishPage"

@@ -4,6 +4,15 @@ public class ClientObjectivesOnePageTwoModel {
 	private String key;
 	private int sortOrder;
 	private String label;
+	private String inputNameId;
+	
+	public String getInputNameId() {
+		inputNameId = key +  "SortOrderStr";
+		return inputNameId;
+	}
+	public void setInputNameId(String inputNameId) {
+		this.inputNameId = inputNameId;
+	}
 	public String getLabel() {
 		label = key + "Label";
 		return label;
@@ -25,7 +34,7 @@ public class ClientObjectivesOnePageTwoModel {
 	}
 	public ClientObjectivesOnePageTwoModel(String key, int sortOrder) {
 		super();
-		this.key = key;
+		this.key = key ;
 		this.sortOrder = sortOrder;
 	}
 	
