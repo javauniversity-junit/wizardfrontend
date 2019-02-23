@@ -1,5 +1,6 @@
 package web.page.clientobjectivesonepage;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
@@ -194,6 +195,9 @@ public class ClientObjectivesOnePageControl {
 			orderList.add(introduceNewDepartment);
 		
 		}
+		
+		//sort
+		Collections.sort(orderList, new ClientObjectivesSortOrder()); 
 		
 		//DemographicManager.convertFromJson(json)
 		model.addAttribute("wizardData", wizardData);
