@@ -5,7 +5,8 @@ package web.page;
 public enum Pages {
 	
 	
-	
+	StrategicMarketineg(PageNameEnum.StrategicMarketingPage, PageSequenceEnum.StrategicMarketingPage_Sequence.getDatabaseValue())
+	,
 	PRESENTEDTOPAGE(PageNameEnum.PresentedToPage, PageSequenceEnum.PRESENTEDTOPAGE_SEQUENCE.getDatabaseValue())
 	,TEAMCOMMITMENTPAGE(PageNameEnum.TeamCommitmentPage, PageSequenceEnum.TEAMCOMMITMENTPAGE_SEQUENCE.getDatabaseValue())
 	,CLIENTOBJECTIVESONEPAGE(PageNameEnum.ClientObjectivesOnePage, PageSequenceEnum.CLIENTOBJECTIVESONEPAGE_SEQUENCE.getDatabaseValue())
@@ -38,5 +39,7 @@ public enum Pages {
 	
 	
 }
+
+
 
 
