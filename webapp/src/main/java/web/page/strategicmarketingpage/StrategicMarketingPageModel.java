@@ -1,6 +1,19 @@
 package web.page.strategicmarketingpage;
 
 public class StrategicMarketingPageModel {
+	public StrategicMarketingPageModel(int yearsInBusiness, int numberOfLocations, boolean planToExpand,
+			String misconceptions, String sellingAdvantages, String companyNameProjectImage,
+			String currentCompanySlogan, boolean companySloganProjectImageYes) {
+		super();
+		this.yearsInBusiness = yearsInBusiness;
+		this.numberOfLocations = numberOfLocations;
+		this.planToExpand = planToExpand;
+		this.misconceptions = misconceptions;
+		this.sellingAdvantages = sellingAdvantages;
+		this.companyNameProjectImage = companyNameProjectImage;
+		this.currentCompanySlogan = currentCompanySlogan;
+		this.companySloganProjectImageYes = companySloganProjectImageYes;
+	}
 	private int yearsInBusiness;
 	private int numberOfLocations;
 	private boolean planToExpand;
