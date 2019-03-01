@@ -30,13 +30,13 @@ public class StrategicMarketingPageController {
 	private WizardDataRepository wizardDataRepository;
 
 	private static final Logger mLog = Logger.getLogger(StrategicMarketingPageController.class.getName());
-	@RequestMapping(value = "/MarketPlaceCompetitionPage", method = RequestMethod.GET)
+	@RequestMapping(value = "/StrategicMarketingPage", method = RequestMethod.GET)
 	public String detail(Model model, @RequestParam String ID) {
 		mLog.info("starting detail");
 		//get wizard header 
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
-		WizardData wizardData = wizardDataRepository.findByPagesequenceAndWizardid(Pages.MARKETPLACECOMPETITIONPAGE.getPageSequence(), wizard.getWizardid());
+		WizardData wizardData = wizardDataRepository.findByPagesequenceAndWizardid(Pages.StrategicMarketing.getPageSequence(), wizard.getWizardid());
 		StrategicMarketingPageModel dataPageModel = null;
 		if (wizardData != null) {
 			dataPageModel =(StrategicMarketingPageModel)JSONManager.convertFromJson(wizardData.getPagedata(), StrategicMarketingPageModel.class);
@@ -46,7 +46,7 @@ public class StrategicMarketingPageController {
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("dataPageModel", dataPageModel);
 		model.addAttribute("wizard", wizard);
-		return "pages/MarketPlaceCompetitionPage";
+		return "pages/StrategicMarketing";
 	}
 	
 	@RequestMapping(value = "/saveMarketPlaceCompetitionPage", method = RequestMethod.POST)
