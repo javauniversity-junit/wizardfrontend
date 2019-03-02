@@ -44,85 +44,99 @@
 					<legend>
 						Strategic Marketing I - <span th:text="${wizard.name}"></span>
 					</legend>
-				
-						<div class="form-group">
-							<label for="topLevelName">1. How long has the client been
-								in business?</label> <input type="number" class="form-control"
-								id="yearsInBusinessName"
-								th:value="${dataPageModel?.topLevelName}" name="topLevelName"
-								required aria-describedby="yearsInBusinessName" min="0"
-								max="100" placeholder="Enter years In business" />
-						</div>
-						<div class="form-group">
-							<label for="topLevelTitle">How many locations?</label> <input
-								type="number" th:value="${dataPageModel?.numberOfLocations}"
-								required min="0" max="2000" class="form-control"
-								id="numberOfLocations" name="numberOfLocations"
-								placeholder="Enter number of locations" />
-						</div>
-					
 
-					
-						<div class="form-group">
+					<div class="form-group">
+						<label for="topLevelName">1. How long has the client been
+							in business?</label> <input type="number" class="form-control"
+							id="yearsInBusinessName"
+							th:value="${dataPageModel?.topLevelName}" name="topLevelName"
+							required aria-describedby="yearsInBusinessName" min="0" max="100"
+							placeholder="Enter years In business" />
+					</div>
+					<div class="form-group">
+						<label for="topLevelTitle">How many locations?</label> <input
+							type="number" th:value="${dataPageModel?.numberOfLocations}"
+							required min="0" max="2000" class="form-control"
+							id="numberOfLocations" name="numberOfLocations"
+							placeholder="Enter number of locations" />
+					</div>
 
-							<div class="checkbox">
-								<label> <input type="checkbox" 
-									id="planToExpand" name="planToExpandName" required
-									th:checked="${dataPageModel?.planToExpand}" /> <span>
-										Plans to expand? </span>
 
-								</label>
 
-							</div>
+					<div class="form-group">
+
+						<div class="checkbox">
+							<label> <input type="checkbox" id="planToExpand"
+								name="planToExpandName" required
+								th:checked="${dataPageModel?.planToExpand}" /> <span>
+									Plans to expand? </span>
+
+							</label>
 
 						</div>
-						<div class="form-group">
-							<label for="secondLevelTitle">2. What are the biggest misconceptions consumers have about the business?</label>
-							
-							 <textarea id="misconceptions" name="misconceptions"  class="form-control" rows="4" maxlength="50" cols="50" required th:text="${dataPageModel?.misconceptions}" >
+
+					</div>
+					<div class="form-group">
+						<label for=misconceptions>2. What are the biggest
+							misconceptions consumers have about the business?</label>
+
+						<textarea id="misconceptions" name="misconceptions"
+							class="form-control" rows="4" maxlength="50" cols="50" required
+							th:text="${dataPageModel?.misconceptions}">
 							 
 							 
 							 </textarea>
-								
-								
-								
-								
-								
-						</div>
-				
-
-					<div class="w3-panel w3-border">
-						<div class="form-group">
-							<label for="thirdLevelName">Third Level Name</label> <input
-								type="text" class="form-control" id="thirdLevelName"
-								th:value="${dataPageModel?.thirdLevelName}"
-								name="thirdLevelName" required aria-describedby="thirdLevelName"
-								placeholder="Enter Third Level Name" />
-						</div>
-						<div class="form-group">
-							<label for="thirdLevelTitle">Third Level Title</label> <input
-								type="text" th:value="${dataPageModel?.thirdLevelTitle}"
-								required class="form-control" id="thirdLevelTitle"
-								name="thirdLevelTitle" placeholder="Third Level Title" />
-						</div>
 					</div>
 
-					<div class="w3-panel w3-border">
-						<div class="form-group">
-							<label for="fourthLevelName">Fourth Level Name</label> <input
-								type="text" class="form-control" id="fourthLevelName"
-								th:value="${dataPageModel?.fourthLevelName}"
-								name="fourthLevelName" required
-								aria-describedby="fourthLevelName"
-								placeholder="Enter Fourth Level Name" />
-						</div>
-						<div class="form-group">
-							<label for="fourthLevelTitle">Fourth Level Title</label> <input
-								type="text" th:value="${dataPageModel?.fourthLevelTitle}"
-								required class="form-control" id="fourthLevelTitle"
-								name="fourthLevelTitle" placeholder="Fourth Level Title" />
-						</div>
+					<div class="form-group">
+						<label for=sellingAdvantages>3. What are the clients most distinctive selling advantages?</label>
+
+						<textarea id="sellingAdvantages" name="sellingAdvantages"
+							class="form-control" rows="4" maxlength="50" cols="50" required
+							th:text="${dataPageModel?.sellingAdvantages}">
+							 
+							 
+							 </textarea>
 					</div>
+
+					<div class="form-group">
+						<label for=sellingAdvantages>4. What image does the client want the company's name to project to their customers / consumers?</label>
+
+						<textarea id="companyNameProjectImage" name="companyNameProjectImage"
+							class="form-control" rows="4" maxlength="50" cols="50" required
+							th:text="${dataPageModel?.companyNameProjectImage}">
+							 
+							 
+							 </textarea>
+					</div>
+					
+						<div class="form-group">
+							<label for="currentCompanySlogan">Current Company Slogan:</label> <input
+								type="text" class="form-control" id="currentCompanySlogan"
+								th:value="${dataPageModel?.currentCompanySlogan}"
+								name="currentCompanySlogan" required aria-describedby="currentCompanySlogan"
+								placeholder="Enter Company Slogan" />
+						</div>
+							<div class="form-group">
+
+						<div class="checkbox">
+							<label> <input type="checkbox" id="companySloganProjectImage"
+								name="companySloganProjectImage" required
+								th:checked="${dataPageModel?.companySloganProjectImage}" /> <span>
+									Does their current slogan project the same image? </span>
+
+							</label>
+
+						</div>
+
+					</div>
+						
+						
+						
+						
+					
+
+					
 
 					<input type="hidden" id="nextPage"
 						th:value="'redirect:/MarketPlaceCompetitionPage?ID=' + ${wizard.wizardid}"
