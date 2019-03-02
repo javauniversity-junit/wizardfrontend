@@ -16,13 +16,10 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
 	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
 	crossorigin="anonymous" />
-
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.css" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 
 <!-- Favicon-->
-<link rel="shortcut icon" href="./img/tools_wizard.png">
+<link rel="shortcut icon" href="./img/icon.png">
 
 </head>
 <body>
@@ -35,75 +32,125 @@
 
 
 
+
+
+
+
 	<div class="container">
 
 		<div>
-			<form method="post" action="saveMarketPlaceCompetitionPage">
+			<form method="post" action="saveTeamCommitmentPage" id="myform">
 				<fieldset>
 					<legend>
-						(3) Marketplace Competition - <span th:text="${wizard.name}"></span>
+						Strategic Marketing I - <span th:text="${wizard.name}"></span>
 					</legend>
-					<div class="form-group">
-						<label for="firstTierBusiness">1st Tier Business (#1 in market revenue)</label> <input
-							th:value="${dataPageModel?.firstTierBusiness}" type="text"
-							class="form-control" id="firstTierBusiness"
-							name="firstTierBusiness" required
-							aria-describedby="firstTierBusiness"
-							placeholder="Enter 1st Tier Business" />
+				
+						<div class="form-group">
+							<label for="topLevelName">1. How long has the client been
+								in business?</label> <input type="number" class="form-control"
+								id="yearsInBusinessName"
+								th:value="${dataPageModel?.topLevelName}" name="topLevelName"
+								required aria-describedby="yearsInBusinessName" min="0"
+								max="100" placeholder="Enter years In business" />
+						</div>
+						<div class="form-group">
+							<label for="topLevelTitle">How many locations?</label> <input
+								type="number" th:value="${dataPageModel?.numberOfLocations}"
+								required min="0" max="2000" class="form-control"
+								id="numberOfLocations" name="numberOfLocations"
+								placeholder="Enter number of locations" />
+						</div>
+					
+
+					
+						<div class="form-group">
+
+							<div class="checkbox">
+								<label> <input type="checkbox" 
+									id="planToExpand" name="planToExpandName" required
+									th:checked="${dataPageModel?.planToExpand}" /> <span>
+										Plans to expand? </span>
+
+								</label>
+
+							</div>
+
+						</div>
+						<div class="form-group">
+							<label for="secondLevelTitle">2. What are the biggest misconceptions consumers have about the business?</label>
+							
+							 <textarea rows="4" cols="50" required >
+							 
+							 
+							 </textarea>
+								
+								
+								
+								
+								
+						</div>
+				
+
+					<div class="w3-panel w3-border">
+						<div class="form-group">
+							<label for="thirdLevelName">Third Level Name</label> <input
+								type="text" class="form-control" id="thirdLevelName"
+								th:value="${dataPageModel?.thirdLevelName}"
+								name="thirdLevelName" required aria-describedby="thirdLevelName"
+								placeholder="Enter Third Level Name" />
+						</div>
+						<div class="form-group">
+							<label for="thirdLevelTitle">Third Level Title</label> <input
+								type="text" th:value="${dataPageModel?.thirdLevelTitle}"
+								required class="form-control" id="thirdLevelTitle"
+								name="thirdLevelTitle" placeholder="Third Level Title" />
+						</div>
 					</div>
-					<div class="form-group">
-						<label for="secondTierBusiness">2nd Tier Business (#2 in market revenue)</label> <input
-							type="text" th:value="${dataPageModel?.secondTierBusiness}"
-							required class="form-control" id="secondTierBusiness"
-							name="secondTierBusiness" placeholder="Enter 2nd Tier Business" />
+
+					<div class="w3-panel w3-border">
+						<div class="form-group">
+							<label for="fourthLevelName">Fourth Level Name</label> <input
+								type="text" class="form-control" id="fourthLevelName"
+								th:value="${dataPageModel?.fourthLevelName}"
+								name="fourthLevelName" required
+								aria-describedby="fourthLevelName"
+								placeholder="Enter Fourth Level Name" />
+						</div>
+						<div class="form-group">
+							<label for="fourthLevelTitle">Fourth Level Title</label> <input
+								type="text" th:value="${dataPageModel?.fourthLevelTitle}"
+								required class="form-control" id="fourthLevelTitle"
+								name="fourthLevelTitle" placeholder="Fourth Level Title" />
+						</div>
 					</div>
-					<!--  
-					<div class="form-group">
-						<label for="presentedById">Integrated Media Specialist
-							Name</label> <input type="text"
-							th:value="${dataPageModel?.portfolioManagerName}" required
-							class="form-control" id="portfolioManagerName"
-							name="portfolioManagerName" placeholder="Enter Specialist Name" />
-					</div>
-					<div class="form-group">
-						<label for=portfolioPhoneNumber>Phone Number</label> <input
-							type="text" th:value="${dataPageModel?.portfolioPhoneNumber}"
-							required class="form-control input-medium bfh-phone"
-							data-format="+1 (ddd) ddd-dddd" id="portfolioPhoneNumber"
-							name="portfolioPhoneNumber" />
-					</div>
-					<div class="form-group">
-						<label for=portfolioPhoneNumber>Station/Media Group</label> <input
-							type="text" th:value="${dataPageModel?.station}" required
-							placeholder="Enter Group" class="form-control" id="station"
-							name="station" />
-					</div>
--->
+
 					<input type="hidden" id="nextPage"
-						th:value="'redirect:/TeamCommitmentPage?ID=' + ${wizard.wizardid}"
-						name="nextPage" /> 
-				   <input type="hidden" id="publishNextPage"
+						th:value="'redirect:/MarketPlaceCompetitionPage?ID=' + ${wizard.wizardid}"
+						name="nextPage" /> <input type="hidden" id="previousPage"
+						th:value="'redirect:/PresentedToPage?ID=' + ${wizard.wizardid}"
+						name="previousPage" /> <input type="hidden" id="publishPage"
 						th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
-						name="publishNextPage" /> 	
-						<input type="hidden" id="wizardId"
-						th:value="${wizard.wizardid}" name="wizardId" /> 
-						<input
+						name="publishPage" /> <input type="hidden" id="wizardId"
+						th:value="${wizard.wizardid}" name="wizardId" /> <input
 						type="hidden" id="wizarddataid"
-						th:value="${wizardData?.wizarddataid}" name="wizarddataid" />
-
-
-					<input name="next" value="Next" type="submit" class="btn btn-primary" style="background-color: #C0B879;" />
-					<input name="publish" value="Publish" type="submit" class="btn btn-primary" style="background-color: #C0B879;" />
+						th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> <input
+						name="next" type="submit" value="Next" class="btn btn-primary"
+						style="background-color: #C0B879;" /> <input name="publish"
+						type="submit" value="Publish" class="btn btn-primary"
+						style="background-color: #C0B879;" /> <input name="previous"
+						value="Previous" type="submit" class="btn btn-primary"
+						style="background-color: #C0B879;" />
 				</fieldset>
 			</form>
-			<div class="container" style="padding-top:2%;">
+			<div class="container" style="padding-top: 2%;">
 
 				<div class="progress">
-					<div class="progress-bar" role="progressbar" aria-valuenow="5"
+					<div class="progress-bar" role="progressbar" aria-valuenow="7"
 						aria-valuemin="0" aria-valuemax="100"
-						style="width: 5%; background-color: #C0B879;">5%</div>
+						style="width: 5%; background-color: #C0B879;">7%</div>
 				</div>
 			</div>
+
 
 		</div>
 
@@ -125,9 +172,6 @@
 		integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
 		crossorigin="anonymous"></script>
 
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js"></script>
-
 	<script>
 		$(function() {
 			$("#headerId").load("header.html");
@@ -140,4 +184,3 @@
 
 </body>
 </html>
-
