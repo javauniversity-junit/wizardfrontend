@@ -49,7 +49,7 @@ public class StrategicMarketingPageController {
 		return "pages/StrategicMarketing";
 	}
 	
-	@RequestMapping(value = "/saveMarketPlaceCompetitionPage", method = RequestMethod.POST)
+	@RequestMapping(value = "/saveStrategicMarketingPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
 			,@RequestParam String firstTierBusiness
 			,@RequestParam String secondTierBusiness
