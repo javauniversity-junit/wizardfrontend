@@ -79,7 +79,7 @@
 						<div class="form-group">
 							<label for="secondLevelTitle">2. What are the biggest misconceptions consumers have about the business?</label>
 							
-							 <textarea rows="4" cols="50" required >
+							 <textarea id="misconceptions" name="misconceptions"  class="form-control" rows="4" maxlength="50" cols="50" required th:text="${dataPageModel?.misconceptions}" >
 							 
 							 
 							 </textarea>
