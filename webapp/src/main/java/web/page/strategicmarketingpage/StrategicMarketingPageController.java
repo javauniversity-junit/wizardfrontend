@@ -51,24 +51,26 @@ public class StrategicMarketingPageController {
 	
 	@RequestMapping(value = "/saveStrategicMarketingPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
-			,@RequestParam String firstTierBusiness
-			,@RequestParam String secondTierBusiness
-			
 			,@RequestParam String wizarddataid
+			,@RequestParam int yearsInBusiness
+			,@RequestParam int numberOfLocations
+			,@RequestParam(required=false, value="") String currentCompanySlogan
+			,@RequestParam boolean planToExpand
+			,@RequestParam(required=false, value="") String misconceptions
+			,@RequestParam(required=false, value="") String sellingAdvantages
+			,@RequestParam(required=false, value="") String companyNameProjectImage
+			,@RequestParam(required=false, value="") String companySloganvantages
+			,@RequestParam boolean companySloganProjectImage
 			,@RequestParam String nextPage
 			,@RequestParam String publishNextPage
 			,@RequestParam(required=false, value="next") String next
 	        ,@RequestParam(required=false, value="publish") String publish){
 		mLog.info("starting save");
 		
-		int yearsInBusiness =0;
-		int numberOfLocations = 0;
-		boolean planToExpand = false;
-		String misconceptions = ""; 
-		String sellingAdvantages = "";
-		String companyNameProjectImage = "";
-		String currentCompanySlogan = "";
-		boolean companySloganProjectImageYes = false;
+		
+		
+		
+		
 		
 		
 		
@@ -89,7 +91,7 @@ public class StrategicMarketingPageController {
 		wizardData.setWizardid(wizardIdInt);
 		StrategicMarketingPageModel pageModel  = new StrategicMarketingPageModel( yearsInBusiness, numberOfLocations,planToExpand,
 				misconceptions, sellingAdvantages, companyNameProjectImage,
-				currentCompanySlogan, companySloganProjectImageYes);
+				currentCompanySlogan, companySloganProjectImage);
 		String pageData = JSONManager.convertToJson(pageModel);
 		
 		wizardData.setPagedata(pageData);
