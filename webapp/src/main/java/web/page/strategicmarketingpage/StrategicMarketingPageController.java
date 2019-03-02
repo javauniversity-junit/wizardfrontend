@@ -62,7 +62,7 @@ public class StrategicMarketingPageController {
 			,@RequestParam(required=false, value="") String companySloganvantages
 			,@RequestParam boolean companySloganProjectImage
 			,@RequestParam String nextPage
-			,@RequestParam String publishNextPage
+			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next
 	        ,@RequestParam(required=false, value="publish") String publish){
 		mLog.info("starting save");
@@ -77,12 +77,12 @@ public class StrategicMarketingPageController {
 		//internal next page or publish
 		String internalNextPage = nextPage;
 		if (publish != null) {
-			internalNextPage= publishNextPage;
+			internalNextPage= publishPage;
 		}
 		
 		WizardData wizardData = new WizardData();
-	    wizardData.setPagename(PageNameEnum.MarketPlaceCompetitionPage.toString());
-		wizardData.setPagesequence(Pages.MARKETPLACECOMPETITIONPAGE.getPageSequence());
+	    wizardData.setPagename(PageNameEnum.StrategicMarketingPage.toString());
+		wizardData.setPagesequence(Pages.StrategicMarketing.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0 ) {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
