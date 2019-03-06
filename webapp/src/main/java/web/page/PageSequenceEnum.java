@@ -6,7 +6,8 @@ public enum PageSequenceEnum {
 	, TEAMCOMMITMENTPAGE_SEQUENCE(2)
 	, MARKETPLACECOMPETITIONPAGE_SEQUENCE(3)
 	, CLIENTOBJECTIVESONEPAGE_SEQUENCE(4)
-	, StrategicMarketingPage_Sequence(5);
+	, StrategicMarketingPageOne_Sequence(5)
+	,StrategicMarketingPageTwo_Sequence(6);
 	
 	private int databaseValue;
     private PageSequenceEnum(int databaseValue) {
