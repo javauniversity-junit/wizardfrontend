@@ -2,78 +2,132 @@ package web.page.strategicmarketingpagetwo;
 
 public class StrategicMarketingPageTwoModel {
 	private String competitionA;
-	private String CompetitionB;
-	private String CompetitionStrengthA;
+	private String competitionB;
+	private String competitionStrengthA;
 	public StrategicMarketingPageTwoModel(String competitionA, String competitionB, String competitionStrengthA,
 			String competitionStrengthB, String competitionWeaknessA, String competitionWeaknessB,
 			String companyNameProjectImage, String currentCompanySlogan, boolean companySloganProjectImage) {
 		super();
 		this.competitionA = competitionA;
-		CompetitionB = competitionB;
-		CompetitionStrengthA = competitionStrengthA;
-		CompetitionStrengthB = competitionStrengthB;
-		CompetitionWeaknessA = competitionWeaknessA;
-		CompetitionWeaknessB = competitionWeaknessB;
-		CompanyNameProjectImage = companyNameProjectImage;
-		CurrentCompanySlogan = currentCompanySlogan;
+		competitionB = competitionB;
+		competitionStrengthA = competitionStrengthA;
+		competitionStrengthB = competitionStrengthB;
+		competitionWeaknessA = competitionWeaknessA;
+		competitionWeaknessB = competitionWeaknessB;
+		companyNameProjectImage = companyNameProjectImage;
+		currentCompanySlogan = currentCompanySlogan;
 		this.companySloganProjectImage = companySloganProjectImage;
 	}
-	private String CompetitionStrengthB;
-	private String CompetitionWeaknessA;
-	private String CompetitionWeaknessB;
-	private String CompanyNameProjectImage;
-	private String CurrentCompanySlogan;
+	private String competitionStrengthB; 
+	private String competitionWeaknessA;
+	private String competitionWeaknessB;
+	private String companyNameProjectImage;
+	private String currentCompanySlogan;
+	
+
+
 	public String getCompetitionA() {
 		return competitionA;
 	}
+
+
+
 	public void setCompetitionA(String competitionA) {
 		this.competitionA = competitionA;
 	}
+
+
+
 	public String getCompetitionB() {
-		return CompetitionB;
+		return competitionB;
 	}
+
+
+
 	public void setCompetitionB(String competitionB) {
-		CompetitionB = competitionB;
+		this.competitionB = competitionB;
 	}
+
+
+
 	public String getCompetitionStrengthA() {
-		return CompetitionStrengthA;
+		return competitionStrengthA;
 	}
+
+
+
 	public void setCompetitionStrengthA(String competitionStrengthA) {
-		CompetitionStrengthA = competitionStrengthA;
+		this.competitionStrengthA = competitionStrengthA;
 	}
+
+
+
 	public String getCompetitionStrengthB() {
-		return CompetitionStrengthB;
+		return competitionStrengthB;
 	}
+
+
+
 	public void setCompetitionStrengthB(String competitionStrengthB) {
-		CompetitionStrengthB = competitionStrengthB;
+		this.competitionStrengthB = competitionStrengthB;
 	}
+
+
+
 	public String getCompetitionWeaknessA() {
-		return CompetitionWeaknessA;
+		return competitionWeaknessA;
 	}
+
+
+
 	public void setCompetitionWeaknessA(String competitionWeaknessA) {
-		CompetitionWeaknessA = competitionWeaknessA;
+		this.competitionWeaknessA = competitionWeaknessA;
 	}
+
+
+
 	public String getCompetitionWeaknessB() {
-		return CompetitionWeaknessB;
+		return competitionWeaknessB;
 	}
+
+
+
 	public void setCompetitionWeaknessB(String competitionWeaknessB) {
-		CompetitionWeaknessB = competitionWeaknessB;
+		this.competitionWeaknessB = competitionWeaknessB;
 	}
+
+
+
 	public String getCompanyNameProjectImage() {
-		return CompanyNameProjectImage;
+		return companyNameProjectImage;
 	}
+
+
+
 	public void setCompanyNameProjectImage(String companyNameProjectImage) {
-		CompanyNameProjectImage = companyNameProjectImage;
+		this.companyNameProjectImage = companyNameProjectImage;
 	}
+
+
+
 	public String getCurrentCompanySlogan() {
-		return CurrentCompanySlogan;
+		return currentCompanySlogan;
 	}
+
+
+
 	public void setCurrentCompanySlogan(String currentCompanySlogan) {
-		CurrentCompanySlogan = currentCompanySlogan;
+		this.currentCompanySlogan = currentCompanySlogan;
 	}
+
+
+
 	public boolean isCompanySloganProjectImage() {
 		return companySloganProjectImage;
 	}
+
+
+
 	public void setCompanySloganProjectImage(boolean companySloganProjectImage) {
 		this.companySloganProjectImage = companySloganProjectImage;
 	}
