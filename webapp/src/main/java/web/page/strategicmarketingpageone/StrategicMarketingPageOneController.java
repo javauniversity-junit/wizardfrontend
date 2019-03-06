@@ -46,7 +46,7 @@ public class StrategicMarketingPageOneController {
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("dataPageModel", dataPageModel);
 		model.addAttribute("wizard", wizard);
-		return "pages/StrategicMarketingPage";
+		return "pages/StrategicMarketingPageOne";
 	}
 	
 	@RequestMapping(value = "/saveStrategicMarketingPage", method = RequestMethod.POST)
