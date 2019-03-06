@@ -57,28 +57,19 @@
 							required class="form-control" id="secondTierBusiness"
 							name="secondTierBusiness" placeholder="Enter 2nd Tier Business" />
 					</div>
-					<!--  
 					<div class="form-group">
-						<label for="presentedById">Integrated Media Specialist
-							Name</label> <input type="text"
-							th:value="${dataPageModel?.portfolioManagerName}" required
-							class="form-control" id="portfolioManagerName"
-							name="portfolioManagerName" placeholder="Enter Specialist Name" />
-					</div>
+						<label for="thirdTierBusiness">3rd Tier Business (#3 in market revenue)</label> <input
+							type="text" th:value="${dataPageModel?.thirdTierBusiness}"
+							required class="form-control" id="thirdTierBusiness"
+							name="thirdTierBusiness" placeholder="Enter 3rd Tier Business" />
+					</div>	
 					<div class="form-group">
-						<label for=portfolioPhoneNumber>Phone Number</label> <input
-							type="text" th:value="${dataPageModel?.portfolioPhoneNumber}"
-							required class="form-control input-medium bfh-phone"
-							data-format="+1 (ddd) ddd-dddd" id="portfolioPhoneNumber"
-							name="portfolioPhoneNumber" />
-					</div>
-					<div class="form-group">
-						<label for=portfolioPhoneNumber>Station/Media Group</label> <input
-							type="text" th:value="${dataPageModel?.station}" required
-							placeholder="Enter Group" class="form-control" id="station"
-							name="station" />
-					</div>
--->
+						<label for="fourthTierBusiness">4th Tier Business (#4 in market revenue)</label> <input
+							type="text" th:value="${dataPageModel?.fourthTierBusiness}"
+							required class="form-control" id="fourthTierBusiness"
+							name="fourthTierBusiness" placeholder="Enter 4th Tier Business" />
+					</div>										
+
 					<input type="hidden" id="nextPage"
 						th:value="'redirect:/TeamCommitmentPage?ID=' + ${wizard.wizardid}"
 						name="nextPage" /> 
