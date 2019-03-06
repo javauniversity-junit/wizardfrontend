@@ -1,0 +1,1024 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="SCRData">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="PortfolioManagerName" type="xs:string" minOccurs="0" />
+                <xs:element name="PortfolioPhoneNumber" type="xs:string" minOccurs="0" />
+                <xs:element name="Station" type="xs:string" minOccurs="0" />
+                <xs:element name="ClientBusinessName" type="xs:string" minOccurs="0" />
+                <xs:element name="ClientContactName" type="xs:string" minOccurs="0" />
+                <xs:element name="ClientAddress" type="xs:string" minOccurs="0" />
+                <xs:element name="ClientCity" type="xs:string" minOccurs="0" />
+                <xs:element name="ClientState" type="xs:string" minOccurs="0" />
+                <xs:element name="ClientPhone" type="xs:string" minOccurs="0" />
+                <xs:element name="ClientFax" type="xs:string" minOccurs="0" />
+                <xs:element name="Screen3Answer2" type="xs:string" minOccurs="0" />
+                <xs:element name="Screen3PercievePerformsBest" type="xs:string" minOccurs="0" />
+                <xs:element name="Screen3PercievePerformsLeast" type="xs:string" minOccurs="0" />
+                <xs:element name="Screen3Answer4" type="xs:string" minOccurs="0" />
+                <xs:element name="Screen3Answer5" type="xs:string" minOccurs="0" />
+                <xs:element name="TeamName1" type="xs:string" minOccurs="0" />
+                <xs:element name="TeamName2" type="xs:string" minOccurs="0" />
+                <xs:element name="TeamName3" type="xs:string" minOccurs="0" />
+                <xs:element name="TeamName4" type="xs:string" minOccurs="0" />
+                <xs:element name="TeamTitle1" type="xs:string" minOccurs="0" />
+                <xs:element name="TeamTitle2" type="xs:string" minOccurs="0" />
+                <xs:element name="TeamTitle3" type="xs:string" minOccurs="0" />
+                <xs:element name="TeamTitle4" type="xs:string" minOccurs="0" />
+                <xs:element name="Defense" type="xs:string" minOccurs="0" />
+                <xs:element name="Offense" type="xs:string" minOccurs="0" />
+                <xs:element name="Flanker" type="xs:string" minOccurs="0" />
+                <xs:element name="Guerilla" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_Introduce_New_Department" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_FeatureSpecificProducts" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_Promote_OffPrice_Items" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_IncreaseCustomerVisits" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_Maintain_Market_Dominance" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_Recapture_Old_Customer" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_Expand_Target_Market" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_Establish_or_ReEstablish_Image" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_Develop_Special_Event" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_Expand_the_Size_of_Pie" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_EnhancedDigitalMobileInternet" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_Create_PentUp_Demand_Pattern" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_Change_Consumer_Attitudes" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_UtilizeCoopVendorDollars" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_DevelopDatabaseMarketing" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_Build_Destination" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_Call_Attention_Private_Label" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_Develop_Quarterly_Sales_Spike" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_Make_Promotional_Event_Stronger" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_InitiateCauseMarketingProgram" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_Use_Vendor_Coop_Accrual" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_Other" type="xs:string" minOccurs="0" />
+                <xs:element name="obj1_OtherValue" type="xs:string" minOccurs="0" />
+                <xs:element name="obj2_FirstValue" type="xs:string" minOccurs="0" />
+                <xs:element name="obj2_SecondValue" type="xs:string" minOccurs="0" />
+                <xs:element name="obj2_ThirdValue" type="xs:string" minOccurs="0" />
+                <xs:element name="BusinessYears" type="xs:string" minOccurs="0" />
+                <xs:element name="Branches" type="xs:string" minOccurs="0" />
+                <xs:element name="Misconceptions" type="xs:string" minOccurs="0" />
+                <xs:element name="SellingAdvantages" type="xs:string" minOccurs="0" />
+                <xs:element name="DifferFromCompetition" type="xs:string" minOccurs="0" />
+                <xs:element name="CompetitionA" type="xs:string" minOccurs="0" />
+                <xs:element name="CompetitionB" type="xs:string" minOccurs="0" />
+                <xs:element name="CompetitionStrengthA" type="xs:string" minOccurs="0" />
+                <xs:element name="CompetitionStrengthB" type="xs:string" minOccurs="0" />
+                <xs:element name="CompetitionWeaknessA" type="xs:string" minOccurs="0" />
+                <xs:element name="CompetitionWeaknessB" type="xs:string" minOccurs="0" />
+                <xs:element name="CompanyNameProjectedImage" type="xs:string" minOccurs="0" />
+                <xs:element name="imageYes" type="xs:string" minOccurs="0" />
+                <xs:element name="imageNo" type="xs:string" minOccurs="0" />
+                <xs:element name="COOPFundsYes" type="xs:string" minOccurs="0" />
+                <xs:element name="COOPFundsNo" type="xs:string" minOccurs="0" />
+                <xs:element name="VendorA" type="xs:string" minOccurs="0" />
+                <xs:element name="VendorB" type="xs:string" minOccurs="0" />
+                <xs:element name="VendorC" type="xs:string" minOccurs="0" />
+                <xs:element name="VendorD" type="xs:string" minOccurs="0" />
+                <xs:element name="VendorAccountA" type="xs:string" minOccurs="0" />
+                <xs:element name="VendorAccountB" type="xs:string" minOccurs="0" />
+                <xs:element name="VendorAccountC" type="xs:string" minOccurs="0" />
+                <xs:element name="VendorAccountD" type="xs:string" minOccurs="0" />
+                <xs:element name="PoorestMonthA" type="xs:string" minOccurs="0" />
+                <xs:element name="PoorestMonthB" type="xs:string" minOccurs="0" />
+                <xs:element name="BestMonthA" type="xs:string" minOccurs="0" />
+                <xs:element name="BestMonthB" type="xs:string" minOccurs="0" />
+                <xs:element name="Compliments" type="xs:string" minOccurs="0" />
+                <xs:element name="Complaint" type="xs:string" minOccurs="0" />
+                <xs:element name="MarketingStrategy" type="xs:string" minOccurs="0" />
+                <xs:element name="SocialStrategy" type="xs:string" minOccurs="0" />
+                <xs:element name="TAINext12Months" type="xs:string" minOccurs="0" />
+                <xs:element name="TAIMonths" type="xs:string" minOccurs="0" />
+                <xs:element name="TAISpikes" type="xs:string" minOccurs="0" />
+                <xs:element name="LaunchCampaigns" type="xs:string" minOccurs="0" />
+                <xs:element name="SpecialEvents" type="xs:string" minOccurs="0" />
+                <xs:element name="PctGrossSales" type="xs:string" minOccurs="0" />
+                <xs:element name="EstimatedGrossSalesNext12Months" type="xs:string" minOccurs="0" />
+                <xs:element name="Newspaper" type="xs:string" minOccurs="0" />
+                <xs:element name="Radio" type="xs:string" minOccurs="0" />
+                <xs:element name="Digital" type="xs:string" minOccurs="0" />
+                <xs:element name="Billboards" type="xs:string" minOccurs="0" />
+                <xs:element name="DirectMail" type="xs:string" minOccurs="0" />
+                <xs:element name="Cable" type="xs:string" minOccurs="0" />
+                <xs:element name="TV" type="xs:string" minOccurs="0" />
+                <xs:element name="YellowPages" type="xs:string" minOccurs="0" />
+                <xs:element name="Other" type="xs:string" minOccurs="0" />
+                <xs:element name="GrossSalesLastyear" type="xs:string" minOccurs="0" />
+                <xs:element name="IndustryAverage" type="xs:string" minOccurs="0" />
+                <xs:element name="TAIShouldBe" type="xs:string" minOccurs="0" />
+                <xs:element name="pctMen" type="xs:string" minOccurs="0" />
+                <xs:element name="pctWomen" type="xs:string" minOccurs="0" />
+                <xs:element name="Influencers" type="xs:string" minOccurs="0" />
+                <xs:element name="Deciders" type="xs:string" minOccurs="0" />
+                <xs:element name="Purchasers" type="xs:string" minOccurs="0" />
+                <xs:element name="Users" type="xs:string" minOccurs="0" />
+                <xs:element name="HouseholdIncome" type="xs:string" minOccurs="0" />
+                <xs:element name="want12to18" type="xs:string" minOccurs="0" />
+                <xs:element name="want19to25" type="xs:string" minOccurs="0" />
+                <xs:element name="want26to35" type="xs:string" minOccurs="0" />
+                <xs:element name="want36to45" type="xs:string" minOccurs="0" />
+                <xs:element name="want46to55" type="xs:string" minOccurs="0" />
+                <xs:element name="want55Plus" type="xs:string" minOccurs="0" />
+                <xs:element name="have12to18" type="xs:string" minOccurs="0" />
+                <xs:element name="have19to25" type="xs:string" minOccurs="0" />
+                <xs:element name="have26to35" type="xs:string" minOccurs="0" />
+                <xs:element name="have36to45" type="xs:string" minOccurs="0" />
+                <xs:element name="have46to55" type="xs:string" minOccurs="0" />
+                <xs:element name="have56Plus" type="xs:string" minOccurs="0" />
+                <xs:element name="Highest12" type="xs:string" minOccurs="0" />
+                <xs:element name="Highest19" type="xs:string" minOccurs="0" />
+                <xs:element name="Highest26" type="xs:string" minOccurs="0" />
+                <xs:element name="Highest36" type="xs:string" minOccurs="0" />
+                <xs:element name="Highest46" type="xs:string" minOccurs="0" />
+                <xs:element name="Highest56" type="xs:string" minOccurs="0" />
+                <xs:element name="TAINext12Months85" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanAReach" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanACity" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanACommercials" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanAFrequency" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanADigitalImpressionsMonthly" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanAMonthly" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanACOOPFunding" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanAAverageSale" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanAGrossMargin" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanAClosingPct" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanAInvestment" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBReach" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBCity" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBCommercials" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBFrequency" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBDigitalImpressionsMonthly" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBMonthly" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBInvestment" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanAROIVisits" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanAROIAverageSale" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanAROIMargin" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanAROIAdditionalGross" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanAROIProposedMonths" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanAROIAddGrossProfit" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanAROIAddGrossSales" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBROIVisits" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBROIAverageSale" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBROIMargin" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBROIAdditionalGross" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBROIProposedMonths" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBROIAddGrossProfit" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBROIAddGrossSales" type="xs:string" minOccurs="0" />
+                <xs:element name="AdvertiseYes" type="xs:string" minOccurs="0" />
+                <xs:element name="AdvertiseNo" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBCOOPFunding" type="xs:string" minOccurs="0" />
+                <xs:element name="BestDayA" type="xs:string" minOccurs="0" />
+                <xs:element name="BestDayB" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanAMonths" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBMonths" type="xs:string" minOccurs="0" />
+                <xs:element name="CableJan" type="xs:string" minOccurs="0" />
+                <xs:element name="CableFeb" type="xs:string" minOccurs="0" />
+                <xs:element name="CableMar" type="xs:string" minOccurs="0" />
+                <xs:element name="CableApr" type="xs:string" minOccurs="0" />
+                <xs:element name="CableMay" type="xs:string" minOccurs="0" />
+                <xs:element name="CableJun" type="xs:string" minOccurs="0" />
+                <xs:element name="CableJul" type="xs:string" minOccurs="0" />
+                <xs:element name="CableAug" type="xs:string" minOccurs="0" />
+                <xs:element name="CableSept" type="xs:string" minOccurs="0" />
+                <xs:element name="CableOct" type="xs:string" minOccurs="0" />
+                <xs:element name="CableNov" type="xs:string" minOccurs="0" />
+                <xs:element name="CableDec" type="xs:string" minOccurs="0" />
+                <xs:element name="YellowJan" type="xs:string" minOccurs="0" />
+                <xs:element name="YellowFeb" type="xs:string" minOccurs="0" />
+                <xs:element name="YellowMar" type="xs:string" minOccurs="0" />
+                <xs:element name="YellowApr" type="xs:string" minOccurs="0" />
+                <xs:element name="YellowMay" type="xs:string" minOccurs="0" />
+                <xs:element name="YellowJun" type="xs:string" minOccurs="0" />
+                <xs:element name="YellowJul" type="xs:string" minOccurs="0" />
+                <xs:element name="YellowAug" type="xs:string" minOccurs="0" />
+                <xs:element name="YellowSept" type="xs:string" minOccurs="0" />
+                <xs:element name="YellowOct" type="xs:string" minOccurs="0" />
+                <xs:element name="YellowNov" type="xs:string" minOccurs="0" />
+                <xs:element name="YellowDec" type="xs:string" minOccurs="0" />
+                <xs:element name="MobileJan" type="xs:string" minOccurs="0" />
+                <xs:element name="MobileFeb" type="xs:string" minOccurs="0" />
+                <xs:element name="MobileMar" type="xs:string" minOccurs="0" />
+                <xs:element name="MobileApr" type="xs:string" minOccurs="0" />
+                <xs:element name="MobileMay" type="xs:string" minOccurs="0" />
+                <xs:element name="MobileJun" type="xs:string" minOccurs="0" />
+                <xs:element name="MobileJul" type="xs:string" minOccurs="0" />
+                <xs:element name="MobileAug" type="xs:string" minOccurs="0" />
+                <xs:element name="MobileSept" type="xs:string" minOccurs="0" />
+                <xs:element name="MobileOct" type="xs:string" minOccurs="0" />
+                <xs:element name="MobileNov" type="xs:string" minOccurs="0" />
+                <xs:element name="MobileDec" type="xs:string" minOccurs="0" />
+                <xs:element name="BillboardJan" type="xs:string" minOccurs="0" />
+                <xs:element name="BillboardFeb" type="xs:string" minOccurs="0" />
+                <xs:element name="BillboardMar" type="xs:string" minOccurs="0" />
+                <xs:element name="BillboardApr" type="xs:string" minOccurs="0" />
+                <xs:element name="BillboardMay" type="xs:string" minOccurs="0" />
+                <xs:element name="BillboardJun" type="xs:string" minOccurs="0" />
+                <xs:element name="BillboardJul" type="xs:string" minOccurs="0" />
+                <xs:element name="BillboardAug" type="xs:string" minOccurs="0" />
+                <xs:element name="BillboardSept" type="xs:string" minOccurs="0" />
+                <xs:element name="BillboardOct" type="xs:string" minOccurs="0" />
+                <xs:element name="BillboardNov" type="xs:string" minOccurs="0" />
+                <xs:element name="BillboardDec" type="xs:string" minOccurs="0" />
+                <xs:element name="PrintJan" type="xs:string" minOccurs="0" />
+                <xs:element name="PrintFeb" type="xs:string" minOccurs="0" />
+                <xs:element name="PrintMar" type="xs:string" minOccurs="0" />
+                <xs:element name="PrintApr" type="xs:string" minOccurs="0" />
+                <xs:element name="PrintMay" type="xs:string" minOccurs="0" />
+                <xs:element name="PrintJun" type="xs:string" minOccurs="0" />
+                <xs:element name="PrintJul" type="xs:string" minOccurs="0" />
+                <xs:element name="PrintAug" type="xs:string" minOccurs="0" />
+                <xs:element name="PrintSept" type="xs:string" minOccurs="0" />
+                <xs:element name="PrintOct" type="xs:string" minOccurs="0" />
+                <xs:element name="PrintNov" type="xs:string" minOccurs="0" />
+                <xs:element name="PrintDec" type="xs:string" minOccurs="0" />
+                <xs:element name="RadioJan" type="xs:string" minOccurs="0" />
+                <xs:element name="RadioFeb" type="xs:string" minOccurs="0" />
+                <xs:element name="RadioMar" type="xs:string" minOccurs="0" />
+                <xs:element name="RadioApr" type="xs:string" minOccurs="0" />
+                <xs:element name="RadioMay" type="xs:string" minOccurs="0" />
+                <xs:element name="RadioJun" type="xs:string" minOccurs="0" />
+                <xs:element name="RadioJul" type="xs:string" minOccurs="0" />
+                <xs:element name="RadioAug" type="xs:string" minOccurs="0" />
+                <xs:element name="RadioSept" type="xs:string" minOccurs="0" />
+                <xs:element name="RadioOct" type="xs:string" minOccurs="0" />
+                <xs:element name="RadioNov" type="xs:string" minOccurs="0" />
+                <xs:element name="RadioDec" type="xs:string" minOccurs="0" />
+                <xs:element name="TVJan" type="xs:string" minOccurs="0" />
+                <xs:element name="TVFeb" type="xs:string" minOccurs="0" />
+                <xs:element name="TVMar" type="xs:string" minOccurs="0" />
+                <xs:element name="TVApr" type="xs:string" minOccurs="0" />
+                <xs:element name="TVMay" type="xs:string" minOccurs="0" />
+                <xs:element name="TVJun" type="xs:string" minOccurs="0" />
+                <xs:element name="TVJul" type="xs:string" minOccurs="0" />
+                <xs:element name="TVAug" type="xs:string" minOccurs="0" />
+                <xs:element name="TVSept" type="xs:string" minOccurs="0" />
+                <xs:element name="TVOct" type="xs:string" minOccurs="0" />
+                <xs:element name="TVNov" type="xs:string" minOccurs="0" />
+                <xs:element name="TVDec" type="xs:string" minOccurs="0" />
+                <xs:element name="DirectJan" type="xs:string" minOccurs="0" />
+                <xs:element name="DirectFeb" type="xs:string" minOccurs="0" />
+                <xs:element name="DirectMar" type="xs:string" minOccurs="0" />
+                <xs:element name="DirectApr" type="xs:string" minOccurs="0" />
+                <xs:element name="DirectMay" type="xs:string" minOccurs="0" />
+                <xs:element name="DirectJun" type="xs:string" minOccurs="0" />
+                <xs:element name="DirectJul" type="xs:string" minOccurs="0" />
+                <xs:element name="DirectAug" type="xs:string" minOccurs="0" />
+                <xs:element name="DirectSept" type="xs:string" minOccurs="0" />
+                <xs:element name="DirectOct" type="xs:string" minOccurs="0" />
+                <xs:element name="DirectNov" type="xs:string" minOccurs="0" />
+                <xs:element name="DirectDec" type="xs:string" minOccurs="0" />
+                <xs:element name="CableTotal" type="xs:string" minOccurs="0" />
+                <xs:element name="YellowTotal" type="xs:string" minOccurs="0" />
+                <xs:element name="MobileTotal" type="xs:string" minOccurs="0" />
+                <xs:element name="BillboardTotal" type="xs:string" minOccurs="0" />
+                <xs:element name="PrintTotal" type="xs:string" minOccurs="0" />
+                <xs:element name="RadioTotal" type="xs:string" minOccurs="0" />
+                <xs:element name="TVTotal" type="xs:string" minOccurs="0" />
+                <xs:element name="DirectTotal" type="xs:string" minOccurs="0" />
+                <xs:element name="TotalJan" type="xs:string" minOccurs="0" />
+                <xs:element name="TotalFeb" type="xs:string" minOccurs="0" />
+                <xs:element name="TotalMar" type="xs:string" minOccurs="0" />
+                <xs:element name="TotalApr" type="xs:string" minOccurs="0" />
+                <xs:element name="TotalMay" type="xs:string" minOccurs="0" />
+                <xs:element name="TotalJun" type="xs:string" minOccurs="0" />
+                <xs:element name="TotalJul" type="xs:string" minOccurs="0" />
+                <xs:element name="TotalAug" type="xs:string" minOccurs="0" />
+                <xs:element name="TotalSept" type="xs:string" minOccurs="0" />
+                <xs:element name="TotalOct" type="xs:string" minOccurs="0" />
+                <xs:element name="TotalNov" type="xs:string" minOccurs="0" />
+                <xs:element name="TotalDec" type="xs:string" minOccurs="0" />
+                <xs:element name="TotalTotal" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanATVJan" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanATVFeb" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanATVMar" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanATVApr" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanATVMay" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanATVJun" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanATVJul" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanATVAug" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanATVSept" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanATVOct" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanATVNov" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanATVDec" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanATVTotal" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBTVJan" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBTVFeb" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBTVMar" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBTVApr" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBTVMay" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBTVJun" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBTVJul" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBTVAug" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBTVSept" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBTVOct" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBTVNov" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBTVDec" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBTVTotal" type="xs:string" minOccurs="0" />
+                <xs:element name="DescribeIdealTargetConsumer" type="xs:string" minOccurs="0" />
+                <xs:element name="OtherJan" type="xs:string" minOccurs="0" />
+                <xs:element name="OtherFeb" type="xs:string" minOccurs="0" />
+                <xs:element name="OtherMar" type="xs:string" minOccurs="0" />
+                <xs:element name="OtherApr" type="xs:string" minOccurs="0" />
+                <xs:element name="OtherMay" type="xs:string" minOccurs="0" />
+                <xs:element name="OtherJun" type="xs:string" minOccurs="0" />
+                <xs:element name="OtherJul" type="xs:string" minOccurs="0" />
+                <xs:element name="OtherAug" type="xs:string" minOccurs="0" />
+                <xs:element name="OtherSept" type="xs:string" minOccurs="0" />
+                <xs:element name="OtherOct" type="xs:string" minOccurs="0" />
+                <xs:element name="OtherNov" type="xs:string" minOccurs="0" />
+                <xs:element name="OtherDec" type="xs:string" minOccurs="0" />
+                <xs:element name="OtherTotal" type="xs:string" minOccurs="0" />
+                <xs:element name="SpikeEnumJan" type="xs:string" minOccurs="0" />
+                <xs:element name="SpikeEnumFeb" type="xs:string" minOccurs="0" />
+                <xs:element name="SpikeEnumMar" type="xs:string" minOccurs="0" />
+                <xs:element name="SpikeEnumApr" type="xs:string" minOccurs="0" />
+                <xs:element name="SpikeEnumMay" type="xs:string" minOccurs="0" />
+                <xs:element name="SpikeEnumJun" type="xs:string" minOccurs="0" />
+                <xs:element name="SpikeEnumJul" type="xs:string" minOccurs="0" />
+                <xs:element name="SpikeEnumAug" type="xs:string" minOccurs="0" />
+                <xs:element name="SpikeEnumSept" type="xs:string" minOccurs="0" />
+                <xs:element name="SpikeEnumOct" type="xs:string" minOccurs="0" />
+                <xs:element name="SpikeEnumNov" type="xs:string" minOccurs="0" />
+                <xs:element name="SpikeEnumDec" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanASpikeEnumJan" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanASpikeEnumFeb" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanASpikeEnumMar" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanASpikeEnumApr" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanASpikeEnumMay" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanASpikeEnumJun" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanASpikeEnumJul" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanASpikeEnumAug" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanASpikeEnumSept" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanASpikeEnumOct" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanASpikeEnumNov" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanASpikeEnumDec" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBSpikeEnumJan" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBSpikeEnumFeb" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBSpikeEnumMar" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBSpikeEnumApr" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBSpikeEnumMay" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBSpikeEnumJun" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBSpikeEnumJul" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBSpikeEnumAug" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBSpikeEnumSept" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBSpikeEnumOct" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBSpikeEnumNov" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanBSpikeEnumDec" type="xs:string" minOccurs="0" />
+                <xs:element name="Proposed1" type="xs:string" minOccurs="0" />
+                <xs:element name="Proposed2" type="xs:string" minOccurs="0" />
+                <xs:element name="Proposed3" type="xs:string" minOccurs="0" />
+                <xs:element name="Proposed4" type="xs:string" minOccurs="0" />
+                <xs:element name="Proposed5" type="xs:string" minOccurs="0" />
+                <xs:element name="Proposed6" type="xs:string" minOccurs="0" />
+                <xs:element name="Proposed7" type="xs:string" minOccurs="0" />
+                <xs:element name="Proposed8" type="xs:string" minOccurs="0" />
+                <xs:element name="Proposed9" type="xs:string" minOccurs="0" />
+                <xs:element name="ProposedTotal" type="xs:string" minOccurs="0" />
+                <xs:element name="ProposedLabel1" type="xs:string" minOccurs="0" />
+                <xs:element name="ProposedLabel2" type="xs:string" minOccurs="0" />
+                <xs:element name="ProposedLabel3" type="xs:string" minOccurs="0" />
+                <xs:element name="ProposedLabel4" type="xs:string" minOccurs="0" />
+                <xs:element name="ProposedLabel5" type="xs:string" minOccurs="0" />
+                <xs:element name="ProposedLabel6" type="xs:string" minOccurs="0" />
+                <xs:element name="ProposedLabel7" type="xs:string" minOccurs="0" />
+                <xs:element name="ProposedLabel8" type="xs:string" minOccurs="0" />
+                <xs:element name="ProposedLabel9" type="xs:string" minOccurs="0" />
+                <xs:element name="LastYearLabel1" type="xs:string" minOccurs="0" />
+                <xs:element name="LastYearLabel2" type="xs:string" minOccurs="0" />
+                <xs:element name="LastYearLabel3" type="xs:string" minOccurs="0" />
+                <xs:element name="LastYearLabel4" type="xs:string" minOccurs="0" />
+                <xs:element name="LastYearLabel5" type="xs:string" minOccurs="0" />
+                <xs:element name="LastYearLabel6" type="xs:string" minOccurs="0" />
+                <xs:element name="LastYearLabel7" type="xs:string" minOccurs="0" />
+                <xs:element name="LastYearLabel8" type="xs:string" minOccurs="0" />
+                <xs:element name="LastYearLabel9" type="xs:string" minOccurs="0" />
+                <xs:element name="PlanstoExpand" type="xs:boolean" minOccurs="0" />
+                <xs:element name="pctTAIGrossSalesLastYear" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanALVAAverageSale" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanALVAGrossProfitMargin" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanAGrossProfitPerSale" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanAAverageRepeatSales" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanAAverageCustomerValue" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanAYearsOfPatronage" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanALifetimeValuePerCustomer" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanAMonthlyInvestmentAverage" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanAProspectsNeededToBreakEven" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanAEstimatedMonthlyCustomerReach" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanAPercentMonthlyCustomertoBreakEven" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBLVAAverageSale" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBLVAGrossProfitMargin" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBGrossProfitPerSale" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBAverageRepeatSales" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBAverageCustomerValue" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBYearsOfPatronage" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBLifetimeValuePerCustomer" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBMonthlyInvestmentAverage" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBProspectsNeededToBreakEven" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBEstimatedMonthlyCustomerReach" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBPercentMonthlyCustomertoBreakEven" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanAMonthlyDigitalInvestment" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanACostPerThousand" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanAClosingPctNumber" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanAClickThroughRate" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanAMonthlyClicks" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanACostPerClicks" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanASalesConversionPercentage" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanAMonthlyConversions" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanACostPerConversion" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanAProjectedGrossProfit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanAMonthlyGrossProfit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanAMonthlyROID" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanAMonthlyROIP" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBMonthlyDigitalInvestment" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBCostPerThousand" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBClosingPctNumber" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBClickThroughRate" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBMonthlyClicks" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBCostPerClicks" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBSalesConversionPercentage" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBMonthlyConversions" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBCostPerConversion" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBProjectedGrossProfit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBMonthlyGrossProfit" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBMonthlyROID" type="xs:decimal" minOccurs="0" />
+                <xs:element name="PlanBMonthlyROIP" type="xs:decimal" minOccurs="0" />
+                <xs:element name="CurrentCompanySlogan" type="xs:string" minOccurs="0" />
+                <xs:element name="SalesGoals" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="MediaInvestmentA">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Station" type="xs:string" minOccurs="0" />
+                <xs:element name="Jan" type="xs:string" minOccurs="0" />
+                <xs:element name="Feb" type="xs:string" minOccurs="0" />
+                <xs:element name="Mar" type="xs:string" minOccurs="0" />
+                <xs:element name="Apr" type="xs:string" minOccurs="0" />
+                <xs:element name="May" type="xs:string" minOccurs="0" />
+                <xs:element name="June" type="xs:string" minOccurs="0" />
+                <xs:element name="July" type="xs:string" minOccurs="0" />
+                <xs:element name="Aug" type="xs:string" minOccurs="0" />
+                <xs:element name="Sept" type="xs:string" minOccurs="0" />
+                <xs:element name="Oct" type="xs:string" minOccurs="0" />
+                <xs:element name="Nov" type="xs:string" minOccurs="0" />
+                <xs:element name="Dec" type="xs:string" minOccurs="0" />
+                <xs:element name="Total" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="MediaInvestmentB">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Station" type="xs:string" minOccurs="0" />
+                <xs:element name="Jan" type="xs:string" minOccurs="0" />
+                <xs:element name="Feb" type="xs:string" minOccurs="0" />
+                <xs:element name="Mar" type="xs:string" minOccurs="0" />
+                <xs:element name="Apr" type="xs:string" minOccurs="0" />
+                <xs:element name="May" type="xs:string" minOccurs="0" />
+                <xs:element name="June" type="xs:string" minOccurs="0" />
+                <xs:element name="July" type="xs:string" minOccurs="0" />
+                <xs:element name="Aug" type="xs:string" minOccurs="0" />
+                <xs:element name="Sept" type="xs:string" minOccurs="0" />
+                <xs:element name="Oct" type="xs:string" minOccurs="0" />
+                <xs:element name="Nov" type="xs:string" minOccurs="0" />
+                <xs:element name="Dec" type="xs:string" minOccurs="0" />
+                <xs:element name="Total" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <SCRData>
+    <PortfolioManagerName>Keith King</PortfolioManagerName>
+    <PortfolioPhoneNumber>(586) 790-3838</PortfolioPhoneNumber>
+    <Station>WADL Detroit</Station>
+    <ClientBusinessName>Carl Jordan Law Firm</ClientBusinessName>
+    <ClientContactName>Carl Jordan</ClientContactName>
+    <ClientAddress />
+    <ClientCity />
+    <ClientState />
+    <ClientPhone />
+    <ClientFax />
+    <Screen3Answer2 />
+    <Screen3PercievePerformsBest />
+    <Screen3PercievePerformsLeast />
+    <Screen3Answer4 />
+    <Screen3Answer5>0</Screen3Answer5>
+    <TeamName1>Keith King</TeamName1>
+    <TeamName2>David Bangura</TeamName2>
+    <TeamName3>Rhonda Mays </TeamName3>
+    <TeamName4>Jim Mays</TeamName4>
+    <TeamTitle1>Account Executive</TeamTitle1>
+    <TeamTitle2>President and General Manager</TeamTitle2>
+    <TeamTitle3>National Sales Manager</TeamTitle3>
+    <TeamTitle4>Production Director</TeamTitle4>
+    <Defense>John Doe</Defense>
+    <Offense>Cornelius Pitts </Offense>
+    <Flanker>Jim King</Flanker>
+    <Guerilla>Bob Smith 
+</Guerilla>
+    <obj1_Introduce_New_Department>False</obj1_Introduce_New_Department>
+    <obj1_FeatureSpecificProducts>True</obj1_FeatureSpecificProducts>
+    <obj1_Promote_OffPrice_Items>True</obj1_Promote_OffPrice_Items>
+    <obj1_IncreaseCustomerVisits>True</obj1_IncreaseCustomerVisits>
+    <obj1_Maintain_Market_Dominance>False</obj1_Maintain_Market_Dominance>
+    <obj1_Recapture_Old_Customer>False</obj1_Recapture_Old_Customer>
+    <obj1_Expand_Target_Market>False</obj1_Expand_Target_Market>
+    <obj1_Establish_or_ReEstablish_Image>False</obj1_Establish_or_ReEstablish_Image>
+    <obj1_Develop_Special_Event>False</obj1_Develop_Special_Event>
+    <obj1_Expand_the_Size_of_Pie>True</obj1_Expand_the_Size_of_Pie>
+    <obj1_EnhancedDigitalMobileInternet>False</obj1_EnhancedDigitalMobileInternet>
+    <obj1_Create_PentUp_Demand_Pattern>False</obj1_Create_PentUp_Demand_Pattern>
+    <obj1_Change_Consumer_Attitudes>True</obj1_Change_Consumer_Attitudes>
+    <obj1_UtilizeCoopVendorDollars>False</obj1_UtilizeCoopVendorDollars>
+    <obj1_DevelopDatabaseMarketing>False</obj1_DevelopDatabaseMarketing>
+    <obj1_Build_Destination>True</obj1_Build_Destination>
+    <obj1_Call_Attention_Private_Label>True</obj1_Call_Attention_Private_Label>
+    <obj1_Develop_Quarterly_Sales_Spike>False</obj1_Develop_Quarterly_Sales_Spike>
+    <obj1_Make_Promotional_Event_Stronger>False</obj1_Make_Promotional_Event_Stronger>
+    <obj1_InitiateCauseMarketingProgram>False</obj1_InitiateCauseMarketingProgram>
+    <obj1_Use_Vendor_Coop_Accrual>True</obj1_Use_Vendor_Coop_Accrual>
+    <obj1_Other>False</obj1_Other>
+    <obj1_OtherValue />
+    <obj2_FirstValue>Elevate Business Brand/Image</obj2_FirstValue>
+    <obj2_SecondValue>Change Consumer Attitudes</obj2_SecondValue>
+    <obj2_ThirdValue>Grow New Traffic/Lead Calls</obj2_ThirdValue>
+    <BusinessYears>15</BusinessYears>
+    <Branches>1</Branches>
+    <Misconceptions>Very few people understand healthy personal injury world works.</Misconceptions>
+    <SellingAdvantages>As a former prosecutor you have the perspective from both sides and the experience having successfully representing hundreds of criminal cases.  With your track record  you have the respect of the court and the Michigan legal community. </SellingAdvantages>
+    <DifferFromCompetition />
+    <CompetitionA>John Doe</CompetitionA>
+    <CompetitionB>Cornelius Pitts </CompetitionB>
+    <CompetitionStrengthA>Great rep</CompetitionStrengthA>
+    <CompetitionStrengthB>Attorney Pitts has a built a legal brand in the Detroit market as a top criminal defense lawyer.</CompetitionStrengthB>
+    <CompetitionWeaknessA>Expensive retainer</CompetitionWeaknessA>
+    <CompetitionWeaknessB>He may be considered past his prime in legal defense and passes along most of his cases to his son. </CompetitionWeaknessB>
+    <CompanyNameProjectedImage>While you have an enviable track record representing your clients and have a great reputation within the Michigan court system and legal community, you wish to build a brand identity in the market so that when people have the need for criminal defense they think of you first and feel best about your representation.  </CompanyNameProjectedImage>
+    <imageYes>False</imageYes>
+    <imageNo>True</imageNo>
+    <COOPFundsYes>False</COOPFundsYes>
+    <COOPFundsNo>False</COOPFundsNo>
+    <VendorA />
+    <VendorB />
+    <VendorC />
+    <VendorD />
+    <VendorAccountA />
+    <VendorAccountB />
+    <VendorAccountC />
+    <VendorAccountD />
+    <PoorestMonthA>,May,June,July,August</PoorestMonthA>
+    <PoorestMonthB />
+    <BestMonthA>,January,February</BestMonthA>
+    <BestMonthB />
+    <Compliments>People appreciate the frequent communication</Compliments>
+    <Complaint>You understand the backside fee that will be paid and is usually more than they would've imagined</Complaint>
+    <MarketingStrategy>You do not have a digital marketing strategy.</MarketingStrategy>
+    <SocialStrategy>You currently have a Facebook and Twitter account but do not have a set social media strategy. </SocialStrategy>
+    <TAINext12Months>100000</TAINext12Months>
+    <TAIMonths>1</TAIMonths>
+    <TAISpikes>0</TAISpikes>
+    <LaunchCampaigns />
+    <SpecialEvents>0</SpecialEvents>
+    <PctGrossSales>0.0555555555555555555555555556</PctGrossSales>
+    <EstimatedGrossSalesNext12Months>1800000</EstimatedGrossSalesNext12Months>
+    <Newspaper>25000</Newspaper>
+    <Radio>5000</Radio>
+    <Digital>10000</Digital>
+    <Billboards>15000</Billboards>
+    <DirectMail>10000</DirectMail>
+    <Cable>15000</Cable>
+    <TV>0</TV>
+    <YellowPages>0</YellowPages>
+    <Other>0</Other>
+    <GrossSalesLastyear>1400000</GrossSalesLastyear>
+    <IndustryAverage>0.0545454545454545454545454545</IndustryAverage>
+    <TAIShouldBe>120000</TAIShouldBe>
+    <pctMen>40</pctMen>
+    <pctWomen>60</pctWomen>
+    <Influencers />
+    <Deciders />
+    <Purchasers />
+    <Users />
+    <HouseholdIncome>under $50,000</HouseholdIncome>
+    <want12to18>0</want12to18>
+    <want19to25>0</want19to25>
+    <want26to35>8</want26to35>
+    <want36to45>9</want36to45>
+    <want46to55>10</want46to55>
+    <want55Plus>10</want55Plus>
+    <have12to18>0</have12to18>
+    <have19to25>0</have19to25>
+    <have26to35>7</have26to35>
+    <have36to45>8</have36to45>
+    <have46to55>9</have46to55>
+    <have56Plus>10</have56Plus>
+    <Highest12>False</Highest12>
+    <Highest19>False</Highest19>
+    <Highest26>False</Highest26>
+    <Highest36>False</Highest36>
+    <Highest46>False</Highest46>
+    <Highest56>False</Highest56>
+    <TAINext12Months85>0</TAINext12Months85>
+    <PlanAReach>200000</PlanAReach>
+    <PlanACity>Detroit</PlanACity>
+    <PlanACommercials>0</PlanACommercials>
+    <PlanAFrequency>3</PlanAFrequency>
+    <PlanADigitalImpressionsMonthly>100000</PlanADigitalImpressionsMonthly>
+    <PlanAMonthly>2000</PlanAMonthly>
+    <PlanACOOPFunding />
+    <PlanAAverageSale>10000</PlanAAverageSale>
+    <PlanAGrossMargin>0.33</PlanAGrossMargin>
+    <PlanAClosingPct>0.25</PlanAClosingPct>
+    <PlanAInvestment>2000</PlanAInvestment>
+    <PlanBReach>250000</PlanBReach>
+    <PlanBCity>Detroit</PlanBCity>
+    <PlanBCommercials>0</PlanBCommercials>
+    <PlanBFrequency>3</PlanBFrequency>
+    <PlanBDigitalImpressionsMonthly>100000</PlanBDigitalImpressionsMonthly>
+    <PlanBMonthly>3000</PlanBMonthly>
+    <PlanBInvestment>3000</PlanBInvestment>
+    <PlanAROIVisits />
+    <PlanAROIAverageSale />
+    <PlanAROIMargin>1</PlanAROIMargin>
+    <PlanAROIAdditionalGross />
+    <PlanAROIProposedMonths />
+    <PlanAROIAddGrossProfit />
+    <PlanAROIAddGrossSales />
+    <PlanBROIVisits />
+    <PlanBROIAverageSale />
+    <PlanBROIMargin>1</PlanBROIMargin>
+    <PlanBROIAdditionalGross />
+    <PlanBROIProposedMonths />
+    <PlanBROIAddGrossProfit />
+    <PlanBROIAddGrossSales />
+    <AdvertiseYes>False</AdvertiseYes>
+    <AdvertiseNo>False</AdvertiseNo>
+    <PlanBCOOPFunding />
+    <BestDayA />
+    <BestDayB />
+    <PlanAMonths>12</PlanAMonths>
+    <PlanBMonths>12</PlanBMonths>
+    <CableJan>0</CableJan>
+    <CableFeb>0</CableFeb>
+    <CableMar>0</CableMar>
+    <CableApr>0</CableApr>
+    <CableMay>0</CableMay>
+    <CableJun>0</CableJun>
+    <CableJul>0</CableJul>
+    <CableAug>0</CableAug>
+    <CableSept>0</CableSept>
+    <CableOct>0</CableOct>
+    <CableNov>0</CableNov>
+    <CableDec>0</CableDec>
+    <YellowJan>0</YellowJan>
+    <YellowFeb>0</YellowFeb>
+    <YellowMar>0</YellowMar>
+    <YellowApr>0</YellowApr>
+    <YellowMay>0</YellowMay>
+    <YellowJun>0</YellowJun>
+    <YellowJul>0</YellowJul>
+    <YellowAug>0</YellowAug>
+    <YellowSept>0</YellowSept>
+    <YellowOct>0</YellowOct>
+    <YellowNov>0</YellowNov>
+    <YellowDec>0</YellowDec>
+    <MobileJan>0</MobileJan>
+    <MobileFeb>0</MobileFeb>
+    <MobileMar>0</MobileMar>
+    <MobileApr>0</MobileApr>
+    <MobileMay>0</MobileMay>
+    <MobileJun>0</MobileJun>
+    <MobileJul>0</MobileJul>
+    <MobileAug>0</MobileAug>
+    <MobileSept>0</MobileSept>
+    <MobileOct>0</MobileOct>
+    <MobileNov>0</MobileNov>
+    <MobileDec>0</MobileDec>
+    <BillboardJan>0</BillboardJan>
+    <BillboardFeb>0</BillboardFeb>
+    <BillboardMar>0</BillboardMar>
+    <BillboardApr>0</BillboardApr>
+    <BillboardMay>0</BillboardMay>
+    <BillboardJun>0</BillboardJun>
+    <BillboardJul>0</BillboardJul>
+    <BillboardAug>0</BillboardAug>
+    <BillboardSept>0</BillboardSept>
+    <BillboardOct>0</BillboardOct>
+    <BillboardNov>0</BillboardNov>
+    <BillboardDec>0</BillboardDec>
+    <PrintJan>0</PrintJan>
+    <PrintFeb>0</PrintFeb>
+    <PrintMar>0</PrintMar>
+    <PrintApr>0</PrintApr>
+    <PrintMay>0</PrintMay>
+    <PrintJun>0</PrintJun>
+    <PrintJul>0</PrintJul>
+    <PrintAug>0</PrintAug>
+    <PrintSept>0</PrintSept>
+    <PrintOct>0</PrintOct>
+    <PrintNov>0</PrintNov>
+    <PrintDec>0</PrintDec>
+    <RadioJan>0</RadioJan>
+    <RadioFeb>0</RadioFeb>
+    <RadioMar>0</RadioMar>
+    <RadioApr>0</RadioApr>
+    <RadioMay>0</RadioMay>
+    <RadioJun>0</RadioJun>
+    <RadioJul>0</RadioJul>
+    <RadioAug>0</RadioAug>
+    <RadioSept>0</RadioSept>
+    <RadioOct>0</RadioOct>
+    <RadioNov>0</RadioNov>
+    <RadioDec>0</RadioDec>
+    <TVJan>0</TVJan>
+    <TVFeb>0</TVFeb>
+    <TVMar>0</TVMar>
+    <TVApr>0</TVApr>
+    <TVMay>0</TVMay>
+    <TVJun>0</TVJun>
+    <TVJul>0</TVJul>
+    <TVAug>0</TVAug>
+    <TVSept>0</TVSept>
+    <TVOct>0</TVOct>
+    <TVNov>0</TVNov>
+    <TVDec>0</TVDec>
+    <DirectJan>0</DirectJan>
+    <DirectFeb>0</DirectFeb>
+    <DirectMar>0</DirectMar>
+    <DirectApr>0</DirectApr>
+    <DirectMay>0</DirectMay>
+    <DirectJun>0</DirectJun>
+    <DirectJul>0</DirectJul>
+    <DirectAug>0</DirectAug>
+    <DirectSept>0</DirectSept>
+    <DirectOct>0</DirectOct>
+    <DirectNov>0</DirectNov>
+    <DirectDec>0</DirectDec>
+    <CableTotal>0</CableTotal>
+    <YellowTotal>0</YellowTotal>
+    <MobileTotal>0</MobileTotal>
+    <BillboardTotal>0</BillboardTotal>
+    <PrintTotal>0</PrintTotal>
+    <RadioTotal>0</RadioTotal>
+    <TVTotal>0</TVTotal>
+    <DirectTotal>0</DirectTotal>
+    <TotalJan>0</TotalJan>
+    <TotalFeb>0</TotalFeb>
+    <TotalMar>0</TotalMar>
+    <TotalApr>0</TotalApr>
+    <TotalMay>0</TotalMay>
+    <TotalJun>0</TotalJun>
+    <TotalJul>0</TotalJul>
+    <TotalAug>0</TotalAug>
+    <TotalSept>0</TotalSept>
+    <TotalOct>0</TotalOct>
+    <TotalNov>0</TotalNov>
+    <TotalDec>0</TotalDec>
+    <TotalTotal>0</TotalTotal>
+    <PlanATVJan>0</PlanATVJan>
+    <PlanATVFeb>0</PlanATVFeb>
+    <PlanATVMar>0</PlanATVMar>
+    <PlanATVApr>0</PlanATVApr>
+    <PlanATVMay>0</PlanATVMay>
+    <PlanATVJun>0</PlanATVJun>
+    <PlanATVJul>0</PlanATVJul>
+    <PlanATVAug>0</PlanATVAug>
+    <PlanATVSept>0</PlanATVSept>
+    <PlanATVOct>0</PlanATVOct>
+    <PlanATVNov>0</PlanATVNov>
+    <PlanATVDec>0</PlanATVDec>
+    <PlanATVTotal>0</PlanATVTotal>
+    <PlanBTVJan>0</PlanBTVJan>
+    <PlanBTVFeb>0</PlanBTVFeb>
+    <PlanBTVMar>0</PlanBTVMar>
+    <PlanBTVApr>0</PlanBTVApr>
+    <PlanBTVMay>0</PlanBTVMay>
+    <PlanBTVJun>0</PlanBTVJun>
+    <PlanBTVJul>0</PlanBTVJul>
+    <PlanBTVAug>0</PlanBTVAug>
+    <PlanBTVSept>0</PlanBTVSept>
+    <PlanBTVOct>0</PlanBTVOct>
+    <PlanBTVNov>0</PlanBTVNov>
+    <PlanBTVDec>0</PlanBTVDec>
+    <PlanBTVTotal>0</PlanBTVTotal>
+    <DescribeIdealTargetConsumer>Typically lower income individuals without a legal representation relationship</DescribeIdealTargetConsumer>
+    <OtherJan>0</OtherJan>
+    <OtherFeb>0</OtherFeb>
+    <OtherMar>0</OtherMar>
+    <OtherApr>0</OtherApr>
+    <OtherMay>0</OtherMay>
+    <OtherJun>0</OtherJun>
+    <OtherJul>0</OtherJul>
+    <OtherAug>0</OtherAug>
+    <OtherSept>0</OtherSept>
+    <OtherOct>0</OtherOct>
+    <OtherNov>0</OtherNov>
+    <OtherDec>0</OtherDec>
+    <OtherTotal>0</OtherTotal>
+    <SpikeEnumJan>Base</SpikeEnumJan>
+    <SpikeEnumFeb>Base</SpikeEnumFeb>
+    <SpikeEnumMar>Base</SpikeEnumMar>
+    <SpikeEnumApr>Base</SpikeEnumApr>
+    <SpikeEnumMay>Base</SpikeEnumMay>
+    <SpikeEnumJun>Base</SpikeEnumJun>
+    <SpikeEnumJul>Base</SpikeEnumJul>
+    <SpikeEnumAug>Base</SpikeEnumAug>
+    <SpikeEnumSept>Base</SpikeEnumSept>
+    <SpikeEnumOct>Base</SpikeEnumOct>
+    <SpikeEnumNov>Base</SpikeEnumNov>
+    <SpikeEnumDec>Base</SpikeEnumDec>
+    <PlanASpikeEnumJan>Spike</PlanASpikeEnumJan>
+    <PlanASpikeEnumFeb>Spike</PlanASpikeEnumFeb>
+    <PlanASpikeEnumMar>Base</PlanASpikeEnumMar>
+    <PlanASpikeEnumApr>Base</PlanASpikeEnumApr>
+    <PlanASpikeEnumMay>Base</PlanASpikeEnumMay>
+    <PlanASpikeEnumJun>Base</PlanASpikeEnumJun>
+    <PlanASpikeEnumJul>Base</PlanASpikeEnumJul>
+    <PlanASpikeEnumAug>Base</PlanASpikeEnumAug>
+    <PlanASpikeEnumSept>Base</PlanASpikeEnumSept>
+    <PlanASpikeEnumOct>Base</PlanASpikeEnumOct>
+    <PlanASpikeEnumNov>Base</PlanASpikeEnumNov>
+    <PlanASpikeEnumDec>Spike</PlanASpikeEnumDec>
+    <PlanBSpikeEnumJan>Base</PlanBSpikeEnumJan>
+    <PlanBSpikeEnumFeb>Base</PlanBSpikeEnumFeb>
+    <PlanBSpikeEnumMar>Base</PlanBSpikeEnumMar>
+    <PlanBSpikeEnumApr>Base</PlanBSpikeEnumApr>
+    <PlanBSpikeEnumMay>Base</PlanBSpikeEnumMay>
+    <PlanBSpikeEnumJun>Base</PlanBSpikeEnumJun>
+    <PlanBSpikeEnumJul>Base</PlanBSpikeEnumJul>
+    <PlanBSpikeEnumAug>Base</PlanBSpikeEnumAug>
+    <PlanBSpikeEnumSept>Base</PlanBSpikeEnumSept>
+    <PlanBSpikeEnumOct>Base</PlanBSpikeEnumOct>
+    <PlanBSpikeEnumNov>Base</PlanBSpikeEnumNov>
+    <PlanBSpikeEnumDec>Base</PlanBSpikeEnumDec>
+    <Proposed1>48000</Proposed1>
+    <Proposed2>24000</Proposed2>
+    <Proposed3>18000</Proposed3>
+    <Proposed4>10000</Proposed4>
+    <Proposed5>0</Proposed5>
+    <Proposed6>0</Proposed6>
+    <Proposed7>0</Proposed7>
+    <Proposed8>0</Proposed8>
+    <Proposed9>0</Proposed9>
+    <ProposedTotal>24000</ProposedTotal>
+    <ProposedLabel1>Television</ProposedLabel1>
+    <ProposedLabel2>Digital</ProposedLabel2>
+    <ProposedLabel3>Direct Mail</ProposedLabel3>
+    <ProposedLabel4>SEO/SEM</ProposedLabel4>
+    <ProposedLabel5 />
+    <ProposedLabel6 />
+    <ProposedLabel7 />
+    <ProposedLabel8 />
+    <ProposedLabel9 />
+    <LastYearLabel1>Cable</LastYearLabel1>
+    <LastYearLabel2>Television</LastYearLabel2>
+    <LastYearLabel3>Radio</LastYearLabel3>
+    <LastYearLabel4>Yellow Pages</LastYearLabel4>
+    <LastYearLabel5>Direct Mail</LastYearLabel5>
+    <LastYearLabel6>Digital</LastYearLabel6>
+    <LastYearLabel7 />
+    <LastYearLabel8 />
+    <LastYearLabel9 />
+    <PlanstoExpand>false</PlanstoExpand>
+    <pctTAIGrossSalesLastYear>0.0571428571428571428571428571</pctTAIGrossSalesLastYear>
+    <PlanALVAAverageSale>300</PlanALVAAverageSale>
+    <PlanALVAGrossProfitMargin>0.5</PlanALVAGrossProfitMargin>
+    <PlanAGrossProfitPerSale>150.0</PlanAGrossProfitPerSale>
+    <PlanAAverageRepeatSales>2</PlanAAverageRepeatSales>
+    <PlanAAverageCustomerValue>300.0</PlanAAverageCustomerValue>
+    <PlanAYearsOfPatronage>3</PlanAYearsOfPatronage>
+    <PlanALifetimeValuePerCustomer>900.0</PlanALifetimeValuePerCustomer>
+    <PlanAMonthlyInvestmentAverage>2000</PlanAMonthlyInvestmentAverage>
+    <PlanAProspectsNeededToBreakEven>2.2222222222222222222222222222</PlanAProspectsNeededToBreakEven>
+    <PlanAEstimatedMonthlyCustomerReach>200000</PlanAEstimatedMonthlyCustomerReach>
+    <PlanAPercentMonthlyCustomertoBreakEven>0.0000111111111111111111111111</PlanAPercentMonthlyCustomertoBreakEven>
+    <PlanBLVAAverageSale>300</PlanBLVAAverageSale>
+    <PlanBLVAGrossProfitMargin>0.5</PlanBLVAGrossProfitMargin>
+    <PlanBGrossProfitPerSale>150.0</PlanBGrossProfitPerSale>
+    <PlanBAverageRepeatSales>2</PlanBAverageRepeatSales>
+    <PlanBAverageCustomerValue>300.0</PlanBAverageCustomerValue>
+    <PlanBYearsOfPatronage>3</PlanBYearsOfPatronage>
+    <PlanBLifetimeValuePerCustomer>900.0</PlanBLifetimeValuePerCustomer>
+    <PlanBMonthlyInvestmentAverage>3000</PlanBMonthlyInvestmentAverage>
+    <PlanBProspectsNeededToBreakEven>3.3333333333333333333333333333</PlanBProspectsNeededToBreakEven>
+    <PlanBEstimatedMonthlyCustomerReach>250000</PlanBEstimatedMonthlyCustomerReach>
+    <PlanBPercentMonthlyCustomertoBreakEven>0.0000133333333333333333333333</PlanBPercentMonthlyCustomertoBreakEven>
+    <PlanAMonthlyDigitalInvestment>1000</PlanAMonthlyDigitalInvestment>
+    <PlanACostPerThousand>10.00</PlanACostPerThousand>
+    <PlanAClosingPctNumber>100000</PlanAClosingPctNumber>
+    <PlanAClickThroughRate>0.001</PlanAClickThroughRate>
+    <PlanAMonthlyClicks>100.000</PlanAMonthlyClicks>
+    <PlanACostPerClicks>10</PlanACostPerClicks>
+    <PlanASalesConversionPercentage>0.01</PlanASalesConversionPercentage>
+    <PlanAMonthlyConversions>1.00000</PlanAMonthlyConversions>
+    <PlanACostPerConversion>1000</PlanACostPerConversion>
+    <PlanAProjectedGrossProfit>3333</PlanAProjectedGrossProfit>
+    <PlanAMonthlyGrossProfit>3333.00000</PlanAMonthlyGrossProfit>
+    <PlanAMonthlyROID>2333.00000</PlanAMonthlyROID>
+    <PlanAMonthlyROIP>2.33300</PlanAMonthlyROIP>
+    <PlanBMonthlyDigitalInvestment>1000</PlanBMonthlyDigitalInvestment>
+    <PlanBCostPerThousand>10.00</PlanBCostPerThousand>
+    <PlanBClosingPctNumber>100000</PlanBClosingPctNumber>
+    <PlanBClickThroughRate>0.001</PlanBClickThroughRate>
+    <PlanBMonthlyClicks>100.000</PlanBMonthlyClicks>
+    <PlanBCostPerClicks>10</PlanBCostPerClicks>
+    <PlanBSalesConversionPercentage>0.01</PlanBSalesConversionPercentage>
+    <PlanBMonthlyConversions>1.00000</PlanBMonthlyConversions>
+    <PlanBCostPerConversion>1000</PlanBCostPerConversion>
+    <PlanBProjectedGrossProfit>3333</PlanBProjectedGrossProfit>
+    <PlanBMonthlyGrossProfit>3333.00000</PlanBMonthlyGrossProfit>
+    <PlanBMonthlyROID>2333.00000</PlanBMonthlyROID>
+    <PlanBMonthlyROIP>2.33300</PlanBMonthlyROIP>
+    <CurrentCompanySlogan>We have your back</CurrentCompanySlogan>
+    <SalesGoals>2200000</SalesGoals>
+  </SCRData>
+  <MediaInvestmentA>
+    <Station>WADL</Station>
+    <Jan>3000</Jan>
+    <Feb>3000</Feb>
+    <Mar>2000</Mar>
+    <Apr>2000</Apr>
+    <May>2000</May>
+    <June>1000</June>
+    <July>1000</July>
+    <Aug>1000</Aug>
+    <Sept>2000</Sept>
+    <Oct>2000</Oct>
+    <Nov>2000</Nov>
+    <Dec>3000</Dec>
+    <Total>24000</Total>
+  </MediaInvestmentA>
+  <MediaInvestmentA>
+    <Station>Digital</Station>
+    <Jan>1000</Jan>
+    <Feb>1000</Feb>
+    <Mar>1000</Mar>
+    <Apr>1000</Apr>
+    <May>1000</May>
+    <June>1000</June>
+    <July>1000</July>
+    <Aug>1000</Aug>
+    <Sept>1000</Sept>
+    <Oct>1000</Oct>
+    <Nov>1000</Nov>
+    <Dec>1000</Dec>
+    <Total>12000</Total>
+  </MediaInvestmentA>
+  <MediaInvestmentB>
+    <Station>WADL</Station>
+    <Jan>4500</Jan>
+    <Feb>3000</Feb>
+    <Mar>3000</Mar>
+    <Apr>3000</Apr>
+    <May>3000</May>
+    <June>1500</June>
+    <July>1500</July>
+    <Aug>1500</Aug>
+    <Sept>3000</Sept>
+    <Oct>3000</Oct>
+    <Nov>4500</Nov>
+    <Dec>4500</Dec>
+    <Total>36000</Total>
+  </MediaInvestmentB>
+  <MediaInvestmentB>
+    <Station>WWWW</Station>
+    <Jan>1000</Jan>
+    <Feb>1000</Feb>
+    <Mar>1000</Mar>
+    <Apr>1000</Apr>
+    <May>1000</May>
+    <June>1000</June>
+    <July>1000</July>
+    <Aug>1000</Aug>
+    <Sept>1000</Sept>
+    <Oct>1000</Oct>
+    <Nov>1000</Nov>
+    <Dec>1000</Dec>
+    <Total>12000</Total>
+  </MediaInvestmentB>
+  <MediaInvestmentB>
+    <Station>Digital</Station>
+    <Jan>1000</Jan>
+    <Feb>1000</Feb>
+    <Mar>1000</Mar>
+    <Apr>1000</Apr>
+    <May>1000</May>
+    <June>1000</June>
+    <July>1000</July>
+    <Aug>1000</Aug>
+    <Sept>1000</Sept>
+    <Oct>1000</Oct>
+    <Nov>1000</Nov>
+    <Dec>1000</Dec>
+    <Total>12000</Total>
+  </MediaInvestmentB>
+</NewDataSet>
