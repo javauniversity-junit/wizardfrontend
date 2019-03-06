@@ -1,7 +1,7 @@
-package web.page.strategicmarketingpage;
+package web.page.strategicmarketingpageone;
 
-public class StrategicMarketingPageModel {
-	public StrategicMarketingPageModel(int yearsInBusiness, int numberOfLocations, boolean planToExpand,
+public class StrategicMarketingPageOneModel {
+	public StrategicMarketingPageOneModel(int yearsInBusiness, int numberOfLocations, boolean planToExpand,
 			String misconceptions, String sellingAdvantages, String companyNameProjectImage,
 			String currentCompanySlogan, boolean companySloganProjectImageYes) {
 		super();
