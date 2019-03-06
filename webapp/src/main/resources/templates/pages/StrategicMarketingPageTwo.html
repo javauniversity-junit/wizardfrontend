@@ -46,19 +46,19 @@
 					</legend>
 
 					<div class="form-group">
-						<label for="yearsInBusiness">4. Who is the main competition (a)?</label> 
+						<label for="yearsInBusiness">4. Who is the main competition (A)?</label> 
 						<input type="text" class="form-control"
 							id="yearsInBusiness"
 							th:value="${dataPageModel?.competitionA}" name="competitionA"
 							required aria-describedby="competitionA"
-							placeholder="Enter main competition (a)" />
+							placeholder="Enter main competition (A)" />
 					</div>
 					<div class="form-group">
-						<label for="numberOfLocations">Who is the main competition (b)?</label> <input
+						<label for="numberOfLocations">Who is the main competition (B)?</label> <input
 							type="type" th:value="${dataPageModel?.competitionB}"
 							 class="form-control"
 							id="competitionB" name="competitionB"
-							placeholder="Enter main competition (b)" />
+							placeholder="Enter main competition (B)" />
 					</div>
 
 
@@ -66,12 +66,29 @@
 					<div class="form-group">
 
 						<div class="checkbox">
-							<label> <input type="checkbox" id="planToExpand"
-								name="planToExpand" required
-								th:checked="${dataPageModel?.planToExpand}" /> <span>
-									Plans to expand? </span>
+							<label for="competitionStrengthA">What are their strengths (A)?</label>
+								
+								<input type="text" id="competitionStrengthA"
+								name="competitionStrengthA" required
+								th:checked="${dataPageModel?.competitionStrengthA}" /> <span>
+									Enter strengths(A) </span>
 
-							</label>
+							
+
+						</div>
+
+					</div>
+										<div class="form-group">
+
+						<div class="checkbox">
+							<label for="competitionStrengthB">What are their strengths (B)?</label>
+								
+								<input type="text" id="competitionStrengthB"
+								name="competitionStrengthB" required
+								th:checked="${dataPageModel?.competitionStrengthB" /> <span>
+									Enter strengths(B) </span>
+
+							
 
 						</div>
 
