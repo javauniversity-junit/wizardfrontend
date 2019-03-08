@@ -30,7 +30,7 @@ public class StrategicMarketingPageOneController {
 	private WizardDataRepository wizardDataRepository;
 
 	private static final Logger mLog = Logger.getLogger(StrategicMarketingPageOneController.class.getName());
-	@RequestMapping(value = "/StrategicMarketingPagOne", method = RequestMethod.GET)
+	@RequestMapping(value = "/StrategicMarketingPageOne", method = RequestMethod.GET)
 	public String detail(Model model, @RequestParam String ID) {
 		mLog.info("starting detail");
 		//get wizard header 

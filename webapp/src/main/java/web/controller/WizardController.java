@@ -46,14 +46,21 @@ public class WizardController {
 		return "detail";
 	}
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public String add(@RequestParam String name, Authentication authentication) throws SQLException {
+	public String add(@RequestParam String name
+			,@RequestParam(required=false, value="") String wizardId
+			, Authentication authentication) throws SQLException {
 		// @ResponseBody means the returned String is the response, not a view name
 		// @RequestParam means it is a parameter from the GET or POST request
 		mLog.info("starting add");
 		mLog.info("name " + name);
-		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
-		
 		Wizard wizard = new Wizard();
+		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
+		if (!wizardId.equals("")) {
+			int wizardIdInt = Integer.parseInt(wizardId);
+			wizard.setWizardid(wizardIdInt);
+			
+		}
+		
 		wizard.setName(name);
 		wizard.setAgentid(userDetails.getAgent().getAgentid());
 		

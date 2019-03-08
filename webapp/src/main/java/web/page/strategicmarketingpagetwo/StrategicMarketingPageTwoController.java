@@ -81,8 +81,8 @@ public class StrategicMarketingPageTwoController {
 		}
 		
 		WizardData wizardData = new WizardData();
-	    wizardData.setPagename(PageNameEnum.StrategicMarketingPageOne.toString());
-		wizardData.setPagesequence(Pages.StrategicMarketingOne.getPageSequence());
+	    wizardData.setPagename(PageNameEnum.StrategicMarketingPageTwo.toString());
+		wizardData.setPagesequence(Pages.StrategicMarketingTwo.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0 ) {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
