@@ -9,13 +9,13 @@ public class StrategicMarketingPageTwoModel {
 			String companyNameProjectImage, String currentCompanySlogan, boolean companySloganProjectImage) {
 		super();
 		this.competitionA = competitionA;
-		competitionB = competitionB;
-		competitionStrengthA = competitionStrengthA;
-		competitionStrengthB = competitionStrengthB;
-		competitionWeaknessA = competitionWeaknessA;
-		competitionWeaknessB = competitionWeaknessB;
-		companyNameProjectImage = companyNameProjectImage;
-		currentCompanySlogan = currentCompanySlogan;
+		this.competitionB = competitionB;
+		this.competitionStrengthA = competitionStrengthA;
+		this.competitionStrengthB = competitionStrengthB;
+		this.competitionWeaknessA = competitionWeaknessA;
+		this.competitionWeaknessB = competitionWeaknessB;
+		this.companyNameProjectImage = companyNameProjectImage;
+		this.currentCompanySlogan = currentCompanySlogan;
 		this.companySloganProjectImage = companySloganProjectImage;
 	}
 	private String competitionStrengthB; 
