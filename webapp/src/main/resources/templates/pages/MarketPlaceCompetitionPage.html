@@ -64,12 +64,50 @@
 							name="thirdTierBusiness" placeholder="Enter 3rd Tier Business" />
 					</div>	
 					<div class="form-group">
-						<label for="fourthTierBusiness">4th Tier Business (#4 in market revenue)</label> <input
+						<label for="fourthTierBusiness">4th Tier Business (#4 or smaller revenue in market)</label> <input
 							type="text" th:value="${dataPageModel?.fourthTierBusiness}"
 							required class="form-control" id="fourthTierBusiness"
 							name="fourthTierBusiness" placeholder="Enter 4th Tier Business" />
-					</div>										
-
+					</div>			
+					<div class="form-group">
+						<label for="fourthTierBusiness">Who is the main competition?</label>
+						
+						    <input
+							type="text" th:value="${dataPageModel?.competitionA}"
+							required class="form-control" id="competitionA"
+							name="competitionA" placeholder="Enter Main Competition" />
+							
+							<input
+							type="text" th:value="${dataPageModel?.competitionB}"
+							required class="form-control" id="competitionB"
+							name="competitionB" placeholder="Enter Main Competition" />
+					</div>		
+					<div class="form-group">
+						<label for="competitionStrengthA">What are their strengths?</label>
+						
+						    <input
+							type="text" th:value="${dataPageModel?.competitionStrengthA}"
+							required class="form-control" id="competitionStrengthA"
+							name="competitionStrengthA" placeholder="Enter their strengths" />
+							
+							<input
+							type="text" th:value="${dataPageModel?.competitionStrengthB}"
+							required class="form-control" id="competitionStrengthB"
+							name="competitionStrengthB" placeholder="Enter their strengths" />
+					</div>													
+					<div class="form-group">
+						<label for="CompetitionWeaknessA">What are their weaknesses?</label>
+						
+						    <input
+							type="text" th:value="${dataPageModel?.CompetitionWeaknessA}"
+							required class="form-control" id="CompetitionWeaknessA"
+							name="CompetitionWeaknessA" placeholder="Enter their weaknesses" />
+							
+													    <input
+							type="text" th:value="${dataPageModel?.CompetitionWeaknessB}"
+							required class="form-control" id="CompetitionWeaknessB"
+							name="CompetitionWeaknessB" placeholder="Enter their weaknesses" />
+					</div>
 					<input type="hidden" id="nextPage"
 						th:value="'redirect:/TeamCommitmentPage?ID=' + ${wizard.wizardid}"
 						name="nextPage" /> 

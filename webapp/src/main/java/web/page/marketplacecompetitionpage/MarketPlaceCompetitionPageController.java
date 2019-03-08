@@ -53,19 +53,32 @@ public class MarketPlaceCompetitionPageController {
 	public String save(@RequestParam String wizardId
 			,@RequestParam String firstTierBusiness
 			,@RequestParam String secondTierBusiness
+			,@RequestParam String thirdTierBusiness
+			,@RequestParam String fourthTierBusiness
+			,@RequestParam String competitionA
+			,@RequestParam String competitionB
+			,@RequestParam String competitionStrengthA
+			,@RequestParam String competitionStrengthB
+			,@RequestParam String competitionWeaknessA
+			,@RequestParam String competitionWeaknessB
 			
 			,@RequestParam String wizarddataid
-			,@RequestParam String nextPage
-			,@RequestParam String publishNextPage
+			,@RequestParam String previousPage
+			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next
-	        ,@RequestParam(required=false, value="publish") String publish){
+	        ,@RequestParam(required=false, value="publish") String publish
+	        ,@RequestParam(required=false, value="previous") String previous
+	        ,@RequestParam String nextPage) {
 		mLog.info("starting save");
 		
 		//internal next page or publish
 		String internalNextPage = nextPage;
 		if (publish != null) {
-			internalNextPage= publishNextPage;
+			internalNextPage= publishPage;
 		}
+		if (previous != null) {
+			internalNextPage= previousPage;
+        }
 		
 		WizardData wizardData = new WizardData();
 	    wizardData.setPagename(PageNameEnum.MarketPlaceCompetitionPage.toString());
@@ -77,9 +90,9 @@ public class MarketPlaceCompetitionPageController {
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
 		MarketPlaceCompetitionPageModel pageModel  = new MarketPlaceCompetitionPageModel( firstTierBusiness,  secondTierBusiness,
-				"thirdTierBusiness", "fourthTierBusiness", "competitionA", "competitionB",
-				"competitionStrengthA", "competitionStrengthB", "competitionWeaknessA",
-				"competitionWeaknessB");
+				thirdTierBusiness, fourthTierBusiness, competitionA, competitionB,
+				competitionStrengthA, competitionStrengthB, competitionWeaknessA,
+				competitionWeaknessB);
 		String pageData = JSONManager.convertToJson(pageModel);
 		
 		wizardData.setPagedata(pageData);

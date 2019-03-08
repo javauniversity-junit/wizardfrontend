@@ -79,7 +79,7 @@ public class TeamCommitmentPageController {
 		//internal next page or publish
 		String internalNextPage = nextPage;
 		if (publish != null) {
-					internalNextPage= publishPage;
+			internalNextPage= publishPage;
 		}
 		if (previous != null) {
 			internalNextPage= previousPage;

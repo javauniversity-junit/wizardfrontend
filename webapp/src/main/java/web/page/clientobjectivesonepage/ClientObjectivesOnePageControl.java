@@ -197,7 +197,7 @@ public class ClientObjectivesOnePageControl {
 		}
 		
 		//sort
-		Collections.sort(orderList, new ClientObjectivesSortOrder()); 
+		// tinas Collections.sort(orderList, new ClientObjectivesSortOrder()); 
 		
 		//DemographicManager.convertFromJson(json)
 		model.addAttribute("wizardData", wizardData);
