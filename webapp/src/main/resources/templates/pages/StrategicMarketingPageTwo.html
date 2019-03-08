@@ -112,17 +112,7 @@
 							placeholder="Enter Current Company Slogan: " />
 					</div>				
 
-					<div class="form-group">
-						<label for=sellingAdvantages>3. What are the clients most
-							distinctive selling advantages?</label>
-
-						<textarea id="sellingAdvantages" name="sellingAdvantages"
-							class="form-control" rows="4" maxlength="50" cols="50" required
-							th:text="${dataPageModel?.sellingAdvantages}">
-							 
-							 
-							 </textarea>
-					</div>
+				
 
 					<div class="form-group">
 						<label for=companyNameProjectImage>4. What image does the
@@ -152,7 +142,7 @@
 							<label> <input type="checkbox"
 								id="companySloganProjectImage" name="companySloganProjectImage"
 								required
-								th:checked="${dataPageModel?.companySloganProjectImageYes}" />
+								th:checked="${dataPageModel?.companySloganProjectImage}" />
 								<span> Does their current slogan project the same image?
 							</span>
 
