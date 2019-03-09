@@ -8,7 +8,6 @@ public enum Pages {
 	StrategicMarketingOne(PageNameEnum.StrategicMarketingPageOne, PageSequenceEnum.StrategicMarketingPageOne_Sequence.getDatabaseValue())
 	,StrategicMarketingTwo(PageNameEnum.StrategicMarketingPageTwo, PageSequenceEnum.StrategicMarketingPageTwo_Sequence.getDatabaseValue())
 	,StrategicMarketingThree(PageNameEnum.StrategicMarketingPageThree, PageSequenceEnum.StrategicMarketingPageThree_Sequence.getDatabaseValue())
-	,StrategicMarketingFour(PageNameEnum.StrategicMarketingPageFour, PageSequenceEnum.StrategicMarketingPageFour_Sequence.getDatabaseValue())
 	,PRESENTEDTOPAGE(PageNameEnum.PresentedToPage, PageSequenceEnum.PRESENTEDTOPAGE_SEQUENCE.getDatabaseValue())
 	,TEAMCOMMITMENTPAGE(PageNameEnum.TeamCommitmentPage, PageSequenceEnum.TEAMCOMMITMENTPAGE_SEQUENCE.getDatabaseValue())
 	,CLIENTOBJECTIVESONEPAGE(PageNameEnum.ClientObjectivesOnePage, PageSequenceEnum.CLIENTOBJECTIVESONEPAGE_SEQUENCE.getDatabaseValue())

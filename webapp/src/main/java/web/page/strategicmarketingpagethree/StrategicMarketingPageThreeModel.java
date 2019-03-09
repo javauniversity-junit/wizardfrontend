@@ -2,35 +2,43 @@ package web.page.strategicmarketingpagethree;
 
 public class StrategicMarketingPageThreeModel {
 
-    private boolean PoorestJanuary;
-    private boolean PoorestFebruary;
-    private boolean PoorestMarch;
-    private boolean PoorestApril;
-    private boolean PoorestMay;
-    private boolean PoorestJune;
-    private boolean PoorestJuly;
-    private boolean PoorestAugust;
-    private boolean PoorestSeptember;
-    private boolean PoorestOctober;
-    private boolean PoorestNovember;
-    private boolean PoorestDecember;
+    private boolean poorestJanuary;
+    private boolean poorestFebruary;
+    private boolean poorestMarch;
+    private boolean poorestApril;
+    private boolean poorestMay;
+    private boolean poorestJune;
+    private boolean poorestJuly;
+    private boolean poorestAugust;
+    private boolean poorestSeptember;
+    private boolean poorestOctober;
+    private boolean poorestNovember;
+    private boolean poorestDecember;
 
 
-    private boolean BestJanuary;
-    private boolean BestFebruary;
-    private boolean BestMarch;
-    private boolean BestApril;
-    private boolean BestMay;
-    private boolean BestJune;
-    private boolean BestJuly;
-    private boolean BestAugust;
-    private boolean BestSeptember;
-    private boolean BestOctober;
-    private boolean BestNovember;
-    private boolean BestDecember;
+    private boolean bestJanuary;
+    private boolean bestFebruary;
+    private boolean bestMarch;
+    private boolean bestApril;
+    private boolean bestMay;
+    private boolean bestJune;
+    private boolean bestJuly;
+    private boolean bestAugust;
+    private boolean bestSeptember;
+    private boolean bestOctober;
+    private boolean bestNovember;
+    private boolean bestDecember;
 
 
-    public StrategicMarketingPageThreeModel(boolean poorestJanuary, boolean poorestFebruary, boolean poorestMarch,
+	
+	private boolean bestMonday;
+    private boolean bestTuesday;
+    private boolean bestWednesday;
+    private boolean bestThursday;
+    private boolean bestFriday;
+    private boolean bestSaturday;
+    private boolean bestSunday;
+	public StrategicMarketingPageThreeModel(boolean poorestJanuary, boolean poorestFebruary, boolean poorestMarch,
 			boolean poorestApril, boolean poorestMay, boolean poorestJune, boolean poorestJuly, boolean poorestAugust,
 			boolean poorestSeptember, boolean poorestOctober, boolean poorestNovember, boolean poorestDecember,
 			boolean bestJanuary, boolean bestFebruary, boolean bestMarch, boolean bestApril, boolean bestMay,
@@ -38,231 +46,227 @@ public class StrategicMarketingPageThreeModel {
 			boolean bestNovember, boolean bestDecember, boolean bestMonday, boolean bestTuesday, boolean bestWednesday,
 			boolean bestThursday, boolean bestFriday, boolean bestSaturday, boolean bestSunday) {
 		super();
-		PoorestJanuary = poorestJanuary;
-		PoorestFebruary = poorestFebruary;
-		PoorestMarch = poorestMarch;
-		PoorestApril = poorestApril;
-		PoorestMay = poorestMay;
-		PoorestJune = poorestJune;
-		PoorestJuly = poorestJuly;
-		PoorestAugust = poorestAugust;
-		PoorestSeptember = poorestSeptember;
-		PoorestOctober = poorestOctober;
-		PoorestNovember = poorestNovember;
-		PoorestDecember = poorestDecember;
-		BestJanuary = bestJanuary;
-		BestFebruary = bestFebruary;
-		BestMarch = bestMarch;
-		BestApril = bestApril;
-		BestMay = bestMay;
-		BestJune = bestJune;
-		BestJuly = bestJuly;
-		BestAugust = bestAugust;
-		BestSeptember = bestSeptember;
-		BestOctober = bestOctober;
-		BestNovember = bestNovember;
-		BestDecember = bestDecember;
-		BestMonday = bestMonday;
-		BestTuesday = bestTuesday;
-		BestWednesday = bestWednesday;
-		BestThursday = bestThursday;
-		BestFriday = bestFriday;
-		BestSaturday = bestSaturday;
-		BestSunday = bestSunday;
+		this.poorestJanuary = poorestJanuary;
+		this.poorestFebruary = poorestFebruary;
+		this.poorestMarch = poorestMarch;
+		this.poorestApril = poorestApril;
+		this.poorestMay = poorestMay;
+		this.poorestJune = poorestJune;
+		this.poorestJuly = poorestJuly;
+		this.poorestAugust = poorestAugust;
+		this.poorestSeptember = poorestSeptember;
+		this.poorestOctober = poorestOctober;
+		this.poorestNovember = poorestNovember;
+		this.poorestDecember = poorestDecember;
+		this.bestJanuary = bestJanuary;
+		this.bestFebruary = bestFebruary;
+		this.bestMarch = bestMarch;
+		this.bestApril = bestApril;
+		this.bestMay = bestMay;
+		this.bestJune = bestJune;
+		this.bestJuly = bestJuly;
+		this.bestAugust = bestAugust;
+		this.bestSeptember = bestSeptember;
+		this.bestOctober = bestOctober;
+		this.bestNovember = bestNovember;
+		this.bestDecember = bestDecember;
+		this.bestMonday = bestMonday;
+		this.bestTuesday = bestTuesday;
+		this.bestWednesday = bestWednesday;
+		this.bestThursday = bestThursday;
+		this.bestFriday = bestFriday;
+		this.bestSaturday = bestSaturday;
+		this.bestSunday = bestSunday;
 	}
 	public boolean isPoorestJanuary() {
-		return PoorestJanuary;
+		return poorestJanuary;
 	}
 	public void setPoorestJanuary(boolean poorestJanuary) {
-		PoorestJanuary = poorestJanuary;
+		this.poorestJanuary = poorestJanuary;
 	}
 	public boolean isPoorestFebruary() {
-		return PoorestFebruary;
+		return poorestFebruary;
 	}
 	public void setPoorestFebruary(boolean poorestFebruary) {
-		PoorestFebruary = poorestFebruary;
+		this.poorestFebruary = poorestFebruary;
 	}
 	public boolean isPoorestMarch() {
-		return PoorestMarch;
+		return poorestMarch;
 	}
 	public void setPoorestMarch(boolean poorestMarch) {
-		PoorestMarch = poorestMarch;
+		this.poorestMarch = poorestMarch;
 	}
 	public boolean isPoorestApril() {
-		return PoorestApril;
+		return poorestApril;
 	}
 	public void setPoorestApril(boolean poorestApril) {
-		PoorestApril = poorestApril;
+		this.poorestApril = poorestApril;
 	}
 	public boolean isPoorestMay() {
-		return PoorestMay;
+		return poorestMay;
 	}
 	public void setPoorestMay(boolean poorestMay) {
-		PoorestMay = poorestMay;
+		this.poorestMay = poorestMay;
 	}
 	public boolean isPoorestJune() {
-		return PoorestJune;
+		return poorestJune;
 	}
 	public void setPoorestJune(boolean poorestJune) {
-		PoorestJune = poorestJune;
+		this.poorestJune = poorestJune;
 	}
 	public boolean isPoorestJuly() {
-		return PoorestJuly;
+		return poorestJuly;
 	}
 	public void setPoorestJuly(boolean poorestJuly) {
-		PoorestJuly = poorestJuly;
+		this.poorestJuly = poorestJuly;
 	}
 	public boolean isPoorestAugust() {
-		return PoorestAugust;
+		return poorestAugust;
 	}
 	public void setPoorestAugust(boolean poorestAugust) {
-		PoorestAugust = poorestAugust;
+		this.poorestAugust = poorestAugust;
 	}
 	public boolean isPoorestSeptember() {
-		return PoorestSeptember;
+		return poorestSeptember;
 	}
 	public void setPoorestSeptember(boolean poorestSeptember) {
-		PoorestSeptember = poorestSeptember;
+		this.poorestSeptember = poorestSeptember;
 	}
 	public boolean isPoorestOctober() {
-		return PoorestOctober;
+		return poorestOctober;
 	}
 	public void setPoorestOctober(boolean poorestOctober) {
-		PoorestOctober = poorestOctober;
+		this.poorestOctober = poorestOctober;
 	}
 	public boolean isPoorestNovember() {
-		return PoorestNovember;
+		return poorestNovember;
 	}
 	public void setPoorestNovember(boolean poorestNovember) {
-		PoorestNovember = poorestNovember;
+		this.poorestNovember = poorestNovember;
 	}
 	public boolean isPoorestDecember() {
-		return PoorestDecember;
+		return poorestDecember;
 	}
 	public void setPoorestDecember(boolean poorestDecember) {
-		PoorestDecember = poorestDecember;
+		this.poorestDecember = poorestDecember;
 	}
 	public boolean isBestJanuary() {
-		return BestJanuary;
+		return bestJanuary;
 	}
 	public void setBestJanuary(boolean bestJanuary) {
-		BestJanuary = bestJanuary;
+		this.bestJanuary = bestJanuary;
 	}
 	public boolean isBestFebruary() {
-		return BestFebruary;
+		return bestFebruary;
 	}
 	public void setBestFebruary(boolean bestFebruary) {
-		BestFebruary = bestFebruary;
+		this.bestFebruary = bestFebruary;
 	}
 	public boolean isBestMarch() {
-		return BestMarch;
+		return bestMarch;
 	}
 	public void setBestMarch(boolean bestMarch) {
-		BestMarch = bestMarch;
+		this.bestMarch = bestMarch;
 	}
 	public boolean isBestApril() {
-		return BestApril;
+		return bestApril;
 	}
 	public void setBestApril(boolean bestApril) {
-		BestApril = bestApril;
+		this.bestApril = bestApril;
 	}
 	public boolean isBestMay() {
-		return BestMay;
+		return bestMay;
 	}
 	public void setBestMay(boolean bestMay) {
-		BestMay = bestMay;
+		this.bestMay = bestMay;
 	}
 	public boolean isBestJune() {
-		return BestJune;
+		return bestJune;
 	}
 	public void setBestJune(boolean bestJune) {
-		BestJune = bestJune;
+		this.bestJune = bestJune;
 	}
 	public boolean isBestJuly() {
-		return BestJuly;
+		return bestJuly;
 	}
 	public void setBestJuly(boolean bestJuly) {
-		BestJuly = bestJuly;
+		this.bestJuly = bestJuly;
 	}
 	public boolean isBestAugust() {
-		return BestAugust;
+		return bestAugust;
 	}
 	public void setBestAugust(boolean bestAugust) {
-		BestAugust = bestAugust;
+		this.bestAugust = bestAugust;
 	}
 	public boolean isBestSeptember() {
-		return BestSeptember;
+		return bestSeptember;
 	}
 	public void setBestSeptember(boolean bestSeptember) {
-		BestSeptember = bestSeptember;
+		this.bestSeptember = bestSeptember;
 	}
 	public boolean isBestOctober() {
-		return BestOctober;
+		return bestOctober;
 	}
 	public void setBestOctober(boolean bestOctober) {
-		BestOctober = bestOctober;
+		this.bestOctober = bestOctober;
 	}
 	public boolean isBestNovember() {
-		return BestNovember;
+		return bestNovember;
 	}
 	public void setBestNovember(boolean bestNovember) {
-		BestNovember = bestNovember;
+		this.bestNovember = bestNovember;
 	}
 	public boolean isBestDecember() {
-		return BestDecember;
+		return bestDecember;
 	}
 	public void setBestDecember(boolean bestDecember) {
-		BestDecember = bestDecember;
+		this.bestDecember = bestDecember;
 	}
 	public boolean isBestMonday() {
-		return BestMonday;
+		return bestMonday;
 	}
 	public void setBestMonday(boolean bestMonday) {
-		BestMonday = bestMonday;
+		this.bestMonday = bestMonday;
 	}
 	public boolean isBestTuesday() {
-		return BestTuesday;
+		return bestTuesday;
 	}
 	public void setBestTuesday(boolean bestTuesday) {
-		BestTuesday = bestTuesday;
+		this.bestTuesday = bestTuesday;
 	}
 	public boolean isBestWednesday() {
-		return BestWednesday;
+		return bestWednesday;
 	}
 	public void setBestWednesday(boolean bestWednesday) {
-		BestWednesday = bestWednesday;
+		this.bestWednesday = bestWednesday;
 	}
 	public boolean isBestThursday() {
-		return BestThursday;
+		return bestThursday;
 	}
 	public void setBestThursday(boolean bestThursday) {
-		BestThursday = bestThursday;
+		this.bestThursday = bestThursday;
 	}
 	public boolean isBestFriday() {
-		return BestFriday;
+		return bestFriday;
 	}
 	public void setBestFriday(boolean bestFriday) {
-		BestFriday = bestFriday;
+		this.bestFriday = bestFriday;
 	}
 	public boolean isBestSaturday() {
-		return BestSaturday;
+		return bestSaturday;
 	}
 	public void setBestSaturday(boolean bestSaturday) {
-		BestSaturday = bestSaturday;
+		this.bestSaturday = bestSaturday;
 	}
 	public boolean isBestSunday() {
-		return BestSunday;
+		return bestSunday;
 	}
 	public void setBestSunday(boolean bestSunday) {
-		BestSunday = bestSunday;
+		this.bestSunday = bestSunday;
 	}
-	private boolean BestMonday;
-    private boolean BestTuesday;
-    private boolean BestWednesday;
-    private boolean BestThursday;
-    private boolean BestFriday;
-    private boolean BestSaturday;
-    private boolean BestSunday;
+    
+    
+    
 
 
 }
