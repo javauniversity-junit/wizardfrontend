@@ -38,13 +38,19 @@ public class StrategicMarketingPageThreeModel {
     private boolean bestFriday;
     private boolean bestSaturday;
     private boolean bestSunday;
+    private String compliments;
+    private String complaint;
+    private String marketingStrategy;
+    private String socialStrategy;
+	
 	public StrategicMarketingPageThreeModel(boolean poorestJanuary, boolean poorestFebruary, boolean poorestMarch,
 			boolean poorestApril, boolean poorestMay, boolean poorestJune, boolean poorestJuly, boolean poorestAugust,
 			boolean poorestSeptember, boolean poorestOctober, boolean poorestNovember, boolean poorestDecember,
 			boolean bestJanuary, boolean bestFebruary, boolean bestMarch, boolean bestApril, boolean bestMay,
 			boolean bestJune, boolean bestJuly, boolean bestAugust, boolean bestSeptember, boolean bestOctober,
 			boolean bestNovember, boolean bestDecember, boolean bestMonday, boolean bestTuesday, boolean bestWednesday,
-			boolean bestThursday, boolean bestFriday, boolean bestSaturday, boolean bestSunday) {
+			boolean bestThursday, boolean bestFriday, boolean bestSaturday, boolean bestSunday, String compliments,
+			String complaint, String marketingStrategy, String socialStrategy) {
 		super();
 		this.poorestJanuary = poorestJanuary;
 		this.poorestFebruary = poorestFebruary;
@@ -77,7 +83,44 @@ public class StrategicMarketingPageThreeModel {
 		this.bestFriday = bestFriday;
 		this.bestSaturday = bestSaturday;
 		this.bestSunday = bestSunday;
+		this.compliments = compliments;
+		this.complaint = complaint;
+		this.marketingStrategy = marketingStrategy;
+		this.socialStrategy = socialStrategy;
 	}
+	
+	public String getCompliments() {
+		return compliments;
+	}
+
+	public void setCompliments(String compliments) {
+		this.compliments = compliments;
+	}
+
+	public String getComplaint() {
+		return complaint;
+	}
+
+	public void setComplaint(String complaint) {
+		this.complaint = complaint;
+	}
+
+	public String getMarketingStrategy() {
+		return marketingStrategy;
+	}
+
+	public void setMarketingStrategy(String marketingStrategy) {
+		this.marketingStrategy = marketingStrategy;
+	}
+
+	public String getSocialStrategy() {
+		return socialStrategy;
+	}
+
+	public void setSocialStrategy(String socialStrategy) {
+		this.socialStrategy = socialStrategy;
+	}
+
 	public boolean isPoorestJanuary() {
 		return poorestJanuary;
 	}

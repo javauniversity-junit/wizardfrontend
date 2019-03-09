@@ -64,9 +64,13 @@ public class StrategicMarketingPageThreeController {
 			@RequestParam boolean bestJuly, @RequestParam boolean bestAugust, @RequestParam boolean bestSeptember,
 			@RequestParam boolean bestOctober, @RequestParam boolean bestNovember, @RequestParam boolean bestDecember,
 			@RequestParam boolean bestMonday, @RequestParam boolean bestTuesday, @RequestParam boolean bestWednesday,
-			@RequestParam boolean bestThursday, @RequestParam boolean bestFriday, @RequestParam boolean bestSaturday,
-			@RequestParam boolean bestSunday, @RequestParam String nextPage, @RequestParam String publishPage,
-			@RequestParam(required = false, value = "next") String next,
+			@RequestParam boolean bestThursday, @RequestParam boolean bestFriday, @RequestParam boolean bestSaturday,		
+		@RequestParam boolean bestSunday, @RequestParam String nextPage, @RequestParam String publishPage,
+		@RequestParam(required=false, value="") String compliments
+		,@RequestParam(required=false, value="") String complaint
+		,@RequestParam(required=false, value="") String marketingStrategy
+		,@RequestParam(required=false, value="") String socialStrategy,
+		@RequestParam(required = false, value = "next") String next,
 			@RequestParam(required = false, value = "publish") String publish) {
 		mLog.info("starting save");
 
@@ -91,7 +95,7 @@ public class StrategicMarketingPageThreeController {
 				 bestJanuary,  bestFebruary, bestMarch,  bestApril,  bestMay,
 				 bestJune,  bestJuly,  bestAugust, bestSeptember,  bestOctober,
 			 bestNovember,  bestDecember,  bestMonday,  bestTuesday,  bestWednesday,
-				 bestThursday,  bestFriday,  bestSaturday,  bestSunday);
+				 bestThursday,  bestFriday,  bestSaturday,  bestSunday, compliments,complaint,marketingStrategy,socialStrategy);
 		
 		
 		String pageData = JSONManager.convertToJson(pageModel);
