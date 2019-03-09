@@ -15,6 +15,7 @@ import web.page.marketplacecompetitionpage.MarketPlaceCompetitionPageModel;
 import web.model.WizardData;
 import web.page.presentedtopage.PresentedToPageController;
 import web.page.presentedtopage.PresentedToPageModel;
+import web.page.strategicmarketingpageone.StrategicMarketingPageOneModel;
 import web.page.teamcommitmentpage.TeamCommitmentPageModel;
 import web.repository.WizardDataRepository;
 
@@ -28,7 +29,7 @@ public class PublishController {
 	@RequestMapping(value = "/Publish", method = RequestMethod.GET)
 	public String detail(Model model, @RequestParam String ID) {
 		Integer idInt = Integer.parseInt(ID);
-		// get all
+		// get all pages
 		Iterable<WizardData> dataPages = wizardDataRepository.findByWizardid(idInt);
 		for (WizardData data : dataPages) {
 			// pull of data model
@@ -58,6 +59,15 @@ public class PublishController {
 				model.addAttribute("TeamCommitmentPage", teamCommitmentPageModel);
 				mLog.info("found page TeamCommitmentPage");
 				break;
+			case StrategicMarketingPageOne:
+				StrategicMarketingPageOneModel strategicMarketingPageOneModel = null;
+
+				strategicMarketingPageOneModel = (StrategicMarketingPageOneModel) JSONManager.convertFromJson(data.getPagedata(),
+						StrategicMarketingPageOneModel.class);
+				model.addAttribute("StrategicMarketingPageOne", strategicMarketingPageOneModel);
+				mLog.info("found page StrategicMarketingPageOne");
+				mLog.info("value found page StrategicMarketingPageOne " + strategicMarketingPageOneModel.getYearsInBusiness());
+				break;				
 			case MarketPlaceCompetitionPage:
 				MarketPlaceCompetitionPageModel marketPlaceCompetitionPageModel = null;
 

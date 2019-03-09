@@ -51,18 +51,17 @@ public class MarketPlaceCompetitionPageController {
 	
 	@RequestMapping(value = "/saveMarketPlaceCompetitionPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
-			,@RequestParam String firstTierBusiness
-			,@RequestParam String secondTierBusiness
-			,@RequestParam String thirdTierBusiness
-			,@RequestParam String fourthTierBusiness
-			,@RequestParam String competitionA
-			,@RequestParam String competitionB
-			,@RequestParam String competitionStrengthA
-			,@RequestParam String competitionStrengthB
-			,@RequestParam String competitionWeaknessA
-			,@RequestParam String competitionWeaknessB
-			
-			,@RequestParam String wizarddataid
+			,@RequestParam (required=false, value="") String firstTierBusiness
+			,@RequestParam (required=false, value="") String secondTierBusiness
+			,@RequestParam (required=false, value="") String thirdTierBusiness
+			,@RequestParam (required=false, value="") String fourthTierBusiness
+			,@RequestParam (required=false, value="") String competitionA
+			,@RequestParam (required=false, value="") String competitionB
+			,@RequestParam (required=false, value="") String competitionStrengthA
+			,@RequestParam (required=false, value="") String competitionStrengthB
+			,@RequestParam (required=false, value="") String competitionWeaknessA
+			,@RequestParam (required=false, value="") String competitionWeaknessB			
+			,@RequestParam (required=false, value="") String wizarddataid
 			,@RequestParam String previousPage
 			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next
