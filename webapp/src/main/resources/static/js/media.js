@@ -1,7 +1,10 @@
-
+//class variable for global objects
 var objs = [];
 
-
+/**
+ * create id.
+ * return id
+ */
 function create_UUID(){
     var dt = new Date().getTime();
     var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -31,6 +34,12 @@ class AnimalES6 {
         console.log("I'm a " + this.name);
     }
 }
+/**
+ * add .
+ * @constructor
+ * @param {string} title - The title of the book.
+ * @param {string} author - The author of the book.
+ */
  
 function addObj(name, jan ) {
     var id = create_UUID();
@@ -39,6 +48,12 @@ function addObj(name, jan ) {
     lionES6.doSomething();
 }
 
+/**
+ * compare for sorting
+ * @constructor
+ * @param {string} title - The title of the book.
+ * @param {string} author - The author of the book.
+ */
 function compare(a,b) {
   if (a.objName < b.objName)
     return -1;
@@ -46,17 +61,19 @@ function compare(a,b) {
     return 1;
   return 0;
 }
-
+/**
+ * sort array
+ * @constructor
+ * @param {string} title - The title of the book.
+ * @param {string} author - The author of the book.
+ */
 function sortObj() {
    objs.sort(compare);
    var test ="";
   for (i in objs) {
       test =  test + "," +  objs[i].objName;
    }
-
-
-
-  console.log("objs sorted" + test); 
+ console.log("objs sorted" + test); 
 }
 
 
@@ -68,9 +85,6 @@ function doesTheObjExist(name) {
          break;
       }
    }
-
-
-
   console.log("does obj exitst " + name + " " + found); 
   return found;
 }
@@ -87,6 +101,7 @@ function displayDetail(idValue) {
       }
    }
 }
+
 
 function addOrUpdate() {
     var textObjValue = document.getElementById("medianame").value;
@@ -122,22 +137,16 @@ function build() {
 //alert(items.innerHTML);
       
    }
-  
-  
-
-
-}
+}//end of function
 
 function remove (name) {
-
-
    for( var i = 0; i <  objs.length; i++){ 
       if (objs[i].objName === name) {
         objs.splice(i, 1); 
         console.log("removed  " + name);
      }
   }
-}
+}//end of function
 
 function change( key, name, desc ) {
    for (var i in objs) {
@@ -146,13 +155,13 @@ function change( key, name, desc ) {
         break; //Stop this loop, we found it!
      }
    }
-}
+}//end of function
 
 
 function convertToJSON() {
      var jsonString = JSON.stringify(objs);
     console.log("JSON  " + jsonString );
-}
+}//end of function
 
 
 
