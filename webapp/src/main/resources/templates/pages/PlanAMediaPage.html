@@ -15,9 +15,8 @@
 <!-- Favicon-->
 <link rel="shortcut icon" href="./img/icon.png">
     
+      
    
-    <script src="js/media.js">
-</script>
 </head>
 
 <body>
@@ -38,6 +37,8 @@
         <div class="row">
             <div class="col-4 border">
                 <h2> Media items </h2>
+                <div id="items">
+                </div>
                 
             </div>
             <div class="col-8 border">
@@ -46,7 +47,7 @@
                     <div class="form-group row">
                         <div class="col-4">
                             <label for="ex1">Jan</label>
-                            <input class="form-control" id="jan" type="number" name="jan">
+                            <input class="form-control" id="jan" type="text" name="jan"  data-type="currency"  placeholder="$1,000,000.00"  pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" >
                         </div>
                         <div class="col-4">
                             <label for="ex2">Feb</label>
@@ -106,7 +107,7 @@
                        <div class="form-group row">
                         
                             <label for="ex1">Name</label>
-                            <input class="form-control" id="media" type="text" name="media">
+                            <input class="form-control" id="medianame" type="text" name="media">
                         </div>
                         
                     </div>
@@ -119,30 +120,29 @@
        <div class="col-4">
        </div>
               <div class="col-8">
-              <button type="button" class="btn btn-success">Save</button>
+              <button type="button" onClick="javascript:addOrUpdate()" class="btn btn-success">Add</button>
        </div>
       
       </div>
     </div>
     
     	<!-- JavaScript files-->
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+		
+		<script src="js/currency.js">
+</script> 
+		
 
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-		integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-		integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-		crossorigin="anonymous"></script>
+	
 
 	<script>
 		$(function() {
 			$("#headerId").load("header.html");
 		});
 	</script>
+	
+	 <script src="js/media.js">
+</script>
 
 </body>
 
