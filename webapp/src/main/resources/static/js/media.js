@@ -99,7 +99,8 @@ function displayDetail(idValue) {
           hiddenObjId.value = objs[i].id;
          break;
       }
-   }
+   }//end of for
+   displayUpdateButton();
 }
 
 
@@ -118,7 +119,8 @@ function addOrUpdate() {
     if (update == "false") {
     	addObj(textObjValue,"dd");
     }
-   build();
+    displayAddButton();
+    build();
 
 }
 
@@ -144,13 +146,32 @@ function build() {
    }
 }//end of function
 
+function deleteRow() {
+	var hiddenObjId = document.getElementById("idname");
+	 for( var i = 0; i <  objs.length; i++){ 
+	      if (objs[i].id === hiddenObjId.value) {
+	        objs.splice(i, 1); 
+	        console.log("removed  " + name);
+	     }
+	  }//end of for
+	 clearForm();
+	 displayAddButton();
+	 build();
+}
+
+function clearForm () {
+    document.getElementById("myForm").reset();
+	
+}
+
 function remove (name) {
    for( var i = 0; i <  objs.length; i++){ 
       if (objs[i].objName === name) {
         objs.splice(i, 1); 
         console.log("removed  " + name);
      }
-  }
+  }//end of for
+   
 }//end of function
 
 function change( key, name, desc ) {
@@ -168,7 +189,23 @@ function convertToJSON() {
     console.log("JSON  " + jsonString );
 }//end of function
 
-
+function displayAddButton() {
+	var add = document.getElementById("add");
+	var update = document.getElementById("update"); 
+	    add.style.display = "block";
+	  
+	    update.style.display = "none";
+	    clearForm ();
+	 
+}
+function displayUpdateButton() {
+	var add = document.getElementById("add");
+	var update = document.getElementById("update"); 
+	    add.style.display = "none";
+	  
+	    update.style.display = "block";
+	 
+}
 
 
 console.log(" id " + create_UUID());
