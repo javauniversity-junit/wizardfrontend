@@ -42,7 +42,7 @@
 			</div>
 			<div class="col-8 border">
 				<h2 class="text-center">Monthly Values</h2>
-				<form id="myform">
+				<form id="myForm">
 					<fieldset>
 						<legend>
 							Strategic Marketing I - <span th:text="${wizard.name}"></span>
@@ -124,17 +124,17 @@
 							<label for="ex1">Name</label> 
 							<input class="form-control"
 								id="medianame" type="text" name="medianame" />
-								<input id="idname" type="text" name="idname" />
+								<input id="idname" type="hidden" name="idname" />
 
 						</div>
 
-						<div id="add" class="form-group row" style="padding: 2%;">
+						<div id="add" class="form-group row" style="padding: 1%;">
 
 							<button type="button" onClick="javascript:addOrUpdate()"
 								class="btn btn-success btn-lg btn-block">Add</button>
 						</div>
 
-						<div id="update" class="form-group row" style="padding: 2%;display: none;">
+						<div id="update" class="form-group row" style="padding: 1%;display: none;">
 
 							<button type="button" onClick="javascript:addOrUpdate()"
 								class="btn btn-success btn-lg btn-block">Update</button>
