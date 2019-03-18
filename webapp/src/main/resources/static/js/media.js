@@ -106,13 +106,18 @@ function displayDetail(idValue) {
 function addOrUpdate() {
     var textObjValue = document.getElementById("medianame").value;
     var hiddenObjIdValue = document.getElementById("idname").value;
-  for (i in objs) {
+    var update = "false";
+    for (i in objs) {
       if (hiddenObjIdValue ==  objs[i].id) {
           objs[i].nameValue = textObjValue;
           console.log("After update: ", objs[i]);
+          update = "true";
          break;
       }
    }//end of for
+    if (update == "false") {
+    	addObj(textObjValue,"dd");
+    }
    build();
 
 }
