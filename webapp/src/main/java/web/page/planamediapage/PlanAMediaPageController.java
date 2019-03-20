@@ -53,18 +53,19 @@ public class PlanAMediaPageController {
 	@RequestMapping(value = "/savePlanAMediaPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
 			,@RequestParam String wizarddataid
-			,@RequestParam(required=false, value="") String janType
-			,@RequestParam(required=false, value="") String febType
-			,@RequestParam(required=false, value="") String marType
-			,@RequestParam(required=false, value="") String aprType
-			,@RequestParam(required=false, value="") String mayType
-			,@RequestParam(required=false, value="") String junType
-			,@RequestParam(required=false, value="") String julType
-			,@RequestParam(required=false, value="") String augType
-			,@RequestParam (required=false, value="") String sepType
-			,@RequestParam (required=false, value="") String octType
-			,@RequestParam (required=false, value="") String novType
-			,@RequestParam (required=false, value="") String decType
+			,@RequestParam(required=false, value="") String jantype
+			,@RequestParam(required=false, value="") String febtype
+			,@RequestParam(required=false, value="") String martype
+			,@RequestParam(required=false, value="") String aprtype
+			,@RequestParam(required=false, value="") String maytype
+			,@RequestParam(required=false, value="") String juntype
+			,@RequestParam(required=false, value="") String jultype
+			,@RequestParam(required=false, value="") String augtype
+			,@RequestParam (required=false, value="") String septype
+			,@RequestParam (required=false, value="") String octtype
+			,@RequestParam (required=false, value="") String novtype
+			,@RequestParam (required=false, value="") String dectype
+			,@RequestParam (required=false, value="") String mediarows
 			,@RequestParam String nextPage
 			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next
@@ -94,8 +95,8 @@ public class PlanAMediaPageController {
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
 		List<MediaRow> mediaRowList = null;
-		PlanAMediaPageModel pageModel  = new PlanAMediaPageModel(janType, febType, marType, aprType, mayType,
-				junType, julType, augType,sepType, octType, novType, decType,
+		PlanAMediaPageModel pageModel  = new PlanAMediaPageModel(jantype, febtype, martype, aprtype, maytype,
+				juntype, jultype, augtype,septype, octtype, novtype, dectype,mediarows,
 				mediaRowList);
 		String pageData = JSONManager.convertToJson(pageModel);
 		

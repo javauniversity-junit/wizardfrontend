@@ -15,12 +15,23 @@ function create_UUID(){
     return uuid;
 }
 
-class AnimalES6 {
+class MediaRow {
    //  #ttt = "ddd";
-    constructor(id, name, jan) {
+    constructor(id, name, jan,fed,mar,apr,may,jun,jul,aug,sep,oct,nov,dec) {
         this.id = id;
         this.name = name;
         this.jan = jan;
+        this.feb = feb;
+        this.mar = mar;
+        this.apr = apr;
+        this.may = may;
+        this.jun = jun;
+        this.jul = jul;
+        this.aug = aug;
+        this.sep = sep;
+        this.oct = oct;
+        this.nov = nov;
+        this.dec = dec;
     }
   
    set nameValue(x) {
@@ -41,11 +52,20 @@ class AnimalES6 {
  * @param {string} author - The author of the book.
  */
  
-function addObj(name, jan ) {
+function addObj(name, jan,fed,mar,apr,may,june,july,aug,sept,oct,nov,dec ) {
     var id = create_UUID();
-    var lionES6 = new AnimalES6(id,name,jan);
+    var lionES6 = new MediaRow(id,name,jan,fed,mar,apr,may,june,july,aug,sept,oct,nov,dec);
+   
     objs.push(lionES6 );
-    lionES6.doSomething();
+    updatehiddenMediaRow ();
+    //lionES6.doSomething();
+}
+
+function updatehiddenMediaRow ()
+{
+	 var mediarow = document.getElementById("mediarow").value;
+	var json = convertToJSON();
+	mediarow = json;
 }
 
 /**
@@ -107,17 +127,45 @@ function displayDetail(idValue) {
 function addOrUpdate() {
     var textObjValue = document.getElementById("medianame").value;
     var hiddenObjIdValue = document.getElementById("idname").value;
+    
+    var jan = document.getElementById("jan").value;
+    var feb = document.getElementById("feb").value;
+    var mar = document.getElementById("mar").value;
+    var apr = document.getElementById("apr").value;
+    var may = document.getElementById("may").value;
+    var jun = document.getElementById("jun").value;
+    var jul = document.getElementById("jul").value;
+    var aug = document.getElementById("aug").value;  
+    var sep = document.getElementById("sep").value;
+    var oct = document.getElementById("oct").value;
+    var nov = document.getElementById("nov").value;
+    var dec = document.getElementById("dec").value;
+    
     var update = "false";
     for (i in objs) {
       if (hiddenObjIdValue ==  objs[i].id) {
           objs[i].nameValue = textObjValue;
+          objs[i].jan = jan;
+          objs[i].feb = feb;        
+          objs[i].mar = mar;   
+          objs[i].apr = apr; 
+          objs[i].may = may;
+          objs[i].jun = jun;        
+          objs[i].jul = jul;   
+          objs[i].aug = aug;  
+          objs[i].sep = sep;
+          objs[i].oct = oct;        
+          objs[i].nov = nov;   
+          objs[i].dec = dec;           
+          
+          updatehiddenMediaRow ();
           console.log("After update: ", objs[i]);
           update = "true";
          break;
       }
    }//end of for
     if (update == "false") {
-    	addObj(textObjValue,"dd");
+    	addObj(textObjValue,jan,feb,mar,apr,may,june,july,aug,sept,oct,nov,dec);
     }
     displayAddButton();
     build();
@@ -157,6 +205,7 @@ function deleteRow() {
 	 clearForm();
 	 displayAddButton();
 	 build();
+	 updatehiddenMediaRow ();
 }
 
 function clearForm () {
@@ -170,6 +219,7 @@ function remove (name) {
         objs.splice(i, 1); 
         console.log("removed  " + name);
      }
+      updatehiddenMediaRow ();
   }//end of for
    
 }//end of function
@@ -186,7 +236,9 @@ function change( key, name, desc ) {
 
 function convertToJSON() {
      var jsonString = JSON.stringify(objs);
+     
     console.log("JSON  " + jsonString );
+    return jsonString;
 }//end of function
 
 function displayAddButton() {
@@ -208,18 +260,19 @@ function displayUpdateButton() {
 }
 
 
-console.log(" id " + create_UUID());
+//console.log(" id " + create_UUID());
 
 
 
-addObj("Lion","0");
-addObj("Tiger","0");
-addObj("Monkey","0");
- sortObj();
+//addObj("Lion","0");
+//addObj("Tiger","0");
+//addObj("Monkey","0");
+ 
+//sortObj();
  //objs.push(lionES6 );
- console.log("objs " + objs[0].objName);
-doesTheObjExist("bird");
-doesTheObjExist("Lion");
-remove ("Lion");
- convertToJSON();
-build();
+  //console.log("objs " + objs[0].objName);
+//doesTheObjExist("bird");
+//doesTheObjExist("Lion");
+//remove ("Lion");
+ //convertToJSON();
+//build();

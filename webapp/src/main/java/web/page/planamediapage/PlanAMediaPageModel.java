@@ -17,6 +17,13 @@ public class PlanAMediaPageModel {
 	private String octType; 
 	private String novType;
 	private String decType;
+	private String mediaRows;
+	public String getMediaRows() {
+		return mediaRows;
+	}
+	public void setMediaRows(String mediaRows) {
+		this.mediaRows = mediaRows;
+	}
 	/**
 	 * 
 	 */
@@ -43,9 +50,10 @@ public class PlanAMediaPageModel {
 	public String getMarType() {
 		return marType;
 	}
+
 	public PlanAMediaPageModel(String janType, String febType, String marType, String aprType, String mayType,
 			String junType, String julType, String augType, String septType, String octType, String novType,
-			String decType, List<MediaRow> mediaRowList) {
+			String decType, String mediaRows, List<MediaRow> mediaRowList) {
 		super();
 		this.janType = janType;
 		this.febType = febType;
@@ -59,6 +67,7 @@ public class PlanAMediaPageModel {
 		this.octType = octType;
 		this.novType = novType;
 		this.decType = decType;
+		this.mediaRows = mediaRows;
 		this.mediaRowList = mediaRowList;
 	}
 	public void setMarType(String marType) {
