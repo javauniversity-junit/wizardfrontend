@@ -63,7 +63,7 @@ function addObj(name, jan,fed,mar,apr,may,june,july,aug,sept,oct,nov,dec ) {
 
 function updatehiddenMediaRow ()
 {
-	 var mediarow = document.getElementById("mediarow").value;
+	 var mediarow = document.getElementById("mediarows").value;
 	var json = convertToJSON();
 	mediarow = json;
 }
@@ -165,7 +165,7 @@ function addOrUpdate() {
       }
    }//end of for
     if (update == "false") {
-    	addObj(textObjValue,jan,feb,mar,apr,may,june,july,aug,sept,oct,nov,dec);
+    	addObj(textObjValue,jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec);
     }
     displayAddButton();
     build();
