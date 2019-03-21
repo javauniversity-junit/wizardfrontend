@@ -8,7 +8,8 @@ public enum PageSequenceEnum {
 	, CLIENTOBJECTIVESONEPAGE_SEQUENCE(4)
 	, StrategicMarketingPageOne_Sequence(5)
 	,StrategicMarketingPageTwo_Sequence(6)
-	,StrategicMarketingPageThree_Sequence(7);
+	,StrategicMarketingPageThree_Sequence(7)
+	,PlanAMediaPage_Sequence(18);
 	
 	private int databaseValue;
     private PageSequenceEnum(int databaseValue) {

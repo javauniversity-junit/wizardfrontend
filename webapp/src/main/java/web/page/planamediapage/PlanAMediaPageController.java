@@ -37,7 +37,7 @@ public class PlanAMediaPageController {
 		//get wizard header 
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
-		WizardData wizardData = wizardDataRepository.findByPagesequenceAndWizardid(Pages.StrategicMarketingTwo.getPageSequence(), wizard.getWizardid());
+		WizardData wizardData = wizardDataRepository.findByPagesequenceAndWizardid(Pages.PlanAMediaPage.getPageSequence(), wizard.getWizardid());
 		PlanAMediaPageModel dataPageModel = null;
 		if (wizardData != null) {
 			dataPageModel =(PlanAMediaPageModel)JSONManager.convertFromJson(wizardData.getPagedata(), PlanAMediaPageModel.class);
@@ -86,8 +86,8 @@ public class PlanAMediaPageController {
 		}
 		
 		WizardData wizardData = new WizardData();
-	    wizardData.setPagename(PageNameEnum.StrategicMarketingPageTwo.toString());
-		wizardData.setPagesequence(Pages.StrategicMarketingTwo.getPageSequence());
+	    wizardData.setPagename(PageNameEnum.PlanAMediaPage.toString());
+		wizardData.setPagesequence(Pages.PlanAMediaPage.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0 ) {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
