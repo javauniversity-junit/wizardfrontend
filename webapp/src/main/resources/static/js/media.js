@@ -1,6 +1,5 @@
 //class variable for global objects
 var objs = [];
-        this.name = name;
 /**
  * add .
  * @constructor
