@@ -10,25 +10,44 @@ public class MediaRow {
 	private double jun;
 	private double jul;
 	private double aug;
+	private double sep;
 	private double oct; 
 	private double nov;
 	private double dec;
-	public MediaRow(String name, double jan, double feb, double mar, double apr, double may, double jun, double jul,
-			double aug, double oct, double nov, double dec) {
+	private String janStr;
+	private String febStr;
+	private String marStr;
+	private String aprStr; 
+	private String mayStr;
+	private String junStr;
+	private String julStr;
+	private String augStr;
+	private String sepStr;
+	public MediaRow(String janStr, String febStr, String marStr, String aprStr, String mayStr, String junStr,
+			String julStr, String augStr, String sepStr, String octStr, String novStr, String decStr) {
 		super();
-		this.name = name;
-		this.jan = jan;
-		this.feb = feb;
-		this.mar = mar;
-		this.apr = apr;
-		this.may = may;
-		this.jun = jun;
-		this.jul = jul;
-		this.aug = aug;
-		this.oct = oct;
-		this.nov = nov;
-		this.dec = dec;
+		this.janStr = janStr;
+		this.febStr = febStr;
+		this.marStr = marStr;
+		this.aprStr = aprStr;
+		this.mayStr = mayStr;
+		this.junStr = junStr;
+		this.julStr = julStr;
+		this.augStr = augStr;
+		this.sepStr = sepStr;
+		this.octStr = octStr;
+		this.novStr = novStr;
+		this.decStr = decStr;
 	}
+	public double getSep() {
+		return sep;
+	}
+	public void setSep(double sep) {
+		this.sep = sep;
+	}
+	private String octStr; 
+	private String novStr;
+	private String decStr;
 	public String getName() {
 		return name;
 	}

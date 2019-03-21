@@ -71,14 +71,6 @@ public class PlanAMediaPageController {
 			,@RequestParam(required=false, value="next") String next
 	        ,@RequestParam(required=false, value="publish") String publish){
 		mLog.info("starting save");
-		
-		
-		
-		
-		
-		
-		
-		
 		//internal next page or publish
 		String internalNextPage = nextPage;
 		if (publish != null) {

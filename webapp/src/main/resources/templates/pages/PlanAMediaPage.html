@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 
 <head>
 <title>Plan A Proposed 12 Month Media Investment</title>
@@ -19,7 +21,7 @@
 
 </head>
 
-<body>
+<body onLoad="convertFromJSON()">
 	<!-- Begin page content -->
 	<!--- start header container -->
 
@@ -274,7 +276,7 @@
 							th:value="${wizard.wizardid}" name="wizardId" /> 
 							<input
 							type="hidden" id="mediarows"
-							th:value="${wizardData?.mediarows}" name="mediarows" />
+							th:value="${dataPageModel?.mediaRows}" name="mediarows" />
 							<input
 							type="hidden" id="wizarddataid"
 							th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> <input

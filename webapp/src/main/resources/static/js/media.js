@@ -35,7 +35,7 @@ function addOrUpdate() {
     var update = "false";
     for (i in objs) {
       if (hiddenObjIdValue ==  objs[i].id) {
-          objs[i].nameValue = textObjValue;
+          objs[i].name = textObjValue;
           objs[i].jan = jan;
           objs[i].feb = feb;        
           objs[i].mar = mar;   
@@ -74,7 +74,7 @@ function build() {
    var fucnName = "javascript:displayDetail('" + objs[i].id + "');"; 
    temp.content.querySelector('a').href =fucnName ;
 
-   temp.content.querySelector('a').text =objs[i].objName;
+   temp.content.querySelector('a').text =objs[i].name;
    var clon = temp.content.cloneNode(true);
   
 
@@ -108,6 +108,18 @@ function compare(a,b) {
     return 1;
   return 0;
 }
+
+function convertFromJSON() {
+	
+    
+    const mediaRows = document.getElementById("mediarows").value
+    if (mediaRows.length > 4) {
+    	objs = JSON.parse(mediaRows);
+    }
+   build();
+   console.log("mediaRows  " + mediaRows );
+  
+}//end of function
 function convertToJSON() {
     var jsonString = JSON.stringify(objs);
     
@@ -179,7 +191,7 @@ function displayDetail(idValue) {
 	    //$100
 	   for (i in objs) {
 	      if (idValue ==  objs[i].id) {
-	          textObj.value = objs[i].objName;
+	          textObj.value = objs[i].name;
 	          hiddenObjId.value = objs[i].id;
 	          jan.value= objs[i].jan;
 	          feb.value= objs[i].feb;  
@@ -266,10 +278,11 @@ function sortObj() {
 }
 function updatehiddenMediaRow ()
 {
-	 var mediarow = document.getElementById("mediarows").value;
+	 
 	 document.getElementById("idname").value = "";
 	var json = convertToJSON();
-	mediarow = json;
+	document.getElementById("mediarows").value = json;
+	//alert (document.getElementById("mediarows").value);
 }
 
 
