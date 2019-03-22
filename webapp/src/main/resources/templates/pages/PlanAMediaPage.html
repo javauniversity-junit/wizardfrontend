@@ -29,15 +29,13 @@
 
 
 	<template>
-	<div class="row" >
-	    <div class="col-1">
-	    </div>
-	        <div class="col-10">
-	        <a href="#" id="myAnchor"> test items </a>
-	    </div>
-		
-		    <div class="col-1">
-	    </div>
+	<div class="row">
+		<div class="col-1"></div>
+		<div class="col-10">
+			<a href="#" id="myAnchor"> test items </a>
+		</div>
+
+		<div class="col-1"></div>
 	</div>
 	</template>
 
@@ -50,7 +48,7 @@
 
 			</div>
 			<div class="col-8 border">
-				
+
 				<form id="myForm">
 					<fieldset>
 						<legend>
@@ -158,13 +156,13 @@
 				</form>
 			</div>
 			<div class="container" style="padding-top: 2%;">
-				<form method="post"  action="savePlanAMediaPage">
+				<form method="post" action="savePlanAMediaPage">
 					<fieldset>
 						<legend> Types </legend>
 						<div class="form-group row">
 							<div class="col-3">
 								<label for="ex1">Jan</label> <select class="selectpicker"
-									name="jantype">
+									name="jantype" id="jantype">
 									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
@@ -173,7 +171,7 @@
 							</div>
 							<div class="col-3">
 								<label for="ex2">Feb</label> <select class="selectpicker"
-									name="febtype">
+									name="febtype" id="febtype">
 									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
@@ -181,7 +179,7 @@
 							</div>
 							<div class="col-3">
 								<label for="ex3">Mar</label> <select class="selectpicker"
-									name="martype">
+									name="martype"id="martype">
 									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
@@ -189,7 +187,7 @@
 							</div>
 							<div class="col-3">
 								<label for="ex3">Apr</label> <select class="selectpicker"
-									name="aprtype">
+									name="aprtype" id="aprtype">
 									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
@@ -199,7 +197,7 @@
 						<div class="form-group row">
 							<div class="col-3">
 								<label for="ex1">May</label> <select class="selectpicker"
-									may="maytype">
+									name="maytype" id="maytype">
 									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
@@ -208,7 +206,7 @@
 							</div>
 							<div class="col-3">
 								<label for="ex2">Jun</label> <select class="selectpicker"
-									name="juntype">
+									name="juntype" id="juntype">
 									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
@@ -216,7 +214,7 @@
 							</div>
 							<div class="col-3">
 								<label for="ex3">July</label> <select class="selectpicker"
-									name="jultype">
+									name="jultype" id="jultype">
 									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
@@ -224,7 +222,7 @@
 							</div>
 							<div class="col-3">
 								<label for="ex3">Aug</label> <select class="selectpicker"
-									name="augtype">
+									name="augtype" id="augtype">
 									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
@@ -234,7 +232,7 @@
 						<div class="form-group row">
 							<div class="col-3">
 								<label for="ex1">Sept</label> <select class="selectpicker"
-									name="septype">
+									name="septype" id="septype">
 									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
@@ -243,7 +241,7 @@
 							</div>
 							<div class="col-3">
 								<label for="ex2">Oct</label> <select class="selectpicker"
-									name="octtype">
+									name="octtype" id="octtype">
 									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
@@ -251,7 +249,7 @@
 							</div>
 							<div class="col-3">
 								<label for="ex3">Nov</label> <select class="selectpicker"
-									name="novtype">
+									name="novtype" id="novtype">
 									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
@@ -259,13 +257,36 @@
 							</div>
 							<div class="col-3">
 								<label for="ex3">Dec</label> <select class="selectpicker"
-									name="dectype">
+									name="dectype" id="dectype">
 									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
 								</select>
 							</div>
 						</div>
+
+						<script th:inline="javascript">
+							/*<![CDATA[*/
+							document.getElementById('jantype').value=/*[[${dataPageModel?.janType}]]*/;						
+							document.getElementById('febtype').value=/*[[${dataPageModel?.febType}]]*/;
+							document.getElementById('martype').value=/*[[${dataPageModel?.marType}]]*/;						
+							document.getElementById('aprtype').value=/*[[${dataPageModel?.aprType}]]*/;
+							document.getElementById('maytype').value=/*[[${dataPageModel?.mayType}]]*/;						
+							document.getElementById('juntype').value=/*[[${dataPageModel?.junType}]]*/;
+							document.getElementById('jultype').value=/*[[${dataPageModel?.julType}]]*/;						
+							document.getElementById('augtype').value=/*[[${dataPageModel?.augType}]]*/;
+							
+			
+							document.getElementById('dectype').value=/*[[${dataPageModel?.decType}]]*/;	
+							
+							
+							/*]]>*/
+						</script>
+
+
+
+
+
 						<input type="hidden" id="nextPage"
 							th:value="'redirect:/MarketPlaceCompetitionPage?ID=' + ${wizard.wizardid}"
 							name="nextPage" /> <input type="hidden" id="previousPage"
@@ -273,11 +294,9 @@
 							name="previousPage" /> <input type="hidden" id="publishPage"
 							th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
 							name="publishPage" /> <input type="hidden" id="wizardId"
-							th:value="${wizard.wizardid}" name="wizardId" /> 
-							<input
+							th:value="${wizard.wizardid}" name="wizardId" /> <input
 							type="hidden" id="mediarows"
-							th:value="${dataPageModel?.mediaRows}" name="mediarows" />
-							<input
+							th:value="${dataPageModel?.mediaRows}" name="mediarows" /> <input
 							type="hidden" id="wizarddataid"
 							th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> <input
 							name="next" type="submit" value="Next" class="btn btn-primary"
