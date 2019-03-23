@@ -17,6 +17,10 @@ function addObj(name, jan,feb,mar,apr,may,june,july,aug,sept,oct,nov,dec ) {
 }
 function addOrUpdate() {
     var textObjValue = document.getElementById("medianame").value;
+   // if (textObjValue == null) {
+    //	alert("Please enter a name");
+    //	return;
+    //}
     var hiddenObjIdValue = document.getElementById("idname").value;
     
     var jan = document.getElementById("jan").value;
