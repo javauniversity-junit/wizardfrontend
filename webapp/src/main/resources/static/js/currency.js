@@ -54,6 +54,7 @@ function formatCurrency(input, blur) {
     // On blur make sure 2 numbers after decimal
     if (blur === "blur") {
       right_side += "00";
+     
     }
     
     // Limit decimal to only 2 digits
@@ -82,5 +83,6 @@ function formatCurrency(input, blur) {
   var updated_len = input_val.length;
   caret_pos = updated_len - original_len + caret_pos;
   input[0].setSelectionRange(caret_pos, caret_pos);
+  totalRow();
 }
   

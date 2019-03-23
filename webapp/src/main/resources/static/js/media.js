@@ -276,6 +276,72 @@ function sortObj() {
    }
  console.log("objs sorted" + test); 
 }
+function totalRow() {
+	 var jan = document.getElementById("jan").value;
+	 var total;
+	 if (jan != null) {
+		 jan = jan.substring(1);
+		 total = Number(jan);
+	 }
+	 //jan = jan.substring(1);
+	    var feb = document.getElementById("feb").value;
+		 if (feb != null) {
+			 feb = feb.substring(1);
+			 total = total + Number(feb);
+		 }	      
+	    var mar = document.getElementById("mar").value;
+		 if (mar != null) {
+			 mar = mar.substring(1);
+			 total = total + Number(mar);
+		 }	
+	    var apr = document.getElementById("apr").value;
+		 if (apr != null) {
+			 apr = apr.substring(1);
+			 total = total + Number(apr);
+		 }	
+	    var may = document.getElementById("may").value;
+		 if (may != null) {
+			 may = may.substring(1);
+			 total = total + Number(may);
+		 }	
+	    var jun = document.getElementById("jun").value;
+		 if (jun != null) {
+			 jun = jun.substring(1);
+			 total = total + Number(jun);
+		 }	
+	    var jul = document.getElementById("jul").value;
+		 if (jul != null) {
+			 jul = jul.substring(1);
+			 total = total + Number(jul);
+		 }	
+	    var aug = document.getElementById("aug").value; 
+		 if (aug != null) {
+			 aug = aug.substring(1);
+			 total = total + Number(aug);
+		 }	
+	    var sep = document.getElementById("sep").value;
+		 if (sep != null) {
+			 sep = sep.substring(1);
+			 total = total + Number(sep);
+		 }	
+	    var oct = document.getElementById("oct").value;
+		 if (oct != null) {
+			 oct = oct.substring(1);
+			 total = total + Number(oct);
+		 }	
+	    var nov = document.getElementById("nov").value;
+		 if (nov != null) {
+			 nov = nov.substring(1);
+			 total = total + Number(nov);
+		 }	
+	    var dec = document.getElementById("dec").value;
+		 if (dec != null) {
+			 dec = dec.substring(1);
+			 total = total + Number(dec);
+		 }	
+	    total = formatNumber(total);
+	document.getElementById("totalRow").value = total;
+}
 function updatehiddenMediaRow ()
 {
 	 
