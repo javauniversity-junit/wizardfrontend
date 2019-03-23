@@ -1,9 +1,9 @@
-package web.page.planamediapage;
+package web.page.planamedipage;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlanAMediaPageModel {
+public class PlanMediaPageModel {
 	
 	private String janType;
 	private String febType;
@@ -51,7 +51,7 @@ public class PlanAMediaPageModel {
 		return marType;
 	}
 
-	public PlanAMediaPageModel(String janType, String febType, String marType, String aprType, String mayType,
+	public PlanMediaPageModel(String janType, String febType, String marType, String aprType, String mayType,
 			String junType, String julType, String augType, String septType, String octType, String novType,
 			String decType, String mediaRows, List<MediaRow> mediaRowList) {
 		super();

@@ -1,4 +1,4 @@
-package web.page.planamediapage;
+package web.page.planamedipage;
 
 public class MediaRow {
 	private String name;
