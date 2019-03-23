@@ -278,68 +278,81 @@ function sortObj() {
 }
 function totalRow() {
 	 var jan = document.getElementById("jan").value;
-	 var total;
+	 var total= 0 ;
 	 if (jan != null) {
 		 jan = jan.substring(1);
-		 total = Number(jan);
+		 jan = jan.replace(",","");
+		 total = total + Number(jan);
 	 }
 	 //jan = jan.substring(1);
 	    var feb = document.getElementById("feb").value;
 		 if (feb != null) {
 			 feb = feb.substring(1);
+			 feb = feb.replace(",","");
 			 total = total + Number(feb);
 		 }	      
 	    var mar = document.getElementById("mar").value;
 		 if (mar != null) {
 			 mar = mar.substring(1);
+			 mar = mar.replace(",","");
 			 total = total + Number(mar);
 		 }	
 	    var apr = document.getElementById("apr").value;
 		 if (apr != null) {
 			 apr = apr.substring(1);
+			 apr = apr.replace(",","");
 			 total = total + Number(apr);
 		 }	
 	    var may = document.getElementById("may").value;
 		 if (may != null) {
 			 may = may.substring(1);
+			 may = may.replace(",","");
 			 total = total + Number(may);
 		 }	
 	    var jun = document.getElementById("jun").value;
 		 if (jun != null) {
 			 jun = jun.substring(1);
+			 jun = jun.replace(",","");
 			 total = total + Number(jun);
 		 }	
 	    var jul = document.getElementById("jul").value;
 		 if (jul != null) {
 			 jul = jul.substring(1);
+			 jul = jul.replace(",","");
 			 total = total + Number(jul);
 		 }	
 	    var aug = document.getElementById("aug").value; 
 		 if (aug != null) {
 			 aug = aug.substring(1);
+			 aug = aug.replace(",","");
 			 total = total + Number(aug);
 		 }	
 	    var sep = document.getElementById("sep").value;
 		 if (sep != null) {
 			 sep = sep.substring(1);
+			 sep = sep.replace(",","");
 			 total = total + Number(sep);
 		 }	
 	    var oct = document.getElementById("oct").value;
 		 if (oct != null) {
 			 oct = oct.substring(1);
+			 oct = oct.replace(",","");
 			 total = total + Number(oct);
 		 }	
 	    var nov = document.getElementById("nov").value;
 		 if (nov != null) {
 			 nov = nov.substring(1);
+			 nov = nov.replace(",","");
 			 total = total + Number(nov);
 		 }	
 	    var dec = document.getElementById("dec").value;
 		 if (dec != null) {
 			 dec = dec.substring(1);
+			 dec = dec.replace(",","");
 			 total = total + Number(dec);
 		 }	
-	    total = formatNumber(total);
+	    total = formatMoney(total);
+	    total = "$" + total;
 	document.getElementById("totalRow").value = total;
 }
 function updatehiddenMediaRow ()
