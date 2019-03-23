@@ -70,44 +70,50 @@
 								 />
 						</div>
 						<div class="form-group">
-							<label for="secondLevelTitle">Second Level Title</label> <input
-								type="text" th:value="${dataPageModel?.secondLevelTitle}"
-								required class="form-control" id="secondLevelTitle"
-								name="secondLevelTitle" placeholder="Second Level Title" />
+							<label for="averageRepeatSales">D. Times the average repeat sales per year (per customer/client)</label> <input
+								type="text" th:value="${dataPageModel?.averageRepeatSales}"
+								required class="form-control" id="averageRepeatSales"
+								name="averageRepeatSales"  />
 						</div>
 					</div>
 
 					<div class="w3-panel w3-border">
 						<div class="form-group">
-							<label for="thirdLevelName">Third Level Name</label> <input
-								type="text" class="form-control" id="thirdLevelName"
-								th:value="${dataPageModel?.thirdLevelName}"
-								name="thirdLevelName" required aria-describedby="thirdLevelName"
-								placeholder="Enter Third Level Name" />
+							<label for="averageCustomerValue">E. Equals the average customer/client value per year (C*D)</label> <input
+								type="text" class="form-control" id="averageCustomerValue"
+								th:value="${dataPageModel?.averageCustomerValue}"
+								name="averageCustomerValue" required aria-describedby="averageCustomerValue"
+								/>
 						</div>
 						<div class="form-group">
-							<label for="thirdLevelTitle">Third Level Title</label> <input
-								type="text" th:value="${dataPageModel?.thirdLevelTitle}"
-								required class="form-control" id="thirdLevelTitle"
-								name="thirdLevelTitle" placeholder="Third Level Title" />
+							<label for="yearsOfPatronage">F. Times the average number of years of patronage</label> <input
+								type="text" th:value="${dataPageModel?.yearsOfPatronage}"
+								required class="form-control" id="yearsOfPatronage"
+								name="yearsOfPatronage"  />
 						</div>
 					</div>
 
 					<div class="w3-panel w3-border">
 						<div class="form-group">
-							<label for="fourthLevelName">Fourth Level Name</label> <input
-								type="text" class="form-control" id="fourthLevelName"
-								th:value="${dataPageModel?.fourthLevelName}"
-								name="fourthLevelName" required
-								aria-describedby="fourthLevelName"
-								placeholder="Enter Fourth Level Name" />
+							<label for="lifetimeValuePerCustomer">G. Equals the lifetime value of one customer/client (E*F)</label> <input
+								type="text" class="form-control" id="lifetimeValuePerCustomer"
+								th:value="${dataPageModel?.lifetimeValuePerCustomer}"
+								name="lifetimeValuePerCustomer" required
+								aria-describedby="lifetimeValuePerCustomer"
+								/>
 						</div>
 						<div class="form-group">
-							<label for="fourthLevelTitle">Fourth Level Title</label> <input
-								type="text" th:value="${dataPageModel?.fourthLevelTitle}"
-								required class="form-control" id="fourthLevelTitle"
-								name="fourthLevelTitle" placeholder="Fourth Level Title" />
+							<label for="monthlyInvestmentAverage">H. So if your base monthly advertising investment averages</label> <input
+								type="text" th:value="${dataPageModel?.monthlyInvestmentAverage}"
+								required class="form-control" id="monthlyInvestmentAverage"
+								name="monthlyInvestmentAverage"  />
 						</div>
+							<div class="form-group">
+							<label for="prospectsNeededToBreakEven">I. Then monthly customers/clients needed to break even (H/G)/label> <input
+								type="text" th:value="${dataPageModel?.prospectsNeededToBreakEven}"
+								required class="form-control" id="prospectsNeededToBreakEven"
+								name="prospectsNeededToBreakEven"  />
+						</div>					
 					</div>
 
 					<input type="hidden" id="nextPage"
