@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Wizard</title>
+<title>(13) Plan A Lifetime Value Analysis</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
@@ -42,32 +42,32 @@
 			<form method="post" action="saveTeamCommitmentPage">
 				<fieldset>
 					<legend>
-						Marketing Solutions - <span th:text="${wizard.name}"></span>
+						(13) Plan A Lifetime Value Analysis - <span th:text="${wizard.name}"></span>
 					</legend>
 					<div class="w3-panel w3-border">
 						<div class="form-group">
-							<label for="topLevelName">Top Level Name</label> <input
-								type="text" class="form-control" id="topLevelName"
-								th:value="${dataPageModel?.topLevelName}"
-								name="topLevelName" required aria-describedby="topLevelName"
-								placeholder="Enter Top Level Name" />
+							<label for="averageSale">A. Average sale (ticket, transaction, invoice)</label> <input
+								type="text" class="form-control" id="averageSale"
+								th:value="${dataPageModel?.averageSale}"
+								name="averageSale" required aria-describedby="averageSale"
+								 />
 						</div>
 						<div class="form-group">
-							<label for="topLevelTitle">Top Level Title</label> <input
-								type="text" th:value="${dataPageModel?.topLevelTitle}" required
-								class="form-control" id="topLevelTitle" name="topLevelTitle"
-								placeholder="Top Level Title" />
+							<label for="grossProfitMargin">B. Times gross profit margin on average sale (sale less cost of goods sold)</label> <input
+								type="text" th:value="${dataPageModel?.grossProfitMargin}" required
+								class="form-control" id="grossProfitMargin" name="grossProfitMargin"
+								 />
 						</div>
 					</div>
 
 					<div class="w3-panel w3-border">
 						<div class="form-group">
-							<label for="secondLevelName">Second Level Name</label> <input
-								type="text" class="form-control" id="secondLevelName"
-								name="secondLevelName" required
-								th:value="${dataPageModel?.secondLevelName}"
-								aria-describedby="secondLevelName"
-								placeholder="Enter Second Level Name" />
+							<label for="secondLevelName">C. Equals gross profit per average sale (A*B</label> <input
+								type="text" class="form-control" id="grossProfitPerSale"
+								name="grossProfitPerSale" required
+								th:value="${dataPageModel?.GrossProfitPerSale}"
+								aria-describedby="grossProfitPerSale"
+								 />
 						</div>
 						<div class="form-group">
 							<label for="secondLevelTitle">Second Level Title</label> <input
