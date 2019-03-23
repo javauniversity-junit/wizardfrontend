@@ -15,6 +15,17 @@ function formatNumber(n) {
   // format number 1000000 to 1,234,567
   return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 }
+
+function removeComma(currency){
+	var position = currency.indexOf(",");
+	while(position > 0) {
+		currency  = currency.replace(",","");
+		position = currency.indexOf(",");
+	}
+	return currency;
+} 
+
+
 function formatMoney(n, c, d, t) {
 	  var c = isNaN(c = Math.abs(c)) ? 2 : c,
 	    d = d == undefined ? "." : d,

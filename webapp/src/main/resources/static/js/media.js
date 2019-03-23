@@ -208,6 +208,7 @@ function displayDetail(idValue) {
 	         break;
 	      }
 	   }//end of for
+	  totalRow();
 	   displayUpdateButton();
 	}
 function doesTheObjExist(name) {
@@ -281,26 +282,26 @@ function totalRow() {
 	 var total= 0 ;
 	 if (jan != null) {
 		 jan = jan.substring(1);
-		 jan = jan.replace(",","");
+		 jan = removeComma(jan);
 		 total = total + Number(jan);
 	 }
 	 //jan = jan.substring(1);
 	    var feb = document.getElementById("feb").value;
 		 if (feb != null) {
 			 feb = feb.substring(1);
-			 feb = feb.replace(",","");
+			 feb = removeComma(feb);;
 			 total = total + Number(feb);
 		 }	      
 	    var mar = document.getElementById("mar").value;
 		 if (mar != null) {
 			 mar = mar.substring(1);
-			 mar = mar.replace(",","");
+			 mar = removeComma(mar);
 			 total = total + Number(mar);
 		 }	
 	    var apr = document.getElementById("apr").value;
 		 if (apr != null) {
 			 apr = apr.substring(1);
-			 apr = apr.replace(",","");
+			 apr = removeComma(apr);
 			 total = total + Number(apr);
 		 }	
 	    var may = document.getElementById("may").value;
@@ -312,43 +313,43 @@ function totalRow() {
 	    var jun = document.getElementById("jun").value;
 		 if (jun != null) {
 			 jun = jun.substring(1);
-			 jun = jun.replace(",","");
+			 jun = removeComma(jun);
 			 total = total + Number(jun);
 		 }	
 	    var jul = document.getElementById("jul").value;
 		 if (jul != null) {
 			 jul = jul.substring(1);
-			 jul = jul.replace(",","");
+			 jul = removeComma(jul);
 			 total = total + Number(jul);
 		 }	
 	    var aug = document.getElementById("aug").value; 
 		 if (aug != null) {
 			 aug = aug.substring(1);
-			 aug = aug.replace(",","");
+			 aug = removeComma(aug);
 			 total = total + Number(aug);
 		 }	
 	    var sep = document.getElementById("sep").value;
 		 if (sep != null) {
 			 sep = sep.substring(1);
-			 sep = sep.replace(",","");
+			 sep = removeComma(sep);
 			 total = total + Number(sep);
 		 }	
 	    var oct = document.getElementById("oct").value;
 		 if (oct != null) {
 			 oct = oct.substring(1);
-			 oct = oct.replace(",","");
+			 oct = removeComma(oct);
 			 total = total + Number(oct);
 		 }	
 	    var nov = document.getElementById("nov").value;
 		 if (nov != null) {
 			 nov = nov.substring(1);
-			 nov = nov.replace(",","");
+			 nov = removeComma(nov);
 			 total = total + Number(nov);
 		 }	
 	    var dec = document.getElementById("dec").value;
 		 if (dec != null) {
 			 dec = dec.substring(1);
-			 dec = dec.replace(",","");
+			 dec = removeComma(dec);
 			 total = total + Number(dec);
 		 }	
 	    total = formatMoney(total);
