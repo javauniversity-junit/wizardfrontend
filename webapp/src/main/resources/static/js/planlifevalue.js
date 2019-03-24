@@ -1,27 +1,44 @@
+$("input[data-type='calculate']").on({
+    keyup: function() {
+    	c($(this));
+    },
+    blur: function() { 
+    	grossProfitMargin($(this), "blur");
+    }
+});
+
+function calculate()
+{
+	var averageSale = document.getElementById("averageSale").value;
+	var grossProfitMargin = document.getElementById("grossProfitMargin").value;
+	var averageRepeatSales = document.getElementById("averageRepeatSales").value;
+	var yearsOfPatronage = document.getElementById("yearsOfPatronage").value;
+	var averageSaleCal =0;
+	var grossProfitMarginCal =0;
+	var averageRepeatSalesCal =0;
+	var yearsOfPatronageCal =0;
+	
+	if (averageSale != null) {
+		averageSale = averageSale.substring(1);
+		averageSale = removeComma(averageSale);;
+		averageSaleCal = Number(averageSale);
+	}
+	
+	if (grossProfitMargin != null) {
+		grossProfitMarginCal = Number(grossProfitMargin);
+	}
+	
+	if (averageRepeatSales != null) {
+		grossProfitMarginCal = Number(grossProfitMargin);
+	}
+	if (grossProfitMargin != null) {
+		grossProfitMarginCal = Number(grossProfitMargin);
+	}
+	
+}
+
+
 function totalRow() {
-	 var jan = document.getElementById("jan").value;
-	 var total= 0 ;
-	 
-	 //jan = jan.substring(1);
-	    var feb = document.getElementById("feb").value;
-	      
-	    var mar = document.getElementById("mar").value;
-	
-	    var apr = document.getElementById("apr").value;
-
-	    var jul = document.getElementById("jul").value;
-
-	    var aug = document.getElementById("aug").value; 
-	
-	    var sep = document.getElementById("sep").value;
-		
-	    var oct = document.getElementById("oct").value;
-			
-	    var nov = document.getElementById("nov").value;
-		
-	    var dec = document.getElementById("dec").value;
-		
-	    total = formatMoney(total);
-	    total = "$" + total;
+	calculate();
 	//document.getElementById("totalRow").value = total;
 }
