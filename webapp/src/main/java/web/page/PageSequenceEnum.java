@@ -9,6 +9,7 @@ public enum PageSequenceEnum {
 	, StrategicMarketingPageOne_Sequence(5)
 	,StrategicMarketingPageTwo_Sequence(6)
 	,StrategicMarketingPageThree_Sequence(7)
+	,PlanAProposedPage_Sequence(12)
 	,PlanAMediaPage_Sequence(18)
 	,PlanBMediaPage_Sequence(19)
 	,PlanALifetimeValuedPage_Sequence(16);

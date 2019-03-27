@@ -96,17 +96,17 @@
 							name="competitionStrengthB" placeholder="Enter their strengths" />
 					</div>													
 					<div class="form-group">
-						<label for="CompetitionWeaknessA">What are their weaknesses?</label>
+						<label for="competitionWeaknessA">What are their weaknesses?</label>
 						
 						    <input
-							type="text" th:value="${dataPageModel?.CompetitionWeaknessA}"
-							required class="form-control" id="CompetitionWeaknessA"
-							name="CompetitionWeaknessA" placeholder="Enter their weaknesses" />
+							type="text" th:value="${dataPageModel?.competitionWeaknessA}"
+							required class="form-control" id="competitionWeaknessA"
+							name="competitionWeaknessA" placeholder="Enter their weaknesses" />
 							
 													    <input
-							type="text" th:value="${dataPageModel?.CompetitionWeaknessB}"
-							required class="form-control" id="CompetitionWeaknessB"
-							name="CompetitionWeaknessB" placeholder="Enter their weaknesses" />
+							type="text" th:value="${dataPageModel?.competitionWeaknessB}"
+							required class="form-control" id="competitionWeaknessB"
+							name="competitionWeaknessB" placeholder="Enter their weaknesses" />
 					</div>
 					<input type="hidden" id="nextPage"
 						th:value="'redirect:/TeamCommitmentPage?ID=' + ${wizard.wizardid}"
