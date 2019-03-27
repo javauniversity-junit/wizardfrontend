@@ -67,7 +67,7 @@
 						<div class="form-group">
 							<label for="secondLevelName">C. Equals gross profit per
 								average sale (A*B</label> <input type="text" class="form-control"
-								id="grossProfitPerSale" name="grossProfitPerSale" disabled
+								id="grossProfitPerSale" name="grossProfitPerSale" disabled th:value="${dataPageModel?.grossProfitPerSale}"
 								aria-describedby="grossProfitPerSale" />
 						</div>
 						<div class="form-group">
@@ -82,8 +82,8 @@
 					<div class="w3-panel w3-border">
 						<div class="form-group">
 							<label for="averageCustomerValue">E. Equals the average
-								customer/client value per year (C*D)</label> <input disabled
-								name="averageCustomerValue" required
+								customer/client value per year (C*D)</label> <input readonly 
+								name="averageCustomerValue" required th:value="${dataPageModel?.averageCustomerValue}"
 								aria-describedby="averageCustomerValue" />
 						</div>
 						<div class="form-group">
@@ -100,20 +100,20 @@
 							<label for="lifetimeValuePerCustomer">G. Equals the
 								lifetime value of one customer/client (E*F)</label> <input type="text"
 								class="form-control" id="lifetimeValuePerCustomer"
-								name="lifetimeValuePerCustomer" disabled
+								name="lifetimeValuePerCustomer" disabled th:value="${dataPageModel?.lifetimeValuePerCustomer}"
 								aria-describedby="lifetimeValuePerCustomer" />
 						</div>
 						<div class="form-group">
 							<label for="monthlyInvestmentAverage">H. So if your base
-								monthly advertising investment averages</label> <input
-								class="form-control" id="monthlyInvestmentAverage" disabled
+								monthly advertising investment averages</label> <input data-type="calculate"
+								class="form-control" id="monthlyInvestmentAverage" th:value="${dataPageModel?.monthlyInvestmentAverage}"
 								name="monthlyInvestmentAverage" />
 						</div>
 						<div class="form-group">
 							<label for="prospectsNeededToBreakEven">I. Then monthly
 								customers/clients needed to break even (H/G)/label> <input
-								class="form-control" id="prospectsNeededToBreakEven"
-								name="prospectsNeededToBreakEven" />
+								class="form-control" id="prospectsNeededToBreakEven" readonly th:value="${dataPageModel?.prospectsNeededToBreakEven}"
+								name="prospectsNeededToBreakEven" /> 
 						</div>
 					</div>
 

@@ -6,6 +6,13 @@ public class PlanALifetimeValuedPageModel {
 	private int averageRepeatSales;
 	private int yearsOfPatronage;
 	
+	private String grossProfitPerSale;
+	private String averageCustomerValue;
+	private String lifetimeValuePerCustomer;
+	
+	private int monthlyInvestmentAverage;
+	private String prospectsNeededToBreakEven;
+	
 	public PlanALifetimeValuedPageModel(String averageSale, int grossProfitMargin, int averageRepeatSales,
 			int yearsOfPatronage) {
 		super();
