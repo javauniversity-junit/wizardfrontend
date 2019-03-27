@@ -1,13 +1,13 @@
 $("input[data-type='calculate']").on({
     keyup: function() {
-    	c($(this));
+    	calculate()($(this));
     },
     blur: function() { 
-    	grossProfitMargin($(this), "blur");
+    	calculate()($(this), "blur");
     }
 });
 
-function calculate()
+function calculate(input, blur)
 {
 	var averageSale = document.getElementById("averageSale").value;
 	var grossProfitMargin = document.getElementById("grossProfitMargin").value;
