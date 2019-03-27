@@ -57,7 +57,7 @@
 						<label for="grossProfitMargin">B. Times gross profit
 							margin on average sale (sale less cost of goods sold)</label> <input
 							type="number" th:value="${dataPageModel?.grossProfitMargin}"
-							required class="form-control" data-type="calculate"
+							required class="form-control calculate" 
 							id="grossProfitMargin" name="grossProfitMargin" />
 					</div>
 
@@ -94,7 +94,7 @@
 						<label for="yearsOfPatronage">F. Times the average number
 							of years of patronage</label> <input type="text"
 							th:value="${dataPageModel?.yearsOfPatronage}"
-							data-type="calculate" class="form-control" id="yearsOfPatronage"
+							 class="form-control calculate" id="yearsOfPatronage"
 							required name="yearsOfPatronage" />
 					</div>
 
@@ -111,7 +111,7 @@
 					<div class="form-group">
 						<label for="monthlyInvestmentAverage">H. So if your base
 							monthly advertising investment averages</label> <input
-							data-type="calculate" class="form-control"
+							class="form-control calculate"
 							id="monthlyInvestmentAverage"
 							th:value="${dataPageModel?.monthlyInvestmentAverage}"
 							name="monthlyInvestmentAverage" />
