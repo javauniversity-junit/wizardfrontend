@@ -38,12 +38,19 @@ function calculate()
 	if (yearsOfPatronage != null) {
 		yearsOfPatronageCal = Number(yearsOfPatronage);
 	}
+	var c_grossProfitPerSale = averageSaleCal * grossProfitMarginCal;
+	var e_averageCustomerValue = c_grossProfitPerSale *  averageRepeatSalesCal;
+	var g_lifetimeValuePerCustomer =e_averageCustomerValue * yearsOfPatronageCal;
+	var i_prospectsNeededToBreakEven = g_lifetimeValuePerCustomer * monthlyInvestmentAverageCal;
+	console.log(" c_grossProfitPerSale " +  c_grossProfitPerSale);
+	console.log(" e_averageCustomerValue " +  e_averageCustomerValue);
+	console.log("g_lifetimeValuePerCustomer " +  g_lifetimeValuePerCustomer);
+	console.log("i_prospectsNeededToBreakEven " +  i_prospectsNeededToBreakEven);
 	
-	document.getElementById("grossProfitPerSale").value = averageSaleCal * grossProfitMarginCal;
-	document.getElementById("averageCustomerValue").value = (averageSaleCal * grossProfitMarginCal) * averageRepeatSalesCal;
-	document.getElementById("lifetimeValuePerCustomer").value = (averageSaleCal * grossProfitMarginCal) * averageRepeatSalesCal * yearsOfPatronageCal;
-	document.getElementById("prospectsNeededToBreakEven").value = (averageSaleCal * grossProfitMarginCal) 
-	    * averageRepeatSalesCal * yearsOfPatronageCal * monthlyInvestmentAverageCal;
+	document.getElementById("grossProfitPerSale").value =  c_grossProfitPerSale;
+	document.getElementById("averageCustomerValue").value = e_averageCustomerValue;//e
+	document.getElementById("lifetimeValuePerCustomer").value = g_lifetimeValuePerCustomer;
+	document.getElementById("prospectsNeededToBreakEven").value = i_prospectsNeededToBreakEven;
 }
 
 
