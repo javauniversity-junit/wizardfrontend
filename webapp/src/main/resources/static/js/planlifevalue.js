@@ -1,13 +1,12 @@
-$(document).ready(function(){
-  $(".calculate").blur(calculate());
-  $(".calculate").keyup(calculate());
-});
+
 
 function calculate()
 {
 	var averageSale = document.getElementById("averageSale").value;
 	var grossProfitMargin = document.getElementById("grossProfitMargin").value;
 	var averageRepeatSales = document.getElementById("averageRepeatSales").value;
+	//alert ("averageRepeatSales " + averageRepeatSales);
+	
 	var yearsOfPatronage = document.getElementById("yearsOfPatronage").value;
 	var monthlyInvestmentAverage= document.getElementById("monthlyInvestmentAverage").value;
 	var averageSaleCal =0;
@@ -33,7 +32,7 @@ function calculate()
 	}
 	
 	if (averageRepeatSales != null) {
-		averageRepeatSalesCal = Number(averageRepeatSalesCal);
+		averageRepeatSalesCal = Number(averageRepeatSales);
 	}
 	if (yearsOfPatronage != null) {
 		yearsOfPatronageCal = Number(yearsOfPatronage);
@@ -41,7 +40,8 @@ function calculate()
 	var c_grossProfitPerSale = averageSaleCal * grossProfitMarginCal;
 	var e_averageCustomerValue = c_grossProfitPerSale *  averageRepeatSalesCal;
 	var g_lifetimeValuePerCustomer =e_averageCustomerValue * yearsOfPatronageCal;
-	var i_prospectsNeededToBreakEven = g_lifetimeValuePerCustomer * monthlyInvestmentAverageCal;
+	var i_prospectsNeededToBreakEven = Math.round(g_lifetimeValuePerCustomer * monthlyInvestmentAverageCal);
+	console.log(" averageRepeatSales " +  averageRepeatSales);
 	console.log(" c_grossProfitPerSale " +  c_grossProfitPerSale);
 	console.log(" e_averageCustomerValue " +  e_averageCustomerValue);
 	console.log("g_lifetimeValuePerCustomer " +  g_lifetimeValuePerCustomer);
