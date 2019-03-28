@@ -13,13 +13,50 @@ public class PlanALifetimeValuedPageModel {
 	private int monthlyInvestmentAverage;
 	private String prospectsNeededToBreakEven;
 	
+	
 	public PlanALifetimeValuedPageModel(String averageSale, int grossProfitMargin, int averageRepeatSales,
-			int yearsOfPatronage) {
+			int yearsOfPatronage, String grossProfitPerSale, String averageCustomerValue,
+			String lifetimeValuePerCustomer, int monthlyInvestmentAverage, String prospectsNeededToBreakEven) {
 		super();
 		this.averageSale = averageSale;
 		this.grossProfitMargin = grossProfitMargin;
 		this.averageRepeatSales = averageRepeatSales;
 		this.yearsOfPatronage = yearsOfPatronage;
+		this.grossProfitPerSale = grossProfitPerSale;
+		this.averageCustomerValue = averageCustomerValue;
+		this.lifetimeValuePerCustomer = lifetimeValuePerCustomer;
+		this.monthlyInvestmentAverage = monthlyInvestmentAverage;
+		this.prospectsNeededToBreakEven = prospectsNeededToBreakEven;
+	}
+	public String getGrossProfitPerSale() {
+		return grossProfitPerSale;
+	}
+	public void setGrossProfitPerSale(String grossProfitPerSale) {
+		this.grossProfitPerSale = grossProfitPerSale;
+	}
+	public String getAverageCustomerValue() {
+		return averageCustomerValue;
+	}
+	public void setAverageCustomerValue(String averageCustomerValue) {
+		this.averageCustomerValue = averageCustomerValue;
+	}
+	public String getLifetimeValuePerCustomer() {
+		return lifetimeValuePerCustomer;
+	}
+	public void setLifetimeValuePerCustomer(String lifetimeValuePerCustomer) {
+		this.lifetimeValuePerCustomer = lifetimeValuePerCustomer;
+	}
+	public int getMonthlyInvestmentAverage() {
+		return monthlyInvestmentAverage;
+	}
+	public void setMonthlyInvestmentAverage(int monthlyInvestmentAverage) {
+		this.monthlyInvestmentAverage = monthlyInvestmentAverage;
+	}
+	public String getProspectsNeededToBreakEven() {
+		return prospectsNeededToBreakEven;
+	}
+	public void setProspectsNeededToBreakEven(String prospectsNeededToBreakEven) {
+		this.prospectsNeededToBreakEven = prospectsNeededToBreakEven;
 	}
 	public String getAverageSale() {
 		return averageSale;

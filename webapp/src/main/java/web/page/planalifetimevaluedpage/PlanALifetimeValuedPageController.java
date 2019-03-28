@@ -54,15 +54,32 @@ public class PlanALifetimeValuedPageController {
 	public String save(@RequestParam String wizardId
 			,@RequestParam String wizarddataid
 			,@RequestParam(required=false, value="0") String averageSale
-			,@RequestParam(required=false, value="0") int averageRepeatSales
-			,@RequestParam(required=false, value="0") int grossProfitMargin
-			,@RequestParam(required=false, value="0") int yearsOfPatronage
+			,@RequestParam(required=false, value="0") Integer averageRepeatSales
+			,@RequestParam(required=false, value="0") Integer grossProfitMargin
+			,@RequestParam(required=false, value="0") Integer yearsOfPatronage
+			,@RequestParam(required=false, value="0") String grossProfitPerSale
+			,@RequestParam(required=false, value="0") String averageCustomerValue
+			,@RequestParam(required=false, value="0") String lifetimeValuePerCustomer
+			,@RequestParam(required=false, value="0") Integer monthlyInvestmentAverage
+			,@RequestParam(required=false, value="0") String prospectsNeededToBreakEven
 			,@RequestParam String nextPage
 			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next
 	        ,@RequestParam(required=false, value="publish") String publish){
 		mLog.info("starting save");
 		//internal next page or publish
+		if (averageRepeatSales == null) {
+			averageRepeatSales= 0;
+		}
+		if (grossProfitMargin == null) {
+			grossProfitMargin= 0;
+		}
+		if (yearsOfPatronage == null) {
+			yearsOfPatronage= 0;
+		}
+		if (monthlyInvestmentAverage == null) {
+			monthlyInvestmentAverage= 0;
+		}
 		String internalNextPage = nextPage;
 		if (publish != null) {
 			internalNextPage= publishPage;
@@ -78,8 +95,9 @@ public class PlanALifetimeValuedPageController {
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
 		
-		PlanALifetimeValuedPageModel pageModel  = new PlanALifetimeValuedPageModel(averageSale, grossProfitMargin, averageRepeatSales,
-				yearsOfPatronage);
+		PlanALifetimeValuedPageModel pageModel  = new PlanALifetimeValuedPageModel(averageSale, grossProfitMargin,  averageRepeatSales,
+				yearsOfPatronage,  grossProfitPerSale, averageCustomerValue,
+				lifetimeValuePerCustomer, monthlyInvestmentAverage, prospectsNeededToBreakEven);
 		String pageData = JSONManager.convertToJson(pageModel);
 		
 		wizardData.setPagedata(pageData);
