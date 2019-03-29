@@ -1,4 +1,4 @@
-package web.page.planaproposedpage;
+package web.page.planproposedpage;
 import java.util.Optional;
 import java.util.logging.Logger;
 
@@ -36,9 +36,9 @@ public class PlanAProposedPageController {
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
 		WizardData wizardData = wizardDataRepository.findByPagesequenceAndWizardid(Pages.PlanAProposedPage.getPageSequence(), wizard.getWizardid());
-		PlanAProposedPageModel dataPageModel = null;
+		PlanProposedPageModel dataPageModel = null;
 		if (wizardData != null) {
-			dataPageModel =(PlanAProposedPageModel)JSONManager.convertFromJson(wizardData.getPagedata(),PlanAProposedPageModel.class);
+			dataPageModel =(PlanProposedPageModel)JSONManager.convertFromJson(wizardData.getPagedata(),PlanProposedPageModel.class);
 			
 		}
 		//DemographicManager.convertFromJson(json)
@@ -50,12 +50,13 @@ public class PlanAProposedPageController {
 	
 	@RequestMapping(value = "/savePlanAProposedPage", method = RequestMethod.POST) // replace with my class variables
 	public String save(@RequestParam String wizardId
-			,@RequestParam String portfolioPhoneNumber
-			,@RequestParam String portfolioManagerName
-			,@RequestParam String clientBusinessName
-			,@RequestParam String clientContactName
-			,@RequestParam String station
-			,@RequestParam String wizarddataid
+			,@RequestParam String planACity
+			,@RequestParam String planAReach
+			,@RequestParam String planAFrequency
+			,@RequestParam String planADigitalImpressionsMonthly
+			,@RequestParam String planAMonthly
+			,@RequestParam String planADaily
+			,@RequestParam String wizarddataid // must stay
 			,@RequestParam String nextPage
 			,@RequestParam String publishNextPage
 			,@RequestParam(required=false, value="next") String next
@@ -77,9 +78,8 @@ public class PlanAProposedPageController {
 		}
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt); //todo - fix constuctor
-		// PlanAProposedPageModel demographic  = new PresentedToPageModel(portfolioPhoneNumber
-		//		,portfolioManagerName,clientBusinessName, clientContactName, station);
-		PlanAProposedPageModel demographic  = null;
+		PlanProposedPageModel demographic  = new PlanProposedPageModel(planACity, planAReach, planAFrequency,
+				planADigitalImpressionsMonthly, planAMonthly, planADaily);
 		String pageData = JSONManager.convertToJson(demographic);
 		
 		wizardData.setPagedata(pageData);

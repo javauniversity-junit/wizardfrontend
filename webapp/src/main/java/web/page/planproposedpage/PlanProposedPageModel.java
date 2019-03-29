@@ -1,12 +1,23 @@
-package web.page.planaproposedpage;
+package web.page.planproposedpage;
 
-public class PlanAProposedPageModel {
+public class PlanProposedPageModel {
 	private String planACity;
 	private String planAReach;
 	private String planAFrequency;
 	private String planADigitalImpressionsMonthly;
 	private String planAMonthly;
 	private String planADaily;
+	
+	public PlanProposedPageModel(String planACity, String planAReach, String planAFrequency,
+			String planADigitalImpressionsMonthly, String planAMonthly, String planADaily) {
+		super();
+		this.planACity = planACity;
+		this.planAReach = planAReach;
+		this.planAFrequency = planAFrequency;
+		this.planADigitalImpressionsMonthly = planADigitalImpressionsMonthly;
+		this.planAMonthly = planAMonthly;
+		this.planADaily = planADaily;
+	}
 	public String getPlanACity() {
 		return planACity;
 	}
