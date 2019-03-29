@@ -42,29 +42,28 @@
 						th:text="${wizard.name}"></span>
 				</legend>
 				<div class="form-group">
-					<label for="averageSale">A. Monthly Digital Investment</label> <input type="text" class="form-control"
-						id="averageSale" th:value="${dataPageModel?.planAMonthlyDigitalInvestment}" required
+					<label for="planAClosingPctNumber">A. Monthly Digital Investment</label> <input type="text" class="form-control"
+						id="planAClosingPctNumber" th:value="${dataPageModel?.planAMonthlyDigitalInvestment}" required
 						data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
-						name="averageSale" />
+						name="planAClosingPctNumber" />
 				</div>
 				<div class="form-group">
-					<label for="grossProfitMargin">B. Cost Per Thousand (CPM)</label> <input
+					<label for="planACostPerThousand">B. Cost Per Thousand (CPM)</label> <input
 						type="number" th:value="${dataPageModel?.planACostPerThousand}"
 						required class="form-control" oninput="calculate()"
-						id="grossProfitMargin" name="grossProfitMargin" />
+						id="planACostPerThousand" name="planACostPerThousand" />
 				</div>
 				<div class="form-group">
-					<label for="secondLevelName">C. Monthly Impressions (A/B * 1,000</label> <input type="text" class="form-control"
+					<label for="planAClosingPctNumber">C. Monthly Impressions (A/B * 1,000</label> <input type="text" class="form-control"
 						id="planAClosingPctNumber" name="planAClosingPctNumber" readonly
 						th:value="${dataPageModel?.planAClosingPctNumber}" required
 						aria-describedby="planAClosingPctNumber" />
 				</div>
 				<div class="form-group">
-					<label for="averageRepeatSales">D. Times the average repeat
-						sales per year (per customer/client)</label> <input type="number"
-						th:value="${dataPageModel?.averageRepeatSales}" required
-						class="form-control" id="averageRepeatSales" oninput="calculate()"
-						name="averageRepeatSales" />
+					<label for="planAClickThroughRate">D. Click Through Rate (.01%, .1%, etc.)</label> <input type="number"
+						th:value="${dataPageModel?.planAClickThroughRate}" required
+						class="form-control" id="planAClickThroughRate" oninput="calculate()"
+						name="planAClickThroughRate" />
 				</div>
 				<div class="form-group">
 					<label for="averageCustomerValue">E. Equals the average
