@@ -66,41 +66,36 @@
 						name="planAClickThroughRate" />
 				</div>
 				<div class="form-group">
-					<label for="averageCustomerValue">E. Equals the average
-						customer/client value per year (C*D)</label> <input readonly
-						name="averageCustomerValue" id="averageCustomerValue"
+					<label for="planAMonthlyClicks">E. Monthly # Clicks (C*D)</label> <input readonly
+						name="planAMonthlyClicks" id="planAMonthlyClicks"
 						class="form-control"
-						th:value="${dataPageModel?.averageCustomerValue}" />
+						th:value="${dataPageModel?.planAMonthlyClicks}" />
 				</div>
 				<div class="form-group">
-					<label for="yearsOfPatronage">F. Times the average number
-						of years of patronage</label> <input type="number" oninput="calculate()"
-						th:value="${dataPageModel?.yearsOfPatronage}" class="form-control"
-						id="yearsOfPatronage" required name="yearsOfPatronage" />
+					<label for="planACostPerClicks">F. Cost Per Clicks (A/E)</label> <input type="number" oninput="calculate()"
+						th:value="${dataPageModel?.planACostPerClicks}" class="form-control"
+						id="planACostPerClicks" required name="planACostPerClicks" />
 				</div>
 				<div class="form-group">
-					<label for="lifetimeValuePerCustomer">G. Equals the
-						lifetime value of one customer/client (E*F)</label> <input type="text"
-						class="form-control" id="lifetimeValuePerCustomer"
-						name="lifetimeValuePerCustomer" readonly 
-						th:value="${dataPageModel?.lifetimeValuePerCustomer}"
-						aria-describedby="lifetimeValuePerCustomer" />
+					<label for="planASalesConversionPercentage">G. Sales Conversion Percentage (2%, 10%, etc.)</label> <input type="text"
+						class="form-control" id="planASalesConversionPercentage"
+						name="planASalesConversionPercentage" readonly 
+						th:value="${dataPageModel?.planASalesConversionPercentage}"
+						aria-describedby="planASalesConversionPercentage" />
 				</div>
 				<div class="form-group">
-					<label for="monthlyInvestmentAverage">H. So if your base
-						monthly advertising investment averages</label> <input required
+					<label for="planAMonthlyConversions">H. Monthly Number of Conversions (E*G)</label> <input required
 						class="form-control" data-type="currency"
 						pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
-						id="monthlyInvestmentAverage"
-						th:value="${dataPageModel?.monthlyInvestmentAverage}"
-						name="monthlyInvestmentAverage" />
+						id="planAMonthlyConversions"
+						th:value="${dataPageModel?.planAMonthlyConversions}"
+						name="planAMonthlyConversions" />
 				</div>
 				<div class="form-group">
-					<label for="prospectsNeededToBreakEven">I. Then monthly
-						customers/clients needed to break even (H/G)</label> <input
-						class="form-control" id="prospectsNeededToBreakEven" readonly 
-						th:value="${dataPageModel?.prospectsNeededToBreakEven}"
-						name="prospectsNeededToBreakEven" />
+					<label for="planACostPerConversion">I. Cost Per Conversion (A/H)</label> <input
+						class="form-control" id="planACostPerConversion" readonly 
+						th:value="${dataPageModel?.planACostPerConversion}"
+						name="planACostPerConversion" />
 				</div>
 
 
