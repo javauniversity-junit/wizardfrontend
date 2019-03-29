@@ -10,13 +10,13 @@ public class PlanALifetimeValuedPageModel {
 	private String averageCustomerValue;
 	private String lifetimeValuePerCustomer;
 	
-	private int monthlyInvestmentAverage;
+	private String monthlyInvestmentAverage;
 	private String prospectsNeededToBreakEven;
 	
 	
 	public PlanALifetimeValuedPageModel(String averageSale, int grossProfitMargin, int averageRepeatSales,
 			int yearsOfPatronage, String grossProfitPerSale, String averageCustomerValue,
-			String lifetimeValuePerCustomer, int monthlyInvestmentAverage, String prospectsNeededToBreakEven) {
+			String lifetimeValuePerCustomer, String monthlyInvestmentAverage, String prospectsNeededToBreakEven) {
 		super();
 		this.averageSale = averageSale;
 		this.grossProfitMargin = grossProfitMargin;
@@ -46,10 +46,10 @@ public class PlanALifetimeValuedPageModel {
 	public void setLifetimeValuePerCustomer(String lifetimeValuePerCustomer) {
 		this.lifetimeValuePerCustomer = lifetimeValuePerCustomer;
 	}
-	public int getMonthlyInvestmentAverage() {
+	public String getMonthlyInvestmentAverage() {
 		return monthlyInvestmentAverage;
 	}
-	public void setMonthlyInvestmentAverage(int monthlyInvestmentAverage) {
+	public void setMonthlyInvestmentAverage(String monthlyInvestmentAverage) {
 		this.monthlyInvestmentAverage = monthlyInvestmentAverage;
 	}
 	public String getProspectsNeededToBreakEven() {

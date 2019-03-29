@@ -53,15 +53,15 @@ public class PlanALifetimeValuedPageController {
 	@RequestMapping(value = "/savePlanALifetimeValuedPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
 			,@RequestParam String wizarddataid
-			,@RequestParam(required=false, value="0") String averageSale
-			,@RequestParam(required=false, value="0") Integer averageRepeatSales
-			,@RequestParam(required=false, value="0") Integer grossProfitMargin
-			,@RequestParam(required=false, value="0") Integer yearsOfPatronage
-			,@RequestParam(required=false, value="0") String grossProfitPerSale
-			,@RequestParam(required=false, value="0") String averageCustomerValue
-			,@RequestParam(required=false, value="0") String lifetimeValuePerCustomer
-			,@RequestParam(required=false, value="0") Integer monthlyInvestmentAverage
-			,@RequestParam(required=false, value="0") String prospectsNeededToBreakEven
+			,@RequestParam String averageSale
+			,@RequestParam Integer averageRepeatSales
+			,@RequestParam Integer grossProfitMargin
+			,@RequestParam Integer yearsOfPatronage
+			,@RequestParam String grossProfitPerSale
+			,@RequestParam String averageCustomerValue
+			,@RequestParam String lifetimeValuePerCustomer
+			,@RequestParam String monthlyInvestmentAverage
+			,@RequestParam String prospectsNeededToBreakEven
 			,@RequestParam String nextPage
 			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next
@@ -77,9 +77,7 @@ public class PlanALifetimeValuedPageController {
 		if (yearsOfPatronage == null) {
 			yearsOfPatronage= 0;
 		}
-		if (monthlyInvestmentAverage == null) {
-			monthlyInvestmentAverage= 0;
-		}
+		
 		String internalNextPage = nextPage;
 		if (publish != null) {
 			internalNextPage= publishPage;
