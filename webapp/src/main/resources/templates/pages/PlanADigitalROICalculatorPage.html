@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>(13) Plan A Lifetime Value Analysis</title>
+<title>(14) Plan A Digital ROI Calculator</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
@@ -38,29 +38,26 @@
 			<fieldset>
 			
 				<legend>
-					(13) Plan A Lifetime Value Analysis - <span
+					(14) Plan A Digital ROI Calculator - <span
 						th:text="${wizard.name}"></span>
 				</legend>
 				<div class="form-group">
-					<label for="averageSale">A. Average sale (ticket,
-						transaction, invoice)</label> <input type="text" class="form-control"
-						id="averageSale" th:value="${dataPageModel?.averageSale}" required
+					<label for="averageSale">A. Monthly Digital Investment</label> <input type="text" class="form-control"
+						id="averageSale" th:value="${dataPageModel?.planAMonthlyDigitalInvestment}" required
 						data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 						name="averageSale" />
 				</div>
 				<div class="form-group">
-					<label for="grossProfitMargin">B. Times gross profit margin
-						on average sale (sale less cost of goods sold)</label> <input
-						type="number" th:value="${dataPageModel?.grossProfitMargin}"
+					<label for="grossProfitMargin">B. Cost Per Thousand (CPM)</label> <input
+						type="number" th:value="${dataPageModel?.planACostPerThousand}"
 						required class="form-control" oninput="calculate()"
 						id="grossProfitMargin" name="grossProfitMargin" />
 				</div>
 				<div class="form-group">
-					<label for="secondLevelName">C. Equals gross profit per
-						average sale (A*B)</label> <input type="text" class="form-control"
-						id="grossProfitPerSale" name="grossProfitPerSale" readonly
-						th:value="${dataPageModel?.grossProfitPerSale}" required
-						aria-describedby="grossProfitPerSale" />
+					<label for="secondLevelName">C. Monthly Impressions (A/B * 1,000</label> <input type="text" class="form-control"
+						id="planAClosingPctNumber" name="planAClosingPctNumber" readonly
+						th:value="${dataPageModel?.planAClosingPctNumber}" required
+						aria-describedby="planAClosingPctNumber" />
 				</div>
 				<div class="form-group">
 					<label for="averageRepeatSales">D. Times the average repeat
