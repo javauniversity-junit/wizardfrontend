@@ -5,6 +5,9 @@ function totalRow() {
 
 function calculate()
 {
+	//clear
+	console.clear();
+	
 	var planAMonthlyDigitalInvestment = document.getElementById("planAMonthlyDigitalInvestment").value;
 	var planACostPerThousand = document.getElementById("planACostPerThousand").value;
 	var planAClickThroughRate = document.getElementById("planAClickThroughRate").value;
@@ -55,7 +58,7 @@ function calculate()
 	
 	var f_planACostPerClicks = (e_planAMonthlyClicks == 0) ? 0 : planAMonthlyDigitalInvestmentCal/e_planAMonthlyClicks;
 	var h_planAMonthlyConversions = e_planAMonthlyClicks * planASalesConversionPercentageCal;
-	var i_planACostPerConversion = Math.round(planAMonthlyDigitalInvestmentCal / h_planAMonthlyConversions);
+	var i_planACostPerConversion = (h_planAMonthlyConversions == 0) ? 0:Math.round(planAMonthlyDigitalInvestmentCal / h_planAMonthlyConversions);
 	var k_planAMonthlyGrossProfit = Math.round(planAProjectedGrossProfit * h_planAMonthlyConversions);
 	var l_planAMonthlyROID = Math.round(k_planAMonthlyGrossProfit - planAMonthlyDigitalInvestmentCal);
 	var m_planAMonthlyROIP = Math.round(l_planAMonthlyROID / planAMonthlyDigitalInvestmentCal);
