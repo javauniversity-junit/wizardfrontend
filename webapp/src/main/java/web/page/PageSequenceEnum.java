@@ -14,6 +14,7 @@ public enum PageSequenceEnum {
 	,PlanAMediaPage_Sequence(18)
 	,PlanBMediaPage_Sequence(19)
 	,PlanADigitalROICalculatorPage_Sequence(21)
+	,PlanBDigitalROICalculatorPage_Sequence(22)
 	,PlanALifetimeValuedPage_Sequence(16);
 	
 	private int databaseValue;
