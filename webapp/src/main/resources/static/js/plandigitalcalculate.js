@@ -43,7 +43,7 @@ function calculate()
 	
 	if (planACostPerThousand != null) {
 		planACostPerThousandCal = Number(planACostPerThousand);
-		planACostPerThousandCal = planACostPerThousandCal/100;
+		planACostPerThousandCal = planACostPerThousandCal;
 	} 
 	
 	if (planAClickThroughRate != null) {
