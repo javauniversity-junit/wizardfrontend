@@ -6,6 +6,7 @@ public enum Pages {
 	
 	
 	StrategicMarketingOne(PageNameEnum.StrategicMarketingPageOne, PageSequenceEnum.StrategicMarketingPageOne_Sequence.getDatabaseValue())
+	,PlanADigitalROICalculatorPage(PageNameEnum.PlanADigitalROICalculatorPage, PageSequenceEnum.PlanADigitalROICalculatorPage_Sequence.getDatabaseValue())
 	,PlanAProposedPage(PageNameEnum.PlanAProposedPage, PageSequenceEnum.PlanAProposedPage_Sequence.getDatabaseValue())
 	,PlanBProposedPage(PageNameEnum.PlanBProposedPage, PageSequenceEnum.PlanBProposedPage_Sequence.getDatabaseValue())
 	,PlanAMediaPage(PageNameEnum.PlanAMediaPage, PageSequenceEnum.PlanAMediaPage_Sequence.getDatabaseValue())
