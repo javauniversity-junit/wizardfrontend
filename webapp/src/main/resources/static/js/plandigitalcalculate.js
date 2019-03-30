@@ -1,4 +1,7 @@
-
+function totalRow() {
+	calculate();
+	//document.getElementById("totalRow").value = total;
+}
 
 function calculate()
 {
