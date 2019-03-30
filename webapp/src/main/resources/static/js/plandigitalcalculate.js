@@ -8,7 +8,7 @@ function calculate()
 	var planAMonthlyDigitalInvestment = document.getElementById("planAMonthlyDigitalInvestment").value;
 	var planACostPerThousand = document.getElementById("planACostPerThousand").value;
 	var planAClickThroughRate = document.getElementById("planAClickThroughRate").value;
-	var planASalesConversionPercentage = = document.getElementById("planASalesConversionPercentage").value;
+	var planASalesConversionPercentage  = document.getElementById("planASalesConversionPercentage").value;
 	//alert ("averageRepeatSales " + averageRepeatSales);
 	
 	var planAProjectedGrossProfit = document.getElementById("planAProjectedGrossProfit").value;
@@ -34,11 +34,7 @@ function calculate()
 	}
 	
 	
-	if (monthlyInvestmentAverage != null) {
-		monthlyInvestmentAverage = monthlyInvestmentAverage.substring(1);
-		monthlyInvestmentAverage = removeComma(monthlyInvestmentAverage);;
-		monthlyInvestmentAverageCal = Number(monthlyInvestmentAverage);
-	}
+	
 	
 	if (planASalesConversionPercentage != null) {
 		planASalesConversionPercentageCal = Number(planASalesConversionPercentage);
@@ -56,12 +52,13 @@ function calculate()
 	
 	var c_planAClosingPctNumber = (planAMonthlyDigitalInvestmentCal / planACostPerThousandCal) * 1000;
 	var e_planAMonthlyClicks = c_planAClosingPctNumber *  planAClickThroughRateCal;
-	var f_planACostPerClicks = planAMonthlyDigitalInvestmentCal/e_averageCustomerValue;
+	var f_planACostPerClicks = planAMonthlyDigitalInvestmentCal/e_planAMonthlyClicks;
 	var h_planAMonthlyConversions = e_planAMonthlyClicks * planASalesConversionPercentageCal;
-	var i_planACostPerConversion = Math.round(planAMonthlyDigitalInvestment / h_planAMonthlyConversions);
+	var i_planACostPerConversion = Math.round(planAMonthlyDigitalInvestmentCal / h_planAMonthlyConversions);
 	var k_planAMonthlyGrossProfit = Math.round(planAProjectedGrossProfit * h_planAMonthlyConversions);
 	var l_planAMonthlyROID = Math.round(k_planAMonthlyGrossProfit - planAMonthlyDigitalInvestmentCal);
 	var m_planAMonthlyROIP = Math.round(l_planAMonthlyROID / planAMonthlyDigitalInvestmentCal);
+	console.log(" planAMonthlyDigitalInvestmentCal " +  planAMonthlyDigitalInvestmentCal);
 	console.log(" c_planAClosingPctNumber " +  c_planAClosingPctNumber);
 	console.log(" e_planAMonthlyClicks " +  e_planAMonthlyClicks);
 	console.log(" f_planACostPerClicks " +  f_planACostPerClicks);
@@ -82,7 +79,4 @@ function calculate()
 }
 
 
-function totalRow() {
-	calculate();
-	//document.getElementById("totalRow").value = total;
-}
+
