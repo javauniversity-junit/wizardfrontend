@@ -98,29 +98,29 @@
 						name="planACostPerConversion" />
 				</div>
 				<div class="form-group">
-					<label for="planACostPerConversion">I. Cost Per Conversion (A/H)</label> <input
-						class="form-control" id="planACostPerConversion" readonly 
-						th:value="${dataPageModel?.planACostPerConversion}"
-						name="planACostPerConversion" />
+					<label for="planAProjectedGrossProfit">J. Projected Gross Profit Per Conversion ($100, $1,000, etc.)</label> <input
+						class="form-control" id="planAProjectedGrossProfit" readonly 
+						th:value="${dataPageModel?.planAProjectedGrossProfit}"
+						name="planAProjectedGrossProfit" />
 				</div>
 				
 				<div class="form-group">
-					<label for="planACostPerConversion">I. Cost Per Conversion (A/H)</label> <input
-						class="form-control" id="planACostPerConversion" readonly 
-						th:value="${dataPageModel?.planACostPerConversion}"
-						name="planACostPerConversion" />
+					<label for="planAMonthlyGrossProfit">K. Monthly Gross Profit Generated from all Conversions (H*J)</label> <input
+						class="form-control" id="planAMonthlyGrossProfit" readonly 
+						th:value="${dataPageModel?.planAMonthlyGrossProfit}"
+						name="planAMonthlyGrossProfit" />
 				</div>				
 				<div class="form-group">
-					<label for="planACostPerConversion">I. Cost Per Conversion (A/H)</label> <input
-						class="form-control" id="planACostPerConversion" readonly 
-						th:value="${dataPageModel?.planACostPerConversion}"
-						name="planACostPerConversion" />
+					<label for="planAMonthlyROID">L. $ Monthly Return on Investment (K-A)</label> <input
+						class="form-control" id="planAMonthlyROID" readonly 
+						th:value="${dataPageModel?.planAMonthlyROID}"
+						name="planAMonthlyROID" />
 				</div>
 				<div class="form-group">
-					<label for="planACostPerConversion">I. Cost Per Conversion (A/H)</label> <input
-						class="form-control" id="planACostPerConversion" readonly 
-						th:value="${dataPageModel?.planACostPerConversion}"
-						name="planACostPerConversion" />
+					<label for="planAMonthlyROIP">M. % Monthly Return on Investment (L/A)</label> <input
+						class="form-control" id="planAMonthlyROIP" readonly 
+						th:value="${dataPageModel?.planAMonthlyROIP}"
+						name="planAMonthlyROIP" />
 				</div>			
 				<input type="hidden" id="nextPage"
 					th:value="'redirect:/MarketPlaceCompetitionPage?ID=' + ${wizard.wizardid}"
