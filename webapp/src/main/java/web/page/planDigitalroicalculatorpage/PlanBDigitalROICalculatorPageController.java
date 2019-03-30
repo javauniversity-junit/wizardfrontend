@@ -84,7 +84,7 @@ public class PlanBDigitalROICalculatorPageController {
 		
 		WizardData wizardData = new WizardData();
 	    wizardData.setPagename(PageNameEnum.PlanADigitalROICalculatorPage.toString());
-		wizardData.setPagesequence(Pages.PlanADigitalROICalculatorPage.getPageSequence());
+		wizardData.setPagesequence(Pages.PlanBDigitalROICalculatorPage.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0 ) {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
