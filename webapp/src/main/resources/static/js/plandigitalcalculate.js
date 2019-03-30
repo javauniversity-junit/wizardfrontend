@@ -21,13 +21,13 @@ function calculate()
 	var planAMonthlyDigitalInvestmentCal = 0;
 	
 	
-	if (planAProjectedGrossProfit != null) {
+	if (planAProjectedGrossProfit != null && planAProjectedGrossProfit !="" ) {
 		planAProjectedGrossProfit = planAProjectedGrossProfit.substring(1);
 		planAProjectedGrossProfit = removeComma(planAProjectedGrossProfit);;
 		planAProjectedGrossProfit = Number(planAProjectedGrossProfit);
 	}
 	
-	if (planAMonthlyDigitalInvestment != null) {
+	if (planAMonthlyDigitalInvestment != null && planAMonthlyDigitalInvestment !="") {
 		planAMonthlyDigitalInvestment = planAMonthlyDigitalInvestment.substring(1);
 		planAMonthlyDigitalInvestment = removeComma(planAMonthlyDigitalInvestment);;
 		planAMonthlyDigitalInvestmentCal = Number(planAMonthlyDigitalInvestment);
@@ -36,17 +36,17 @@ function calculate()
 	
 	
 	
-	if (planASalesConversionPercentage != null) {
+	if (planASalesConversionPercentage != null && planASalesConversionPercentage !="") {
 		planASalesConversionPercentageCal = Number(planASalesConversionPercentage);
 		planASalesConversionPercentageCal = planASalesConversionPercentageCal/100;
 	}	
 	
-	if (planACostPerThousand != null) {
+	if (planACostPerThousand != null && planACostPerThousand !="") {
 		planACostPerThousandCal = Number(planACostPerThousand);
 		planACostPerThousandCal = planACostPerThousandCal;
 	} 
 	
-	if (planAClickThroughRate != null) {
+	if (planAClickThroughRate != null && planAClickThroughRate !="") {
 		planAClickThroughRateCal = Number(planAClickThroughRate)/100;
 	}
 	
