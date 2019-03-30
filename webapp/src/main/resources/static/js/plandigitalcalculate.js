@@ -52,7 +52,8 @@ function calculate()
 	
 	var c_planAClosingPctNumber = (planAMonthlyDigitalInvestmentCal / planACostPerThousandCal) * 1000;
 	var e_planAMonthlyClicks = c_planAClosingPctNumber *  planAClickThroughRateCal;
-	var f_planACostPerClicks = planAMonthlyDigitalInvestmentCal/e_planAMonthlyClicks;
+	
+	var f_planACostPerClicks = (e_planAMonthlyClicks == 0) ? 0 : planAMonthlyDigitalInvestmentCal/e_planAMonthlyClicks;
 	var h_planAMonthlyConversions = e_planAMonthlyClicks * planASalesConversionPercentageCal;
 	var i_planACostPerConversion = Math.round(planAMonthlyDigitalInvestmentCal / h_planAMonthlyConversions);
 	var k_planAMonthlyGrossProfit = Math.round(planAProjectedGrossProfit * h_planAMonthlyConversions);
