@@ -32,7 +32,7 @@ function calculate()
 	
 	if (planAMonthlyDigitalInvestment != null && planAMonthlyDigitalInvestment !="") {
 		planAMonthlyDigitalInvestment = planAMonthlyDigitalInvestment.substring(1);
-		planAMonthlyDigitalInvestment = removeComma(planAMonthlyDigitalInvestment);;
+		planAMonthlyDigitalInvestment = removeComma(planAMonthlyDigitalInvestment);
 		planAMonthlyDigitalInvestmentCal = Number(planAMonthlyDigitalInvestment);
 	}
 	
@@ -45,6 +45,8 @@ function calculate()
 	}	
 	
 	if (planACostPerThousand != null && planACostPerThousand !="") {
+		planACostPerThousandCal = planACostPerThousandCal.substring(1);
+		planACostPerThousandCal = removeComma(planACostPerThousandCal);
 		planACostPerThousandCal = Number(planACostPerThousand);
 		planACostPerThousandCal = planACostPerThousandCal;
 	} 
