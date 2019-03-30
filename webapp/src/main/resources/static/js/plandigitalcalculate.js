@@ -45,10 +45,10 @@ function calculate()
 	}	
 	
 	if (planACostPerThousand != null && planACostPerThousand !="") {
-		planACostPerThousandCal = planACostPerThousandCal.substring(1);
-		planACostPerThousandCal = removeComma(planACostPerThousandCal);
+		planACostPerThousand = planACostPerThousand.substring(1);
+		planACostPerThousand = removeComma(planACostPerThousand);
 		planACostPerThousandCal = Number(planACostPerThousand);
-		planACostPerThousandCal = planACostPerThousandCal;
+		
 	} 
 	
 	if (planAClickThroughRate != null && planAClickThroughRate !="") {
