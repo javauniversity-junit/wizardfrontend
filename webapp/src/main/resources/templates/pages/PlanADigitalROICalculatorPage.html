@@ -49,8 +49,8 @@
 				</div>
 				<div class="form-group">
 					<label for="planACostPerThousand">B. Cost Per Thousand (CPM)</label> <input
-						type="number" th:value="${dataPageModel?.planACostPerThousand}"
-						required class="form-control" oninput="calculate()"
+						type="text" th:value="${dataPageModel?.planACostPerThousand}"
+						required class="form-control" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 						id="planACostPerThousand" name="planACostPerThousand" />
 				</div>
 				<div class="form-group">
@@ -72,21 +72,21 @@
 						th:value="${dataPageModel?.planAMonthlyClicks}" />
 				</div>
 				<div class="form-group">
-					<label for="planACostPerClicks">F. Cost Per Clicks (A/E)</label> <input type="number" oninput="calculate()"
+					<label for="planACostPerClicks">F. Cost Per Clicks (A/E)</label> <input readonly
 						th:value="${dataPageModel?.planACostPerClicks}" class="form-control"
-						id="planACostPerClicks" required name="planACostPerClicks" />
+						id="planACostPerClicks" name="planACostPerClicks" />
 				</div>
 				<div class="form-group">
-					<label for="planASalesConversionPercentage">G. Sales Conversion Percentage (2%, 10%, etc.)</label> <input type="text"
+					<label for="planASalesConversionPercentage">G. Sales Conversion Percentage (2%, 10%, etc.)</label> 
+					<input type="number" oninput="calculate()"
 						class="form-control" id="planASalesConversionPercentage"
-						name="planASalesConversionPercentage" readonly 
+						name="planASalesConversionPercentage"  
 						th:value="${dataPageModel?.planASalesConversionPercentage}"
 						aria-describedby="planASalesConversionPercentage" />
 				</div>
 				<div class="form-group">
-					<label for="planAMonthlyConversions">H. Monthly Number of Conversions (E*G)</label> <input required
-						class="form-control" data-type="currency"
-						pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+					<label for="planAMonthlyConversions">H. Monthly Number of Conversions (E*G)</label> <input readonly
+						class="form-control" 
 						id="planAMonthlyConversions"
 						th:value="${dataPageModel?.planAMonthlyConversions}"
 						name="planAMonthlyConversions" />
@@ -98,8 +98,9 @@
 						name="planACostPerConversion" />
 				</div>
 				<div class="form-group">
-					<label for="planAProjectedGrossProfit">J. Projected Gross Profit Per Conversion ($100, $1,000, etc.)</label> <input
-						class="form-control" id="planAProjectedGrossProfit" readonly 
+					<label for="planAProjectedGrossProfit">J. Projected Gross Profit Per Conversion ($100, $1,000, etc.)</label> 
+					<input type="text" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+						class="form-control" id="planAProjectedGrossProfit"
 						th:value="${dataPageModel?.planAProjectedGrossProfit}"
 						name="planAProjectedGrossProfit" />
 				</div>
