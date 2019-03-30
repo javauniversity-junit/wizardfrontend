@@ -14,7 +14,7 @@ function calculate()
 	var planAProjectedGrossProfit = document.getElementById("planAProjectedGrossProfit").value;
 	var planAProjectedGrossProfit= document.getElementById("planAProjectedGrossProfit").value;
 	var planAMonthlyDigitalInvestmentCal =0;
-	var planACostPerThousandCal =0;
+	var planACostPerThousandCal =1;
 	var planAClickThroughRateCal =0;
 	var planASalesConversionPercentageCal =0;
 	var monthlyInvestmentAverageCal = 0;
@@ -44,7 +44,7 @@ function calculate()
 	if (planACostPerThousand != null) {
 		planACostPerThousandCal = Number(planACostPerThousand);
 		planACostPerThousandCal = planACostPerThousandCal/100;
-	}
+	} 
 	
 	if (planAClickThroughRate != null) {
 		planAClickThroughRateCal = Number(planAClickThroughRate)/100;
@@ -59,6 +59,7 @@ function calculate()
 	var l_planAMonthlyROID = Math.round(k_planAMonthlyGrossProfit - planAMonthlyDigitalInvestmentCal);
 	var m_planAMonthlyROIP = Math.round(l_planAMonthlyROID / planAMonthlyDigitalInvestmentCal);
 	console.log(" planAMonthlyDigitalInvestmentCal " +  planAMonthlyDigitalInvestmentCal);
+	
 	console.log(" c_planAClosingPctNumber " +  c_planAClosingPctNumber);
 	console.log(" e_planAMonthlyClicks " +  e_planAMonthlyClicks);
 	console.log(" f_planACostPerClicks " +  f_planACostPerClicks);
