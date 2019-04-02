@@ -12,10 +12,11 @@
 
 	<div class="whiteGrad">
 		<p>
-		<h2>Presented To</h2><span th:text="${PresentedToPage?.clientContactName}"></span>
+		<h2>Presented To</h2><span th:text="${PresentedToPage?.clientContactName}"></span>-
+		<span th:text="${PresentedToPage?.clientBusinessName}"></span>
 		</p>
 		<p>
-		<h2>Presented By</h2>
+		<h2>Presented By</h2><span th:text="${PresentedToPage?.portfolioManagerName}"></span>
 		</p>
 		<p>Copyright © 1984-2017 Executive Decision Systems, Inc. and The
 			Guld Resource Group, LLC. The data, formulas, and other content in
