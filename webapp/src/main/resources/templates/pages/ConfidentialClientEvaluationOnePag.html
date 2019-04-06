@@ -10,6 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
 
+
 <!-- Bootstrap CSS-->
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
@@ -139,71 +140,7 @@
 				   </div>				
 				</div>			
 				
-				
-				<div class="form-group">
-					<label for="averageSale">A. What was spent last year in:</label> <input type="text" class="form-control"
-						id="averageSale" th:value="${dataPageModel?.averageSale}" required
-						data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
-						name="averageSale" />
-				</div>
-				<div class="form-group">
-					<label for="grossProfitMargin">B. Times gross profit margin
-						on average sale (sale less cost of goods sold)</label> <input
-						type="number" th:value="${dataPageModel?.grossProfitMargin}"
-						required class="form-control" oninput="calculate()"
-						id="grossProfitMargin" name="grossProfitMargin" />
-				</div>
-				<div class="form-group">
-					<label for="secondLevelName">C. Equals gross profit per
-						average sale (A*B)</label> <input type="text" class="form-control"
-						id="grossProfitPerSale" name="grossProfitPerSale" readonly
-						th:value="${dataPageModel?.grossProfitPerSale}" required
-						aria-describedby="grossProfitPerSale" />
-				</div>
-				<div class="form-group">
-					<label for="averageRepeatSales">D. Times the average repeat
-						sales per year (per customer/client)</label> <input type="number"
-						th:value="${dataPageModel?.averageRepeatSales}" required
-						class="form-control" id="averageRepeatSales" oninput="calculate()"
-						name="averageRepeatSales" />
-				</div>
-				<div class="form-group">
-					<label for="averageCustomerValue">E. Equals the average
-						customer/client value per year (C*D)</label> <input readonly
-						name="averageCustomerValue" id="averageCustomerValue"
-						class="form-control"
-						th:value="${dataPageModel?.averageCustomerValue}" />
-				</div>
-				<div class="form-group">
-					<label for="yearsOfPatronage">F. Times the average number
-						of years of patronage</label> <input type="number" oninput="calculate()"
-						th:value="${dataPageModel?.yearsOfPatronage}" class="form-control"
-						id="yearsOfPatronage" required name="yearsOfPatronage" />
-				</div>
-				<div class="form-group">
-					<label for="lifetimeValuePerCustomer">G. Equals the
-						lifetime value of one customer/client (E*F)</label> <input type="text"
-						class="form-control" id="lifetimeValuePerCustomer"
-						name="lifetimeValuePerCustomer" readonly 
-						th:value="${dataPageModel?.lifetimeValuePerCustomer}"
-						aria-describedby="lifetimeValuePerCustomer" />
-				</div>
-				<div class="form-group">
-					<label for="monthlyInvestmentAverage">H. So if your base
-						monthly advertising investment averages</label> <input required
-						class="form-control" data-type="currency"
-						pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
-						id="monthlyInvestmentAverage"
-						th:value="${dataPageModel?.monthlyInvestmentAverage}"
-						name="monthlyInvestmentAverage" />
-				</div>
-				<div class="form-group">
-					<label for="prospectsNeededToBreakEven">I. Then monthly
-						customers/clients needed to break even (H/G)</label> <input
-						class="form-control" id="prospectsNeededToBreakEven" readonly 
-						th:value="${dataPageModel?.prospectsNeededToBreakEven}"
-						name="prospectsNeededToBreakEven" />
-				</div>
+	
 
 
 				<input type="hidden" id="nextPage"
