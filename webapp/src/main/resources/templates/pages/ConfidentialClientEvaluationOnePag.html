@@ -34,6 +34,11 @@
 
 
 	<div class="container">
+		<style>
+	          .media {
+			  padding:1%;
+			}
+		</style>	
 		<form method="post" action="saveConfidentialClientEvaluationOnePage">
 			<fieldset>
 			
@@ -42,7 +47,7 @@
 						th:text="${wizard.name}"></span>
 				</legend>
 				<p>A. What was spent last year in:</p>
-				<div class="row">
+				<div class="row media">
 				   <div class="col-6">
 					Media:   
 				   </div>
@@ -50,7 +55,7 @@
 					Amount:   
 				   </div>				
 				</div>
-				<div class="row">
+				<div class="row media">
 				   <div class="col-6">
 					<input
 						type="number" th:value="${dataPageModel?.grossProfitMargin}"
