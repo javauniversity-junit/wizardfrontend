@@ -8,34 +8,48 @@ function calculate()
 	var lastYearValue4 = document.getElementById("lastYearValue4").value;
 	var lastYearValue5= document.getElementById("lastYearValue5").value;
 	var lastYearValue6= document.getElementById("lastYearValue6").value;
-	var averageSaleCal =0;
-	var grossProfitMarginCal =0;
-	var averageRepeatSalesCal =0;
-	var yearsOfPatronageCal =0;
-	var monthlyInvestmentAverageCal = 0;
+	var lastYearValue1Cal =0;
+	var lastYearValue2Cal =0;
+	var lastYearValue3Cal =0;
+	var lastYearValue4Cal =0;
+	var lastYearValue5Cal =0;
+	var lastYearValue6Cal =0;
 	
-	if (averageSale != null) {
-		averageSale = averageSale.substring(1);
-		averageSale = removeComma(averageSale);;
-		averageSaleCal = Number(averageSale);
+	if (lastYearValue1 != null) {
+		lastYearValue1 = lastYearValue1.substring(1);
+		lastYearValue1 = removeComma(lastYearValue1);;
+		lastYearValue1Cal = Number(lastYearValue1);
 	}
-	if (monthlyInvestmentAverage != null) {
-		monthlyInvestmentAverage = monthlyInvestmentAverage.substring(1);
-		monthlyInvestmentAverage = removeComma(monthlyInvestmentAverage);;
-		monthlyInvestmentAverageCal = Number(monthlyInvestmentAverage);
-	}
-	
-	if (grossProfitMargin != null) {
-		grossProfitMarginCal = Number(grossProfitMargin);
-		grossProfitMarginCal = grossProfitMarginCal/100;
+	if (lastYearValue2 != null) {
+		lastYearValue2 = lastYearValue2.substring(1);
+		lastYearValue2 = removeComma(lastYearValue2;;
+		lastYearValue2Cal = Number(lastYearValue2);
 	}
 	
-	if (averageRepeatSales != null) {
-		averageRepeatSalesCal = Number(averageRepeatSales);
+	if (lastYearValue3 != null) {
+		lastYearValue3 = lastYearValue3.substring(1);
+		lastYearValue3 = removeComma(lastYearValue3);;
+		lastYearValue3Cal = Number(lastYearValue3);
 	}
-	if (yearsOfPatronage != null) {
-		yearsOfPatronageCal = Number(yearsOfPatronage);
+	if (lastYearValue4 != null) {
+		lastYearValue4 = lastYearValue4.substring(1);
+		lastYearValue4 = removeComma(lastYearValue4;;
+		lastYearValue4Cal = Number(lastYearValue4);
 	}
+	if (lastYearValue5 != null) {
+		lastYearValue5 = lastYearValue5.substring(1);
+		lastYearValue5 = removeComma(lastYearValue5);;
+		lastYearValue5Cal = Number(lastYearValue5);
+	}
+	if (lastYearValue6 != null) {
+		lastYearValue6 = lastYearValue6.substring(1);
+		lastYearValue6 = removeComma(lastYearValue6;;
+		llastYearValue6Cal = Number(lastYearValue6);
+	}
+	
+	
+	
+
 	var c_grossProfitPerSale = averageSaleCal * grossProfitMarginCal;
 	var e_averageCustomerValue = c_grossProfitPerSale *  averageRepeatSalesCal;
 	var g_lifetimeValuePerCustomer =e_averageCustomerValue * yearsOfPatronageCal;
