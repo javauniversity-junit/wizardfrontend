@@ -1,12 +1,13 @@
 function calculate()
 {
-	var averageSale = document.getElementById("averageSale").value;
-	var grossProfitMargin = document.getElementById("grossProfitMargin").value;
-	var averageRepeatSales = document.getElementById("averageRepeatSales").value;
+	var lastYearValue1 = document.getElementById("lastYearValue1").value;
+	var lastYearValue2 = document.getElementById("lastYearValue2").value;
+	var lastYearValue3 = document.getElementById("lastYearValue3").value;
 	//alert ("averageRepeatSales " + averageRepeatSales);
 	
-	var yearsOfPatronage = document.getElementById("yearsOfPatronage").value;
-	var monthlyInvestmentAverage= document.getElementById("monthlyInvestmentAverage").value;
+	var lastYearValue4 = document.getElementById("lastYearValue4").value;
+	var lastYearValue5= document.getElementById("lastYearValue5").value;
+	var lastYearValue6= document.getElementById("lastYearValue6").value;
 	var averageSaleCal =0;
 	var grossProfitMarginCal =0;
 	var averageRepeatSalesCal =0;
