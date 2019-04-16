@@ -15,6 +15,7 @@ function calculate()
 	var lastYearValue5Cal =0;
 	var lastYearValue6Cal =0;
 	
+	
 	if (lastYearValue1 != null) {
 		lastYearValue1 = lastYearValue1.substring(1);
 		lastYearValue1 = removeComma(lastYearValue1);;
@@ -50,17 +51,12 @@ function calculate()
 	
 	
 
-	var c_grossProfitPerSale = averageSaleCal * grossProfitMarginCal;
-	var e_averageCustomerValue = c_grossProfitPerSale *  averageRepeatSalesCal;
-	var g_lifetimeValuePerCustomer =e_averageCustomerValue * yearsOfPatronageCal;
-	var i_prospectsNeededToBreakEven = Math.round(g_lifetimeValuePerCustomer * monthlyInvestmentAverageCal);
-	console.log(" averageRepeatSales " +  averageRepeatSales);
-	console.log(" c_grossProfitPerSale " +  c_grossProfitPerSale);
-	console.log(" e_averageCustomerValue " +  e_averageCustomerValue);
-	console.log("g_lifetimeValuePerCustomer " +  g_lifetimeValuePerCustomer);
-	console.log("i_prospectsNeededToBreakEven " +  i_prospectsNeededToBreakEven);
+
 	
-	document.getElementById("grossProfitPerSale").value =  c_grossProfitPerSale;
+	var totalMediaInvestment = lastYearValue1Cal + lastYearValue2Cal + lastYearValue3Cal + lastYearValue4Cal
+	                  + lastYearValue5Cal + lastYearValue6Cal;
+	
+	document.getElementById("totalMediaInvestment").value =  totalMediaInvestment;
 	document.getElementById("averageCustomerValue").value = e_averageCustomerValue;//e
 	document.getElementById("lifetimeValuePerCustomer").value = g_lifetimeValuePerCustomer;
 	document.getElementById("prospectsNeededToBreakEven").value = i_prospectsNeededToBreakEven;
