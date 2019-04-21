@@ -16,7 +16,177 @@ public class ConfidentialClientEvaluationOnePageModel {
 	private String totalMediaInvestment;
 	private String pctTAIGrossSalesLastYear;
 	private String grossSalesLastyear;
+	private String proposedLabel1;
+	private String proposedLabel2;
+	private String proposedLabel3;
+	private String proposedLabel4;
+	private String proposedLabel5;
+	private String proposedLabel6;
+	private String proposedValue1;
+	private String proposedValue2;
+	private String proposedValue3;
+	private String proposedValue4;
+	private String proposedValue5;
+	private String proposedValue6;
+	private String tAINext12Months;
+	private String pctGrossSales;
+	private String estimatedGrossSalesNext12Months;
+	private String tAIShouldBe;
+	private String industryAverage;
+	private String salesGoals;
+	public String getProposedLabel1() {
+		return proposedLabel1;
+	}
+	public void setProposedLabel1(String proposedLabel1) {
+		this.proposedLabel1 = proposedLabel1;
+	}
+	public String getProposedLabel2() {
+		return proposedLabel2;
+	}
+	public void setProposedLabel2(String proposedLabel2) {
+		this.proposedLabel2 = proposedLabel2;
+	}
+	public String getProposedLabel3() {
+		return proposedLabel3;
+	}
+	public void setProposedLabel3(String proposedLabel3) {
+		this.proposedLabel3 = proposedLabel3;
+	}
+	public String getProposedLabel4() {
+		return proposedLabel4;
+	}
+	public void setProposedLabel4(String proposedLabel4) {
+		this.proposedLabel4 = proposedLabel4;
+	}
+	public String getProposedLabel5() {
+		return proposedLabel5;
+	}
+	public void setProposedLabel5(String proposedLabel5) {
+		this.proposedLabel5 = proposedLabel5;
+	}
+	public String getProposedLabel6() {
+		return proposedLabel6;
+	}
+	public void setProposedLabel6(String proposedLabel6) {
+		this.proposedLabel6 = proposedLabel6;
+	}
+	public String getProposedValue1() {
+		return proposedValue1;
+	}
+	public void setProposedValue1(String proposedValue1) {
+		this.proposedValue1 = proposedValue1;
+	}
+	public String getProposedValue2() {
+		return proposedValue2;
+	}
+	public void setProposedValue2(String proposedValue2) {
+		this.proposedValue2 = proposedValue2;
+	}
+	public String getProposedValue3() {
+		return proposedValue3;
+	}
+	public void setProposedValue3(String proposedValue3) {
+		this.proposedValue3 = proposedValue3;
+	}
+	public String getProposedValue4() {
+		return proposedValue4;
+	}
+	public void setProposedValue4(String proposedValue4) {
+		this.proposedValue4 = proposedValue4;
+	}
+	public String getProposedValue5() {
+		return proposedValue5;
+	}
+	public void setProposedValue5(String proposedValue5) {
+		this.proposedValue5 = proposedValue5;
+	}
+	public String getProposedValue6() {
+		return proposedValue6;
+	}
+	public void setProposedValue6(String proposedValue6) {
+		this.proposedValue6 = proposedValue6;
+	}
+	public String gettAINext12Months() {
+		return tAINext12Months;
+	}
+	public void settAINext12Months(String tAINext12Months) {
+		this.tAINext12Months = tAINext12Months;
+	}
+	public String getPctGrossSales() {
+		return pctGrossSales;
+	}
+	public void setPctGrossSales(String pctGrossSales) {
+		this.pctGrossSales = pctGrossSales;
+	}
+	public String getEstimatedGrossSalesNext12Months() {
+		return estimatedGrossSalesNext12Months;
+	}
+	public void setEstimatedGrossSalesNext12Months(String estimatedGrossSalesNext12Months) {
+		this.estimatedGrossSalesNext12Months = estimatedGrossSalesNext12Months;
+	}
+	public String gettAIShouldBe() {
+		return tAIShouldBe;
+	}
+	public void settAIShouldBe(String tAIShouldBe) {
+		this.tAIShouldBe = tAIShouldBe;
+	}
+	public String getIndustryAverage() {
+		return industryAverage;
+	}
+	public void setIndustryAverage(String industryAverage) {
+		this.industryAverage = industryAverage;
+	}
+	public String getSalesGoals() {
+		return salesGoals;
+	}
+	public void setSalesGoals(String salesGoals) {
+		this.salesGoals = salesGoals;
+	}
 	
+	public ConfidentialClientEvaluationOnePageModel(String lastYearLabel1, String lastYearLabel2, String lastYearLabel3,
+			String lastYearLabel4, String lastYearLabel5, String lastYearLabel6, String lastYearValue1,
+			String lastYearValue2, String lastYearValue3, String lastYearValue4, String lastYearValue5,
+			String lastYearValue6, String totalMediaInvestment, String pctTAIGrossSalesLastYear,
+			String grossSalesLastyear, String proposedLabel1, String proposedLabel2, String proposedLabel3,
+			String proposedLabel4, String proposedLabel5, String proposedLabel6, String proposedValue1,
+			String proposedValue2, String proposedValue3, String proposedValue4, String proposedValue5,
+			String proposedValue6, String tAINext12Months, String pctGrossSales, String estimatedGrossSalesNext12Months,
+			String tAIShouldBe, String industryAverage, String salesGoals) {
+		super();
+		this.lastYearLabel1 = lastYearLabel1;
+		this.lastYearLabel2 = lastYearLabel2;
+		this.lastYearLabel3 = lastYearLabel3;
+		this.lastYearLabel4 = lastYearLabel4;
+		this.lastYearLabel5 = lastYearLabel5;
+		this.lastYearLabel6 = lastYearLabel6;
+		this.lastYearValue1 = lastYearValue1;
+		this.lastYearValue2 = lastYearValue2;
+		this.lastYearValue3 = lastYearValue3;
+		this.lastYearValue4 = lastYearValue4;
+		this.lastYearValue5 = lastYearValue5;
+		this.lastYearValue6 = lastYearValue6;
+		this.totalMediaInvestment = totalMediaInvestment;
+		this.pctTAIGrossSalesLastYear = pctTAIGrossSalesLastYear;
+		this.grossSalesLastyear = grossSalesLastyear;
+		this.proposedLabel1 = proposedLabel1;
+		this.proposedLabel2 = proposedLabel2;
+		this.proposedLabel3 = proposedLabel3;
+		this.proposedLabel4 = proposedLabel4;
+		this.proposedLabel5 = proposedLabel5;
+		this.proposedLabel6 = proposedLabel6;
+		this.proposedValue1 = proposedValue1;
+		this.proposedValue2 = proposedValue2;
+		this.proposedValue3 = proposedValue3;
+		this.proposedValue4 = proposedValue4;
+		this.proposedValue5 = proposedValue5;
+		this.proposedValue6 = proposedValue6;
+		this.tAINext12Months = tAINext12Months;
+		this.pctGrossSales = pctGrossSales;
+		this.estimatedGrossSalesNext12Months = estimatedGrossSalesNext12Months;
+		this.tAIShouldBe = tAIShouldBe;
+		this.industryAverage = industryAverage;
+		this.salesGoals = salesGoals;
+	}
 	public ConfidentialClientEvaluationOnePageModel(String lastYearLabel1, String lastYearLabel2, String lastYearLabel3,
 			String lastYearLabel4, String lastYearLabel5, String lastYearLabel6, String lastYearValue1,
 			String lastYearValue2, String lastYearValue3, String lastYearValue4, String lastYearValue5,
