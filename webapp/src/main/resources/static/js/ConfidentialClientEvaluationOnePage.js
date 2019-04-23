@@ -23,7 +23,7 @@ function calculate()
 	}
 	if (lastYearValue2 != null) {
 		lastYearValue2 = lastYearValue2.substring(1);
-		lastYearValue2 = removeComma(lastYearValue2;
+		lastYearValue2 = removeComma(lastYearValue2);
 		lastYearValue2Cal = Number(lastYearValue2);
 	}
 	
@@ -34,7 +34,7 @@ function calculate()
 	}
 	if (lastYearValue4 != null) {
 		lastYearValue4 = lastYearValue4.substring(1);
-		lastYearValue4 = removeComma(lastYearValue4;;
+		lastYearValue4 = removeComma(lastYearValue4);
 		lastYearValue4Cal = Number(lastYearValue4);
 	}
 	if (lastYearValue5 != null) {
@@ -44,7 +44,7 @@ function calculate()
 	}
 	if (lastYearValue6 != null) {
 		lastYearValue6 = lastYearValue6.substring(1);
-		lastYearValue6 = removeComma(lastYearValue6;;
+		lastYearValue6 = removeComma(lastYearValue6);
 		llastYearValue6Cal = Number(lastYearValue6);
 	}
 	
@@ -57,9 +57,9 @@ function calculate()
 	                  + lastYearValue5Cal + lastYearValue6Cal;
 	
 	document.getElementById("totalMediaInvestment").value =  totalMediaInvestment;
-	document.getElementById("averageCustomerValue").value = e_averageCustomerValue;//e
-	document.getElementById("lifetimeValuePerCustomer").value = g_lifetimeValuePerCustomer;
-	document.getElementById("prospectsNeededToBreakEven").value = i_prospectsNeededToBreakEven;
+	//document.getElementById("averageCustomerValue").value = e_averageCustomerValue;//e
+	//document.getElementById("lifetimeValuePerCustomer").value = g_lifetimeValuePerCustomer;
+	//document.getElementById("prospectsNeededToBreakEven").value = i_prospectsNeededToBreakEven;
 }
 
 
