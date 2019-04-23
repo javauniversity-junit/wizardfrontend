@@ -18,18 +18,18 @@ function calculate()
 	
 	if (lastYearValue1 != null) {
 		lastYearValue1 = lastYearValue1.substring(1);
-		lastYearValue1 = removeComma(lastYearValue1);;
+		lastYearValue1 = removeComma(lastYearValue1);
 		lastYearValue1Cal = Number(lastYearValue1);
 	}
 	if (lastYearValue2 != null) {
 		lastYearValue2 = lastYearValue2.substring(1);
-		lastYearValue2 = removeComma(lastYearValue2;;
+		lastYearValue2 = removeComma(lastYearValue2;
 		lastYearValue2Cal = Number(lastYearValue2);
 	}
 	
 	if (lastYearValue3 != null) {
 		lastYearValue3 = lastYearValue3.substring(1);
-		lastYearValue3 = removeComma(lastYearValue3);;
+		lastYearValue3 = removeComma(lastYearValue3);
 		lastYearValue3Cal = Number(lastYearValue3);
 	}
 	if (lastYearValue4 != null) {
@@ -39,7 +39,7 @@ function calculate()
 	}
 	if (lastYearValue5 != null) {
 		lastYearValue5 = lastYearValue5.substring(1);
-		lastYearValue5 = removeComma(lastYearValue5);;
+		lastYearValue5 = removeComma(lastYearValue5);
 		lastYearValue5Cal = Number(lastYearValue5);
 	}
 	if (lastYearValue6 != null) {
