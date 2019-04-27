@@ -341,7 +341,7 @@
                         Total Media Investment:
                     </div>
                     <div class="col-6">
-                        <input type="text" class="form-control" id="totalMediaInvestment" th:value="${dataPageModel?.totalMediaInvestment}" readonly name="totalMediaInvestment" />
+                        <input type="text" class="form-control" id="totalMediaInvestmentTwo" th:value="${dataPageModel?.totalMediaInvestmentTwo}" readonly name="totalMediaInvestmentTwo" />
                     </div>
                 </div>
                 
@@ -352,7 +352,9 @@
                                 E.
                             </div>
                             <div class="col-10">
-                                <input type="text" th:value="${dataPageModel?.pctTAIGrossSalesLastYear}" readonly class="form-control" id="pctTAIGrossSalesLastYear" name="pctTAIGrossSalesLastYear">
+                                <input type="number" th:value="${dataPageModel?.pctTAIGrossSalesLastYearTwo}" 
+                                        class="form-control" id="pctTAIGrossSalesLastYearTwo" 
+                                       name="pctTAIGrossSalesLastYearTwo">
                             </div>
                         </div>
                     </div>
@@ -362,7 +364,8 @@
                                 /
                             </div>
                             <div class="col-10">
-                                <input type="text" th:value="${dataPageModel?.grossSalesLastyear}" class="form-control" id="grossSalesLastyear" name="grossSalesLastyear">
+                                <input type="text" th:value="${dataPageModel?.grossSalesLastyearTwo}" 
+                                       class="form-control" id="grossSalesLastyearTwo" name="grossSalesLastyearTwo">
                             </div>
                         </div>
                     </div>
