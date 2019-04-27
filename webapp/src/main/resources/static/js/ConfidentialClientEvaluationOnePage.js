@@ -102,8 +102,8 @@ function calculateTwo()
 	var proposedValue2 = document.getElementById("proposedValue2").value;
 	var proposedValue3 = document.getElementById("proposedValue3").value;
 	
-	var pctTAIGrossSalesLastYear = document.getElementById("pctTAIGrossSalesLastYear").value;
-	var totalMediaInvestment = document.getElementById("totalMediaInvestment").value;
+	var pctTAIGrossSalesLastYearTwo = document.getElementById("pctTAIGrossSalesLastYearTwo").value;
+	var totalMediaInvestment = document.getElementById("totalMediaInvestmentTwo").value;
 	
 	//TotalMediaInvestment / pctTAIGrossSalesLastYear = GrossSalesLastyear
 	
@@ -138,7 +138,7 @@ function calculateTwo()
 		var percentage = 100/pctTAIGrossSalesLastYearCal;
 		var total = totalMediaInvestmentCal/ percentage;
 		total = Math.round(total);
-		document.getElementById("grossSalesLastyear").value =  total;
+		document.getElementById("grossSalesLastyearTwo").value =  total;
 		
 	}
 	
