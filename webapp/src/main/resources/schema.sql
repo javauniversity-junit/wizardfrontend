@@ -72,4 +72,4 @@ INSERT IGNORE INTO `contact` ( `contact_id`,`name`, `uuid`, `license`, `general_
 
 INSERT IGNORE  INTO `contact` (`contact_id`,`name`, `uuid`, `license`, `general_information`, `phone`, `usage_date`, `created_date`, `start_date`, `end_date`, `address`, `active`, `client_type`, `streetaddress`, `city`, `state`, `zipcode`, `emailaddress`,`password`) VALUES (-888,'michael guld', '2ff153db', '9GQP4BrwXnUf', 'this is a test today', '8043567006', '2017-09-11 11:01:43', '2017-09-06 12:16:05', '2017-01-06 00:09:00', '2022-01-30 00:09:00', 'natalie.guld@guldresource.com', 1, 'Radio', '3434 edwards mill rd.', 'Raleigh', 'NC', '27612', 'b@aol.com', 'pass');
 
-INSERT IGNORE  INTO `agent` (`address`,`password`, `contact_id`) VALUES ('a@aol.com', 'a', -777);
+INSERT IGNORE  INTO `agent` (`address`,`password`, `contact_id`) VALUES ('a@aol.com', 'b', -777);
