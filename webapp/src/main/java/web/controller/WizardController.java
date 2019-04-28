@@ -53,9 +53,10 @@ public class WizardController {
 		// @RequestParam means it is a parameter from the GET or POST request
 		mLog.info("starting add");
 		mLog.info("name " + name);
+		mLog.info("wizardId " + wizardId);
 		Wizard wizard = new Wizard();
 		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
-		if (!wizardId.equals("")) {
+		if (wizardId != null && !wizardId.equals("")) {
 			int wizardIdInt = Integer.parseInt(wizardId);
 			wizard.setWizardid(wizardIdInt);
 			
