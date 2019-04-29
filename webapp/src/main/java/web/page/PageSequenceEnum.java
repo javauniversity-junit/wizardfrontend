@@ -11,6 +11,7 @@ public enum PageSequenceEnum {
 	,StrategicMarketingPageThree_Sequence(7)
 	,ConfidentialClientEvaluationOnePage_Sequence(9)
 	,PlanAProposedPage_Sequence(12)
+	,PlanABEPPage_Sequence(13)
 	,PlanBProposedPage_Sequence(14)
 	,PlanALifetimeValuedPage_Sequence(16)
 	,PlanBLifetimeValuedPage_Sequence(17)

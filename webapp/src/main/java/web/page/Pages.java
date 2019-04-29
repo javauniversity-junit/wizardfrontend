@@ -14,6 +14,7 @@ public enum Pages {
 	,PlanAMediaPage(PageNameEnum.PlanAMediaPage, PageSequenceEnum.PlanAMediaPage_Sequence.getDatabaseValue())
 	,PlanALifetimeValuedPage(PageNameEnum.PlanALifetimeValuedPage, PageSequenceEnum.PlanALifetimeValuedPage_Sequence.getDatabaseValue())
 	,PlanBLifetimeValuedPage(PageNameEnum.PlanBLifetimeValuedPage, PageSequenceEnum.PlanBLifetimeValuedPage_Sequence.getDatabaseValue())
+	,PlanABEPPage(PageNameEnum.PlanABEPPage, PageSequenceEnum.PlanABEPPage_Sequence.getDatabaseValue())
 	,PlanBMediaPage(PageNameEnum.PlanBMediaPage, PageSequenceEnum.PlanBMediaPage_Sequence.getDatabaseValue())
 	,StrategicMarketingTwo(PageNameEnum.StrategicMarketingPageTwo, PageSequenceEnum.StrategicMarketingPageTwo_Sequence.getDatabaseValue())
 	,StrategicMarketingThree(PageNameEnum.StrategicMarketingPageThree, PageSequenceEnum.StrategicMarketingPageThree_Sequence.getDatabaseValue())

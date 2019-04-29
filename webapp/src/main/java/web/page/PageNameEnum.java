@@ -17,5 +17,6 @@ public enum PageNameEnum {
 	,StrategicMarketingPageOne
 	,StrategicMarketingPageTwo
 	,StrategicMarketingPageThree
-	,StrategicMarketingPageFour;
+	,StrategicMarketingPageFour
+	,PlanABEPPage;
 }

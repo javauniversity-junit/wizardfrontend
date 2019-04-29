@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>(12) Plan A EDS Break Even Point Analysis (BEP)</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+
+
+<!-- Bootstrap CSS-->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	crossorigin="anonymous" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+<!-- Favicon-->
+<link rel="shortcut icon" href="./img/icon.png">
+
+</head>
+<body>
+
+
+	<!-- Begin page content -->
+	<!--- start header container -->
+
+	<div id="headerId"></div>
+
+
+
+
+	<div class="container">
+		<form method="post" action="savePlanABEPPage">
+			<fieldset>
+			
+				<legend>
+					(12) Plan A EDS Break Even Point Analysis (BEP) - <span
+						th:text="${wizard.name}"></span>
+				</legend>
+				<div class="form-group">
+					<label for="planAAverageSale">A. Average sale (ticket, transaction, invoice)</label> <input type="text" class="form-control"
+						id="planAAverageSale" th:value="${dataPageModel?.planAAverageSale}" required
+						data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+						name="planAAverageSale" />
+				</div>
+				<div class="form-group">
+					<label for="planAGrossMargin">B. Gross profit margin on average sale (sale less cost of goods sold)</label> <input
+						type="number" th:value="${dataPageModel?.planAGrossMargin}"
+						required class="form-control" oninput="calculate()"
+						id="planAGrossMargin" name="planAGrossMargin" />
+				</div>
+				<div class="form-group">
+					<label for="planAClosingPct">C. Closing or conversion rate </label> <input type="text" class="form-control"
+						id="planAClosingPct" name="planAClosingPct" readonly
+						th:value="${dataPageModel?.planAClosingPct}" required
+						aria-describedby="planAClosingPct" />
+				</div>
+				<div class="form-group">
+					<label for="PlanAProspectValue">D. Projected prospect value (A*B*C)</label> <input type="number"
+						th:value="${dataPageModel?.PlanAProspectValue}" required
+						class="form-control" id="PlanAProspectValue" oninput="calculate()"
+						name="PlanAProspectValue" />
+				</div>
+				<div class="form-group">
+					<label for="PlanAInvestment">E. Client monthly advertising investment (base month)</label> <input readonly
+						name="PlanAInvestment" id="PlanAInvestment"
+						class="form-control"
+						th:value="${dataPageModel?.PlanAInvestment}" />
+				</div>
+				<div class="form-group">
+					<label for="PlanAProspectsNeeded">F. Monthly prospects needed to pay for advertising investment (E/D)</label> <input type="number" oninput="calculate()"
+						th:value="${dataPageModel?.PlanAProspectsNeeded}" class="form-control"
+						id="PlanAProspectsNeeded" required name="PlanAProspectsNeeded" />
+				</div>
+				<div class="form-group">
+					<label for="PlanAProspectSalesNeeded">G. Number of monthly sales needed to break even (F*C)</label> <input type="text"
+						class="form-control" id="PlanAProspectSalesNeeded"
+						name="PlanAProspectSalesNeeded" readonly 
+						th:value="${dataPageModel?.PlanAProspectSalesNeeded}"
+						aria-describedby="PlanAProspectSalesNeeded" />
+				</div>
+				<div class="form-group">
+					<label for="PlanAGrossProfitOnSales">H. Gross sales per month needed to break even (G*A)</label> <input required
+						class="form-control" data-type="currency"
+						pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+						id="PlanAGrossProfitOnSales"
+						th:value="${dataPageModel?.PlanAGrossProfitOnSales}"
+						name="PlanAGrossProfitOnSales" />
+				</div>
+				<div class="form-group">
+					<label for="PlanAMonths">I. Number of months to run in proposed marketing plan</label> <input
+						class="form-control" id="PlanAMonths" readonly 
+						th:value="${dataPageModel?.PlanAMonths}"
+						name="PlanAMonths" />
+				</div>
+				<div class="form-group">
+					<label for="PlanAAdditionalGrossSales">J. Additional gross sales per year needed to break even (H*I)</label> <input
+						class="form-control" id="PlanAAdditionalGrossSales" readonly 
+						th:value="${dataPageModel?.PlanAAdditionalGrossSales}"
+						name="PlanAAdditionalGrossSales" />
+				</div>
+
+				<input type="hidden" id="nextPage"
+					th:value="'redirect:/MarketPlaceCompetitionPage?ID=' + ${wizard.wizardid}"
+					name="nextPage" /> <input type="hidden" id="previousPage"
+					th:value="'redirect:/PresentedToPage?ID=' + ${wizard.wizardid}"
+					name="previousPage" /> <input type="hidden" id="publishPage"
+					th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
+					name="publishPage" /> <input type="hidden" id="wizardId"
+					th:value="${wizard.wizardid}" name="wizardId" /> <input
+					type="hidden" id="wizarddataid"
+					th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> <input
+					name="next" type="submit" value="Next" class="btn btn-primary"
+					style="background-color: #C0B879;" /> <input name="publish"
+					type="submit" value="Publish" class="btn btn-primary"
+					style="background-color: #C0B879;" /> <input name="previous"
+					value="Previous" type="submit" class="btn btn-primary"
+					style="background-color: #C0B879;" />
+			</fieldset>
+		</form>
+		<div class="container" style="padding-top: 2%;">
+
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="7"
+					aria-valuemin="0" aria-valuemax="100"
+					style="width: 5%; background-color: #C0B879;">7%</div>
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+	<script
+		src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+	<script src="js/currency.js">
+		
+	</script>
+	<script src="js/planlifevalue.js"></script>
+
+	<script>
+		$(function() {
+			$("#headerId").load("header.html");
+		});
+	</script>
+
+
+
+
+
+</body>
+</html>
