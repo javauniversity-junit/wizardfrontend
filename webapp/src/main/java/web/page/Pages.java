@@ -15,6 +15,7 @@ public enum Pages {
 	,PlanALifetimeValuedPage(PageNameEnum.PlanALifetimeValuedPage, PageSequenceEnum.PlanALifetimeValuedPage_Sequence.getDatabaseValue())
 	,PlanBLifetimeValuedPage(PageNameEnum.PlanBLifetimeValuedPage, PageSequenceEnum.PlanBLifetimeValuedPage_Sequence.getDatabaseValue())
 	,PlanABEPPage(PageNameEnum.PlanABEPPage, PageSequenceEnum.PlanABEPPage_Sequence.getDatabaseValue())
+	,PlanBBEPPage(PageNameEnum.PlanBBEPPage, PageSequenceEnum.PlanBBEPPage_Sequence.getDatabaseValue())
 	,PlanBMediaPage(PageNameEnum.PlanBMediaPage, PageSequenceEnum.PlanBMediaPage_Sequence.getDatabaseValue())
 	,StrategicMarketingTwo(PageNameEnum.StrategicMarketingPageTwo, PageSequenceEnum.StrategicMarketingPageTwo_Sequence.getDatabaseValue())
 	,StrategicMarketingThree(PageNameEnum.StrategicMarketingPageThree, PageSequenceEnum.StrategicMarketingPageThree_Sequence.getDatabaseValue())

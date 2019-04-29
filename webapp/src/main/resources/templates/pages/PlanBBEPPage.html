@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>(16) Plan B EDS Break Even Point Analysis (BEP)</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+
+
+<!-- Bootstrap CSS-->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+	crossorigin="anonymous" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+<!-- Favicon-->
+<link rel="shortcut icon" href="./img/icon.png">
+
+</head>
+<body>
+
+
+	<!-- Begin page content -->
+	<!--- start header container -->
+
+	<div id="headerId"></div>
+
+
+
+
+	<div class="container">
+		<form method="post" action="saveplanBBEPPage">
+			<fieldset>
+			
+				<legend>
+					(16) Plan A EDS Break Even Point Analysis (BEP) - <span
+						th:text="${wizard.name}"></span>
+				</legend>
+				<div class="form-group">
+					<label for="planBAverageSale">A. Average sale (ticket, transaction, invoice)</label> <input type="number" class="form-control"
+						id="planBAverageSale" th:value="${dataPageModel?.planBAverageSale}" required
+						
+						name="planBAverageSale" />
+				</div>
+				<div class="form-group">
+					<label for="planBGrossMargin">B. Gross profit margin on average sale (sale less cost of goods sold)</label> <input
+						type="number" th:value="${dataPageModel?.planBGrossMargin}"
+						required class="form-control" 
+						id="planBGrossMargin" name="planBGrossMargin" />
+				</div>
+				<div class="form-group">
+					<label for="planBClosingPct">C. Closing or conversion rate </label> <input type="number" class="form-control"
+						id="planBClosingPct" name="planBClosingPct" 
+						th:value="${dataPageModel?.planBClosingPct}" required
+						aria-describedby="planBClosingPct" />
+				</div>
+				<div class="form-group">
+					<label for="planBProspectValue">D. Projected prospect value (A*B*C)</label> <input type="text"
+						th:value="${dataPageModel?.planBProspectValue}" required
+						class="form-control" id="planBProspectValue" oninput="calculate()"
+						name="planBProspectValue" />
+				</div>
+				<div class="form-group">
+					<label for="planBInvestment">E. Client monthly advertising investment (base month)</label> <input readonly
+						name="planBInvestment" id="planBInvestment"
+						class="form-control"
+						th:value="${dataPageModel?.planBInvestment}" />
+				</div>
+				<div class="form-group">
+					<label for="planBProspectsNeeded">F. Monthly prospects needed to pay for advertising investment (E/D)</label> <input type="number" oninput="calculate()"
+						th:value="${dataPageModel?.planBProspectsNeeded}" class="form-control"
+						id="planBProspectsNeeded" required name="planBProspectsNeeded" />
+				</div>
+				<div class="form-group">
+					<label for="planBProspectSalesNeeded">G. Number of monthly sales needed to break even (F*C)</label> <input type="text"
+						class="form-control" id="planBProspectSalesNeeded"
+						name="planBProspectSalesNeeded" readonly 
+						th:value="${dataPageModel?.planBProspectSalesNeeded}"
+						aria-describedby="planBProspectSalesNeeded" oninput="calculate()"/>
+				</div>
+				<div class="form-group">
+					<label for="planBGrossProfitOnSales">H. Gross sales per month needed to break even (G*A)</label> <input required
+						class="form-control" 
+						id="planBGrossProfitOnSales"
+						th:value="${dataPageModel?.planBGrossProfitOnSales}"
+						name="planBGrossProfitOnSales" oninput="calculate()"/>
+				</div>
+				<div class="form-group">
+					<label for="planBMonths">I. Number of months to run in proposed marketing plan</label> <input
+						class="form-control" id="planBMonths" readonly 
+						th:value="${dataPageModel?.planBMonths}"
+						name="planBMonths" />
+				</div>
+				<div class="form-group">
+					<label for="planBAdditionalGrossSales">J. Additional gross sales per year needed to break even (H*I)</label> <input
+						class="form-control" id="planBAdditionalGrossSales" readonly 
+						th:value="${dataPageModel?.planBAdditionalGrossSales}"
+						name="planBAdditionalGrossSales" oninput="calculate()"/>
+				</div>
+
+				<input type="hidden" id="nextPage"
+					th:value="'redirect:/MarketPlaceCompetitionPage?ID=' + ${wizard.wizardid}"
+					name="nextPage" /> <input type="hidden" id="previousPage"
+					th:value="'redirect:/PresentedToPage?ID=' + ${wizard.wizardid}"
+					name="previousPage" /> <input type="hidden" id="publishPage"
+					th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
+					name="publishPage" /> <input type="hidden" id="wizardId"
+					th:value="${wizard.wizardid}" name="wizardId" /> <input
+					type="hidden" id="wizarddataid"
+					th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> <input
+					name="next" type="submit" value="Next" class="btn btn-primary"
+					style="background-color: #C0B879;" /> <input name="publish"
+					type="submit" value="Publish" class="btn btn-primary"
+					style="background-color: #C0B879;" /> <input name="previous"
+					value="Previous" type="submit" class="btn btn-primary"
+					style="background-color: #C0B879;" />
+			</fieldset>
+		</form>
+		<div class="container" style="padding-top: 2%;">
+
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="7"
+					aria-valuemin="0" aria-valuemax="100"
+					style="width: 5%; background-color: #C0B879;">7%</div>
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+	<script	src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+	<script src="js/currency.js"></script>
+	<script src="js/planbBEPCalculate.js"></script>
+
+	<script>
+		$(function() {
+			$("#headerId").load("header.html");
+		});
+	</script>
+
+
+
+
+
+</body>
+</html>
