@@ -1,4 +1,4 @@
-package web.page.planbbeppage;
+package web.page.planBBEPPage;
 import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
