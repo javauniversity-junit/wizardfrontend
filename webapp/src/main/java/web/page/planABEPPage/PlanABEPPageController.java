@@ -69,16 +69,21 @@ public class PlanABEPPageController {
 	        ,@RequestParam(required=false, value="publish") String publish){
 		mLog.info("starting save");
 		//internal next page or publish
-	/*	if (averageRepeatSales == null) {
-			averageRepeatSales= 0;
+		if (planAProspectValue == null) {
+			planAProspectValue= 0;
 		}
-		if (grossProfitMargin == null) {
-			grossProfitMargin= 0;
+		if (planAInvestment == null) {
+			planAInvestment= 0;
 		}
-		if (yearsOfPatronage == null) {
-			yearsOfPatronage= 0;
+		if (planAProspectSalesNeeded == null) {
+			planAProspectSalesNeeded= 0;
 		}
-	*/	
+		if (planAMonths == null) {
+			planAMonths= 0;
+		}
+		if (planAAdditionalGrossSales == null) {
+			planAAdditionalGrossSales= 0;
+		}		
 		String internalNextPage = nextPage;
 		if (publish != null) {
 			internalNextPage= publishPage;
