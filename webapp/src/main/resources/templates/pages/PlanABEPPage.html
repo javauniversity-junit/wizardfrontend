@@ -50,17 +50,17 @@
 				<div class="form-group">
 					<label for="planAGrossMargin">B. Gross profit margin on average sale (sale less cost of goods sold)</label> <input
 						type="number" th:value="${dataPageModel?.planAGrossMargin}"
-						required class="form-control" oninput="calculate()"
+						required class="form-control" 
 						id="planAGrossMargin" name="planAGrossMargin" />
 				</div>
 				<div class="form-group">
-					<label for="planAClosingPct">C. Closing or conversion rate </label> <input type="text" class="form-control"
-						id="planAClosingPct" name="planAClosingPct" readonly
+					<label for="planAClosingPct">C. Closing or conversion rate </label> <input type="number" class="form-control"
+						id="planAClosingPct" name="planAClosingPct" 
 						th:value="${dataPageModel?.planAClosingPct}" required
 						aria-describedby="planAClosingPct" />
 				</div>
 				<div class="form-group">
-					<label for="planAProspectValue">D. Projected prospect value (A*B*C)</label> <input type="number"
+					<label for="planAProspectValue">D. Projected prospect value (A*B*C)</label> <input type="text"
 						th:value="${dataPageModel?.planAProspectValue}" required
 						class="form-control" id="planAProspectValue" oninput="calculate()"
 						name="planAProspectValue" />
@@ -74,14 +74,14 @@
 				<div class="form-group">
 					<label for="planAProspectsNeeded">F. Monthly prospects needed to pay for advertising investment (E/D)</label> <input type="number" oninput="calculate()"
 						th:value="${dataPageModel?.planAProspectsNeeded}" class="form-control"
-						id="planAProspectsNeeded" required name="planAProspectsNeeded" oninput="calculate()/>
+						id="planAProspectsNeeded" required name="planAProspectsNeeded" />
 				</div>
 				<div class="form-group">
 					<label for="planAProspectSalesNeeded">G. Number of monthly sales needed to break even (F*C)</label> <input type="text"
 						class="form-control" id="planAProspectSalesNeeded"
 						name="planAProspectSalesNeeded" readonly 
 						th:value="${dataPageModel?.planAProspectSalesNeeded}"
-						aria-describedby="planAProspectSalesNeeded" oninput="calculate()/>
+						aria-describedby="planAProspectSalesNeeded" oninput="calculate()"/>
 				</div>
 				<div class="form-group">
 					<label for="planAGrossProfitOnSales">H. Gross sales per month needed to break even (G*A)</label> <input required
@@ -89,7 +89,7 @@
 						pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 						id="planAGrossProfitOnSales"
 						th:value="${dataPageModel?.planAGrossProfitOnSales}"
-						name="planAGrossProfitOnSales" oninput="calculate()/>
+						name="planAGrossProfitOnSales" oninput="calculate()"/>
 				</div>
 				<div class="form-group">
 					<label for="planAMonths">I. Number of months to run in proposed marketing plan</label> <input
@@ -101,7 +101,7 @@
 					<label for="planAAdditionalGrossSales">J. Additional gross sales per year needed to break even (H*I)</label> <input
 						class="form-control" id="planAAdditionalGrossSales" readonly 
 						th:value="${dataPageModel?.planAAdditionalGrossSales}"
-						name="planAAdditionalGrossSales" oninput="calculate()/>
+						name="planAAdditionalGrossSales" oninput="calculate()"/>
 				</div>
 
 				<input type="hidden" id="nextPage"
