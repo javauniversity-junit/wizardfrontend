@@ -12,11 +12,14 @@ public enum PageSequenceEnum {
 	,ConfidentialClientEvaluationOnePage_Sequence(9)
 	,PlanAProposedPage_Sequence(12)
 	,PlanBProposedPage_Sequence(14)
+	,PlanALifetimeValuedPage_Sequence(16)
+	,PlanBLifetimeValuedPage_Sequence(17)
 	,PlanAMediaPage_Sequence(18)
 	,PlanBMediaPage_Sequence(19)
 	,PlanADigitalROICalculatorPage_Sequence(21)
-	,PlanBDigitalROICalculatorPage_Sequence(22)
-	,PlanALifetimeValuedPage_Sequence(16);
+	,PlanBDigitalROICalculatorPage_Sequence(22);
+
+
 	
 	private int databaseValue;
     private PageSequenceEnum(int databaseValue) {
