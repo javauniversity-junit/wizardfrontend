@@ -367,19 +367,6 @@
 							<div class="col">
 								<div class="checkbox">
 									<label> <input type="checkbox"
-										id="companySloganProjectImage"
-										name="companySloganProjectImage"
-										th:checked="${dataPageModel?.companySloganProjectImage}" /> <span>
-											August </span>
-
-									</label>
-
-								</div>
-
-							</div>
-							<div class="col">
-								<div class="checkbox">
-									<label> <input type="checkbox"
 										id="bestNovember"
 										name="bestNovember"
 										th:checked="${dataPageModel?.bestNovember}" /> <span>
@@ -390,10 +377,6 @@
 								</div>
 
 							</div>
-						</div>
-
-
-						<div class="row">
 							<div class="col">
 								<div class="checkbox">
 									<label> <input type="checkbox"
@@ -407,8 +390,10 @@
 								</div>
 
 							</div>
-							
 						</div>
+
+
+						
 
 
 						<hr />
@@ -417,9 +402,9 @@
 							<div class="col">
 								<div class="checkbox">
 									<label> <input type="checkbox"
-										id="companySloganProjectImage"
-										name="companySloganProjectImage"
-										th:checked="${dataPageModel?.companySloganProjectImage}" /> <span>
+										id="bestMonday"
+										name="bestMonday"
+										th:checked="${dataPageModel?.bestMonday}" /> <span>
 											Monday </span>
 
 									</label>
@@ -430,9 +415,9 @@
 							<div class="col">
 								<div class="checkbox">
 									<label> <input type="checkbox"
-										id="companySloganProjectImage"
-										name="companySloganProjectImage"
-										th:checked="${dataPageModel?.companySloganProjectImage}" /> <span>
+										id="bestTuesday"
+										name="bestTuesday"
+										th:checked="${dataPageModel?.bestTuesday}" /> <span>
 											Tuesday </span>
 
 									</label>
@@ -443,9 +428,9 @@
 							<div class="col">
 								<div class="checkbox">
 									<label> <input type="checkbox"
-										id="companySloganProjectImage"
-										name="companySloganProjectImage"
-										th:checked="${dataPageModel?.companySloganProjectImage}" /> <span>
+										id="bestWednesday"
+										name="bestWednesday"
+										th:checked="${dataPageModel?.bestWednesday}" /> <span>
 											Wednesday </span>
 
 									</label>
@@ -459,9 +444,9 @@
 							<div class="col">
 								<div class="checkbox">
 									<label> <input type="checkbox"
-										id="companySloganProjectImage"
-										name="companySloganProjectImage"
-										th:checked="${dataPageModel?.companySloganProjectImage}" /> <span>
+										id="bestThursday"
+										name="bestThursday"
+										th:checked="${dataPageModel?.bestThursday}" /> <span>
 											Thursday </span>
 
 									</label>
@@ -472,9 +457,9 @@
 							<div class="col">
 								<div class="checkbox">
 									<label> <input type="checkbox"
-										id="companySloganProjectImage"
-										name="companySloganProjectImage"
-										th:checked="${dataPageModel?.companySloganProjectImage}" /> <span>
+										id="bestFriday"
+										name="bestFriday"
+										th:checked="${dataPageModel?.bestFriday}" /> <span>
 											Friday </span>
 
 									</label>
@@ -485,9 +470,9 @@
 							<div class="col">
 								<div class="checkbox">
 									<label> <input type="checkbox"
-										id="companySloganProjectImage"
-										name="companySloganProjectImage"
-										th:checked="${dataPageModel?.companySloganProjectImage}" /> <span>
+										id="bestSaturday"
+										name="bestSaturday"
+										th:checked="${dataPageModel?.bestSaturday}" /> <span>
 											Saturday </span>
 
 									</label>
@@ -501,9 +486,9 @@
 							<div class="col">
 								<div class="checkbox">
 									<label> <input type="checkbox"
-										id="companySloganProjectImage"
-										name="companySloganProjectImage"
-										th:checked="${dataPageModel?.companySloganProjectImage}" /> <span>
+										id="bestSunday"
+										name="bestSunday"
+										th:checked="${dataPageModel?.bestSunday}" /> <span>
 											Sunday </span>
 
 									</label>
@@ -518,11 +503,11 @@
 						<hr />
 
 						<div class="form-group">
-							<label for=portfolioPhoneNumber>a. What is the most
+							<label for=compliments>a. What is the most
 								frequent compliment you get?</label> <input type="text"
-								th:value="${dataPageModel?.station}" required
-								 class="form-control" id="station"
-								name="station" />
+								th:value="${dataPageModel?.compliments}" 
+								 class="form-control" id="compliments"
+								name="compliments" />
 						</div>
 
 
@@ -531,19 +516,19 @@
 
 
 						<div class="form-group">
-							<label for=portfolioPhoneNumber> What is the most
+							<label for=complaint> What is the most
 								frequent complaint you get? </label> <input type="text"
-								th:value="${dataPageModel?.station}" required
-								class="form-control" id="station" name="station" />
+								th:value="${dataPageModel?.complaint}" 
+								class="form-control" id="complaint" name="complaint" />
 						</div>
 
 
 						<div class="form-group">
-							<label for=portfolioPhoneNumber>What digital marketing
+							<label for=marketingStrategy>What digital marketing
 								strategies are you currently utilizing? What are your goals and
 								how do you measure the effectiveness? </label> <input type="text"
-								th:value="${dataPageModel?.station}" required
-								class="form-control" id="station" name="station" />
+								th:value="${dataPageModel?.marketingStrategy}" 
+								class="form-control" id="marketingStrategy" name="marketingStrategy" />
 						</div>
 
 
