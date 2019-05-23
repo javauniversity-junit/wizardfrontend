@@ -50,12 +50,12 @@ public class PresentedToPageController {
 	
 	@RequestMapping(value = "/savePresentedToPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
-			,@RequestParam String portfolioPhoneNumber
-			,@RequestParam String portfolioManagerName
-			,@RequestParam String clientBusinessName
-			,@RequestParam String clientContactName
-			,@RequestParam String station
-			,@RequestParam String wizarddataid
+			,@RequestParam (defaultValue ="") String portfolioPhoneNumber
+			,@RequestParam (defaultValue ="") String portfolioManagerName
+			,@RequestParam (defaultValue ="")String clientBusinessName
+			,@RequestParam (defaultValue ="") String clientContactName
+			,@RequestParam (defaultValue ="") String station
+			,@RequestParam String wizarddataid 
 			,@RequestParam String nextPage
 			,@RequestParam String publishNextPage
 			,@RequestParam(required=false, value="next") String next

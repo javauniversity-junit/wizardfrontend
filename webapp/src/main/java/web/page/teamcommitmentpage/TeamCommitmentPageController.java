@@ -59,14 +59,14 @@ public class TeamCommitmentPageController {
 	 */
 	@RequestMapping(value = "/saveTeamCommitmentPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
-			,@RequestParam String topLevelName
-			,@RequestParam String topLevelTitle
-			,@RequestParam String secondLevelName
-			,@RequestParam String secondLevelTitle
-			,@RequestParam String thirdLevelName
-			,@RequestParam String thirdLevelTitle
-			,@RequestParam String fourthLevelName
-			,@RequestParam String fourthLevelTitle
+			,@RequestParam  (defaultValue ="")  String topLevelName
+			,@RequestParam  (defaultValue ="") String topLevelTitle
+			,@RequestParam  (defaultValue ="") String secondLevelName
+			,@RequestParam  (defaultValue ="") String secondLevelTitle
+			,@RequestParam  (defaultValue ="") String thirdLevelName
+			,@RequestParam  (defaultValue ="") String thirdLevelTitle
+			,@RequestParam  (defaultValue ="") String fourthLevelName
+			,@RequestParam  (defaultValue ="") String fourthLevelTitle
 			,@RequestParam String wizarddataid
 			,@RequestParam String previousPage
 			,@RequestParam String publishPage

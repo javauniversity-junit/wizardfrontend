@@ -47,20 +47,20 @@
 						<label for="presentedTo">Presented to</label> <input
 							th:value="${dataPageModel?.clientContactName}" type="text"
 							class="form-control" id="clientContactName"
-							name="clientContactName" required
+							name="clientContactName" 
 							aria-describedby="clientBusinessName"
 							placeholder="Enter Presented to" />
 					</div>
 					<div class="form-group">
 						<label for="clientBusinessName">Business Name</label> <input
 							type="text" th:value="${dataPageModel?.clientBusinessName}"
-							required class="form-control" id="clientBusinessName"
+							 class="form-control" id="clientBusinessName"
 							name="clientBusinessName" placeholder="Enter Business Name" />
 					</div>
 					<div class="form-group">
 						<label for="presentedById">Integrated Media Specialist
 							Name</label> <input type="text"
-							th:value="${dataPageModel?.portfolioManagerName}" required
+							th:value="${dataPageModel?.portfolioManagerName}" 
 							class="form-control" id="portfolioManagerName"
 							name="portfolioManagerName" placeholder="Enter Specialist Name" />
 					</div>
@@ -73,7 +73,7 @@
 					</div>
 					<div class="form-group">
 						<label for=portfolioPhoneNumber>Station/Media Group</label> <input
-							type="text" th:value="${dataPageModel?.station}" required
+							type="text" th:value="${dataPageModel?.station}" 
 							placeholder="Enter Group" class="form-control" id="station"
 							name="station" />
 					</div>
