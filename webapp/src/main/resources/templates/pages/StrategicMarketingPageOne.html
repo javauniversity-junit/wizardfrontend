@@ -50,13 +50,13 @@
 							in business?</label> <input type="number" class="form-control"
 							id="yearsInBusiness"
 							th:value="${dataPageModel?.yearsInBusiness}" name="yearsInBusiness"
-							required aria-describedby="yearsInBusinessName" min="0" max="100"
+							aria-describedby="yearsInBusinessName" min="0" max="100"
 							placeholder="Enter years In business" />
 					</div>
 					<div class="form-group">
 						<label for="numberOfLocations">How many locations?</label> <input
 							type="number" th:value="${dataPageModel?.numberOfLocations}"
-							required min="0" max="2000" class="form-control"
+							 min="0" max="2000" class="form-control"
 							id="numberOfLocations" name="numberOfLocations"
 							placeholder="Enter number of locations" />
 					</div>
@@ -67,7 +67,7 @@
 
 						<div class="checkbox">
 							<label> <input type="checkbox" id="planToExpand"
-								name="planToExpand" required
+								name="planToExpand" 
 								th:checked="${dataPageModel?.planToExpand}" /> <span>
 									Plans to expand? </span>
 
@@ -81,7 +81,7 @@
 							misconceptions consumers have about the business?</label>
 
 						<textarea id="misconceptions" name="misconceptions"
-							class="form-control" rows="4" maxlength="50" cols="50" required
+							class="form-control" rows="4" maxlength="50" cols="50" 
 							th:text="${dataPageModel?.misconceptions}">
 							 
 							 
@@ -92,7 +92,7 @@
 						<label for=sellingAdvantages>3. What are the clients most distinctive selling advantages?</label>
 
 						<textarea id="sellingAdvantages" name="sellingAdvantages"
-							class="form-control" rows="4" maxlength="50" cols="50" required
+							class="form-control" rows="4" maxlength="50" cols="50" 
 							th:text="${dataPageModel?.sellingAdvantages}">
 							 
 							 
@@ -103,7 +103,7 @@
 						<label for=companyNameProjectImage>4. What image does the client want the company's name to project to their customers / consumers?</label>
 
 						<textarea id="companyNameProjectImage" name="companyNameProjectImage"
-							class="form-control" rows="4" maxlength="50" cols="50" required
+							class="form-control" rows="4" maxlength="50" cols="50" 
 							th:text="${dataPageModel?.companyNameProjectImage}">
 							 
 							 
@@ -114,14 +114,14 @@
 							<label for="currentCompanySlogan">Current Company Slogan:</label> <input
 								type="text" class="form-control" id="currentCompanySlogan"
 								th:value="${dataPageModel?.currentCompanySlogan}"
-								name="currentCompanySlogan" required aria-describedby="currentCompanySlogan"
+								name="currentCompanySlogan"  aria-describedby="currentCompanySlogan"
 								placeholder="Enter Company Slogan" />
 						</div>
 							<div class="form-group">
 
 						<div class="checkbox">
 							<label> <input type="checkbox" id="companySloganProjectImage"
-								name="companySloganProjectImage" required
+								name="companySloganProjectImage" 
 								th:checked="${dataPageModel?.companySloganProjectImageYes}" /> <span>
 									Does their current slogan project the same image? </span>
 
