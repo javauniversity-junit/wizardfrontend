@@ -52,15 +52,15 @@ public class StrategicMarketingPageOneController {
 	@RequestMapping(value = "/saveStrategicMarketingPageOne", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
 			,@RequestParam String wizarddataid
-			,@RequestParam int yearsInBusiness
-			,@RequestParam int numberOfLocations
+			,@RequestParam (@RequestParam(required=true,defaultValue="0") int yearsInBusiness
+			,@RequestParam (@RequestParam(required=true,defaultValue="0") int numberOfLocations
 			,@RequestParam(required=false, value="") String currentCompanySlogan
-			,@RequestParam boolean planToExpand
+			,@RequestParam (@RequestParam(required=true,defaultValue="false") boolean planToExpand
 			,@RequestParam(required=false, value="") String misconceptions
 			,@RequestParam(required=false, value="") String sellingAdvantages
 			,@RequestParam(required=false, value="") String companyNameProjectImage
 			,@RequestParam(required=false, value="") String companySloganvantages
-			,@RequestParam boolean companySloganProjectImage
+			,@RequestParam (@RequestParam(required=true,defaultValue="false") boolean companySloganProjectImage
 			,@RequestParam String nextPage
 			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next
