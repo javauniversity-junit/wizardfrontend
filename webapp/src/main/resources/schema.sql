@@ -69,7 +69,7 @@ create table IF NOT EXISTS contact (
 
 --insert---
 --INSERT IGNORE INTO `contact` ( `contact_id`,`name`, `uuid`, `license`, `general_information`, `phone`, `usage_date`, `created_date`, `start_date`, `end_date`, `address`, `active`, `client_type`, `streetaddress`, `city`, `state`, `zipcode`, `emailaddress`,`password`) VALUES (-777,'Mark Hildebrand', '0825f2d3', 'y8V9vQD3d', ' Casper, WY', '3073330964', '2017-09-07 21:54:10', '2017-07-15 07:29:19', '2017-01-04 00:10:00', '2022-01-31 00:03:00', 'mhildebrand@kcwy13.com', 0, 'TV', 'PO Box 1540', 'Mills', 'WY', '82644', 'a@aol.com', 'password');
-INSERT IGNORE INTO `contact` ( `contact_id`,`name`, `uuid`, `license`, `general_information`, `phone`, `usage_date`, `created_date`, `start_date`, `end_date`, `address`, `active`, `client_type`, `streetaddress`, `city`, `state`, `zipcode`, `emailaddress`,`password`) VALUES (-777,'Mark Hildebrand', '0825f2d3', 'y8V9vQD3d', ' Casper, WY', '3073330964', '2017-09-07 21:54:10', '2017-07-15 07:29:19', '2017-01-04 00:10:00', '2022-01-31 00:03:00', 'mhildebrand@kcwy13.com', 0, 'TV', 'PO Box 1540', 'Mills', 'WY', '82644', 'a@aol.com', 'password');
+--INSERT IGNORE INTO `contact` ( `contact_id`,`name`, `uuid`, `license`, `general_information`, `phone`, `usage_date`, `created_date`, `start_date`, `end_date`, `address`, `active`, `client_type`, `streetaddress`, `city`, `state`, `zipcode`, `emailaddress`,`password`) VALUES (-777,'Mark Hildebrand', '0825f2d3', 'y8V9vQD3d', ' Casper, WY', '3073330964', '2017-09-07 21:54:10', '2017-07-15 07:29:19', '2017-01-04 00:10:00', '2022-01-31 00:03:00', 'mhildebrand@kcwy13.com', 0, 'TV', 'PO Box 1540', 'Mills', 'WY', '82644', 'a@aol.com', 'password');
 
 
-INSERT IGNORE  INTO `agent` (`address`,`password`, `contact_id`) VALUES ('z@aol.com', 'z', -777);
+--INSERT IGNORE  INTO `agent` (`address`,`password`, `contact_id`) VALUES ('z@aol.com', 'z', -777);
