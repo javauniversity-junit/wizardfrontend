@@ -52,15 +52,15 @@ public class StrategicMarketingPageOneController {
 	@RequestMapping(value = "/saveStrategicMarketingPageOne", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
 			,@RequestParam String wizarddataid
-			,@RequestParam (@RequestParam(required=false,defaultValue="0") int yearsInBusiness
-			,@RequestParam (@RequestParam(required=false,defaultValue="0") int numberOfLocations
-			,@RequestParam(required=false, value="") String currentCompanySlogan
-			,@RequestParam (@RequestParam(required=false,defaultValue="false") boolean planToExpand
-			,@RequestParam(required=false, value="") String misconceptions
-			,@RequestParam(required=false, value="") String sellingAdvantages
-			,@RequestParam(required=false, value="") String companyNameProjectImage
-			,@RequestParam(required=false, value="") String companySloganvantages
-			,@RequestParam (@RequestParam(required=false,defaultValue="false") boolean companySloganProjectImage
+			,@RequestParam (value="yearsInBusiness",defaultValue="0") int yearsInBusiness
+			,@RequestParam (value="numberOfLocations",defaultValue="0") int numberOfLocations
+			,@RequestParam(value="currentCompanySlogan",defaultValue="") String currentCompanySlogan
+			,@RequestParam (value="planToExpand",defaultValue="false") boolean planToExpand
+			,@RequestParam(defaultValue="", value="misconceptions") String misconceptions
+			,@RequestParam(defaultValue="", value="sellingAdvantages") String sellingAdvantages
+			,@RequestParam(defaultValue="", value="companyNameProjectImage") String companyNameProjectImage
+			,@RequestParam(defaultValue="", value="companySloganvantages") String companySloganvantages
+			,@RequestParam (value="companySloganProjectImage",defaultValue="false") boolean companySloganProjectImage
 			,@RequestParam String nextPage
 			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next
