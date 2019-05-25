@@ -52,8 +52,8 @@ public class StrategicMarketingPageOneController {
 	@RequestMapping(value = "/saveStrategicMarketingPageOne", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
 			,@RequestParam String wizarddataid
-			,@RequestParam (value="yearsInBusiness",defaultValue="0") int yearsInBusiness
-			,@RequestParam (value="numberOfLocations",defaultValue="0") int numberOfLocations
+			,@RequestParam (value="yearsInBusiness",defaultValue="0") String yearsInBusinessStr
+			,@RequestParam (value="numberOfLocations",defaultValue="0") String numberOfLocationsStr
 			,@RequestParam(value="currentCompanySlogan",defaultValue="") String currentCompanySlogan
 			,@RequestParam (value="planToExpand",defaultValue="false") boolean planToExpand
 			,@RequestParam(defaultValue="", value="misconceptions") String misconceptions
@@ -67,6 +67,8 @@ public class StrategicMarketingPageOneController {
 	        ,@RequestParam(required=false, value="publish") String publish){
 		mLog.info("starting save");
 		
+		int yearsInBusiness = Integer.valueOf(yearsInBusinessStr);
+		int numberOfLocations = Integer.valueOf(numberOfLocationsStr);
 		
 		
 		
