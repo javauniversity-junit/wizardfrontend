@@ -52,14 +52,14 @@ public class StrategicMarketingPageTwoController {
 	@RequestMapping(value = "/saveStrategicMarketingPageTwo", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
 			,@RequestParam String wizarddataid
-			,@RequestParam(required=false, value="") String competitionA
-			,@RequestParam(required=false, value="") String competitionB
-			,@RequestParam(required=false, value="") String currentCompanySlogan
-			,@RequestParam(required=false, value="") String competitionWeaknessA
-			,@RequestParam(required=false, value="") String competitionWeaknessB
-			,@RequestParam(required=false, value="") String competitionStrengthA
-			,@RequestParam(required=false, value="") String competitionStrengthB
-			,@RequestParam(required=false, value="") String companyNameProjectImage
+			,@RequestParam(required=false, value="competitionA",defaultValue="") String competitionA
+			,@RequestParam(required=false, value="competitionB",defaultValue="") String competitionB
+			,@RequestParam(required=false, value="currentCompanySlogan",defaultValue="") String currentCompanySlogan
+			,@RequestParam(required=false, value="competitionWeaknessA",defaultValue="") String competitionWeaknessA
+			,@RequestParam(required=false, value="competitionWeaknessB",defaultValue="") String competitionWeaknessB
+			,@RequestParam(required=false, value="competitionStrengthA",defaultValue="") String competitionStrengthA
+			,@RequestParam(required=false, value="competitionStrengthB",defaultValue="") String competitionStrengthB
+			,@RequestParam(required=false, value="companyNameProjectImage",defaultValue="") String companyNameProjectImage
 			,@RequestParam(value="companySloganProjectImage",defaultValue="false") boolean companySloganProjectImage
 			,@RequestParam String nextPage
 			,@RequestParam String publishPage
