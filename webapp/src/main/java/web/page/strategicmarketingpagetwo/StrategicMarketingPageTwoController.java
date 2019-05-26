@@ -60,7 +60,7 @@ public class StrategicMarketingPageTwoController {
 			,@RequestParam(required=false, value="") String competitionStrengthA
 			,@RequestParam(required=false, value="") String competitionStrengthB
 			,@RequestParam(required=false, value="") String companyNameProjectImage
-			,@RequestParam boolean companySloganProjectImage
+			,@RequestParam(value="companySloganProjectImage",defaultValue="false") boolean companySloganProjectImage
 			,@RequestParam String nextPage
 			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next
