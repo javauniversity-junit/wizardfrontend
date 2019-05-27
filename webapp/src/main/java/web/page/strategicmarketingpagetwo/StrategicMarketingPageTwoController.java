@@ -66,6 +66,14 @@ public class StrategicMarketingPageTwoController {
 			,@RequestParam(required=false, value="next") String next
 	        ,@RequestParam(required=false, value="publish") String publish){
 		mLog.info("starting save");
+		mLog.info("competitionA [" + competitionA   + "]");
+		mLog.info("competitionB [" + competitionB   + "]");
+		mLog.info("currentCompanySlogan [" + currentCompanySlogan   + "]");
+		mLog.info("competitionWeaknessA [" + competitionWeaknessA   + "]");
+		mLog.info("competitionWeaknessB [" + competitionWeaknessB   + "]");
+		mLog.info("competitionStrengthA [" + competitionStrengthA   + "]");
+		mLog.info("competitionStrengthB [" + competitionStrengthB   + "]");
+		mLog.info("companyNameProjectImage [" + companyNameProjectImage   + "]");
 		
 		
 		
