@@ -63,6 +63,9 @@ public class StrategicMarketingPageOneController {
 			,@RequestParam (value="companySloganProjectImage",defaultValue="false") boolean companySloganProjectImage
 			,@RequestParam String nextPage
 			,@RequestParam String publishPage
+			,@RequestParam String previousPage
+			,@RequestParam(required=false, value="publish") String publish
+			,@RequestParam(required=false, value="previous") String previous
 			,@RequestParam(required=false, value="next") String next
 	        ,@RequestParam(required=false, value="publish") String publish){
 		mLog.info("starting save");
@@ -71,16 +74,19 @@ public class StrategicMarketingPageOneController {
 		int numberOfLocations = Integer.valueOf(numberOfLocationsStr);
 		
 		
-		
-		
-		
-		
-		
 		//internal next page or publish
 		String internalNextPage = nextPage;
 		if (publish != null) {
-			internalNextPage= publishPage;
+					internalNextPage= publishPage;
 		}
+		if (previous != null) {
+			internalNextPage= previousPage;
+                 }
+		
+		
+		
+		
+		
 		
 		WizardData wizardData = new WizardData();
 	    wizardData.setPagename(PageNameEnum.StrategicMarketingPageOne.toString());
