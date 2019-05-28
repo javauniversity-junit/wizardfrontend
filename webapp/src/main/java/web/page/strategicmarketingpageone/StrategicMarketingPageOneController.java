@@ -64,7 +64,7 @@ public class StrategicMarketingPageOneController {
 			,@RequestParam String nextPage
 			,@RequestParam String publishPage
 			,@RequestParam String previousPage
-			,@RequestParam(required=false, value="publish") String publish
+			
 			,@RequestParam(required=false, value="previous") String previous
 			,@RequestParam(required=false, value="next") String next
 	        ,@RequestParam(required=false, value="publish") String publish){
