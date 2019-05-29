@@ -74,14 +74,14 @@ public class StrategicMarketingPageOneController {
 		int numberOfLocations = Integer.valueOf(numberOfLocationsStr);
 		
 		
-		//internal next page or publish
+		// internal next page or publish
 		String internalNextPage = nextPage;
 		if (publish != null) {
-					internalNextPage= publishPage;
+			internalNextPage = publishPage;
 		}
 		if (previous != null) {
-			internalNextPage= previousPage;
-                 }
+			internalNextPage = previousPage;
+		}
 		
 		
 		
