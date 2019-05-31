@@ -163,7 +163,7 @@ function calculateTwo()
 	if (proposedValue4 != null) {
 		proposedValue4 = proposedValue4.substring(1);
 		proposedValue4 = removeComma(proposedValue4);
-		proposedValue4Cal = Number(lastYearValue4);
+		proposedValue4Cal = Number(proposedValue4);
 	}
 	if (proposedValue5 != null) {
 		proposedValue5 = proposedValue5.substring(1);
@@ -181,10 +181,10 @@ function calculateTwo()
 
 
 	
-	var totalMediaInvestment = lastYearValue1Cal + lastYearValue2Cal + lastYearValue3Cal + lastYearValue4Cal
-	                  + lastYearValue5Cal + lastYearValue6Cal;
+	var totalMediaInvestment = proposedValue1Cal + proposedValue2Cal + proposedValue3Cal + proposedValue4Cal
+	                  + proposedValue5Cal + proposedValue6Cal;
 	
-	document.getElementById("totalMediaInvestment").value =  totalMediaInvestment;
+	document.getElementById("totalMediaInvestmentTwo").value =  totalMediaInvestment;
 	//document.getElementById("averageCustomerValue").value = e_averageCustomerValue;//e
 	//document.getElementById("lifetimeValuePerCustomer").value = g_lifetimeValuePerCustomer;
 	//document.getElementById("prospectsNeededToBreakEven").value = i_prospectsNeededToBreakEven;
