@@ -155,7 +155,7 @@ function calculateTwo()
 		proposedValue2Cal = Number(proposedValue2);
 	}
 	
-	if proposedValue3 != null) {
+	if (proposedValue3 != null) {
 		proposedValue3 = proposedValue3.substring(1);
 		proposedValue3 = removeComma(proposedValue3);
 		proposedValue3Cal = Number(proposedValue3);
