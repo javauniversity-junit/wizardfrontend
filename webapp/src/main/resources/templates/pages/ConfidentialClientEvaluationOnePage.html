@@ -193,7 +193,7 @@
                                 C.
                             </div>
                             <div class="col-10">
-                                <input type="text" th:value="${dataPageModel?.pctTAIGrossSalesLastYear}" class="form-control" id="pctTAIGrossSalesLastYear" name="pctTAIGrossSalesLastYear">
+                                <input data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" type="text" th:value="${dataPageModel?.pctTAIGrossSalesLastYear}" class="form-control" id="pctTAIGrossSalesLastYear" name="pctTAIGrossSalesLastYear">
                             </div>
                         </div>
                     </div>
