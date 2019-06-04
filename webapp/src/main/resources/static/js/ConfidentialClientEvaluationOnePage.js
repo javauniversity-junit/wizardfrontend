@@ -3,6 +3,11 @@ function calculateOne()
 	var lastYearValue1 = document.getElementById("lastYearValue1").value;
 	var lastYearValue2 = document.getElementById("lastYearValue2").value;
 	var lastYearValue3 = document.getElementById("lastYearValue3").value;
+	
+	var tainext12months = document.getElementById("tainext12months").value;
+	var pctgrosssales = document.getElementById("pctgrosssales").value;
+	var tainext12monthsCal = 0;
+	
 	//alert ("averageRepeatSales " + averageRepeatSales);
 	var pctTAIGrossSalesLastYear = document.getElementById("pctTAIGrossSalesLastYear").value;
 	var totalMediaInvestmentInput = document.getElementById("totalMediaInvestmentInput").value;
@@ -22,12 +27,31 @@ function calculateOne()
 	var pctTAIGrossSalesLastYearCal = 0;
 	var totalMediaInvestmentCal = 0;
 	
-	
 	if (totalMediaInvestmentInput != null) {
 		totalMediaInvestmentInput = totalMediaInvestmentInput.substring(1);
 		totalMediaInvestmentInput = removeComma(totalMediaInvestmentInput);
 		totalMediaInvestmentCal = Number(totalMediaInvestmentInput);
-	}	
+	}
+	
+	
+	
+	if (tainext12months != null) {
+		tainext12months = tainext12months.substring(1);
+		tainext12months = removeComma(tainext12months);
+		tainext12monthsCal = Number(tainext12months);
+	}
+	
+	
+	if (tainext12monthsCal > 0 && pctTAIGrossSalesLastYearCal > 0) {
+		var percentage = 100/pctTAIGrossSalesLastYearCal;
+		var total = totalMediaInvestmentCal/ percentage;
+		//total = Math.round(total);
+		total = CurrencyFormatted(total);
+		document.getElementById("grossSalesLastyear").value =  total;
+		
+	}
+	
+	
 	
 	
 	if (pctTAIGrossSalesLastYear != null) {
