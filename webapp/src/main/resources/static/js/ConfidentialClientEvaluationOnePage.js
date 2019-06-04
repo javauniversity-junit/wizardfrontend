@@ -39,7 +39,8 @@ function calculateOne()
 	if (totalMediaInvestmentCal > 0 && pctTAIGrossSalesLastYearCal > 0) {
 		var percentage = 100/pctTAIGrossSalesLastYearCal;
 		var total = totalMediaInvestmentCal/ percentage;
-		total = Math.round(total);
+		//total = Math.round(total);
+		total = CurrencyFormatted(total);
 		document.getElementById("grossSalesLastyear").value =  total;
 		
 	}
