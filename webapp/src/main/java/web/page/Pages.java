@@ -5,7 +5,7 @@ package web.page;
 public enum Pages {
 	
 	
-	StrategicMarketingOne(PageNameEnum.StrategicMarketingPageOne, PageSequenceEnum.StrategicMarketingPageOne_Sequence.getDatabaseValue())
+	 StrategicMarketingOne(PageNameEnum.StrategicMarketingPageOne, PageSequenceEnum.StrategicMarketingPageOne_Sequence.getDatabaseValue())
 	,ConfidentialClientEvaluationOnePage(PageNameEnum.ConfidentialClientEvaluationOnePage, PageSequenceEnum.ConfidentialClientEvaluationOnePage_Sequence.getDatabaseValue())
 	,PlanADigitalROICalculatorPage(PageNameEnum.PlanADigitalROICalculatorPage, PageSequenceEnum.PlanADigitalROICalculatorPage_Sequence.getDatabaseValue())
 	,PlanBDigitalROICalculatorPage(PageNameEnum.PlanBDigitalROICalculatorPage, PageSequenceEnum.PlanBDigitalROICalculatorPage_Sequence.getDatabaseValue())
@@ -22,7 +22,8 @@ public enum Pages {
 	,PRESENTEDTOPAGE(PageNameEnum.PresentedToPage, PageSequenceEnum.PRESENTEDTOPAGE_SEQUENCE.getDatabaseValue())
 	,TEAMCOMMITMENTPAGE(PageNameEnum.TeamCommitmentPage, PageSequenceEnum.TEAMCOMMITMENTPAGE_SEQUENCE.getDatabaseValue())
 	,CLIENTOBJECTIVESONEPAGE(PageNameEnum.ClientObjectivesOnePage, PageSequenceEnum.CLIENTOBJECTIVESONEPAGE_SEQUENCE.getDatabaseValue())
-	,MARKETPLACECOMPETITIONPAGE(PageNameEnum.MarketPlaceCompetitionPage, PageSequenceEnum.MARKETPLACECOMPETITIONPAGE_SEQUENCE.getDatabaseValue());
+	,MARKETPLACECOMPETITIONPAGE(PageNameEnum.MarketPlaceCompetitionPage, PageSequenceEnum.MARKETPLACECOMPETITIONPAGE_SEQUENCE.getDatabaseValue())
+	,TargetMarketingPage(PageNameEnum.TargetMarketingPage, PageSequenceEnum.TargetMarketingPage_Sequence.getDatabaseValue());
 	
 	private PageNameEnum pageName;
 	private Integer pageSequence;
