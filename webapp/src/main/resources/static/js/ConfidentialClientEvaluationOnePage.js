@@ -85,6 +85,7 @@ function calculateOne()
 	
 	var totalMediaInvestment = lastYearValue1Cal + lastYearValue2Cal + lastYearValue3Cal + lastYearValue4Cal
 	                  + lastYearValue5Cal + lastYearValue6Cal;
+	totalMediaInvestment = CurrencyFormatted(totalMediaInvestment);
 	
 	document.getElementById("totalMediaInvestment").value =  totalMediaInvestment;
 	//document.getElementById("averageCustomerValue").value = e_averageCustomerValue;//e
