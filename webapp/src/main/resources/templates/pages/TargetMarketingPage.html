@@ -42,66 +42,29 @@
 						th:text="${wizard.name}"></span>
 				</legend>
 				<div class="form-group">
-					<label for="planBAverageSale">A. Average sale (ticket, transaction, invoice)</label> <input type="number" class="form-control"
-						id="planBAverageSale" th:value="${dataPageModel?.planBAverageSale}" required
-						
-						name="planBAverageSale" />
+					<label for="pctMen">What percentage of the client's "target" consumers are men?</label> <input type="number" class="form-control"
+						id="pctMen" th:value="${dataPageModel?.pctMen}" required						
+						name="pctMen" />
 				</div>
 				<div class="form-group">
-					<label for="planBGrossMargin">B. Gross profit margin on average sale (sale less cost of goods sold)</label> <input
-						type="number" th:value="${dataPageModel?.planBGrossMargin}"
-						required class="form-control" 
-						id="planBGrossMargin" name="planBGrossMargin" />
+					<label for="pctWomen">What percentage of the client's "target" consumers are women?</label> <input
+						type="number" th:value="${dataPageModel?.pctWomen}"
+						 class="form-control" 
+						id="pctWomen" name="pctWomen" />
 				</div>
 				<div class="form-group">
-					<label for="planBClosingPct">C. Closing or conversion rate </label> <input type="number" class="form-control"
-						id="planBClosingPct" name="planBClosingPct" 
-						th:value="${dataPageModel?.planBClosingPct}" required
-						aria-describedby="planBClosingPct" />
+					<label for="householdIncome">What is the perceived household income of your "target" consumers?</label> <input type="number" class="form-control"
+						id="householdIncome" name="householdIncome" 
+						th:value="${dataPageModel?.householdIncome}" required
+						aria-describedby="householdIncome" />
 				</div>
 				<div class="form-group">
-					<label for="planBProspectValue">D. Projected prospect value (A*B*C)</label> <input type="text"
-						th:value="${dataPageModel?.planBProspectValue}" required
-						class="form-control" id="planBProspectValue" oninput="calculate()"
-						name="planBProspectValue" />
+					<label for="describeIdealTargetConsumer">How else would you describe your ideal "target" consumer (i.e., geo-targeting, home value, behavior, lifestyle, interests, family structure, etc.)?</label> <input type="text"
+						th:value="${dataPageModel?.describeIdealTargetConsumer}" required
+						class="form-control" id="describeIdealTargetConsumer" 
+						name="describeIdealTargetConsumer" />
 				</div>
-				<div class="form-group">
-					<label for="planBInvestment">E. Client monthly advertising investment (base month)</label> <input readonly
-						name="planBInvestment" id="planBInvestment"
-						class="form-control"
-						th:value="${dataPageModel?.planBInvestment}" />
-				</div>
-				<div class="form-group">
-					<label for="planBProspectsNeeded">F. Monthly prospects needed to pay for advertising investment (E/D)</label> <input type="number" oninput="calculate()"
-						th:value="${dataPageModel?.planBProspectsNeeded}" class="form-control"
-						id="planBProspectsNeeded" required name="planBProspectsNeeded" />
-				</div>
-				<div class="form-group">
-					<label for="planBProspectSalesNeeded">G. Number of monthly sales needed to break even (F*C)</label> <input type="text"
-						class="form-control" id="planBProspectSalesNeeded"
-						name="planBProspectSalesNeeded" readonly 
-						th:value="${dataPageModel?.planBProspectSalesNeeded}"
-						aria-describedby="planBProspectSalesNeeded" oninput="calculate()"/>
-				</div>
-				<div class="form-group">
-					<label for="planBGrossProfitOnSales">H. Gross sales per month needed to break even (G*A)</label> <input required
-						class="form-control" 
-						id="planBGrossProfitOnSales"
-						th:value="${dataPageModel?.planBGrossProfitOnSales}"
-						name="planBGrossProfitOnSales" oninput="calculate()"/>
-				</div>
-				<div class="form-group">
-					<label for="planBMonths">I. Number of months to run in proposed marketing plan</label> <input
-						class="form-control" id="planBMonths" readonly 
-						th:value="${dataPageModel?.planBMonths}"
-						name="planBMonths" />
-				</div>
-				<div class="form-group">
-					<label for="planBAdditionalGrossSales">J. Additional gross sales per year needed to break even (H*I)</label> <input
-						class="form-control" id="planBAdditionalGrossSales" readonly 
-						th:value="${dataPageModel?.planBAdditionalGrossSales}"
-						name="planBAdditionalGrossSales" oninput="calculate()"/>
-				</div>
+	
 
 				<input type="hidden" id="nextPage"
 					th:value="'redirect:/MarketPlaceCompetitionPage?ID=' + ${wizard.wizardid}"
