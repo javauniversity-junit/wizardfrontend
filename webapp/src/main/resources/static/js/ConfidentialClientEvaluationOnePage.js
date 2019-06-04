@@ -5,7 +5,7 @@ function calculateOne()
 	var lastYearValue3 = document.getElementById("lastYearValue3").value;
 	//alert ("averageRepeatSales " + averageRepeatSales);
 	var pctTAIGrossSalesLastYear = document.getElementById("pctTAIGrossSalesLastYear").value;
-	var totalMediaInvestment = document.getElementById("totalMediaInvestment").value;
+	var totalMediaInvestmentInput = document.getElementById("totalMediaInvestmentInput").value;
 	
 	//TotalMediaInvestment / pctTAIGrossSalesLastYear = GrossSalesLastyear
 	
@@ -23,10 +23,10 @@ function calculateOne()
 	var totalMediaInvestmentCal = 0;
 	
 	
-	if (totalMediaInvestment != null) {
-		totalMediaInvestment = totalMediaInvestment.substring(1);
-		totalMediaInvestment = removeComma(totalMediaInvestment);
-		totalMediaInvestmentCal = Number(totalMediaInvestment);
+	if (totalMediaInvestmentInput != null) {
+		totalMediaInvestmentInput = totalMediaInvestmentInput.substring(1);
+		totalMediaInvestmentInput = removeComma(totalMediaInvestmentInput);
+		totalMediaInvestmentCal = Number(totalMediaInvestmentInput);
 	}	
 	
 	
