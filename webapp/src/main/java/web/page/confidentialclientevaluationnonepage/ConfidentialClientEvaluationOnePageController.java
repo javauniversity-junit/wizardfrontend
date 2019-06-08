@@ -82,6 +82,7 @@ public class ConfidentialClientEvaluationOnePageController {
 			@RequestParam String proposedValue4,
 			@RequestParam String proposedValue5, 
 			@RequestParam String proposedValue6,
+			@RequestParam String taiNext12Months,
 			@RequestParam String nextPage,
 			@RequestParam String publishPage,
 			@RequestParam String previousPage, 
