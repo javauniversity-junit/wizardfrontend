@@ -34,6 +34,15 @@ function calculateOne()
 	
 	
 	
+	 if (pctGrossSales != null) {
+		pctGrossSales = Number(pctGrossSales);
+	}
+	
+	
+	
+	
+	
+	
 	if (taiNext12Months != null) {
 		taiNext12Months = taiNext12Months.substring(1);
 		taiNext12Months = removeComma(taiNext12Months);
@@ -41,9 +50,9 @@ function calculateOne()
 	}
 	
 	
-	if (taiNext12MonthsCal > 0 && pctTAIGrossSalesLastYearCal > 0) {
-		var percentage = 100/pctTAIGrossSalesLastYearCal;
-		var total = totalMediaInvestmentCal/ percentage;
+	if (taiNext12MonthsCal > 0 && pctGrossSales > 0) {
+		var percentage = 100/pctGrossSales;
+		var total = taiNext12MonthsCal/ percentage;
 		//total = Math.round(total);
 		total = CurrencyFormatted(total);
 		document.getElementById("estimatedGrossSalesNext12Months").value =  total;
