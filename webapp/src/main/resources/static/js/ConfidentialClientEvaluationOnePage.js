@@ -127,7 +127,8 @@ function calculateTwo()
 	var proposedValue2 = document.getElementById("proposedValue2").value;
 	var proposedValue3 = document.getElementById("proposedValue3").value;
 	
-	var pctTAIGrossSalesLastYearTwo = document.getElementById("pctTAIGrossSalesLastYearTwo").value;
+	var taiShouldBe = document.getElementById("taiShouldBe").value;
+	var industryAverage =document.getElementById("industryAverage").value;
 	var totalMediaInvestment = document.getElementById("totalMediaInvestmentTwo").value;
 	
 	//TotalMediaInvestment / pctTAIGrossSalesLastYear = GrossSalesLastyear
