@@ -37,12 +37,7 @@ function calculateOne()
 	 if (pctGrossSales != null) {
 		pctGrossSales = Number(pctGrossSales);
 	}
-	
-	
-	
-	
-	
-	
+
 	if (taiNext12Months != null) {
 		taiNext12Months = taiNext12Months.substring(1);
 		taiNext12Months = removeComma(taiNext12Months);
