@@ -33,6 +33,7 @@ public class ConfidentialClientEvaluationOnePageModel {
 	private String pctGrossSales;
 	private String estimatedGrossSalesNext12Months;
 	private String tAIShouldBe;
+	private String totalMediaInvestmentTwo;
 	//taiNext12Months
 	private String industryAverage;
 	private String salesGoals;
