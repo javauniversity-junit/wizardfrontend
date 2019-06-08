@@ -14,6 +14,7 @@ public class ConfidentialClientEvaluationOnePageModel {
 	private String lastYearValue5;
 	private String lastYearValue6;
 	private String totalMediaInvestment;
+	private String totalMediaInvestmentInput;
 	private String pctTAIGrossSalesLastYear;
 	private String grossSalesLastyear;
 	private String proposedLabel1;
