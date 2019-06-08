@@ -320,7 +320,7 @@
                 </div>
                 <div class="row media">
                     <div class="col-6">
-                        <input type="text" th:value="${dataPageModel?.proposedLabel4}" required class="form-control" id="proposedLabel4" name="proposedLabel4" />
+                        <input type="text" th:value="${dataPageModel?.proposedLabel4}"  class="form-control" id="proposedLabel4" name="proposedLabel4" />
                     </div>
                     <div class="col-6">
                         <input type="text" class="form-control" id="proposedValue4" th:value="${dataPageModel?.proposedValue4}" required data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="proposedValue4" />
@@ -328,7 +328,7 @@
                 </div>
                 <div class="row media">
                     <div class="col-6">
-                        <input type="text" th:value="${dataPageModel?.proposedLabel5}" required class="form-control" id="proposedLabel5" name="proposedLabel5" />
+                        <input type="text" th:value="${dataPageModel?.proposedLabel5}"  class="form-control" id="proposedLabel5" name="proposedLabel5" />
                     </div>
                     <div class="col-6">
                         <input type="text" class="form-control" id="proposedValue5" th:value="${dataPageModel?.proposedValue5}"
@@ -341,7 +341,8 @@
                                class="form-control" id="proposedLabel6" name="proposedLabel6" />
                     </div>
                     <div class="col-6">
-                        <input type="text" class="form-control" id="proposedValue6" th:value="${dataPageModel?.proposedValue6}"
+                        <input type="text" class="form-control"
+			       id="proposedValue6" th:value="${dataPageModel?.proposedValue6}"
                                 data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="proposedValue6" />
                     </div>
                 </div>
