@@ -155,7 +155,11 @@ function calculateTwo()
 		taiShouldBe = taiShouldBe.substring(1);
 		taiShouldBe = removeComma(taiShouldBe);
 		taiShouldBeCal = Number(taiShouldBe);
-	}	
+	}
+	
+	if (industryAverage != null) {
+		industryAverage = Number(industryAverage);
+	}
 	
 	
 	if (pctTAIGrossSalesLastYear != null) {
@@ -164,15 +168,15 @@ function calculateTwo()
 		pctTAIGrossSalesLastYearCal = Number(pctTAIGrossSalesLastYear);
 	}
 	
-	/*
-	if (totalMediaInvestmentCal > 0 && pctTAIGrossSalesLastYearCal > 0) {
-		var percentage = 100/pctTAIGrossSalesLastYearCal;
-		var total = totalMediaInvestmentCal/ percentage;
-		total = Math.round(total);
-		document.getElementById("grossSalesLastyearTwo").value =  total;
+	
+	if (taiShouldBeCal > 0 && industryAverage > 0) {
+		var percentage = 100/industryAverage;
+		var total = taiShouldBeCal/ percentage;
+		total = CurrencyFormatted(total);
+		document.getElementById("salesGoals").value =  total;
 		
 	}
-	*/
+	
 	
 	
 	if (proposedValue1 != null) {
