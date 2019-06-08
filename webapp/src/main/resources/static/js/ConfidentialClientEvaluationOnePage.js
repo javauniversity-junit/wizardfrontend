@@ -4,9 +4,9 @@ function calculateOne()
 	var lastYearValue2 = document.getElementById("lastYearValue2").value;
 	var lastYearValue3 = document.getElementById("lastYearValue3").value;
 	
-	var tainext12months = document.getElementById("tainext12months").value;
+	var taiNext12Months = document.getElementById("taiNext12Months").value;
 	var pctgrosssales = document.getElementById("pctgrosssales").value;
-	var tainext12monthsCal = 0;
+	var taiNext12MonthsCal = 0;
 	
 	//alert ("averageRepeatSales " + averageRepeatSales);
 	var pctTAIGrossSalesLastYear = document.getElementById("pctTAIGrossSalesLastYear").value;
@@ -35,14 +35,14 @@ function calculateOne()
 	
 	
 	
-	if (tainext12months != null) {
-		tainext12months = tainext12months.substring(1);
-		tainext12months = removeComma(tainext12months);
-		tainext12monthsCal = Number(tainext12months);
+	if (taiNext12Months != null) {
+		taiNext12Months = taiNext12Months.substring(1);
+		taiNext12Months = removeComma(taiNext12Months);
+		taiNext12MonthsCal = Number(taiNext12Months);
 	}
 	
 	
-	if (tainext12monthsCal > 0 && pctTAIGrossSalesLastYearCal > 0) {
+	if (taiNext12MonthsCal > 0 && pctTAIGrossSalesLastYearCal > 0) {
 		var percentage = 100/pctTAIGrossSalesLastYearCal;
 		var total = totalMediaInvestmentCal/ percentage;
 		//total = Math.round(total);
