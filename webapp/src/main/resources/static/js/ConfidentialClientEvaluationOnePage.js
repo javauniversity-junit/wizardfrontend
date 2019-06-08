@@ -160,6 +160,7 @@ function calculateTwo()
 		pctTAIGrossSalesLastYearCal = Number(pctTAIGrossSalesLastYear);
 	}
 	
+	/*
 	if (totalMediaInvestmentCal > 0 && pctTAIGrossSalesLastYearCal > 0) {
 		var percentage = 100/pctTAIGrossSalesLastYearCal;
 		var total = totalMediaInvestmentCal/ percentage;
@@ -167,7 +168,7 @@ function calculateTwo()
 		document.getElementById("grossSalesLastyearTwo").value =  total;
 		
 	}
-	
+	*/
 	
 	
 	if (proposedValue1 != null) {
