@@ -129,7 +129,7 @@ function calculateTwo()
 	
 	var taiShouldBe = document.getElementById("taiShouldBe").value;
 	var industryAverage =document.getElementById("industryAverage").value;
-	var totalMediaInvestment = document.getElementById("totalMediaInvestmentTwo").value;
+	//var totalMediaInvestment = document.getElementById("totalMediaInvestmentTwo").value;
 	
 	//TotalMediaInvestment / pctTAIGrossSalesLastYear = GrossSalesLastyear
 	
@@ -144,13 +144,13 @@ function calculateTwo()
 	var proposedValue6Cal =0;
 	
 	var pctTAIGrossSalesLastYearCal = 0;
-	var totalMediaInvestmentCal = 0;
+	var taiShouldBeCal = 0;
 	
 	
-	if (totalMediaInvestment != null) {
-		totalMediaInvestment = totalMediaInvestment.substring(1);
-		totalMediaInvestment = removeComma(totalMediaInvestment);
-		totalMediaInvestmentCal = Number(totalMediaInvestment);
+	if (taiShouldBe != null) {
+		taiShouldBe = taiShouldBe.substring(1);
+		taiShouldBe = removeComma(taiShouldBe);
+		taiShouldBeCal = Number(taiShouldBe);
 	}	
 	
 	
