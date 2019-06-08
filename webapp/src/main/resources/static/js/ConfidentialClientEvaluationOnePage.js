@@ -46,7 +46,7 @@ function calculateOne()
 		var total = totalMediaInvestmentCal/ percentage;
 		//total = Math.round(total);
 		total = CurrencyFormatted(total);
-		document.getElementById("grossSalesLastyear").value =  total;
+		document.getElementById("estimatedGrossSalesNext12Months").value =  total;
 		
 	}
 	
