@@ -4,7 +4,7 @@ function calculateOne()
 	var lastYearValue2 = document.getElementById("lastYearValue2").value;
 	var lastYearValue3 = document.getElementById("lastYearValue3").value;	
 	var taiNext12Months = document.getElementById("taiNext12Months").value;
-	var pctgrosssales = document.getElementById("pctgrosssales").value;
+	var pctGrossSales = document.getElementById("pctGrossSales").value;
 	var taiNext12MonthsCal = 0;
 	
 	//alert ("averageRepeatSales " + averageRepeatSales);
