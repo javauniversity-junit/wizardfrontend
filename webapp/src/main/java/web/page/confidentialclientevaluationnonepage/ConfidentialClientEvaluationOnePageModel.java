@@ -28,10 +28,11 @@ public class ConfidentialClientEvaluationOnePageModel {
 	private String proposedValue4;
 	private String proposedValue5;
 	private String proposedValue6;
-	private String tAINext12Months;
+	private String taiNext12Months;
 	private String pctGrossSales;
 	private String estimatedGrossSalesNext12Months;
 	private String tAIShouldBe;
+	//taiNext12Months
 	private String industryAverage;
 	private String salesGoals;
 	public String getProposedLabel1() {
@@ -106,11 +107,11 @@ public class ConfidentialClientEvaluationOnePageModel {
 	public void setProposedValue6(String proposedValue6) {
 		this.proposedValue6 = proposedValue6;
 	}
-	public String gettAINext12Months() {
-		return tAINext12Months;
+	public String gettaiNext12Months() {
+		return taiNext12Months;
 	}
-	public void settAINext12Months(String tAINext12Months) {
-		this.tAINext12Months = tAINext12Months;
+	public void settaiNext12Months(String tAINext12Months) {
+		this.taiNext12Months = tAINext12Months;
 	}
 	public String getPctGrossSales() {
 		return pctGrossSales;
@@ -180,7 +181,7 @@ public class ConfidentialClientEvaluationOnePageModel {
 		this.proposedValue4 = proposedValue4;
 		this.proposedValue5 = proposedValue5;
 		this.proposedValue6 = proposedValue6;
-		this.tAINext12Months = tAINext12Months;
+		this.taiNext12Months = tAINext12Months;
 		this.pctGrossSales = pctGrossSales;
 		this.estimatedGrossSalesNext12Months = estimatedGrossSalesNext12Months;
 		this.tAIShouldBe = tAIShouldBe;

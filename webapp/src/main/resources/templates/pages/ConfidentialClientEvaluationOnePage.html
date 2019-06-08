@@ -94,7 +94,11 @@
                         Total Media Investment:
                     </div>
                     <div class="col-6">
-                        <input type="text" class="form-control" id="totalMediaInvestment" th:value="${dataPageModel?.totalMediaInvestment}" readonly name="totalMediaInvestment" />
+                        <input type="text" 
+                        class="form-control" 
+                        id="totalMediaInvestment" 
+                        th:value="${dataPageModel?.totalMediaInvestment}" 
+                        readonly name="totalMediaInvestment" />
                     </div>
                 </div>
 
@@ -105,8 +109,11 @@
                                 B.
                             </div>
                             <div class="col-10">
-                                <input type="text" th:value="${dataPageModel?.totalMediaInvestment}"  class="form-control"
-                                    data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"  id="totalMediaInvestmentInput" name="totalMediaInvestmentInput">
+                                <input type="text" 
+                                th:value="${dataPageModel?.totalMediaInvestment}"  class="form-control"
+                                    data-type="currency" 
+                                    pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+                                      id="totalMediaInvestmentInput" name="totalMediaInvestmentInput">
                             </div>
                         </div>
                     </div>
