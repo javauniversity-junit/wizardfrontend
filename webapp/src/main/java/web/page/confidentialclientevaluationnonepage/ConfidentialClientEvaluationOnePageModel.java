@@ -23,6 +23,53 @@ public class ConfidentialClientEvaluationOnePageModel {
 	private String proposedLabel4;
 	private String proposedLabel5;
 	private String proposedLabel6;
+	public ConfidentialClientEvaluationOnePageModel(String lastYearLabel1, String lastYearLabel2, String lastYearLabel3,
+			String lastYearLabel4, String lastYearLabel5, String lastYearLabel6, String lastYearValue1,
+			String lastYearValue2, String lastYearValue3, String lastYearValue4, String lastYearValue5,
+			String lastYearValue6, String totalMediaInvestment, String totalMediaInvestmentInput,
+			String pctTAIGrossSalesLastYear, String grossSalesLastyear, String proposedLabel1, String proposedLabel2,
+			String proposedLabel3, String proposedLabel4, String proposedLabel5, String proposedLabel6,
+			String proposedValue1, String proposedValue2, String proposedValue3, String proposedValue4,
+			String proposedValue5, String proposedValue6, String taiNext12Months, String pctGrossSales,
+			String estimatedGrossSalesNext12Months, String tAIShouldBe, String totalMediaInvestmentTwo,
+			String industryAverage, String salesGoals) {
+		super();
+		this.lastYearLabel1 = lastYearLabel1;
+		this.lastYearLabel2 = lastYearLabel2;
+		this.lastYearLabel3 = lastYearLabel3;
+		this.lastYearLabel4 = lastYearLabel4;
+		this.lastYearLabel5 = lastYearLabel5;
+		this.lastYearLabel6 = lastYearLabel6;
+		this.lastYearValue1 = lastYearValue1;
+		this.lastYearValue2 = lastYearValue2;
+		this.lastYearValue3 = lastYearValue3;
+		this.lastYearValue4 = lastYearValue4;
+		this.lastYearValue5 = lastYearValue5;
+		this.lastYearValue6 = lastYearValue6;
+		this.totalMediaInvestment = totalMediaInvestment;
+		this.totalMediaInvestmentInput = totalMediaInvestmentInput;
+		this.pctTAIGrossSalesLastYear = pctTAIGrossSalesLastYear;
+		this.grossSalesLastyear = grossSalesLastyear;
+		this.proposedLabel1 = proposedLabel1;
+		this.proposedLabel2 = proposedLabel2;
+		this.proposedLabel3 = proposedLabel3;
+		this.proposedLabel4 = proposedLabel4;
+		this.proposedLabel5 = proposedLabel5;
+		this.proposedLabel6 = proposedLabel6;
+		this.proposedValue1 = proposedValue1;
+		this.proposedValue2 = proposedValue2;
+		this.proposedValue3 = proposedValue3;
+		this.proposedValue4 = proposedValue4;
+		this.proposedValue5 = proposedValue5;
+		this.proposedValue6 = proposedValue6;
+		this.taiNext12Months = taiNext12Months;
+		this.pctGrossSales = pctGrossSales;
+		this.estimatedGrossSalesNext12Months = estimatedGrossSalesNext12Months;
+		this.taiShouldBe = tAIShouldBe;
+		this.totalMediaInvestmentTwo = totalMediaInvestmentTwo;
+		this.industryAverage = industryAverage;
+		this.salesGoals = salesGoals;
+	}
 	private String proposedValue1;
 	private String proposedValue2;
 	private String proposedValue3;
@@ -32,8 +79,27 @@ public class ConfidentialClientEvaluationOnePageModel {
 	private String taiNext12Months;
 	private String pctGrossSales;
 	private String estimatedGrossSalesNext12Months;
-	private String tAIShouldBe;
+	private String taiShouldBe;
+	
 	private String totalMediaInvestmentTwo;
+	public String getTotalMediaInvestmentInput() {
+		return totalMediaInvestmentInput;
+	}
+	public void setTotalMediaInvestmentInput(String totalMediaInvestmentInput) {
+		this.totalMediaInvestmentInput = totalMediaInvestmentInput;
+	}
+	public String getTaiNext12Months() {
+		return taiNext12Months;
+	}
+	public void setTaiNext12Months(String taiNext12Months) {
+		this.taiNext12Months = taiNext12Months;
+	}
+	public String getTotalMediaInvestmentTwo() {
+		return totalMediaInvestmentTwo;
+	}
+	public void setTotalMediaInvestmentTwo(String totalMediaInvestmentTwo) {
+		this.totalMediaInvestmentTwo = totalMediaInvestmentTwo;
+	}
 	//taiNext12Months
 	private String industryAverage;
 	private String salesGoals;
@@ -127,11 +193,12 @@ public class ConfidentialClientEvaluationOnePageModel {
 	public void setEstimatedGrossSalesNext12Months(String estimatedGrossSalesNext12Months) {
 		this.estimatedGrossSalesNext12Months = estimatedGrossSalesNext12Months;
 	}
-	public String gettAIShouldBe() {
-		return tAIShouldBe;
+
+	public String getTaiShouldBe() {
+		return taiShouldBe;
 	}
-	public void settAIShouldBe(String tAIShouldBe) {
-		this.tAIShouldBe = tAIShouldBe;
+	public void setTaiShouldBe(String taiShouldBe) {
+		this.taiShouldBe = taiShouldBe;
 	}
 	public String getIndustryAverage() {
 		return industryAverage;
@@ -186,7 +253,7 @@ public class ConfidentialClientEvaluationOnePageModel {
 		this.taiNext12Months = tAINext12Months;
 		this.pctGrossSales = pctGrossSales;
 		this.estimatedGrossSalesNext12Months = estimatedGrossSalesNext12Months;
-		this.tAIShouldBe = tAIShouldBe;
+		this.taiShouldBe = tAIShouldBe;
 		this.industryAverage = industryAverage;
 		this.salesGoals = salesGoals;
 	}

@@ -86,6 +86,9 @@ public class ConfidentialClientEvaluationOnePageController {
 			@RequestParam String pctGrossSales,
 			@RequestParam String estimatedGrossSalesNext12Months,
 			@RequestParam String totalMediaInvestmentTwo,
+			@RequestParam String industryAverage, 
+			@RequestParam String salesGoals,
+			@RequestParam(defaultValue="", value="tAIShouldBe")  String tAIShouldBe,
 			@RequestParam String nextPage,
 			@RequestParam String publishPage,
 			@RequestParam String previousPage, 
@@ -112,10 +115,18 @@ public class ConfidentialClientEvaluationOnePageController {
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
 
-		ConfidentialClientEvaluationOnePageModel pageModel = new ConfidentialClientEvaluationOnePageModel(
-				lastYearLabel1, lastYearLabel2, lastYearLabel3, lastYearLabel4, lastYearLabel5, lastYearLabel6,
-				lastYearValue1, lastYearValue2, lastYearValue3, lastYearValue4, lastYearValue5, lastYearValue6,
-				totalMediaInvestment, pctTAIGrossSalesLastYear, grossSalesLastyear);
+			
+		ConfidentialClientEvaluationOnePageModel pageModel = new ConfidentialClientEvaluationOnePageModel(lastYearLabel1, lastYearLabel2, lastYearLabel3,
+				lastYearLabel4, lastYearLabel5, lastYearLabel6, lastYearValue1,
+				lastYearValue2,lastYearValue3, lastYearValue4, lastYearValue5,
+				lastYearValue6,totalMediaInvestment, totalMediaInvestmentInput,
+				pctTAIGrossSalesLastYear, grossSalesLastyear, proposedLabel1, proposedLabel2,
+				proposedLabel3, proposedLabel4, proposedLabel5, proposedLabel6,
+				proposedValue1, proposedValue2, proposedValue3, proposedValue4,
+				proposedValue5, proposedValue6, taiNext12Months, pctGrossSales,
+				estimatedGrossSalesNext12Months, tAIShouldBe,totalMediaInvestmentTwo,
+				industryAverage, salesGoals);
+		
 		String pageData = JSONManager.convertToJson(pageModel);
 
 		wizardData.setPagedata(pageData);
