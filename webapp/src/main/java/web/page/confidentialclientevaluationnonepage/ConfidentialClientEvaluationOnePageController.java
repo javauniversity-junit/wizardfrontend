@@ -88,7 +88,7 @@ public class ConfidentialClientEvaluationOnePageController {
 			@RequestParam String totalMediaInvestmentTwo,
 			@RequestParam String industryAverage, 
 			@RequestParam String salesGoals,
-			@RequestParam(defaultValue="", value="tAIShouldBe")  String tAIShouldBe,
+			@RequestParam(defaultValue="", value="taiShouldBe")  String taiShouldBe,
 			@RequestParam String nextPage,
 			@RequestParam String publishPage,
 			@RequestParam String previousPage, 
@@ -124,7 +124,7 @@ public class ConfidentialClientEvaluationOnePageController {
 				proposedLabel3, proposedLabel4, proposedLabel5, proposedLabel6,
 				proposedValue1, proposedValue2, proposedValue3, proposedValue4,
 				proposedValue5, proposedValue6, taiNext12Months, pctGrossSales,
-				estimatedGrossSalesNext12Months, tAIShouldBe,totalMediaInvestmentTwo,
+				estimatedGrossSalesNext12Months, taiShouldBe,totalMediaInvestmentTwo,
 				industryAverage, salesGoals);
 		
 		String pageData = JSONManager.convertToJson(pageModel);
