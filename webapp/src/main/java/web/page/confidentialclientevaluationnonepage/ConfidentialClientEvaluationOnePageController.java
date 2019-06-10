@@ -88,7 +88,7 @@ public class ConfidentialClientEvaluationOnePageController {
 			@RequestParam String totalMediaInvestmentTwo,
 			@RequestParam String industryAverage, 
 			@RequestParam String salesGoals,
-			@RequestParam(defaultValue="", value="taiShouldBe")  String taiShouldBe,
+			@RequestParam String taiShouldBe,
 			@RequestParam String nextPage,
 			@RequestParam String publishPage,
 			@RequestParam String previousPage, 
