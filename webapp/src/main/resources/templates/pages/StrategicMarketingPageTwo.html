@@ -50,13 +50,13 @@
 							competition (A)?</label> <input type="text" class="form-control"
 							id="yearsInBusiness" th:value="${dataPageModel?.competitionA}"
 							name="competitionA" aria-describedby="competitionA"
-							placeholder="Enter main competition (A)" />
+							placeholder="Enter main competition (A)" maxlength="50" />
 					</div>
 					<div class="form-group">
 						<label for="numberOfLocations">Who is the main competition
 							(B)?</label> <input type="type" th:value="${dataPageModel?.competitionB}"
 							class="form-control" id="competitionB" name="competitionB"
-							placeholder="Enter main competition (B)" />
+							placeholder="Enter main competition (B)" maxlength="50" />
 					</div>
 
 
@@ -68,14 +68,14 @@
 							(A)?</label> <input type="text" id="competitionStrengthA"
 							name="competitionStrengthA" class="form-control"
 							th:value="${dataPageModel?.competitionStrengthA}"
-							placeholder="Enter strengths(A) " />
+							placeholder="Enter strengths(A) "   maxlength="50" />
 					</div>
 					<div class="form-group">
 						<label for="competitionStrengthB">What are their strengths
 							(B)?</label> <input type="text" id="competitionStrengthB"
 							name="competitionStrengthB" class="form-control"
 							th:value="${dataPageModel?.competitionStrengthB}"
-							placeholder="Enter strengths(B) " />
+							placeholder="Enter strengths(B) " maxlength="50" />
 					</div>
 					<div class="form-group">
 
@@ -84,14 +84,14 @@
 							(A)?</label> <input type="text" id="competitionWeaknessA"
 							name="competitionWeaknessA" class="form-control"
 							th:value="${dataPageModel?.competitionWeaknessA}"
-							placeholder="Enter strengths(A) " />
+							placeholder="Enter strengths(A) " maxlength="50" />
 					</div>
 					<div class="form-group">
 						<label for="competitionWeaknessB">What are their weaknesses?
 							(B)?</label> <input type="text" id="competitionWeaknessB"
 							name="competitionWeaknessB" class="form-control"
 							th:value="${dataPageModel?.competitionWeaknessB}"
-							placeholder="Enter strengths(B)" />
+							placeholder="Enter strengths(B)" maxlength="50" />
 					</div>
 					<div class="form-group">
 						<label for=companyNameProjectImage>5. What image does the client want the company's 
@@ -109,7 +109,7 @@
 							(B)?</label> <input type="text" id="currentCompanySlogan"
 							name="currentCompanySlogan" class="form-control"
 							th:value="${dataPageModel?.currentCompanySlogan}"
-							placeholder="Enter Current Company Slogan: " />
+							placeholder="Enter Current Company Slogan: " maxlength="50" />
 					</div>				
 
 				
