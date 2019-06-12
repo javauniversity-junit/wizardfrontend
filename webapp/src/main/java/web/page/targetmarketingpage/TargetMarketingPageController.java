@@ -53,28 +53,99 @@ public class TargetMarketingPageController {
 	@RequestMapping(value = "/saveTargetMarketingPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
 			,@RequestParam String wizarddataid
-			,@RequestParam int pctMen
-			,@RequestParam int pctWomen
-			,@RequestParam int householdIncome
-			,@RequestParam String describeIdealTargetConsumer
-			,@RequestParam int have12to18
-			,@RequestParam int have19to25
-			,@RequestParam int have26to35
-			,@RequestParam int have36to45
-			,@RequestParam int have46to55
-			,@RequestParam int have56Plus
-			,@RequestParam int want12to18
-			,@RequestParam int want19to25
-			,@RequestParam int want26to35
-			,@RequestParam int want36to45
-			,@RequestParam int want46to55
-			,@RequestParam int want55Plus
+			, @RequestParam (name="pctMen") String pctMenStr
+			, @RequestParam (name="pctWomen") String pctWomenStr
+			, @RequestParam (name="householdIncome") String householdIncomeStr,
+			@RequestParam String describeIdealTargetConsumer
+			, @RequestParam (name="have12to18") String have12to18Str,
+			@RequestParam (name="have19to25") String  have19to25Str
+			, @RequestParam (name="have26to35") String   have26to35Str
+			, @RequestParam (name="have36to45") String   have36to45Str,
+			@RequestParam (name="have46to55") String   have46to55Str
+			, @RequestParam (name="have56Plus") String   have56PlusStr
+			, @RequestParam (name="want12to18") String   want12to18Str,
+			@RequestParam (name="want19to25") String   want19to25Str
+			, @RequestParam (name="want26to35") String   want26to35Str
+			, @RequestParam (name="want36to45") String   want36to45Str,
+			@RequestParam (name="want46to55") String   want46to55Str
+			, @RequestParam (name="want55Plus") String   want55PlusStr
 			,@RequestParam String nextPage
 			,@RequestParam String publishPage
 			,@RequestParam String previousPage
 			,@RequestParam(required=false, value="previous") String previous
 			,@RequestParam(required=false, value="next") String next
 	        ,@RequestParam(required=false, value="publish") String publish){
+		
+		
+		int pctMen = 0;
+		if (!pctMenStr.equals("")) {
+			pctMen = Integer.parseInt(pctMenStr);
+		}
+		
+		int pctWomen = 0;
+		if (!pctWomenStr.equals("")) {
+			pctWomen = Integer.parseInt(pctWomenStr);
+		}
+		int householdIncome = 0;
+		if (!householdIncomeStr.equals("")) {
+			householdIncome = Integer.parseInt(householdIncomeStr);
+		}	
+		int have12to18 = 0;
+		if (!have12to18Str.equals("")) {
+			have12to18 = Integer.parseInt(have12to18Str);
+		}	
+		int have19to25 = 0;
+		if (!have19to25Str.equals("")) {
+			have19to25 = Integer.parseInt(have19to25Str);
+		}	
+		int have26to35 = 0;
+		if (!have26to35Str.equals("")) {
+			have26to35 = Integer.parseInt(have26to35Str);
+		}
+		int have36to45 = 0;
+		if (!have36to45Str.equals("")) {
+			have36to45 = Integer.parseInt(have36to45Str);
+		}
+		
+		int have46to55 = 0;
+		if (!have46to55Str.equals("")) {
+			have46to55 = Integer.parseInt(have46to55Str);
+		}
+		
+		int have56Plus = 0;
+		if (!have56PlusStr.equals("")) {
+			have56Plus = Integer.parseInt(have56PlusStr);
+		}
+		int want12to18 = 0;
+		if (!want12to18Str.equals("")) {
+			want12to18 = Integer.parseInt(want12to18Str);
+		}
+		int want19to25 = 0;
+		if (!want19to25Str.equals("")) {
+			want19to25 = Integer.parseInt(want19to25Str);
+		}
+		int want26to35 = 0;
+		if (!want26to35Str.equals("")) {
+			want26to35 = Integer.parseInt(want26to35Str);
+		}			
+		int want36to45 = 0;
+		if (!want36to45Str.equals("")) {
+			want36to45 = Integer.parseInt(want36to45Str);
+		}	
+		int want46to55 = 0;
+		if (!want46to55Str.equals("")) {
+			want46to55 = Integer.parseInt(want46to55Str);
+		}	
+		int want55Plus = 0;
+		if (!want55PlusStr.equals("")) {
+			want55Plus = Integer.parseInt(want55PlusStr);
+		}			
+		
+		
+		
+		
+		
+		
 		
 		//internal next page or publish
 		String internalNextPage = nextPage;
