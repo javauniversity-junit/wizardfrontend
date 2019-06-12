@@ -50,13 +50,13 @@
 							in business?</label> <input type="number" class="form-control"
 							id="yearsInBusiness"
 							th:value="${dataPageModel?.yearsInBusiness}" name="yearsInBusiness"
-							aria-describedby="yearsInBusinessName" min="0" max="100"
+							aria-describedby="yearsInBusinessName" min="0" max="50"
 							placeholder="Enter years In business" />
 					</div>
 					<div class="form-group">
 						<label for="numberOfLocations">How many locations?</label> <input
 							type="number" th:value="${dataPageModel?.numberOfLocations}"
-							 min="0" max="2000" class="form-control"
+							 min="0" max="50" class="form-control"
 							id="numberOfLocations" name="numberOfLocations"
 							placeholder="Enter number of locations" />
 					</div>
@@ -111,10 +111,10 @@
 					</div>
 					
 						<div class="form-group">
-							<label for="currentCompanySlogan">Current Company Slogan:</label> <input
+							<label for="currentCompanySlogan">Current Company Slogan:</label> 
+							<input
 								type="text" class="form-control" id="currentCompanySlogan"
-								th:value="${dataPageModel?.currentCompanySlogan}"
-								name="currentCompanySlogan"  aria-describedby="currentCompanySlogan"
+								th:value="${dataPageModel?.currentCompanySlogan}"  maxlength="50"								name="currentCompanySlogan"  aria-describedby="currentCompanySlogan"
 								placeholder="Enter Company Slogan" />
 						</div>
 							<div class="form-group">
