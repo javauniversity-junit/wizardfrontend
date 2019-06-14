@@ -50,12 +50,12 @@ public class PlanAProposedPageController {
 	
 	@RequestMapping(value = "/savePlanAProposedPage", method = RequestMethod.POST) // replace with my class variables
 	public String save(@RequestParam String wizardId
-			,@RequestParam String planACity
-			,@RequestParam String planAReach
-			,@RequestParam String planAFrequency
-			,@RequestParam String planADigitalImpressionsMonthly
-			,@RequestParam String planAMonthly
-			,@RequestParam String planADaily
+			,@RequestParam (defaultValue ="") String  planACity 
+			,@RequestParam (defaultValue ="") String planAReach
+			,@RequestParam (defaultValue ="") String planAFrequency
+			,@RequestParam (defaultValue ="") String planADigitalImpressionsMonthly
+			,@RequestParam (defaultValue ="") String planAMonthly
+			,@RequestParam (defaultValue ="") String planADaily
 			,@RequestParam String wizarddataid // must stay
 			,@RequestParam String nextPage
 			,@RequestParam String publishNextPage
