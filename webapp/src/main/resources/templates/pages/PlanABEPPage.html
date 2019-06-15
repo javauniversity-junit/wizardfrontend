@@ -43,25 +43,25 @@
 				</legend>
 				<div class="form-group">
 					<label for="planAAverageSale">A. Average sale (ticket, transaction, invoice)</label> <input type="number" class="form-control"
-						id="planAAverageSale" th:value="${dataPageModel?.planAAverageSale}" required
+						id="planAAverageSale" th:value="${dataPageModel?.planAAverageSale}" 
 						
 						name="planAAverageSale" />
 				</div>
 				<div class="form-group">
 					<label for="planAGrossMargin">B. Gross profit margin on average sale (sale less cost of goods sold)</label> <input
 						type="number" th:value="${dataPageModel?.planAGrossMargin}"
-						required class="form-control" 
+						 class="form-control" 
 						id="planAGrossMargin" name="planAGrossMargin" />
 				</div>
 				<div class="form-group">
 					<label for="planAClosingPct">C. Closing or conversion rate </label> <input type="number" class="form-control"
 						id="planAClosingPct" name="planAClosingPct" 
-						th:value="${dataPageModel?.planAClosingPct}" required
+						th:value="${dataPageModel?.planAClosingPct}" 
 						aria-describedby="planAClosingPct" />
 				</div>
 				<div class="form-group">
 					<label for="planAProspectValue">D. Projected prospect value (A*B*C)</label> <input type="text"
-						th:value="${dataPageModel?.planAProspectValue}" required
+						th:value="${dataPageModel?.planAProspectValue}" 
 						class="form-control" id="planAProspectValue" oninput="calculate()"
 						name="planAProspectValue" />
 				</div>
@@ -74,7 +74,7 @@
 				<div class="form-group">
 					<label for="planAProspectsNeeded">F. Monthly prospects needed to pay for advertising investment (E/D)</label> <input type="number" oninput="calculate()"
 						th:value="${dataPageModel?.planAProspectsNeeded}" class="form-control"
-						id="planAProspectsNeeded" required name="planAProspectsNeeded" />
+						id="planAProspectsNeeded"  name="planAProspectsNeeded" />
 				</div>
 				<div class="form-group">
 					<label for="planAProspectSalesNeeded">G. Number of monthly sales needed to break even (F*C)</label> <input type="text"
