@@ -60,7 +60,8 @@
 						aria-describedby="planAClosingPct" />
 				</div>
 				<div class="form-group">
-					<label for="planAProspectValue">D. Projected prospect value (A*B*C)</label> <input type="text"
+					<label for="planAProspectValue">D. Projected prospect value (A*B*C)</label> 
+					<input type="text"
 						th:value="${dataPageModel?.planAProspectValue}" 
 						class="form-control" id="planAProspectValue" oninput="calculate()"
 						name="planAProspectValue" />
@@ -84,8 +85,8 @@
 						aria-describedby="planAProspectSalesNeeded" oninput="calculate()"/>
 				</div>
 				<div class="form-group">
-					<label for="planAGrossProfitOnSales">H. Gross sales per month needed to break even (G*A)</label> <input required
-						class="form-control" 
+					<label for="planAGrossProfitOnSales">H. Gross sales per month needed to break even (G*A)</label> 
+					<input class="form-control" 
 						id="planAGrossProfitOnSales"
 						th:value="${dataPageModel?.planAGrossProfitOnSales}"
 						name="planAGrossProfitOnSales" oninput="calculate()"/>
