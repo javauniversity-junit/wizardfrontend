@@ -1,7 +1,7 @@
-<div th:fragment="MarketPlaceCompetitionPage" class="grad container pageBreakInside"
-	style="height: 100%;">
-	<div> 
-	<a id="MarketPlaceCompetitionPage"></a>
+<div th:fragment="MarketPlaceCompetitionPage"
+	class="grad container pageBreakInside" style="height: 100%;">
+	<div>
+		<a id="MarketPlaceCompetitionPage"></a>
 		<p class="text-justify">
 		<h1 class="text-center">Marketplace Competition</h1>
 		</p>
@@ -11,9 +11,49 @@
 	</div>
 
 	<div class="whiteGrad">
+		<div class="row">
+			<div class="col-4">
+				<div class="row, form-group">
+					<span class="form-control, border-0">How long have you been in business?</span>
+				</div>
+			</div>
+			<div class="col-1">
+				<div class="row, form-group">
+					<span class="form-control, border-0" th:text="${StrategicMarketingPageOne?.yearsInBusiness}"></span>
+				</div>
+			</div>
+
+			<div class="col-3">
+				<div class="row, form-group">
+					<span class="form-control, border-0">How many locations?</span>
+				</div>
+			</div>
+			<div class="col-1">
+				<div class="row, form-group">
+					<span class="form-control, border-0"><span
+						th:text="${StrategicMarketingPageOne?.numberOfLocations}"></span></span>
+				</div>
+			</div>
+
+			<div class="col-2">
+				<div class="row, form-group">
+					<span class="form-control, border-0">Plan to Expand?</span>
+				</div>
+			</div>
+			<div class="col-1">
+				<div class="row, form-group">
+					<span class="form-control, border-0"><span
+						th:text="${StrategicMarketingPageOne?.planToExpand}"></span></span>
+				</div>
+			</div>
+		</div>
+
 		<p>
-		How long have you been in business? <span th:text="${StrategicMarketingPageOne?.yearsInBusiness}"></span> </p>
-		<h2>Presented To</h2><span th:text="${PresentedToPage?.clientContactName}"></span>
+			How long have you been in business? <span
+				th:text="${StrategicMarketingPageOne?.yearsInBusiness}"></span>
+		</p>
+		<h2>Presented To</h2>
+		<span th:text="${PresentedToPage?.clientContactName}"></span>
 		<p>
 		<h2>Presented By</h2>
 		</p>
@@ -31,10 +71,11 @@
 		<nav aria-label="Page navigation example">
 			<ul class="pagination">
 				<li class="page-item"><a class="page-link" href="#">Previous</a></li>
-				<li class="page-item"><a class="page-link" href="#TeamCommitmentPage">Next</a></li>
+				<li class="page-item"><a class="page-link"
+					href="#TeamCommitmentPage">Next</a></li>
 				<li class="page-item"><a class="page-link" href="#">Print</a></li>
 				<li class="page-item"><a class="page-link" href="#">End</a></li>
-				
+
 			</ul>
 		</nav>
 	</div>
