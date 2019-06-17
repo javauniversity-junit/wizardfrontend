@@ -53,16 +53,16 @@ public class PlanABEPPageController {
 	@RequestMapping(value = "/savePlanABEPPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
 			,@RequestParam String wizarddataid
-			,@RequestParam (defaultValue ="") String planAAverageSaleStr
-			,@RequestParam (defaultValue ="0") String planAGrossMarginStr
-			,@RequestParam (defaultValue ="0") String  planAClosingPctStr
-			,@RequestParam (defaultValue ="0") String planAProspectValueStr
-			,@RequestParam (defaultValue ="0") String planAInvestmentStr
-			,@RequestParam (defaultValue ="0") String planAProspectsNeededStr
-			,@RequestParam (defaultValue ="0") String planAProspectSalesNeededStr
-			,@RequestParam (defaultValue ="0") String planAGrossProfitOnSalesStr
-			,@RequestParam (defaultValue ="0") String planAMonthsStr
-			,@RequestParam (defaultValue ="0") String planAAdditionalGrossSalesStr			
+			,@RequestParam (defaultValue ="0", name="planAAverageSale") String planAAverageSale
+			,@RequestParam (defaultValue ="0", name="planAGrossMargin") String planAGrossMargin
+			,@RequestParam (defaultValue ="0", name="planAClosingPct") String  planAClosingPct
+			,@RequestParam (defaultValue ="0", name="planAProspectValue") String planAProspectValue
+			,@RequestParam (defaultValue ="0", name="planAInvestment") String planAInvestment
+			,@RequestParam (defaultValue ="0", name="planAProspectsNeeded") String planAProspectsNeeded
+			,@RequestParam (defaultValue ="0", name="planAProspectSales") String planAProspectSalesNeeded
+			,@RequestParam (defaultValue ="0", name="planAGrossProfitOnSales") String planAGrossProfitOnSales
+			,@RequestParam (defaultValue ="0", name="planAMonths") String planAMonths
+			,@RequestParam (defaultValue ="0", name="planAAdditionalGrossSales") String planAAdditionalGrossSales			
 			,@RequestParam String nextPage
 			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next
@@ -71,19 +71,6 @@ public class PlanABEPPageController {
 		//internal next page or publish
 		
 		
-			int planAProspectValue= Integer.parseInt(planAProspectValueStr);
-		
-		
-			int planAInvestment= Integer.parseInt(planAInvestmentStr);
-		
-		
-			int planAProspectSalesNeeded= Integer.parseInt(planAProspectSalesNeededStr);
-		
-		
-			int planAMonths= Integer.parseInt(planAMonthsStr);
-		
-		
-			int planAAdditionalGrossSales= Integer.parseInt(planAAdditionalGrossSalesStr);
 			
 		String internalNextPage = nextPage;
 		if (publish != null) {
@@ -100,9 +87,12 @@ public class PlanABEPPageController {
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
 		
-		PlanABEPPageModel pageModel  = new PlanABEPPageModel( planAAverageSale,  planAGrossMargin,  planAClosingPct,  planAProspectValue,
-				 planAInvestment,  planAProspectsNeeded,  planAProspectSalesNeeded,  planAGrossProfitOnSales,
-				 planAMonths,  planAAdditionalGrossSales);
+		PlanABEPPageModel pageModel  = new PlanABEPPageModel(planAAverageSale,
+				planAGrossMargin, planAClosingPct,
+				planAProspectValue, planAInvestment, planAProspectsNeeded,
+				planAProspectSalesNeeded, planAGrossProfitOnSales
+				, planAMonths,
+				planAAdditionalGrossSales);
 		String pageData = JSONManager.convertToJson(pageModel);
 		
 		wizardData.setPagedata(pageData);

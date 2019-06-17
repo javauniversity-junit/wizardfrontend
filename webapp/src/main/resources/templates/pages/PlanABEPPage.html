@@ -43,8 +43,9 @@
 				</legend>
 				<div class="form-group">
 					<label for="planAAverageSale">A. Average sale (ticket, transaction, invoice)</label> <input type="number" class="form-control"
-						id="planAAverageSale" th:value="${dataPageModel?.planAAverageSale}" 
-						
+						id="planAAverageSale" 
+						th:value="${dataPageModel?.planAAverageSale}" 
+						 data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 						name="planAAverageSale" />
 				</div>
 				<div class="form-group">
