@@ -53,37 +53,38 @@ public class PlanABEPPageController {
 	@RequestMapping(value = "/savePlanABEPPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
 			,@RequestParam String wizarddataid
-			,@RequestParam String planAAverageSale
-			,@RequestParam Integer planAGrossMargin
-			,@RequestParam Integer planAClosingPct
-			,@RequestParam Integer planAProspectValue
-			,@RequestParam Integer planAInvestment
-			,@RequestParam Integer planAProspectsNeeded
-			,@RequestParam Integer planAProspectSalesNeeded
-			,@RequestParam Integer planAGrossProfitOnSales
-			,@RequestParam Integer planAMonths
-			,@RequestParam Integer planAAdditionalGrossSales			
+			,@RequestParam (defaultValue ="") String planAAverageSaleStr
+			,@RequestParam (defaultValue ="0") String planAGrossMarginStr
+			,@RequestParam (defaultValue ="0") String  planAClosingPctStr
+			,@RequestParam (defaultValue ="0") String planAProspectValueStr
+			,@RequestParam (defaultValue ="0") String planAInvestmentStr
+			,@RequestParam (defaultValue ="0") String planAProspectsNeededStr
+			,@RequestParam (defaultValue ="0") String planAProspectSalesNeededStr
+			,@RequestParam (defaultValue ="0") String planAGrossProfitOnSalesStr
+			,@RequestParam (defaultValue ="0") String planAMonthsStr
+			,@RequestParam (defaultValue ="0") String planAAdditionalGrossSalesStr			
 			,@RequestParam String nextPage
 			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next
 	        ,@RequestParam(required=false, value="publish") String publish){
 		mLog.info("starting save");
 		//internal next page or publish
-		if (planAProspectValue == null) {
-			planAProspectValue= 0;
-		}
-		if (planAInvestment == null) {
-			planAInvestment= 0;
-		}
-		if (planAProspectSalesNeeded == null) {
-			planAProspectSalesNeeded= 0;
-		}
-		if (planAMonths == null) {
-			planAMonths= 0;
-		}
-		if (planAAdditionalGrossSales == null) {
-			planAAdditionalGrossSales= 0;
-		}		
+		
+		
+			int planAProspectValue= Integer.parseInt(planAProspectValueStr);
+		
+		
+			int planAInvestment= Integer.parseInt(planAInvestmentStr);
+		
+		
+			int planAProspectSalesNeeded= Integer.parseInt(planAProspectSalesNeededStr);
+		
+		
+			int planAMonths= Integer.parseInt(planAMonthsStr);
+		
+		
+			int planAAdditionalGrossSales= Integer.parseInt(planAAdditionalGrossSalesStr);
+			
 		String internalNextPage = nextPage;
 		if (publish != null) {
 			internalNextPage= publishPage;
