@@ -420,11 +420,15 @@
 					
 					<input type="hidden" id="nextPage"
 						th:value="'redirect:/ClientObjectivesOnePageTwo?ID=' + ${wizard.wizardid}"
-						name="nextPage" /> <input type="hidden" id="previousPage"
+						name="nextPage" /> 
+						<input type="hidden" id="previousPage"
 						th:value="'redirect:/MarketPlaceCompetitionPage?ID=' + ${wizard.wizardid}"
-						name="previousPage" /> <input type="hidden" id="publishPage"
+						name="previousPage" /> 
+						<input type="hidden" id="publishPage"
 						th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
-						name="publishPage" /> <input type="hidden" id="wizardId"
+						name="publishPage" /> 
+						
+						<input type="hidden" id="wizardId"
 						th:value="${wizard.wizardid}" name="wizardId" /> <input
 						type="hidden" id="wizarddataid"
 						th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> <input
