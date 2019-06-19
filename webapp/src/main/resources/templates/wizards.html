@@ -60,7 +60,7 @@
 						<li class="nav-item"><a href="index.html"
 							class="nav-link link-scroll">Home</a></li>
 						<li class="nav-item"><a href="wizards"
-							class="nav-link link-scroll">SCRs </a></li>
+							class="nav-link link-scroll">Wizard/SCR</a></li>
 						<li class="nav-item"><a href="logout"
 							class="nav-link link-scroll">Logout</a></li>
 
@@ -78,11 +78,12 @@
 
 
 
-		<div class="container" style="background-color: white; color: black;">
+		<div class="container-fluid" style="background-color: white; color: black;">
 			<div class="row" style="padding-bottom: 2%;">
 				<div class="col-sm-12">
 					<a href="add.html" class="btn btn-primary btn-lg w3-teal"
-						role="button" aria-pressed="true">Add SCR</a>
+						role="button" aria-pressed="true">Create New Summary,
+						Conclusions and Recommendations (SCR)</a>
 				</div>
 				<div class="col-sm-12">
 					<hr>
@@ -91,25 +92,29 @@
 
 
 			<div th:if="${hasRows}">
+									<div class="container-fluid">
 				<div class="card" style="width: 100%;" th:each="wizard : ${wizards}">
 
 					<div class="card-body ">
-						<div class="container">
+						
 							<div class="row">
-								<a th:href="@{'/detail?ID=' + ${wizard.wizardid}}">
-									<p class="fa fa-address-card fa-10x w3-teal"
-										style="font-size: 20px; padding: 35px; height: 50px;"
-										th:text="@{'&ensp; Change (' + ${wizard.name}  + ') name'}">Change
-										a SCR Name</p>
-								</a>
-							</div>
-							<div class="row">
-								<a th:href="@{'/PresentedToPage?ID=' + ${wizard.wizardid}}">
-									<p class="fa fa-address-card fa-10x w3-teal"
-										style="font-size: 20px; padding: 35px; height: 50px;"
-										th:text="@{'&ensp; Open a Summary, Conclusions and Recommendation for (' + ${wizard.name} + ')' }">
-										Open a SCR</p>
-								</a>
+								<div class="col-6">
+									<a th:href="@{'/PresentedToPage?ID=' + ${wizard.wizardid}}">
+										<p class="w3-teal"
+											style="font-size: 20px; padding: 35px; height: 50px;"
+											th:text="@{'&ensp; Open SCR - (' + ${wizard.name} + ')' }">
+											Open SCR</p>
+									</a>
+								</div>
+								<div class="col-6">
+									<a th:href="@{'/detail?ID=' + ${wizard.wizardid}}">
+										<p class="w3-teal"
+											style="font-size: 20px; padding: 35px; height: 50px;"
+											th:text="@{'&ensp; Rename SCR - (' + ${wizard.name}  + ')'}">Rename
+											SCR</p>
+									</a>
+								</div>
+
 							</div>
 						</div>
 
@@ -118,7 +123,7 @@
 			</div>
 
 
-			
+
 			<!-- ELSE -->
 
 			<div th:unless="${hasRows}">
