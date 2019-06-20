@@ -16,6 +16,18 @@ function formatNumber(n) {
   return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 }
 
+function convertToNumberFromCurrency(currency)
+{
+	var convert = currency.substring(1);
+	currency = removeComma(currency);
+	currency = Number(currency);
+	return currency;
+
+
+}
+
+
+
 function removeComma(currency){
 	var position = currency.indexOf(",");
 	while(position > 0) {
