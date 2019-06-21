@@ -18,6 +18,10 @@ function formatNumber(n) {
 
 function convertToNumberFromCurrency(currency)
 {
+	if (curreny == null) {
+		return 0;
+	}
+		
 	var convert = currency.substring(1);
 	currency = removeComma(currency);
 	currency = Number(currency);
