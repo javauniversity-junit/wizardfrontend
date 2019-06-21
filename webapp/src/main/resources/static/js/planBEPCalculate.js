@@ -11,7 +11,7 @@ function calculate()
 	var planAProspectsNeeded = planAInvestment / planAProspectValue; // f = e/d
 	var planAProspectSalesNeeded = planAProspectsNeeded * planAClosingPct; // g = fc
 	var planAGrossProfitOnSales = planAProspectSalesNeeded * planAAverageSale; // h = ga
-	var planAMonths = document.gplanAProspectsNeededetElementById("planAMonths").value; // i
+	var planAMonths = document.getElementById("planAMonths").value; // i
 	var planAAdditionalGrossSales = planAGrossProfitOnSales * planAMonths; // j = hi
 	
 	document.getElementById("planAProspectValue").value =  planAProspectValue;
