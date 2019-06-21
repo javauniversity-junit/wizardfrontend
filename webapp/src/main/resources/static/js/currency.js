@@ -23,9 +23,9 @@ function convertToNumberFromCurrency(currency)
 	}
 		
 	var convert = currency.substring(1);
-	currency = removeComma(currency);
-	currency = Number(currency);
-	return currency;
+	convert = removeComma(convert);
+	convert = Number(convert);
+	return convert;
 
 
 }
