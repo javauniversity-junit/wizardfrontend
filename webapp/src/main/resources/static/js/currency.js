@@ -18,7 +18,7 @@ function formatNumber(n) {
 
 function convertToNumberFromCurrency(currency)
 {
-	if (curreny == null) {
+	if (currency == null) {
 		return 0;
 	}
 		
