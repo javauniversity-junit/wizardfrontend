@@ -45,7 +45,7 @@ public class PlanBProposedPageController {
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("dataPageModel", dataPageModel);
 		model.addAttribute("wizard", wizard);
-		return "pages/PlanAProposedPage";
+		return "pages/PlanBProposedPage";
 	}
 	
 	@RequestMapping(value = "/savePlanBProposedPage", method = RequestMethod.POST) // replace with my class variables
