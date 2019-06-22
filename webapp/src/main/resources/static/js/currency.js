@@ -10,6 +10,12 @@ $("input[data-type='currency']").on({
     }
 });
 
+function convertIntToNumber(intValue) {
+	if (intValue == null || intValue =="" ) {
+		return 0;
+	} 
+	return intValue;
+}
 
 function formatNumber(n) {
   // format number 1000000 to 1,234,567

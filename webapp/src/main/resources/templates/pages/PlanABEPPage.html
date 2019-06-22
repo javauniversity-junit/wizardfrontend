@@ -99,7 +99,7 @@
 				</div>
 				<div class="form-group">
 					<label for="planAMonths">I. Number of months to run in proposed marketing plan</label> 
-					<input type="number"
+					<input type="number" oninput="calculate()"
 						class="form-control" id="planAMonths"  
 						th:value="${dataPageModel?.planAMonths}"
 						name="planAMonths" />
