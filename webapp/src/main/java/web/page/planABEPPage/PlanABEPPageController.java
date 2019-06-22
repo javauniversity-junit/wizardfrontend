@@ -63,19 +63,25 @@ public class PlanABEPPageController {
 			,@RequestParam (defaultValue ="0", name="planAGrossProfitOnSales") String planAGrossProfitOnSales
 			,@RequestParam (defaultValue ="0", name="planAMonths") String planAMonths
 			,@RequestParam (defaultValue ="0", name="planAAdditionalGrossSales") String planAAdditionalGrossSales			
-			,@RequestParam String nextPage
+			,@RequestParam String previousPage
 			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next
-	        ,@RequestParam(required=false, value="publish") String publish){
+	        ,@RequestParam(required=false, value="publish") String publish
+	        ,@RequestParam(required=false, value="previous") String previous
+	        ,@RequestParam String nextPage){
 		mLog.info("starting save");
 		//internal next page or publish
-		
-		
-			
+		//internal next page or publish
 		String internalNextPage = nextPage;
 		if (publish != null) {
 			internalNextPage= publishPage;
 		}
+		if (previous != null) {
+			internalNextPage= previousPage;
+        }
+		
+	
+
 		
 		WizardData wizardData = new WizardData();
 	    wizardData.setPagename(PageNameEnum.PlanABEPPage.toString());
