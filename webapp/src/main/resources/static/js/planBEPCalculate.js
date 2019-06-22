@@ -2,7 +2,7 @@ function calculate()
 {
 	var planAAverageSale = convertToNumberFromCurrency(document.getElementById("planAAverageSale").value); // a
 	
-	var planAGrossMargin = document.getElementById("planAGrossMargin").value; // b
+	var planAGrossMargin = convertToNumberFromCurrency(document.getElementById("planAGrossMargin").value); // b
 	var planAClosingPct = document.getElementById("planAClosingPct").value; // c
 	var planAProspectValue = planAAverageSale * planAGrossMargin * planAClosingPct; // d = abc
 
