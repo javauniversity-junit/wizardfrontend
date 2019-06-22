@@ -38,61 +38,79 @@
 	<div class="container">
 
 		<div>
-			<form method="post" action="savePresentedToPage">
+			<form method="post" action="savePlanBProposedPage">
 				<fieldset>
 					<legend>
-						Plan B Proposed Schedule - Brand Equity Month - <span th:text="${wizard.name}"></span>
+						15) Plan B Proposed Schedule - Brand Equity Months - <span
+							th:text="${wizard.name}"></span>
 					</legend>
 					<div class="form-group">
-						<label for="presentedTo">Presented to</label> <input
-							th:value="${dataPageModel?.clientContactName}" type="text"
-							class="form-control" id="clientContactName"
-							name="clientContactName" required
-							aria-describedby="clientBusinessName"
-							placeholder="Enter Presented to" />
+						<label for="presentedTo">What market/city is the client
+							going to dominate?</label> <input th:value="${dataPageModel?.planACity}"
+							type="text" class="form-control" id="planACity" name="planACity"
+							aria-describedby="planACity" placeholder="Enter market/city" />
 					</div>
 					<div class="form-group">
-						<label for="clientBusinessName">Business Name</label> <input
-							type="text" th:value="${dataPageModel?.clientBusinessName}"
-							required class="form-control" id="clientBusinessName"
-							name="clientBusinessName" placeholder="Enter Business Name" />
+						<label for="clientBusinessName">What is the projected
+							broadcast monthly reach in thousands?</label> <input type="text"
+							th:value="${dataPageModel?.planAReach}" class="form-control"
+							id="planAReach" name="planAReach"
+							placeholder="Enter projected broadcast" />
 					</div>
 					<div class="form-group">
-						<label for="presentedById">Integrated Media Specialist
-							Name</label> <input type="text"
-							th:value="${dataPageModel?.portfolioManagerName}" required
-							class="form-control" id="portfolioManagerName"
-							name="portfolioManagerName" placeholder="Enter Specialist Name" />
+						<label for="presentedById">What is the projected monthly
+							broadcast frequency? Name</label> <input type="text"
+							th:value="${dataPageModel?.planAFrequency}" class="form-control"
+							id="planAFrequency" name="planAFrequency"
+							placeholder="Enter broadcast frequency" />
 					</div>
 					<div class="form-group">
-						<label for=portfolioPhoneNumber>Phone Number</label> <input
-							type="text" th:value="${dataPageModel?.portfolioPhoneNumber}"
-							required class="form-control input-medium bfh-phone"
-							data-format="+1 (ddd) ddd-dddd" id="portfolioPhoneNumber"
-							name="portfolioPhoneNumber" />
+						<label for=planADigitalImpressionsMonthly>What are the
+							estimated monthly digital gross impressions?</label> <input type="text"
+							th:value="${dataPageModel?.planADigitalImpressionsMonthly}"
+							class="form-control" id="planADigitalImpressionsMonthly"
+							placeholder="Enter monthly digital gross impressions"
+							name="planADigitalImpressionsMonthly" />
 					</div>
 					<div class="form-group">
-						<label for=portfolioPhoneNumber>Station/Media Group</label> <input
-							type="text" th:value="${dataPageModel?.station}" required
-							placeholder="Enter Group" class="form-control" id="station"
-							name="station" />
+						<label for=planAMonthly>What is the average base monthly
+							advertising investment?</label> <input type="text"
+							th:value="${dataPageModel?.planAMonthly}"
+							placeholder="Enter average base monthly" class="form-control"
+							id="planAMonthly" name="planAMonthly" />
+					</div>
+
+					<div class="form-group">
+						<label for=planADaily>What is the average base daily
+							advertising investment?</label> <input type="text"
+							th:value="${dataPageModel?.planADaily}"
+							placeholder="Enter average base daily" class="form-control"
+							id="planADaily" name="planADaily" />
 					</div>
 
 					<input type="hidden" id="nextPage"
-						th:value="'redirect:/TeamCommitmentPage?ID=' + ${wizard.wizardid}"
+						th:value="'redirect:/PlanABEPPage?ID=' + ${wizard.wizardid}"
 						name="nextPage" /> 
-				   <input type="hidden" id="publishNextPage"
+					<input type="hidden" id="previousPage"
+						th:value="'redirect:/TeamCommitmentPage?ID=' + ${wizard.wizardid}"
+						name="previousPage" /> 	
+					  <input type="hidden" id="publishPage"
 						th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
-						name="publishNextPage" /> 	
-						<input type="hidden" id="wizardId"
+						name="publishPage" /> 
+					<input type="hidden" id="wizardId"
 						th:value="${wizard.wizardid}" name="wizardId" /> 
-						<input
+					<input
 						type="hidden" id="wizarddataid"
-						th:value="${wizardData?.wizarddataid}" name="wizarddataid" />
-
-
-					<input name="next" value="Next" type="submit" class="btn btn-primary" style="background-color: #C0B879;" />
-					<input name="publish" value="Publish" type="submit" class="btn btn-primary" style="background-color: #C0B879;" />
+						th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> 
+					<input
+						name="next" value="Next" type="submit" class="btn btn-primary"
+						style="background-color: #C0B879;" /> 
+					<input name="publish"
+						value="Publish" type="submit" class="btn btn-primary"
+						style="background-color: #C0B879;" />
+					
+					<input name="previous" value="Previous" type="submit" class="btn btn-primary" style="background-color: #C0B879;" />
+					
 				</fieldset>
 			</form>
 			<div class="container" style="padding-top:2%;">
@@ -100,7 +118,7 @@
 				<div class="progress">
 					<div class="progress-bar" role="progressbar" aria-valuenow="5"
 						aria-valuemin="0" aria-valuemax="100"
-						style="width: 5%; background-color: #C0B879;">5%</div>
+						style="width: 58%; background-color: #C0B879;">58%</div>
 				</div>
 			</div>
 

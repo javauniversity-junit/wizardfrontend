@@ -91,9 +91,13 @@
 					<input type="hidden" id="nextPage"
 						th:value="'redirect:/PlanABEPPage?ID=' + ${wizard.wizardid}"
 						name="nextPage" /> 
-					<input type="hidden" id="publishNextPage"
+							<input type="hidden" id="previousPage"
+						th:value="'redirect:/TargetMarketingPage?ID=' + ${wizard.wizardid}"
+						name="previousPage" /> 	
+					  <input type="hidden" id="publishPage"
 						th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
-						name="publishNextPage" /> 
+						name="publishPage" /> 
+				
 					<input type="hidden" id="wizardId"
 						th:value="${wizard.wizardid}" name="wizardId" /> 
 					<input
