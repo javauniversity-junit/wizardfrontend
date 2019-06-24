@@ -42,27 +42,31 @@
 						th:text="${wizard.name}"></span>
 				</legend>
 				<div class="form-group">
-					<label for="planBAverageSale">A. Average sale (ticket, transaction, invoice)</label> <input type="number" class="form-control"
-						id="planBAverageSale" th:value="${dataPageModel?.planBAverageSale}" required
+					<label for="planBAverageSale">A. Average sale (ticket, transaction, invoice)</label> 
+					<input type="text" class="form-control"
+					       data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+						id="planBAverageSale" th:value="${dataPageModel?.planBAverageSale}" 
 						
 						name="planBAverageSale" />
 				</div>
 				<div class="form-group">
-					<label for="planBGrossMargin">B. Gross profit margin on average sale (sale less cost of goods sold)</label> <input
-						type="number" th:value="${dataPageModel?.planBGrossMargin}"
-						required class="form-control" 
+					<label for="planBGrossMargin">B. Gross profit margin on average sale (sale less cost of goods sold)</label>
+					<input
+						type="text" th:value="${dataPageModel?.planBGrossMargin}"
+						class="form-control" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 						id="planBGrossMargin" name="planBGrossMargin" />
 				</div>
 				<div class="form-group">
-					<label for="planBClosingPct">C. Closing or conversion rate </label> <input type="number" class="form-control"
-						id="planBClosingPct" name="planBClosingPct" 
-						th:value="${dataPageModel?.planBClosingPct}" required
+					<label for="planBClosingPct">C. Closing or conversion rate </label> 
+					<input type="number" class="form-control"
+						id="planBClosingPct" name="planBClosingPct" oninput="calculate()"
+						th:value="${dataPageModel?.planBClosingPct}" 
 						aria-describedby="planBClosingPct" />
 				</div>
 				<div class="form-group">
 					<label for="planBProspectValue">D. Projected prospect value (A*B*C)</label> <input type="text"
-						th:value="${dataPageModel?.planBProspectValue}" required
-						class="form-control" id="planBProspectValue" oninput="calculate()"
+						th:value="${dataPageModel?.planBProspectValue}" readonly
+						class="form-control" id="planBProspectValue" 
 						name="planBProspectValue" />
 				</div>
 				<div class="form-group">
