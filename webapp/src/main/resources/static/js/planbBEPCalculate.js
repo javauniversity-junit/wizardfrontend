@@ -10,7 +10,7 @@ function calculate()
 	var planBProspectsNeeded = planBProspectValue == 0 ? 0 : planBInvestment / planBProspectValue; // f = e/d
 	var planBProspectSalesNeeded = planBProspectsNeeded * planBClosingPct; // g = fc
 	var planBGrossProfitOnSales = planBProspectSalesNeeded * planBAverageSale; // h = ga
-	var planBMonths = convertIntToNumber(document.gplanBProspectsNeededetElementById("planBMonths").value); // i
+	var planBMonths = convertIntToNumber(document.getElementById("planBMonths").value); // i
 	var planBAdditionalGrossSales = planBGrossProfitOnSales * planBMonths; // j = hi
 	
 	document.getElementById("planBProspectValue").value =  planBProspectValue;
