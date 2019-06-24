@@ -1,16 +1,16 @@
 function calculate()
 {
-	var planBAverageSale = Number(document.getElementById("planBAverageSale").value); // a
-	var planBGrossMargin = document.getElementById("planBGrossMargin").value; // b
+	var planBAverageSale = convertToNumberFromCurrency(document.getElementById("planBAverageSale").value); // a
+	var planBGrossMargin = convertToNumberFromCurrency(document.getElementById("planBGrossMargin").value); // b
 	var planBClosingPct = document.getElementById("planBClosingPct").value; // c
 	var planBProspectValue = planBAverageSale * planBGrossMargin * planBClosingPct; // d = abc
 
 
-	var planBInvestment = document.getElementById("planBAverageSale").value; // e
-	var planBProspectsNeeded = planBInvestment / planBProspectValue; // f = e/d
+	var planBInvestment = convertToNumberFromCurrency(document.getElementById("planBAverageSale").value); // e
+	var planBProspectsNeeded = planBProspectValue == 0 ? 0 : planBInvestment / planBProspectValue; // f = e/d
 	var planBProspectSalesNeeded = planBProspectsNeeded * planBClosingPct; // g = fc
 	var planBGrossProfitOnSales = planBProspectSalesNeeded * planBAverageSale; // h = ga
-	var planBMonths = document.gplanBProspectsNeededetElementById("planBMonths").value; // i
+	var planBMonths = convertIntToNumber(document.gplanBProspectsNeededetElementById("planBMonths").value); // i
 	var planBAdditionalGrossSales = planBGrossProfitOnSales * planBMonths; // j = hi
 	
 	document.getElementById("planBProspectValue").value =  planBProspectValue;
@@ -24,3 +24,4 @@ function totalRow() {
 	calculate();
 	//document.getElementById("totalRow").value = total;
 }
+
