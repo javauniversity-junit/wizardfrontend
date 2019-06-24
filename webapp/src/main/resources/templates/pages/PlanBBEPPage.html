@@ -70,33 +70,34 @@
 						name="planBProspectValue" />
 				</div>
 				<div class="form-group">
-					<label for="planBInvestment">E. Client monthly advertising investment (base month)</label> <input readonly
+					<label for="planBInvestment">E. Client monthly advertising investment (base month)</label> 
+					<input 
 						name="planBInvestment" id="planBInvestment"
-						class="form-control"
+						class="form-control"  data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 						th:value="${dataPageModel?.planBInvestment}" />
 				</div>
 				<div class="form-group">
 					<label for="planBProspectsNeeded">F. Monthly prospects needed to pay for advertising investment (E/D)</label> <input type="number" oninput="calculate()"
 						th:value="${dataPageModel?.planBProspectsNeeded}" class="form-control"
-						id="planBProspectsNeeded" required name="planBProspectsNeeded" />
+						id="planBProspectsNeeded" readonly name="planBProspectsNeeded" />
 				</div>
 				<div class="form-group">
 					<label for="planBProspectSalesNeeded">G. Number of monthly sales needed to break even (F*C)</label> <input type="text"
 						class="form-control" id="planBProspectSalesNeeded"
 						name="planBProspectSalesNeeded" readonly 
 						th:value="${dataPageModel?.planBProspectSalesNeeded}"
-						aria-describedby="planBProspectSalesNeeded" oninput="calculate()"/>
+						aria-describedby="planBProspectSalesNeeded" />
 				</div>
 				<div class="form-group">
-					<label for="planBGrossProfitOnSales">H. Gross sales per month needed to break even (G*A)</label> <input required
+					<label for="planBGrossProfitOnSales">H. Gross sales per month needed to break even (G*A)</label> <input readonly
 						class="form-control" 
 						id="planBGrossProfitOnSales"
 						th:value="${dataPageModel?.planBGrossProfitOnSales}"
-						name="planBGrossProfitOnSales" oninput="calculate()"/>
+						name="planBGrossProfitOnSales" />
 				</div>
 				<div class="form-group">
 					<label for="planBMonths">I. Number of months to run in proposed marketing plan</label> <input
-						class="form-control" id="planBMonths" readonly 
+						class="form-control" id="planBMonths" type="number" oninput="calculate()"
 						th:value="${dataPageModel?.planBMonths}"
 						name="planBMonths" />
 				</div>
@@ -104,7 +105,7 @@
 					<label for="planBAdditionalGrossSales">J. Additional gross sales per year needed to break even (H*I)</label> <input
 						class="form-control" id="planBAdditionalGrossSales" readonly 
 						th:value="${dataPageModel?.planBAdditionalGrossSales}"
-						name="planBAdditionalGrossSales" oninput="calculate()"/>
+						name="planBAdditionalGrossSales" />
 				</div>
 
 				<input type="hidden" id="nextPage"
