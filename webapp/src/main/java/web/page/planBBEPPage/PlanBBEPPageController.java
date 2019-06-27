@@ -52,42 +52,33 @@ public class PlanBBEPPageController {
 	
 	@RequestMapping(value = "/savePlanBBEPPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
-			,@RequestParam String wizarddataid
-			,@RequestParam String planBAverageSale
-			,@RequestParam Integer planBGrossMargin
-			,@RequestParam Integer planBClosingPct
-			,@RequestParam Integer planBProspectValue
-			,@RequestParam Integer planBInvestment
-			,@RequestParam Integer planBProspectsNeeded
-			,@RequestParam Integer planBProspectSalesNeeded
-			,@RequestParam Integer planBGrossProfitOnSales
-			,@RequestParam Integer planBMonths
-			,@RequestParam Integer planBAdditionalGrossSales			
-			,@RequestParam String nextPage
+			,@RequestParam (defaultValue ="0") String wizarddataid
+			,@RequestParam (defaultValue ="0")String planBAverageSale
+			,@RequestParam (defaultValue ="0")String planBGrossMargin
+			,@RequestParam (defaultValue ="0")String planBClosingPct
+			,@RequestParam (defaultValue ="0")String planBProspectValue
+			,@RequestParam (defaultValue ="0")String planBInvestment
+			,@RequestParam (defaultValue ="0")String planBProspectsNeeded
+			,@RequestParam (defaultValue ="0")String planBProspectSalesNeeded
+			,@RequestParam (defaultValue ="0")String planBGrossProfitOnSales
+			,@RequestParam (defaultValue ="0")String planBMonths
+			,@RequestParam (defaultValue ="0")String planBAdditionalGrossSales			
+			,@RequestParam String previousPage
 			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next
-	        ,@RequestParam(required=false, value="publish") String publish){
+	        ,@RequestParam(required=false, value="publish") String publish
+	        ,@RequestParam(required=false, value="previous") String previous
+	        ,@RequestParam String nextPage){
 		mLog.info("starting save");
 		//internal next page or publish
-		if (planBProspectValue == null) {
-			planBProspectValue= 0;
-		}
-		if (planBInvestment == null) {
-			planBInvestment= 0;
-		}
-		if (planBProspectSalesNeeded == null) {
-			planBProspectSalesNeeded= 0;
-		}
-		if (planBMonths == null) {
-			planBMonths= 0;
-		}
-		if (planBAdditionalGrossSales == null) {
-			planBAdditionalGrossSales= 0;
-		}		
+		
 		String internalNextPage = nextPage;
 		if (publish != null) {
 			internalNextPage= publishPage;
 		}
+		if (previous != null) {
+			internalNextPage= previousPage;
+        }
 		
 		WizardData wizardData = new WizardData();
 	    wizardData.setPagename(PageNameEnum.PlanBBEPPage.toString());

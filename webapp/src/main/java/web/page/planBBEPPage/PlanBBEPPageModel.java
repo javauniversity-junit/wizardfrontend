@@ -2,21 +2,21 @@ package web.page.planBBEPPage;
 
 public class PlanBBEPPageModel {
 	private String planBAverageSale;
-	private int planBGrossMargin;
-	private int planBClosingPct;
-	private int planBProspectValue;
+	private String planBGrossMargin;
+	private String planBClosingPct;
+	private String planBProspectValue;
 	
-	private int planBInvestment;
-	private int planBProspectsNeeded;
-	private int planBProspectSalesNeeded;
+	private String planBInvestment;
+	private String planBProspectsNeeded;
+	private String planBProspectSalesNeeded;
 	
-	private int planBGrossProfitOnSales;
-	private int planBMonths;
-	private int planBAdditionalGrossSales;
+	private String planBGrossProfitOnSales;
+	private String planBMonths;
+	private String planBAdditionalGrossSales;
 	
-	public PlanBBEPPageModel(String planBAverageSale, int planBGrossMargin, int planBClosingPct, int planBProspectValue,
-			int planBInvestment, int planBProspectsNeeded, int planBProspectSalesNeeded, int planBGrossProfitOnSales,
-			int planBMonths, int planBAdditionalGrossSales) {
+	public PlanBBEPPageModel(String planBAverageSale, String planBGrossMargin, String planBClosingPct, String planBProspectValue,
+			String planBInvestment, String planBProspectsNeeded, String planBProspectSalesNeeded, String planBGrossProfitOnSales,
+			String planBMonths, String planBAdditionalGrossSales) {
 		super();
 		this.planBAverageSale = planBAverageSale;
 		this.planBGrossMargin = planBGrossMargin;
@@ -29,66 +29,87 @@ public class PlanBBEPPageModel {
 		this.planBMonths = planBMonths;
 		this.planBAdditionalGrossSales = planBAdditionalGrossSales;
 	}
-	
+
 	public String getPlanBAverageSale() {
 		return planBAverageSale;
 	}
+
 	public void setPlanBAverageSale(String planBAverageSale) {
 		this.planBAverageSale = planBAverageSale;
 	}
-	public int getPlanBGrossMargin() {
+
+	public String getPlanBGrossMargin() {
 		return planBGrossMargin;
 	}
-	public void setPlanBGrossMargin(int planBGrossMargin) {
+
+	public void setPlanBGrossMargin(String planBGrossMargin) {
 		this.planBGrossMargin = planBGrossMargin;
 	}
-	public int getPlanBClosingPct() {
+
+	public String getPlanBClosingPct() {
 		return planBClosingPct;
 	}
-	public void setPlanBClosingPct(int planBClosingPct) {
+
+	public void setPlanBClosingPct(String planBClosingPct) {
 		this.planBClosingPct = planBClosingPct;
 	}
-	public int getPlanBProspectValue() {
+
+	public String getPlanBProspectValue() {
 		return planBProspectValue;
 	}
-	public void setPlanBProspectValue(int planBProspectValue) {
+
+	public void setPlanBProspectValue(String planBProspectValue) {
 		this.planBProspectValue = planBProspectValue;
 	}
-	public int getPlanBInvestment() {
+
+	public String getPlanBInvestment() {
 		return planBInvestment;
 	}
-	public void setPlanBInvestment(int planBInvestment) {
+
+	public void setPlanBInvestment(String planBInvestment) {
 		this.planBInvestment = planBInvestment;
 	}
-	public int getPlanBProspectsNeeded() {
+
+	public String getPlanBProspectsNeeded() {
 		return planBProspectsNeeded;
 	}
-	public void setPlanBProspectsNeeded(int planBProspectsNeeded) {
+
+	public void setPlanBProspectsNeeded(String planBProspectsNeeded) {
 		this.planBProspectsNeeded = planBProspectsNeeded;
 	}
-	public int getPlanBProspectSalesNeeded() {
+
+	public String getPlanBProspectSalesNeeded() {
 		return planBProspectSalesNeeded;
 	}
-	public void setPlanBProspectSalesNeeded(int planBProspectSalesNeeded) {
+
+	public void setPlanBProspectSalesNeeded(String planBProspectSalesNeeded) {
 		this.planBProspectSalesNeeded = planBProspectSalesNeeded;
 	}
-	public int getPlanBGrossProfitOnSales() {
+
+	public String getPlanBGrossProfitOnSales() {
 		return planBGrossProfitOnSales;
 	}
-	public void setPlanBGrossProfitOnSales(int planBGrossProfitOnSales) {
+
+	public void setPlanBGrossProfitOnSales(String planBGrossProfitOnSales) {
 		this.planBGrossProfitOnSales = planBGrossProfitOnSales;
 	}
-	public int getPlanBMonths() {
+
+	public String getPlanBMonths() {
 		return planBMonths;
 	}
-	public void setPlanBMonths(int planBMonths) {
+
+	public void setPlanBMonths(String planBMonths) {
 		this.planBMonths = planBMonths;
 	}
-	public int getPlanBAdditionalGrossSales() {
+
+	public String getPlanBAdditionalGrossSales() {
 		return planBAdditionalGrossSales;
 	}
-	public void setPlanBAdditionalGrossSales(int planBAdditionalGrossSales) {
+
+	public void setPlanBAdditionalGrossSales(String planBAdditionalGrossSales) {
 		this.planBAdditionalGrossSales = planBAdditionalGrossSales;
 	}
+	
+	
 	
 }
