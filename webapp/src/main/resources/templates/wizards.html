@@ -103,21 +103,15 @@
 						</div>
 						<div class="card-body ">
 
-							<div class="row">
-								<div class="col-6">
-									<a th:href="@{'/PresentedToPage?ID=' + ${wizard.wizardid}}">
-										<p class="w3-teal"
-											style="font-size: 20px; padding: 35px; height: 50px;"
-											th:text="@{'Open SCR - (' + ${wizard.name} + ')' }">
-											Open SCR</p>
+							<div class="row" >
+								<div class="col-sm-6">
+									<a th:href="@{'/PresentedToPage?ID=' + ${wizard.wizardid}}" class="btn btn-info btn-block w3-teal" role="button">
+									   <span th:text="@{'Open'}"></span>
 									</a>
 								</div>
-								<div class="col-6">
-									<a th:href="@{'/detail?ID=' + ${wizard.wizardid}}">
-										<p class="w3-teal"
-											style="font-size: 20px; padding: 35px; height: 50px;"
-											th:text="@{'Rename SCR - (' + ${wizard.name}  + ')'}">
-											Rename SCR</p>
+								<div class="col-sm-6">
+									<a th:href="@{'/detail?ID=' + ${wizard.wizardid}}" class="btn btn-info btn-block w3-teal" role="button">
+									   <span th:text="@{'Rename'}"></span>
 									</a>
 								</div>
 
