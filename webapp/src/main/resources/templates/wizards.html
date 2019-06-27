@@ -38,7 +38,11 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
 
-
+<style>
+.displayMedium {
+	font-size: 1.125em;
+}
+</style>
 
 </head>
 <body>
@@ -83,14 +87,26 @@
 
 		<div class="container-fluid"
 			style="background-color: white; color: black;">
+			
+			   <p class="displayMedium">Click the New button to create a new Wizard/SCR. Click the Open
+			   button to view or make changes to an existing Wizard/SCR. Change the name of an
+			   existing Wizard/SCR by clicking the Rename button. When renaming an existing Wizard/SCR, remember
+			   to assign it a unique and meaningful name. The name distinguishes the Wizard/SCRs
+			   that you create.</p>
+			   
+			   <div class="page-header">
+				<h2>Summary, Conclusions and Recommendations</h2>
+			   </div>
+			   
 			<div class="row" style="padding-bottom: 2%;">
+			
+			
+			
 				<div class="col-sm-12">
-					<a href="add.html" class="btn btn-primary btn-lg w3-teal"
-						role="button" aria-pressed="true">Create New Summary,
-						Conclusions and Recommendations (SCR)</a>
+					<a href="add.html" class="btn btn-info btn-lg w3-border-teal w3-light-grey" role="button" aria-pressed="true">New</a>
 				</div>
 				<div class="col-sm-12">
-					<hr>
+					<hr />
 				</div>
 			</div>
 
@@ -105,12 +121,12 @@
 
 							<div class="row" >
 								<div class="col-sm-6">
-									<a th:href="@{'/PresentedToPage?ID=' + ${wizard.wizardid}}" class="btn btn-info btn-block w3-teal" role="button">
+									<a th:href="@{'/PresentedToPage?ID=' + ${wizard.wizardid}}" class="btn btn-info btn-block w3-border-teal w3-light-grey" role="button">
 									   <span th:text="@{'Open'}"></span>
 									</a>
 								</div>
 								<div class="col-sm-6">
-									<a th:href="@{'/detail?ID=' + ${wizard.wizardid}}" class="btn btn-info btn-block w3-teal" role="button">
+									<a th:href="@{'/detail?ID=' + ${wizard.wizardid}}" class="btn btn-info btn-block w3-border-teal w3-light-grey" role="button">
 									   <span th:text="@{'Rename'}"></span>
 									</a>
 								</div>
