@@ -52,36 +52,32 @@ public class PlanALifetimeValuedPageController {
 	
 	@RequestMapping(value = "/savePlanALifetimeValuedPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
-			,@RequestParam String wizarddataid
-			,@RequestParam String averageSale
-			,@RequestParam Integer averageRepeatSales
-			,@RequestParam Integer grossProfitMargin
-			,@RequestParam Integer yearsOfPatronage
-			,@RequestParam String grossProfitPerSale
-			,@RequestParam String averageCustomerValue
-			,@RequestParam String lifetimeValuePerCustomer
-			,@RequestParam String monthlyInvestmentAverage
-			,@RequestParam String prospectsNeededToBreakEven
-			,@RequestParam String nextPage
+			,@RequestParam (defaultValue ="0") String wizarddataid
+			,@RequestParam (defaultValue ="0") String averageSale
+			,@RequestParam (defaultValue ="0") String averageRepeatSales
+			,@RequestParam (defaultValue ="0") String grossProfitMargin
+			,@RequestParam (defaultValue ="0") String yearsOfPatronage
+			,@RequestParam (defaultValue ="0") String grossProfitPerSale
+			,@RequestParam (defaultValue ="0") String averageCustomerValue
+			,@RequestParam (defaultValue ="0") String lifetimeValuePerCustomer
+			,@RequestParam (defaultValue ="0") String monthlyInvestmentAverage
+			,@RequestParam (defaultValue ="0") String prospectsNeededToBreakEven
+			,@RequestParam String previousPage
 			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next
-	        ,@RequestParam(required=false, value="publish") String publish){
+	        ,@RequestParam(required=false, value="publish") String publish
+	        ,@RequestParam(required=false, value="previous") String previous
+	        ,@RequestParam String nextPage){
 		mLog.info("starting save");
 		//internal next page or publish
-		if (averageRepeatSales == null) {
-			averageRepeatSales= 0;
-		}
-		if (grossProfitMargin == null) {
-			grossProfitMargin= 0;
-		}
-		if (yearsOfPatronage == null) {
-			yearsOfPatronage= 0;
-		}
-		
+	
 		String internalNextPage = nextPage;
 		if (publish != null) {
 			internalNextPage= publishPage;
 		}
+		if (previous != null) {
+			internalNextPage= previousPage;
+        }
 		
 		WizardData wizardData = new WizardData();
 	    wizardData.setPagename(PageNameEnum.PlanALifetimeValuedPage.toString());
