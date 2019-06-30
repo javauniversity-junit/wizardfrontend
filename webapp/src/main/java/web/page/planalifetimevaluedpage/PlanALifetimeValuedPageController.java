@@ -52,16 +52,16 @@ public class PlanALifetimeValuedPageController {
 	
 	@RequestMapping(value = "/savePlanALifetimeValuedPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
-			,@RequestParam (defaultValue ="0") String wizarddataid
-			,@RequestParam (defaultValue ="0") String averageSale
-			,@RequestParam (defaultValue ="0") String averageRepeatSales
-			,@RequestParam (defaultValue ="0") String grossProfitMargin
-			,@RequestParam (defaultValue ="0") String yearsOfPatronage
-			,@RequestParam (defaultValue ="0") String grossProfitPerSale
-			,@RequestParam (defaultValue ="0") String averageCustomerValue
-			,@RequestParam (defaultValue ="0") String lifetimeValuePerCustomer
-			,@RequestParam (defaultValue ="0") String monthlyInvestmentAverage
-			,@RequestParam (defaultValue ="0") String prospectsNeededToBreakEven
+			,@RequestParam (defaultValue ="") String wizarddataid
+			,@RequestParam (defaultValue ="") String averageSale
+			,@RequestParam (defaultValue ="") String averageRepeatSales
+			,@RequestParam (defaultValue ="") String grossProfitMargin
+			,@RequestParam (defaultValue ="") String yearsOfPatronage
+			,@RequestParam (defaultValue ="") String grossProfitPerSale
+			,@RequestParam (defaultValue ="") String averageCustomerValue
+			,@RequestParam (defaultValue ="") String lifetimeValuePerCustomer
+			,@RequestParam (defaultValue ="") String monthlyInvestmentAverage
+			,@RequestParam (defaultValue ="") String prospectsNeededToBreakEven
 			,@RequestParam String previousPage
 			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next

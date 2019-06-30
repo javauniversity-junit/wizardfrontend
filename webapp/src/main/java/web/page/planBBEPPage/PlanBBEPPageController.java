@@ -52,17 +52,17 @@ public class PlanBBEPPageController {
 	
 	@RequestMapping(value = "/savePlanBBEPPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
-			,@RequestParam (defaultValue ="0") String wizarddataid
-			,@RequestParam (defaultValue ="0")String planBAverageSale
-			,@RequestParam (defaultValue ="0")String planBGrossMargin
-			,@RequestParam (defaultValue ="0")String planBClosingPct
-			,@RequestParam (defaultValue ="0")String planBProspectValue
-			,@RequestParam (defaultValue ="0")String planBInvestment
-			,@RequestParam (defaultValue ="0")String planBProspectsNeeded
-			,@RequestParam (defaultValue ="0")String planBProspectSalesNeeded
-			,@RequestParam (defaultValue ="0")String planBGrossProfitOnSales
-			,@RequestParam (defaultValue ="0")String planBMonths
-			,@RequestParam (defaultValue ="0")String planBAdditionalGrossSales			
+			,@RequestParam (defaultValue ="") String wizarddataid
+			,@RequestParam (defaultValue ="")String planBAverageSale
+			,@RequestParam (defaultValue ="")String planBGrossMargin
+			,@RequestParam (defaultValue ="")String planBClosingPct
+			,@RequestParam (defaultValue ="")String planBProspectValue
+			,@RequestParam (defaultValue ="")String planBInvestment
+			,@RequestParam (defaultValue ="")String planBProspectsNeeded
+			,@RequestParam (defaultValue ="")String planBProspectSalesNeeded
+			,@RequestParam (defaultValue ="")String planBGrossProfitOnSales
+			,@RequestParam (defaultValue ="")String planBMonths
+			,@RequestParam (defaultValue ="")String planBAdditionalGrossSales			
 			,@RequestParam String previousPage
 			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next

@@ -53,16 +53,16 @@ public class PlanABEPPageController {
 	@RequestMapping(value = "/savePlanABEPPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
 			,@RequestParam String wizarddataid
-			,@RequestParam (defaultValue ="0", name="planAAverageSale") String planAAverageSale
-			,@RequestParam (defaultValue ="0", name="planAGrossMargin") String planAGrossMargin
-			,@RequestParam (defaultValue ="0", name="planAClosingPct") String  planAClosingPct
-			,@RequestParam (defaultValue ="0", name="planAProspectValue") String planAProspectValue
-			,@RequestParam (defaultValue ="0", name="planAInvestment") String planAInvestment
-			,@RequestParam (defaultValue ="0", name="planAProspectsNeeded") String planAProspectsNeeded
-			,@RequestParam (defaultValue ="0", name="planAProspectSales") String planAProspectSalesNeeded
-			,@RequestParam (defaultValue ="0", name="planAGrossProfitOnSales") String planAGrossProfitOnSales
-			,@RequestParam (defaultValue ="0", name="planAMonths") String planAMonths
-			,@RequestParam (defaultValue ="0", name="planAAdditionalGrossSales") String planAAdditionalGrossSales			
+			,@RequestParam (defaultValue ="", name="planAAverageSale") String planAAverageSale
+			,@RequestParam (defaultValue ="", name="planAGrossMargin") String planAGrossMargin
+			,@RequestParam (defaultValue ="", name="planAClosingPct") String  planAClosingPct
+			,@RequestParam (defaultValue ="", name="planAProspectValue") String planAProspectValue
+			,@RequestParam (defaultValue ="", name="planAInvestment") String planAInvestment
+			,@RequestParam (defaultValue ="", name="planAProspectsNeeded") String planAProspectsNeeded
+			,@RequestParam (defaultValue ="", name="planAProspectSales") String planAProspectSalesNeeded
+			,@RequestParam (defaultValue ="", name="planAGrossProfitOnSales") String planAGrossProfitOnSales
+			,@RequestParam (defaultValue ="", name="planAMonths") String planAMonths
+			,@RequestParam (defaultValue ="", name="planAAdditionalGrossSales") String planAAdditionalGrossSales			
 			,@RequestParam String previousPage
 			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next
