@@ -66,16 +66,22 @@ public class PlanAMediaPageController {
 			,@RequestParam (required=false, value="") String novtype
 			,@RequestParam (required=false, value="") String dectype
 			,@RequestParam (required=false, value="") String mediarows
-			,@RequestParam String nextPage
+			,@RequestParam String previousPage
 			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next
-	        ,@RequestParam(required=false, value="publish") String publish){
+	        ,@RequestParam(required=false, value="publish") String publish
+	        ,@RequestParam(required=false, value="previous") String previous
+	        ,@RequestParam String nextPage){
 		mLog.info("starting save");
 		//internal next page or publish
+		
 		String internalNextPage = nextPage;
 		if (publish != null) {
 			internalNextPage= publishPage;
 		}
+		if (previous != null) {
+			internalNextPage= previousPage;
+        }
 		
 		WizardData wizardData = new WizardData();
 	    wizardData.setPagename(PageNameEnum.PlanAMediaPage.toString());
