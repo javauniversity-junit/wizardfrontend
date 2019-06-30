@@ -61,7 +61,7 @@ public class PlanALifetimeValuedPageController {
 			,@RequestParam (defaultValue ="") String averageCustomerValue
 			,@RequestParam (defaultValue ="") String lifetimeValuePerCustomer
 			,@RequestParam (defaultValue ="") String monthlyInvestmentAverage
-			,@RequestParam (defaultValue ="") String prospectsNeededToBreakEven
+			,@RequestParam () String prospectsNeededToBreakEven
 			,@RequestParam String previousPage
 			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next
