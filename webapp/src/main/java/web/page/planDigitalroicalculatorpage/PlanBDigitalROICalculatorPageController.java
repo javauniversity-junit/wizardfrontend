@@ -53,23 +53,25 @@ public class PlanBDigitalROICalculatorPageController {
 	@RequestMapping(value = "/savePlanBDigitalROICalculatorPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
 			,@RequestParam String wizarddataid
-			,@RequestParam String planAMonthlyDigitalInvestment
-			,@RequestParam String planACostPerThousand
-			,@RequestParam String planAClosingPctNumber
-			,@RequestParam String planAClickThroughRate
-			,@RequestParam String planACostPerClicks
-			,@RequestParam String planAMonthlyClicks
-			,@RequestParam String planASalesConversionPercentage
-			,@RequestParam String planAMonthlyConversions
-			,@RequestParam  String planACostPerConversion
-			,@RequestParam  String planAProjectedGrossProfit
-			,@RequestParam  String planAMonthlyROIP
-			,@RequestParam  String planAMonthlyGrossProfit
-			,@RequestParam String planAMonthlyROID
-			,@RequestParam String nextPage
+			,@RequestParam (defaultValue ="") String planAMonthlyDigitalInvestment
+			,@RequestParam (defaultValue ="") String planACostPerThousand
+			,@RequestParam (defaultValue ="") String planAClosingPctNumber
+			,@RequestParam (defaultValue ="") String planAClickThroughRate
+			,@RequestParam (defaultValue ="") String planACostPerClicks
+			,@RequestParam (defaultValue ="") String planAMonthlyClicks
+			,@RequestParam (defaultValue ="") String planASalesConversionPercentage
+			,@RequestParam (defaultValue ="") String planAMonthlyConversions
+			,@RequestParam  (defaultValue ="") String planACostPerConversion
+			,@RequestParam  (defaultValue ="") String planAProjectedGrossProfit
+			,@RequestParam  (defaultValue ="") String planAMonthlyROIP
+			,@RequestParam  (defaultValue ="") String planAMonthlyGrossProfit
+			,@RequestParam (defaultValue ="") String planAMonthlyROID
+			,@RequestParam String previousPage
 			,@RequestParam String publishPage
 			,@RequestParam(required=false, value="next") String next
-	        ,@RequestParam(required=false, value="publish") String publish){
+	        ,@RequestParam(required=false, value="publish") String publish
+	        ,@RequestParam(required=false, value="previous") String previous
+	        ,@RequestParam String nextPage){
 		
 	  
 		
@@ -81,7 +83,9 @@ public class PlanBDigitalROICalculatorPageController {
 		if (publish != null) {
 			internalNextPage= publishPage;
 		}
-		
+		if (previous != null) {
+			internalNextPage= previousPage;
+        }
 		WizardData wizardData = new WizardData();
 	    wizardData.setPagename(PageNameEnum.PlanBDigitalROICalculatorPage.toString());
 		wizardData.setPagesequence(Pages.PlanBDigitalROICalculatorPage.getPageSequence());
