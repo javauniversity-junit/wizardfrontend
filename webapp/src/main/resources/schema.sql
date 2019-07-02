@@ -74,18 +74,22 @@ create table IF NOT EXISTS contact (
 
 --INSERT IGNORE  INTO `agent` (`address`,`password`, `contact_id`) VALUES ('z@aol.com', 'z', -777);
 
- --DELIMITER //
- --CREATE PROCEDURE AddTestAgent()
-  --BEGIN
-  --DECLARE countID INT;
 
---SELECT COUNT(address) INTO countID FROM agent
---WHERE address = 'z@aol.com';
-  
-   --IF countID = 0  THEN 
-     --INSERT IGNORE  INTO `agent` (`address`,`password`, `contact_id`) VALUES ('z@aol.com', 'z', -777);;
---END IF;
  
-  --END //
- --DELIMITER ;
+ DELIMITER //
+ CREATE PROCEDURE AddTestAgent()
+  BEGIN
+  DECLARE countID INT;
+
+SELECT COUNT(address) INTO countID FROM agent
+WHERE address = 'z@aol.com';
+  IF countID =0  THEN 
+  
+   INSERT INTO `agent` (`address`,`password`, `contact_id`) VALUES ('z@aol.com', 'z', -777);
+  
+  END IF;
+
+ 
+  END //
+ DELIMITER ;
 --CALL AddTestAgent();
