@@ -82,14 +82,10 @@ create table IF NOT EXISTS contact (
 SELECT COUNT(address) INTO countID FROM agent
 WHERE address = 'z@aol.com';
   
-   IF countID = 0
-THEN 
-   INSERT IGNORE  INTO `agent` (`address`,`password`, `contact_id`) VALUES ('z@aol.com', 'z', -777);;
+   IF countID = 0  THEN 
+     INSERT IGNORE  INTO `agent` (`address`,`password`, `contact_id`) VALUES ('z@aol.com', 'z', -777);;
 END IF;
-   
-  
-  
-  
-  
+ 
   END //
  DELIMITER ;
+CALL AddTestAgent;
