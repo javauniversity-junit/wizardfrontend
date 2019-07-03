@@ -74,7 +74,7 @@ create table IF NOT EXISTS contact (
 
 --INSERT IGNORE  INTO `agent` (`address`,`password`, `contact_id`) VALUES ('z@aol.com', 'z', -777);
 
-
+/*
  
  DELIMITER //
  CREATE PROCEDURE AddTestAgent()
@@ -92,4 +92,5 @@ WHERE address = 'z@aol.com';
  
   END //
  DELIMITER ;
---CALL AddTestAgent();
+CALL AddTestAgent();
+*/
