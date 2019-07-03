@@ -50,7 +50,7 @@
 				<div class="form-group">
 					<label for="planACostPerThousand">B. Cost Per Thousand (CPM)</label> <input
 						type="text" th:value="${dataPageModel?.planACostPerThousand}"
-						required class="form-control" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+						class="form-control" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 						id="planACostPerThousand" name="planACostPerThousand" />
 				</div>
 				<div class="form-group">
@@ -61,7 +61,7 @@
 				</div>
 				<div class="form-group">
 					<label for="planAClickThroughRate">D. Click Through Rate (.01%, .1%, etc.)</label> <input type="number"
-						th:value="${dataPageModel?.planAClickThroughRate}" required
+						th:value="${dataPageModel?.planAClickThroughRate}" 
 						class="form-control" id="planAClickThroughRate" oninput="calculate()"
 						name="planAClickThroughRate" />
 				</div>
@@ -85,7 +85,8 @@
 						aria-describedby="planASalesConversionPercentage" />
 				</div>
 				<div class="form-group">
-					<label for="planAMonthlyConversions">H. Monthly Number of Conversions (E*G)</label> <input readonly
+					<label for="planAMonthlyConversions">H. Monthly Number of Conversions (E*G)</label>
+					<input readonly
 						class="form-control" 
 						id="planAMonthlyConversions"
 						th:value="${dataPageModel?.planAMonthlyConversions}"
