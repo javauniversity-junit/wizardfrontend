@@ -4,8 +4,8 @@
  <modelVersion>4.0.0</modelVersion>
 
  <groupId>com.jackrutorial</groupId>
- <artifactId>webapp</artifactId>
- <version>0.0.1</version>
+ <artifactId>scrs</artifactId>
+ 
  <packaging>war</packaging>
 
  <name>SpringBootSigninSignupExample</name>
@@ -96,6 +96,7 @@
  </dependencies>
 
  <build>
+  <finalName>scrs</finalName>
   <plugins>
        <plugin>
         <groupId>org.apache.maven.plugins</groupId>

@@ -1,1 +1,12 @@
 target/
+webapp/target/classes/static/css/bootstrap-theme.min.css
+webapp/target/classes/static/css/bootstrap-theme.min.css
+webapp/target/classes/static/vendor/.DS_Store
+*.class
+webapp/target/classes/static/css/bootstrap.min.css
+webapp/target/classes/static/pages/createCategory.htm
+webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+webapp/target/test-classes/hello/HelloControllerIT.class
+webapp/target/test-classes/hello/HomeControllerTest.class
+webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
