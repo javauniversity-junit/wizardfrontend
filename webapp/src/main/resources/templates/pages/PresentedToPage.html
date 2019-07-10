@@ -44,25 +44,24 @@
 						(1 of 20) Presented To - <span th:text="${wizard.name}"></span>
 					</legend>
 					<div class="form-group">
-						<label for="presentedTo">Presented To</label> <input
+						<label for="presentedTo">Presentation To</label> <input
 							th:value="${dataPageModel?.clientContactName}" type="text"
 							class="form-control" id="clientContactName"
 							name="clientContactName" maxlength="35"
-							aria-describedby="clientBusinessName"
-							placeholder="Enter Presented to" />
+							aria-describedby="clientBusinessName"/>
 					</div>
 					<div class="form-group">
 						<label for="clientBusinessName">Business Name</label> <input
 							type="text" th:value="${dataPageModel?.clientBusinessName}"
 							 class="form-control" id="clientBusinessName" maxlength="35"
-							name="clientBusinessName" placeholder="Enter Business Name" />
+							name="clientBusinessName"  />
 					</div>
 					<div class="form-group">
 						<label for="presentedById">Integrated Media Specialist
 							Name</label> <input type="text" maxlength="35"
 							th:value="${dataPageModel?.portfolioManagerName}" 
 							class="form-control" id="portfolioManagerName"
-							name="portfolioManagerName" placeholder="Enter Specialist Name" />
+							name="portfolioManagerName" />
 					</div>
 					<div class="form-group">
 						<label for=portfolioPhoneNumber>Phone Number</label> <input
@@ -74,7 +73,7 @@
 					<div class="form-group">
 						<label for=portfolioPhoneNumber>Station/Media Group</label> <input
 							type="text" th:value="${dataPageModel?.station}" maxlength="35"
-							placeholder="Enter Group" class="form-control" id="station"
+							class="form-control" id="station"
 							name="station" />
 					</div>
 

@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>(3 of 20) Marketplace Competition </title>
+<title>(3 of 20) Marketplace Competition</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
@@ -44,95 +44,112 @@
 						(3 of 20) Marketplace Competition - <span th:text="${wizard.name}"></span>
 					</legend>
 					<div class="form-group">
-						<label for="firstTierBusiness">1st Tier Business (#1 in market revenue)</label> <input
-							th:value="${dataPageModel?.firstTierBusiness}" type="text" maxlength="35"
-							class="form-control" id="firstTierBusiness"
-							name="firstTierBusiness" 
-							aria-describedby="firstTierBusiness"
-							placeholder="Enter 1st Tier Business" />
+						<label for="firstTierBusiness">1st Tier Business (#1 in
+							market revenue)</label> <input
+							th:value="${dataPageModel?.firstTierBusiness}" type="text"
+							maxlength="35" class="form-control" id="firstTierBusiness"
+							name="firstTierBusiness" aria-describedby="firstTierBusiness" />
 					</div>
 					<div class="form-group">
-						<label for="secondTierBusiness">2nd Tier Business (#2 in market revenue)</label> <input
-							type="text" th:value="${dataPageModel?.secondTierBusiness}" maxlength="35"
+						<label for="secondTierBusiness">2nd Tier Business (#2 in
+							market revenue)</label> <input type="text"
+							th:value="${dataPageModel?.secondTierBusiness}" maxlength="35"
 							class="form-control" id="secondTierBusiness"
-							name="secondTierBusiness" placeholder="Enter 2nd Tier Business" />
+							name="secondTierBusiness" />
 					</div>
 					<div class="form-group">
-						<label for="thirdTierBusiness">3rd Tier Business (#3 in market revenue)</label> <input
-							type="text" th:value="${dataPageModel?.thirdTierBusiness}"
+						<label for="thirdTierBusiness">3rd Tier Business (#3 in
+							market revenue)</label> <input type="text"
+							th:value="${dataPageModel?.thirdTierBusiness}"
 							class="form-control" id="thirdTierBusiness" maxlength="35"
-							name="thirdTierBusiness" placeholder="Enter 3rd Tier Business" />
-					</div>	
+							name="thirdTierBusiness" />
+					</div>
 					<div class="form-group">
-						<label for="fourthTierBusiness">4th Tier Business (#4 or smaller revenue in market)</label> <input
-							type="text" th:value="${dataPageModel?.fourthTierBusiness}" maxlength="35"
+						<label for="fourthTierBusiness">4th Tier Business (#4 or
+							smaller revenue in market)</label> <input type="text"
+							th:value="${dataPageModel?.fourthTierBusiness}" maxlength="35"
 							class="form-control" id="fourthTierBusiness"
-							name="fourthTierBusiness" placeholder="Enter 4th Tier Business" />
-					</div>			
+							name="fourthTierBusiness" />
+					</div>
 					<div class="form-group">
-						<label for="fourthTierBusiness">Who is the main competition?</label>
-						
-						    <input
-							type="text" th:value="${dataPageModel?.competitionA}"
-							class="form-control" id="competitionA" maxlength="35"
-							name="competitionA" placeholder="Enter Main Competition" />
-							
-							<input
-							type="text" th:value="${dataPageModel?.competitionB}"
-							class="form-control" id="competitionB" maxlength="35"
-							name="competitionB" placeholder="Enter Main Competition" />
-					</div>		
+						<label for="fourthTierBusiness">Who is the main
+							competition?</label>
+						<div class="row">
+							<div class="col-sm-auto">(A)</div>
+							<div class="col-5">
+							    
+								<input type="text" th:value="${dataPageModel?.competitionA}"
+									class="form-control" id="competitionA" maxlength="35"
+									name="competitionA" />
+							</div>
+							<div class="col-sm-auto">(B)</div>
+							<div class="col-5">
+							    
+								<input type="text" th:value="${dataPageModel?.competitionB}"
+									class="form-control" id="competitionB" maxlength="35"
+									name="competitionB" />
+							</div>
+						</div>
+					</div>
 					<div class="form-group">
-						<label for="competitionStrengthA">What are their strengths?</label>
-						
-						    <input
-							type="text" th:value="${dataPageModel?.competitionStrengthA}"
-							class="form-control" id="competitionStrengthA" 
-							name="competitionStrengthA" placeholder="Enter maxlength="35"their strengths" />
-							
-							<input
-							type="text" th:value="${dataPageModel?.competitionStrengthB}"
-							class="form-control" id="competitionStrengthB" maxlength="35"
-							name="competitionStrengthB" placeholder="Enter their strengths" />
-					</div>													
+						<label for="competitionStrengthA">What are their
+							strengths?</label>
+						<div class="row">
+							<div class="col-sm-auto">(A)</div>
+							<div class="col-5">
+								<input type="text"
+									th:value="${dataPageModel?.competitionStrengthA}"
+									class="form-control" id="competitionStrengthA"
+									name="competitionStrengthA" />
+							</div>
+							<div class="col-sm-auto">(B)</div>
+							<div class="col-5">
+								<input type="text"
+									th:value="${dataPageModel?.competitionStrengthB}"
+									class="form-control" id="competitionStrengthB" maxlength="35"
+									name="competitionStrengthB" />
+							</div>
+						</div>
+					</div>
 					<div class="form-group">
-						<label for="competitionWeaknessA">What are their weaknesses?</label>
-						
-						    <input
-							type="text" th:value="${dataPageModel?.competitionWeaknessA}"
-							class="form-control" id="competitionWeaknessA" maxlength="35"
-							name="competitionWeaknessA" placeholder="Enter their weaknesses" />
-							
-													    <input
-							type="text" th:value="${dataPageModel?.competitionWeaknessB}"
-							class="form-control" id="competitionWeaknessB" maxlength="35"
-							name="competitionWeaknessB" placeholder="Enter their weaknesses" />
+						<label for="competitionWeaknessA">What are their
+							weaknesses?</label>
+						<div class="row">
+							<div class="col-sm-auto">(A)</div>
+							<div class="col-5">
+								<input type="text"
+									th:value="${dataPageModel?.competitionWeaknessA}"
+									class="form-control" id="competitionWeaknessA" maxlength="35"
+									name="competitionWeaknessA"/>
+							</div>
+							<div class="col-sm-auto">(B)</div>
+							<div class="col-5">
+								<input type="text"
+									th:value="${dataPageModel?.competitionWeaknessB}"
+									class="form-control" id="competitionWeaknessB" maxlength="35"
+									name="competitionWeaknessB" />
+							</div>
+						</div>
 					</div>
 					<input type="hidden" id="nextPage"
 						th:value="'redirect:/ClientObjectivesOnePage?ID=' + ${wizard.wizardid}"
-						name="nextPage" /> 
-						
-						<input type="hidden" id="previousPage"
+						name="nextPage" /> <input type="hidden" id="previousPage"
 						th:value="'redirect:/TeamCommitmentPage?ID=' + ${wizard.wizardid}"
-						name="previousPage" /> 
-						
-				   <input type="hidden" id="publishPage"
+						name="previousPage" /> <input type="hidden" id="publishPage"
 						th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
-						name="publishPage" /> 
-							
-						<input type="hidden" id="wizardId"
-						th:value="${wizard.wizardid}" name="wizardId" /> 
-						<input
+						name="publishPage" /> <input type="hidden" id="wizardId"
+						th:value="${wizard.wizardid}" name="wizardId" /> <input
 						type="hidden" id="wizarddataid"
-						th:value="${wizardData?.wizarddataid}" name="wizarddataid" />
-
-
-					<input name="next" value="Next" type="submit" class="btn btn-primary" style="background-color: #C0B879;" />
-					<input name="publish" value="Publish" type="submit" class="btn btn-primary" style="background-color: #C0B879;" />
-					 <input name="previous" value="Previous" type="submit" class="btn btn-primary" style="background-color: #C0B879;" />
+						th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> <input
+						name="next" value="Next" type="submit" class="btn btn-primary"
+						style="background-color: #C0B879;" /> <input name="publish"
+						value="Publish" type="submit" class="btn btn-primary"
+						style="background-color: #C0B879;" /> <input name="previous"
+						value="Previous" type="submit" class="btn btn-primary"
+						style="background-color: #C0B879;" />
 				</fieldset>
 			</form>
-			<div class="container" style="padding-top:2%;">
+			<div class="container" style="padding-top: 2%;">
 
 				<div class="progress">
 					<div class="progress-bar" role="progressbar" aria-valuenow="5"

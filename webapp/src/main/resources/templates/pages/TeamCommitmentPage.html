@@ -45,72 +45,71 @@
 						(2 of 20) Team Commitment - <span th:text="${wizard.name}"></span>
 					</legend>
 					<div class="w3-panel w3-border">
+					<h3 class="text-white bg-dark">Top Level</h3>
 						<div class="form-group">
-							<label for="topLevelName">Top Level Name</label> <input
+							<label for="topLevelName">Name</label> <input
 								type="text" class="form-control" id="topLevelName"
 								th:value="${dataPageModel?.topLevelName}" maxlength="35"
-								name="topLevelName"  aria-describedby="topLevelName"
-								placeholder="Enter Top Level Name" />
+								name="topLevelName"  aria-describedby="topLevelName"/>
 						</div>
 						<div class="form-group">
-							<label for="topLevelTitle">Top Level Title</label> <input
+							<label for="topLevelTitle">Title</label> <input
 								type="text" 
 								th:value="${dataPageModel?.topLevelTitle}"
 								class="form-control" id="topLevelTitle"
-								 name="topLevelTitle"
-								placeholder="Top Level Title" />
+								 name="topLevelTitle" />
 						</div>
 					</div>
 
 					<div class="w3-panel w3-border">
+					<h3 class="text-white bg-dark">2nd Level</h3>
 						<div class="form-group">
-							<label for="secondLevelName">Second Level Name</label> <input
+							<label for="secondLevelName">Name</label> <input
 								type="text" class="form-control" id="secondLevelName"
 								name="secondLevelName" maxlength="35"
 								th:value="${dataPageModel?.secondLevelName}"
-								aria-describedby="secondLevelName"
-								placeholder="Enter Second Level Name" />
+								aria-describedby="secondLevelName" />
 						</div>
 						<div class="form-group">
-							<label for="secondLevelTitle">Second Level Title</label> <input
+							<label for="secondLevelTitle">Title</label> <input
 								type="text" th:value="${dataPageModel?.secondLevelTitle}"
 								class="form-control" id="secondLevelTitle" maxlength="35"
-								name="secondLevelTitle" placeholder="Second Level Title" />
+								name="secondLevelTitle" />
 						</div>
 					</div>
 
 					<div class="w3-panel w3-border">
+					<h3 class="text-white bg-dark">3rd Level</h3>
 						<div class="form-group">
-							<label for="thirdLevelName">Third Level Name</label> <input
+							<label for="thirdLevelName">Name</label> <input
 								type="text" class="form-control" id="thirdLevelName"
 								th:value="${dataPageModel?.thirdLevelName}" maxlength="35"
-								name="thirdLevelName" aria-describedby="thirdLevelName"
-								placeholder="Enter Third Level Name" />
+								name="thirdLevelName" aria-describedby="thirdLevelName" />
 						</div>
 						<div class="form-group">
-							<label for="thirdLevelTitle">Third Level Title</label> <input
+							<label for="thirdLevelTitle">Title</label> <input
 								type="text"  maxlength="35"
 								th:value="${dataPageModel?.thirdLevelTitle}"
 								class="form-control" id="thirdLevelTitle"
-								name="thirdLevelTitle" placeholder="Third Level Title" />
+								name="thirdLevelTitle"  />
 						</div>
 					</div>
 
 					<div class="w3-panel w3-border">
+					  <h3 class="text-white bg-dark">4th Level</h3>
 						<div class="form-group">
-							<label for="fourthLevelName">Fourth Level Name</label> <input
+							<label for="fourthLevelName">Name</label> <input
 								type="text" class="form-control" id="fourthLevelName" maxlength="35"
 								th:value="${dataPageModel?.fourthLevelName}"
 								name="fourthLevelName" 
-								aria-describedby="fourthLevelName"
-								placeholder="Enter Fourth Level Name" />
+								aria-describedby="fourthLevelName"/>
 						</div>
 						<div class="form-group">
-							<label for="fourthLevelTitle">Fourth Level Title</label> <input
+							<label for="fourthLevelTitle">Title</label> <input
 								type="text" maxlength="35"
 								th:value="${dataPageModel?.fourthLevelTitle}"
 								class="form-control" id="fourthLevelTitle"
-								name="fourthLevelTitle" placeholder="Fourth Level Title" />
+								name="fourthLevelTitle" />
 						</div>
 					</div>
 
