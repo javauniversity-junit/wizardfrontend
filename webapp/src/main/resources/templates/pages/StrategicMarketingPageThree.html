@@ -34,7 +34,7 @@
 				id="myform">
 				<fieldset>
 					<legend>
-						(8 of 20) Strategic Marketing III - <span th:text="${wizard.name}"></span>
+						(7 of 20) Strategic Marketing III - <span th:text="${wizard.name}"></span>
 					</legend>
 
 
@@ -42,7 +42,7 @@
 
 					<div class="container">
 
-						<div class="row">What are the clients</div>
+						<div class="row">6. What are the clients ...</div>
 						<div class="row">a. poorest performing months?</div>
 
 						<div class="row">
@@ -501,7 +501,7 @@
 						<hr />
 
 						<div class="form-group">
-							<label for=compliments>a. What is the most
+							<label for=compliments>7 a. What is the most
 								frequent compliment you get?</label> <input type="text"
 								th:value="${dataPageModel?.compliments}" 
 								 class="form-control" id="compliments"
@@ -514,7 +514,7 @@
 
 
 						<div class="form-group">
-							<label for=complaint> What is the most
+							<label for=complaint>7 b. What is the most
 								frequent complaint you get? </label> <input type="text"
 								th:value="${dataPageModel?.complaint}" 
 								class="form-control" id="complaint" name="complaint" />
@@ -522,7 +522,7 @@
 
 
 						<div class="form-group">
-							<label for=marketingStrategy>What digital marketing
+							<label for=marketingStrategy>8. What digital marketing
 								strategies are you currently utilizing? What are your goals and
 								how do you measure the effectiveness? </label> <input type="text"
 								th:value="${dataPageModel?.marketingStrategy}" 
@@ -530,7 +530,7 @@
 						</div>
 						
 						<div class="form-group">
-							<label for=socialStrategy>Do you have a social media strategy 
+							<label for=socialStrategy>9. Do you have a social media strategy 
 								(i.e. Facebook, Google +, Twitter, Instagram, etc.)?  
 								If so, what are your goals and how do you measure the effectiveness?  
 							</label> <input type="text"
@@ -555,7 +555,7 @@
 					<input type="hidden" id="nextPage"
 						th:value="'redirect:/ConfidentialClientEvaluationOnePage?ID=' + ${wizard.wizardid}"
 						name="nextPage" /> <input type="hidden" id="previousPage"
-						th:value="'redirect:/StrategicMarketingPageTwo?ID=' + ${wizard.wizardid}"
+						th:value="'redirect:/StrategicMarketingPageOne?ID=' + ${wizard.wizardid}"
 						name="previousPage" /> <input type="hidden" id="publishPage"
 						th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
 						name="publishPage" /> <input type="hidden" id="wizardId"

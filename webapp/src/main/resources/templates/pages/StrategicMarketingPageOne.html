@@ -39,49 +39,56 @@
 	<div class="container">
 
 		<div>
-			<form method="post" action="saveStrategicMarketingPageOne" id="myform">
+			<form method="post" action="saveStrategicMarketingPageOne"
+				id="myform">
 				<fieldset>
 					<legend>
 						(6 of 20) Strategic Marketing I - <span th:text="${wizard.name}"></span>
 					</legend>
 
-					<div class="form-group">
-						<label for="yearsInBusiness">1. How long has the client been
-							in business?</label> <input type="number" class="form-control"
-							id="yearsInBusiness"
-							th:value="${dataPageModel?.yearsInBusiness}" name="yearsInBusiness"
-							aria-describedby="yearsInBusinessName" min="0" max="50"
-							placeholder="Enter years In business" />
-					</div>
-					<div class="form-group">
-						<label for="numberOfLocations">How many locations?</label> <input
-							type="number" th:value="${dataPageModel?.numberOfLocations}"
-							 min="0" max="50" class="form-control"
-							id="numberOfLocations" name="numberOfLocations"
-							placeholder="Enter number of locations" />
-					</div>
+					<div class="row">
 
-
-
-					<div class="form-group">
-
-						<div class="checkbox">
-							<label> <input type="checkbox" id="planToExpand"
-								name="planToExpand" 
-								th:checked="${dataPageModel?.planToExpand}" /> <span>
-									Plans to expand? </span>
-
-							</label>
-
+						<div class="col-4">
+							<div class="form-group">
+								<label for="yearsInBusiness">1. How long has the client
+									been in business?</label> <input type="number" class="form-control"
+									id="yearsInBusiness"
+									th:value="${dataPageModel?.yearsInBusiness}"
+									name="yearsInBusiness" aria-describedby="yearsInBusinessName"
+									min="0" max="50" />
+							</div>
 						</div>
+						<div class="col-4">
+							<div class="form-group">
+								<label for="numberOfLocations">How many locations?</label> <input
+									type="number" th:value="${dataPageModel?.numberOfLocations}"
+									min="0" max="50" class="form-control" id="numberOfLocations"
+									name="numberOfLocations" />
+							</div>
+						</div>
+						<div class="col-4">
 
+							<div class="form-group">
+
+								<div class="checkbox">
+									<label> <input type="checkbox" id="planToExpand"
+										name="planToExpand"
+										th:checked="${dataPageModel?.planToExpand}" /> <span>
+											Plans to expand? </span>
+
+									</label>
+
+								</div>
+
+							</div>
+						</div>
 					</div>
 					<div class="form-group">
 						<label for=misconceptions>2. What are the biggest
 							misconceptions consumers have about the business?</label>
 
 						<textarea id="misconceptions" name="misconceptions"
-							class="form-control" rows="4" maxlength="50" cols="50" 
+							class="form-control" rows="4" maxlength="50" cols="50"
 							th:text="${dataPageModel?.misconceptions}">
 							 
 							 
@@ -89,10 +96,11 @@
 					</div>
 
 					<div class="form-group">
-						<label for=sellingAdvantages>3. What are the clients most distinctive selling advantages?</label>
+						<label for=sellingAdvantages>3. What are the clients most
+							distinctive selling advantages?</label>
 
 						<textarea id="sellingAdvantages" name="sellingAdvantages"
-							class="form-control" rows="4" maxlength="50" cols="50" 
+							class="form-control" rows="4" maxlength="50" cols="50"
 							th:text="${dataPageModel?.sellingAdvantages}">
 							 
 							 
@@ -100,47 +108,56 @@
 					</div>
 
 					<div class="form-group">
-						<label for=companyNameProjectImage>4. What image does the client want the company's name to project to their customers / consumers?</label>
+						<label for=companyNameProjectImage>4. What image does the
+							client want the company's name to project to their customers /
+							consumers?</label>
 
-						<textarea id="companyNameProjectImage" name="companyNameProjectImage"
-							class="form-control" rows="4" maxlength="50" cols="50" 
+						<textarea id="companyNameProjectImage"
+							name="companyNameProjectImage" class="form-control" rows="4"
+							maxlength="50" cols="50"
 							th:text="${dataPageModel?.companyNameProjectImage}">
 							 
 							 
 							 </textarea>
 					</div>
-					
-						<div class="form-group">
-							<label for="currentCompanySlogan">Current Company Slogan:</label> 
-							<input
-								type="text" class="form-control" id="currentCompanySlogan"
-								th:value="${dataPageModel?.currentCompanySlogan}"  maxlength="50"								name="currentCompanySlogan"  aria-describedby="currentCompanySlogan"
-								placeholder="Enter Company Slogan" />
-						</div>
+
+					<div class="row">
+						<div class="col-6">
+
 							<div class="form-group">
-
-						<div class="checkbox">
-							<label> <input type="checkbox" id="companySloganProjectImage"
-								name="companySloganProjectImage" 
-								th:checked="${dataPageModel?.companySloganProjectImageYes}" /> <span>
-									Does their current slogan project the same image? </span>
-
-							</label>
-
+								<label for="currentCompanySlogan">5. Current Company
+									Slogan:</label> <input type="text" class="form-control"
+									id="currentCompanySlogan"
+									th:value="${dataPageModel?.currentCompanySlogan}"
+									maxlength="50" />
+							</div>
 						</div>
-
+						<div class="col-6">
+							<div class="form-group">
+								<div class="checkbox">
+									<label> <input type="checkbox"
+										id="companySloganProjectImage"
+										name="companySloganProjectImage"
+										th:checked="${dataPageModel?.companySloganProjectImageYes}" />
+										<span> Does their current slogan project the same
+											image? </span>
+									</label>
+								</div>
+							</div>
+						</div>
 					</div>
-						
-						
-						
-						
-					
 
-					
+
+
+
+
+
 
 					<input type="hidden" id="nextPage"
-						th:value="'redirect:/StrategicMarketingPageTwo?ID=' + ${wizard.wizardid}"
-						name="nextPage" /> <input type="hidden" id="previousPage"
+						th:value="'redirect:/StrategicMarketingPageThree?ID=' + ${wizard.wizardid}"
+						name="nextPage" /> 
+						
+						<input type="hidden" id="previousPage"
 						th:value="'redirect:/ClientObjectivesOnePageTwo?ID=' + ${wizard.wizardid}"
 						name="previousPage" /> <input type="hidden" id="publishPage"
 						th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
