@@ -38,7 +38,7 @@
 			<fieldset>
 			
 				<legend>
-					(15 of 20) Plan A Lifetime Value Analysis - <span
+					(12 of 20) Plan A Lifetime Value Analysis - <span
 						th:text="${wizard.name}"></span>
 				</legend>
 				<div class="form-group">
@@ -110,10 +110,14 @@
 
 
 				<input type="hidden" id="nextPage"
-					th:value="'redirect:/PlanBLifetimeValuedPage?ID=' + ${wizard.wizardid}"
-					name="nextPage" /> <input type="hidden" id="previousPage"
-					th:value="'redirect:/PlanBBEPPage?ID=' + ${wizard.wizardid}"
-					name="previousPage" /> <input type="hidden" id="publishPage"
+					th:value="'redirect:/PlanADigitalROICalculatorPage?ID=' + ${wizard.wizardid}"
+					name="nextPage" /> 
+					
+					<input type="hidden" id="previousPage"
+					th:value="'redirect:/PlanABEPPage?ID=' + ${wizard.wizardid}"
+					name="previousPage" /> 
+					
+					<input type="hidden" id="publishPage"
 					th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
 					name="publishPage" /> <input type="hidden" id="wizardId"
 					th:value="${wizard.wizardid}" name="wizardId" /> <input

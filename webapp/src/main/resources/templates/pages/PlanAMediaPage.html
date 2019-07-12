@@ -52,7 +52,7 @@
 				<form id="myForm">
 					<fieldset>
 						<legend>
-						(17 of 20)	Plan A Proposed 12 Month Media Investment <span
+						(18 of 20)	Plan A Proposed 12 Month Media Investment <span
 								th:text="${wizard.name}"></span>
 						</legend>
 						<div class="form-group row">
@@ -296,9 +296,14 @@
 
 						<input type="hidden" id="nextPage"
 							th:value="'redirect:/PlanBMediaPage?ID=' + ${wizard.wizardid}"
-							name="nextPage" /> <input type="hidden" id="previousPage"
-							th:value="'redirect:/PlanBLifetimeValuedPage?ID=' + ${wizard.wizardid}"
-							name="previousPage" /> <input type="hidden" id="publishPage"
+							name="nextPage" /> 
+							
+							<input type="hidden" id="previousPage"
+							th:value="'redirect:/PlanBDigitalROICalculatorPage?ID=' + ${wizard.wizardid}"
+							name="previousPage" /> 
+							
+							
+							<input type="hidden" id="publishPage"
 							th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
 							name="publishPage" /> <input type="hidden" id="wizardId"
 							th:value="${wizard.wizardid}" name="wizardId" /> <input

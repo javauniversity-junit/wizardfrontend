@@ -109,10 +109,15 @@
 
 
 				<input type="hidden" id="nextPage"
-					th:value="'redirect:/PlanAMediaPage?ID=' + ${wizard.wizardid}"
-					name="nextPage" /> <input type="hidden" id="previousPage"
-					th:value="'redirect:/PlanALifetimeValuedPage?ID=' + ${wizard.wizardid}"
-					name="previousPage" /> <input type="hidden" id="publishPage"
+					th:value="'redirect:/PlanBDigitalROICalculatorPage?ID=' + ${wizard.wizardid}"
+					name="nextPage" /> 
+					
+					<input type="hidden" id="previousPage"
+					th:value="'redirect:/PlanBBEPPage?ID=' + ${wizard.wizardid}"
+					name="previousPage" /> 
+					
+					
+					<input type="hidden" id="publishPage"
 					th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
 					name="publishPage" /> <input type="hidden" id="wizardId"
 					th:value="${wizard.wizardid}" name="wizardId" /> <input

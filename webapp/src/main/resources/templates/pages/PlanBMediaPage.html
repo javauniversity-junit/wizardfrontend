@@ -52,7 +52,7 @@
 				<form id="myForm">
 					<fieldset>
 						<legend>
-							(18 of 20) Plan B Proposed 12 Month Media Investment <span
+							(19 of 20) Plan B Proposed 12 Month Media Investment <span
 								th:text="${wizard.name}"></span>
 						</legend>
 						<div class="form-group row">
@@ -296,9 +296,13 @@
 
 						<input type="hidden" id="nextPage"
 							th:value="'redirect:/PlanADigitalROICalculatorPage?ID=' + ${wizard.wizardid}"
-							name="nextPage" /> <input type="hidden" id="previousPage"
-							th:value="'redirect:/StrategicMarketingPageOne?ID=' + ${wizard.wizardid}"
-							name="previousPage" /> <input type="hidden" id="publishPage"
+							name="nextPage" /> 
+							
+							<input type="hidden" id="previousPage"
+							th:value="'redirect:/PlanAMediaPage?ID=' + ${wizard.wizardid}"
+							name="previousPage" /> 
+							
+							<input type="hidden" id="publishPage"
 							th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
 							name="publishPage" /> <input type="hidden" id="wizardId"
 							th:value="${wizard.wizardid}" name="wizardId" /> <input
@@ -306,7 +310,7 @@
 							th:value="${dataPageModel?.mediaRows}" name="mediarows" /> <input
 							type="hidden" id="wizarddataid"
 							th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> <input
-							name="next" type="submit" value="Next" class="btn btn-primary"
+							name="next" type="hidden" value="Next" class="btn btn-primary"
 							style="background-color: #C0B879;" /> <input name="publish"
 							type="submit" value="Publish" class="btn btn-primary"
 							style="background-color: #C0B879;" /> <input name="previous"

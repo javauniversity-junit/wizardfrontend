@@ -41,42 +41,39 @@
 			<form method="post" action="savePlanBProposedPage">
 				<fieldset>
 					<legend>
-						(13 0f 20) Plan B Proposed Schedule - Brand Equity Months - <span
+						(14 0f 20) Plan B Proposed Schedule - Brand Equity Months - <span
 							th:text="${wizard.name}"></span>
 					</legend>
 					<div class="form-group">
 						<label for="presentedTo">What market/city is the client
 							going to dominate?</label> <input th:value="${dataPageModel?.planACity}"
 							type="text" class="form-control" id="planACity" name="planACity"
-							aria-describedby="planACity" placeholder="Enter market/city" />
+							aria-describedby="planACity" />
 					</div>
 					<div class="form-group">
 						<label for="clientBusinessName">What is the projected
 							broadcast monthly reach in thousands?</label> <input type="text"
 							th:value="${dataPageModel?.planAReach}" class="form-control"
-							id="planAReach" name="planAReach"
-							placeholder="Enter projected broadcast" />
+							id="planAReach" name="planAReach" />
 					</div>
 					<div class="form-group">
 						<label for="presentedById">What is the projected monthly
 							broadcast frequency? Name</label> <input type="text"
 							th:value="${dataPageModel?.planAFrequency}" class="form-control"
-							id="planAFrequency" name="planAFrequency"
-							placeholder="Enter broadcast frequency" />
+							id="planAFrequency" name="planAFrequency" />
 					</div>
 					<div class="form-group">
 						<label for=planADigitalImpressionsMonthly>What are the
 							estimated monthly digital gross impressions?</label> <input type="text"
 							th:value="${dataPageModel?.planADigitalImpressionsMonthly}"
 							class="form-control" id="planADigitalImpressionsMonthly"
-							placeholder="Enter monthly digital gross impressions"
 							name="planADigitalImpressionsMonthly" />
 					</div>
 					<div class="form-group">
 						<label for=planAMonthly>What is the average base monthly
 							advertising investment?</label> <input type="text"
 							th:value="${dataPageModel?.planAMonthly}"
-							placeholder="Enter average base monthly" class="form-control"
+							class="form-control"
 							id="planAMonthly" name="planAMonthly" />
 					</div>
 
@@ -84,7 +81,7 @@
 						<label for=planADaily>What is the average base daily
 							advertising investment?</label> <input type="text"
 							th:value="${dataPageModel?.planADaily}"
-							placeholder="Enter average base daily" class="form-control"
+							class="form-control"
 							id="planADaily" name="planADaily" />
 					</div>
 
@@ -92,7 +89,7 @@
 						th:value="'redirect:/PlanBBEPPage?ID=' + ${wizard.wizardid}"
 						name="nextPage" /> 
 					<input type="hidden" id="previousPage"
-						th:value="'redirect:/PlanABEPPage?ID=' + ${wizard.wizardid}"
+						th:value="'redirect:/PlanADigitalROICalculatorPage?ID=' + ${wizard.wizardid}"
 						name="previousPage" /> 	
 					  <input type="hidden" id="publishPage"
 						th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
