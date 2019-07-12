@@ -33,11 +33,6 @@
 	<div id="headerId"></div>
 
 
-
-
-
-
-
 	<div class="container">
 		<style>
 fieldset {
@@ -48,20 +43,13 @@ fieldset {
 		<div>
 			<form method="post" action="saveClientObjectivesOnePage">
 
-
-
-
-
-
-
 				<fieldset>
-
-
-
-					<div class="form-group">
-						<h2>(5 of 20) Client Objectives</h2>
-						<p>Order the client objectives that were selected on the
+					<legend>
+						(5 of 20) Client Objectives - <span th:text="${wizard.name}"></span>
+					</legend>
+					<p>Order the client objectives that were selected on the
 							previous page</p>
+					<div class="form-group">
 
 						<table class="table">
 							<thead>
@@ -97,12 +85,10 @@ fieldset {
 							</tbody>
 						</table>
 
-
-
 					</div>
 
 
-				</fieldset>
+
 
 				<input name="introduceNewDepartment" type="hidden"
 					th:value="${dataPageModel?.introduceNewDepartment}" /> <input
