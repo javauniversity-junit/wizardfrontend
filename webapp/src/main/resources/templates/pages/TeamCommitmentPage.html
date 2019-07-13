@@ -44,8 +44,9 @@
 					<legend>
 						(2 of 20) Team Commitment - <span th:text="${wizard.name}"></span>
 					</legend>
-					<div class="w3-panel w3-border">
-					<h3 class="text-white bg-secondary">Top Level</h3>
+					
+										<fieldset>
+					<legend>Top Level</legend>
 						<div class="form-group">
 							<label for="topLevelName">Name</label> <input
 								type="text" class="form-control" id="topLevelName"
@@ -59,10 +60,11 @@
 								class="form-control" id="topLevelTitle"
 								 name="topLevelTitle" />
 						</div>
-					</div>
-
-					<div class="w3-panel w3-border">
-					<h3 class="text-white bg-secondary">2nd Level</h3>
+					</fieldset>
+					
+					
+					<fieldset>
+					<legend>2nd Level</legend>
 						<div class="form-group">
 							<label for="secondLevelName">Name</label> <input
 								type="text" class="form-control" id="secondLevelName"
@@ -76,10 +78,10 @@
 								class="form-control" id="secondLevelTitle" maxlength="35"
 								name="secondLevelTitle" />
 						</div>
-					</div>
+					</fieldset>
 
-					<div class="w3-panel w3-border">
-					<h3 class="text-white bg-secondary">3rd Level</h3>
+					<fieldset>
+					<legend>3rd Level</legend>
 						<div class="form-group">
 							<label for="thirdLevelName">Name</label> <input
 								type="text" class="form-control" id="thirdLevelName"
@@ -93,10 +95,10 @@
 								class="form-control" id="thirdLevelTitle"
 								name="thirdLevelTitle"  />
 						</div>
-					</div>
+					</fieldset>
 
-					<div class="w3-panel w3-border">
-					  <h3 class="text-white bg-secondary">4th Level</h3>
+					<fieldset>
+					  <legend>4th Level</legend>
 						<div class="form-group">
 							<label for="fourthLevelName">Name</label> <input
 								type="text" class="form-control" id="fourthLevelName" maxlength="35"
@@ -111,7 +113,9 @@
 								class="form-control" id="fourthLevelTitle"
 								name="fourthLevelTitle" />
 						</div>
-					</div>
+					</fieldset>
+
+<div style="padding-bottom: 2%;"></div> <!-- include space before buttons -->
 
 					<input type="hidden" id="nextPage"
 						th:value="'redirect:/MarketPlaceCompetitionPage?ID=' + ${wizard.wizardid}"
