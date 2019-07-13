@@ -73,7 +73,8 @@
 						<label for=planAMonthly>What is the average base monthly
 							advertising investment?</label> <input type="currency"
 							th:value="${dataPageModel?.planAMonthly}" class="form-control"
-							id="planAMonthly" name="planAMonthly" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+							id="planAMonthly" name="planAMonthly" 
+							data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 							oninput="calculatePlanDaily()"/>
 					</div>
 
@@ -82,7 +83,8 @@
 							advertising investment?</label> <input type="currency"
 							th:value="${dataPageModel?.planADaily}" class="form-control"
 							id="planADaily" name="planADaily" readonly
-							data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"/>
+							data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+							/>
 					</div>
 
 					<input type="hidden" id="nextPage"
@@ -144,7 +146,8 @@
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-    <script src="js/currency.js "></script>
+    <script src="js/currency.js"></script>
+    <script src="js/planabproposed.js"></script>
 	<script>
 		$(function() {
 			$("#headerId").load("header.html");
