@@ -48,14 +48,14 @@
 							market revenue)</label> <input
 							th:value="${dataPageModel?.firstTierBusiness}" type="text"
 							maxlength="35" class="form-control" id="firstTierBusiness"
-							name="firstTierBusiness" aria-describedby="firstTierBusiness" oninput="calculate()/>
+							name="firstTierBusiness" aria-describedby="firstTierBusiness" oninput="calculate()"/>
 					</div>
 					<div class="form-group">
 						<label for="secondTierBusiness">2nd Tier Business (#2 in
 							market revenue)</label> <input type="text"
 							th:value="${dataPageModel?.secondTierBusiness}" maxlength="35"
 							class="form-control" id="secondTierBusiness"
-							name="secondTierBusiness" />
+							name="secondTierBusiness" oninput="calculate()"/>
 					</div>
 					<div class="form-group">
 						<label for="thirdTierBusiness">3rd Tier Business (#3 in
@@ -188,10 +188,6 @@
 			$("#headerId").load("header.html");
 		});
 	</script>
-
-
-
-
 
 </body>
 </html>
