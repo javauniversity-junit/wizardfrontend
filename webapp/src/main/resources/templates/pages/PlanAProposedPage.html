@@ -52,35 +52,35 @@
 					</div>
 					<div class="form-group">
 						<label for="clientBusinessName">What is the projected
-							broadcast monthly reach in thousands?</label> <input type="text"
+							broadcast monthly reach in thousands?</label> <input type="number"
 							th:value="${dataPageModel?.planAReach}" class="form-control"
-							id="planAReach" name="planAReach" />
+							id="planAReach" name="planAReach" min=0/>
 					</div>
 					<div class="form-group">
 						<label for="presentedById">What is the projected monthly
-							broadcast frequency? Name</label> <input type="text"
+							broadcast frequency? Name</label> <input type="number"
 							th:value="${dataPageModel?.planAFrequency}" class="form-control"
-							id="planAFrequency" name="planAFrequency" />
+							id="planAFrequency" name="planAFrequency" min=0/>
 					</div>
 					<div class="form-group">
 						<label for=planADigitalImpressionsMonthly>What are the
-							estimated monthly digital gross impressions?</label> <input type="text"
+							estimated monthly digital gross impressions?</label> <input type="number"
 							th:value="${dataPageModel?.planADigitalImpressionsMonthly}"
 							class="form-control" id="planADigitalImpressionsMonthly"
-							name="planADigitalImpressionsMonthly" />
+							name="planADigitalImpressionsMonthly" min=0/>
 					</div>
 					<div class="form-group">
 						<label for=planAMonthly>What is the average base monthly
-							advertising investment?</label> <input type="text"
-							th:value="${dataPageModel?.planAMonthly}"
-							id="planAMonthly" name="planAMonthly" />
+							advertising investment?</label> <input type="currency"
+							th:value="${dataPageModel?.planAMonthly}" class="form-control"
+							id="planAMonthly" name="planAMonthly" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"/>
 					</div>
 
 					<div class="form-group">
 						<label for=planADaily>What is the average base daily
 							advertising investment?</label> <input type="text"
 							th:value="${dataPageModel?.planADaily}" class="form-control"
-							id="planADaily" name="planADaily" />
+							id="planADaily" name="planADaily" readonly/>
 					</div>
 
 					<input type="hidden" id="nextPage"
@@ -126,6 +126,7 @@
 
 
 	<!-- JavaScript files-->
+	    
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -140,7 +141,8 @@
 
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js"></script>
-
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="js/currency.js "></script>
 	<script>
 		$(function() {
 			$("#headerId").load("header.html");
