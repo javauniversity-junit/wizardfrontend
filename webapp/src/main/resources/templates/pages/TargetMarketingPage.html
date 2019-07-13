@@ -53,13 +53,13 @@
      <div class="col-5">
        <div class="row, form-group"><span class="form-control, border-0" >Men</span></div>
        <div class="row, form-group">
-            <input type="number" class="form-control" id="pctMen" th:value="${dataPageModel?.pctMen}" name="pctMen" oninput="calculateWomen()"/>
+            <input type="number" class="form-control" id="pctMen" th:value="${dataPageModel?.pctMen}" name="pctMen" oninput="calculateWomen()" min=0 max=100 />
        </div>
      </div>
      <div class="col-5">
        <div class="row, form-group"><span class="form-control, border-0">Women</span></div>
        <div class="row, form-group">
-            <input type="number" th:value="${dataPageModel?.pctWomen}" class="form-control" id="pctWomen" name="pctWomen" oninput="calculateMen()"/>
+            <input type="number" th:value="${dataPageModel?.pctWomen}" class="form-control" id="pctWomen" name="pctWomen" oninput="calculateMen()" min=0 max=100 />
        </div>        
      </div>
    </div>
@@ -99,55 +99,67 @@
   <div class="col-2">
        <div class="row, form-group"><span class="form-control, border-0">12-18</span></div>
  	   <div class="row, form-group">
-		  <input type="number" class="form-control"	id="have12to18" th:value="${dataPageModel?.have12to18}" name="have12to18" />
+		  <input type="number" class="form-control"	id="have12to18" th:value="${dataPageModel?.have12to18}" 
+		   name="have12to18" min=0 max=10 />
 	   </div> 
 	   <div class="row, form-group">
-		  <input type="number" class="form-control"	id="want12to18" th:value="${dataPageModel?.want12to18}"  name="want12to18" />
+		  <input type="number" class="form-control"	id="want12to18" th:value="${dataPageModel?.want12to18}"  
+		   name="want12to18" min=0 max=10 />
 	   </div> 
   </div>
   <div class="col-2">
        <div class="row, form-group"><span class="form-control, border-0">19-25</span></div>
  	   <div class="row, form-group">
-		  <input type="number" class="form-control"	id="have19to25" th:value="${dataPageModel?.have19to25}" name="have19to25" />
+		  <input type="number" class="form-control"	id="have19to25" th:value="${dataPageModel?.have19to25}" 
+		   name="have19to25" min=0 max=10 />
 	   </div> 
 	   <div class="row, form-group">
-		  <input type="number" class="form-control"	id="want19to25" th:value="${dataPageModel?.want19to25}" name="want19to25" />
+		  <input type="number" class="form-control"	id="want19to25" th:value="${dataPageModel?.want19to25}" 
+		   name="want19to25" min=0 max=10 />
 	   </div>    
   </div>
   <div class="col-2">
        <div class="row, form-group"><span class="form-control, border-0">26-35</span></div>
  	   <div class="row, form-group">
-		  <input type="number" class="form-control"	id="have26to35" th:value="${dataPageModel?.have26to35}"  name="have26to35" />
+		  <input type="number" class="form-control"	id="have26to35" th:value="${dataPageModel?.have26to35}"  
+		   name="have26to35" min=0 max=10 />
 	   </div> 
 	   <div class="row, form-group">
-		  <input type="number" class="form-control"	id="want26to35" th:value="${dataPageModel?.want26to35}"  name="want26to35" />
+		  <input type="number" class="form-control"	id="want26to35" th:value="${dataPageModel?.want26to35}"  
+		   name="want26to35" min=0 max=10 />
 	   </div> 
   </div>	  
   <div class="col-2">
          <div class="row, form-group"><span class="form-control, border-0">36-45</span></div>
  	   <div class="row, form-group">
-		  <input type="number" class="form-control"	id="have36to45" th:value="${dataPageModel?.have36to45}"  name="have36to45" />
+		  <input type="number" class="form-control"	id="have36to45" th:value="${dataPageModel?.have36to45}"  
+		  name="have36to45" min=0 max=10 />
 	   </div> 
 	   <div class="row, form-group">
-		  <input type="number" class="form-control"	id="want36to45" th:value="${dataPageModel?.want36to45}"  name="want36to45" />
+		  <input type="number" class="form-control"	id="want36to45" th:value="${dataPageModel?.want36to45}"  
+		   name="want36to45" min=0 max=10 />
 	   </div> 
   </div> 
   <div class="col-2">
        <div class="row, form-group"><span class="form-control, border-0">46-55</span></div>
  	   <div class="row, form-group">
-		  <input type="number" class="form-control"	id="have46to55" th:value="${dataPageModel?.have46to55}"  name="have46to55" />
+		  <input type="number" class="form-control"	id="have46to55" th:value="${dataPageModel?.have46to55}"  
+		   name="have46to55" min=0 max=10 />
 	   </div> 
 	   <div class="row, form-group">
-		  <input type="number" class="form-control"	id="want46to55" th:value="${dataPageModel?.want46to55}"  name="want46to55" />
+		  <input type="number" class="form-control"	id="want46to55" th:value="${dataPageModel?.want46to55}"  
+		   name="want46to55" min=0 max=10 />
 	   </div> 
   </div> 
   <div class="col-2">
        <div class="row, form-group"><span class="form-control, border-0">55-100+</span></div>
  	   <div class="row, form-group">
-		  <input type="number" class="form-control"	id="have56Plus" th:value="${dataPageModel?.have56Plus}"  name="have56Plus" />
+		  <input type="number" class="form-control"	id="have56Plus" th:value="${dataPageModel?.have56Plus}"  
+		   name="have56Plus" min=0 max=10 />
 	   </div> 
 	   <div class="row, form-group">
-		  <input type="number" class="form-control"	id="want55Plus" th:value="${dataPageModel?.want55Plus}"  name="want55Plus" />
+		  <input type="number" class="form-control"	id="want55Plus" th:value="${dataPageModel?.want55Plus}"  
+		   name="want55Plus" min=0 max=10 />
 	   </div> 
   </div> 
     </div>      
