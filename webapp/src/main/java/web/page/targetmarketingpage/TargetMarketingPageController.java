@@ -55,7 +55,8 @@ public class TargetMarketingPageController {
 			,@RequestParam String wizarddataid
 			, @RequestParam (name="pctMen") String pctMenStr
 			, @RequestParam (name="pctWomen") String pctWomenStr
-			, @RequestParam (name="householdIncome") String householdIncomeStr,
+			/*, @RequestParam (name="householdIncome") String householdIncomeStr, */
+			, @RequestParam String householdIncome,
 			@RequestParam String describeIdealTargetConsumer
 			, @RequestParam (name="have12to18") String have12to18Str,
 			@RequestParam (name="have19to25") String  have19to25Str
@@ -86,10 +87,12 @@ public class TargetMarketingPageController {
 		if (!pctWomenStr.equals("")) {
 			pctWomen = Integer.parseInt(pctWomenStr);
 		}
+		/* tinas
 		int householdIncome = 0;
 		if (!householdIncomeStr.equals("")) {
 			householdIncome = Integer.parseInt(householdIncomeStr);
 		}	
+		 tinas */	
 		int have12to18 = 0;
 		if (!have12to18Str.equals("")) {
 			have12to18 = Integer.parseInt(have12to18Str);
@@ -141,12 +144,7 @@ public class TargetMarketingPageController {
 			want55Plus = Integer.parseInt(want55PlusStr);
 		}			
 		
-		
-		
-		
-		
-		
-		
+			
 		//internal next page or publish
 		String internalNextPage = nextPage;
 		if (publish != null) {
@@ -154,9 +152,8 @@ public class TargetMarketingPageController {
 		}
 		if (previous != null) {
 			internalNextPage= previousPage;
-                 }
-		
-		
+        }
+			
 		WizardData wizardData = new WizardData();
 	    wizardData.setPagename(PageNameEnum.TargetMarketingPage.toString());
 		wizardData.setPagesequence(Pages.TargetMarketingPage.getPageSequence());

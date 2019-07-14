@@ -4,7 +4,7 @@ public class TargetMarketingPageModel {
 	
 private int pctMen;
 private int pctWomen;
-private int householdIncome;
+private String householdIncome;
 private String describeIdealTargetConsumer;
 private int have12to18;
 private int have19to25;
@@ -19,7 +19,7 @@ private int want36to45;
 private int want46to55;
 private int want55Plus;
 
-public TargetMarketingPageModel(int pctMen, int pctWomen, int householdIncome,
+public TargetMarketingPageModel(int pctMen, int pctWomen, String householdIncome,
 		String describeIdealTargetConsumer, int have12to18, int have19to25, int have26to35, int have36to45,
 		int have46to55, int have56Plus, int want12to18, int want19to25, int want26to35, int want36to45,
 		int want46to55, int want55Plus) {
@@ -54,10 +54,10 @@ public int getPctWomen() {
 public void setPctWomen(int pctWomen) {
 	this.pctWomen = pctWomen;
 }
-public int getHouseholdIncome() {
+public String getHouseholdIncome() {
 	return householdIncome;
 }
-public void setHouseholdIncome(int householdIncome) {
+public void setHouseholdIncome(String householdIncome) {
 	this.householdIncome = householdIncome;
 }
 public String getDescribeIdealTargetConsumer() {
