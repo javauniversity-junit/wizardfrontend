@@ -92,7 +92,7 @@ public class TargetMarketingPageController {
 		if (!householdIncomeStr.equals("")) {
 			householdIncome = Integer.parseInt(householdIncomeStr);
 		}	
-		 tinas */	
+		tinas */	
 		int have12to18 = 0;
 		if (!have12to18Str.equals("")) {
 			have12to18 = Integer.parseInt(have12to18Str);
