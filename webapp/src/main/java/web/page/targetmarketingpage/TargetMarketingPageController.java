@@ -56,7 +56,7 @@ public class TargetMarketingPageController {
 			, @RequestParam (name="pctMen") String pctMenStr
 			, @RequestParam (name="pctWomen") String pctWomenStr
 			/*, @RequestParam (name="householdIncome") String householdIncomeStr, */
-			, @RequestParam String householdIncome,
+			, @RequestParam (required=false, value="householdIncome",defaultValue="") String householdIncome,
 			@RequestParam String describeIdealTargetConsumer
 			, @RequestParam (name="have12to18") String have12to18Str,
 			@RequestParam (name="have19to25") String  have19to25Str
