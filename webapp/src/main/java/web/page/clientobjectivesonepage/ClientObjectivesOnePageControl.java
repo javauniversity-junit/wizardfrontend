@@ -262,7 +262,6 @@ public class ClientObjectivesOnePageControl {
 			,@RequestParam(defaultValue = "0") String increaseMarketShareSortOrderStr
 			,@RequestParam(defaultValue = "0") String otherSortOrderStr 
 			,@RequestParam(defaultValue = "0") String utilizeCoopVendorDollarsSortOrderortOrderStr 
-			
 			,@RequestParam String wizarddataid
 			,@RequestParam String previousPage
 			,@RequestParam String publishPage
@@ -270,7 +269,8 @@ public class ClientObjectivesOnePageControl {
 			,@RequestParam(required=false, value="publish") String publish
 			,@RequestParam(required=false, value="previous") String previous
 			,@RequestParam String nextPage) {
-		mLog.info("starting save");
+		mLog.info("starting save saveClientObjectivesOnePage");
+		mLog.info("utilizeCoopVendorDollars save" + utilizeCoopVendorDollars);
 		
 		int  introduceNewDepartmentSortOrder = Integer.parseInt(introduceNewDepartmentSortOrderStr);
 		int  featureSpecificProductsSortOrder = Integer.parseInt(featureSpecificProductsSortOrderStr);
@@ -319,8 +319,11 @@ public class ClientObjectivesOnePageControl {
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
 		
-		ClientObjectivesOnePageModel pageModel = new ClientObjectivesOnePageModel(introduceNewDepartment, featureSpecificProducts,
-				callAttentiontoBrandsPrivateLabelsCarried, promoteOffPriceItemsServices,utilizeCoopVendorDollars,
+		ClientObjectivesOnePageModel pageModel = 
+				new ClientObjectivesOnePageModel(introduceNewDepartment
+						, featureSpecificProducts,
+				callAttentiontoBrandsPrivateLabelsCarried,
+				promoteOffPriceItemsServices,utilizeCoopVendorDollars,
 				retainCurrentConsumers, increaseCustomerVisits, increaseTrafficLeadCalls,
 				expandTargetConsumers, changeConsumerAttitudes, makePromotionalEventsStronger,
 				increaseDigitalMobileOnlineResponse, developAQuarterlySpike,
