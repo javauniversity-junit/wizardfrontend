@@ -20,8 +20,10 @@ public class ClientObjectivesOnePageModel {
 
 
 
-	public ClientObjectivesOnePageModel(boolean introduceNewDepartment, boolean featureSpecificProducts,
-			boolean callAttentiontoBrandsPrivateLabelsCarried, boolean promoteOffPriceItemsServices,
+	public ClientObjectivesOnePageModel(boolean introduceNewDepartment
+			, boolean featureSpecificProducts,
+			boolean callAttentiontoBrandsPrivateLabelsCarried, 
+			boolean promoteOffPriceItemsServices,
 			boolean utilizeCoopVendorDollars, boolean retainCurrentConsumers, boolean increaseCustomerVisits,
 			boolean increaseTrafficLeadCalls, boolean expandTargetConsumers, boolean changeConsumerAttitudes,
 			boolean makePromotionalEventsStronger, boolean increaseDigitalMobileOnlineResponse,
