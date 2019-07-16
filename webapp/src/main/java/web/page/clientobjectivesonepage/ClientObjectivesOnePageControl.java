@@ -64,6 +64,7 @@ public class ClientObjectivesOnePageControl {
 			clientObjectivesOnePageModel =(ClientObjectivesOnePageModel) JSONManager.convertFromJson(wizardData.getPagedata(),ClientObjectivesOnePageModel.class);
 		}
 		List<ClientObjectivesOnePageTwoModel> orderList = new ArrayList<ClientObjectivesOnePageTwoModel>();
+		
 		if (clientObjectivesOnePageModel.isCallAttentiontoBrandsPrivateLabelsCarried()) {
 			ClientObjectivesOnePageTwoModel callAttentiontoBrandsPrivateLabelsCarried = 
 					new ClientObjectivesOnePageTwoModel("callAttentiontoBrandsPrivateLabelsCarried",clientObjectivesOnePageModel.getCallAttentiontoBrandsPrivateLabelsCarriedSortOrder());
@@ -98,6 +99,13 @@ public class ClientObjectivesOnePageControl {
 		if (clientObjectivesOnePageModel.isEstablishorReestablishBusinessImage()) {
 			ClientObjectivesOnePageTwoModel modelObj = 
 					new ClientObjectivesOnePageTwoModel("establishorReestablishBusinessImage",clientObjectivesOnePageModel.getEstablishorReestablishBusinessImageSortOrder());
+			orderList.add(modelObj);
+		
+		}
+		
+		if (clientObjectivesOnePageModel.isCreatePentUpDemand()) {
+			ClientObjectivesOnePageTwoModel modelObj = 
+					new ClientObjectivesOnePageTwoModel("createPentUpDemand",clientObjectivesOnePageModel.getCreatePentUpDemandSortOrder());
 			orderList.add(modelObj);
 		
 		}
