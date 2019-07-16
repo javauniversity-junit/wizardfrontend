@@ -58,44 +58,44 @@
                 </div>
                 <div class="row media">
                     <div class="col-6">
-                        <input type="text" th:value="${dataPageModel?.lastYearLabel1}" maxlength="35" class="form-control" id="lastYearLabel1" name="lastYearLabel1" />
+                        <input type="text" th:value="${dataPageModel?.lastYearLabel1}" maxlength="50" class="form-control" id="lastYearLabel1" name="lastYearLabel1" />
                     </div>
                     <div class="col-6">
-                        <input type="text" class="form-control" id="lastYearValue1" maxlength="35"
+                        <input type="text" class="form-control" id="lastYearValue1" maxlength="50"
 			       th:value="${dataPageModel?.lastYearValue1}" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue1" />
                     </div>
                 </div>
                 <div class="row media">
                     <div class="col-6">
-                        <input maxlength="35" type="text" th:value="${dataPageModel?.lastYearLabel2}" class="form-control" id="lastYearLabel2" name="lastYearLabel2" />
+                        <input maxlength="50" type="text" th:value="${dataPageModel?.lastYearLabel2}" class="form-control" id="lastYearLabel2" name="lastYearLabel2" />
                     </div>
                     <div class="col-6">
-                        <input maxlength="35" type="text" class="form-control" id="lastYearValue2"
+                        <input maxlength="50" type="text" class="form-control" id="lastYearValue2"
 			       th:value="${dataPageModel?.lastYearValue2}"  data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue2" />
                     </div>
                 </div>
                 <div class="row media">
                     <div class="col-6">
-                        <input maxlength="35" type="text" th:value="${dataPageModel?.lastYearLabel3}" class="form-control" id="lastYearLabel3" name="lastYearLabel3" />
+                        <input maxlength="50" type="text" th:value="${dataPageModel?.lastYearLabel3}" class="form-control" id="lastYearLabel3" name="lastYearLabel3" />
                     </div>
                     <div class="col-6">
-                        <input maxlength="35" type="text" class="form-control" id="lastYearValue3" th:value="${dataPageModel?.lastYearValue3}" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue3" />
-                    </div>
-                </div>
-                <div class="row media">
-                    <div class="col-6">
-                        <input maxlength="35" type="text" th:value="${dataPageModel?.lastYearLabel4}"  class="form-control" id="lastYearLabel4" name="lastYearLabel4" />
-                    </div>
-                    <div class="col-6">
-                        <input maxlength="35" type="text" class="form-control" id="lastYearValue4" th:value="${dataPageModel?.lastYearValue4}"  data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue4" />
+                        <input maxlength="50" type="text" class="form-control" id="lastYearValue3" th:value="${dataPageModel?.lastYearValue3}" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue3" />
                     </div>
                 </div>
                 <div class="row media">
                     <div class="col-6">
-                        <input maxlength="35" type="text" th:value="${dataPageModel?.lastYearLabel5}" class="form-control" id="lastYearLabel5" name="lastYearLabel5" />
+                        <input maxlength="50" type="text" th:value="${dataPageModel?.lastYearLabel4}"  class="form-control" id="lastYearLabel4" name="lastYearLabel4" />
                     </div>
                     <div class="col-6">
-                        <input maxlength="35" type="text" class="form-control" id="lastYearValue5" th:value="${dataPageModel?.lastYearValue5}" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue5" />
+                        <input maxlength="50" type="text" class="form-control" id="lastYearValue4" th:value="${dataPageModel?.lastYearValue4}"  data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue4" />
+                    </div>
+                </div>
+                <div class="row media">
+                    <div class="col-6">
+                        <input maxlength="50" type="text" th:value="${dataPageModel?.lastYearLabel5}" class="form-control" id="lastYearLabel5" name="lastYearLabel5" />
+                    </div>
+                    <div class="col-6">
+                        <input maxlength="50" type="text" class="form-control" id="lastYearValue5" th:value="${dataPageModel?.lastYearValue5}" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue5" />
                     </div>
                 </div>
                 <div class="row media">
@@ -126,7 +126,7 @@
                                 B.
                             </div>
                             <div class="col-10">
-                                <input type="text" maxlength="35"
+                                <input type="text" maxlength="50"
                                 th:value="${dataPageModel?.totalMediaInvestment}"  class="form-control"
                                     data-type="currency" 
                                     pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
@@ -140,7 +140,7 @@
                                 /
                             </div>
                             <div class="col-10">
-                                <input oninput="totalRow()" type="number" maxlength="35"
+                                <input oninput="totalRow()" type="number" maxlength="50"
                                 th:value="${dataPageModel?.pctTAIGrossSalesLastYear}" class="form-control" id="pctTAIGrossSalesLastYear" name="pctTAIGrossSalesLastYear">
                             </div>
                         </div>
@@ -154,7 +154,7 @@
                             </div>
                         
                             <div class="col-10">
-                                <input type="text"  maxlength="35"
+                                <input type="text"  maxlength="50"
                                 th:value="${dataPageModel?.grossSalesLastyear}" readonly class="form-control" id="grossSalesLastyear" name="grossSalesLastyear">
                             </div>
                         
@@ -221,7 +221,7 @@
                                 C.
                             </div>
                             <div class="col-10">
-                                <input data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" type="text" maxlength="35"
+                                <input data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" type="text" maxlength="50"
 				       th:value="${dataPageModel?.taiNext12Months}" class="form-control" id="taiNext12Months" name="taiNext12Months">
                             </div>
                         </div>
@@ -233,7 +233,7 @@
                             </div>
                             <div class="col-10">
                                 <input type="number" th:value="${dataPageModel?.pctGrossSales}" oninput="totalRow()"
-				       class="form-control" maxlength="35"
+				       class="form-control" maxlength="50"
 				        id="pctGrossSales" name="pctGrossSales">
                             </div>
                         </div>
@@ -318,18 +318,18 @@
                 </div>
                 <div class="row media">
                     <div class="col-6">
-                        <input type="text" maxlength="35"
+                        <input type="text" maxlength="50"
 			       th:value="${dataPageModel?.proposedLabel1}"  class="form-control" id="proposedLabel1" name="proposedLabel1" />
                     </div>
                     <div class="col-6">
-                        <input type="text" class="form-control" id="proposedValue1" maxlength="35"
+                        <input type="text" class="form-control" id="proposedValue1" maxlength="50"
 			       th:value="${dataPageModel?.proposedValue1}" data-type="currency"
 			       pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="proposedValue1" />
                     </div>
                 </div>
                 <div class="row media">
                     <div class="col-6">
-                        <input type="text" th:value="${dataPageModel?.proposedLabel2}" maxlength="35"
+                        <input type="text" th:value="${dataPageModel?.proposedLabel2}" maxlength="50"
 			       class="form-control" id="proposedLabel2" name="proposedLabel2" />
                     </div>
                     <div class="col-6">
@@ -340,41 +340,41 @@
                 </div>
                 <div class="row media">
                     <div class="col-6">
-                        <input type="text"  maxlength="35" 
+                        <input type="text"  maxlength="50" 
 			       th:value="${dataPageModel?.proposedLabel3}" class="form-control" id="proposedLabel3" name="proposedLabel3" />
                     </div>
                     <div class="col-6">
-                        <input type="text" class="form-control" maxlength="35"
+                        <input type="text" class="form-control" maxlength="50"
 			       id="proposedValue3" th:value="${dataPageModel?.proposedValue3}"
 			       data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="proposedValue3" />
                     </div>
                 </div>
                 <div class="row media">
                     <div class="col-6">
-                        <input type="text" th:value="${dataPageModel?.proposedLabel4}" maxlength="35"
+                        <input type="text" th:value="${dataPageModel?.proposedLabel4}" maxlength="50"
 			       class="form-control" id="proposedLabel4" name="proposedLabel4" />
                     </div>
                     <div class="col-6">
-                        <input type="text" class="form-control" id="proposedValue4" maxlength="35"
+                        <input type="text" class="form-control" id="proposedValue4" maxlength="50"
 			       th:value="${dataPageModel?.proposedValue4}"  data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="proposedValue4" />
                     </div>
                 </div>
                 <div class="row media">
                     <div class="col-6">
-                        <input maxlength="35" type="text" th:value="${dataPageModel?.proposedLabel5}"  class="form-control" id="proposedLabel5" name="proposedLabel5" />
+                        <input maxlength="50" type="text" th:value="${dataPageModel?.proposedLabel5}"  class="form-control" id="proposedLabel5" name="proposedLabel5" />
                     </div>
                     <div class="col-6">
-                        <input  maxlength="35" type="text" class="form-control" id="proposedValue5" th:value="${dataPageModel?.proposedValue5}"
+                        <input  maxlength="50" type="text" class="form-control" id="proposedValue5" th:value="${dataPageModel?.proposedValue5}"
                                data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="proposedValue5" />
                     </div>
                 </div>
                 <div class="row media">
                     <div class="col-6">
-                        <input type="text" th:value="${dataPageModel?.proposedLabel6}" maxlength="35"
+                        <input type="text" th:value="${dataPageModel?.proposedLabel6}" maxlength="50"
                                class="form-control" id="proposedLabel6" name="proposedLabel6" />
                     </div>
                     <div class="col-6">
-                        <input type="text" class="form-control" maxlength="35"
+                        <input type="text" class="form-control" maxlength="50"
 			       id="proposedValue6" th:value="${dataPageModel?.proposedValue6}"
                                 data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="proposedValue6" />
                     </div>
@@ -398,7 +398,7 @@
                                 E.
                             </div>
                             <div class="col-10">
-                                <input type="text" maxlength="35"
+                                <input type="text" maxlength="50"
                                  th:value="${dataPageModel?.taiShouldBe}"
                                   data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" 
                                         class="form-control" id="taiShouldBe" 
