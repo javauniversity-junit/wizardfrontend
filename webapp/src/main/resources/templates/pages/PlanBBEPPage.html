@@ -61,14 +61,14 @@
 					<input type="text" class="form-control"
 					       data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 						id="planBAverageSale" th:value="${dataPageModel?.planBAverageSale}" 
-						
+						oninput="calculate()"
 						name="planBAverageSale" />
 				</div>
 				<div class="form-group">
 					<label for="planBGrossMargin">B. Gross profit margin on average sale (sale less cost of goods sold)</label>
 					<input
-						type="text" th:value="${dataPageModel?.planBGrossMargin}"
-						class="form-control" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+						type="number" th:value="${dataPageModel?.planBGrossMargin}"
+						class="form-control" oninput="calculate()"
 						id="planBGrossMargin" name="planBGrossMargin" />
 				</div>
 				<div class="form-group">
@@ -81,7 +81,8 @@
 				<div class="form-group">
 					<label for="planBProspectValue">D. Projected prospect value (A*B*C)</label> <input type="text"
 						th:value="${dataPageModel?.planBProspectValue}" readonly
-						class="form-control" id="planBProspectValue" 
+						class="form-control" id="planBProspectValue"
+						data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" 
 						name="planBProspectValue" />
 				</div>
 				<div class="form-group">
