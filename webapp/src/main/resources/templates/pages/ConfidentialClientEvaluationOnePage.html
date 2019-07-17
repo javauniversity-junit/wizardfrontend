@@ -126,7 +126,7 @@
                                 B.
                             </div>
                             <div class="col-10">
-                                <input type="text" maxlength="50"
+                                <input type="text" maxlength="50" readonly
                                 th:value="${dataPageModel?.totalMediaInvestment}"  class="form-control"
                                     data-type="currency" 
                                     pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
@@ -140,7 +140,7 @@
                                 /
                             </div>
                             <div class="col-10">
-                                <input oninput="totalRow()" type="number" maxlength="50"
+                                <input readonly type="number" maxlength="50"
                                 th:value="${dataPageModel?.pctTAIGrossSalesLastYear}" class="form-control" id="pctTAIGrossSalesLastYear" name="pctTAIGrossSalesLastYear">
                             </div>
                         </div>
@@ -155,7 +155,8 @@
                         
                             <div class="col-10">
                                 <input type="text"  maxlength="50"
-                                th:value="${dataPageModel?.grossSalesLastyear}" readonly class="form-control" id="grossSalesLastyear" name="grossSalesLastyear">
+                                th:value="${dataPageModel?.grossSalesLastyear}" data-type="currency" 
+                                    pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" class="form-control" id="grossSalesLastyear" name="grossSalesLastyear">
                             </div>
                         
                         </div>
@@ -232,8 +233,8 @@
                                 /
                             </div>
                             <div class="col-10">
-                                <input type="number" th:value="${dataPageModel?.pctGrossSales}" oninput="totalRow()"
-				       class="form-control" maxlength="50"
+                                <input type="number" th:value="${dataPageModel?.pctGrossSales}" 
+				       class="form-control" maxlength="50" readonly
 				        id="pctGrossSales" name="pctGrossSales">
                             </div>
                         </div>
@@ -247,8 +248,9 @@
                             </div>
                         
                             <div class="col-10">
-                                <input type="text" readonly
-				       th:value="${dataPageModel?.estimatedGrossSalesNext12Months}"
+                                <input type="text" 
+				       th:value="${dataPageModel?.estimatedGrossSalesNext12Months}" data-type="currency" 
+                                    pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" 
 				       class="form-control" id="estimatedGrossSalesNext12Months" name="estimatedGrossSalesNext12Months">
                             </div>
                         

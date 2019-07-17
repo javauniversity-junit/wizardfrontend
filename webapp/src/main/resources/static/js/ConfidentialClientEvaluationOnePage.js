@@ -10,7 +10,7 @@ function calculateOne()
 	//alert ("averageRepeatSales " + averageRepeatSales);
 	var pctTAIGrossSalesLastYear = document.getElementById("pctTAIGrossSalesLastYear").value;
 	var totalMediaInvestmentInput = document.getElementById("totalMediaInvestmentInput").value;
-	
+	var grossSalesLastyearCal = convertToNumberFromCurrency(document.getElementById("grossSalesLastyear").value);
 	//TotalMediaInvestment / pctTAIGrossSalesLastYear = GrossSalesLastyear
 	
 	var lastYearValue4 = document.getElementById("lastYearValue4").value;
@@ -44,13 +44,19 @@ function calculateOne()
 		taiNext12MonthsCal = Number(taiNext12Months);
 	}
 	
+	var estimatedGrossSalesNext12MonthsCal = 
+		convertToNumberFromCurrency(document.getElementById("estimatedGrossSalesNext12Months").value);
+	
+	if (taiNext12MonthsCal > 0 && estimatedGrossSalesNext12MonthsCal > 0) {
+	    document.getElementById("pctGrossSales").value = Math.round(estimatedGrossSalesNext12MonthsCal/taiNext12MonthsCal);
+	}
 	
 	if (taiNext12MonthsCal > 0 && pctGrossSales > 0) {
 		var percentage = 100/pctGrossSales;
 		var total = taiNext12MonthsCal/ percentage;
 		//total = Math.round(total);
 		total = CurrencyFormatted(total);
-		document.getElementById("estimatedGrossSalesNext12Months").value =  total;
+		//document.getElementById("estimatedGrossSalesNext12Months").value =  total;
 		
 	}
 	
@@ -68,7 +74,7 @@ function calculateOne()
 		var total = totalMediaInvestmentCal/ percentage;
 		//total = Math.round(total);
 		total = CurrencyFormatted(total);
-		document.getElementById("grossSalesLastyear").value =  total;
+		//document.getElementById("grossSalesLastyear").value =  total;
 		
 	}
 	
@@ -116,6 +122,14 @@ function calculateOne()
 	totalMediaInvestment = CurrencyFormatted(totalMediaInvestment);
 	
 	document.getElementById("totalMediaInvestment").value =  totalMediaInvestment;
+	document.getElementById("totalMediaInvestmentInput").value = totalMediaInvestment;
+	var totalMediaInvestmentTemp = convertToNumberFromCurrency(totalMediaInvestment);
+	
+	if (totalMediaInvestmentTemp != 0 && grossSalesLastyearCal != 0) {
+		document.getElementById("pctTAIGrossSalesLastYear").value = Math.round(grossSalesLastyearCal/totalMediaInvestmentTemp);
+	}
+	
+	
 	//document.getElementById("averageCustomerValue").value = e_averageCustomerValue;//e
 	//document.getElementById("lifetimeValuePerCustomer").value = g_lifetimeValuePerCustomer;
 	//document.getElementById("prospectsNeededToBreakEven").value = i_prospectsNeededToBreakEven;
