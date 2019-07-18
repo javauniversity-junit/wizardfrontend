@@ -1,15 +1,16 @@
 #!/bin/sh
 # This is a comment!
-echo Hello World	# This is a comment, too!
-#$ chmod a+rx my-script.sh
-#$ ./my-script.sh
+echo Starting	# This is a comment, too!
+#$ sudo chmod a+rx deploy.sh
+#$ ./deploy.sh
 cd /Users/andrewhinton/Documents/GitHub/wizardfrontend/webapp
 mvn clean install -DskipTests
-echo Hello World	# This is a comment, too!
+echo Upload file	# This is a comment, too!
+cd /Users/andrewhinton/Documents/GitHub/wizardfrontend/webapp/target/
 HOST='97.74.232.85'
 USER='wizard'
 PASSWD='Superman123#'
-FILE='/Users/andrewhinton/Documents/GitHub/wizardfrontend/webapp/target/scrs.war'
+FILE='scrs.war'
 REMOTEPATH='.'
 
 
