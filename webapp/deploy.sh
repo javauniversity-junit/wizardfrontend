@@ -6,9 +6,9 @@ echo Hello World	# This is a comment, too!
 cd /Users/andrewhinton/Documents/GitHub/wizardfrontend/webapp
 mvn clean install -DskipTests
 echo Hello World	# This is a comment, too!
-HOST='ftp.example.com'
-USER='yourid'
-PASSWD='yourpw'
+HOST='97.74.232.85'
+USER='wizard'
+PASSWD='Superman123#'
 FILE='file.txt'
 ftp -n $HOST <<END_SCRIPT
 quote USER $USER
@@ -18,3 +18,5 @@ put $FILE
 quit
 END_SCRIPT
 exit 0
+
+
