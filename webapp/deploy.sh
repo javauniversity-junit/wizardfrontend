@@ -9,10 +9,14 @@ echo Hello World	# This is a comment, too!
 HOST='97.74.232.85'
 USER='wizard'
 PASSWD='Superman123#'
-FILE='file.txt'
+FILE='/Users/andrewhinton/Documents/GitHub/wizardfrontend/webapp/target/scrs.war'
+REMOTEPATH='.'
+
+
 ftp -n $HOST <<END_SCRIPT
 quote USER $USER
 quote PASS $PASSWD
+cd $REMOTEPATH
 binary
 put $FILE
 quit
