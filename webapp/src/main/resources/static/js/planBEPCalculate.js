@@ -16,6 +16,7 @@ function calculate()
 	
 	document.getElementById("planAProspectValue").value =  planAProspectValue;
 
+	document.getElementById("planAInvestment").value =  document.getElementById("planAProposedPage_planAMonthly").value;
 	
 	function FormatAmount(amount) {
 		var i = parseFloat(amount);
