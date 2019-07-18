@@ -14,7 +14,7 @@ FILE='scrs.war'
 REMOTEPATH='.'
 
 
-ftp -n $HOST <<END_SCRIPT
+ftp -nd $HOST <<END_SCRIPT
 quote USER $USER
 quote PASS $PASSWD
 cd $REMOTEPATH
