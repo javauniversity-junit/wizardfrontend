@@ -97,7 +97,7 @@ function formatCurrency(input, blur) {
     
     // On blur make sure 2 numbers after decimal
     if (blur === "blur") {
-      right_side += "00";
+     //aah right_side += "00";
      
     }
     
@@ -116,7 +116,7 @@ function formatCurrency(input, blur) {
     
     // final formatting
     if (blur === "blur") {
-      input_val += ".00";
+      //aah input_val += ".00";
     }
   }
   
