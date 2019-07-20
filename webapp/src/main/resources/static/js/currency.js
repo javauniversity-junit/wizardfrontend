@@ -139,7 +139,7 @@ function CurrencyFormatted(amount) {
 	i = parseInt((i + .005) * 100);
 	i = i / 100;
 	s = new String(i);
-	if(s.indexOf('.') < 0) { s += '.00'; }
+	//aah if(s.indexOf('.') < 0) { s += '.00'; }
 	if(s.indexOf('.') == (s.length - 2)) { s += '0'; }
 	s = minus + s;
 	s = "$" + s;
