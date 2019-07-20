@@ -15,7 +15,8 @@ function calculate()
 	var yearsOfPatronageCal =0;
 	var monthlyInvestmentAverageCal = 0;
 	
-	if (averageSale != null) {
+	if (averageSale != null && 
+		averageSale != "") {
 		averageSale = averageSale.substring(1);
 		averageSale = removeComma(averageSale);;
 		averageSaleCal = Number(averageSale);
