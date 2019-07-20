@@ -1,4 +1,4 @@
-// Jquery Dependency
+// Jquery Dependency 1.1
 // Jquery Dependency
 
 $("input[data-type='currency']").on({
