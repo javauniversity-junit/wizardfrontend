@@ -43,9 +43,19 @@ public class PlanABEPPageController {
 			dataPageModel =(PlanABEPPageModel)JSONManager.convertFromJson(wizardData.getPagedata(),PlanABEPPageModel.class);
 			
 		}
+		WizardData wizardDataOther = wizardDataRepository.findByPagesequenceAndWizardid(Pages.PlanAProposedPage.getPageSequence(), wizard.getWizardid());
+		PlanProposedPageModel dataPageModelOther = null;
+		if (wizardDataOther != null) {
+			dataPageModelOther =(PlanProposedPageModel)JSONManager.convertFromJson(wizardDataOther.getPagedata(),PlanProposedPageModel.class);
+			
+		}
+		
+		
+		
 		//DemographicManager.convertFromJson(json)
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("dataPageModel", dataPageModel);
+		model.addAttribute("dataPageModelOther", dataPageModelOther);
 		model.addAttribute("wizard", wizard);
 		return "pages/PlanABEPPage";
 	}
