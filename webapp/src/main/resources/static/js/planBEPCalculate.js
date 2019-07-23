@@ -23,6 +23,8 @@ function calculate()
 	var planAMonths = convertIntToNumber(document.getElementById("planAMonths").value); // i
 	var planAAdditionalGrossSales = planAGrossProfitOnSales * planAMonths; // j = hi
 	
+	document.getElementById("planAAverageSale").value = FormatAmount(planAAverageSale);
+	document.getElementById("planAInvestment").value = FormatAmount(planAInvestment);
 	document.getElementById("planAProspectValue").value =  planAProspectValue;
 	document.getElementById("planAProspectsNeeded").value =  Math.round(planAProspectsNeeded * 10) / 10;
 	document.getElementById("planAProspectSalesNeeded").value =  Math.round(planAProspectSalesNeeded *10) / 10;	
@@ -42,6 +44,7 @@ function calculate()
 		if(s.indexOf('.') < 0) { s += '.00'; }
 		if(s.indexOf('.') == (s.length - 2)) { s += '0'; }
 		s = minus + s;
+		if(s.indexOf('.') > 0) { s = s.substr(0,s.indexOf('.')); }
 		s = "$" + s.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 		return s;
 	}

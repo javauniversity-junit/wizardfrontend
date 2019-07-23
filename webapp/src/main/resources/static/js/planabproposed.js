@@ -7,7 +7,7 @@ function calculatePlanDaily () {
 	planMonthly_unformatted = planMonthly.replace(/\$/g, "");		
     var planDaily = FormatAmount(Math.round(planMonthly_unformatted / 30));
     document.getElementById("planADaily").value = planDaily;
-    //document.getElementById("planADaily").value = planMonthly_unformatted;
+    document.getElementById("planAMonthly").value = FormatAmount(Math.round(planMonthly));
 }
 
 function FormatAmount(amount) {
@@ -22,6 +22,7 @@ function FormatAmount(amount) {
 	if(s.indexOf('.') < 0) { s += '.00'; }
 	if(s.indexOf('.') == (s.length - 2)) { s += '0'; }
 	s = minus + s;
-	s = "$" + s;
+	if(s.indexOf('.') > 0) { s = s.substr(0,s.indexOf('.')); }
+	s = "$" + s.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	return s;
 }
