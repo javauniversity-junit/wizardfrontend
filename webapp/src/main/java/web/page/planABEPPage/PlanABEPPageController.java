@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import web.model.Wizard;
 import web.model.WizardData;
 import web.page.Pages;
-
+import web.page.planproposedpage.PlanProposedPageModel;
 import web.page.JSONManager;
 import web.page.PageNameEnum;
 import web.repository.WizardDataRepository;
