@@ -52,9 +52,10 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         	Agent agent = mAgentRepository.findByAddressAndPassword(name,password);
         	
         	if (agent == null ) {
-        		mLog.info("could not find contact");
+        		mLog.info("could not find agent [" + name);
         		return null;
         	}
+		mLog.info("found agent [" + name);
         	Optional<Contact> contactOpt = mContactRepository.findById(agent.getContactId());
         	contact = contactOpt.orElse(null);
         if (contact == null) {
