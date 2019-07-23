@@ -5,6 +5,7 @@ function calculate()
 	var planAGrossMargin = document.getElementById("planAGrossMargin").value; // b
 	var planAClosingPct = document.getElementById("planAClosingPct").value; // c 
 	var planAProspectValue = 0;
+	var planAProspectValueRaw = 0;
 	
 	if (document.getElementById("planAGrossMargin").value != null &&
 		document.getElementById("planAGrossMargin").value != ""	&&
@@ -12,11 +13,22 @@ function calculate()
 		document.getElementById("planAClosingPct").value != "")
 	{
 		    planAProspectValue= FormatAmount(Math.round(planAAverageSale * (planAGrossMargin/100) * (planAClosingPct/100)));
+		    planAProspectValueRaw = planAAverageSale * (planAGrossMargin/100) * (planAClosingPct/100);
 	}
 	
+	var planAInvestment = convertToNumberFromCurrency(document.getElementById("planAInvestment").value); // e
+	var planAProspectsNeeded = planAProspectValue == 0 ? 0 : planAInvestment/planAProspectValueRaw ; // f = e/d
+	var planAProspectSalesNeeded = planAProspectsNeeded * (planAClosingPct/100) ; // g = fc
+	var planAGrossProfitOnSales = planAProspectSalesNeeded * planAAverageSale; // h = ga
+	var planAMonths = convertIntToNumber(document.getElementById("planAMonths").value); // i
+	var planAAdditionalGrossSales = planAGrossProfitOnSales * planAMonths; // j = hi
+	
 	document.getElementById("planAProspectValue").value =  planAProspectValue;
-
-	document.getElementById("planAInvestment").value =  document.getElementById("planAProposedPage_planAMonthly").value;
+	document.getElementById("planAProspectsNeeded").value =  Math.round(planAProspectsNeeded * 10) / 10;
+	document.getElementById("planAProspectSalesNeeded").value =  Math.round(planAProspectSalesNeeded *10) / 10;	
+	document.getElementById("planAGrossProfitOnSales").value =  FormatAmount(Math.round(planAGrossProfitOnSales));
+	document.getElementById("planAAdditionalGrossSales").value =  FormatAmount(Math.round(planAAdditionalGrossSales));
+	
 	
 	function FormatAmount(amount) {
 		var i = parseFloat(amount);
@@ -30,7 +42,7 @@ function calculate()
 		if(s.indexOf('.') < 0) { s += '.00'; }
 		if(s.indexOf('.') == (s.length - 2)) { s += '0'; }
 		s = minus + s;
-		s = "$" + s;
+		s = "$" + s.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 		return s;
 	}
 	
@@ -70,8 +82,3 @@ function calculate()
 */
 }
 
-
-function totalRow() {
-	calculate();
-	//document.getElementById("totalRow").value = total;
-}
