@@ -59,7 +59,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         	Optional<Contact> contactOpt = mContactRepository.findById(agent.getContactId());
         	contact = contactOpt.orElse(null);
         if (contact == null) {
-        	mLog.info("could not find contact");
+        	mLog.info("could not find contact---------" + agent.getContactId());
         	return null;
         }
 		//determine if contact is valid
