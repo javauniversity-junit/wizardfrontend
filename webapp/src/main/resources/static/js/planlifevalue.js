@@ -15,7 +15,8 @@ function calculate()
 	var yearsOfPatronageCal =0;
 	var monthlyInvestmentAverageCal = 0;
 	
-	if (averageSale != null) {
+	if (averageSale != null && 
+		averageSale != "") {
 		averageSale = averageSale.substring(1);
 		averageSale = removeComma(averageSale);;
 		averageSaleCal = Number(averageSale);
@@ -47,9 +48,9 @@ function calculate()
 	console.log("g_lifetimeValuePerCustomer " +  g_lifetimeValuePerCustomer);
 	console.log("i_prospectsNeededToBreakEven " +  i_prospectsNeededToBreakEven);
 	
-	document.getElementById("grossProfitPerSale").value =  c_grossProfitPerSale;
-	document.getElementById("averageCustomerValue").value = e_averageCustomerValue;//e
-	document.getElementById("lifetimeValuePerCustomer").value = g_lifetimeValuePerCustomer;
+	document.getElementById("grossProfitPerSale").value =  formatCurrency(Math.round(c_grossProfitPerSale));
+	document.getElementById("averageCustomerValue").value = formatCurrency(Math.round(e_averageCustomerValue));//e
+	document.getElementById("lifetimeValuePerCustomer").value = formatCurrency(Math.round(g_lifetimeValuePerCustomer));
 	document.getElementById("prospectsNeededToBreakEven").value = i_prospectsNeededToBreakEven;
 }
 
@@ -57,4 +58,20 @@ function calculate()
 function totalRow() {
 	calculate();
 	//document.getElementById("totalRow").value = total;
+}
+
+function FormatAmount(amount) {
+	var i = parseFloat(amount);
+	if(isNaN(i)) { i = 0.00; }
+	var minus = '';
+	if(i < 0) { minus = '-'; }
+	i = Math.abs(i);
+	i = parseInt((i + .005) * 100);
+	i = i / 100;
+	s = new String(i);
+	if(s.indexOf('.') < 0) { s += '.00'; }
+	if(s.indexOf('.') == (s.length - 2)) { s += '0'; }
+	s = minus + s;
+	s = "$" + s;
+	return s;
 }

@@ -111,7 +111,7 @@
 
 						<div class="form-group row">
 							<div class="col-4">
-								<label for="ex1">July</label> <input class="form-control"
+								<label for="ex1">Jul</label> <input class="form-control"
 									id="jul" type="text" data-type="currency"
 									pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="jul">
 							</div>
@@ -121,7 +121,7 @@
 									pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="aug">
 							</div>
 							<div class="col-4">
-								<label for="ex3">Sept</label> <input class="form-control"
+								<label for="ex3">Sep</label> <input class="form-control"
 									id="sep" type="text" data-type="currency"
 									pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="sep">
 							</div>
@@ -235,7 +235,7 @@
 								</select>
 							</div>
 							<div class="col-3">
-								<label for="ex3">July</label> <select class="selectpicker"
+								<label for="ex3">Jul</label> <select class="selectpicker"
 									name="jultype" id="jultype">
 									<option>Base</option>
 									<option>Slow</option>
@@ -253,7 +253,7 @@
 						</div>
 						<div class="form-group row">
 							<div class="col-3">
-								<label for="ex1">Sept</label> <select class="selectpicker"
+								<label for="ex1">Sep</label> <select class="selectpicker"
 									name="septype" id="septype">
 									<option>Base</option>
 									<option>Slow</option>
@@ -299,7 +299,7 @@
 							document.getElementById('juntype').value=/*[[${dataPageModel?.junType}]]*/;
 							document.getElementById('jultype').value=/*[[${dataPageModel?.julType}]]*/;						
 							document.getElementById('augtype').value=/*[[${dataPageModel?.augType}]]*/;
-							document.getElementById('novtype').value=/*[[${dataPageModel?.novType}]]*/;
+							document.getElementById('septype').value=/*[[${dataPageModel?.sepType}]]*/;
 							document.getElementById('octtype').value=/*[[${dataPageModel?.octType}]]*/;
 							document.getElementById('novtype').value=/*[[${dataPageModel?.novType}]]*/;		
 							document.getElementById('dectype').value=/*[[${dataPageModel?.decType}]]*/;	
@@ -354,9 +354,6 @@
 	</div>
 
 
-
-	</div>
-
 	<!-- JavaScript files-->
 	<script
 		src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
@@ -381,9 +378,6 @@
 	<script src="js/currency.js">
 		
 	</script>
-
-
-
 
 	<script>
 		$(function() {
