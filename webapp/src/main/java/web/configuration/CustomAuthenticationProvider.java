@@ -38,7 +38,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 
     @Override
     public Authentication authenticate(final Authentication authentication) throws AuthenticationException {
-	     mLog.info("starting authenticate");
+	     mLog.info("------------starting authenticate-------------");
 	     Contact contact = null;
         final String name = authentication.getName();
         final String password = authentication.getCredentials().toString();
