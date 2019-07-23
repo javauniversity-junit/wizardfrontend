@@ -142,7 +142,10 @@
 	<script th:inline="javascript">
 		/*<![CDATA[*/
 		$(function() {
-			$("#headerId").load("header.html?ID=/*[[${wizard.wizardid}]]*/");
+			
+			// Store
+                        sessionStorage.setItem("ID", /*[[${wizard.wizardid}]]*/);
+			$("#headerId").load("header.html?");
 		});
 		/*]]>*/
 	</script>
