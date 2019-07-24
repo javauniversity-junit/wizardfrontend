@@ -249,10 +249,14 @@
 	<script src="js/currency.js"></script>
 	<script src="js/planbBEPCalculate.js"></script>
     <script src="js/targetmarketing.js"></script>
-	<script>
+		<script th:inline="javascript">
+		/*<![CDATA[*/
 		$(function() {
+			// Store
+            sessionStorage.setItem("ID", /*[[${wizard.wizardid}]]*/);
 			$("#headerId").load("header.html");
 		});
+		/*]]>*/
 	</script>
 
 

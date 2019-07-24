@@ -163,10 +163,14 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src="js/currency.js"></script>
     <script src="js/planabproposed.js"></script>
-	<script>
+	<script th:inline="javascript">
+		/*<![CDATA[*/
 		$(function() {
+			// Store
+            sessionStorage.setItem("ID", /*[[${wizard.wizardid}]]*/);
 			$("#headerId").load("header.html");
 		});
+		/*]]>*/
 	</script>
 
 

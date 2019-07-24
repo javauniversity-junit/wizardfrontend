@@ -197,10 +197,14 @@
 		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js"></script>
 <script src="js/marketplaceCompetition.js"></script>
 
-	<script>
+		<script th:inline="javascript">
+		/*<![CDATA[*/
 		$(function() {
+			// Store
+            sessionStorage.setItem("ID", /*[[${wizard.wizardid}]]*/);
 			$("#headerId").load("header.html");
 		});
+		/*]]>*/
 	</script>
 
 </body>
