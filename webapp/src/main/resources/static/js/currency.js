@@ -67,6 +67,8 @@ function formatCurrency(input, blur) {
   
   // get input value
   var input_val = input.val();
+  //remove period
+  input_val = input_val.replace('.', "");
   
   // don't validate empty input
   if (input_val === "") { return; }
