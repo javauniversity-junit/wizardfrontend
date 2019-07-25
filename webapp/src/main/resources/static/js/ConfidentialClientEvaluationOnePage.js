@@ -127,7 +127,7 @@ function calculateOne()
 	
 	if (totalMediaInvestmentTemp != 0 && grossSalesLastyearCal != 0) {
 				
-		document.getElementById("pctTAIGrossSalesLastYear").value = Math.round(100 * (totalMediaInvestmentTemp/grossSalesLastyearCal));
+		document.getElementById("pctTAIGrossSalesLastYear").value = Math.round( totalMediaInvestmentTemp/grossSalesLastyearCal);
 
 		//document.getElementById("pctTAIGrossSalesLastYear").value = Math.round(grossSalesLastyearCal/totalMediaInvestmentTemp);
 	}
