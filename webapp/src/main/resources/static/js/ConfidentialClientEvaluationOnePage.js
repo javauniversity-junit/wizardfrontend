@@ -126,7 +126,10 @@ function calculateOne()
 	var totalMediaInvestmentTemp = convertToNumberFromCurrency(totalMediaInvestment);
 	
 	if (totalMediaInvestmentTemp != 0 && grossSalesLastyearCal != 0) {
-		document.getElementById("pctTAIGrossSalesLastYear").value = Math.round(grossSalesLastyearCal/totalMediaInvestmentTemp);
+				
+		document.getElementById("pctTAIGrossSalesLastYear").value = Math.round(100 * (totalMediaInvestmentTemp/grossSalesLastyearCal));
+
+		//document.getElementById("pctTAIGrossSalesLastYear").value = Math.round(grossSalesLastyearCal/totalMediaInvestmentTemp);
 	}
 	
 	
