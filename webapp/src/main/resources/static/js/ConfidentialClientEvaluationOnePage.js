@@ -239,7 +239,7 @@ function calculateTwo()
 	var totalMediaInvestment = proposedValue1Cal + proposedValue2Cal + proposedValue3Cal + proposedValue4Cal
 	                  + proposedValue5Cal + proposedValue6Cal;
 	
-	document.getElementById("totalMediaInvestmentTwo").value =  totalMediaInvestment;
+	document.getElementById("totalMediaInvestmentTwo").value =  CurrencyFormatted(totalMediaInvestment);
 	//document.getElementById("averageCustomerValue").value = e_averageCustomerValue;//e
 	//document.getElementById("lifetimeValuePerCustomer").value = g_lifetimeValuePerCustomer;
 	//document.getElementById("prospectsNeededToBreakEven").value = i_prospectsNeededToBreakEven;
