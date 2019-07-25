@@ -146,6 +146,8 @@ function CurrencyFormatted(amount) {
 	//aah if(s.indexOf('.') < 0) { s += '.00'; }
 	if(s.indexOf('.') == (s.length - 2)) { s += '0'; }
 	s = minus + s;
+	//add commas
+	s = s.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
 	s = "$" + s;
 	return s;
 }
