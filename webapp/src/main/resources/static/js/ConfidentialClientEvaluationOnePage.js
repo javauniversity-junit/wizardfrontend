@@ -48,7 +48,10 @@ function calculateOne()
 		convertToNumberFromCurrency(document.getElementById("estimatedGrossSalesNext12Months").value);
 	
 	if (taiNext12MonthsCal > 0 && estimatedGrossSalesNext12MonthsCal > 0) {
-	    document.getElementById("pctGrossSales").value = Math.round(estimatedGrossSalesNext12MonthsCal/taiNext12MonthsCal);
+	    document.getElementById("pctGrossSales").value = Math.round(taiNext12MonthsCal/estimatedGrossSalesNext12MonthsCal);
+           //document.getElementById("pctGrossSales").value = Math.round(estimatedGrossSalesNext12MonthsCal/taiNext12MonthsCal);
+
+	
 	}
 	
 	if (taiNext12MonthsCal > 0 && pctGrossSales > 0) {
