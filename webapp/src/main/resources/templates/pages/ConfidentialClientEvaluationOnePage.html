@@ -321,7 +321,7 @@
                 <div class="row media">
                     <div class="col-6">
                         <input type="text" maxlength="50"
-			       th:value="${dataPageModel?.proposedLabel1}"  class="form-control" id="proposedLabel1" name="proposedLabel1" />
+			       class="form-control" id="proposedLabel1" name="proposedLabel1" />
                     </div>
                     <div class="col-6">
                         <input type="text" class="form-control" id="proposedValue1" maxlength="50"
@@ -503,7 +503,17 @@
                     </div>
                 </div>                      
                 
+                <!--initial -->
+		<script th:inline="javascript">
+
+                 /*<![CDATA[*/
+	    
                 
+                   $("#proposedLabel1").val(/*[[${dataPageModel?.proposedLabel1}]]*/);
+                  /*]]>*/
+                 </script> 
+		    
+		    
                <input type="hidden" id="nextPage"
 						th:value="'redirect:/PlanAProposedPage?ID=' + ${wizard.wizardid}"
 						name="nextPage" /> 
