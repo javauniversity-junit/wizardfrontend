@@ -1,7 +1,8 @@
 function calculate()
 {
 	
-	var planAAverageSale = convertToNumberFromCurrency(document.getElementById("planAAverageSale").value); // a
+	//var planAAverageSale = convertToNumberFromCurrency(document.getElementById("planAAverageSale").value); // a
+	var planAAverageSale = document.getElementById("planAAverageSale").value; // a
 	var planAGrossMargin = document.getElementById("planAGrossMargin").value; // b
 	var planAClosingPct = document.getElementById("planAClosingPct").value; // c 
 	var planAProspectValue = 0;
