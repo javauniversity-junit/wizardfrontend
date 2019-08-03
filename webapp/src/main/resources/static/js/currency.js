@@ -67,9 +67,13 @@ function formatCurrency(input, blur) {
   
   // get input value
   var input_val = input.val();
+ 
   
   // don't validate empty input
   if (input_val === "") { return; }
+	
+ //remove period
+  input_val = input_val.replace('.', "");
   
   // original length
   var original_len = input_val.length;
@@ -142,6 +146,8 @@ function CurrencyFormatted(amount) {
 	if(s.indexOf('.') < 0) { s += '.00'; }
 	if(s.indexOf('.') == (s.length - 2)) { s += '0'; }
 	s = minus + s;
+	//add commas
+	s = s.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
 	s = "$" + s;
 	return s;
 }

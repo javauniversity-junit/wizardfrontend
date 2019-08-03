@@ -48,7 +48,10 @@ function calculateOne()
 		convertToNumberFromCurrency(document.getElementById("estimatedGrossSalesNext12Months").value);
 	
 	if (taiNext12MonthsCal > 0 && estimatedGrossSalesNext12MonthsCal > 0) {
-	    document.getElementById("pctGrossSales").value = Math.round(estimatedGrossSalesNext12MonthsCal/taiNext12MonthsCal);
+	    document.getElementById("pctGrossSales").value = Math.round(taiNext12MonthsCal/estimatedGrossSalesNext12MonthsCal);
+           //document.getElementById("pctGrossSales").value = Math.round(estimatedGrossSalesNext12MonthsCal/taiNext12MonthsCal);
+
+	
 	}
 	
 	if (taiNext12MonthsCal > 0 && pctGrossSales > 0) {
@@ -126,7 +129,10 @@ function calculateOne()
 	var totalMediaInvestmentTemp = convertToNumberFromCurrency(totalMediaInvestment);
 	
 	if (totalMediaInvestmentTemp != 0 && grossSalesLastyearCal != 0) {
-		document.getElementById("pctTAIGrossSalesLastYear").value = Math.round(grossSalesLastyearCal/totalMediaInvestmentTemp);
+				
+		document.getElementById("pctTAIGrossSalesLastYear").value = Math.round( totalMediaInvestmentTemp/grossSalesLastyearCal);
+
+		//document.getElementById("pctTAIGrossSalesLastYear").value = Math.round(grossSalesLastyearCal/totalMediaInvestmentTemp);
 	}
 	
 	
@@ -233,7 +239,7 @@ function calculateTwo()
 	var totalMediaInvestment = proposedValue1Cal + proposedValue2Cal + proposedValue3Cal + proposedValue4Cal
 	                  + proposedValue5Cal + proposedValue6Cal;
 	
-	document.getElementById("totalMediaInvestmentTwo").value =  totalMediaInvestment;
+	document.getElementById("totalMediaInvestmentTwo").value =  CurrencyFormatted(totalMediaInvestment);
 	//document.getElementById("averageCustomerValue").value = e_averageCustomerValue;//e
 	//document.getElementById("lifetimeValuePerCustomer").value = g_lifetimeValuePerCustomer;
 	//document.getElementById("prospectsNeededToBreakEven").value = i_prospectsNeededToBreakEven;
