@@ -23,7 +23,9 @@
     <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/blackandwhite/2-0-0/css/custom.css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <!-- -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
     
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
@@ -58,7 +60,8 @@
                 </div>
                 <div class="row media">
                     <div class="col-6">
-                        <input type="text" th:value="${dataPageModel?.lastYearLabel1}" maxlength="50" class="form-control" id="lastYearLabel1" name="lastYearLabel1" />
+			    
+                        <input type="text" ng-model="lastYearLabel1" th:value="${dataPageModel?.lastYearLabel1}" maxlength="50" class="form-control" id="lastYearLabel1" name="lastYearLabel1" />
                     </div>
                     <div class="col-6">
                         <input type="text" class="form-control" id="lastYearValue1" maxlength="50"
@@ -320,7 +323,7 @@
                 </div>
                 <div class="row media">
                     <div class="col-6">
-                        <input type="text" maxlength="50"
+                        <input type="text" maxlength="50" value="{{lastYearLabel1}}"
 			       class="form-control" id="proposedLabel1" name="proposedLabel1" />
                     </div>
                     <div class="col-6">
