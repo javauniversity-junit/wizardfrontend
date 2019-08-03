@@ -61,7 +61,7 @@
                 <div class="row media">
                     <div class="col-6">
 			    
-                        <input type="text" ng-model="lastYearLabel1" th:value="${dataPageModel?.lastYearLabel1}" maxlength="50" class="form-control" id="lastYearLabel1" name="lastYearLabel1" />
+                        <input type="text" ng-model="lastYearLabel1"  maxlength="50" class="form-control" id="lastYearLabel1" name="lastYearLabel1" />
                     </div>
                     <div class="col-6">
                         <input type="text" class="form-control" id="lastYearValue1" maxlength="50"
@@ -584,6 +584,10 @@
 		<script th:inline="javascript">
 
                  /*<![CDATA[*/
+			 var lastYearLabel1 = /*[[${dataPageModel?.lastYearLabel1}]]*/ 'default';
+		if (lastYearLabel1 != "null" && lastYearLabel1 != "default") 
+                    $("#lastYearLabel1").val(lastYearLabel1);
+			
 
                  var proposedLabel1 = /*[[${dataPageModel?.proposedLabel1}]]*/ '';
 		 var proposedValue1 = /*[[${dataPageModel?.proposedValue1}]]*/ '';
