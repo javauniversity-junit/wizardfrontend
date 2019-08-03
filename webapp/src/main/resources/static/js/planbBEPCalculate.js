@@ -1,27 +1,55 @@
 function calculate()
 {
-	var planBAverageSale = convertToNumberFromCurrency(document.getElementById("planBAverageSale").value); // a
-	var planBGrossMargin = convertToNumberFromCurrency(document.getElementById("planBGrossMargin").value); // b
-	var planBClosingPct = document.getElementById("planBClosingPct").value; // c
-	var planBProspectValue = planBAverageSale * planBGrossMargin * planBClosingPct; // d = abc
-
-
-	var planBInvestment = convertToNumberFromCurrency(document.getElementById("planBAverageSale").value); // e
-	var planBProspectsNeeded = planBProspectValue == 0 ? 0 : planBInvestment / planBProspectValue; // f = e/d
-	var planBProspectSalesNeeded = planBProspectsNeeded * planBClosingPct; // g = fc
+	
+	//var planBAverageSale = convertToNumberFromCurrency(document.getElementById("planBAverageSale").value); // a
+	var planBAverageSale = document.getElementById("planBAverageSale").value; // a
+	var planBGrossMargin = document.getElementById("planBGrossMargin").value; // b
+	var planBClosingPct = document.getElementById("planBClosingPct").value; // c 
+	var planBProspectValue = 0;
+	var planBProspectValueRaw = 0;
+	
+	if (document.getElementById("planBGrossMargin").value != null &&
+		document.getElementById("planBGrossMargin").value != ""	&&
+		document.getElementById("planBClosingPct").value != null &&
+		document.getElementById("planBClosingPct").value != "")
+	{
+		    planBProspectValue= FormatAmount(Math.round( convertToNumberFromCurrency(planBAverageSale) * (planBGrossMargin/100) * (planBClosingPct/100)));
+		    planBProspectValueRaw = convertToNumberFromCurrency(planBAverageSale) * (planBGrossMargin/100) * (planBClosingPct/100);
+	}
+	
+	var planBInvestment = convertToNumberFromCurrency(document.getElementById("planBInvestment").value); // e
+	var planBProspectsNeeded = planBProspectValue == 0 ? 0 : planBInvestment/planBProspectValueRaw ; // f = e/d
+	var planBProspectSalesNeeded = planBProspectsNeeded * (planBClosingPct/100) ; // g = fc
 	var planBGrossProfitOnSales = planBProspectSalesNeeded * planBAverageSale; // h = ga
 	var planBMonths = convertIntToNumber(document.getElementById("planBMonths").value); // i
 	var planBAdditionalGrossSales = planBGrossProfitOnSales * planBMonths; // j = hi
 	
+	//document.getElementById("planBAverageSale").value = FormatAmount(planBAverageSale);
+	document.getElementById("planBAverageSale").value = planBAverageSale;
+	document.getElementById("planBInvestment").value = FormatAmount(planBInvestment);
 	document.getElementById("planBProspectValue").value =  planBProspectValue;
-	document.getElementById("planBProspectsNeeded").value =  planBProspectsNeeded;
-	document.getElementById("planBProspectSalesNeeded").value =  planBProspectSalesNeeded;	
-	document.getElementById("planBGrossProfitOnSales").value =  planBGrossProfitOnSales;
-	document.getElementById("planBAdditionalGrossSales").value =  planBAdditionalGrossSales;
-}
+	document.getElementById("planBProspectsNeeded").value =  Math.round(planBProspectsNeeded * 10) / 10;
+	document.getElementById("planBProspectSalesNeeded").value =  Math.round(planBProspectSalesNeeded *10) / 10;	
+	document.getElementById("planBGrossProfitOnSales").value =  FormatAmount(Math.round(planBGrossProfitOnSales));
+	document.getElementById("planBAdditionalGrossSales").value =  FormatAmount(Math.round(planBAdditionalGrossSales));
+}	
+	
+	function FormatAmount(amount) {
+		var i = parseFloat(amount);
+		if(isNaN(i)) { i = 0.00; }
+		var minus = '';
+		if(i < 0) { minus = '-'; }
+		i = Math.abs(i);
+		i = parseInt((i + .005) * 100);
+		i = i / 100;
+		s = new String(i);
+		if(s.indexOf('.') < 0) { s += '.00'; }
+		if(s.indexOf('.') == (s.length - 2)) { s += '0'; }
+		s = minus + s;
+		if(s.indexOf('.') > 0) { s = s.substr(0,s.indexOf('.')); }
+		s = "$" + s.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		return s;
+	}
+	
 
-function totalRow() {
-	calculate();
-	//document.getElementById("totalRow").value = total;
-}
 
