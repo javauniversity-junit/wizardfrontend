@@ -55,7 +55,7 @@
 	padding: 1%;
 }
 </style>
-		<form method="post" action="saveConfidentialClientEvaluationOnePage">
+		<form  ng-app="" method="post" action="saveConfidentialClientEvaluationOnePage">
 			<fieldset>
 				<legend>
 					(9 of 20) Confidential Client Evaluation - <span
@@ -68,7 +68,7 @@
 				</div>
 				<div class="row media">
 					<div class="col-6">
-						<input type="text" th:value="${dataPageModel?.lastYearLabel1}"
+						<input type="text" ng-model="lastYearLabel1"
 							maxlength="50" class="form-control" id="lastYearLabel1"
 							name="lastYearLabel1" />
 					</div>
@@ -316,8 +316,9 @@
 				</div>
 				<div class="row media">
 					<div class="col-6">
+					
 						<input type="text" maxlength="50"
-							th:value="${dataPageModel?.proposedLabel1}" class="form-control"
+							value="{{lastYearLabel1}}" class="form-control"
 							id="proposedLabel1" name="proposedLabel1" />
 					</div>
 					<div class="col-6">
@@ -329,7 +330,7 @@
 				</div>
 				<div class="row media">
 					<div class="col-6">
-						<input type="text" th:value="${dataPageModel?.proposedLabel2}"
+						<input type="text" value="{{lastYearLabel2}}"
 							maxlength="50" class="form-control" id="proposedLabel2"
 							name="proposedLabel2" />
 					</div>
@@ -504,7 +505,7 @@
                 padding: 1%;
             }
         </style>
-        <form method="post" action="saveConfidentialClientEvaluationOnePage">
+        <form ng-app="" method="post" action="saveConfidentialClientEvaluationOnePage">
             <fieldset>
                 <legend>
                     (9 of 20) Confidential Client Evaluation - <span th:text="${wizard.name}"></span>
@@ -519,8 +520,7 @@
                     </div>
                 </div>
                 <div class="row media">
-                    <div class="col-6">
-			    
+                    <div class="col-6"> 
                         <input type="text" ng-model="lastYearLabel1"  maxlength="50" class="form-control" id="lastYearLabel1" name="lastYearLabel1" />
                     </div>
                     <div class="col-6">
@@ -530,7 +530,7 @@
                 </div>
                 <div class="row media">
                     <div class="col-6">
-                        <input maxlength="50" type="text" th:value="${dataPageModel?.lastYearLabel2}" class="form-control" id="lastYearLabel2" name="lastYearLabel2" />
+                        <input maxlength="50" type="text" ng-model="lastYearLabel2" th:value="${dataPageModel?.lastYearLabel2}" class="form-control" id="lastYearLabel2" name="lastYearLabel2" />
                     </div>
                     <div class="col-6">
                         <input maxlength="50" type="text" class="form-control" id="lastYearValue2"
@@ -1081,9 +1081,9 @@
 		<script th:inline="javascript">
 
                  /*<![CDATA[*/
-			 var lastYearLabel1 = /*[[${dataPageModel?.lastYearLabel1}]]*/ 'default';
-		if (lastYearLabel1 != "null" && lastYearLabel1 != "default") 
-                    $("#lastYearLabel1").val(lastYearLabel1);
+			
+			
+			 
 			
 
                  var proposedLabel1 = /*[[${dataPageModel?.proposedLabel1}]]*/ '';
@@ -1101,29 +1101,29 @@
 	         var proposedLabel6 = /*[[${dataPageModel?.proposedLabel6}]]*/ '';
 		 var proposedValue6 = /*[[${dataPageModel?.proposedValue6}]]*/ '';	
 			
-		if (proposedLabel1 != "null") 
+		if (proposedLabel1 != null) 
                     $("#proposedLabel1").val(proposedLabel1);
-		if (proposedValue1 != "null") 	
+		if (proposedValue1 != null) 	
 		    $("#proposedValue1").val(proposedValue1);
-		if (proposedLabel2 != "null") 	
+		if (proposedLabel2 != null) 	
 	            $("#proposedLabel2").val(proposedLabel2);
-		if (proposedValue2 != "null") 	
+		if (proposedValue2 != null) 	
 		    $("#proposedValue2").val(proposedValue2);
-		 if (proposedLabel3 != "null")       
+		 if (proposedLabel3 != null)       
 		    $("#proposedLabel3").val(proposedLabel3);
-		if (proposedValue3 != "null") 	
+		if (proposedValue3 != null) 	
 		    $("#proposedValue3").val(proposedValue3);
-		if (proposedLabel4 != "null") 	
+		if (proposedLabel4 != null) 	
 	            $("#proposedLabel4").val(proposedLabel4);
-		if (proposedValue4 != "null") 	
+		if (proposedValue4 != null) 	
 		    $("#proposedValue4").val(proposedValue4);
-		if (proposedLabel5 != "null") 
+		if (proposedLabel5 != null) 
 		    $("#proposedLabel5").val(proposedLabel5);
-		if (proposedValue5 != "null") 	
+		if (proposedValue5 != null) 	
 		    $("#proposedValue5").val(proposedValue5);
-		if (proposedLabel6!= "null") 	
+		if (proposedLabel6!= null) 	
 	            $("#proposedLabel6").val(proposedLabel6);
-		if (proposedValue6 != "null") 	
+		if (proposedValue6 != null) 	
 		    $("#proposedValue6").val(proposedValue6);	
 			
                   /*]]>*/
