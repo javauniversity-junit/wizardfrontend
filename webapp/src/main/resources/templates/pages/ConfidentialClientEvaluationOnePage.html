@@ -439,7 +439,7 @@
 						<input type="text" class="form-control" maxlength="50"
 							id="proposedValue8" value="{{lastYearValue8}}"
 							data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
-							name="proposedValue7" />
+							name="proposedValue8" />
 					</div>
 				</div>
 				
@@ -632,6 +632,15 @@ var lastYearValue5 =/*[[${dataPageModel?.lastYearValue5}]]*/ ;
 var lastYearLabel6 =/*[[${dataPageModel?.lastYearLabel6}]]*/ ;
 var lastYearValue6 =/*[[${dataPageModel?.lastYearValue6}]]*/ ;
 
+var lastYearLabel7 =/*[[${dataPageModel?.lastYearLabel7}]]*/ ;
+var lastYearValue7 =/*[[${dataPageModel?.lastYearValue7}]]*/ ;
+
+var lastYearLabel8 =/*[[${dataPageModel?.lastYearLabel8}]]*/ ;
+var lastYearValue8 =/*[[${dataPageModel?.lastYearValue8}]]*/ ;
+
+var lastYearLabel9 =/*[[${dataPageModel?.lastYearLabel9}]]*/ ;
+var lastYearValue9 =/*[[${dataPageModel?.lastYearValue9}]]*/ ;
+
 
 var proposedLabel1 = /*[[${dataPageModel?.proposedLabel1}]]*/ '';
 var proposedValue1 = /*[[${dataPageModel?.proposedValue1}]]*/ '';
@@ -647,6 +656,17 @@ var proposedLabel5 = /*[[${dataPageModel?.proposedLabel5}]]*/ '';
 var proposedValue5 = /*[[${dataPageModel?.proposedValue5}]]*/ '';
 var proposedLabel6 = /*[[${dataPageModel?.proposedLabel6}]]*/ '';
 var proposedValue6 = /*[[${dataPageModel?.proposedValue6}]]*/ '';	
+
+
+var proposedLabel7 = /*[[${dataPageModel?.proposedLabel7}]]*/ '';
+var proposedValue7 = /*[[${dataPageModel?.proposedValue7}]]*/ '';
+
+var proposedLabel8 = /*[[${dataPageModel?.proposedLabel8}]]*/ '';
+var proposedValue8 = /*[[${dataPageModel?.proposedValue8}]]*/ '';
+
+var proposedLabel9 = /*[[${dataPageModel?.proposedLabel9}]]*/ '';
+var proposedValue9 = /*[[${dataPageModel?.proposedValue9}]]*/ '';
+
 
 	
 console.log ('lastYearLabel1 ' + lastYearLabel1);
@@ -683,6 +703,23 @@ app.controller('myCtrl', function($scope) {
 	if (lastYearValue6 != null) 
 		$scope.lastYearValue6=lastYearValue6;
 	
+	if (lastYearLabel7 != null) 
+		$scope.lastYearLabel7 = lastYearLabel7;
+	if (lastYearValue7 != null) 
+		$scope.lastYearValue7=lastYearValue7;
+	
+	if (lastYearLabel8 != null) 
+		$scope.lastYearLabel8 = lastYearLabel8;
+	if (lastYearValue8 != null) 
+		$scope.lastYearValue8=lastYearValue8;
+	
+	if (lastYearLabel9 != null) 
+		$scope.lastYearLabel9 = lastYearLabel9;
+	if (lastYearValue9 != null) 
+		$scope.lastYearValue9=lastYearValue9;
+	
+	
+	
 });
 
 
@@ -715,6 +752,14 @@ if (proposedLabel6!= null)
     $("#proposedLabel6").val(proposedLabel6);
 if (proposedValue6 != null) 	
 $("#proposedValue6").val(proposedValue6);	
+
+if (proposedValue7 != null) 	
+	$("#proposedValue7").val(proposedValue7);
+if (proposedValue8 != null) 	
+	$("#proposedValue8").val(proposedValue8);
+if (proposedValue9 != null) 	
+	$("#proposedValue9").val(proposedValue9);
+
 
       /*]]>*/      
             
