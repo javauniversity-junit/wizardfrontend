@@ -67,9 +67,13 @@ function formatCurrency(input, blur) {
   
   // get input value
   var input_val = input.val();
+ 
   
   // don't validate empty input
   if (input_val === "") { return; }
+	
+ //remove period
+  input_val = input_val.replace('.', "");
   
   // original length
   var original_len = input_val.length;
@@ -97,7 +101,7 @@ function formatCurrency(input, blur) {
     
     // On blur make sure 2 numbers after decimal
     if (blur === "blur") {
-     //aah right_side += "00";
+     right_side += "00";
      
     }
     
@@ -116,7 +120,7 @@ function formatCurrency(input, blur) {
     
     // final formatting
     if (blur === "blur") {
-      //aah input_val += ".00";
+      input_val += ".00";
     }
   }
   
@@ -127,7 +131,7 @@ function formatCurrency(input, blur) {
   var updated_len = input_val.length;
   caret_pos = updated_len - original_len + caret_pos;
   input[0].setSelectionRange(caret_pos, caret_pos);
-  totalRow();
+  //totalRow();
 }
   
 function CurrencyFormatted(amount) {
@@ -139,9 +143,11 @@ function CurrencyFormatted(amount) {
 	i = parseInt((i + .005) * 100);
 	i = i / 100;
 	s = new String(i);
-	//aah if(s.indexOf('.') < 0) { s += '.00'; }
+	if(s.indexOf('.') < 0) { s += '.00'; }
 	if(s.indexOf('.') == (s.length - 2)) { s += '0'; }
 	s = minus + s;
+	//add commas
+	s = s.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
 	s = "$" + s;
 	return s;
 }

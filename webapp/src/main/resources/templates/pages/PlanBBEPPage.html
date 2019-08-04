@@ -90,7 +90,7 @@
 					<input 
 						name="planBInvestment" id="planBInvestment"
 						class="form-control"  data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
-						th:value="${dataPageModel?.planBInvestment}" />
+						th:value="${dataPageModelOther?.planAMonthly}" />
 				</div>
 				<div class="form-group">
 					<label for="planBProspectsNeeded">F. Monthly prospects needed to pay for advertising investment (E/D)</label> <input type="number" oninput="calculate()"
@@ -102,7 +102,7 @@
 						class="form-control" id="planBProspectSalesNeeded"
 						name="planBProspectSalesNeeded" readonly 
 						th:value="${dataPageModel?.planBProspectSalesNeeded}"
-						aria-describedby="planBProspectSalesNeeded" />
+						aria-describedby="planBProspectSalesNeeded" oninput="calculate()"/>
 				</div>
 				<div class="form-group">
 					<label for="planBGrossProfitOnSales">H. Gross sales per month needed to break even (G*A)</label> <input readonly

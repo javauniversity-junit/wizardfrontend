@@ -34,6 +34,7 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
+
 <!-- Bootstrap CSS-->
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
@@ -481,6 +482,534 @@
 
 
 					</div>
+
+    <!-- -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="./img/icon.png">
+</head>
+
+<body>
+    <!-- Begin page content -->
+    <!--- start header container -->
+    <div id="headerId"></div>
+    <div class="container" style="padding-top: 1%;">
+        <style>
+            .media {
+                padding: 1%;
+            }
+        </style>
+        <form method="post" action="saveConfidentialClientEvaluationOnePage">
+            <fieldset>
+                <legend>
+                    (9 of 20) Confidential Client Evaluation - <span th:text="${wizard.name}"></span>
+                </legend>
+                <p>A. What was spent last year in:</p>
+                <div class="row media">
+                    <div class="col-6">
+                        Media:
+                    </div>
+                    <div class="col-6">
+                        Amount:
+                    </div>
+                </div>
+                <div class="row media">
+                    <div class="col-6">
+			    
+                        <input type="text" ng-model="lastYearLabel1"  maxlength="50" class="form-control" id="lastYearLabel1" name="lastYearLabel1" />
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="lastYearValue1" maxlength="50"
+			       th:value="${dataPageModel?.lastYearValue1}" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue1" />
+                    </div>
+                </div>
+                <div class="row media">
+                    <div class="col-6">
+                        <input maxlength="50" type="text" th:value="${dataPageModel?.lastYearLabel2}" class="form-control" id="lastYearLabel2" name="lastYearLabel2" />
+                    </div>
+                    <div class="col-6">
+                        <input maxlength="50" type="text" class="form-control" id="lastYearValue2"
+			       th:value="${dataPageModel?.lastYearValue2}"  data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue2" />
+                    </div>
+                </div>
+                <div class="row media">
+                    <div class="col-6">
+                        <input maxlength="50" type="text" th:value="${dataPageModel?.lastYearLabel3}" class="form-control" id="lastYearLabel3" name="lastYearLabel3" />
+                    </div>
+                    <div class="col-6">
+                        <input maxlength="50" type="text" class="form-control" id="lastYearValue3" th:value="${dataPageModel?.lastYearValue3}" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue3" />
+                    </div>
+                </div>
+                <div class="row media">
+                    <div class="col-6">
+                        <input maxlength="50" type="text" th:value="${dataPageModel?.lastYearLabel4}"  class="form-control" id="lastYearLabel4" name="lastYearLabel4" />
+                    </div>
+                    <div class="col-6">
+                        <input maxlength="50" type="text" class="form-control" id="lastYearValue4" th:value="${dataPageModel?.lastYearValue4}"  data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue4" />
+                    </div>
+                </div>
+                <div class="row media">
+                    <div class="col-6">
+                        <input maxlength="50" type="text" th:value="${dataPageModel?.lastYearLabel5}" class="form-control" id="lastYearLabel5" name="lastYearLabel5" />
+                    </div>
+                    <div class="col-6">
+                        <input maxlength="50" type="text" class="form-control" id="lastYearValue5" th:value="${dataPageModel?.lastYearValue5}" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue5" />
+                    </div>
+                </div>
+                <div class="row media">
+                    <div class="col-6">
+                        <input type="text" th:value="${dataPageModel?.lastYearLabel6}" class="form-control" id="lastYearLabel6" name="lastYearLabel6" />
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="lastYearValue6" th:value="${dataPageModel?.lastYearValue6}" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue6" />
+                    </div>
+                </div>
+                <div class="row media">
+                    <div class="col-6">
+                        Total Media Investment:
+                    </div>
+                    <div class="col-6">
+                        <input type="text" 
+                        class="form-control" 
+                        id="totalMediaInvestment" 
+                        th:value="${dataPageModel?.totalMediaInvestment}" 
+                        readonly name="totalMediaInvestment" />
+                    </div>
+                </div>
+
+                <div class="row media">
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col-2">
+                                B.
+                            </div>
+                            <div class="col-10">
+                                <input type="text" maxlength="50" readonly
+                                th:value="${dataPageModel?.totalMediaInvestment}"  class="form-control"
+                                    data-type="currency" 
+                                    pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+                                      id="totalMediaInvestmentInput" name="totalMediaInvestmentInput">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 ">
+                        <div class="row">
+                            <div class="col-2">
+                                /
+                            </div>
+                            <div class="col-10">
+                                <input readonly type="number" maxlength="50"
+                                th:value="${dataPageModel?.pctTAIGrossSalesLastYear}" class="form-control" id="pctTAIGrossSalesLastYear" name="pctTAIGrossSalesLastYear">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 ">
+                        
+                          <div class="row">  
+                        
+                            <div class="col-2">
+                                =
+                            </div>
+                        
+                            <div class="col-10">
+                                <input type="text"  maxlength="50"
+                                th:value="${dataPageModel?.grossSalesLastyear}" data-type="currency" 
+                                    pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" class="form-control" id="grossSalesLastyear" name="grossSalesLastyear">
+                            </div>
+                        
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                
+
+                <div class="row media">
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col-2">
+
+                            </div>
+                            <div class="col-10">
+                                <div class="row">
+                                   Total Advertising Investment
+                                </div>
+                                 <div class="row">
+                                   (TAI) Last 12 Months
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 ">
+                        <div class="row">
+                            <div class="col-2">
+
+                            </div>
+                            <div class="col-10">
+                                Adv % of Gross Sales
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 ">
+                        
+                        <div class="row">  
+                        
+                            <div class="col-2">
+                               
+                            </div>
+                        
+                            <div class="col-10">
+                                Gross Sales Last Year
+                            </div>
+                        
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+                
+                
+                   <div class="row media">
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col-2">
+                                C.
+                            </div>
+                            <div class="col-10">
+                                <input data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" type="text" maxlength="50"
+				       th:value="${dataPageModel?.taiNext12Months}" class="form-control" id="taiNext12Months" name="taiNext12Months">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 ">
+                        <div class="row">
+                            <div class="col-2">
+                                /
+                            </div>
+                            <div class="col-10">
+                                <input type="number" th:value="${dataPageModel?.pctGrossSales}" 
+				       class="form-control" maxlength="50" readonly
+				        id="pctGrossSales" name="pctGrossSales">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 ">
+                        
+                          <div class="row">  
+                        
+                            <div class="col-2">
+                                =
+                            </div>
+                        
+                            <div class="col-10">
+                                <input type="text" 
+				       th:value="${dataPageModel?.estimatedGrossSalesNext12Months}" data-type="currency" 
+                                    pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" 
+				       class="form-control" id="estimatedGrossSalesNext12Months" name="estimatedGrossSalesNext12Months">
+                            </div>
+                        
+                        </div>
+                        
+                        
+                    </div>
+                </div>  
+                
+                
+                
+                 
+                          <div class="row media">
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col-2">
+
+                            </div>
+                            <div class="col-10">
+                                <div class="row">
+                                   Total Advertising Investment (TAI) 
+                                </div>
+                                 <div class="row">
+                                   Next 12 Months
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 ">
+                        <div class="row">
+                            <div class="col-2">
+
+                            </div>
+                            <div class="col-10">
+                                Adv % of Gross Sales
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 ">
+                        
+                        <div class="row">  
+                        
+                            <div class="col-2">
+                               
+                            </div>
+                        
+                            <div class="col-10">
+                                Estimated Gross Sales Next 12 Months
+                            </div>
+                        
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>      
+           
+                
+                <p>D. Proposed 12 Month Media Allocation:</p>
+                <div class="row media">
+                    <div class="col-6">
+                        Media:
+                    </div>
+                    <div class="col-6">
+                        Amount:
+                    </div>
+                </div>
+                <div class="row media">
+                    <div class="col-6">
+                        <input type="text" maxlength="50" value="{{lastYearLabel1}}"
+			       class="form-control" id="proposedLabel1" name="proposedLabel1" />
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="proposedValue1" maxlength="50"
+			       data-type="currency"
+			       pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="proposedValue1" />
+                    </div>
+                </div>
+                <div class="row media">
+                    <div class="col-6">
+                        <input type="text"  maxlength="50"
+			       class="form-control" id="proposedLabel2" name="proposedLabel2" />
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="proposedValue2" 
+                                 data-type="currency" 
+                               pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="proposedValue2" />
+                    </div>
+                </div>
+                <div class="row media">
+                    <div class="col-6">
+                        <input type="text"  maxlength="50" 
+			       class="form-control" id="proposedLabel3" name="proposedLabel3" />
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" maxlength="50"
+			       id="proposedValue3" 
+			       data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="proposedValue3" />
+                    </div>
+                </div>
+                <div class="row media">
+                    <div class="col-6">
+                        <input type="text"  maxlength="50"
+			       class="form-control" id="proposedLabel4" name="proposedLabel4" />
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="proposedValue4" maxlength="50"
+			         data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="proposedValue4" />
+                    </div>
+                </div>
+                <div class="row media">
+                    <div class="col-6">
+                        <input maxlength="50" type="text"   class="form-control" id="proposedLabel5" name="proposedLabel5" />
+                    </div>
+                    <div class="col-6">
+                        <input  maxlength="50" type="text" class="form-control" id="proposedValue5" 
+			      
+                               data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="proposedValue5" />
+                    </div>
+                </div>
+                <div class="row media">
+                    <div class="col-6">
+                        <input type="text"  maxlength="50"
+                               class="form-control" id="proposedLabel6" name="proposedLabel6" />
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" maxlength="50"
+			       id="proposedValue6" 
+                                data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="proposedValue6" />
+                    </div>
+                </div>
+                <div class="row media">
+                    <div class="col-6">
+                        Total Media Investment:
+                    </div>
+                    <div class="col-6">
+                        <input type="text" 
+			       class="form-control" 
+			       id="totalMediaInvestmentTwo" 
+			       th:value="${dataPageModel?.totalMediaInvestmentTwo}" readonly name="totalMediaInvestmentTwo" />
+                    </div>
+                </div>
+                
+                <div class="row media">
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col-2">
+                                E.
+                            </div>
+                            <div class="col-10">
+                                <input type="text" maxlength="50"
+                                 th:value="${dataPageModel?.taiShouldBe}"
+                                  data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" 
+                                        class="form-control" id="taiShouldBe" 
+                                       name="taiShouldBe"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 ">
+                        <div class="row">
+                            <div class="col-2">
+                                /
+                            </div>
+                            <div class="col-10">
+                                <input type="number" th:value="${dataPageModel?.industryAverage}" oninput="totalRow()" 
+                                       class="form-control" id="industryAverage" name="industryAverage">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 ">
+                        
+                          <div class="row">  
+                        
+                            <div class="col-2">
+                                =
+                            </div>
+                        
+                            <div class="col-10">
+                                <input type="text" th:value="${dataPageModel?.salesGoals}" class="form-control" readonly
+				       id="salesGoals" name="salesGoals">
+                            </div>
+                        
+                        </div>
+                        
+                        
+                    </div>
+                </div>  
+                
+<div class="row media">
+                    <div class="col-4">
+                        <div class="row">
+                            <div class="col-2">
+
+                            </div>
+                            <div class="col-10">
+                                <div class="row">
+                                    Stretch Goal Total Advertising 
+                                </div>
+                                 <div class="row">
+                                   Investment (TAI) Next 12 Months
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 ">
+                        <div class="row">
+                            <div class="col-2">
+
+                            </div>
+                            <div class="col-10">
+                                <div class="row ">
+                                   Adv % of Gross Sales
+                               </div>   
+                               <div class="row" style="color:red;">
+                                   (using industry average or if
+                               </div> 
+                                
+                               <div class="row" style="color:red;">
+                                   not known the current Adv %
+                               </div>                
+                          <div class="row" style="color:red;">
+                                    of gross sales)
+                               </div>                             
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 ">
+                        
+                        <div class="row">  
+                        
+                            <div class="col-2">
+                               
+                            </div>
+                        
+                            <div class="col-10">
+                                <div class="row"> 
+                                
+                                 Stretch Sales Goal
+                                  </div>   
+                                  <div class="row"> 
+                                
+                                  For Next 12 Months
+                                  </div> 
+                            </div>
+                        
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>                      
+                
+                <!--initial -->
+	
+		    
+		    
+               <input type="hidden" id="nextPage"
+						th:value="'redirect:/PlanAProposedPage?ID=' + ${wizard.wizardid}"
+						name="nextPage" /> 
+				<input type="hidden" id="previousPage"
+						th:value="'redirect:/TargetMarketingPage?ID=' + ${wizard.wizardid}"
+						name="previousPage" /> 
+				<input type="hidden" id="publishPage"
+						th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
+						name="publishPage" /> 
+				<input type="hidden" id="wizardId"
+						th:value="${wizard.wizardid}" name="wizardId" />
+				 <input
+						type="hidden" id="wizarddataid"
+						th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> <input
+						name="next" type="submit" value="Next" class="btn btn-primary"
+						style="background-color: #C0B879;" /> 
+				<input name="publish"
+						type="submit" value="Publish" class="btn btn-primary"
+						style="background-color: #C0B879;" /> 
+				<input name="previous"
+						value="Previous" type="submit" class="btn btn-primary"
+						style="background-color: #C0B879;" /> 
+                
+                
+                
+                
+              
+           
+           
+           
+            </fieldset>
+        </form>
+        <div class="container" style="padding-top:2%;">
+
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="5"
+						aria-valuemin="0" aria-valuemax="100"
+						style="width: 36%; background-color: #C0B879;">36%</div>
+
 				</div>
 
 
@@ -549,6 +1078,60 @@
 		});
 		/*]]>*/
 	</script>
+		<script th:inline="javascript">
+
+                 /*<![CDATA[*/
+			 var lastYearLabel1 = /*[[${dataPageModel?.lastYearLabel1}]]*/ 'default';
+		if (lastYearLabel1 != "null" && lastYearLabel1 != "default") 
+                    $("#lastYearLabel1").val(lastYearLabel1);
+			
+
+                 var proposedLabel1 = /*[[${dataPageModel?.proposedLabel1}]]*/ '';
+		 var proposedValue1 = /*[[${dataPageModel?.proposedValue1}]]*/ '';
+	         var proposedLabel2 = /*[[${dataPageModel?.proposedLabel2}]]*/ '';
+		 var proposedValue2 = /*[[${dataPageModel?.proposedValue2}]]*/ '';	
+			
+	         var proposedLabel3 = /*[[${dataPageModel?.proposedLabel3}]]*/ '';
+		 var proposedValue3 = /*[[${dataPageModel?.proposedValue3}]]*/ '';
+	         var proposedLabel4 = /*[[${dataPageModel?.proposedLabel4}]]*/ '';
+		 var proposedValue4 = /*[[${dataPageModel?.proposedValue4}]]*/ '';	
+			
+	         var proposedLabel5 = /*[[${dataPageModel?.proposedLabel5}]]*/ '';
+		 var proposedValue5 = /*[[${dataPageModel?.proposedValue5}]]*/ '';
+	         var proposedLabel6 = /*[[${dataPageModel?.proposedLabel6}]]*/ '';
+		 var proposedValue6 = /*[[${dataPageModel?.proposedValue6}]]*/ '';	
+			
+		if (proposedLabel1 != "null") 
+                    $("#proposedLabel1").val(proposedLabel1);
+		if (proposedValue1 != "null") 	
+		    $("#proposedValue1").val(proposedValue1);
+		if (proposedLabel2 != "null") 	
+	            $("#proposedLabel2").val(proposedLabel2);
+		if (proposedValue2 != "null") 	
+		    $("#proposedValue2").val(proposedValue2);
+		 if (proposedLabel3 != "null")       
+		    $("#proposedLabel3").val(proposedLabel3);
+		if (proposedValue3 != "null") 	
+		    $("#proposedValue3").val(proposedValue3);
+		if (proposedLabel4 != "null") 	
+	            $("#proposedLabel4").val(proposedLabel4);
+		if (proposedValue4 != "null") 	
+		    $("#proposedValue4").val(proposedValue4);
+		if (proposedLabel5 != "null") 
+		    $("#proposedLabel5").val(proposedLabel5);
+		if (proposedValue5 != "null") 	
+		    $("#proposedValue5").val(proposedValue5);
+		if (proposedLabel6!= "null") 	
+	            $("#proposedLabel6").val(proposedLabel6);
+		if (proposedValue6 != "null") 	
+		    $("#proposedValue6").val(proposedValue6);	
+			
+                  /*]]>*/
+                 </script> 
+	
+	
+	
+	
 </body>
 
 </html>
