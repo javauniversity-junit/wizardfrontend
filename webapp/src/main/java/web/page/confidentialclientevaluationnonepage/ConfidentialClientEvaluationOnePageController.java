@@ -31,6 +31,10 @@ public class ConfidentialClientEvaluationOnePageController {
 
 	private static final Logger mLog = Logger.getLogger(ConfidentialClientEvaluationOnePageController.class.getName());
 
+
+	
+	
+	
 	@RequestMapping(value = "/ConfidentialClientEvaluationOnePage", method = RequestMethod.GET)
 	public String detail(Model model, @RequestParam String ID) {
 		mLog.info("starting detail");

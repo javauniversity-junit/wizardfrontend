@@ -126,6 +126,7 @@
 							name="lastYearValue5" />
 					</div>
 				</div>
+				
 				<div class="row media">
 					<div class="col-6">
 						<input type="text" ng-model="lastYearLabel6" class="form-control"
@@ -137,6 +138,42 @@
 							pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue6" />
 					</div>
 				</div>
+				
+					<div class="row media">
+					<div class="col-6">
+						<input type="text" ng-model="lastYearLabel7" class="form-control"
+							id="lastYearLabel7" name="lastYearLabel7" />
+					</div>
+					<div class="col-6">
+						<input type="text" class="form-control" id="lastYearValue7"
+							ng-model="lastYearValue7" data-type="currency"
+							pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue7" />
+					</div>
+				</div>
+				
+				<div class="row media">
+					<div class="col-6">
+						<input type="text" ng-model="lastYearLabel8" class="form-control"
+							id="lastYearLabel8" name="lastYearLabel8" />
+					</div>
+					<div class="col-6">
+						<input type="text" class="form-control" id="lastYearValue8"
+							ng-model="lastYearValue8" data-type="currency"
+							pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue8" />
+					</div>
+				</div>
+				<div class="row media">
+					<div class="col-6">
+						<input type="text" ng-model="lastYearLabel9" class="form-control"
+							id="lastYearLabel9" name="lastYearLabel9" />
+					</div>
+					<div class="col-6">
+						<input type="text" class="form-control" id="lastYearValue9"
+							ng-model="lastYearValue9" data-type="currency"
+							pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue9" />
+					</div>
+				</div>			
+				
 				<div class="row media">
 					<div class="col-6">Total Media Investment:</div>
 					<div class="col-6">
@@ -379,6 +416,45 @@
 							name="proposedValue6" />
 					</div>
 				</div>
+					<div class="row media">
+					<div class="col-6">
+						<input type="text" value="{{lastYearLabel7}}" maxlength="50"
+							class="form-control" id="proposedLabel7" name="proposedLabel7" />
+					</div>
+					<div class="col-6">
+						<input type="text" class="form-control" maxlength="50"
+							id="proposedValue7" value="{{lastYearValue7}}"
+							data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+							name="proposedValue7" />
+					</div>
+				</div>
+				
+				
+				<div class="row media">
+					<div class="col-6">
+						<input type="text" value="{{lastYearLabel8}}" maxlength="50"
+							class="form-control" id="proposedLabel8" name="proposedLabel8" />
+					</div>
+					<div class="col-6">
+						<input type="text" class="form-control" maxlength="50"
+							id="proposedValue8" value="{{lastYearValue8}}"
+							data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+							name="proposedValue7" />
+					</div>
+				</div>
+				
+				<div class="row media">
+					<div class="col-6">
+						<input type="text" value="{{lastYearLabel9}}" maxlength="50"
+							class="form-control" id="proposedLabel9" name="proposedLabel9" />
+					</div>
+					<div class="col-6">
+						<input type="text" class="form-control" maxlength="50"
+							id="proposedValue9" value="{{lastYearValue9}}"
+							data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+							name="proposedValue9" />
+					</div>
+				</div>			
 				<div class="row media">
 					<div class="col-6">Total Media Investment:</div>
 					<div class="col-6">
@@ -536,96 +612,117 @@
 		});
 		/*]]>*/
 	</script>
-	<script th:inline="javascript">
-
-                 /*<![CDATA[*/
-			var app = angular.module('myApp', []);
-                 
-			var lastYearLabel1 =/*[[${dataPageModel?.lastYearLabel1}]]*/ ;
-			var lastYearValue1 =/*[[${dataPageModel?.lastYearValue1}]]*/ ;
-			 var lastYearLabel2 =/*[[${dataPageModel?.lastYearLabel2}]]*/ ;
-			 var lastYearValue2 =/*[[${dataPageModel?.lastYearValue2}]]*/ ;
-				var lastYearLabel3 =/*[[${dataPageModel?.lastYearLabel3}]]*/ ;
-				var lastYearValue3 =/*[[${dataPageModel?.lastYearValue3}]]*/ ;
-				var lastYearLabel4 =/*[[${dataPageModel?.lastYearLabel4}]]*/ ;
-				var lastYearValue4 =/*[[${dataPageModel?.lastYearValue4}]]*/ ;
-				var lastYearLabel5 =/*[[${dataPageModel?.lastYearLabel5}]]*/ ;
-				var lastYearValue5 =/*[[${dataPageModel?.lastYearValue5}]]*/ ;
-				var lastYearLabel6 =/*[[${dataPageModel?.lastYearLabel6}]]*/ ;
-				var lastYearValue6 =/*[[${dataPageModel?.lastYearValue6}]]*/ ;
-				
-			console.log ('lastYearLabel1 ' + lastYearLabel1);
-			app.controller('myCtrl', function($scope) {
-				
-				if (lastYearLabel1 != null)
-			        $scope.lastYearLabel1 = lastYearLabel1;
+	
+	
+<script th:inline="javascript">
+              
+/*<![CDATA[*/
+var app = angular.module('myApp', []);
      
-				if (lastYearValue1 != null) 
-					$scope.lastYearValue1=lastYearValue1;
-				
-				if (lastYearLabel2 != null) 
-					$scope.lastYearLabel2 = lastYearLabel2;
-				if (lastYearValue2 != null) 
-					$scope.lastYearValue2=lastYearValue2;
-				
-				if (lastYearLabel3 != null) 
-					$scope.lastYearLabel3 = lastYearLabel3;
-				if (lastYearValue3 != null) 
-					$scope.lastYearValue3=lastYearValue3;
-				
-			});
-			
-			
-			
-			
-			
-			
-			
-			
+var lastYearLabel1 =/*[[${dataPageModel?.lastYearLabel1}]]*/ ;
+var lastYearValue1 =/*[[${dataPageModel?.lastYearValue1}]]*/ ;
+var lastYearLabel2 =/*[[${dataPageModel?.lastYearLabel2}]]*/ ;
+var lastYearValue2 =/*[[${dataPageModel?.lastYearValue2}]]*/ ;
+var lastYearLabel3 =/*[[${dataPageModel?.lastYearLabel3}]]*/ ;
+var lastYearValue3 =/*[[${dataPageModel?.lastYearValue3}]]*/ ;
+var lastYearLabel4 =/*[[${dataPageModel?.lastYearLabel4}]]*/ ;
+var lastYearValue4 =/*[[${dataPageModel?.lastYearValue4}]]*/ ;
+var lastYearLabel5 =/*[[${dataPageModel?.lastYearLabel5}]]*/ ;
+var lastYearValue5 =/*[[${dataPageModel?.lastYearValue5}]]*/ ;
+var lastYearLabel6 =/*[[${dataPageModel?.lastYearLabel6}]]*/ ;
+var lastYearValue6 =/*[[${dataPageModel?.lastYearValue6}]]*/ ;
 
-                 var proposedLabel1 = /*[[${dataPageModel?.proposedLabel1}]]*/ '';
-		 var proposedValue1 = /*[[${dataPageModel?.proposedValue1}]]*/ '';
-	         var proposedLabel2 = /*[[${dataPageModel?.proposedLabel2}]]*/ '';
-		 var proposedValue2 = /*[[${dataPageModel?.proposedValue2}]]*/ '';	
-			
-	         var proposedLabel3 = /*[[${dataPageModel?.proposedLabel3}]]*/ '';
-		 var proposedValue3 = /*[[${dataPageModel?.proposedValue3}]]*/ '';
-	         var proposedLabel4 = /*[[${dataPageModel?.proposedLabel4}]]*/ '';
-		 var proposedValue4 = /*[[${dataPageModel?.proposedValue4}]]*/ '';	
-			
-	         var proposedLabel5 = /*[[${dataPageModel?.proposedLabel5}]]*/ '';
-		 var proposedValue5 = /*[[${dataPageModel?.proposedValue5}]]*/ '';
-	         var proposedLabel6 = /*[[${dataPageModel?.proposedLabel6}]]*/ '';
-		 var proposedValue6 = /*[[${dataPageModel?.proposedValue6}]]*/ '';	
-			
-		if (proposedLabel1 != null) 
-                    $("#proposedLabel1").val(proposedLabel1);
-		if (proposedValue1 != null) 	
-		    $("#proposedValue1").val(proposedValue1);
-		if (proposedLabel2 != null) 	
-	            $("#proposedLabel2").val(proposedLabel2);
-		if (proposedValue2 != null) 	
-		    $("#proposedValue2").val(proposedValue2);
-		 if (proposedLabel3 != null)       
-		    $("#proposedLabel3").val(proposedLabel3);
-		if (proposedValue3 != null) 	
-		    $("#proposedValue3").val(proposedValue3);
-		if (proposedLabel4 != null) 	
-	            $("#proposedLabel4").val(proposedLabel4);
-		if (proposedValue4 != null) 	
-		    $("#proposedValue4").val(proposedValue4);
-		if (proposedLabel5 != null) 
-		    $("#proposedLabel5").val(proposedLabel5);
-		if (proposedValue5 != null) 	
-		    $("#proposedValue5").val(proposedValue5);
-		if (proposedLabel6!= null) 	
-	            $("#proposedLabel6").val(proposedLabel6);
-		if (proposedValue6 != null) 	
-		    $("#proposedValue6").val(proposedValue6);	
-			
-                  /*]]>*/
-                 </script>
 
+var proposedLabel1 = /*[[${dataPageModel?.proposedLabel1}]]*/ '';
+var proposedValue1 = /*[[${dataPageModel?.proposedValue1}]]*/ '';
+var proposedLabel2 = /*[[${dataPageModel?.proposedLabel2}]]*/ '';
+var proposedValue2 = /*[[${dataPageModel?.proposedValue2}]]*/ '';	
+
+var proposedLabel3 = /*[[${dataPageModel?.proposedLabel3}]]*/ '';
+var proposedValue3 = /*[[${dataPageModel?.proposedValue3}]]*/ '';
+var proposedLabel4 = /*[[${dataPageModel?.proposedLabel4}]]*/ '';
+var proposedValue4 = /*[[${dataPageModel?.proposedValue4}]]*/ '';	
+
+var proposedLabel5 = /*[[${dataPageModel?.proposedLabel5}]]*/ '';
+var proposedValue5 = /*[[${dataPageModel?.proposedValue5}]]*/ '';
+var proposedLabel6 = /*[[${dataPageModel?.proposedLabel6}]]*/ '';
+var proposedValue6 = /*[[${dataPageModel?.proposedValue6}]]*/ '';	
+
+	
+console.log ('lastYearLabel1 ' + lastYearLabel1);
+app.controller('myCtrl', function($scope) {
+	
+	if (lastYearLabel1 != null)
+        $scope.lastYearLabel1 = lastYearLabel1;
+
+	if (lastYearValue1 != null) 
+		$scope.lastYearValue1=lastYearValue1;
+	
+	if (lastYearLabel2 != null) 
+		$scope.lastYearLabel2 = lastYearLabel2;
+	if (lastYearValue2 != null) 
+		$scope.lastYearValue2=lastYearValue2;
+	
+	if (lastYearLabel3 != null) 
+		$scope.lastYearLabel3 = lastYearLabel3;
+	if (lastYearValue3 != null) 
+		$scope.lastYearValue3=lastYearValue3;
+	
+	if (lastYearLabel4 != null) 
+		$scope.lastYearLabel4 = lastYearLabel4;
+	if (lastYearValue4 != null) 
+		$scope.lastYearValue4=lastYearValue4;
+	
+	if (lastYearLabel5 != null) 
+		$scope.lastYearLabel5 = lastYearLabel5;
+	if (lastYearValue5 != null) 
+		$scope.lastYearValue5=lastYearValue5;
+	
+	if (lastYearLabel6 != null) 
+		$scope.lastYearLabel6 = lastYearLabel6;
+	if (lastYearValue6 != null) 
+		$scope.lastYearValue6=lastYearValue6;
+	
+});
+
+
+
+
+
+
+ 
+if (proposedLabel1 != null) 
+        $("#proposedLabel1").val(proposedLabel1);
+if (proposedValue1 != null) 	
+$("#proposedValue1").val(proposedValue1);
+if (proposedLabel2 != null) 	
+    $("#proposedLabel2").val(proposedLabel2);
+if (proposedValue2 != null) 	
+$("#proposedValue2").val(proposedValue2);
+if (proposedLabel3 != null)       
+$("#proposedLabel3").val(proposedLabel3);
+if (proposedValue3 != null) 	
+$("#proposedValue3").val(proposedValue3);
+if (proposedLabel4 != null) 	
+    $("#proposedLabel4").val(proposedLabel4);
+if (proposedValue4 != null) 	
+$("#proposedValue4").val(proposedValue4);
+if (proposedLabel5 != null) 
+$("#proposedLabel5").val(proposedLabel5);
+if (proposedValue5 != null) 	
+$("#proposedValue5").val(proposedValue5);
+if (proposedLabel6!= null) 	
+    $("#proposedLabel6").val(proposedLabel6);
+if (proposedValue6 != null) 	
+$("#proposedValue6").val(proposedValue6);	
+
+      /*]]>*/      
+            
+
+
+
+</script>
+	
 
 
 
