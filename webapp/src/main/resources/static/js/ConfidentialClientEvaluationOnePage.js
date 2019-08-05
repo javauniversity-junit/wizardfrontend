@@ -180,12 +180,19 @@ function calculateTwo()
 	var proposedValue4 = document.getElementById("proposedValue4").value;
 	var proposedValue5= document.getElementById("proposedValue5").value;
 	var proposedValue6= document.getElementById("proposedValue6").value;
+	var proposedValue7 = document.getElementById("proposedValue7").value;
+	var proposedValue8= document.getElementById("proposedValue8").value;
+	var proposedValue9= document.getElementById("proposedValue9").value;
 	var proposedValue1Cal =0;
 	var proposedValue2Cal =0;
 	var proposedValue3Cal =0;
 	var proposedValue4Cal =0;
 	var proposedValue5Cal =0;
-	var proposedValue6Cal =0;
+	var proposedValue6Cal =0;	
+	var proposedValue7Cal =0;
+	var proposedValue8Cal =0;
+	var proposedValue9Cal =0;
+	
 	
 	var pctTAIGrossSalesLastYearCal = 0;
 	var taiShouldBeCal = 0;
@@ -250,14 +257,28 @@ function calculateTwo()
 		lastYearValue6 = removeComma(proposedValue6);
 		proposedValue6Cal = Number(proposedValue6);
 	}
-	
+		if (proposedValue7 != null) {
+		proposedValue7 = proposedValue4.substring(1);
+		proposedValue7 = removeComma(proposedValue7);
+		proposedValue7Cal = Number(proposedValue7);
+	}
+	if (proposedValue8 != null) {
+		proposedValue8 = proposedValue8.substring(1);
+		proposedValue8 = removeComma(proposedValue8);
+		proposedValue8Cal = Number(proposedValue8);
+	}
+	if (proposedValue9 != null) {
+		proposedValue9 = proposedValue9.substring(1);
+		lastYearValue9 = removeComma(proposedValue9);
+		proposedValue9Cal = Number(proposedValue9);
+	}
 	
 	
 
 
 	
 	var totalMediaInvestment = proposedValue1Cal + proposedValue2Cal + proposedValue3Cal + proposedValue4Cal
-	                  + proposedValue5Cal + proposedValue6Cal;
+	                  + proposedValue5Cal + proposedValue6Cal + proposedValue7Cal + proposedValue8Cal + proposedValue9Cal;
 	
 	document.getElementById("totalMediaInvestmentTwo").value =  CurrencyFormatted(totalMediaInvestment);
 	//document.getElementById("averageCustomerValue").value = e_averageCustomerValue;//e
