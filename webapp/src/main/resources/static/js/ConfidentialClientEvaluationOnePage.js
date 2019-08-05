@@ -133,7 +133,7 @@ function calculateOne()
 	}
 	if (lastYearValue9 != null) {
 		lastYearValue9 = lastYearValue9.substring(1);
-		lastYearValue9 = removeComma(lastYearValue6);
+		lastYearValue9 = removeComma(lastYearValue9);
 		lastYearValue9Cal = Number(lastYearValue9);
 	}
 	
