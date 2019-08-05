@@ -258,7 +258,7 @@ function calculateTwo()
 		proposedValue6Cal = Number(proposedValue6);
 	}
 		if (proposedValue7 != null) {
-		proposedValue7 = proposedValue4.substring(1);
+		proposedValue7 = proposedValue7.substring(1);
 		proposedValue7 = removeComma(proposedValue7);
 		proposedValue7Cal = Number(proposedValue7);
 	}
