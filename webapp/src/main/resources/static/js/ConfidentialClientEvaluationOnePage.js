@@ -127,7 +127,7 @@ function calculateOne()
 		lastYearValue7Cal = Number(lastYearValue7);
 	}
 	if (lastYearValue8 != null) {
-		lastYearValue8 = lastYearValue5.substring(1);
+		lastYearValue8 = lastYearValue8.substring(1);
 		lastYearValue8 = removeComma(lastYearValue8);
 		lastYearValue8Cal = Number(lastYearValue8);
 	}
