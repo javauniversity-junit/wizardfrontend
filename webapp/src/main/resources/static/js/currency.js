@@ -144,7 +144,7 @@ function CurrencyFormatted(amount) {
 	i = i / 100;
 	s = new String(i);
 	//aah if(s.indexOf('.') < 0) { s += '.00'; }
-	if(s.indexOf('.') == (s.length - 2)) { s += '0'; }
+	//aah if(s.indexOf('.') == (s.length - 2)) { s += '0'; }
 	s = minus + s;
 	//add commas
 	s = s.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
