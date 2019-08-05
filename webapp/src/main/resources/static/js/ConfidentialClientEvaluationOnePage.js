@@ -16,12 +16,18 @@ function calculateOne()
 	var lastYearValue4 = document.getElementById("lastYearValue4").value;
 	var lastYearValue5= document.getElementById("lastYearValue5").value;
 	var lastYearValue6= document.getElementById("lastYearValue6").value;
+	var lastYearValue7 = document.getElementById("lastYearValue7").value;
+	var lastYearValue8= document.getElementById("lastYearValue8").value;
+	var lastYearValue9= document.getElementById("lastYearValue9").value;
 	var lastYearValue1Cal =0;
 	var lastYearValue2Cal =0;
 	var lastYearValue3Cal =0;
 	var lastYearValue4Cal =0;
 	var lastYearValue5Cal =0;
 	var lastYearValue6Cal =0;
+		var lastYearValue7Cal =0;
+	var lastYearValue8Cal =0;
+	var lastYearValue9Cal =0;
 	
 	var pctTAIGrossSalesLastYearCal = 0;
 	var totalMediaInvestmentCal = 0;
@@ -115,13 +121,27 @@ function calculateOne()
 		lastYearValue6Cal = Number(lastYearValue6);
 	}
 	
-	
+		if (lastYearValue7 != null) {
+		lastYearValue7 = lastYearValue7.substring(1);
+		lastYearValue7 = removeComma(lastYearValue7);
+		lastYearValue7Cal = Number(lastYearValue7);
+	}
+	if (lastYearValue8 != null) {
+		lastYearValue8 = lastYearValue5.substring(1);
+		lastYearValue8 = removeComma(lastYearValue8);
+		lastYearValue8Cal = Number(lastYearValue8);
+	}
+	if (lastYearValue9 != null) {
+		lastYearValue9 = lastYearValue9.substring(1);
+		lastYearValue9 = removeComma(lastYearValue6);
+		lastYearValue9Cal = Number(lastYearValue9);
+	}
 	
 
 
 	
 	var totalMediaInvestment = lastYearValue1Cal + lastYearValue2Cal + lastYearValue3Cal + lastYearValue4Cal
-	                  + lastYearValue5Cal + lastYearValue6Cal;
+	                  + lastYearValue5Cal + lastYearValue6Cal  + lastYearValue7Cal + lastYearValue8Cal + lastYearValue9Cal;
 	totalMediaInvestment = CurrencyFormatted(totalMediaInvestment);
 	
 	document.getElementById("totalMediaInvestment").value =  totalMediaInvestment;
