@@ -26,8 +26,11 @@ map.set('otherLabel', 'Other:');
 
 
 function addLabel(key) {
-	
-	var keyvalue = map.get(key);
-	document.getElementById(key).innerHTML = keyvalue;
+	if (map.has(key)) {
+	  var keyvalue = map.get(key);
+	  document.getElementById(key).innerHTML = keyvalue;
+	} else {
+		document.getElementById(key).innerHTML = key;
+	}
 	
 }
