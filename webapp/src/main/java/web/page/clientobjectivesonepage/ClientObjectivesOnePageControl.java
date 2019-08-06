@@ -169,7 +169,7 @@ public class ClientObjectivesOnePageControl {
 		
 		if (clientObjectivesOnePageModel.isOther()) {
 			ClientObjectivesOnePageTwoModel modelObj = 
-					new ClientObjectivesOnePageTwoModel(clientObjectivesOnePageModel.getOtherText(),clientObjectivesOnePageModel.getOtherSortOrder());
+					new ClientObjectivesOnePageTwoModel("other",clientObjectivesOnePageModel.getOtherSortOrder(),clientObjectivesOnePageModel.getOtherText());
 			orderList.add(modelObj);
 		
 		}
