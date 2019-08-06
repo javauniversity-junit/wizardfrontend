@@ -379,16 +379,19 @@
 							</div>
 
 						</div>
-						<div class="form-group" style="display:none;">
+						<div class="form-group">
 
 							<div class="checkbox">
 								<label><input name="other" type="checkbox"
-									th:checked="${dataPageModel?.other}"> <span id="otherLabel">
+									th:checked="${dataPageModel?.other}"> 
+									<span id="otherLabel">
 									<script>
 									addLabel("otherLabel");
 									</script>
-									
-									</span></label>
+									<input name="otherText" type="text"
+									th:text="${dataPageModel?.otherText}">
+									</span>
+								</label>
 							</div>
 
 						</div>
