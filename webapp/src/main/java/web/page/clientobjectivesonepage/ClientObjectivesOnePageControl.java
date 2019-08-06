@@ -269,6 +269,7 @@ public class ClientObjectivesOnePageControl {
 			,@RequestParam(defaultValue = "0") String createPentUpDemandSortOrderStr
 			,@RequestParam(defaultValue = "0") String increaseMarketShareSortOrderStr
 			,@RequestParam(defaultValue = "0") String otherSortOrderStr 
+			,@RequestParam(defaultValue = "") String otherText
 			,@RequestParam(defaultValue = "0") String utilizeCoopVendorDollarsSortOrderortOrderStr 
 			,@RequestParam String wizarddataid
 			,@RequestParam String previousPage
@@ -346,7 +347,7 @@ public class ClientObjectivesOnePageControl {
 				developDatabaseMarketingSortOrder, initiateCauseMarketingProgramSortOrder,
 				developSpeciallyStagedEventSortOrder, maintainMarketDominanceSortOrder, improveBusinessNameBrandSortOrder,
 				establishorReestablishBusinessImageSortOrder, createPentUpDemandSortOrder, increaseMarketShareSortOrder,
-				otherSortOrder,utilizeCoopVendorDollarsSortOrderortOrder);
+				otherSortOrder,utilizeCoopVendorDollarsSortOrderortOrder,otherText);
 
 		String pageData = JSONManager.convertToJson(pageModel);
 		wizardData.setPagedata(pageData);
