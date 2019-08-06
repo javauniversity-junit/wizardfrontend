@@ -40,7 +40,7 @@ public class ClientObjectivesOnePageModel {
 			int developSpeciallyStagedEventSortOrder, int maintainMarketDominanceSortOrder,
 			int improveBusinessNameBrandSortOrder, int establishorReestablishBusinessImageSortOrder,
 			int createPentUpDemandSortOrder, int increaseMarketShareSortOrder, int otherSortOrder,
-			int utilizeCoopVendorDollarsSortOrder) {
+			int utilizeCoopVendorDollarsSortOrder, String otherText) {
 		super();
 		this.introduceNewDepartment = introduceNewDepartment;
 		this.featureSpecificProducts = featureSpecificProducts;
@@ -86,6 +86,7 @@ public class ClientObjectivesOnePageModel {
 		this.increaseMarketShareSortOrder = increaseMarketShareSortOrder;
 		this.otherSortOrder = otherSortOrder;
 		this.utilizeCoopVendorDollarsSortOrder = utilizeCoopVendorDollarsSortOrder;
+		this.otherText = otherText;
 	}
 
 	public void setIntroduceNewDepartmentSortOrder(int introduceNewDepartmentSortOrder) {
@@ -305,9 +306,15 @@ public class ClientObjectivesOnePageModel {
 	private int increaseMarketShareSortOrder;
 
 	private int otherSortOrder;
+	private String otherText;
 	private int utilizeCoopVendorDollarsSortOrder;
 	
-	
+	public String getOtherText () {
+		return otherText;
+	}
+	public void setOtherText (String otherText) {
+		this.otherText = otherText;
+	}
 
 	public int getUtilizeCoopVendorDollarsSortOrder() {
 		return utilizeCoopVendorDollarsSortOrder;
