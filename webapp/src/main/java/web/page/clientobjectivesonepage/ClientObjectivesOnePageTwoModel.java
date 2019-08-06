@@ -14,6 +14,9 @@ public class ClientObjectivesOnePageTwoModel {
 		this.inputNameId = inputNameId;
 	}
 	public String getLabel() {
+		if (this.label != null) {
+			return label;
+		}
 		label = key + "Label";
 		return label;
 	}
@@ -38,6 +41,12 @@ public class ClientObjectivesOnePageTwoModel {
 		this.sortOrder = sortOrder;
 	}
 	
+	public ClientObjectivesOnePageTwoModel(String key, int sortOrder, String label) {
+		super();
+		this.key = key ;
+		this.sortOrder = sortOrder;
+		this.label = label;
+	}
 	
 	
 
