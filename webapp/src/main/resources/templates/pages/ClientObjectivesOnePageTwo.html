@@ -150,7 +150,10 @@
 					th:value="${dataPageModel?.createPentUpDemand}" /> <input
 					name="increaseMarketShare" type="hidden"
 					th:value="${dataPageModel?.increaseMarketShare}" /> <input
-					name="other" type="hidden" th:value="${dataPageModel?.other}" /> <input
+					name="other" type="hidden" th:value="${dataPageModel?.other}" /> 
+					<input
+					name="otherText" type="hidden" th:value="${dataPageModel?.otherText}" />
+					<input
 					type="hidden"
 					th:value="'redirect:/StrategicMarketingPageOne?ID=' + ${wizard.wizardid}"
 					name="nextPage" /> <input type="hidden" id="previousPage"
