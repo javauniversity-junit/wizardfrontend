@@ -1,11 +1,13 @@
 function calculate()
 {
-	var planBGrossProfitOnSales = formatNumber(document.getElementById("planBGrossProfitOnSales").value); // h
+	var planBGrossProfitOnSales = convertToNumberFromCurrency(document.getElementById("planBGrossProfitOnSales").value); // h
 	var planBMonths = convertIntToNumber(document.getElementById("planBMonths").value); // i
 	
 	var planBAdditionalGrossSales = planBGrossProfitOnSales * planBMonths; // j = hi
 	
 	document.getElementById("planBAdditionalGrossSales").value =  FormatAmount(Math.round(planBAdditionalGrossSales));
+	document.getElementById("planBMonths").value =  planBMonths;
+	//document.getElementById("planBAdditionalGrossSales").value =  planBAdditionalGrossSales;
 	
 	
 	/*
@@ -43,22 +45,22 @@ function calculate()
 	*/
 }	
 	
-	function FormatAmount(amount) {
-		var i = parseFloat(amount);
-		if(isNaN(i)) { i = 0.00; }
-		var minus = '';
-		if(i < 0) { minus = '-'; }
-		i = Math.abs(i);
-		i = parseInt((i + .005) * 100);
-		i = i / 100;
-		s = new String(i);
-		if(s.indexOf('.') < 0) { s += '.00'; }
-		if(s.indexOf('.') == (s.length - 2)) { s += '0'; }
-		s = minus + s;
-		if(s.indexOf('.') > 0) { s = s.substr(0,s.indexOf('.')); }
-		s = "$" + s.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-		return s;
-	}
+function FormatAmount(amount) {
+	var i = parseFloat(amount);
+	if(isNaN(i)) { i = 0.00; }
+	var minus = '';
+	if(i < 0) { minus = '-'; }
+	i = Math.abs(i);
+	i = parseInt((i + .005) * 100);
+	i = i / 100;
+	s = new String(i);
+	if(s.indexOf('.') < 0) { s += '.00'; }
+	if(s.indexOf('.') == (s.length - 2)) { s += '0'; }
+	s = minus + s;
+	if(s.indexOf('.') > 0) { s = s.substr(0,s.indexOf('.')); }
+	s = "$" + s.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	return s;
+}
 	
 
 

@@ -69,7 +69,7 @@ public class PlanABEPPageController {
 			,@RequestParam (defaultValue ="", name="planAProspectValue") String planAProspectValue
 			,@RequestParam (defaultValue ="", name="planAInvestment") String planAInvestment
 			,@RequestParam (defaultValue ="", name="planAProspectsNeeded") String planAProspectsNeeded
-			,@RequestParam (defaultValue ="", name="planAProspectSales") String planAProspectSalesNeeded
+			,@RequestParam (defaultValue ="", name="planAProspectSalesNeeded") String planAProspectSalesNeeded
 			,@RequestParam (defaultValue ="", name="planAGrossProfitOnSales") String planAGrossProfitOnSales
 			,@RequestParam (defaultValue ="", name="planAMonths") String planAMonths
 			,@RequestParam (defaultValue ="", name="planAAdditionalGrossSales") String planAAdditionalGrossSales			

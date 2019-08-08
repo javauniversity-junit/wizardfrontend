@@ -22,6 +22,8 @@ function formatNumber(n) {
   return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 }
 
+
+
 function convertToNumberFromCurrency(currency)
 {
 	if (currency == null) {
