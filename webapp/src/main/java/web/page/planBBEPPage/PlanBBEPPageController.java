@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import web.model.Wizard;
 import web.model.WizardData;
 import web.page.Pages;
+import web.page.planABEPPage.PlanABEPPageModel;
 import web.page.planproposedpage.PlanProposedPageModel;
 import web.page.JSONManager;
 import web.page.PageNameEnum;
@@ -44,10 +45,10 @@ public class PlanBBEPPageController {
 			
 		}
 		
-		WizardData wizardDataOther = wizardDataRepository.findByPagesequenceAndWizardid(Pages.PlanBProposedPage.getPageSequence(), wizard.getWizardid());
-		PlanProposedPageModel dataPageModelOther = null;
+		WizardData wizardDataOther = wizardDataRepository.findByPagesequenceAndWizardid(Pages.PlanABEPPage.getPageSequence(), wizard.getWizardid());
+		PlanABEPPageModel dataPageModelOther = null;
 		if (wizardDataOther != null) {
-			dataPageModelOther =(PlanProposedPageModel)JSONManager.convertFromJson(wizardDataOther.getPagedata(),PlanProposedPageModel.class);
+			dataPageModelOther =(PlanABEPPageModel)JSONManager.convertFromJson(wizardDataOther.getPagedata(),PlanABEPPageModel.class);
 			
 		}
 		

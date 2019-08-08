@@ -17,8 +17,8 @@ function calculate()
 		    planAProspectValueRaw = planAAverageSale * (planAGrossMargin/100) * (planAClosingPct/100);
 	}
 	
-	var planAInvestment = convertToNumberFromCurrency(document.getElementById("planAInvestment").value); // e
-	var planAProspectsNeeded = planAProspectValue == 0 ? 0 : planAInvestment/planAProspectValueRaw ; // f = e/d
+	var planAInvestment = formatNumber(document.getElementById("planAInvestment").value); // e
+	var planAProspectsNeeded = planAProspectValueRaw == 0 ? 0 : planAInvestment/planAProspectValueRaw ; // f = e/d
 	var planAProspectSalesNeeded = planAProspectsNeeded * (planAClosingPct/100) ; // g = fc
 	var planAGrossProfitOnSales = planAProspectSalesNeeded * planAAverageSale; // h = ga
 	var planAMonths = convertIntToNumber(document.getElementById("planAMonths").value); // i
@@ -28,7 +28,7 @@ function calculate()
 	document.getElementById("planAInvestment").value = FormatAmount(planAInvestment);
 	document.getElementById("planAProspectValue").value =  planAProspectValue;
 	document.getElementById("planAProspectsNeeded").value =  Math.round(planAProspectsNeeded * 10) / 10;
-	document.getElementById("planAProspectSalesNeeded").value =  Math.round(planAProspectSalesNeeded *10) / 10;	
+	document.getElementById("planAProspectSalesNeeded").value =  Math.round(planAProspectSalesNeeded * 10) / 10;	
 	document.getElementById("planAGrossProfitOnSales").value =  FormatAmount(Math.round(planAGrossProfitOnSales));
 	document.getElementById("planAAdditionalGrossSales").value =  FormatAmount(Math.round(planAAdditionalGrossSales));
 }

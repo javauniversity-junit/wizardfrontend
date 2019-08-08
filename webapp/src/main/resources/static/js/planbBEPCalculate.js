@@ -1,6 +1,14 @@
 function calculate()
 {
+	var planBGrossProfitOnSales = formatNumber(document.getElementById("planBGrossProfitOnSales").value); // h
+	var planBMonths = convertIntToNumber(document.getElementById("planBMonths").value); // i
 	
+	var planBAdditionalGrossSales = planBGrossProfitOnSales * planBMonths; // j = hi
+	
+	document.getElementById("planBAdditionalGrossSales").value =  FormatAmount(Math.round(planBAdditionalGrossSales));
+	
+	
+	/*
 	//var planBAverageSale = convertToNumberFromCurrency(document.getElementById("planBAverageSale").value); // a
 	var planBAverageSale = document.getElementById("planBAverageSale").value; // a
 	var planBGrossMargin = document.getElementById("planBGrossMargin").value; // b
@@ -32,6 +40,7 @@ function calculate()
 	document.getElementById("planBProspectSalesNeeded").value =  Math.round(planBProspectSalesNeeded *10) / 10;	
 	document.getElementById("planBGrossProfitOnSales").value =  FormatAmount(Math.round(planBGrossProfitOnSales));
 	document.getElementById("planBAdditionalGrossSales").value =  FormatAmount(Math.round(planBAdditionalGrossSales));
+	*/
 }	
 	
 	function FormatAmount(amount) {
