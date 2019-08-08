@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import web.model.Wizard;
 import web.model.WizardData;
 import web.page.Pages;
-
+import web.page.planproposedpage.PlanProposedPageModel;
 import web.page.JSONManager;
 import web.page.PageNameEnum;
 import web.repository.WizardDataRepository;
@@ -43,9 +43,19 @@ public class PlanALifetimeValuedPageController {
 			dataPageModel =(PlanALifetimeValuedPageModel)JSONManager.convertFromJson(wizardData.getPagedata(),PlanALifetimeValuedPageModel.class);
 			
 		}
+		
+		WizardData wizardDataOther = wizardDataRepository.findByPagesequenceAndWizardid(Pages.PlanAProposedPage.getPageSequence(), wizard.getWizardid());
+		PlanProposedPageModel dataPageModelOther = null;
+		if (wizardDataOther != null) {
+			dataPageModelOther =(PlanProposedPageModel)JSONManager.convertFromJson(wizardDataOther.getPagedata(),PlanProposedPageModel.class);
+			
+		}
+		
+		
 		//DemographicManager.convertFromJson(json)
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("dataPageModel", dataPageModel);
+		model.addAttribute("dataPageModelOther", dataPageModelOther);
 		model.addAttribute("wizard", wizard);
 		return "pages/PlanALifetimeValuedPage";
 	}
