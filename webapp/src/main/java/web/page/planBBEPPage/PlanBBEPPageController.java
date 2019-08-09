@@ -48,15 +48,19 @@ public class PlanBBEPPageController {
 		WizardData wizardDataOther = wizardDataRepository.findByPagesequenceAndWizardid(Pages.PlanABEPPage.getPageSequence(), wizard.getWizardid());
 		PlanABEPPageModel dataPageModelOther = null;
 		if (wizardDataOther != null) {
-			dataPageModelOther =(PlanABEPPageModel)JSONManager.convertFromJson(wizardDataOther.getPagedata(),PlanABEPPageModel.class);
-			
+			dataPageModelOther =(PlanABEPPageModel)JSONManager.convertFromJson(wizardDataOther.getPagedata(),PlanABEPPageModel.class);			
 		}
 		
-		
+		WizardData wizardDataThird = wizardDataRepository.findByPagesequenceAndWizardid(Pages.PlanBProposedPage.getPageSequence(), wizard.getWizardid());
+		PlanProposedPageModel dataPageModelThird = null;
+		if (wizardDataThird != null) {
+			dataPageModelThird =(PlanProposedPageModel)JSONManager.convertFromJson(wizardDataThird.getPagedata(),PlanProposedPageModel.class);			
+		}
 		//DemographicManager.convertFromJson(json)
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("dataPageModel", dataPageModel);
 		model.addAttribute("dataPageModelOther", dataPageModelOther);
+		model.addAttribute("dataPageModelThird", dataPageModelThird);
 		model.addAttribute("wizard", wizard);
 		return "pages/PlanBBEPPage";
 	}

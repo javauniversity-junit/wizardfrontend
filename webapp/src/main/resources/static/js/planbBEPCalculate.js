@@ -1,13 +1,28 @@
 function calculate()
 {
-	var planBGrossProfitOnSales = convertToNumberFromCurrency(document.getElementById("planBGrossProfitOnSales").value); // h
-	var planBMonths = convertIntToNumber(document.getElementById("planBMonths").value); // i
+	var planBAverageSale = convertToNumberFromCurrency(document.getElementById("planBAverageSale").value); // a
+	var planBGrossMargin = document.getElementById("planBGrossMargin").value; // b
+	var planBClosingPct = document.getElementById("planBClosingPct").value; // c 
+	var planBProspectValue = convertToNumberFromCurrency(document.getElementById("planBProspectValue").value); // d
+	var planBInvestment = convertToNumberFromCurrency(document.getElementById("planBInvestment").value); // e
+	var f_planBProspectsNeededRaw = planBInvestment / (planBAverageSale * (planBGrossMargin/100) * (planBClosingPct/100));
 	
-	var planBAdditionalGrossSales = planBGrossProfitOnSales * planBMonths; // j = hi
+	var g_planBProspectSalesNeeded = f_planBProspectsNeededRaw * (planBClosingPct/100); // g = f * c;
+	var h_planBGrossProfitOnSales = g_planBProspectSalesNeeded * planBAverageSale; // h = g * a;
+	
+	// tinas var planBGrossProfitOnSales = convertToNumberFromCurrency(document.getElementById("planBGrossProfitOnSales").value); // h
+	var i_planBMonthsRaw = convertIntToNumber(document.getElementById("planBMonths").value); // i
+	
+	var planBAdditionalGrossSales = h_planBGrossProfitOnSales * i_planBMonthsRaw; // j = hi
+	
+	
+	document.getElementById("planBProspectsNeeded").value =  Math.round(f_planBProspectsNeededRaw * 10) / 10;
+	document.getElementById("planBProspectSalesNeeded").value =  Math.round(g_planBProspectSalesNeeded * 10) / 10;
+	document.getElementById("planBGrossProfitOnSales").value =  FormatAmount(Math.round(h_planBGrossProfitOnSales));
 	
 	document.getElementById("planBAdditionalGrossSales").value =  FormatAmount(Math.round(planBAdditionalGrossSales));
-	document.getElementById("planBMonths").value =  planBMonths;
-	//document.getElementById("planBAdditionalGrossSales").value =  planBAdditionalGrossSales;
+	document.getElementById("planBMonths").value =  i_planBMonthsRaw;
+	document.getElementById("planBAdditionalGrossSales").value =  FormatAmount(Math.round(planBAdditionalGrossSales));
 	
 	
 	/*
