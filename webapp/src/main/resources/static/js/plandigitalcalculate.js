@@ -28,18 +28,19 @@ function calculate() {
 	var planAMonthlyDigitalInvestmentCal = 0;
 
 	if (planAProjectedGrossProfit != null && planAProjectedGrossProfit != "") {
-		planAProjectedGrossProfit = planAProjectedGrossProfit.substring(1);
-		planAProjectedGrossProfit = removeComma(planAProjectedGrossProfit);
-		;
-		planAProjectedGrossProfit = Number(planAProjectedGrossProfit);
+		// tinas planAProjectedGrossProfit = planAProjectedGrossProfit.substring(1);
+		// tinas planAProjectedGrossProfit = removeComma(planAProjectedGrossProfit);
+		
+		// tinas planAProjectedGrossProfit = Number(planAProjectedGrossProfit);
+		planAProjectedGrossProfit = convertToNumberFromCurrency(planAProjectedGrossProfit);
 	}
 
 	if (planAMonthlyDigitalInvestment != null
 			&& planAMonthlyDigitalInvestment != "") {
-		planAMonthlyDigitalInvestment = planAMonthlyDigitalInvestment
-				.substring(1);
-		planAMonthlyDigitalInvestment = removeComma(planAMonthlyDigitalInvestment);
-		planAMonthlyDigitalInvestmentCal = Number(planAMonthlyDigitalInvestment);
+		// tinas planAMonthlyDigitalInvestment = planAMonthlyDigitalInvestment.substring(1);
+		// tinas planAMonthlyDigitalInvestmentCal = removeComma(planAMonthlyDigitalInvestment);
+		// tinas planAMonthlyDigitalInvestmentCal = Number(planAMonthlyDigitalInvestment);
+		planAMonthlyDigitalInvestmentCal = convertToNumberFromCurrency(planAMonthlyDigitalInvestment);
 	}
 
 	if (planASalesConversionPercentage != null
@@ -49,10 +50,10 @@ function calculate() {
 	}
 
 	if (planACostPerThousand != null && planACostPerThousand != "") {
-		planACostPerThousand = planACostPerThousand.substring(1);
-		planACostPerThousand = removeComma(planACostPerThousand);
-		planACostPerThousandCal = Number(planACostPerThousand);
-
+		// tinas planACostPerThousand = planACostPerThousand.substring(1);
+		// tinas planACostPerThousand = removeComma(planACostPerThousand);
+		// tinas planACostPerThousandCal = Number(planACostPerThousand);
+		planACostPerThousandCal = convertToNumberFromCurrency(planACostPerThousand);
 	}
 
 	if (planAClickThroughRate != null && planAClickThroughRate != "") {
@@ -78,8 +79,8 @@ function calculate() {
 			* h_planAMonthlyConversions);
 	var l_planAMonthlyROID = Math.round(k_planAMonthlyGrossProfit
 			- planAMonthlyDigitalInvestmentCal);
-	var m_planAMonthlyROIP = Math.round(l_planAMonthlyROID
-			/ planAMonthlyDigitalInvestmentCal) * 100;
+	var m_planAMonthlyROIP = l_planAMonthlyROID
+			/ planAMonthlyDigitalInvestmentCal * 100;
 	
 	
 	console.log(" planAMonthlyDigitalInvestmentCal " + planAMonthlyDigitalInvestmentCal);
@@ -92,13 +93,16 @@ function calculate() {
 	console.log("l_planAMonthlyROID " + l_planAMonthlyROID);
 	console.log("m_planAMonthlyROIP " + m_planAMonthlyROIP);
 
+	c_planAClosingPctNumber = Math.round(c_planAClosingPctNumber);
+	
 	document.getElementById("planAClosingPctNumber").value = c_planAClosingPctNumber;
-	document.getElementById("planAMonthlyClicks").value = e_planAMonthlyClicks;// e
-	document.getElementById("planACostPerClicks").value = f_planACostPerClicks;
-	document.getElementById("planAMonthlyConversions").value = h_planAMonthlyConversions;
-	document.getElementById("planACostPerConversion").value = i_planACostPerConversion;
-	document.getElementById("planAMonthlyGrossProfit").value = k_planAMonthlyGrossProfit;
+	document.getElementById("planAMonthlyClicks").value = Math.round(e_planAMonthlyClicks);// e
+	document.getElementById("planACostPerClicks").value = FormatAmount(Math.round(f_planACostPerClicks));
+	document.getElementById("planAMonthlyConversions").value = Math.round(h_planAMonthlyConversions);
+	document.getElementById("planACostPerConversion").value = FormatAmount(i_planACostPerConversion);
+	document.getElementById("planAMonthlyGrossProfit").value = FormatAmount(k_planAMonthlyGrossProfit);
 	document.getElementById("planAMonthlyROID").value = FormatAmount(l_planAMonthlyROID);
+	//document.getElementById("planAMonthlyROIP").value = m_planAMonthlyROIP;
 	document.getElementById("planAMonthlyROIP").value = m_planAMonthlyROIP;
 }
 
@@ -120,4 +124,27 @@ function FormatAmount(amount) {
 	s = "$" + s.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     if (minus.length > 0) { s = "(" + s + ")";}
 	return s;
+}
+
+function convertToNumberFromCurrency(currency)
+{
+	if (currency == null) {
+		return 0;
+	}
+		
+	var convert = currency.substring(1);
+	convert = removeComma(convert);
+	convert = Number(convert);
+	return convert;
+
+
+}
+
+function removeComma(currency){
+	var position = currency.indexOf(",");
+	while(position > 0) {
+		currency  = currency.replace(",","");
+		position = currency.indexOf(",");
+	}
+	return currency;
 }
