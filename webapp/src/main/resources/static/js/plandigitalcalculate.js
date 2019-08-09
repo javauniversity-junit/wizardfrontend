@@ -103,7 +103,7 @@ function calculate() {
 	document.getElementById("planAMonthlyGrossProfit").value = FormatAmount(k_planAMonthlyGrossProfit);
 	document.getElementById("planAMonthlyROID").value = FormatAmount(l_planAMonthlyROID);
 	//document.getElementById("planAMonthlyROIP").value = m_planAMonthlyROIP;
-	document.getElementById("planAMonthlyROIP").value = m_planAMonthlyROIP;
+	document.getElementById("planAMonthlyROIP").value = Math.round(m_planAMonthlyROIP);
 }
 
 
