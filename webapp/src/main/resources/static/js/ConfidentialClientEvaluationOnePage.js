@@ -25,7 +25,7 @@ function calculateOne()
 	var lastYearValue4Cal =0;
 	var lastYearValue5Cal =0;
 	var lastYearValue6Cal =0;
-		var lastYearValue7Cal =0;
+	var lastYearValue7Cal =0;
 	var lastYearValue8Cal =0;
 	var lastYearValue9Cal =0;
 	
@@ -37,10 +37,8 @@ function calculateOne()
 		totalMediaInvestmentInput = removeComma(totalMediaInvestmentInput);
 		totalMediaInvestmentCal = Number(totalMediaInvestmentInput);
 	}
-	
-	
-	
-	 if (pctGrossSales != null) {
+		
+	if (pctGrossSales != null) {
 		pctGrossSales = Number(pctGrossSales);
 	}
 
@@ -56,8 +54,6 @@ function calculateOne()
 	if (taiNext12MonthsCal > 0 && estimatedGrossSalesNext12MonthsCal > 0) {
 	    document.getElementById("pctGrossSales").value = Math.round(taiNext12MonthsCal/estimatedGrossSalesNext12MonthsCal);
            //document.getElementById("pctGrossSales").value = Math.round(estimatedGrossSalesNext12MonthsCal/taiNext12MonthsCal);
-
-	
 	}
 	
 	if (taiNext12MonthsCal > 0 && pctGrossSales > 0) {
@@ -69,22 +65,21 @@ function calculateOne()
 		
 	}
 	
-	
-	
-	
-	if (pctTAIGrossSalesLastYear != null) {
 		
-	
+	if (pctTAIGrossSalesLastYear != null) {	
 		pctTAIGrossSalesLastYearCal = Number(pctTAIGrossSalesLastYear);
 	}
 	
-	if (totalMediaInvestmentCal > 0 && pctTAIGrossSalesLastYearCal > 0) {
-		var percentage = 100/pctTAIGrossSalesLastYearCal;
-		var total = totalMediaInvestmentCal/ percentage;
+	var pctTAIGrossSalesLastYearCalNew = 0.00;
+	// tinas if (totalMediaInvestmentCal > 0 && pctTAIGrossSalesLastYearCal > 0) {
+	if (totalMediaInvestmentCal != 0 && grossSalesLastyearCal != 0) {
+		// tinas var percentage = 100/pctTAIGrossSalesLastYearCal;
+		// tinas var total = totalMediaInvestmentCal/ percentage;
 		//total = Math.round(total);
-		total = CurrencyFormatted(total);
+		// tinas total = CurrencyFormatted(total);
 		//document.getElementById("grossSalesLastyear").value =  total;
 		
+		pctTAIGrossSalesLastYearCalNew = (totalMediaInvestmentCal / grossSalesLastyearCal) * 100;
 	}
 	
 	
@@ -136,10 +131,7 @@ function calculateOne()
 		lastYearValue9 = removeComma(lastYearValue9);
 		lastYearValue9Cal = Number(lastYearValue9);
 	}
-	
-
-
-	
+		
 	var totalMediaInvestment = lastYearValue1Cal + lastYearValue2Cal + lastYearValue3Cal + lastYearValue4Cal
 	                  + lastYearValue5Cal + lastYearValue6Cal  + lastYearValue7Cal + lastYearValue8Cal + lastYearValue9Cal;
 	totalMediaInvestment = CurrencyFormatted(totalMediaInvestment);
@@ -150,8 +142,8 @@ function calculateOne()
 	
 	if (totalMediaInvestmentTemp != 0 && grossSalesLastyearCal != 0) {
 				
-		document.getElementById("pctTAIGrossSalesLastYear").value = Math.round( totalMediaInvestmentTemp/grossSalesLastyearCal);
-
+		// tinas document.getElementById("pctTAIGrossSalesLastYear").value = Math.round( totalMediaInvestmentTemp/grossSalesLastyearCal);
+		document.getElementById("pctTAIGrossSalesLastYear").value = Math.round(pctTAIGrossSalesLastYearCalNew * 100) / 100;
 		//document.getElementById("pctTAIGrossSalesLastYear").value = Math.round(grossSalesLastyearCal/totalMediaInvestmentTemp);
 	}
 	
