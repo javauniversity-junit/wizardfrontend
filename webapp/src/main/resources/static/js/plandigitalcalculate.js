@@ -148,3 +148,6 @@ function removeComma(currency){
 	}
 	return currency;
 }
+
+//initial
+calculate();
