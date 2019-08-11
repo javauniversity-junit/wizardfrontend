@@ -35,3 +35,7 @@ function calculateWant (haveParm, wantParm) {
     var wantValue = 100 - haveValue;
     document.getElementById(wantParm).value = wantValue;
 }
+
+//init
+calculateWomen();
+calculateMen ();
