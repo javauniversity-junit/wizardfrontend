@@ -50,9 +50,10 @@ function calculateOne()
 	
 	var estimatedGrossSalesNext12MonthsCal = 
 		convertToNumberFromCurrency(document.getElementById("estimatedGrossSalesNext12Months").value);
-	
-	if (taiNext12MonthsCal > 0 && estimatedGrossSalesNext12MonthsCal > 0) {
-	    document.getElementById("pctGrossSales").value = Math.round(taiNext12MonthsCal/estimatedGrossSalesNext12MonthsCal);
+		
+	if (taiNext12MonthsCal != 0 && estimatedGrossSalesNext12MonthsCal != 0) {
+		pctGrossSales = (taiNext12MonthsCal/estimatedGrossSalesNext12MonthsCal) * 100;
+	    document.getElementById("pctGrossSales").value = Math.round(pctGrossSales * 100) / 100;
            //document.getElementById("pctGrossSales").value = Math.round(estimatedGrossSalesNext12MonthsCal/taiNext12MonthsCal);
 	}
 	
@@ -64,8 +65,7 @@ function calculateOne()
 		//document.getElementById("estimatedGrossSalesNext12Months").value =  total;
 		
 	}
-	
-		
+			
 	if (pctTAIGrossSalesLastYear != null) {	
 		pctTAIGrossSalesLastYearCal = Number(pctTAIGrossSalesLastYear);
 	}
@@ -81,8 +81,6 @@ function calculateOne()
 		
 		pctTAIGrossSalesLastYearCalNew = (totalMediaInvestmentCal / grossSalesLastyearCal) * 100;
 	}
-	
-	
 	
 	if (lastYearValue1 != null) {
 		lastYearValue1 = lastYearValue1.substring(1);
@@ -154,9 +152,6 @@ function calculateOne()
 }
 
 
-
-
-
 function calculateTwo()
 {
 	var proposedValue1 = document.getElementById("proposedValue1").value;
@@ -184,8 +179,7 @@ function calculateTwo()
 	var proposedValue7Cal =0;
 	var proposedValue8Cal =0;
 	var proposedValue9Cal =0;
-	
-	
+		
 	var pctTAIGrossSalesLastYearCal = 0;
 	var taiShouldBeCal = 0;
 	
@@ -200,24 +194,26 @@ function calculateTwo()
 		industryAverage = Number(industryAverage);
 	}
 	
-	
 	if (pctTAIGrossSalesLastYear != null) {
-		
-	
 		pctTAIGrossSalesLastYearCal = Number(pctTAIGrossSalesLastYear);
 	}
-	
-	
-	if (taiShouldBeCal > 0 && industryAverage > 0) {
-		var percentage = 100/industryAverage;
-		var total = taiShouldBeCal/ percentage;
-		total = CurrencyFormatted(total);
-		document.getElementById("salesGoals").value =  total;
 		
+	var industryAverageCal = 0.0;
+	var salesGoals = document.getElementById("salesGoals").value;
+	
+	if (taiShouldBeCal != null &&  taiShouldBeCal != "" && 
+		salesGoals != 0 && salesGoals != null && salesGoals != "") {
+		// tinas var percentage = 100/industryAverage;
+		// tinas var total = taiShouldBeCal/ percentage;
+		// tinas total = CurrencyFormatted(total);
+		// tinas ocument.getElementById("salesGoals").value =  total;
+		taiShouldBeCal = convertToNumberFromCurrency(taiShouldBeCal);
+		salesGoals = convertToNumberFromCurrency(salesGoals);
+		industryAverageCal = (taiShouldBeCal/salesGoals) * 100;
+		//document.getElementById("industryAverage").value = Math.round(industryAverageCal * 100) / 100;
+		document.getElementById("industryAverage").value = 33.99;
 	}
-	
-	
-	
+		
 	if (proposedValue1 != null) {
 		proposedValue1 = proposedValue1.substring(1);
 		proposedValue1 = removeComma(proposedValue1);
@@ -261,14 +257,11 @@ function calculateTwo()
 	}
 	if (proposedValue9 != null) {
 		proposedValue9 = proposedValue9.substring(1);
-		lastYearValue9 = removeComma(proposedValue9);
+		// tinas lastYearValue9 = removeComma(proposedValue9);
+		proposedValue9 = removeComma(proposedValue9);
 		proposedValue9Cal = Number(proposedValue9);
 	}
-	
-	
-
-
-	
+		
 	var totalMediaInvestment = proposedValue1Cal + proposedValue2Cal + proposedValue3Cal + proposedValue4Cal
 	                  + proposedValue5Cal + proposedValue6Cal + proposedValue7Cal + proposedValue8Cal + proposedValue9Cal;
 	
