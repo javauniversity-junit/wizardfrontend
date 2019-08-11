@@ -183,21 +183,21 @@ function calculateTwo()
 		
 	var pctTAIGrossSalesLastYearCal = 0;
 	var taiShouldBeCal = 0;
-	var taiShouldBeCal = 0;
+	var salesGoalsCal = 0;
 
 	
 	if (taiShouldBe != null && taiShouldBe != "") {
-		taiShouldBe = taiShouldBe.substring(1);
+		// tinas taiShouldBe = taiShouldBe.substring(1);
 		// tinas taiShouldBe = removeComma(taiShouldBe);
-		//taiShouldBeCal = removeComma(taiShouldBe);
+		taiShouldBe = removeComma(taiShouldBe);
 		//taiShouldBeCal = Number(taiShouldBeCal);
 		taiShouldBeCal = convertToNumberFromCurrency(taiShouldBe);
 	}
 	
 	if (salesGoals != null && salesGoals != "") {
-		salesGoals = salesGoals.substring(1);
+		// tinas salesGoals = salesGoals.substring(1);
 		// tinas taiShouldBe = removeComma(taiShouldBe);
-		//salesGoalsCal = removeComma(salesGoals);
+		salesGoals = removeComma(salesGoals);
 		//salesGoalsCal = Number(salesGoalsCal);
 		salesGoalsCal = convertToNumberFromCurrency(salesGoals);
 	}
@@ -211,19 +211,15 @@ function calculateTwo()
 	}
 		
 	var industryAverageCal = 0.0;
-
+	document.getElementById("industryAverage").value = taiShouldBeCal;
 	//document.getElementById("industryAverage").value = 33.99;
-	if (taiShouldBeCal != null &&  taiShouldBeCal != "" && 
-		salesGoalsCal != 0 && salesGoalsCal != null && salesGoalsCal != "") {
+	if (taiShouldBeCal != 0 &&	salesGoalsCal != 0) {
 		// tinas var percentage = 100/industryAverage;
 		// tinas var total = taiShouldBeCal/ percentage;
 		// tinas total = CurrencyFormatted(total);
 		// tinas ocument.getElementById("salesGoals").value =  total;
-		//taiShouldBeCal = convertToNumberFromCurrency(taiShouldBeCal);
-		//salesGoals = convertToNumberFromCurrency(salesGoals);
 		industryAverageCal = (taiShouldBeCal/salesGoalsCal) * 100;
 		document.getElementById("industryAverage").value = Math.round(industryAverageCal * 100) / 100;
-		//document.getElementById("industryAverage").value = 33.99;
 	}
 		
 	if (proposedValue1 != null) {
