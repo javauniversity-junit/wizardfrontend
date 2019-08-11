@@ -160,6 +160,7 @@ function calculateTwo()
 	
 	var taiShouldBe = document.getElementById("taiShouldBe").value;
 	var industryAverage =document.getElementById("industryAverage").value;
+	var salesGoals = document.getElementById("salesGoals").value;
 	//var totalMediaInvestment = document.getElementById("totalMediaInvestmentTwo").value;
 	
 	//TotalMediaInvestment / pctTAIGrossSalesLastYear = GrossSalesLastyear
@@ -182,12 +183,23 @@ function calculateTwo()
 		
 	var pctTAIGrossSalesLastYearCal = 0;
 	var taiShouldBeCal = 0;
+	var taiShouldBeCal = 0;
+
 	
-	
-	if (taiShouldBe != null) {
+	if (taiShouldBe != null && taiShouldBe != "") {
 		taiShouldBe = taiShouldBe.substring(1);
-		taiShouldBe = removeComma(taiShouldBe);
-		taiShouldBeCal = Number(taiShouldBe);
+		// tinas taiShouldBe = removeComma(taiShouldBe);
+		//taiShouldBeCal = removeComma(taiShouldBe);
+		//taiShouldBeCal = Number(taiShouldBeCal);
+		taiShouldBeCal = convertToNumberFromCurrency(taiShouldBe);
+	}
+	
+	if (salesGoals != null && salesGoals != "") {
+		salesGoals = salesGoals.substring(1);
+		// tinas taiShouldBe = removeComma(taiShouldBe);
+		//salesGoalsCal = removeComma(salesGoals);
+		//salesGoalsCal = Number(salesGoalsCal);
+		salesGoalsCal = convertToNumberFromCurrency(salesGoals);
 	}
 	
 	if (industryAverage != null) {
@@ -199,19 +211,19 @@ function calculateTwo()
 	}
 		
 	var industryAverageCal = 0.0;
-	var salesGoals = document.getElementById("salesGoals").value;
-	
+
+	//document.getElementById("industryAverage").value = 33.99;
 	if (taiShouldBeCal != null &&  taiShouldBeCal != "" && 
-		salesGoals != 0 && salesGoals != null && salesGoals != "") {
+		salesGoalsCal != 0 && salesGoalsCal != null && salesGoalsCal != "") {
 		// tinas var percentage = 100/industryAverage;
 		// tinas var total = taiShouldBeCal/ percentage;
 		// tinas total = CurrencyFormatted(total);
 		// tinas ocument.getElementById("salesGoals").value =  total;
-		taiShouldBeCal = convertToNumberFromCurrency(taiShouldBeCal);
-		salesGoals = convertToNumberFromCurrency(salesGoals);
-		industryAverageCal = (taiShouldBeCal/salesGoals) * 100;
-		//document.getElementById("industryAverage").value = Math.round(industryAverageCal * 100) / 100;
-		document.getElementById("industryAverage").value = 33.99;
+		//taiShouldBeCal = convertToNumberFromCurrency(taiShouldBeCal);
+		//salesGoals = convertToNumberFromCurrency(salesGoals);
+		industryAverageCal = (taiShouldBeCal/salesGoalsCal) * 100;
+		document.getElementById("industryAverage").value = Math.round(industryAverageCal * 100) / 100;
+		//document.getElementById("industryAverage").value = 33.99;
 	}
 		
 	if (proposedValue1 != null) {
