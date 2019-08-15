@@ -65,7 +65,9 @@
 
 			</div>
 			<div class="col-8 border">
-				<form id="importForm">
+				<form id="importForm"action="importPlanAMediaPage" >
+					<input type="hidden" id="wizardId"
+							th:value="${wizard.wizardid}" name="wizardId" />
 					<input type="hidden" id="nextPage"
 							th:value="'redirect:/PlanBMediaPage?ID=' + ${wizard.wizardid}"
 							name="nextPage" /> 
