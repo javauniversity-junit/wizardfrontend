@@ -50,6 +50,42 @@ public class PlanBMediaPageController {
 		return "pages/PlanBMediaPage";
 	}
 	
+	@RequestMapping(value = "/importPlanAMediaPage", method = RequestMethod.POST)
+	public String copyMediaPlanAtoB(@RequestParam String wizardId
+			,@RequestParam String wizarddataid
+			,@RequestParam String nextPage){
+		mLog.info("starting importPlanAMediaPage");
+		//internal next page or publish
+		String internalNextPage = nextPage;
+		
+		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(wizardId));
+		Wizard wizard = wizardOpt.orElse(null);
+		//get plan a to copy to plan b
+		WizardData wizardData = wizardDataRepository.findByPagesequenceAndWizardid(Pages.PlanAMediaPage.getPageSequence(), wizard.getWizardid());
+	
+	    if (wizardData != null ) {
+	    	PlanMediaPageModel dataPageModel = null;
+	    	dataPageModel =(PlanMediaPageModel)JSONManager.convertFromJson(wizardData.getPagedata(), PlanMediaPageModel.class);
+	    	String pageData = JSONManager.convertToJson(dataPageModel);
+	    	//get plan b 
+	    	WizardData wizardDataB = wizardDataRepository.findByPagesequenceAndWizardid(Pages.PlanBMediaPage.getPageSequence(), wizard.getWizardid());
+	    	
+	    	wizardDataB.setPagename(PageNameEnum.PlanBMediaPage.toString());
+	    	wizardDataB.setPagesequence(Pages.PlanBMediaPage.getPageSequence());
+	 		if (wizarddataid != null && wizarddataid.trim().length() > 0 ) {
+	 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
+	 			wizardDataB.setWizarddataid(wizardDataInt);
+	 		}
+	 		Integer wizardIdInt = Integer.valueOf(wizardId);
+	 		wizardDataB.setWizardid(wizardIdInt);
+	 		wizardDataB.setPagedata(pageData);
+			wizardDataRepository.save(wizardDataB);
+	    }
+		//model.addAttribute("wizard", wizard);
+		return internalNextPage;
+	}
+	
+	
 	@RequestMapping(value = "/savePlanBMediaPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId
 			,@RequestParam String wizarddataid
