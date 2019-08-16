@@ -1,5 +1,8 @@
 //class variable for global objects
 var objs = [];
+function importPLanAMedia() {
+}
+
 /**
  * add .
  * @constructor
