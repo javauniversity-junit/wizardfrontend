@@ -7,7 +7,7 @@ function calculatePlanDaily () {
 	planMonthly_unformatted = planMonthly.replace(/\$/g, "");		
     //var planDaily = formatCurrency(Math.round(planMonthly_unformatted / 30));
 	var planDaily = Math.round(planMonthly_unformatted / 30)
-    document.getElementById("planADaily").value = planDaily;
+    document.getElementById("planADaily").value = FormatAmount(planDaily);
     
 }
 
