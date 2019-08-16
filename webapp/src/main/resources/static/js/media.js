@@ -19,6 +19,7 @@ function addObj(name, jan,feb,mar,apr,may,june,july,aug,sept,oct,nov,dec ) {
     updatehiddenMediaRow ();
     //lionES6.doSomething();
 }
+
 function addOrUpdate() {
     var textObjValue = document.getElementById("medianame").value;
    // if (textObjValue == null) {
