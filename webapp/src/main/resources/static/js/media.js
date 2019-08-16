@@ -1,5 +1,9 @@
 //class variable for global objects
 var objs = [];
+function importPlanMediaA() {
+	$('#importForm').submit();
+}
+
 /**
  * add .
  * @constructor

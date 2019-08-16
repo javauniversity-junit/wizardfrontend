@@ -286,4 +286,7 @@ function totalRow() {
 	//document.getElementById("totalRow").value = total;
 }
 
+//call of initial page load
+totalRow();
+
 

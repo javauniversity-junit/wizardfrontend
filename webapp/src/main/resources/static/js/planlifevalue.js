@@ -78,3 +78,6 @@ function FormatAmount(amount) {
 	s = "$" + s.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	return s;
 }
+
+//initial
+calculate();

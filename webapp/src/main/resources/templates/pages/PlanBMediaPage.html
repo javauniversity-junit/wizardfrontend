@@ -65,6 +65,16 @@
 
 			</div>
 			<div class="col-8 border">
+				<form id="importForm"action="importPlanAMediaPage" method="post" >
+					<input type="hidden" id="wizardId"
+							th:value="${wizard.wizardid}" name="wizardId" />
+					<input type="hidden" id="nextPage"
+							th:value="'redirect:/PlanBMediaPage?ID=' + ${wizard.wizardid}"
+							name="nextPage" /> 
+							<input
+							type="hidden" id="wizarddataid"
+							th:value="${wizardData?.wizarddataid}" name="wizarddataid" />
+				</form>
 
 				<form id="myForm">
 					<fieldset>
@@ -160,6 +170,8 @@
 
 							<button type="button" onClick="javascript:addOrUpdate()"
 								class="btn btn-success btn-lg btn-block">Add</button>
+								<button type="button" onClick="javascript:importPlanMediaA()"
+								class="btn btn-success btn-lg btn-block">Import Plan Media A </button>
 						</div>
 
 						<div id="update" class="form-group row"
