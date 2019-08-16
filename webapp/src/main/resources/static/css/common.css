@@ -1,7 +1,7 @@
 .valuePadding {
      border: 1px insect #ccc;
 }
-..valuePadding input {
+.valuePadding input {
   border: none:
   padding: 0px;
   outline: none;
