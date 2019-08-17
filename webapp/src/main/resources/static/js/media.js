@@ -369,8 +369,8 @@ function updatehiddenMediaRow ()
 {
 	 
 	 document.getElementById("idname").value = "";
-	var json = convertToJSON();
-	document.getElementById("mediarows").value = json;
+     var json = convertToJSON();
+     document.getElementById("mediarows").value = json;
 	//alert (document.getElementById("mediarows").value);
 }
 
