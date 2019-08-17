@@ -293,8 +293,8 @@
 							/*<![CDATA[*/
 							
 							var jantype = /*[[${dataPageModel?.janType}]]*/;
-							jantype == null ? 'Base' : jantype;
-							document.getElementById('jantype').value=jantype;						
+							var finalJantype =jantype == null ? 'Base' : jantype;
+							document.getElementById('jantype').value=finalJantype;						
 							document.getElementById('febtype').value=/*[[${dataPageModel?.febType}]]*/;
 							document.getElementById('martype').value=/*[[${dataPageModel?.marType}]]*/;						
 							document.getElementById('aprtype').value=/*[[${dataPageModel?.aprType}]]*/;
