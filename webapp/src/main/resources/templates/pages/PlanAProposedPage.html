@@ -35,7 +35,7 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.css" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-	<link rel="stylesheet" href="css/common.css" />
+<link rel="stylesheet" href="css/common.css" />
 
 <!-- Favicon-->
 <link rel="shortcut icon" href="./img/tools_wizard.png">
@@ -66,15 +66,25 @@
 							type="text" class="form-control" id="planACity" name="planACity"
 							aria-describedby="planACity"  />
 					</div>
-					<div class="form-group">
-						<label for="planAReach">B. What is the projected
+					
+				<div class="container">
+                                           <label for="planAReach">B. What is the projected
 							broadcast monthly reach in thousands?</label> 
-						<span class="valuePadding">
+					   <div class="input-group mb-3">
+						
+						
 						<input type="number"
 							th:value="${dataPageModel?.planAReach}" class="form-control"
-							id="planAReach" name="planAReach" min=0/>
-						%</span>
-					</div>
+							id="planAReach" name="planAReach" min=0 />
+						
+						<div class="input-group-append">
+        					   <span class="input-group-text">%</span>
+      					       </div>	
+						
+					   </div>
+				</div>
+					
+					
 					<div class="form-group">
 						<label for="planAFrequency">C. What is the projected monthly
 							broadcast frequency?</label> <input type="number"
