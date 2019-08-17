@@ -291,7 +291,11 @@
 
 						<script th:inline="javascript">
 							/*<![CDATA[*/
-							document.getElementById('jantype').value=/*[[${dataPageModel?.janType}]]*/;						
+							
+							var jantype = /*[[${dataPageModel?.janType}]]*/;
+							jantype == null ? 'Base' : jantype;
+							
+							document.getElementById('jantype').value=jantype;						
 							document.getElementById('febtype').value=/*[[${dataPageModel?.febType}]]*/;
 							document.getElementById('martype').value=/*[[${dataPageModel?.marType}]]*/;						
 							document.getElementById('aprtype').value=/*[[${dataPageModel?.aprType}]]*/;
