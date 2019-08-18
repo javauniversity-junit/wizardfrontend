@@ -302,23 +302,74 @@
 
 						<script th:inline="javascript">
 							/*<![CDATA[*/
-							document.getElementById('jantype').value=/*[[${dataPageModel?.janType}]]*/;						
-							document.getElementById('febtype').value=/*[[${dataPageModel?.febType}]]*/;
-							document.getElementById('martype').value=/*[[${dataPageModel?.marType}]]*/;						
-							document.getElementById('aprtype').value=/*[[${dataPageModel?.aprType}]]*/;
-							document.getElementById('maytype').value=/*[[${dataPageModel?.mayType}]]*/;						
-							document.getElementById('juntype').value=/*[[${dataPageModel?.junType}]]*/;
-							document.getElementById('jultype').value=/*[[${dataPageModel?.julType}]]*/;						
-							document.getElementById('augtype').value=/*[[${dataPageModel?.augType}]]*/;
-							document.getElementById('septype').value=/*[[${dataPageModel?.septType}]]*/;
-							document.getElementById('octtype').value=/*[[${dataPageModel?.octType}]]*/;
-							document.getElementById('novtype').value=/*[[${dataPageModel?.novType}]]*/;		
-							document.getElementById('dectype').value=/*[[${dataPageModel?.decType}]]*/;	
+							
+							var jantype = /*[[${dataPageModel?.janType}]]*/;
+							if (jantype != null ) {
+							   document.getElementById('jantype').value=jantype;	
+							   console.log(" jantype " + document.getElementById('jantype').value);
+							}
+							
+							var febtype = /*[[${dataPageModel?.febType}]]*/;
+							if (febtype != null ) {
+							   document.getElementById('febtype').value=febtype;	
+							}
+							
+														
+							var marType = /*[[${dataPageModel?.marType}]]*/;
+							if (marType != null ) {
+							   document.getElementById('martype').value=marType;	
+							}
+							
+														
+							var aprType = /*[[${dataPageModel?.aprType}]]*/;
+							if (aprType != null ) {
+							   document.getElementById('aprtype').value=aprType;	
+							}
+														
+							var mayType = /*[[${dataPageModel?.mayType}]]*/;
+							if (mayType != null ) {
+							   document.getElementById('maytype').value=mayType;	
+							}
+														
+							var junType = /*[[${dataPageModel?.junType}]]*/;
+							if (junType != null ) {
+							   document.getElementById('juntype').value=junType;	
+							}
+														
+							var julType = /*[[${dataPageModel?.julType}]]*/;
+							if (julType != null ) {
+							   document.getElementById('jultype').value=julType;	
+							}
+							
+														
+							var augType = /*[[${dataPageModel?.augType}]]*/;
+							if (augType != null ) {
+							   document.getElementById('augtype').value=augType;	
+							}
+														
+							var sepType = /*[[${dataPageModel?.septType}]]*/;
+							if (sepType != null ) {
+							   document.getElementById('septype').value=sepType;	
+							}
+														
+							var octType = /*[[${dataPageModel?.octType}]]*/;
+							if (octType != null ) {
+							   document.getElementById('octtype').value=octType;	
+							}
+														
+							var novType = /*[[${dataPageModel?.novType}]]*/;
+							if (novType != null ) {
+							   document.getElementById('novtype').value=novType;	
+							}
+														
+							var decType = /*[[${dataPageModel?.decType}]]*/;
+							if (decType != null ) {
+							   document.getElementById('dectype').value=decType;	
+							}
 							
 							
 							/*]]>*/
 						</script>
-
 
 
 
