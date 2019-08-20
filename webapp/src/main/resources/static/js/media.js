@@ -76,7 +76,9 @@ function addOrUpdate() {
 function build() {
    var items = document.getElementById("items");
    items.innerHTML = "";
-   var temp = document.getElementsByTagName("template")[0];
+   //var temp = document.getElementsByTagName("template")[0];
+   var temp = document.getElementById("leftMenu");
+	
    objs.sort(compare);
    var test ="";
   for (i in objs) {
