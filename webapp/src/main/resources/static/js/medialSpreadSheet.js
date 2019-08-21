@@ -15,7 +15,9 @@ if ('content' in document.createElement('template')) {
 
     // Clone the new row and insert it into the table
     var tbody = document.querySelector("tbody");
-    
+    while (tbody.firstChild) {
+    tbody.firstChild.remove();
+        }
           for (i in objs) {
 		 var clone = document.importNode(template.content, true);
                  var td = clone.querySelectorAll("td");
