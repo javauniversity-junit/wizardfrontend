@@ -1,7 +1,18 @@
 
 function buildSpreadSheet() {
 
-
+ int janTotal = 0;
+ var febTotal;
+ var marTotal;
+ var aprTotal;
+ var mayTotal;
+ var junTotal;
+ var julTotal;
+ var augTotal;
+ var sepTotal;
+ var octTotal;
+ var novTotal;
+ var decTotal;
 // Test to see if the browser supports the HTML template element by checking
 // for the presence of the template element's content attribute.
 if ('content' in document.createElement('template')) {
@@ -20,6 +31,8 @@ if ('content' in document.createElement('template')) {
     tbody.firstChild.remove();
         }
           for (i in objs) {
+		  janTotal = janTotal 
+			  + convertToNumberFromCurrency(objs[i].jan);
 		 var clone = document.importNode(template.content, true);
                  var td = clone.querySelectorAll("td");
                    
@@ -70,7 +83,7 @@ if ('content' in document.createElement('template')) {
         }
     var clone = document.importNode(template.content, true);
     var td = clone.querySelectorAll("td");
-    td[1].textContent = "1";
+    td[1].textContent = janTotal;
     td[2].textContent = "2";
 
     tfoot.appendChild(clone);
