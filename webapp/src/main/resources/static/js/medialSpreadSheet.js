@@ -6,15 +6,16 @@ function buildSpreadSheet() {
 // for the presence of the template element's content attribute.
 if ('content' in document.createElement('template')) {
 
-    //remove all nodes
+   
 	
-    $( "#productrow" ).empty();
+  
     // Instantiate the table with the existing HTML tbody    
     // and the row with the template
     var template = document.querySelector('#productrow');
 
     // Clone the new row and insert it into the table
     var tbody = document.querySelector("tbody");
+	 //remove all nodes
     while (tbody.firstChild) {
     tbody.firstChild.remove();
         }
@@ -62,6 +63,10 @@ if ('content' in document.createElement('template')) {
 
     // Clone the new row and insert it into the table
     var tfoot = document.querySelector("tfoot");
+   //remove all nodes
+    while (tfoot.firstChild) {
+       tfoot.firstChild.remove();
+        }
     var clone = document.importNode(template.content, true);
     var td = clone.querySelectorAll("td");
     td[1].textContent = "1";
