@@ -24,18 +24,19 @@ if ('content' in document.createElement('template')) {
                  var td = clone.querySelectorAll("td");
                    
 	         td[0].textContent  = objs[i].name; 
-	          td[1].textContent = objs[i].jan;
-	          td[2].textContent= objs[i].feb;  
+	         td[1].textContent = objs[i].jan;
+	         td[2].textContent= objs[i].feb;  
 	         td[3].textContent= objs[i].mar;
 	         td[4].textContent= objs[i].apr; 
-	          td[5].textContent= objs[i].may;
-	        td[6].textContent= objs[i].jun;  
-	          td[7].textContent= objs[i].jul;
-	          td[8].textContent= objs[i].aug;  
-	          td[9].textContent= objs[i].sep;
-	          td[10].textContent= objs[i].oct;  
-	          td[11].textContent= objs[i].nov;
-	          td[12].textContent= objs[i].dec;          
+	         td[5].textContent= objs[i].may;
+	         td[6].textContent= objs[i].jun;  
+	         td[7].textContent= objs[i].jul;
+	         td[8].textContent= objs[i].aug;  
+	         td[9].textContent= objs[i].sep;
+	         td[10].textContent= objs[i].oct;  
+	         td[11].textContent= objs[i].nov;
+	         td[12].textContent= objs[i].dec; 
+		 td[13].textContent= objs[i].rowTotal();
 	         tbody.appendChild(clone); 
 	   }//end of for
 	
