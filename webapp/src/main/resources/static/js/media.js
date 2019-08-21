@@ -258,6 +258,24 @@ class MediaRow {
     this.name = x;
   }
 
+  get rowTotal() {
+	var total = convertToNumberFromCurrency(this.jan) 
+	+ convertToNumberFromCurrency(this.jan)
+	+ convertToNumberFromCurrency(this.feb)
+	+ convertToNumberFromCurrency(this.mar)
+	+ convertToNumberFromCurrency(this.apr)
+	+ convertToNumberFromCurrency(this.may)
+	+ convertToNumberFromCurrency(this.jun)
+	+ convertToNumberFromCurrency(this.jul)
+	+ convertToNumberFromCurrency(this.aug)
+	+ convertToNumberFromCurrency(this.sep)
+	+ convertToNumberFromCurrency(this.oct)
+	+ convertToNumberFromCurrency(this.nov)
+	+ convertToNumberFromCurrency(this.dec);
+	return total; 
+  }
+	
+	
    get objName() {
         return this.name;
     }
