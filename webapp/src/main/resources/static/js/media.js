@@ -69,6 +69,7 @@ function addOrUpdate() {
     }
     displayAddButton();
     build();
+    buildSpreadSheet();
 
 }
 
