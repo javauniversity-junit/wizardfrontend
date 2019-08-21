@@ -17,6 +17,9 @@ if ('content' in document.createElement('template')) {
     var tbody = document.querySelector("tbody");
     
           for (i in objs) {
+		 var clone = document.importNode(template.content, true);
+                 var td = clone.querySelectorAll("td");
+                   
 	         td[0].textContent  = objs[i].name; 
 	          td[1].textContent = objs[i].jan;
 	          td[2].textContent= objs[i].feb;  
@@ -30,9 +33,7 @@ if ('content' in document.createElement('template')) {
 	          td[10].textContent= objs[i].oct;  
 	          td[11].textContent= objs[i].nov;
 	          td[12].textContent= objs[i].dec;          
-	         var clone = document.importNode(template.content, true);
-                 var td = clone.querySelectorAll("td");
-               tbody.appendChild(clone);  
+	         tbody.appendChild(clone); 
 	   }//end of for
 	
 	
