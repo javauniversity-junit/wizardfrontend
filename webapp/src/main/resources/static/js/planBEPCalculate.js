@@ -20,6 +20,12 @@ function calculate()
 	var planAInvestment = formatNumber(document.getElementById("planAInvestment").value); // e
 	var planAProspectsNeeded = planAProspectValueRaw == 0 ? 0 : planAInvestment/planAProspectValueRaw ; // f = e/d
 	var planAProspectSalesNeeded = planAProspectsNeeded * (planAClosingPct/100) ; // g = fc
+	
+	if (Number.isNaN(planAProspectSalesNeeded))
+	{
+		planAProspectSalesNeeded = 0;
+	}
+	
 	var planAGrossProfitOnSales = planAProspectSalesNeeded * planAAverageSale; // h = ga
 	var planAMonths = convertIntToNumber(document.getElementById("planAMonths").value); // i
 	var planAAdditionalGrossSales = planAGrossProfitOnSales * planAMonths; // j = hi

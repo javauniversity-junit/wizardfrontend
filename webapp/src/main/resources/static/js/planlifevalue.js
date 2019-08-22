@@ -43,6 +43,11 @@ function calculate()
 	var g_lifetimeValuePerCustomer =e_averageCustomerValue * yearsOfPatronageCal;
 	// tinas var i_prospectsNeededToBreakEven = Math.round(g_lifetimeValuePerCustomer / monthlyInvestmentAverageCal);
 	var i_prospectsNeededToBreakEven = Math.round(monthlyInvestmentAverageCal / g_lifetimeValuePerCustomer * 10) / 10;
+	
+	if (Number.isNaN(i_prospectsNeededToBreakEven))
+	{
+		i_prospectsNeededToBreakEven = 0;
+	}
 	console.log(" averageRepeatSales " +  averageRepeatSales);
 	console.log(" c_grossProfitPerSale " +  c_grossProfitPerSale);
 	console.log(" e_averageCustomerValue " +  e_averageCustomerValue);

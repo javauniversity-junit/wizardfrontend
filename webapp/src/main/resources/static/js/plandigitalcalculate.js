@@ -82,7 +82,10 @@ function calculate() {
 	var m_planAMonthlyROIP = l_planAMonthlyROID
 			/ planAMonthlyDigitalInvestmentCal * 100;
 	
-	
+	if (Number.isNaN(m_planAMonthlyROIP))
+	{
+		m_planAMonthlyROIP = 0;
+	}
 	console.log(" planAMonthlyDigitalInvestmentCal " + planAMonthlyDigitalInvestmentCal);
 	console.log(" c_planAClosingPctNumber " + c_planAClosingPctNumber);
 	console.log(" e_planAMonthlyClicks " + e_planAMonthlyClicks);

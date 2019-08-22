@@ -8,6 +8,12 @@ function calculate()
 	var f_planBProspectsNeededRaw = planBInvestment / (planBAverageSale * (planBGrossMargin/100) * (planBClosingPct/100));
 	
 	var g_planBProspectSalesNeeded = f_planBProspectsNeededRaw * (planBClosingPct/100); // g = f * c;
+	
+	if (Number.isNaN(g_planBProspectSalesNeeded))
+	{
+		g_planBProspectSalesNeeded = 0;
+	}
+	
 	var h_planBGrossProfitOnSales = g_planBProspectSalesNeeded * planBAverageSale; // h = g * a;
 	
 	// tinas var planBGrossProfitOnSales = convertToNumberFromCurrency(document.getElementById("planBGrossProfitOnSales").value); // h
