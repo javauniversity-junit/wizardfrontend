@@ -31,7 +31,10 @@
 	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
 	crossorigin="anonymous" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-
+	<script src="js/media.js">
+	</script>
+	<script src="js/medialSpreadSheet.js">	
+	</script>
 <!-- Favicon-->
 <link rel="shortcut icon" href="./img/icon.png">
 
@@ -39,14 +42,14 @@
 
 </head>
 
-<body onLoad="convertFromJSON()">
+<body onLoad="convertFromJSON();buildSpreadSheet();">
 	<!-- Begin page content -->
 	<!--- start header container -->
 
 	<div id="headerId"></div>
 
 
-	<template>
+	<template id="leftMenu">
 	<div class="row">
 		<div class="col-1"></div>
 		<div class="col-10">
@@ -57,6 +60,78 @@
 	</div>
 	</template>
 
+	<div class="container">
+  
+           
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Media</th>
+        <th>Jan</th>
+        <th>Feb</th>
+        <th>Mar</th>
+        <th>Apr</th>
+        <th>May</th>    
+        <th>Jun</th>
+        <th>Jul</th>
+        <th>Aug</th>
+        <th>Sep</th>
+        <th>Oct</th> 
+        <th>Nov</th>
+        <th>Dec</th> 
+        <th>Total</th> 
+      </tr>
+    </thead>
+    <tbody>
+      <!-- existing data could optionally be included here --> 
+     </tbody>
+      <tfoot>
+        <!-- existing data could optionally be included here --> 
+   
+     </tfoot>
+  </table>
+</div>
+	
+<template id="productrow">
+   <tr>
+        <td>www</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+         <td>11</td>
+        <td>12</td>
+        <td>110</td>
+      </tr>
+</template>
+
+<template id="footerrow">
+    <tr>
+        <td>total</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td>10</td>
+         <td>11</td>
+        <td>12</td>
+        <td>110</td>
+      </tr>
+</template>
+	
+	
+	
 
 	<div class="container" style="padding-top: 1%;">
 		<div class="row">
@@ -293,6 +368,7 @@
 							/*<![CDATA[*/
 							
 							var jantype = /*[[${dataPageModel?.janType}]]*/;
+<<<<<<< HEAD
 							var finalJantype =jantype == null ? 'Base' : jantype;
 							document.getElementById('jantype').value=finalJantype;						
 							document.getElementById('febtype').value=/*[[${dataPageModel?.febType}]]*/;
@@ -306,6 +382,77 @@
 							document.getElementById('octtype').value=/*[[${dataPageModel?.octType}]]*/;
 							document.getElementById('novtype').value=/*[[${dataPageModel?.novType}]]*/;		
 							document.getElementById('dectype').value=/*[[${dataPageModel?.decType}]]*/;	
+=======
+							if (jantype != null ) {
+							   document.getElementById('jantype').value=jantype;	
+							   console.log(" jantype " + document.getElementById('jantype').value);
+							}
+							
+							var febtype = /*[[${dataPageModel?.febType}]]*/;
+							if (febtype != null ) {
+							   document.getElementById('febtype').value=febtype;	
+							}
+							
+														
+							var marType = /*[[${dataPageModel?.marType}]]*/;
+							if (marType != null ) {
+							   document.getElementById('martype').value=marType;	
+							}
+							
+														
+							var aprType = /*[[${dataPageModel?.aprType}]]*/;
+							if (aprType != null ) {
+							   document.getElementById('aprtype').value=aprType;	
+							}
+														
+							var mayType = /*[[${dataPageModel?.mayType}]]*/;
+							if (mayType != null ) {
+							   document.getElementById('maytype').value=mayType;	
+							}
+														
+							var junType = /*[[${dataPageModel?.junType}]]*/;
+							if (junType != null ) {
+							   document.getElementById('juntype').value=junType;	
+							}
+														
+							var julType = /*[[${dataPageModel?.julType}]]*/;
+							if (julType != null ) {
+							   document.getElementById('jultype').value=julType;	
+							}
+							
+														
+							var augType = /*[[${dataPageModel?.augType}]]*/;
+							if (augType != null ) {
+							   document.getElementById('augtype').value=augType;	
+							}
+														
+							var sepType = /*[[${dataPageModel?.septType}]]*/;
+							if (sepType != null ) {
+							   document.getElementById('septype').value=sepType;	
+							}
+														
+							var octType = /*[[${dataPageModel?.octType}]]*/;
+							if (octType != null ) {
+							   document.getElementById('octtype').value=octType;	
+							}
+														
+							var novType = /*[[${dataPageModel?.novType}]]*/;
+							if (novType != null ) {
+							   document.getElementById('novtype').value=novType;	
+							}
+														
+							var decType = /*[[${dataPageModel?.decType}]]*/;
+							if (decType != null ) {
+							   document.getElementById('dectype').value=decType;	
+							}
+							
+							
+							
+							
+												
+							
+							
+>>>>>>> 40b214380c5000963d6e05a459458910fa8ce5a8
 							
 							
 							/*]]>*/
@@ -378,8 +525,7 @@
 
 
 
-	<script src="js/currency.js">
-		
+	<script src="js/currency.js">	
 	</script>
 
 		<script th:inline="javascript">
@@ -390,10 +536,6 @@
 			$("#headerId").load("header.html");
 		});
 		/*]]>*/
-	</script>
-
-	<script src="js/media.js">
-		
 	</script>
 
 </body>

@@ -69,6 +69,7 @@ function addOrUpdate() {
     }
     displayAddButton();
     build();
+    buildSpreadSheet();
 
 }
 
@@ -76,7 +77,9 @@ function addOrUpdate() {
 function build() {
    var items = document.getElementById("items");
    items.innerHTML = "";
-   var temp = document.getElementsByTagName("template")[0];
+   //var temp = document.getElementsByTagName("template")[0];
+   var temp = document.getElementById("leftMenu");
+	
    objs.sort(compare);
    var test ="";
   for (i in objs) {
@@ -249,19 +252,39 @@ class MediaRow {
         this.oct = oct;
         this.nov = nov;
         this.dec = dec;
+        //this.rowTotal = calRowTotal();
     }
   
-   set nameValue(x) {
-    this.name = x;
-  }
+   //set nameValue(x) {
+    //this.name = x;
+  //}
 
-   get objName() {
-        return this.name;
-    }
-    doSomething() {
-        console.log("I'm a " + this.name);
-    }
-}
+//setter
+  set rowTotal(value) {}
+   
+  get rowTotal() {
+	var total = convertToNumberFromCurrency(this.jan) 
+	+ convertToNumberFromCurrency(this.feb)
+	+ convertToNumberFromCurrency(this.mar)
+	+ convertToNumberFromCurrency(this.apr)
+	+ convertToNumberFromCurrency(this.may)
+	+ convertToNumberFromCurrency(this.jun)
+	+ convertToNumberFromCurrency(this.jul)
+	+ convertToNumberFromCurrency(this.aug)
+	+ convertToNumberFromCurrency(this.sep)
+	+ convertToNumberFromCurrency(this.oct)
+	+ convertToNumberFromCurrency(this.nov)
+	+ convertToNumberFromCurrency(this.dec);
+	total = CurrencyFormatted(total);
+	return total; 
+  }
+	
+	
+   //get objName() {
+   //     return this.name;
+    //}
+    
+}//end of class
 function remove (name) {
 	   for( var i = 0; i <  objs.length; i++){ 
 	      if (objs[i].objName === name) {
