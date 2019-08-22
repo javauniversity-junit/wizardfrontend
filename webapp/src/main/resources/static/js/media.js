@@ -252,13 +252,17 @@ class MediaRow {
         this.oct = oct;
         this.nov = nov;
         this.dec = dec;
+        this.rowTotal = calRowTotal();
     }
   
    set nameValue(x) {
     this.name = x;
   }
 
-  get rowTotal() {
+// 
+   
+   
+  calRowTotal() {
 	var total = convertToNumberFromCurrency(this.jan) 
 	+ convertToNumberFromCurrency(this.feb)
 	+ convertToNumberFromCurrency(this.mar)
