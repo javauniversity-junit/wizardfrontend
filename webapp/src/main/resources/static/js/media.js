@@ -260,7 +260,6 @@ class MediaRow {
 
   get rowTotal() {
 	var total = convertToNumberFromCurrency(this.jan) 
-	+ convertToNumberFromCurrency(this.jan)
 	+ convertToNumberFromCurrency(this.feb)
 	+ convertToNumberFromCurrency(this.mar)
 	+ convertToNumberFromCurrency(this.apr)
@@ -272,6 +271,7 @@ class MediaRow {
 	+ convertToNumberFromCurrency(this.oct)
 	+ convertToNumberFromCurrency(this.nov)
 	+ convertToNumberFromCurrency(this.dec);
+	total = CurrencyFormatted(total);
 	return total; 
   }
 	

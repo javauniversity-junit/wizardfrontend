@@ -1,18 +1,18 @@
 
 function buildSpreadSheet() {
 
- int janTotal = 0;
- var febTotal;
- var marTotal;
- var aprTotal;
- var mayTotal;
- var junTotal;
- var julTotal;
- var augTotal;
- var sepTotal;
- var octTotal;
- var novTotal;
- var decTotal;
+ var janTotal = 0;
+ var febTotal = 0;
+ var marTotal= 0;
+ var aprTotal= 0;
+ var mayTotal= 0;
+ var junTotal= 0;
+ var julTotal= 0;
+ var augTotal= 0;
+ var sepTotal= 0;
+ var octTotal= 0;
+ var novTotal= 0;
+ var decTotal= 0;
 // Test to see if the browser supports the HTML template element by checking
 // for the presence of the template element's content attribute.
 if ('content' in document.createElement('template')) {
@@ -33,6 +33,22 @@ if ('content' in document.createElement('template')) {
           for (i in objs) {
 		  janTotal = janTotal 
 			  + convertToNumberFromCurrency(objs[i].jan);
+		  febTotal = febTotal 
+		  + convertToNumberFromCurrency(objs[i].feb);
+		  marTotal = marTotal 
+		  + convertToNumberFromCurrency(objs[i].mar);
+		  aprTotal = aprTotal 
+		  + convertToNumberFromCurrency(objs[i].apr);
+		  mayTotal = mayTotal 
+		  + convertToNumberFromCurrency(objs[i].may);
+		  junTotal = junTotal 
+		  + convertToNumberFromCurrency(objs[i].jun);
+		  julTotal = julTotal 
+		  + convertToNumberFromCurrency(objs[i].jul);
+		  augTotal = augTotal 
+		  + convertToNumberFromCurrency(objs[i].aug);
+		  sepTotal = sepTotal 
+		  + convertToNumberFromCurrency(objs[i].sep);
 		 var clone = document.importNode(template.content, true);
                  var td = clone.querySelectorAll("td");
                    
@@ -49,7 +65,7 @@ if ('content' in document.createElement('template')) {
 	         td[10].textContent= objs[i].oct;  
 	         td[11].textContent= objs[i].nov;
 	         td[12].textContent= objs[i].dec; 
-		 td[13].textContent= objs[i].rowTotal();
+		     td[13].textContent= objs[i].rowTotal();
 	         tbody.appendChild(clone); 
 	   }//end of for
 	
@@ -83,9 +99,20 @@ if ('content' in document.createElement('template')) {
         }
     var clone = document.importNode(template.content, true);
     var td = clone.querySelectorAll("td");
-    td[1].textContent = janTotal;
-    td[2].textContent = "2";
-
+    td[1].textContent = CurrencyFormatted(janTotal);
+    td[2].textContent = CurrencyFormatted(febTotal);
+    td[3].textContent = CurrencyFormatted(marTotal);
+    td[4].textContent = CurrencyFormatted(aprTotal);
+    td[5].textContent = CurrencyFormatted(mayTotal);
+    td[6].textContent = CurrencyFormatted(junTotal);
+    td[7].textContent = CurrencyFormatted(julTotal);
+    td[8].textContent = CurrencyFormatted(augTotal);
+    td[9].textContent = CurrencyFormatted(sepTotal);
+    td[10].textContent = CurrencyFormatted(octTotal);
+    td[11].textContent = CurrencyFormatted(novTotal);
+    td[12].textContent = CurrencyFormatted(decTotal);
+       
+    
     tfoot.appendChild(clone);
 
   
