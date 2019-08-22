@@ -180,6 +180,7 @@ function deleteRow() {
 	 clearForm();
 	 displayAddButton();
 	 build();
+	 buildSpreadSheet();
 	 updatehiddenMediaRow ();
 }
 
