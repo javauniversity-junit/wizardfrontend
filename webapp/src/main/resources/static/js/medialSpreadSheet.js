@@ -65,7 +65,7 @@ if ('content' in document.createElement('template')) {
 	         td[10].textContent= objs[i].oct;  
 	         td[11].textContent= objs[i].nov;
 	         td[12].textContent= objs[i].dec; 
-		     td[13].textContent= objs[i].rowTotal;
+		     td[13].textContent= objs[i].rt;
 	         tbody.appendChild(clone); 
 	   }//end of for
 	

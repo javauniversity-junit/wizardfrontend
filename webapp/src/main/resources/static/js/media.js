@@ -270,7 +270,7 @@ class MediaRow {
         this.oct = oct;
         this.nov = nov;
         this.dec = dec;
-        this.rowTotal = rowTotal;
+        this.rt = rowTotal;
     }
   
    //set nameValue(x) {
