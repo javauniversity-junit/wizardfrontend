@@ -111,8 +111,11 @@ if ('content' in document.createElement('template')) {
     td[10].textContent = CurrencyFormatted(octTotal);
     td[11].textContent = CurrencyFormatted(novTotal);
     td[12].textContent = CurrencyFormatted(decTotal);
-     var grandtotal = janTotal + febTotal +  marTotal;
-     td[13].textContent = CurrencyFormatted(grandtotal);
+    var grandtotal = janTotal + febTotal +  marTotal
+                     aprTotal + mayTotal +  junTotal
+                     julTotal + augTotal +  sepTotal
+                     octTotal + novTotal +  decTotal;
+    td[13].textContent = CurrencyFormatted(grandtotal);
                      
     
     tfoot.appendChild(clone);

@@ -252,17 +252,17 @@ class MediaRow {
         this.oct = oct;
         this.nov = nov;
         this.dec = dec;
-        this.rowTotal = calRowTotal();
+        //this.rowTotal = calRowTotal();
     }
   
-   set nameValue(x) {
-    this.name = x;
-  }
+   //set nameValue(x) {
+    //this.name = x;
+  //}
 
-// 
+//setter
+  set rowTotal(value) {}
    
-   
-  calRowTotal() {
+  get rowTotal() {
 	var total = convertToNumberFromCurrency(this.jan) 
 	+ convertToNumberFromCurrency(this.feb)
 	+ convertToNumberFromCurrency(this.mar)
@@ -280,13 +280,11 @@ class MediaRow {
   }
 	
 	
-   get objName() {
-        return this.name;
-    }
-    doSomething() {
-        console.log("I'm a " + this.name);
-    }
-}
+   //get objName() {
+   //     return this.name;
+    //}
+    
+}//end of class
 function remove (name) {
 	   for( var i = 0; i <  objs.length; i++){ 
 	      if (objs[i].objName === name) {
