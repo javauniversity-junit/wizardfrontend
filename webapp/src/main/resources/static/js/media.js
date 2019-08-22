@@ -13,12 +13,30 @@ function importPlanMediaA() {
  
 function addObj(name, jan,feb,mar,apr,may,june,july,aug,sept,oct,nov,dec ) {
     var id = create_UUID();
-    var lionES6 = new MediaRow(id,name,jan,feb,mar,apr,may,june,july,aug,sept,oct,nov,dec);
+    var rowTotal = calRowTotal(jan,feb,mar,apr,may,june,july,aug,sept,oct,nov,dec);
+    var lionES6 = new MediaRow(id,name,jan,feb,mar,apr,may,june,july,aug,sept,oct,nov,dec,rowTotal);
    
     objs.push(lionES6 );
     updatehiddenMediaRow ();
     //lionES6.doSomething();
 }
+
+function calRowTotal(jan,feb,mar,apr,may,june,july,aug,sept,oct,nov,dec) {
+	var total = convertToNumberFromCurrency(jan) 
+	+ convertToNumberFromCurrency(feb)
+	+ convertToNumberFromCurrency(mar)
+	+ convertToNumberFromCurrency(apr)
+	+ convertToNumberFromCurrency(may)
+	+ convertToNumberFromCurrency(june)
+	+ convertToNumberFromCurrency(july)
+	+ convertToNumberFromCurrency(aug)
+	+ convertToNumberFromCurrency(sept)
+	+ convertToNumberFromCurrency(oct)
+	+ convertToNumberFromCurrency(nov)
+	+ convertToNumberFromCurrency(dec);
+	//total = CurrencyFormatted(total);
+	return total; 
+  }
 
 function addOrUpdate() {
     var textObjValue = document.getElementById("medianame").value;
@@ -237,7 +255,7 @@ function doesTheObjExist(name) {
 
 class MediaRow {
    //  #ttt = "ddd";
-    constructor(id, name, jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec) {
+    constructor(id, name, jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec,rowTotal) {
         this.id = id;
         this.name = name;
         this.jan = jan;
@@ -252,7 +270,7 @@ class MediaRow {
         this.oct = oct;
         this.nov = nov;
         this.dec = dec;
-        //this.rowTotal = calRowTotal();
+        this.rowTotal = rowTotal;
     }
   
    //set nameValue(x) {
@@ -260,24 +278,9 @@ class MediaRow {
   //}
 
 //setter
-  set rowTotal(value) {}
+  
    
-  get rowTotal() {
-	var total = convertToNumberFromCurrency(this.jan) 
-	+ convertToNumberFromCurrency(this.feb)
-	+ convertToNumberFromCurrency(this.mar)
-	+ convertToNumberFromCurrency(this.apr)
-	+ convertToNumberFromCurrency(this.may)
-	+ convertToNumberFromCurrency(this.jun)
-	+ convertToNumberFromCurrency(this.jul)
-	+ convertToNumberFromCurrency(this.aug)
-	+ convertToNumberFromCurrency(this.sep)
-	+ convertToNumberFromCurrency(this.oct)
-	+ convertToNumberFromCurrency(this.nov)
-	+ convertToNumberFromCurrency(this.dec);
-	total = CurrencyFormatted(total);
-	return total; 
-  }
+  
 	
 	
    //get objName() {
