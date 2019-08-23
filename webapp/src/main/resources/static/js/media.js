@@ -1,5 +1,55 @@
 //class variable for global objects
 var objs = [];
+//copy to other months
+function copyToOtherMonths(){
+	var jan = $('#jan').val();
+	 
+	if (!$('#feb').val() ) {
+		//Set
+        $('#feb').val(jan);
+	}
+	if (!$('#mar').val() ) {
+		//Set
+        $('#mar').val(jan);
+	}
+	if (!$('#apr').val() ) {
+		//Set
+        $('#apr').val(jan);
+	}
+	if (!$('#may').val() ) {
+		//Set
+        $('#may').val(jan);
+	}
+	if (!$('#jun').val() ) {
+		//Set
+        $('#jun').val(jan);
+	}
+	if (!$('#jul').val() ) {
+		//Set
+        $('#jul').val(jan);
+	}
+	if (!$('#aug').val()) {
+		//Set
+        $('#aug').val(jan);
+	}
+	if (!$('#sep').val() ) {
+		//Set
+        $('#sep').val(jan);
+	}
+	if (!$('#oct').val() ) {
+		//Set
+        $('#oct').val(jan);
+	}
+	if (!$('#nov').val() ) {
+		//Set
+        $('#nov').val(jan);
+	}
+	if (!$('#dec').val()) {
+		//Set
+        $('#dec').val(jan);
+	}
+	
+}
 function importPlanMediaA() {
 	$('#importForm').submit();
 }
@@ -314,6 +364,7 @@ function sortObj() {
  console.log("objs sorted" + test); 
 }
 function totalRow() {
+	copyToOtherMonths();
 	 var jan = document.getElementById("jan").value;
 	 var total= 0 ;
 	 if (jan != null) {
