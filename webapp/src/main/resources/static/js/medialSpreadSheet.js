@@ -1,5 +1,14 @@
 
 function buildSpreadSheet() {
+	
+	//determine to hide spread sheet
+	if (objs === undefined || objs.length == 0) {
+	    // array empty or does not exist
+		$('#spreadSheet').hide();
+		return;
+	} else {
+		$('#spreadSheet').show();
+	}
 
  var janTotal = 0;
  var febTotal = 0;
