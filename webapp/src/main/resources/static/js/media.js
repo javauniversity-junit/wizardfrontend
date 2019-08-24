@@ -447,8 +447,8 @@ function totalRow() {
 			 dec = removeComma(dec);
 			 total = total + Number(dec);
 		 }	
-	    total = formatMoney(total);
-	    total = "$" + total;
+	    total = CurrencyFormatted(total);
+	   
 	document.getElementById("totalRow").value = total;
 }
 function updatehiddenMediaRow ()
