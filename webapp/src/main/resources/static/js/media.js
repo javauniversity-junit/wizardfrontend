@@ -1,10 +1,4 @@
-//loggger
 
-//const mediaLog = log4javascript.getDefaultLogger();
-var mediaLog = log4javascript.getLogger("media");
-var appender = new log4javascript.InPageAppender();
-mediaLog.addAppender(appender);
-appender.hide();
 
 //class variable for global objects
 var objs = [];
