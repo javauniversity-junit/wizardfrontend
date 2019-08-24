@@ -45,6 +45,9 @@ function buildSpreadSheet() {
 			julTotal = julTotal + convertToNumberFromCurrency(objs[i].jul);
 			augTotal = augTotal + convertToNumberFromCurrency(objs[i].aug);
 			sepTotal = sepTotal + convertToNumberFromCurrency(objs[i].sep);
+			octTotal = octTotal + convertToNumberFromCurrency(objs[i].oct);
+			novTotal = novTotal + convertToNumberFromCurrency(objs[i].nov);
+			decTotal = decTotal + convertToNumberFromCurrency(objs[i].dec);
 			var clone = document.importNode(template.content, true);
 			var td = clone.querySelectorAll("td");
 
