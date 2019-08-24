@@ -101,10 +101,10 @@ function buildSpreadSheet() {
 		td[10].textContent = CurrencyFormatted(octTotal);
 		td[11].textContent = CurrencyFormatted(novTotal);
 		td[12].textContent = CurrencyFormatted(decTotal);
-		var grandtotal = janTotal + febTotal + marTotal
-		aprTotal + mayTotal + junTotal
-		julTotal + augTotal + sepTotal
-		octTotal + novTotal + decTotal;
+		var grandtotal = janTotal + febTotal + marTotal;
+		grandtotal  =  grandtotal + aprTotal + mayTotal + junTotal;
+		grandtotal = grandtotal +julTotal + augTotal + sepTotal;
+		grandtotal = grandtotal +octTotal + novTotal + decTotal;
 		td[13].textContent = CurrencyFormatted(grandtotal);
 
 		tfoot.appendChild(clone);
