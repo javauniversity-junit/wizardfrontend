@@ -1,7 +1,11 @@
+//loggger
+
+const mediaLog = log4javascript.getDefaultLogger();
 //class variable for global objects
 var objs = [];
 //copy to other months
 function copyToOtherMonths(){
+	console.log("start copyToOtherMonths");
 	var jan = $('#jan').val();
 	 
 	if (!$('#feb').val() ) {
@@ -62,7 +66,9 @@ function importPlanMediaA() {
  */
  
 function addObj(name, jan,feb,mar,apr,may,june,july,aug,sept,oct,nov,dec ) {
-    var id = create_UUID();
+	console.log("start addObj");
+	mediaLog.info("start addObj");
+	var id = create_UUID();
     var rowTotal = calRowTotal(jan,feb,mar,apr,may,june,july,aug,sept,oct,nov,dec);
     var lionES6 = new MediaRow(id,name,jan,feb,mar,apr,may,june,july,aug,sept,oct,nov,dec,rowTotal);
    
@@ -90,10 +96,11 @@ function calRowTotal(jan,feb,mar,apr,may,june,july,aug,sept,oct,nov,dec) {
 
 function addOrUpdate() {
     var textObjValue = document.getElementById("medianame").value;
-   // if (textObjValue == null) {
-    //	alert("Please enter a name");
-    //	return;
-    //}
+    if(!$('#medianame').val()) {
+        alert("Please enter a name");
+        $('#medianame').focus();
+    	return;
+    }
     var hiddenObjIdValue = document.getElementById("idname").value;
     
     var jan = document.getElementById("jan").value;
@@ -290,7 +297,7 @@ function displayDetail(idValue) {
 	      }
 	   }//end of for
 	  totalRow();
-	   displayUpdateButton();
+	  displayUpdateButton();
 	}
 function doesTheObjExist(name) {
 	   var found = "false";
@@ -364,6 +371,8 @@ function sortObj() {
  console.log("objs sorted" + test); 
 }
 function totalRow() {
+	console.log("start totalRow");
+	mediaLog.info("start totalRow");
 	copyToOtherMonths();
 	 var jan = document.getElementById("jan").value;
 	 var total= 0 ;
