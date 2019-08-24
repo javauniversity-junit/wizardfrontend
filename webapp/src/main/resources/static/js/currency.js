@@ -73,8 +73,7 @@ function formatCurrency(input, blur) {
   
   // don't validate empty input
   if (input_val === "") { 
-	  //totalRow();
-	  return; 
+	 input_val = "0"; 
    }
 	
  //remove period
