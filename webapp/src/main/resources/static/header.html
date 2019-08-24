@@ -11,8 +11,23 @@
                 location.href = pageURL;
 		//window.open(pageURL);
 	}
+	var consoleVisible = false;
+
 	function turnOnConsole() {
 		try {
+			
+	       if (consoleVisible) {
+		    appender.hide();
+					
+		   consoleVisible = false;
+		} else {
+		   appender.show();
+					
+		   consoleVisible = true;
+		}
+		
+			
+			
                  appender.show();
                 }
           catch(err) {
