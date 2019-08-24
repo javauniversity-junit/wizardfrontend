@@ -66,7 +66,7 @@ function importPlanMediaA() {
  
 function addObj(name, jan,feb,mar,apr,may,june,july,aug,sept,oct,nov,dec ) {
 	console.log("start addObj");
-	mediaLog.info("start addObj");
+	
 	var id = create_UUID();
     var rowTotal = calRowTotal(jan,feb,mar,apr,may,june,july,aug,sept,oct,nov,dec);
     var lionES6 = new MediaRow(id,name,jan,feb,mar,apr,may,june,july,aug,sept,oct,nov,dec,rowTotal);
@@ -371,7 +371,7 @@ function sortObj() {
 }
 function totalRow() {
 	console.log("start totalRow");
-	mediaLog.info("start totalRow");
+	
 	copyToOtherMonths();
 	 var jan = document.getElementById("jan").value;
 	 var total= 0 ;
