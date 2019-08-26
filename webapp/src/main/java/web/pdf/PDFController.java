@@ -7,9 +7,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Rectangle;
 import com.itextpdf.text.pdf.PdfWriter;
 
 import web.pdf.slides.PresentedToSlidePDF;
@@ -22,12 +25,18 @@ import java.util.List;
 public class PDFController {
 	@RequestMapping(value = "/pdfreport", method = RequestMethod.GET,
             produces = MediaType.APPLICATION_PDF_VALUE)
-    public ResponseEntity<InputStreamResource> generatePDF() {
+    public ResponseEntity<InputStreamResource> generatePDF(@RequestParam String ID) {
+		Integer idInt = Integer.parseInt(ID);
+		//add background color
+		//Rectangle pageSize = new Rectangle(600, 720);
+		//pageSize.setBackgroundColor(new BaseColor(0xFF, 0xFF, 0xDE));
 		Document document = new Document();
+		
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
 		ByteArrayInputStream byteArrayInputStream =null;
 		try {
-			PdfWriter.getInstance(document, out);
+			PdfWriter pdfWriter = PdfWriter.getInstance(document, out);
+			pdfWriter.setPageEvent(new GradientBackground());
 			document.open();
 			PresentedToSlidePDF presentedToPagePDF = new PresentedToSlidePDF();
 			document.add(presentedToPagePDF.getSildeContent());
