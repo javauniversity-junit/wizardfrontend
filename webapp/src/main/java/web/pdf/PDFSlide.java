@@ -1,5 +1,7 @@
 package web.pdf;
 
-public interface PDFSlide {
+import com.itextpdf.text.Element;
 
+public interface PDFSlide {
+	     public Element getSildeContent();
 }
