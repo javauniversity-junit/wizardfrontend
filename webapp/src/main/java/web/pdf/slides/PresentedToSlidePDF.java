@@ -10,19 +10,33 @@ import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 
+import web.page.presentedtopage.PresentedToPageController;
 import web.pdf.PDFSlide;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
+import java.util.logging.Logger;
+
+import org.apache.commons.io.IOUtils;
 
 public class PresentedToSlidePDF implements PDFSlide {
+	private static final Logger mLog = Logger.getLogger(PresentedToSlidePDF.class.getName());
+
 	public ByteArrayInputStream generateContent() {
 
 		Document document = new Document();
 		ByteArrayOutputStream out = new ByteArrayOutputStream();
-
+		 
+		
 		try {
+			
+			 FileInputStream fis = new FileInputStream("src/pdf/resources/PresentedTo.txt");
+			 String footerData = IOUtils.toString(fis, "UTF-8");
+			mLog.info("footerData " + footerData);
 
 			PdfPTable table = new PdfPTable(3);
 			table.setWidthPercentage(60);
@@ -68,7 +82,7 @@ public class PresentedToSlidePDF implements PDFSlide {
 
 			document.close();
 
-		} catch (DocumentException ex) {
+		} catch (Exception ex) {
 
 			// logger.error("Error occurred: {0}", ex);
 		}
@@ -80,7 +94,9 @@ public class PresentedToSlidePDF implements PDFSlide {
 	public Element getSildeContent() {
 
 		try {
-
+			 FileInputStream fis = new FileInputStream("src/pdf/resources/PresentedTo.txt");
+			 String footerData = IOUtils.toString(fis, "UTF-8");
+			
 			PdfPTable table = new PdfPTable(3);
 			table.setWidthPercentage(60);
 			table.setWidths(new int[] { 1, 3, 3 });
@@ -120,7 +136,7 @@ public class PresentedToSlidePDF implements PDFSlide {
 			table.addCell(cell);
 			return table;
 
-		} catch (DocumentException ex) {
+		} catch (Exception  ex) {
 
 			// logger.error("Error occurred: {0}", ex);
 		}

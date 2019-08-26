@@ -5,6 +5,10 @@ import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.itextpdf.text.pdf.BaseFont;
+import com.itextpdf.text.pdf.PdfContentByte;
+import com.itextpdf.text.pdf.PdfWriter;
+
 import web.model.WizardData;
 import web.page.JSONManager;
 import web.page.PageNameEnum;
@@ -17,6 +21,21 @@ import web.repository.WizardDataRepository;
 
 public class PDFSlideHelper  {
 	private int _idInt;
+	 public static void fixText(String text, int x, int y,PdfWriter writer,int size) {
+		    try {
+		        PdfContentByte cb = writer.getDirectContent();
+		        BaseFont bf = BaseFont.createFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
+		        cb.saveState();
+		        cb.beginText();
+		        cb.moveText(x, y);
+		        cb.setFontAndSize(bf, size);
+		        cb.showText(text);
+		        cb.endText();
+		        cb.restoreState();
+		    } catch (Exception e) {
+		        e.printStackTrace();
+		    }
+		}
 	public PDFSlideHelper(int idInt) {
 		this._idInt = idInt;
 		getModelsFromDatabase();
