@@ -38,10 +38,10 @@ public class PDFController {
 			PdfWriter pdfWriter = PdfWriter.getInstance(document, out);
 			pdfWriter.setPageEvent(new GradientBackground());
 			//FixText(",400,700,writer,14);
-			PDFSlideHelper.fixText("Add Your Text", 400, 700,pdfWriter,14);
-				
 			document.open();
+			
 			PresentedToSlidePDF presentedToPagePDF = new PresentedToSlidePDF();
+			PDFSlideHelper.fixText(presentedToPagePDF.getBottomText(), 200, 500,pdfWriter,14);
 			document.add(presentedToPagePDF.getSildeContent());
 
 			document.close();

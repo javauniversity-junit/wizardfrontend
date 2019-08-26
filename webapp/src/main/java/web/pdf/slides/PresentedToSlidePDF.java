@@ -19,6 +19,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import org.apache.commons.io.IOUtils;
@@ -34,8 +35,9 @@ public class PresentedToSlidePDF implements PDFSlide {
 		
 		try {
 			
-			 FileInputStream fis = new FileInputStream("src/pdf/resources/PresentedTo.txt");
+			 FileInputStream fis = new FileInputStream("src/main/resources/pdf/PresentedTo.txt");
 			 String footerData = IOUtils.toString(fis, "UTF-8");
+			// fis.
 			mLog.info("footerData " + footerData);
 
 			PdfPTable table = new PdfPTable(3);
@@ -84,17 +86,30 @@ public class PresentedToSlidePDF implements PDFSlide {
 
 		} catch (Exception ex) {
 
-			// logger.error("Error occurred: {0}", ex);
+			mLog.log(Level.SEVERE,  ex.getMessage());
 		}
 
 		return new ByteArrayInputStream(out.toByteArray());
 	}
 
+	public String getBottomText() {
+		 FileInputStream fis;
+		 String footerData = "";
+		try {
+			fis = new FileInputStream("src/main/resources/pdf/PresentedTo.txt");
+			 footerData = IOUtils.toString(fis, "UTF-8");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 
+		return footerData;
+	}
 	@Override
 	public Element getSildeContent() {
 
 		try {
-			 FileInputStream fis = new FileInputStream("src/pdf/resources/PresentedTo.txt");
+			 FileInputStream fis = new FileInputStream("src/main/resources/pdf/PresentedTo.txt");
 			 String footerData = IOUtils.toString(fis, "UTF-8");
 			
 			PdfPTable table = new PdfPTable(3);
@@ -138,7 +153,7 @@ public class PresentedToSlidePDF implements PDFSlide {
 
 		} catch (Exception  ex) {
 
-			// logger.error("Error occurred: {0}", ex);
+			ex.printStackTrace();
 		}
 
 		return null;

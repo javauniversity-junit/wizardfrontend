@@ -15,7 +15,7 @@ public class GradientBackground extends PdfPageEventHelper {
         PdfShading axial = PdfShading.simpleAxial(writer,
                 pageSize.getLeft(pageSize.getWidth()/10), pageSize.getBottom(),
                 pageSize.getRight(pageSize.getWidth()/10), pageSize.getBottom(),
-                new BaseColor(255, 200, 200), new BaseColor(200, 255, 200), true, true);
+                new BaseColor(169,169,169), new BaseColor(0,255,0), true, true);
         PdfContentByte canvas = writer.getDirectContentUnder();
         canvas.paintShading(axial);
     }
