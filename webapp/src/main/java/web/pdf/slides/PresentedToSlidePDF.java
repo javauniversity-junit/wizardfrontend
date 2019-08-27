@@ -37,9 +37,9 @@ public class PresentedToSlidePDF implements PDFSlide {
 	public Element getHeaderOne() {
 		// Creates a check for the paragraphs contents
 		String header = PDFSlideHelper.getKeyValue("header1", this._fileDataName);
-		Font font = new Font(FontFamily.TIMES_ROMAN, 25.0f, Font.BOLD, BaseColor.BLACK);
+		Font font = new Font(FontFamily.TIMES_ROMAN, 25.0f, Font.BOLD, BaseColor.WHITE);
         Chunk chunk = new Chunk(header, font);
-        chunk.setBackground(BaseColor.WHITE);
+       // chunk.setBackground(BaseColor.WHITE);
         Paragraph paragraph = new Paragraph(chunk);
         paragraph.setAlignment(Paragraph.ALIGN_CENTER);
         paragraph.setSpacingAfter(50);
@@ -51,7 +51,9 @@ public class PresentedToSlidePDF implements PDFSlide {
 		// Creates a check for the paragraphs contents
 		String header = PDFSlideHelper.getKeyValue("header2", this._fileDataName);
 		
-        Chunk chunk = new Chunk(header);
+        
+        Font font = new Font(FontFamily.TIMES_ROMAN, 18.0f, Font.BOLD, BaseColor.WHITE);
+        Chunk chunk = new Chunk(header,font);
         Paragraph paragraph = new Paragraph(chunk);
         paragraph.setAlignment(Paragraph.ALIGN_CENTER);
         paragraph.setSpacingAfter(50);

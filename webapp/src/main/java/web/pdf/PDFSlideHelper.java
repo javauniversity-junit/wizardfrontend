@@ -32,7 +32,7 @@ public class PDFSlideHelper  {
 				//remove line break
 				fileContent = fileContent.replaceAll("\\n", "");
 				fileContent = fileContent.replaceAll("\\r", "");
-				String[] kvPairs = fileContent.split("|");
+				String[] kvPairs = fileContent.split(";");
 				for(String kvPair: kvPairs) {
 					   String[] kv = kvPair.split("=");
 					   String key = kv[0];

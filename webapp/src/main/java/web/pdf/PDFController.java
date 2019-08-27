@@ -42,6 +42,8 @@ public class PDFController {
 			
 			PresentedToSlidePDF presentedToPagePDF = new PresentedToSlidePDF();
 			document.add(presentedToPagePDF.getHeaderOne());
+			document.add(presentedToPagePDF.getHeaderTwo());
+			
 			PDFSlideHelper.fixText(presentedToPagePDF.getBottomText(), 50, 800,pdfWriter,14);
 			
 			
