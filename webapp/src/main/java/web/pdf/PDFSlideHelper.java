@@ -1,8 +1,10 @@
 package web.pdf;
 
+import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.logging.Logger;
 
+import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.itextpdf.text.pdf.BaseFont;
@@ -21,6 +23,36 @@ import web.repository.WizardDataRepository;
 
 public class PDFSlideHelper  {
 	private int _idInt;
+	public static String getKeyValue(String keyId, String dataFile) {
+		 FileInputStream fis;
+		 String keyValue = "";
+			try {
+				fis = new FileInputStream(dataFile);
+				String fileContent = IOUtils.toString(fis, "UTF-8");
+				//remove line break
+				fileContent = fileContent.replaceAll("\\n", "");
+				fileContent = fileContent.replaceAll("\\r", "");
+				String[] kvPairs = fileContent.split("|");
+				for(String kvPair: kvPairs) {
+					   String[] kv = kvPair.split("=");
+					   String key = kv[0];
+					   String value = kv[1];
+
+					   // Now do with key whatever you want with key and value...
+					   if(key.equals(keyId)) {
+						   keyValue = value;
+						   break;
+					       // Do something with value if the key is "specialvalue"...
+					   }
+					}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
+		return keyValue;
+	}
+	String[] kvPairs = "key1=value1;key2=value2;key3=value3".split(";");
 	 public static void fixText(String text, int x, int y,PdfWriter writer,int size) {
 		    try {
 		        PdfContentByte cb = writer.getDirectContent();
