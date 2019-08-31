@@ -30,7 +30,7 @@ function calculate()
 	var planAMonths = convertIntToNumber(document.getElementById("planAMonths").value); // i
 	var planAAdditionalGrossSales = planAGrossProfitOnSales * planAMonths; // j = hi
 	
-	document.getElementById("planAAverageSale").value = planAAverageSale;
+	document.getElementById("planAAverageSale").value = FormatAmount(planAAverageSale);
 	document.getElementById("planAInvestment").value = FormatAmount(planAInvestment);
 	document.getElementById("planAProspectValue").value =  planAProspectValue;
 	document.getElementById("planAProspectsNeeded").value =  Math.round(planAProspectsNeeded * 10) / 10;
