@@ -71,8 +71,9 @@
                         <label for="planAReach">B. What is the projected
 							broadcast monthly reach in thousands?</label> 
 						<input type="text"
+						 data-type="numberwithcomma"
 							th:value="${dataPageModel?.planAReach}" class="form-control"
-							id="planAReach" name="planAReach" min=0 onload="this.innerHTML = '${dataPageModel?.planAReach}'.toLocaleString('en-US', 'useGrouping=true')"/>					
+							id="planAReach" name="planAReach" />					
 				</div>
 					
 					
