@@ -121,41 +121,44 @@
 
 @media print {
 	.pageBreakBefore {
-    background-color: black !important;
-    font-size: 27px !important; 
-    color: blue !important;
-    -webkit-print-color-adjust: exact !important;
-	display: block;
-	page-break-before: always;
-	/* print information */
+		background-color: black !important;
+		font-size: 27px !important;
+		color: blue !important;
+		-webkit-print-color-adjust: exact !important;
+		display: block;
+		page-break-before: always;
+		/* print information */
 	}
 	.pageBreakAfter {
-    background-color: black !important;
-
-    font-size: 27px !important; 
-    color: blue !important;
-    -webkit-print-color-adjust: exact !important;
+		background-color: black !important;
+		font-size: 27px !important;
+		color: blue !important;
+		-webkit-print-color-adjust: exact !important;
 		page-break-after: avoid;
 	}
 	.pageBreakInside {
-    background-color: black !important;
-
-    font-size: 27px !important; 
-    color: blue !important;
-    -webkit-print-color-adjust: exact !important;
+		background-color: black !important;
+		font-size: 27px !important;
+		color: blue !important;
+		-webkit-print-color-adjust: exact !important;
 		page-break-inside: avoid;
 	}
 }
-
- 
 </style>
 </head>
 <body>
-	<div th:replace="fragments/PresentedToPageFragment :: PresentedToPage"></div>
-	<div
-		th:replace="fragments/TeamCommitmentPageFragment :: TeamCommitmentPage"></div>
-	<div
-		th:replace="fragments/MarketPlaceCompetitionPageFragment :: MarketPlaceCompetitionPage"></div>
+
+	<div th:if="${PublishModel.presentedToPage}">
+		<div th:replace="fragments/PresentedToPageFragment :: PresentedToPage"></div>
+	</div>
+	<div th:if="${PublishModel.teamCommitmentPage}">
+		<div
+			th:replace="fragments/TeamCommitmentPageFragment :: TeamCommitmentPage"></div>
+	</div>
+	<div th:if="${PublishModel.marketPlaceCompetitionPage}">
+		<div
+			th:replace="fragments/MarketPlaceCompetitionPageFragment :: MarketPlaceCompetitionPage"></div>
+	</div>
 	<div
 		th:replace="fragments/PreviousYearMediaAllocationFragment :: PreviosYearMediaAllocation"></div>
 	<div
