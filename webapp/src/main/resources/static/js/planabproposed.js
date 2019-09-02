@@ -27,3 +27,9 @@ function FormatAmount(amount) {
 	s = "$" + s.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	return s;
 }
+
+/* tinas */
+function CommaFormatted(amount) {
+	
+	return amount;
+}
