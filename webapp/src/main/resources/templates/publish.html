@@ -3,34 +3,19 @@
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
 <title>Wizard</title>
-<meta name="description" content="">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="all,follow">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-
-<!-- Bootstrap CSS-->
-
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-	crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-	crossorigin="anonymous"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-	integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-	crossorigin="anonymous"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-	crossorigin="anonymous"></script>
-<script type="text/javascript"
+<script 
 	src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
+<script>
 	/*
 	 * throttledresize: special jQuery event that happens at a reduced rate compared to "resize"
 	 *
@@ -111,7 +96,11 @@
 	background-image: linear-gradient(green, black);
 	/* Standard syntax (must be last) */
 }
-
+.full-width-div {
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
 .whiteGrad {
 	padding: 5%;
 	color: black;
@@ -120,10 +109,13 @@
 }
 
 @media print {
+  h1{
+  color: white;
+  }
 	.pageBreakBefore {
 		background-color: black !important;
 		font-size: 27px !important;
-		color: blue !important;
+		color: black !important;
 		-webkit-print-color-adjust: exact !important;
 		display: block;
 		page-break-before: always;
@@ -132,7 +124,7 @@
 	.pageBreakAfter {
 		background-color: black !important;
 		font-size: 27px !important;
-		color: blue !important;
+		color: black !important;
 		-webkit-print-color-adjust: exact !important;
 		page-break-after: avoid;
 	}
@@ -143,29 +135,48 @@
 		-webkit-print-color-adjust: exact !important;
 		page-break-inside: avoid;
 	}
+	
+	
+	
 }
 </style>
+<script>
+	function printPage() {
+		window.print();
+	}
+	function goBack() {
+		window.history.back();
+	}
+</script>
 </head>
 <body>
+	<div class="container" style="height: 100%; width: 100%"> <!-- outer div  -->
 
-	<div th:if="${PublishModel.presentedToPage}">
-		<div th:replace="fragments/PresentedToPageFragment :: PresentedToPage"></div>
-	</div>
-	<div th:if="${PublishModel.teamCommitmentPage}">
+
+		<!-- replace presentToFragment begin -->
+			<div
+				th:replace="fragments/PresentedToPageFragment :: PresentedToPage"></div>
+		<!-- replace presentToFragment end -->
+		
+		<!-- replace teamCommitmentPageFragment begin -->
+			<div
+				th:replace="fragments/TeamCommitmentPageFragment :: TeamCommitmentPage"></div>
+	    <!-- replace TeamCommitmentPageFragment end -->
+		
+		<!-- 
+		<div th:if="${PublishModel.marketPlaceCompetitionPage}">
+			<div
+				th:replace="fragments/MarketPlaceCompetitionPageFragment :: MarketPlaceCompetitionPage"></div>
+		</div>
+		
+		<div th:if="${PublishModel.PreviousYearMediaAllocationPage}">
 		<div
-			th:replace="fragments/TeamCommitmentPageFragment :: TeamCommitmentPage"></div>
-	</div>
-	<div th:if="${PublishModel.marketPlaceCompetitionPage}">
+			th:replace="fragments/PreviousYearMediaAllocationFragment :: PreviosYearMediaAllocation"></div>
 		<div
-			th:replace="fragments/MarketPlaceCompetitionPageFragment :: MarketPlaceCompetitionPage"></div>
-	</div>
-	<div
-		th:replace="fragments/PreviousYearMediaAllocationFragment :: PreviosYearMediaAllocation"></div>
-	<div
-		th:replace="fragments/ProposedSchedulePlanAFragment :: ProposedSchedulePlanA"></div>
+			th:replace="fragments/ProposedSchedulePlanAFragment :: ProposedSchedulePlanA"></div>
+         -->
 
-
-
+	</div> <!-- end of outer -->
 
 </body>
 </html>

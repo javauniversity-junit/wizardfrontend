@@ -1,5 +1,7 @@
+<!-- begin of TeamCommitmentfragment -->
 <div th:fragment="TeamCommitmentPage"
 	class="grad container pageBreakBefore" style="height: 100%;">
+	<div th:if="${PublishModel.teamCommitmentPage}"> <!-- begin if TeamCommitment content -->
 	<div>
 		<a id="TeamCommitmentPage"></a>
 
@@ -86,5 +88,5 @@
 			</ul>
 		</nav>
 	</div>
-
-</div>
+</div><!-- end of if teamCommitmentPage content -->
+</div><!-- end of TeamCommitmentPageFragment -->
