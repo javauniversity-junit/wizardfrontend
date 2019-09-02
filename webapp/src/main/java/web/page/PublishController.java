@@ -69,6 +69,7 @@ public class PublishController {
 						StrategicMarketingPageOneModel.class);
 				model.addAttribute("StrategicMarketingPageOne", strategicMarketingPageOneModel);
 				mLog.info("found page StrategicMarketingPageOne");
+				
 				mLog.info("value found page StrategicMarketingPageOne " + strategicMarketingPageOneModel.getYearsInBusiness());
 				break;				
 			case MarketPlaceCompetitionPage:
@@ -77,6 +78,7 @@ public class PublishController {
 				marketPlaceCompetitionPageModel = (MarketPlaceCompetitionPageModel) JSONManager
 						.convertFromJson(data.getPagedata(), MarketPlaceCompetitionPageModel.class);
 				model.addAttribute("MarketPlaceCompetitionPageModel", marketPlaceCompetitionPageModel);
+				publish.setMarketPlaceCompetitionPage(true);
 				mLog.info("found page MarketPlaceCompetitionPageModel");
 				break;
 			}

@@ -1,6 +1,6 @@
 <!-- begin of TeamCommitmentfragment -->
 <div th:fragment="TeamCommitmentPage"
-	class="grad container pageBreakBefore" style="height: 100%;">
+	class="grad container pageBreakBefore">
 	<div th:if="${PublishModel.teamCommitmentPage}">
 		<!-- begin if TeamCommitment content -->
 		<div>
@@ -28,56 +28,56 @@
 				your team.</p>
 
 		</div>
-		<div class="container whiteGrad">
-			<div class="row">
-				<div class="col-sm-12">
+		<div class="w3-container whiteGrad">
+			<div class="w3-container">
+				<div class="col-p-12">
 					<hr>
 				</div>
 
 			</div>
-			<div class="row">
-				<div class="col-sm-4" th:text="${TeamCommitmentPage?.topLevelName}"></div>
-				<div class="col-sm-4" th:text="${TeamCommitmentPage?.topLevelTitle}"></div>
-				<div class="col-sm-4">Date</div>
+			<div class="w3-container">
+				<div class="col-p-4" th:text="${TeamCommitmentPage?.topLevelName}"></div>
+				<div class="col-p-4" th:text="${TeamCommitmentPage?.topLevelTitle}"></div>
+				<div class="col-p-4">Date</div>
 			</div>
-			<div class="row" style="padding-top: 5%;">
-				<div class="col-sm-12">
+			<div class="w3-container">
+				<div class="col-p-12">
 					<hr>
 				</div>
 
 			</div>
-			<div class="row">
-				<div class="col-sm-4"
+			<div class="w3-container">
+				<div class="col-p-4"
 					th:text="${TeamCommitmentPage?.secondLevelName}"></div>
-				<div class="col-sm-4"
+				<div class="col-p-4"
 					th:text="${TeamCommitmentPage?.secondLevelTitle}"></div>
-				<div class="col-sm-4">Date</div>
+				<div class="col-p-4">Date</div>
 			</div>
-			<div class="row" style="padding-top: 5%;">
-				<div class="col-sm-12">
+			<div class="w3-container">
+				<div class="col-p-12">
 					<hr>
 				</div>
 
 			</div>
-			<div class="row">
-				<div class="col-sm-4"
+			<div class="w3-container">
+				<div class="col-p-4"
 					th:text="${TeamCommitmentPage?.thirdLevelName}"></div>
-				<div class="col-sm-4"
+				<div class="col-p-4"
 					th:text="${TeamCommitmentPage?.thirdLevelTitle}"></div>
-				<div class="col-sm-4">Date</div>
+				<div class="col-p-4">Date</div>
 			</div>
-			<div class="row" style="padding-top: 5%;">
-				<div class="col-sm-12">
+			<div class="w3-container">
+				<div class="col-p-12">
 					<hr>
 				</div>
 
 			</div>
-			<div class="row">
-				<div class="col-sm-4"
+			<div class="w3-container">
+				<div class="col-p-4"
 					th:text="${TeamCommitmentPage?.fourthLevelName}"></div>
-				<div class="col-sm-4"
+				<div class="col-p-4"
 					th:text="${TeamCommitmentPage?.fourthLevelTitle}"></div>
-				<div class="col-sm-4">Date</div>
+				<div class="col-p-4">Date</div>
 			</div>
 		</div>
 		<div class="w3-container d-print-none" style="padding-top: 2%;">
