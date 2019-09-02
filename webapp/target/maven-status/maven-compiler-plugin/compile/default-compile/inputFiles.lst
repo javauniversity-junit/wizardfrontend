@@ -38,6 +38,7 @@
 /Users/andrewhinton/Documents/GitHub/wizardfrontend/webapp/src/main/java/web/data/MyUserPrincipal.java
 /Users/andrewhinton/Documents/GitHub/wizardfrontend/webapp/src/main/java/web/page/presentedtopage/PresentedToPageModel.java
 /Users/andrewhinton/Documents/GitHub/wizardfrontend/webapp/src/main/java/web/page/JSONManager.java
+/Users/andrewhinton/Documents/GitHub/wizardfrontend/webapp/src/main/java/web/page/Publish.java
 /Users/andrewhinton/Documents/GitHub/wizardfrontend/webapp/src/main/java/web/page/planamedipage/PlanMediaPageModel.java
 /Users/andrewhinton/Documents/GitHub/wizardfrontend/webapp/src/main/java/web/page/planABEPPage/PlanABEPPageController.java
 /Users/andrewhinton/Documents/GitHub/wizardfrontend/webapp/src/main/java/web/repository/ContactRepository.java

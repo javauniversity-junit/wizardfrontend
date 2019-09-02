@@ -1,30 +1,32 @@
+<!-- begin of PresentedTofragment -->
 <div th:fragment="PresentedToPage"
 	class="grad container pageBreakInside"
-	style="height: 100%; width: 100%">
-    
-	<div th:if="${PublishModel.presentedToPage}"><!-- determine if we show presentedToPage content -->
+	style="height: 100%;>
+
+	<div th:if="${PublishModel.presentedToPage}">
+		<!-- determine if we show presentedToPage content -->
 
 		<div>
 			<a id="PresentedToPage"></a>
-			<p class="text-justify">
+
 			<h1 class="text-center">Marketing Solutions</h1>
-			</p>
-			<p class="text-justify">
+
+
 			<h2 class="text-center">Summary, Conclusions, and
 				Recommendations</h2>
-			</p>
+
 		</div>
 
 		<div class="whiteGrad">
-			<p>
-			<h2>Presented To</h2>
-			<span th:text="${PresentedToPage?.clientContactName}"></span>- <span
-				th:text="${PresentedToPage?.clientBusinessName}"></span>
-			</p>
-			<p>
-			<h2>Presented By</h2>
-			<span th:text="${PresentedToPage?.portfolioManagerName}"></span>
-			</p>
+			<div>
+				<h2>Presented To</h2>
+				<span th:text="${PresentedToPage?.clientContactName}"></span>- <span
+					th:text="${PresentedToPage?.clientBusinessName}"></span>
+			</div>
+			<div>
+				<h2>Presented By</h2>
+				<span th:text="${PresentedToPage?.portfolioManagerName}"></span>
+			</div>
 			<p>Copyright © 1984-2017 Executive Decision Systems, Inc. and The
 				Guld Resource Group, LLC. The data, formulas, and other content in
 				these materials are the property of Executive Decision Systems, Inc.
@@ -35,20 +37,13 @@
 				permitting such use. All rights reserved. To report violations,
 				please call (804) 356-7006.</p>
 		</div>
-		<div class="container d-print-none" style="padding-top: 2%;">
-			<nav aria-label="Page navigation example">
-				<ul class="pagination">
-					<li class="page-item"><a class="page-link"
-						href="#TeamCommitmentPage">Next</a></li>
-					<li class="page-item"><a class="page-link"
-						href="javascript:printPage();">Print</a></li>
-					<li class="page-item"><a class="page-link"
-						href="javascript:goBack();">End</a></li>
-
-				</ul>
-			</nav>
+		<div class="w3-container d-print-none" style="padding-top: 2%;">
+			    <button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
+                 <a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
+                <button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
 		</div>
-	</div> <!-- end of if statement -->
+	</div>
+	<!-- end of if statement -->
 
 </div>
-<!-- end of fragment -->
+<!-- end of PresentedTofragment -->

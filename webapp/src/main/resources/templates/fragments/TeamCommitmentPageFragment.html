@@ -1,92 +1,91 @@
 <!-- begin of TeamCommitmentfragment -->
 <div th:fragment="TeamCommitmentPage"
 	class="grad container pageBreakBefore" style="height: 100%;">
-	<div th:if="${PublishModel.teamCommitmentPage}"> <!-- begin if TeamCommitment content -->
-	<div>
-		<a id="TeamCommitmentPage"></a>
+	<div th:if="${PublishModel.teamCommitmentPage}">
+		<!-- begin if TeamCommitment content -->
+		<div>
+			<a id="TeamCommitmentPage"></a>
 
-		<p class="text-justify">
-		<h1 class="text-center">Team Commitment</h1>
-		</p>
-		
-	</div>
-
-	<div class="whiteGrad">
-		<p>
-		<h2>The following proposal will be submitted to</h2>
-		</p>
-		<p>
-		   <h3 th:text="${PresentedToPage?.clientContactName}"></h3>
-		</p>
-		<p>Your department will be involved in providing these services.
-			Please read our proposal, recommend and bring to our attention any
-			ways in which you feel we can more adequately satisfy our client’s
-			needs. When you are prepared to commit to our clients the necessary
-			effort to make them “more than satisfied,” with the results of our
-			plan, please sign the following certification on behalf of you and
-			your team.</p>
-
-	</div>
-	<div class="container whiteGrad">
-		<div class="row">
-			<div class="col-sm-12">
-				<hr>
+			<div class="text-justify">
+				<h1 class="text-center">Team Commitment</h1>
 			</div>
 
 		</div>
-		<div class="row">
-			<div class="col-sm-4" th:text="${TeamCommitmentPage?.topLevelName}"></div>
-			<div class="col-sm-4" th:text="${TeamCommitmentPage?.topLevelTitle}"></div>
-			<div class="col-sm-4">Date</div>
-		</div>
-		<div class="row" style="padding-top: 5%;">
-			<div class="col-sm-12">
-				<hr>
+
+		<div class="whiteGrad">
+			<div>
+				<h2>The following proposal will be submitted to</h2>
 			</div>
+			<div>
+				<h3 th:text="${PresentedToPage?.clientContactName}"></h3>
+			</div>
+			<p>Your department will be involved in providing these services.
+				Please read our proposal, recommend and bring to our attention any
+				ways in which you feel we can more adequately satisfy our client’s
+				needs. When you are prepared to commit to our clients the necessary
+				effort to make them “more than satisfied,” with the results of our
+				plan, please sign the following certification on behalf of you and
+				your team.</p>
 
 		</div>
-		<div class="row">
-			<div class="col-sm-4" th:text="${TeamCommitmentPage?.secondLevelName}"></div>
-			<div class="col-sm-4" th:text="${TeamCommitmentPage?.secondLevelTitle}"></div>
-			<div class="col-sm-4">Date</div>
-		</div>
-		<div class="row" style="padding-top: 5%;">
-			<div class="col-sm-12">
-				<hr>
-			</div>
+		<div class="container whiteGrad">
+			<div class="row">
+				<div class="col-sm-12">
+					<hr>
+				</div>
 
-		</div>
-		<div class="row">
-			<div class="col-sm-4" th:text="${TeamCommitmentPage?.thirdLevelName}"></div>
-			<div class="col-sm-4" th:text="${TeamCommitmentPage?.thirdLevelTitle}"></div>
-			<div class="col-sm-4">Date</div>
-		</div>
-		<div class="row" style="padding-top: 5%;">
-			<div class="col-sm-12">
-				<hr>
 			</div>
+			<div class="row">
+				<div class="col-sm-4" th:text="${TeamCommitmentPage?.topLevelName}"></div>
+				<div class="col-sm-4" th:text="${TeamCommitmentPage?.topLevelTitle}"></div>
+				<div class="col-sm-4">Date</div>
+			</div>
+			<div class="row" style="padding-top: 5%;">
+				<div class="col-sm-12">
+					<hr>
+				</div>
 
+			</div>
+			<div class="row">
+				<div class="col-sm-4"
+					th:text="${TeamCommitmentPage?.secondLevelName}"></div>
+				<div class="col-sm-4"
+					th:text="${TeamCommitmentPage?.secondLevelTitle}"></div>
+				<div class="col-sm-4">Date</div>
+			</div>
+			<div class="row" style="padding-top: 5%;">
+				<div class="col-sm-12">
+					<hr>
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="col-sm-4"
+					th:text="${TeamCommitmentPage?.thirdLevelName}"></div>
+				<div class="col-sm-4"
+					th:text="${TeamCommitmentPage?.thirdLevelTitle}"></div>
+				<div class="col-sm-4">Date</div>
+			</div>
+			<div class="row" style="padding-top: 5%;">
+				<div class="col-sm-12">
+					<hr>
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="col-sm-4"
+					th:text="${TeamCommitmentPage?.fourthLevelName}"></div>
+				<div class="col-sm-4"
+					th:text="${TeamCommitmentPage?.fourthLevelTitle}"></div>
+				<div class="col-sm-4">Date</div>
+			</div>
 		</div>
-		<div class="row">
-			<div class="col-sm-4" th:text="${TeamCommitmentPage?.fourthLevelName}"></div>
-			<div class="col-sm-4" th:text="${TeamCommitmentPage?.fourthLevelTitle}"></div>
-			<div class="col-sm-4">Date</div>
+		<div class="w3-container d-print-none" style="padding-top: 2%;">
+			    <button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
+                 <a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
+                <button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
 		</div>
 	</div>
-	<div class="container d-print-none" style="padding-top: 2%;">
-		<nav aria-label="Page navigation example">
-			<ul class="pagination">
-				<li class="page-item"><a class="page-link"
-					href="#PresentedToPage">Previous</a></li>
-				<li class="page-item"><a class="page-link"
-					href="#TeamCommitmentPage">Next</a></li>
-				<li class="page-item"><a class="page-link"
-					href="javascript:window.print();">Print</a></li>
-				<li class="page-item"><a class="page-link"
-					href="javascript:window.history.back();">End</a></li>
-
-			</ul>
-		</nav>
-	</div>
-</div><!-- end of if teamCommitmentPage content -->
-</div><!-- end of TeamCommitmentPageFragment -->
+	<!-- end of if teamCommitmentPage content -->
+</div>
+<!-- end of TeamCommitmentPageFragment -->

@@ -42,6 +42,7 @@ web/page/presentedtopage/PresentedToPageController.class
 web/page/clientobjectivesonepage/ClientObjectivesOnePageModel.class
 web/page/planDigitalroicalculatorpage/PlanBDigitalROICalculatorPageController.class
 web/model/WebClient.class
+web/page/Publish.class
 web/repository/WizardDataRepository.class
 web/model/User.class
 web/page/planbLifetimevaluedpage/PlanBLifetimeValuedPageController.class
