@@ -62,16 +62,18 @@ public class PlanBMediaPageController {
 		Wizard wizard = wizardOpt.orElse(null);
 		//get plan a to copy to plan b
 		WizardData wizardData = wizardDataRepository.findByPagesequenceAndWizardid(Pages.PlanAMediaPage.getPageSequence(), wizard.getWizardid());
-	
+	    mLog.info("look for plan a");  
 	    if (wizardData != null ) {
+		mLog.info("found plan a");  
 	    	PlanMediaPageModel dataPageModel = null;
 	    	dataPageModel =(PlanMediaPageModel)JSONManager.convertFromJson(wizardData.getPagedata(), PlanMediaPageModel.class);
 	    	String pageData = JSONManager.convertToJson(dataPageModel);
 	    	//get plan b 
-	    	WizardData wizardDataB = wizardDataRepository.findByPagesequenceAndWizardid(Pages.PlanAMediaPage.getPageSequence(), wizard.getWizardid());
-	    	
-	    	wizardDataB.setPagename(PageNameEnum.PlanAMediaPage.toString());
-	    	wizardDataB.setPagesequence(Pages.PlanAMediaPage.getPageSequence());
+		mLog.info("find plan b"); 
+	    	WizardData wizardDataB = wizardDataRepository.findByPagesequenceAndWizardid(Pages.PlanBMediaPage.getPageSequence(), wizard.getWizardid());
+	    	mLog.info("page name = " + PageNameEnum.PlanBMediaPage.toString());
+	    	wizardDataB.setPagename(PageNameEnum.PlanBMediaPage.toString());
+	    	wizardDataB.setPagesequence(Pages.PlanBMediaPage.getPageSequence());
 	 		if (wizarddataid != null && wizarddataid.trim().length() > 0 ) {
 	 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 	 			wizardDataB.setWizarddataid(wizardDataInt);
