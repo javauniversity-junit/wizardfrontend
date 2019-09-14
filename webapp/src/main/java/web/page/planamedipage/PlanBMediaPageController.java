@@ -69,9 +69,15 @@ public class PlanBMediaPageController {
 	    	dataPageModel =(PlanMediaPageModel)JSONManager.convertFromJson(wizardData.getPagedata(), PlanMediaPageModel.class);
 	    	String pageData = JSONManager.convertToJson(dataPageModel);
 	    	//get plan b 
-		mLog.info("find plan b"); 
-	    	WizardData wizardDataB = wizardDataRepository.findByPagesequenceAndWizardid(Pages.PlanBMediaPage.getPageSequence(), wizard.getWizardid());
-	    	mLog.info("page name = " + PageNameEnum.PlanBMediaPage.toString());
+		mLog.info("find plan b");
+		    mLog.info("page name = " + PageNameEnum.PlanBMediaPage.toString());
+		WizardData wizardDataB = wizardDataRepository.findByPagesequenceAndWizardid(Pages.PlanBMediaPage.getPageSequence(), wizard.getWizardid());
+	    	
+		if (wizardDataB == null) {
+			wizardDataB = new WizardData();
+		}
+		    
+	    	
 	    	wizardDataB.setPagename(PageNameEnum.PlanBMediaPage.toString());
 	    	wizardDataB.setPagesequence(Pages.PlanBMediaPage.getPageSequence());
 	 		if (wizarddataid != null && wizarddataid.trim().length() > 0 ) {
