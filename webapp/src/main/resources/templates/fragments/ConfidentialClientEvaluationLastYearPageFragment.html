@@ -29,11 +29,15 @@
                               ['Sleep',    7]
                             ]);
 				
-                         var theList = [[${modelAttribute}]]
+                         var theList = [[${ConfidentialClientEvaluationOnePageLastYearChartModel}]]
                          for (i = 0; i < theList.length; i++) {
-                               ['/*[[${theList.amount}]]*/',' /*[[${session.userName}]]*/'],
+			       if (i < theList.length) {
+				       ['/*[[${theList.label}]]*/', /*[[${theList.labelValue}]]*/],
+			       } else {
+				       ['/*[[${theList.label}]]*/', /*[[${theList.labelValue}]]*/]  
+			       }     
 				
-                         }
+                         }//end of for loop
 				
 		       var options = {
                          title: 'My Daily Activities',
