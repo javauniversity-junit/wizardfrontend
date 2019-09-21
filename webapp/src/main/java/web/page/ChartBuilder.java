@@ -14,7 +14,7 @@ public class ChartBuilder {
 	
 
 
- public List<PieChart> buildLastYearConfidentialClientEvaluation(ConfidentialClientEvaluationOnePageModel model) {
+ public static List<PieChart> buildLastYearConfidentialClientEvaluation(ConfidentialClientEvaluationOnePageModel model) {
 	List<PieChart> pieCharts = new ArrayList<PieChart>();
 	if (model.getLastYearLabel1() != null && model.getLastYearValue1() != null) {
 		//amount
