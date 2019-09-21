@@ -48,7 +48,7 @@ public class ChartBuilder {
 	 
  }
  
-private  int parse(final String amount) throws ParseException {
+private  static int parse(final String amount) throws ParseException {
 	    final NumberFormat format = NumberFormat.getNumberInstance( Locale.US);
 	    if (format instanceof DecimalFormat) {
 	        ((DecimalFormat) format).setParseBigDecimal(true);
