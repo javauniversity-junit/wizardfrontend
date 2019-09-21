@@ -17,8 +17,30 @@ public class ChartBuilder {
  public List<PieChart> buildLastYearConfidentialClientEvaluation(ConfidentialClientEvaluationOnePageModel model) {
 	List<PieChart> pieCharts = new ArrayList<PieChart>();
 	if (model.getLastYearLabel1() != null && model.getLastYearValue1() != null) {
+		//amount
+		try {
+			
+		int amount = 	parse(model.getLastYearValue1());
+		PieChart pieChart = new PieChart(model.getLastYearLabel1(),amount);
+		pieCharts.add(pieChart);	
+			
+		} catch (Exception ex) {
+		}
 		
 	}
+	 
+	if (model.getLastYearLabel2() != null && model.getLastYearValue2() != null) {
+		//amount
+		try {
+			
+		int amount = 	parse(model.getLastYearValue2());
+		PieChart pieChart = new PieChart(model.getLastYearLabel2(),amount);
+		pieCharts.add(pieChart);	
+			
+		} catch (Exception ex) {
+		}
+		
+	} 
 	
 	return pieCharts;
  }
