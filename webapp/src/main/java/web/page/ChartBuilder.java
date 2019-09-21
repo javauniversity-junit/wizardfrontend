@@ -13,7 +13,7 @@ import web.page.confidentialclientevaluationnonepage.ConfidentialClientEvaluatio
 
 public class ChartBuilder {
 	
-
+private static final Logger mLog = Logger.getLogger(ChartBuilder.class.getName());
 
  public static List<PieChart> buildLastYearConfidentialClientEvaluation(ConfidentialClientEvaluationOnePageModel model) {
 	List<PieChart> pieCharts = new ArrayList<PieChart>();
@@ -23,9 +23,11 @@ public class ChartBuilder {
 			
 		int amount = 	parse(model.getLastYearValue1());
 		PieChart pieChart = new PieChart(model.getLastYearLabel1(),amount);
+		mLog.info(" add to piechart [" + model.getLastYearLabel1() + "]");
 		pieCharts.add(pieChart);	
 			
 		} catch (Exception ex) {
+			mLog.error("Could not parse amount [" + model.getLastYearValue1() + "]"); 
 		}
 		
 	}
