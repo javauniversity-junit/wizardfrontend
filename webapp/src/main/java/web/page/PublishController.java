@@ -53,8 +53,11 @@ public class PublishController {
 				confidentialClientEvaluationOnePageModel = (ConfidentialClientEvaluationOnePageModel) JSONManager.convertFromJson(data.getPagedata(),
 						ConfidentialClientEvaluationOnePageModel.class);
 				List<PieChart>  pieChart = ChartBuilder.buildLastYearConfidentialClientEvaluation(confidentialClientEvaluationOnePageModel);	
-				model.addAttribute("ConfidentialClientEvaluationOnePageLastYearChartModel", confidentialClientEvaluationOnePageModel);
+				
+				model.addAttribute("ConfidentialClientEvaluationOnePageLastYearChartModel", pieChart);
 				model.addAttribute("ConfidentialClientEvaluationOnePageModel", pieChart);
+				
+					
 				publish.setConfidentialClientEvaluationOnePage(true);
 				mLog.info("found page ConfidentialClientEvaluationOnePageModel");
 				break;
