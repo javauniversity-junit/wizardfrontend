@@ -27,7 +27,7 @@ private static final Logger mLog = Logger.getLogger(ChartBuilder.class.getName()
 		pieCharts.add(pieChart);	
 			
 		} catch (Exception ex) {
-			mLog.error("Could not parse amount [" + model.getLastYearValue1() + "]"); 
+			mLog.warning("Could not parse amount [" + model.getLastYearValue1() + "]"); 
 		}
 		
 	}
