@@ -57,6 +57,7 @@ private  static int parse(final String amount) throws ParseException {
 	        ((DecimalFormat) format).setParseBigDecimal(true);
 	    }
 	    int convertedAmount = (Integer) format.parse(amount.replaceAll("[^\\d.,]",""));
+	    mLog.info("Converted amount = [" + convertedAmount + "]");
 	    return convertedAmount;
 	}
 }
