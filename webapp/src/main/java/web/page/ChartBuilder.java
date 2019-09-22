@@ -16,7 +16,8 @@ public class ChartBuilder {
 private static final Logger mLog = Logger.getLogger(ChartBuilder.class.getName());
 
  public static List<PieChart> buildLastYearConfidentialClientEvaluation(ConfidentialClientEvaluationOnePageModel model) {
-	List<PieChart> pieCharts = new ArrayList<PieChart>();
+	mLog.info("start buildLastYearConfidentialClientEvaluation");
+	 List<PieChart> pieCharts = new ArrayList<PieChart>();
 	if (model.getLastYearLabel1() != null && model.getLastYearValue1() != null) {
 		//amount
 		try {
@@ -51,12 +52,10 @@ private static final Logger mLog = Logger.getLogger(ChartBuilder.class.getName()
 	 
  }
  
-private  static int parse(final String amount) throws ParseException {
-	    final NumberFormat format = NumberFormat.getNumberInstance( Locale.US);
-	    if (format instanceof DecimalFormat) {
-	        ((DecimalFormat) format).setParseBigDecimal(true);
-	    }
-	    int convertedAmount = (Integer) format.parse(amount.replaceAll("[^\\d.,]",""));
+private  static int parse(String amount) throws ParseException {
+	   String stramount = amount.replace("$","");
+	   Double doubleAmount = Double.parseDouble(stramount);
+	    int convertedAmount = doubleAmount.intValue();
 	    mLog.info("Converted amount = [" + convertedAmount + "]");
 	    return convertedAmount;
 	}

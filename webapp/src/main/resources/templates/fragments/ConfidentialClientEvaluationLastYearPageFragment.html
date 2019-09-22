@@ -11,9 +11,10 @@
 		</div>
 
 		<div class="whiteGrad">
-		
-			<h1 class="text-center w3-text-black">Previous Year’s Media Allocation</h1>
-			
+
+			<h1 class="text-center w3-text-black">Previous Year’s Media
+				Allocation</h1>
+
 			<script type="text/javascript" th:inline="javascript">
                          /*<![CDATA[*/
                          google.charts.load("current", {packages:["corechart"]});
@@ -31,15 +32,15 @@
 				
                          var theList = [[${ConfidentialClientEvaluationOnePageLastYearChartModel}]]
                          for (i = 0; i < theList.length; i++) {
-			       if (i < theList.length) {
-				       ['/*[[${theList.label}]]*/', /*[[${theList.labelValue}]]*/],
-			       } else {
-				       ['/*[[${theList.label}]]*/', /*[[${theList.labelValue}]]*/]  
-			       }     
+			                if (i < theList.length) {
+				                ['/*[[${theList.label}]]*/', /*[[${theList.labelValue}]]*/],
+			               } else {
+				                  ['/*[[${theList.label}]]*/', /*[[${theList.labelValue}]]*/]  
+			               }     
 				
                          }//end of for loop
 				
-		       var options = {
+		               var options = {
                          title: 'My Daily Activities',
                          'width':900,
                          'height':800,
@@ -51,10 +52,10 @@
 				
                         /*]]>*/
                       </script>
-			
-			
-			
-			 <script type="text/javascript">
+
+
+
+			<script type="text/javascript">
       google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
@@ -78,27 +79,27 @@
        chart.draw(data, options);
       }
     </script>
-    <div id="piechart_3d" style="width: 900px; height: 800px;"></div>
-			
-			<div>
-				
-			<p>Copyright © 1984-2017 Executive Decision Systems, Inc. and The
-				Guld Resource Group, LLC. The data, formulas, and other content in
-				these materials are the property of Executive Decision Systems, Inc.
-				and The Guld Resource Group, LLC and are protected by copyright and
-				other intellectual property laws. No part of these materials may be
-				reproduced, distributed, or used in any way without a license
-				agreement or other written consent of The Guld Resource Group, LLC
-				permitting such use. All rights reserved. To report violations,
-				please call (804) 356-7006.</p>
-		</div>
-		<div class="w3-container d-print-none" style="padding-top: 2%;">
-			    <button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
-                 <a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
-                <button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
-		</div>
-	</div>
-	<!-- end of if statement -->
+			<div id="piechart_3d" style="width: 900px; height: 800px;"></div>
 
-</div>
-<!-- end of PresentedTofragment -->
+			<div>
+
+				<p>Copyright © 1984-2017 Executive Decision Systems, Inc. and
+					The Guld Resource Group, LLC. The data, formulas, and other content
+					in these materials are the property of Executive Decision Systems,
+					Inc. and The Guld Resource Group, LLC and are protected by
+					copyright and other intellectual property laws. No part of these
+					materials may be reproduced, distributed, or used in any way
+					without a license agreement or other written consent of The Guld
+					Resource Group, LLC permitting such use. All rights reserved. To
+					report violations, please call (804) 356-7006.</p>
+			</div>
+			<div class="w3-container d-print-none" style="padding-top: 2%;">
+				<button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
+				<a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
+				<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
+			</div>
+		</div>
+		<!-- end of if statement -->
+
+	</div>
+	<!-- end of PresentedTofragment -->
