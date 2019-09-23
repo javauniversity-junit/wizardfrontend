@@ -66,7 +66,7 @@
 				<div class="form-group">
 					<label for="secondLevelName">C. Equals gross profit per
 						average sale (A*B)</label> <input type="currency" class="form-control"
-						id="grossProfitPerSale" name="grossProfitPerSale" readonly
+						id="grossProfitPerSale" name="grossProfitPerSale" readonly tabindex="-1" 
 						th:value="${dataPageModel?.grossProfitPerSale}" 
 						data-type="currency"
 						pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
@@ -81,7 +81,7 @@
 				</div>
 				<div class="form-group">
 					<label for="averageCustomerValue">E. Equals the average
-						customer/client value per year (C*D)</label> <input readonly
+						customer/client value per year (C*D)</label> <input readonly tabindex="-1" 
 						name="averageCustomerValue" id="averageCustomerValue"
 						class="form-control"
 						
@@ -97,7 +97,7 @@
 					<label for="lifetimeValuePerCustomer">G. Equals the
 						lifetime value of one customer/client (E*F)</label> <input type="text"
 						class="form-control" id="lifetimeValuePerCustomer"
-						name="lifetimeValuePerCustomer" readonly 
+						name="lifetimeValuePerCustomer" readonly tabindex="-1"  
 						
 						th:value="${dataPageModel?.lifetimeValuePerCustomer}"
 						aria-describedby="lifetimeValuePerCustomer" />
@@ -109,12 +109,12 @@
 						pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 						id="monthlyInvestmentAverage"
 						th:value="${dataPageModelOther?.planAMonthly}"
-						name="monthlyInvestmentAverage" readonly/>
+						name="monthlyInvestmentAverage" readonly tabindex="-1" />
 				</div>
 				<div class="form-group">
 					<label for="prospectsNeededToBreakEven">I. Then monthly
 						customers/clients needed to break even (H/G)</label> <input
-						class="form-control" id="prospectsNeededToBreakEven" readonly 
+						class="form-control" id="prospectsNeededToBreakEven" readonly tabindex="-1"  
 						th:value="${dataPageModel?.prospectsNeededToBreakEven}"
 						name="prospectsNeededToBreakEven" />
 				</div>

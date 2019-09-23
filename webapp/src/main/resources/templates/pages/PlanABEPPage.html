@@ -76,7 +76,7 @@
 					<label for="planAProspectValue">D. Projected prospect value (A*B*C)</label> 
 					<input type="text"
 						th:value="${dataPageModel?.planAProspectValue}" 
-						class="form-control" id="planAProspectValue" readonly
+						class="form-control" id="planAProspectValue" readonly tabindex="-1" 
 						data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 						name="planAProspectValue" />
 				</div>
@@ -87,20 +87,20 @@
 					<input type="text"
 					    data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 						name="planAInvestment" id="planAInvestment"
-						class="form-control" readonly
+						class="form-control" readonly tabindex="-1" 
 					    th:value="${dataPageModelOther?.planAMonthly}" />
 						
 				</div>
 				<div class="form-group">
 					<label for="planAProspectsNeeded">F. Monthly prospects needed to pay for advertising investment (E/D)</label> 
-					   <input type="text" readonly
+					   <input type="text" readonly tabindex="-1" 
 						th:value="${dataPageModel?.planAProspectsNeeded}" class="form-control"
 						id="planAProspectsNeeded"  name="planAProspectsNeeded" />
 				</div>
 				<div class="form-group">
 					<label for="planAProspectSalesNeeded">G. Number of monthly sales needed to break even (F*C)</label> <input type="text"
 						class="form-control" id="planAProspectSalesNeeded"
-						name="planAProspectSalesNeeded" readonly 
+						name="planAProspectSalesNeeded" readonly tabindex="-1"  
 						th:value="${dataPageModel?.planAProspectSalesNeeded}"
 						aria-describedby="planAProspectSalesNeeded" oninput="calculate()" />
 				</div>
@@ -109,7 +109,7 @@
 					<input class="form-control" type="text"
 						id="planAGrossProfitOnSales"
 						th:value="${dataPageModel?.planAGrossProfitOnSales}"
-						name="planAGrossProfitOnSales" readonly/>
+						name="planAGrossProfitOnSales" readonly tabindex="-1" />
 				</div>
 				<div class="form-group">
 					<label for="planAMonths">I. Number of months to run in proposed marketing plan</label> 
@@ -121,7 +121,7 @@
 				<div class="form-group">
 					<label for="planAAdditionalGrossSales">J. Additional gross sales per year needed to break even (H*I)</label>
 					 <input type="text"
-						class="form-control" id="planAAdditionalGrossSales" readonly 
+						class="form-control" id="planAAdditionalGrossSales" readonly tabindex="-1"  
 						th:value="${dataPageModel?.planAAdditionalGrossSales}"
 						name="planAAdditionalGrossSales" />
 				</div>

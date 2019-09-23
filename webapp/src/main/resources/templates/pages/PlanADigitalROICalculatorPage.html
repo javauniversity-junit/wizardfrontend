@@ -59,7 +59,7 @@
 				</div>
 				<div class="form-group">
 					<label for="planAClosingPctNumber">C. Monthly Impressions (A/B * 1,000)</label> <input type="text" class="form-control"
-						id="planAClosingPctNumber" name="planAClosingPctNumber" readonly
+						id="planAClosingPctNumber" name="planAClosingPctNumber" readonly tabindex="-1" 
 						th:value="${dataPageModel?.planAClosingPctNumber}" 
 						aria-describedby="planAClosingPctNumber" />
 				</div>
@@ -74,13 +74,13 @@
 				</div>
 				</div>
 				<div class="form-group">
-					<label for="planAMonthlyClicks">E. Monthly # Clicks (C*D)</label> <input readonly
+					<label for="planAMonthlyClicks">E. Monthly # Clicks (C*D)</label> <input readonly tabindex="-1" 
 						name="planAMonthlyClicks" id="planAMonthlyClicks"
 						class="form-control"
 						th:value="${dataPageModel?.planAMonthlyClicks}" />
 				</div>
 				<div class="form-group">
-					<label for="planACostPerClicks">F. Cost Per Clicks (A/E)</label> <input readonly
+					<label for="planACostPerClicks">F. Cost Per Clicks (A/E)</label> <input readonly tabindex="-1" 
 						th:value="${dataPageModel?.planACostPerClicks}" class="form-control"
 						id="planACostPerClicks" name="planACostPerClicks" />
 				</div>
@@ -96,7 +96,7 @@
 				</div>
 				</div>
 				<div class="form-group">
-					<label for="planAMonthlyConversions">H. Monthly Number of Conversions (E*G)</label> <input readonly
+					<label for="planAMonthlyConversions">H. Monthly Number of Conversions (E*G)</label> <input readonly tabindex="-1" 
 						class="form-control" 
 						id="planAMonthlyConversions"
 						th:value="${dataPageModel?.planAMonthlyConversions}"
@@ -104,7 +104,7 @@
 				</div>
 				<div class="form-group">
 					<label for="planACostPerConversion">I. Cost Per Conversion (A/H)</label> <input
-						class="form-control" id="planACostPerConversion" readonly 
+						class="form-control" id="planACostPerConversion" readonly tabindex="-1"  
 						th:value="${dataPageModel?.planACostPerConversion}"
 						name="planACostPerConversion" />
 				</div>
@@ -119,13 +119,13 @@
 				
 				<div class="form-group">
 					<label for="planAMonthlyGrossProfit">K. Monthly Gross Profit Generated from all Conversions (H*J)</label> <input
-						class="form-control" id="planAMonthlyGrossProfit" readonly 
+						class="form-control" id="planAMonthlyGrossProfit" readonly tabindex="-1"  
 						th:value="${dataPageModel?.planAMonthlyGrossProfit}"
 						name="planAMonthlyGrossProfit" />
 				</div>				
 				<div class="form-group">
 					<label for="planAMonthlyROID">L. $ Monthly Return on Investment (K-A)</label> <input
-						class="form-control" id="planAMonthlyROID" readonly 
+						class="form-control" id="planAMonthlyROID" readonly tabindex="-1"  
 						th:value="${dataPageModel?.planAMonthlyROID}"
 						name="planAMonthlyROID" />
 				</div>
@@ -133,7 +133,7 @@
 					<label for="planAMonthlyROIP">M. % Monthly Return on Investment (L/A)</label> 
 					<div class="input-group mb-3">
 					<input
-						class="form-control" id="planAMonthlyROIP" readonly 
+						class="form-control" id="planAMonthlyROIP" readonly tabindex="-1"  
 						th:value="${dataPageModel?.planAMonthlyROIP}"
 						name="planAMonthlyROIP" />
 						<div class="input-group-append"><span class="input-group-text">%</span></div>		
