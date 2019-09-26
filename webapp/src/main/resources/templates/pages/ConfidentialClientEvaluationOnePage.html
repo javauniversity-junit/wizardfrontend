@@ -50,59 +50,83 @@
 				</div>
 				<div class="row media">
 					<div class="col-6">
-						<input type="text" ng-change="change()" ng-model="lastYearLabel1" maxlength="50"
-							class="form-control" id="lastYearLabel1" name="lastYearLabel1" />
+						<input type="text" th:value="${dataPageModel?.lastYearLabel1}" maxlength="50"
+							class="form-control"  id="lastYearLabel1" name="lastYearLabel1"
+							oninput="changeProposed(document.getElementById('lastYearLabel1'),document.getElementById('proposedLabel1'))"
+							 />
 					</div>
 					<div class="col-6">
-						<input type="text" ng-change="change()" class="form-control" id="lastYearValue1"
+						<input type="text" 
+ 					        th:value="${dataPageModel?.lastYearValue1}"
+ 					        oninput="changeProposed(document.getElementById('lastYearValue1'),document.getElementById('proposedValue1'))"
+						
+                            class="form-control" id="lastYearValue1"
 							maxlength="50" ng-model="lastYearValue1" data-type="currency"
 							pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue1" />
 					</div>
 				</div>
 				<div class="row media">
 					<div class="col-6">
-						<input maxlength="50" ng-change="change()" type="text" ng-model="lastYearLabel2"
+						<input maxlength="50" th:value="${dataPageModel?.lastYearLabel2}" type="text" 	
+						oninput="changeProposed(document.getElementById('lastYearLabel2'),document.getElementById('proposedLabel2'))"
+						
 							class="form-control" id="lastYearLabel2" name="lastYearLabel2" />
 					</div>
 					<div class="col-6">
-						<input maxlength="50" ng-change="change()" type="text" class="form-control"
-							id="lastYearValue2" ng-model="lastYearValue2"
+						<input maxlength="50" type="text" class="form-control"
+							id="lastYearValue2" 
+							 th:value="${dataPageModel?.lastYearValue2}"
+ 					        oninput="changeProposed(document.getElementById('lastYearValue2'),document.getElementById('proposedValue2'))"
+						
 							data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 							name="lastYearValue2" />
 					</div>
 				</div>
 				<div class="row media">
 					<div class="col-6">
-						<input maxlength="50" ng-change="change()" type="text" ng-model="lastYearLabel3"
+						<input maxlength="50" th:value="${dataPageModel?.lastYearLabel3}" type="text" oninput="changeProposed(document.getElementById('lastYearLabel3'),document.getElementById('proposedLabel3'))"
+						
 							class="form-control" id="lastYearLabel3" name="lastYearLabel3" />
 					</div>
 					<div class="col-6">
-						<input maxlength="50" ng-change="change()" type="text" class="form-control"
-							id="lastYearValue3" ng-model="lastYearValue3"
+						<input maxlength="50" type="text" class="form-control"
+							id="lastYearValue3" 
+							 th:value="${dataPageModel?.lastYearValue3}"
+ 					        oninput="changeProposed(document.getElementById('lastYearValue3'),document.getElementById('proposedValue3'))"
+						
 							data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 							name="lastYearValue3" />
 					</div>
 				</div>
 				<div class="row media">
 					<div class="col-6">
-						<input maxlength="50" ng-change="change()" type="text" ng-model="lastYearLabel4"
+						<input maxlength="50" 
+						 oninput="changeProposed(document.getElementById('lastYearLabel4'),document.getElementById('proposedLabel4'))"
+						 type="text" th:value="${dataPageModel?.lastYearLabel4}"
 							class="form-control" id="lastYearLabel4" name="lastYearLabel4" />
 					</div>
 					<div class="col-6">
-						<input maxlength="50" ng-change="change()" type="text" class="form-control"
-							id="lastYearValue4" ng-model="lastYearValue4"
+						<input maxlength="50"  type="text" class="form-control"
+							id="lastYearValue4" 
+							 th:value="${dataPageModel?.lastYearValue4}"
+ 					        oninput="changeProposed(document.getElementById('lastYearValue4'),document.getElementById('proposedValue4'))"
+						
 							data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 							name="lastYearValue4" />
 					</div>
 				</div>
 				<div class="row media">
 					<div class="col-6">
-						<input maxlength="50" ng-change="change()" type="text" ng-model="lastYearLabel5"
+						<input maxlength="50" th:value="${dataPageModel?.lastYearLabel5}" type="text" 
+						oninput="changeProposed(document.getElementById('lastYearLabel5'),document.getElementById('proposedLabel5'))"
 							class="form-control" id="lastYearLabel5" name="lastYearLabel5" />
 					</div>
 					<div class="col-6">
-						<input maxlength="50" ng-change="change()" type="text" class="form-control"
-							id="lastYearValue5" ng-model="lastYearValue5"
+						<input maxlength="50"  type="text" class="form-control"
+							id="lastYearValue5" 
+							 th:value="${dataPageModel?.lastYearValue5}"
+ 					        oninput="changeProposed(document.getElementById('lastYearValue5'),document.getElementById('proposedValue5'))"
+						
 							data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 							name="lastYearValue5" />
 					</div>
@@ -110,47 +134,70 @@
 				
 				<div class="row media">
 					<div class="col-6">
-						<input type="text" ng-change="change()" ng-model="lastYearLabel6" class="form-control"
+						<input type="text" th:value="${dataPageModel?.lastYearLabel6}"
+						oninput="changeProposed(document.getElementById('lastYearLabel6'),document.getElementById('proposedLabel6'))"
+                            class="form-control"
 							id="lastYearLabel6" name="lastYearLabel6" />
 					</div>
 					<div class="col-6">
-						<input type="text" ng-change="change()" class="form-control" id="lastYearValue6"
-							ng-model="lastYearValue6" data-type="currency"
+						<input type="text" class="form-control" id="lastYearValue6"
+							data-type="currency"
+							 th:value="${dataPageModel?.lastYearValue6}"
+ 					        oninput="changeProposed(document.getElementById('lastYearValue6'),document.getElementById('proposedValue6'))"
+						
 							pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue6" />
 					</div>
 				</div>
 				
 					<div class="row media">
 					<div class="col-6">
-						<input type="text" ng-change="change()" ng-model="lastYearLabel7" class="form-control"
+						<input type="text" th:value="${dataPageModel?.lastYearLabel7}" 
+							oninput="changeProposed(document.getElementById('lastYearLabel7'),document.getElementById('proposedLabel7'))"
+                   class="form-control"
 							id="lastYearLabel7" name="lastYearLabel7" />
 					</div>
 					<div class="col-6">
-						<input type="text" ng-change="change()" class="form-control" id="lastYearValue7"
-							ng-model="lastYearValue7" data-type="currency"
+						<input type="text"  class="form-control" id="lastYearValue7"
+						 th:value="${dataPageModel?.lastYearValue7}"
+ 					        oninput="changeProposed(document.getElementById('lastYearValue7'),document.getElementById('proposedValue7'))"
+						
+							 data-type="currency"
 							pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue7" />
 					</div>
 				</div>
 				
 				<div class="row media">
 					<div class="col-6">
-						<input type="text"ng-change="change()" ng-model="lastYearLabel8" class="form-control"
+						<input type="text" th:value="${dataPageModel?.lastYearLabel8}" 
+							oninput="changeProposed(document.getElementById('lastYearLabel8'),document.getElementById('proposedLabel8'))"
+                   
+						class="form-control"
 							id="lastYearLabel8" name="lastYearLabel8" />
 					</div>
 					<div class="col-6">
-						<input type="text" ng-change="change()" class="form-control" id="lastYearValue8"
-							ng-model="lastYearValue8" data-type="currency"
+						<input type="text"  class="form-control" id="lastYearValue8"
+							 data-type="currency"
+							  th:value="${dataPageModel?.lastYearValue8}"
+ 					        oninput="changeProposed(document.getElementById('lastYearValue8'),document.getElementById('proposedValue8'))"
+						
 							pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue8" />
 					</div>
 				</div>
 				<div class="row media">
 					<div class="col-6">
-						<input type="text" ng-change="change()" ng-model="lastYearLabel9" class="form-control"
+						<input type="text" th:value="${dataPageModel?.lastYearLabel9}"  
+						
+	                       oninput="changeProposed(document.getElementById('lastYearLabel9'),document.getElementById('proposedLabel9'))"
+                   
+                            class="form-control"
 							id="lastYearLabel9" name="lastYearLabel9" />
 					</div>
 					<div class="col-6">
-						<input type="text" ng-change="change()" class="form-control" id="lastYearValue9"
-							ng-model="lastYearValue9" data-type="currency"
+						<input type="text" class="form-control" id="lastYearValue9"
+							data-type="currency"
+							 th:value="${dataPageModel?.lastYearValue9}"
+ 					        oninput="changeProposed(document.getElementById('lastYearValue9'),document.getElementById('proposedValue9'))"
+						
 							pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="lastYearValue9" />
 					</div>
 				</div>			
@@ -335,81 +382,81 @@
 				</div>
 				<div class="row media">
 					<div class="col-6">
-						<input type="text" maxlength="50" value="{{lastYearLabel1}}"
-							class="form-control" ng-model="proposedLabel1" id="proposedLabel1" name="proposedLabel1" />
+						<input type="text" maxlength="50" th:value="${dataPageModel?.proposedLabel1}"
+							class="form-control"  id="proposedLabel1" name="proposedLabel1" />
 					</div>
 					<div class="col-6">
-						<input type="text" class="form-control" id="proposedValue1" ng-model="proposedValue1"
-							maxlength="50" value="{{lastYearValue1}}" data-type="currency"
+						<input type="text" class="form-control" id="proposedValue1" 
+							maxlength="50" th:value="${dataPageModel?.proposedValue1}" data-type="currency"
 							pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="proposedValue1" />
 					</div>
 				</div>
 				<div class="row media">
 					<div class="col-6">
-						<input type="text" value="{{lastYearLabel2}}" maxlength="50" ng-model="proposedLabel2"
+						<input type="text" th:value="${dataPageModel?.proposedLabel2}" maxlength="50" 
 							class="form-control" id="proposedLabel2" name="proposedLabel2" />
 					</div>
 					<div class="col-6">
-						<input type="text" class="form-control" id="proposedValue2" ng-model="proposedValue2"
-							value="{{lastYearValue2}}" data-type="currency"
+						<input type="text" class="form-control" id="proposedValue2" 
+							th:value="${dataPageModel?.proposedValue2}" data-type="currency"
 							pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="proposedValue2" />
 					</div>
 				</div>
 				<div class="row media">
 					<div class="col-6">
-						<input type="text" maxlength="50" value="{{lastYearLabel3}}" ng-model="proposedLabel3"
+						<input type="text" maxlength="50" th:value="${dataPageModel?.proposedLabel3}"
 							class="form-control" id="proposedLabel3" name="proposedLabel3" />
 					</div>
 					<div class="col-6">
-						<input type="text" class="form-control" maxlength="50" ng-model="proposedValue3"
-							id="proposedValue3" value="{{lastYearValue3}}"
+						<input type="text" class="form-control" maxlength="50" 
+							id="proposedValue3" th:value="${dataPageModel?.proposedValue3}"
 							data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 							name="proposedValue3" />
 					</div>
 				</div>
 				<div class="row media">
 					<div class="col-6">
-						<input type="text" value="{{lastYearLabel4}}" maxlength="50" ng-model="proposedLabel4"
+						<input type="text" th:value="${dataPageModel?.proposedLabel4}" maxlength="50" 
 							class="form-control" id="proposedLabel4" name="proposedLabel4" />
 					</div>
 					<div class="col-6">
-						<input type="text" class="form-control" id="proposedValue4" ng-model="proposedValue4"
-							maxlength="50" value="{{lastYearValue4}}" data-type="currency"
+						<input type="text" class="form-control" id="proposedValue4" 
+							maxlength="50" th:value="${dataPageModel?.proposedValue4}" data-type="currency"
 							pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="proposedValue4" />
 					</div>
 				</div>
 				<div class="row media">
 					<div class="col-6">
-						<input maxlength="50" type="text" value="{{lastYearLabel5}}" ng-model="proposedLabel5"
+						<input maxlength="50" type="text" th:value="${dataPageModel?.proposedLabel5}"
 							class="form-control" id="proposedLabel5" name="proposedLabel5" />
 					</div>
 					<div class="col-6">
-						<input maxlength="50" type="text" class="form-control" ng-model="proposedValue5"
-							id="proposedValue5" value="{{lastYearValue5}}"
+						<input maxlength="50" type="text" class="form-control" 
+							id="proposedValue5" th:value="${dataPageModel?.proposedValue5}"
 							data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 							name="proposedValue5" />
 					</div>
 				</div>
 				<div class="row media">
 					<div class="col-6">
-						<input type="text" value="{{lastYearLabel6}}" maxlength="50" ng-model="proposedLabel6"
+						<input type="text"  maxlength="50" th:value="${dataPageModel?.proposedLabel7}"
 							class="form-control" id="proposedLabel6" name="proposedLabel6" />
 					</div>
 					<div class="col-6">
-						<input type="text" class="form-control" maxlength="50" ng-model="proposedValue6"
-							id="proposedValue6" value="{{lastYearValue6}}"
+						<input type="text" class="form-control" maxlength="50" 
+							id="proposedValue6" th:value="${dataPageModel?.proposedValue6}"
 							data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 							name="proposedValue6" />
 					</div>
 				</div>
 					<div class="row media">
 					<div class="col-6">
-						<input type="text" value="{{lastYearLabel7}}" maxlength="50" ng-model="proposedLabel7"
+						<input type="text" maxlength="50" th:value="${dataPageModel?.proposedLabel7}"
 							class="form-control" id="proposedLabel7" name="proposedLabel7" />
 					</div>
 					<div class="col-6">
-						<input type="text" class="form-control" maxlength="50" ng-model="proposedValue7"
-							id="proposedValue7" value="{{lastYearValue7}}"
+						<input type="text" class="form-control" maxlength="50" 
+							id="proposedValue7" th:value="${dataPageModel?.proposedValue7}"
 							data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 							name="proposedValue7" />
 					</div>
@@ -418,12 +465,12 @@
 				
 				<div class="row media">
 					<div class="col-6">
-						<input type="text" value="{{lastYearLabel8}}" maxlength="50" ng-model="proposedLabel8"
+						<input type="text"  maxlength="50" th:value="${dataPageModel?.proposedLabel8}"
 							class="form-control" id="proposedLabel8" name="proposedLabel8" />
 					</div>
 					<div class="col-6">
-						<input type="text" class="form-control" maxlength="50" ng-model="proposedValue8"
-							id="proposedValue8" value="{{lastYearValue8}}"
+						<input type="text" class="form-control" maxlength="50" 
+							id="proposedValue8" th:value="${dataPageModel?.proposedValue8}"
 							data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 							name="proposedValue8" />
 					</div>
@@ -431,12 +478,12 @@
 				
 				<div class="row media">
 					<div class="col-6">
-						<input type="text" value="{{lastYearLabel9}}" maxlength="50" ng-model="proposedLabel9"
+						<input type="text" th:value="${dataPageModel?.proposedLabel9}" maxlength="50" 
 							class="form-control" id="proposedLabel9" name="proposedLabel9" />
 					</div>
 					<div class="col-6">
-						<input type="text" class="form-control" maxlength="50" ng-model="proposedValue9"
-							id="proposedValue9" value="{{lastYearValue9}}"
+						<input type="text" class="form-control" maxlength="50" 
+							id="proposedValue9" th:value="${dataPageModel?.proposedValue9}"
 							data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 							name="proposedValue9" />
 					</div>
@@ -602,193 +649,6 @@
 		});
 		/*]]>*/
 	</script>
-	
-	
-<script th:inline="javascript">
-              
-/*<![CDATA[*/
-var app = angular.module('myApp', []);
-     
-var lastYearLabel1 =/*[[${dataPageModel?.lastYearLabel1}]]*/ ;
-var lastYearValue1 =/*[[${dataPageModel?.lastYearValue1}]]*/ ;
-var lastYearLabel2 =/*[[${dataPageModel?.lastYearLabel2}]]*/ ;
-var lastYearValue2 =/*[[${dataPageModel?.lastYearValue2}]]*/ ;
-var lastYearLabel3 =/*[[${dataPageModel?.lastYearLabel3}]]*/ ;
-var lastYearValue3 =/*[[${dataPageModel?.lastYearValue3}]]*/ ;
-var lastYearLabel4 =/*[[${dataPageModel?.lastYearLabel4}]]*/ ;
-var lastYearValue4 =/*[[${dataPageModel?.lastYearValue4}]]*/ ;
-var lastYearLabel5 =/*[[${dataPageModel?.lastYearLabel5}]]*/ ;
-var lastYearValue5 =/*[[${dataPageModel?.lastYearValue5}]]*/ ;
-var lastYearLabel6 =/*[[${dataPageModel?.lastYearLabel6}]]*/ ;
-var lastYearValue6 =/*[[${dataPageModel?.lastYearValue6}]]*/ ;
-
-var lastYearLabel7 =/*[[${dataPageModel?.lastYearLabel7}]]*/ ;
-var lastYearValue7 =/*[[${dataPageModel?.lastYearValue7}]]*/ ;
-
-var lastYearLabel8 =/*[[${dataPageModel?.lastYearLabel8}]]*/ ;
-var lastYearValue8 =/*[[${dataPageModel?.lastYearValue8}]]*/ ;
-
-var lastYearLabel9 =/*[[${dataPageModel?.lastYearLabel9}]]*/ ;
-var lastYearValue9 =/*[[${dataPageModel?.lastYearValue9}]]*/ ;
-
-
-var proposedLabel1 = /*[[${dataPageModel?.proposedLabel1}]]*/ '';
-var proposedValue1 = /*[[${dataPageModel?.proposedValue1}]]*/ '';
-var proposedLabel2 = /*[[${dataPageModel?.proposedLabel2}]]*/ '';
-var proposedValue2 = /*[[${dataPageModel?.proposedValue2}]]*/ '';	
-
-var proposedLabel3 = /*[[${dataPageModel?.proposedLabel3}]]*/ '';
-var proposedValue3 = /*[[${dataPageModel?.proposedValue3}]]*/ '';
-var proposedLabel4 = /*[[${dataPageModel?.proposedLabel4}]]*/ '';
-var proposedValue4 = /*[[${dataPageModel?.proposedValue4}]]*/ '';	
-
-var proposedLabel5 = /*[[${dataPageModel?.proposedLabel5}]]*/ '';
-var proposedValue5 = /*[[${dataPageModel?.proposedValue5}]]*/ '';
-var proposedLabel6 = /*[[${dataPageModel?.proposedLabel6}]]*/ '';
-var proposedValue6 = /*[[${dataPageModel?.proposedValue6}]]*/ '';	
-
-
-var proposedLabel7 = /*[[${dataPageModel?.proposedLabel7}]]*/ '';
-var proposedValue7 = /*[[${dataPageModel?.proposedValue7}]]*/ '';
-
-var proposedLabel8 = /*[[${dataPageModel?.proposedLabel8}]]*/ '';
-var proposedValue8 = /*[[${dataPageModel?.proposedValue8}]]*/ '';
-
-var proposedLabel9 = /*[[${dataPageModel?.proposedLabel9}]]*/ '';
-var proposedValue9 = /*[[${dataPageModel?.proposedValue9}]]*/ '';
-
-
-	
-console.log ('lastYearLabel1 ' + lastYearLabel1);
-app.controller('myCtrl', function($scope) {
-	
-	if (lastYearLabel1 != null)
-        $scope.lastYearLabel1 = lastYearLabel1;
-
-	if (lastYearValue1 != null) 
-		$scope.lastYearValue1=lastYearValue1;
-	
-	if (lastYearLabel2 != null) 
-		$scope.lastYearLabel2 = lastYearLabel2;
-	if (lastYearValue2 != null) 
-		$scope.lastYearValue2=lastYearValue2;
-	
-	if (lastYearLabel3 != null) 
-		$scope.lastYearLabel3 = lastYearLabel3;
-	if (lastYearValue3 != null) 
-		$scope.lastYearValue3=lastYearValue3;
-	
-	if (lastYearLabel4 != null) 
-		$scope.lastYearLabel4 = lastYearLabel4;
-	if (lastYearValue4 != null) 
-		$scope.lastYearValue4=lastYearValue4;
-	
-	if (lastYearLabel5 != null) 
-		$scope.lastYearLabel5 = lastYearLabel5;
-	if (lastYearValue5 != null) 
-		$scope.lastYearValue5=lastYearValue5;
-	
-	if (lastYearLabel6 != null) 
-		$scope.lastYearLabel6 = lastYearLabel6;
-	if (lastYearValue6 != null) 
-		$scope.lastYearValue6=lastYearValue6;
-	
-	if (lastYearLabel7 != null) 
-		$scope.lastYearLabel7 = lastYearLabel7;
-	if (lastYearValue7 != null) 
-		$scope.lastYearValue7=lastYearValue7;
-	
-	if (lastYearLabel8 != null) 
-		$scope.lastYearLabel8 = lastYearLabel8;
-	if (lastYearValue8 != null) 
-		$scope.lastYearValue8=lastYearValue8;
-	
-	if (lastYearLabel9 != null) 
-		$scope.lastYearLabel9 = lastYearLabel9;
-	if (lastYearValue9 != null) 
-		$scope.lastYearValue9=lastYearValue9;
-	
-	$scope.change= function () {
-		$scope.proposedLabel1 = $scope.lastYearLabel1;
-		$scope.proposedLabel2 = $scope.lastYearLabel2;
-		$scope.proposedLabel3 = $scope.lastYearLabel3;
-		$scope.proposedLabel4 = $scope.lastYearLabel4;
-		$scope.proposedLabel5 = $scope.lastYearLabel5;
-		$scope.proposedLabel6 = $scope.lastYearLabel6;
-		$scope.proposedLabel7 = $scope.lastYearLabel7;
-		$scope.proposedLabel8 = $scope.lastYearLabel8;
-		$scope.proposedLabel9 = $scope.lastYearLabel9;
-		
-		$scope.proposedValue1 = $scope.lastYearValue1;
-		$scope.proposedValue2 = $scope.lastYearValue2;
-		$scope.proposedValue3 = $scope.lastYearValue3;
-		$scope.proposedValue4 = $scope.lastYearValue4;
-		$scope.proposedValue5 = $scope.lastYearValue5;
-		$scope.proposedValue6 = $scope.lastYearValue6;
-		$scope.proposedValue7 = $scope.lastYearValue7;
-		$scope.proposedValue8 = $scope.lastYearValue8;
-		$scope.proposedValue9 = $scope.lastYearValue9;
-		//recalculate
-		totalRow();
-		
-	}
-	
-});
-
-
-
-
-
-
- 
-if (proposedLabel1 != null) 
-	document.getElementById("proposedValue1").value  = proposedLabel1;
-if (proposedValue1 != null) 	
-	document.getElementById("proposedValue1").value = proposedValue1;
-if (proposedLabel2 != null) 	
-	document.getElementById("proposedLabel2").value = proposedLabel2;
-if (proposedValue2 != null) 	
-	document.getElementById("proposedValue2").value =  proposedValue2;
-if (proposedLabel3 != null)       
-	document.getElementById("proposedLabel3").value = proposedLabel3;
-if (proposedValue3 != null) 	
-	document.getElementById("proposedValue3").value = proposedValue3;
-if (proposedLabel4 != null) 	
-	document.getElementById("proposedLabel4").value = proposedLabel4;
-if (proposedValue4 != null) 	
-	document.getElementById("proposedValue4").value = proposedValue4;
-if (proposedLabel5 != null) 
-	document.getElementById("proposedLabel5").value =  proposedLabel5;
-if (proposedValue5 != null) 	
-	document.getElementById("proposedValue5").value = proposedValue5;
-if (proposedLabel6!= null) 	
-	document.getElementById("proposedLabel6").value = proposedLabel6;
-if (proposedValue6 != null) 	
-	document.getElementById("proposedValue6").value = proposedValue6;	
-
-if (proposedLabel7 != null) 	
-	document.getElementById("proposedLabel7").value = proposedLabel7;
-if (proposedValue7 != null) 	
-	document.getElementById("proposedValue7").value = proposedValue7;
-
-if (proposedValue8 != null) 	
-	document.getElementById("proposedValue8").value = proposedValue8;
-	
-if (proposedLabel8 != null) 	
-	document.getElementById("proposedLabel8").value = proposedLabel8;
-
-if (proposedValue9 != null) 	
-	document.getElementById("proposedValue9").value = proposedValue9;
-if (proposedLabel9 != null) 	
-	document.getElementById("proposedLabel9").value = proposedLabel9;
-
-
-      /*]]>*/      
-            
-
-
-
-</script>
 	
 
 

@@ -1,3 +1,11 @@
+function changeProposed(lastYearValueObj,proposedObj) {
+ // var x = document.getElementById("myInput").value;
+ //x = this.value;
+if (proposedObj.value == "")
+          proposedObj.value =lastYearValueObj.value;
+ 
+}
+
 function calculateOne()
 {
 	var lastYearValue1 = document.getElementById("lastYearValue1").value;
