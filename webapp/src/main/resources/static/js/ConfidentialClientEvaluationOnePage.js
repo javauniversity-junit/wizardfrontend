@@ -29,24 +29,24 @@ function calculateOne()
 	var lastYearValue9= document.getElementById("lastYearValue9").value;
 	
 	console.log(" document.getElementById('proposedValue1').value = " + document.getElementById('proposedValue1').value);
-    if (document.getElementById('proposedValue1').value == null || document.getElementById('proposedValue1').value == "")
+   // if (document.getElementById('proposedValue1').value == null || document.getElementById('proposedValue1').value == "")
        document.getElementById('proposedValue1').value = lastYearValue1;
 	
-    if (document.getElementById('proposedValue2').value == null || document.getElementById('proposedValue2').value == "")
+   // if (document.getElementById('proposedValue2').value == null || document.getElementById('proposedValue2').value == "")
         document.getElementById('proposedValue2').value = lastYearValue2;
-    if (document.getElementById('proposedValue3').value == null || document.getElementById('proposedValue3').value == "")
+    //if (document.getElementById('proposedValue3').value == null || document.getElementById('proposedValue3').value == "")
         document.getElementById('proposedValue3').value = lastYearValue3;
-    if (document.getElementById('proposedValue4').value == null || document.getElementById('proposedValue4').value == "")
+   // if (document.getElementById('proposedValue4').value == null || document.getElementById('proposedValue4').value == "")
         document.getElementById('proposedValue4').value = lastYearValue4;
-    if (document.getElementById('proposedValue5').value == null || document.getElementById('proposedValue5').value == "")
+    //if (document.getElementById('proposedValue5').value == null || document.getElementById('proposedValue5').value == "")
         document.getElementById('proposedValue5').value = lastYearValue5;
-    if (document.getElementById('proposedValue6').value == null || document.getElementById('proposedValue6').value == "")
+    //if (document.getElementById('proposedValue6').value == null || document.getElementById('proposedValue6').value == "")
         document.getElementById('proposedValue6').value = lastYearValue6;
-    if (document.getElementById('proposedValue7').value == null || document.getElementById('proposedValue7').value == "")
+    //if (document.getElementById('proposedValue7').value == null || document.getElementById('proposedValue7').value == "")
         document.getElementById('proposedValue7').value = lastYearValue7;
-    if (document.getElementById('proposedValue8').value == null || document.getElementById('proposedValue8').value == "")
+    //if (document.getElementById('proposedValue8').value == null || document.getElementById('proposedValue8').value == "")
         document.getElementById('proposedValue8').value = lastYearValue8;
-    if (document.getElementById('proposedValue9').value == null || document.getElementById('proposedValue9').value == "")
+    //if (document.getElementById('proposedValue9').value == null || document.getElementById('proposedValue9').value == "")
         document.getElementById('proposedValue9').value = lastYearValue9;
  	 
     

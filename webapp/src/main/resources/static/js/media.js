@@ -6,51 +6,28 @@ var objs = [];
 function copyToOtherMonths(){
 	console.log("start copyToOtherMonths");
 	var jan = $('#jan').val();
-	 
-	if (!$('#feb').val() ) {
-		//Set
-        $('#feb').val(jan);
-	}
-	if (!$('#mar').val() ) {
-		//Set
+	 $('#feb').val(jan);
+	//Set
         $('#mar').val(jan);
-	}
-	if (!$('#apr').val() ) {
 		//Set
         $('#apr').val(jan);
-	}
-	if (!$('#may').val() ) {
 		//Set
         $('#may').val(jan);
-	}
-	if (!$('#jun').val() ) {
 		//Set
         $('#jun').val(jan);
-	}
-	if (!$('#jul').val() ) {
 		//Set
         $('#jul').val(jan);
-	}
-	if (!$('#aug').val()) {
 		//Set
         $('#aug').val(jan);
-	}
-	if (!$('#sep').val() ) {
 		//Set
         $('#sep').val(jan);
-	}
-	if (!$('#oct').val() ) {
 		//Set
         $('#oct').val(jan);
-	}
-	if (!$('#nov').val() ) {
 		//Set
         $('#nov').val(jan);
-	}
-	if (!$('#dec').val()) {
 		//Set
         $('#dec').val(jan);
-	}
+	
 	
 }
 function importPlanMediaA() {
@@ -377,8 +354,11 @@ function totalRow() {
 	 var total= 0 ;
 	 if (jan != null) {
 		 jan = jan.substring(1);
+		 console.info("jan before [" + jan + "]");
 		 jan = removeComma(jan);
+		 console.info("jan before [" + total + "]");
 		 total = total + Number(jan);
+		 console.info("jan after [" + total + "]");
 	 }
 	 //jan = jan.substring(1);
 	    var feb = document.getElementById("feb").value;
@@ -447,6 +427,7 @@ function totalRow() {
 			 dec = removeComma(dec);
 			 total = total + Number(dec);
 		 }	
+		 console.info("total [" + total + "]");
 	    total = CurrencyFormatted(total);
 	   
 	document.getElementById("totalRow").value = total;

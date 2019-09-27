@@ -41,11 +41,8 @@ function convertToNumberFromCurrency(currency)
 
 
 function removeComma(currency){
-	var position = currency.indexOf(",");
-	while(position > 0) {
-		currency  = currency.replace(",","");
-		position = currency.indexOf(",");
-	}
+	currency = currency.replace(/,/g, '');
+	
 	return currency;
 } 
 
