@@ -366,66 +366,78 @@ function totalRow() {
 			 feb = feb.substring(1);
 			 feb = removeComma(feb);;
 			 total = total + Number(feb);
+			 console.info("feb after [" + total + "]");
 		 }	      
 	    var mar = document.getElementById("mar").value;
 		 if (mar != null) {
 			 mar = mar.substring(1);
 			 mar = removeComma(mar);
 			 total = total + Number(mar);
+			 console.info("mar after [" + total + "]");
 		 }	
 	    var apr = document.getElementById("apr").value;
 		 if (apr != null) {
 			 apr = apr.substring(1);
 			 apr = removeComma(apr);
 			 total = total + Number(apr);
+			 console.info("apr after [" + total + "]");
 		 }	
 	    var may = document.getElementById("may").value;
 		 if (may != null) {
 			 may = may.substring(1);
-			 may = may.replace(",","");
+			 may = removeComma(may);
 			 total = total + Number(may);
+			 
+			 console.info("may after [" + total + "]");
 		 }	
 	    var jun = document.getElementById("jun").value;
 		 if (jun != null) {
 			 jun = jun.substring(1);
 			 jun = removeComma(jun);
 			 total = total + Number(jun);
+			 console.info("jun after [" + total + "]");
 		 }	
 	    var jul = document.getElementById("jul").value;
 		 if (jul != null) {
 			 jul = jul.substring(1);
 			 jul = removeComma(jul);
 			 total = total + Number(jul);
+			 console.info("jul after [" + total + "]");
 		 }	
 	    var aug = document.getElementById("aug").value; 
 		 if (aug != null) {
 			 aug = aug.substring(1);
 			 aug = removeComma(aug);
 			 total = total + Number(aug);
+			 console.info("aug after [" + total + "]");
 		 }	
 	    var sep = document.getElementById("sep").value;
 		 if (sep != null) {
 			 sep = sep.substring(1);
 			 sep = removeComma(sep);
 			 total = total + Number(sep);
+			 console.info("sep after [" + total + "]");
 		 }	
 	    var oct = document.getElementById("oct").value;
 		 if (oct != null) {
 			 oct = oct.substring(1);
 			 oct = removeComma(oct);
 			 total = total + Number(oct);
+			 console.info("oct after [" + total + "]");
 		 }	
 	    var nov = document.getElementById("nov").value;
 		 if (nov != null) {
 			 nov = nov.substring(1);
 			 nov = removeComma(nov);
 			 total = total + Number(nov);
+			 console.info("nov after [" + total + "]");
 		 }	
 	    var dec = document.getElementById("dec").value;
 		 if (dec != null) {
 			 dec = dec.substring(1);
 			 dec = removeComma(dec);
 			 total = total + Number(dec);
+			 console.info("dec after [" + total + "]");
 		 }	
 		 console.info("total [" + total + "]");
 	    total = CurrencyFormatted(total);
