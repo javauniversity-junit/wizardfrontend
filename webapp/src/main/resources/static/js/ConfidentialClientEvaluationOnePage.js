@@ -320,6 +320,42 @@ function totalRow() {
 	calculateTwo();
 	//document.getElementById("totalRow").value = total;
 }
+var arrayChartDataPoint= [];
+class ChartDataPoint {
+    constructor(name, value) {
+        this.name = name;
+        this.value = value;
+    }
+}
+
+function addChartDataPoint (name, value) {
+              let x = new ChartDataPoint(name,value); 
+	      arrayChartDataPoint.push(x);
+   
+}
+// Load the Visualization API and the corechart package.
+ google.charts.load('current', {'packages':['corechart']});
+
+
+ // Set a callback to run when the Google Visualization API is loaded.
+ google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+
+	
+	   var data = new google.visualization.DataTable();
+           data.addColumn('string', 'Topping');
+           data.addColumn('number', 'Slices');
+	
+	     for (i = 0; i < arrayClass.length; i++) {
+                   var name = name = arrayClass[i].name;
+                   value = arrayClass[i].value;
+                   data.addRow([name, value]);
+          
+        }//end of for
+}
+
+
+
 
 //call of initial page load
 totalRow();
