@@ -49,27 +49,27 @@
 					<div class="form-group">
 						<label for="firstTierBusiness">1st Tier Business (#1 in
 							market revenue)</label> <input
-							th:value="${dataPageModel?.firstTierBusiness}" type="text"
+							th:value="${dataPageModel?.firstTierBusiness}" type="text" onClick="this.setSelectionRange(0, this.value.length)"
 							maxlength="150" class="form-control" id="firstTierBusiness"
 							name="firstTierBusiness" aria-describedby="firstTierBusiness" oninput="calculate()"/>
 					</div>
 					<div class="form-group">
 						<label for="secondTierBusiness">2nd Tier Business (#2 in
-							market revenue)</label> <input type="text"
+							market revenue)</label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)"
 							th:value="${dataPageModel?.secondTierBusiness}" maxlength="150"
 							class="form-control" id="secondTierBusiness"
 							name="secondTierBusiness" oninput="calculate()"/>
 					</div>
 					<div class="form-group">
 						<label for="thirdTierBusiness">3rd Tier Business (#3 in
-							market revenue)</label> <input type="text"
+							market revenue)</label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)"
 							th:value="${dataPageModel?.thirdTierBusiness}"
 							class="form-control" id="thirdTierBusiness" maxlength="150"
 							name="thirdTierBusiness" />
 					</div>
 					<div class="form-group">
 						<label for="fourthTierBusiness">4th Tier Business (#4 or
-							smaller revenue in market)</label> <input type="text"
+							smaller revenue in market)</label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)"
 							th:value="${dataPageModel?.fourthTierBusiness}" maxlength="150"
 							class="form-control" id="fourthTierBusiness"
 							name="fourthTierBusiness" />
@@ -81,14 +81,14 @@
 							<div class="col-sm-auto">(A)</div>
 							<div class="col-5">
 							    
-								<input type="text" th:value="${dataPageModel?.competitionA}"
+								<input type="text" onClick="this.setSelectionRange(0, this.value.length)" th:value="${dataPageModel?.competitionA}"
 									class="form-control" id="competitionA" maxlength="150"
 									readonly tabindex="-1"  name="competitionA" />
 							</div>
 							<div class="col-sm-auto">(B)</div>
 							<div class="col-5">
 							    
-								<input type="text" th:value="${dataPageModel?.competitionB}"
+								<input type="text" onClick="this.setSelectionRange(0, this.value.length)" th:value="${dataPageModel?.competitionB}"
 									class="form-control" id="competitionB" maxlength="150"
 									readonly tabindex="-1"  name="competitionB" />
 							</div>
@@ -100,14 +100,14 @@
 						<div class="row">
 							<div class="col-sm-auto">(A)</div>
 							<div class="col-5">
-								<input type="text"
+								<input type="text" onClick="this.setSelectionRange(0, this.value.length)"
 									th:value="${dataPageModel?.competitionStrengthA}"
 									class="form-control" id="competitionStrengthA"
 									name="competitionStrengthA" />
 							</div>
 							<div class="col-sm-auto">(B)</div>
 							<div class="col-5">
-								<input type="text"
+								<input type="text" onClick="this.setSelectionRange(0, this.value.length)"
 									th:value="${dataPageModel?.competitionStrengthB}"
 									class="form-control" id="competitionStrengthB" maxlength="150"
 									name="competitionStrengthB" />
@@ -120,14 +120,14 @@
 						<div class="row">
 							<div class="col-sm-auto">(A)</div>
 							<div class="col-5">
-								<input type="text"
+								<input type="text" onClick="this.setSelectionRange(0, this.value.length)"
 									th:value="${dataPageModel?.competitionWeaknessA}"
 									class="form-control" id="competitionWeaknessA" maxlength="150"
 									name="competitionWeaknessA"/>
 							</div>
 							<div class="col-sm-auto">(B)</div>
 							<div class="col-5">
-								<input type="text"
+								<input type="text" onClick="this.setSelectionRange(0, this.value.length)"
 									th:value="${dataPageModel?.competitionWeaknessB}"
 									class="form-control" id="competitionWeaknessB" maxlength="150"
 									name="competitionWeaknessB" />

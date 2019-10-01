@@ -506,7 +506,7 @@
 
 						<div class="form-group">
 							<label for=compliments>7 a. What is the most
-								frequent compliment you get?</label> <input type="text"
+								frequent compliment you get?</label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)"
 								th:value="${dataPageModel?.compliments}" 
 								 class="form-control" id="compliments"
 								name="compliments" />
@@ -519,7 +519,7 @@
 
 						<div class="form-group">
 							<label for=complaint>7 b. What is the most
-								frequent complaint you get? </label> <input type="text"
+								frequent complaint you get? </label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)"
 								th:value="${dataPageModel?.complaint}" 
 								class="form-control" id="complaint" name="complaint" />
 						</div>
@@ -528,7 +528,7 @@
 						<div class="form-group">
 							<label for=marketingStrategy>8. What digital marketing
 								strategies are you currently utilizing? What are your goals and
-								how do you measure the effectiveness? </label> <input type="text"
+								how do you measure the effectiveness? </label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)"
 								th:value="${dataPageModel?.marketingStrategy}" 
 								class="form-control" id="marketingStrategy" name="marketingStrategy" />
 						</div>
@@ -537,7 +537,7 @@
 							<label for=socialStrategy>9. Do you have a social media strategy 
 								(i.e. Facebook, Google +, Twitter, Instagram, etc.)?  
 								If so, what are your goals and how do you measure the effectiveness?  
-							</label> <input type="text"
+							</label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)"
 								th:value="${dataPageModel?.socialStrategy}" 
 								class="form-control" id="socialStrategy" name="socialStrategy" />
 						</div>

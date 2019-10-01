@@ -75,7 +75,7 @@
 				</div>
 				</div>
 				<div class="form-group">
-					<label for="planBProspectValue">D. Projected prospect value (A*B*C)</label> <input type="text"
+					<label for="planBProspectValue">D. Projected prospect value (A*B*C)</label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)"
 						th:value="${dataPageModelOther?.planAProspectValue}" readonly tabindex="-1" 
 						class="form-control" id="planBProspectValue"
 						data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" 
@@ -94,7 +94,7 @@
 						id="planBProspectsNeeded" readonly tabindex="-1"  name="planBProspectsNeeded" />
 				</div>
 				<div class="form-group">
-					<label for="planBProspectSalesNeeded">G. Number of monthly sales needed to break even (F*C)</label> <input type="text"
+					<label for="planBProspectSalesNeeded">G. Number of monthly sales needed to break even (F*C)</label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)"
 						class="form-control" id="planBProspectSalesNeeded"
 						name="planBProspectSalesNeeded" readonly tabindex="-1"  
 						th:value="${dataPageModelOther?.planAProspectSalesNeeded}"
@@ -115,7 +115,7 @@
 				</div>
 				<div class="form-group">
 					<label for="planBAdditionalGrossSales">J. Additional gross sales per year needed to break even (H*I)</label> <input
-						class="form-control" id="planBAdditionalGrossSales" readonly tabindex="-1"  type="text" 
+						class="form-control" id="planBAdditionalGrossSales" readonly tabindex="-1"  type="text" onClick="this.setSelectionRange(0, this.value.length)" 
 						th:value="${dataPageModel?.planBAdditionalGrossSales}"
 						name="planBAdditionalGrossSales" />
 				</div>

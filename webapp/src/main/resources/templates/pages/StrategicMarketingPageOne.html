@@ -54,7 +54,8 @@
 						<div class="col-4">
 							<div class="form-group">
 								<label for="yearsInBusiness">1. How long has the client
-									been in business?</label> <input type="number" class="form-control"
+									been in business?</label> <input type="number" onClick="this.setSelectionRange(0, this.value.length)"
+									class="form-control"
 									id="yearsInBusiness"
 									th:value="${dataPageModel?.yearsInBusiness}"
 									name="yearsInBusiness" aria-describedby="yearsInBusinessName"
@@ -66,7 +67,8 @@
 								<label for="numberOfLocations">How many locations?</label> <input
 									type="number" th:value="${dataPageModel?.numberOfLocations}"
 									min="0" max="50" class="form-control" id="numberOfLocations"
-									name="numberOfLocations" />
+									name="numberOfLocations" 
+									onClick="this.setSelectionRange(0, this.value.length)"/>
 							</div>
 						</div>
 						<div class="col-4">
@@ -91,6 +93,7 @@
 							misconceptions consumers have about the business?</label>
 
 						<textarea id="misconceptions" name="misconceptions"
+						  onClick="this.setSelectionRange(0, this.value.length)"
 							class="form-control" rows="4" maxlength="350" cols="50"
 							th:text="${dataPageModel?.misconceptions}">
 							 
@@ -104,7 +107,8 @@
 
 						<textarea id="sellingAdvantages" name="sellingAdvantages"
 							class="form-control" rows="4" maxlength="350" cols="50"
-							th:text="${dataPageModel?.sellingAdvantages}">
+							th:text="${dataPageModel?.sellingAdvantages}"
+							onClick="this.setSelectionRange(0, this.value.length)" >
 							 
 							 
 							 </textarea>
@@ -118,7 +122,8 @@
 						<textarea id="companyNameProjectImage"
 							name="companyNameProjectImage" class="form-control" rows="4"
 							maxlength="350" cols="50"
-							th:text="${dataPageModel?.companyNameProjectImage}">
+							th:text="${dataPageModel?.companyNameProjectImage}"
+							onClick="this.setSelectionRange(0, this.value.length)">
 							 
 							 
 							 </textarea>
@@ -129,7 +134,7 @@
 
 							<div class="form-group">
 								<label for="currentCompanySlogan">5. Company
-									Slogan:</label> <input type="text" class="form-control"
+									Slogan:</label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)" class="form-control"
 									id="currentCompanySlogan" name="currentCompanySlogan"
 									th:value="${dataPageModel?.currentCompanySlogan}"
 									maxlength="150" />

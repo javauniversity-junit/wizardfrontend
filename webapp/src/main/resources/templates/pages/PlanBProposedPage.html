@@ -50,7 +50,7 @@
 					<div class="form-group">
 						<label for="planACity">A. What market/city is the client
 							going to dominate?</label> <input th:value="${dataPageModel?.planACity}"
-							type="text" class="form-control" id="planACity" name="planACity"
+							type="text" onClick="this.setSelectionRange(0, this.value.length)" class="form-control" id="planACity" name="planACity"
 							aria-describedby="planACity" />
 					</div>
 					<div class="form-group">

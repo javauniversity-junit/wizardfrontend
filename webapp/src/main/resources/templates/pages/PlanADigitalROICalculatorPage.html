@@ -45,7 +45,7 @@
 				</legend>
 				<div class="form-group">
 					<label for="planAMonthlyDigitalInvestment">A. Monthly Digital Investment</label> 
-					<input type="text" class="form-control"
+					<input type="text" onClick="this.setSelectionRange(0, this.value.length)" class="form-control"
 						id="planAMonthlyDigitalInvestment" 
 						th:value="${dataPageModel?.planAMonthlyDigitalInvestment}" 
 						data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
@@ -53,12 +53,12 @@
 				</div>
 				<div class="form-group">
 					<label for="planACostPerThousand">B. Cost Per Thousand (CPM)</label> <input
-						type="text" th:value="${dataPageModel?.planACostPerThousand}"
+						type="text" onClick="this.setSelectionRange(0, this.value.length)" th:value="${dataPageModel?.planACostPerThousand}"
 						 class="form-control" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 						id="planACostPerThousand" name="planACostPerThousand" />
 				</div>
 				<div class="form-group">
-					<label for="planAClosingPctNumber">C. Monthly Impressions (A/B * 1,000)</label> <input type="text" class="form-control"
+					<label for="planAClosingPctNumber">C. Monthly Impressions (A/B * 1,000)</label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)" class="form-control"
 						id="planAClosingPctNumber" name="planAClosingPctNumber" readonly tabindex="-1" 
 						th:value="${dataPageModel?.planAClosingPctNumber}" 
 						aria-describedby="planAClosingPctNumber" />
@@ -110,7 +110,7 @@
 				</div>
 				<div class="form-group">
 					<label for="planAProjectedGrossProfit">J. Projected Gross Profit Per Conversion ($100, $1,000, etc.)</label> 
-					<input type="text" data-type="currency" 
+					<input type="text" onClick="this.setSelectionRange(0, this.value.length)" data-type="currency" 
 					pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 						class="form-control" id="planAProjectedGrossProfit"
 						th:value="${dataPageModel?.planAProjectedGrossProfit}"

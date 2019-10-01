@@ -47,34 +47,34 @@
 					</legend>
 					<div class="form-group">
 						<label for="presentedTo">Presentation To</label> <input
-							th:value="${dataPageModel?.clientContactName}" type="text"
+							th:value="${dataPageModel?.clientContactName}" type="text" onClick="this.setSelectionRange(0, this.value.length)"
 							class="form-control" id="clientContactName"
 							name="clientContactName" maxlength="35"
 							aria-describedby="clientBusinessName"/>
 					</div>
 					<div class="form-group">
 						<label for="clientBusinessName">Business Name</label> <input
-							type="text" th:value="${dataPageModel?.clientBusinessName}"
+							type="text" onClick="this.setSelectionRange(0, this.value.length)" th:value="${dataPageModel?.clientBusinessName}"
 							 class="form-control" id="clientBusinessName" maxlength="35"
 							name="clientBusinessName"  />
 					</div>
 					<div class="form-group">
 						<label for="presentedById">Integrated Media Specialist
-							Name</label> <input type="text" maxlength="35"
+							Name</label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)" maxlength="35"
 							th:value="${dataPageModel?.portfolioManagerName}" 
 							class="form-control" id="portfolioManagerName"
 							name="portfolioManagerName" />
 					</div>
 					<div class="form-group">
 						<label for=portfolioPhoneNumber>Phone Number</label> <input
-							type="text" th:value="${dataPageModel?.portfolioPhoneNumber}"
+							type="text" onClick="this.setSelectionRange(0, this.value.length)" th:value="${dataPageModel?.portfolioPhoneNumber}"
 							required class="form-control input-medium bfh-phone"
 							data-format="+1 (ddd) ddd-dddd" id="portfolioPhoneNumber"
 							name="portfolioPhoneNumber" />
 					</div>
 					<div class="form-group">
 						<label for=portfolioPhoneNumber>Station/Media Group</label> <input
-							type="text" th:value="${dataPageModel?.station}" maxlength="35"
+							type="text" onClick="this.setSelectionRange(0, this.value.length)" th:value="${dataPageModel?.station}" maxlength="35"
 							class="form-control" id="station"
 							name="station" />
 					</div>

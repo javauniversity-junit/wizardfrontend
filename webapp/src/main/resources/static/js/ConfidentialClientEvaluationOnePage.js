@@ -1,8 +1,39 @@
+var canCopyValues = true;
 function changeProposed(lastYearValueObj,proposedObj) {
  // var x = document.getElementById("myInput").value;
  //x = this.value;
 //if (proposedObj.value == "")
           proposedObj.value =lastYearValueObj.value;
+ 
+}
+
+function canCopy(copy) {
+	canCopyValues = copy;
+}
+
+function setProposedValues() {
+	console.log("can copy " + canCopyValues);
+	if (canCopyValues) {
+	 // if (document.getElementById('proposedValue1').value == null || document.getElementById('proposedValue1').value == "")
+    document.getElementById('proposedValue1').value = document.getElementById("lastYearValue1").value;;
+	
+// if (document.getElementById('proposedValue2').value == null || document.getElementById('proposedValue2').value == "")
+     document.getElementById('proposedValue2').value = document.getElementById("lastYearValue2").value;;
+ //if (document.getElementById('proposedValue3').value == null || document.getElementById('proposedValue3').value == "")
+     document.getElementById('proposedValue3').value = document.getElementById("lastYearValue3").value;;
+// if (document.getElementById('proposedValue4').value == null || document.getElementById('proposedValue4').value == "")
+     document.getElementById('proposedValue4').value = document.getElementById("lastYearValue4").value;;
+ //if (document.getElementById('proposedValue5').value == null || document.getElementById('proposedValue5').value == "")
+     document.getElementById('proposedValue5').value = document.getElementById("lastYearValue5").value;;
+ //if (document.getElementById('proposedValue6').value == null || document.getElementById('proposedValue6').value == "")
+     document.getElementById('proposedValue6').value = document.getElementById("lastYearValue6").value;;
+ //if (document.getElementById('proposedValue7').value == null || document.getElementById('proposedValue7').value == "")
+     document.getElementById('proposedValue7').value = document.getElementById("lastYearValue7").value;;
+ //if (document.getElementById('proposedValue8').value == null || document.getElementById('proposedValue8').value == "")
+     document.getElementById('proposedValue8').value = document.getElementById("lastYearValue8").value;;
+ //if (document.getElementById('proposedValue9').value == null || document.getElementById('proposedValue9').value == "")
+     document.getElementById('proposedValue9').value = document.getElementById("lastYearValue9").value;;
+	}
  
 }
 
@@ -29,27 +60,7 @@ function calculateOne()
 	var lastYearValue9= document.getElementById("lastYearValue9").value;
 	
 	console.log(" document.getElementById('proposedValue1').value = " + document.getElementById('proposedValue1').value);
-   // if (document.getElementById('proposedValue1').value == null || document.getElementById('proposedValue1').value == "")
-       document.getElementById('proposedValue1').value = lastYearValue1;
-	
-   // if (document.getElementById('proposedValue2').value == null || document.getElementById('proposedValue2').value == "")
-        document.getElementById('proposedValue2').value = lastYearValue2;
-    //if (document.getElementById('proposedValue3').value == null || document.getElementById('proposedValue3').value == "")
-        document.getElementById('proposedValue3').value = lastYearValue3;
-   // if (document.getElementById('proposedValue4').value == null || document.getElementById('proposedValue4').value == "")
-        document.getElementById('proposedValue4').value = lastYearValue4;
-    //if (document.getElementById('proposedValue5').value == null || document.getElementById('proposedValue5').value == "")
-        document.getElementById('proposedValue5').value = lastYearValue5;
-    //if (document.getElementById('proposedValue6').value == null || document.getElementById('proposedValue6').value == "")
-        document.getElementById('proposedValue6').value = lastYearValue6;
-    //if (document.getElementById('proposedValue7').value == null || document.getElementById('proposedValue7').value == "")
-        document.getElementById('proposedValue7').value = lastYearValue7;
-    //if (document.getElementById('proposedValue8').value == null || document.getElementById('proposedValue8').value == "")
-        document.getElementById('proposedValue8').value = lastYearValue8;
-    //if (document.getElementById('proposedValue9').value == null || document.getElementById('proposedValue9').value == "")
-        document.getElementById('proposedValue9').value = lastYearValue9;
- 	 
-    
+  
     
     
     
@@ -318,6 +329,7 @@ function calculateTwo()
 function totalRow() {
 	calculateOne();
 	calculateTwo();
+	setProposedValues();
 	//document.getElementById("totalRow").value = total;
 }
 

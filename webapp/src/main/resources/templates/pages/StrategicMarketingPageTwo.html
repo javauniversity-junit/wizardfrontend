@@ -47,7 +47,7 @@
 
 					<div class="form-group">
 						<label for="yearsInBusiness">4. Who is the main
-							competition (A)?</label> <input type="text" class="form-control"
+							competition (A)?</label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)" class="form-control"
 							id="yearsInBusiness" th:value="${dataPageModel?.competitionA}"
 							name="competitionA" aria-describedby="competitionA"
 							maxlength="50" />
@@ -65,14 +65,14 @@
 
 
 						<label for="competitionStrengthA">What are their strengths
-							(A)?</label> <input type="text" id="competitionStrengthA"
+							(A)?</label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)" id="competitionStrengthA"
 							name="competitionStrengthA" class="form-control"
 							th:value="${dataPageModel?.competitionStrengthA}"
 							maxlength="50" />
 					</div>
 					<div class="form-group">
 						<label for="competitionStrengthB">What are their strengths
-							(B)?</label> <input type="text" id="competitionStrengthB"
+							(B)?</label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)" id="competitionStrengthB"
 							name="competitionStrengthB" class="form-control"
 							th:value="${dataPageModel?.competitionStrengthB}"
 							maxlength="50" />
@@ -81,14 +81,14 @@
 
 
 						<label for="competitionWeaknessA">What are their weaknesses?
-							(A)?</label> <input type="text" id="competitionWeaknessA"
+							(A)?</label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)" id="competitionWeaknessA"
 							name="competitionWeaknessA" class="form-control"
 							th:value="${dataPageModel?.competitionWeaknessA}"
 							maxlength="50" />
 					</div>
 					<div class="form-group">
 						<label for="competitionWeaknessB">What are their weaknesses?
-							(B)?</label> <input type="text" id="competitionWeaknessB"
+							(B)?</label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)" id="competitionWeaknessB"
 							name="competitionWeaknessB" class="form-control"
 							th:value="${dataPageModel?.competitionWeaknessB}"
 							maxlength="50" />
@@ -106,7 +106,7 @@
 					</div>
 						<div class="form-group">
 						<label for="currentCompanySlogan">Current Company Slogan:
-							(B)?</label> <input type="text" id="currentCompanySlogan"
+							(B)?</label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)" id="currentCompanySlogan"
 							name="currentCompanySlogan" class="form-control"
 							th:value="${dataPageModel?.currentCompanySlogan}"
 							maxlength="50" />

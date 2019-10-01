@@ -52,13 +52,13 @@
 					<legend>Top Level</legend>
 						<div class="form-group">
 							<label for="topLevelName">Name</label> <input
-								type="text" class="form-control" id="topLevelName"
+								type="text" onClick="this.setSelectionRange(0, this.value.length)" class="form-control" id="topLevelName"
 								th:value="${dataPageModel?.topLevelName}" maxlength="35"
 								name="topLevelName"  aria-describedby="topLevelName"/>
 						</div>
 						<div class="form-group">
 							<label for="topLevelTitle">Title</label> <input
-								type="text" 
+								type="text" onClick="this.setSelectionRange(0, this.value.length)" 
 								th:value="${dataPageModel?.topLevelTitle}"
 								class="form-control" id="topLevelTitle"
 								 name="topLevelTitle" />
@@ -70,14 +70,14 @@
 					<legend>2nd Level</legend>
 						<div class="form-group">
 							<label for="secondLevelName">Name</label> <input
-								type="text" class="form-control" id="secondLevelName"
+								type="text" onClick="this.setSelectionRange(0, this.value.length)" class="form-control" id="secondLevelName"
 								name="secondLevelName" maxlength="35"
 								th:value="${dataPageModel?.secondLevelName}"
 								aria-describedby="secondLevelName" />
 						</div>
 						<div class="form-group">
 							<label for="secondLevelTitle">Title</label> <input
-								type="text" th:value="${dataPageModel?.secondLevelTitle}"
+								type="text" onClick="this.setSelectionRange(0, this.value.length)" th:value="${dataPageModel?.secondLevelTitle}"
 								class="form-control" id="secondLevelTitle" maxlength="35"
 								name="secondLevelTitle" />
 						</div>
@@ -87,13 +87,13 @@
 					<legend>3rd Level</legend>
 						<div class="form-group">
 							<label for="thirdLevelName">Name</label> <input
-								type="text" class="form-control" id="thirdLevelName"
+								type="text" onClick="this.setSelectionRange(0, this.value.length)" class="form-control" id="thirdLevelName"
 								th:value="${dataPageModel?.thirdLevelName}" maxlength="35"
 								name="thirdLevelName" aria-describedby="thirdLevelName" />
 						</div>
 						<div class="form-group">
 							<label for="thirdLevelTitle">Title</label> <input
-								type="text"  maxlength="35"
+								type="text" onClick="this.setSelectionRange(0, this.value.length)"  maxlength="35"
 								th:value="${dataPageModel?.thirdLevelTitle}"
 								class="form-control" id="thirdLevelTitle"
 								name="thirdLevelTitle"  />
@@ -104,14 +104,14 @@
 					  <legend>4th Level</legend>
 						<div class="form-group">
 							<label for="fourthLevelName">Name</label> <input
-								type="text" class="form-control" id="fourthLevelName" maxlength="35"
+								type="text" onClick="this.setSelectionRange(0, this.value.length)" class="form-control" id="fourthLevelName" maxlength="35"
 								th:value="${dataPageModel?.fourthLevelName}"
 								name="fourthLevelName" 
 								aria-describedby="fourthLevelName"/>
 						</div>
 						<div class="form-group">
 							<label for="fourthLevelTitle">Title</label> <input
-								type="text" maxlength="35"
+								type="text" onClick="this.setSelectionRange(0, this.value.length)" maxlength="35"
 								th:value="${dataPageModel?.fourthLevelTitle}"
 								class="form-control" id="fourthLevelTitle"
 								name="fourthLevelTitle" />

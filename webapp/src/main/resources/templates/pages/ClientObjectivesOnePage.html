@@ -380,7 +380,7 @@
 								</label>
 							</div>
 							<div>
-								<input  maxlength="50" name="otherText" type="text" class="form-control input-medium"
+								<input  maxlength="50" name="otherText" type="text" onClick="this.setSelectionRange(0, this.value.length)" class="form-control input-medium"
 									th:value="${dataPageModel?.otherText}">
 							</div>
 
