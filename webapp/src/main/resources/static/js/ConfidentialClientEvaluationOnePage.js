@@ -333,12 +333,7 @@ function addChartDataPoint (name, value) {
 	      arrayChartDataPoint.push(x);
    
 }
-// Load the Visualization API and the corechart package.
- google.charts.load('current', {'packages':['corechart']});
 
-
- // Set a callback to run when the Google Visualization API is loaded.
- google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
 
 	
@@ -346,9 +341,9 @@ function drawChart() {
            data.addColumn('string', 'Topping');
            data.addColumn('number', 'Slices');
 	
-	     for (i = 0; i < arrayClass.length; i++) {
-                   var name = name = arrayClass[i].name;
-                   value = arrayClass[i].value;
+	     for (i = 0; i < arrayChartDataPoint.length; i++) {
+                   var name = arrayChartDataPoint[i].name;
+                   var value = arrayChartDataPoint[i].value;
                    data.addRow([name, value]);
           
         }//end of for
