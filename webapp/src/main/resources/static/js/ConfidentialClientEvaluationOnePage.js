@@ -332,6 +332,37 @@ function totalRow() {
 	setProposedValues();
 	//document.getElementById("totalRow").value = total;
 }
+var arrayChartDataPoint= [];
+class ChartDataPoint {
+    constructor(name, value) {
+        this.name = name;
+        this.value = value;
+    }
+}
+
+function addChartDataPoint (name, value) {
+              let x = new ChartDataPoint(name,value); 
+	      arrayChartDataPoint.push(x);
+   
+}
+
+function drawChart() {
+
+	
+	   var data = new google.visualization.DataTable();
+           data.addColumn('string', 'Topping');
+           data.addColumn('number', 'Slices');
+	
+	     for (i = 0; i < arrayChartDataPoint.length; i++) {
+                   var name = arrayChartDataPoint[i].name;
+                   var value = arrayChartDataPoint[i].value;
+                   data.addRow([name, value]);
+          
+        }//end of for
+}
+
+
+
 
 //call of initial page load
 totalRow();

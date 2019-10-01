@@ -2,6 +2,7 @@ function calculate()
 {
 	
 	var planAAverageSale = formatNumber(document.getElementById("planAAverageSale").value); // a
+	//var planAAverageSale = convertToNumberFromCurrency(document.getElementById("planAAverageSale").value); //a
 	//var planAAverageSale = document.getElementById("planAAverageSale").value; // a
 	var planAGrossMargin = document.getElementById("planAGrossMargin").value; // b
 	var planAClosingPct = document.getElementById("planAClosingPct").value; // c 
@@ -30,7 +31,8 @@ function calculate()
 	var planAMonths = convertIntToNumber(document.getElementById("planAMonths").value); // i
 	var planAAdditionalGrossSales = planAGrossProfitOnSales * planAMonths; // j = hi
 	
-	document.getElementById("planAAverageSale").value = FormatAmount(planAAverageSale);
+	//document.getElementById("planAAverageSale").value = FormatAmount(planAAverageSale);
+	document.getElementById("planAAverageSale").value = planAAverageSale;
 	document.getElementById("planAInvestment").value = FormatAmount(planAInvestment);
 	document.getElementById("planAProspectValue").value =  planAProspectValue;
 	document.getElementById("planAProspectsNeeded").value =  Math.round(planAProspectsNeeded * 10) / 10;
@@ -54,6 +56,18 @@ function FormatAmount(amount) {
 	if(s.indexOf('.') > 0) { s = s.substr(0,s.indexOf('.')); }
 	s = "$" + s.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	return s;
+}
+
+function convertToNumberFromCurrency(currency)
+{
+	if (currency == null) {
+		return 0;
+	}
+		
+	var convert = currency.substring(1);
+	convert = removeComma(convert);
+	convert = Number(convert);
+	return convert;
 }
 
 //initial
