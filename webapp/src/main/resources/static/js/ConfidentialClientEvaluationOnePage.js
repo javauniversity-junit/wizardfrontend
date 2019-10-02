@@ -7,6 +7,8 @@ function changeProposed(lastYearValueObj,proposedObj) {
  
 }
 
+
+//can copy values
 function canCopy(copy) {
 	canCopyValues = copy;
 }
