@@ -33,7 +33,7 @@
 
 			function addChartDataPoint (name, value) {
 				console.log("addChartDataPoint");
-				name = "'" + name +  "'";
+				//name = "'" + name +  "'";
 			          let x = new ChartDataPoint(name,value); 
 				      arrayChartDataPoint.push(x);
 			   
@@ -55,9 +55,9 @@
 			        }//end of for
 			        
 				     // Set chart options
-				        var options = {'title':'How Much Pizza I Ate Last Night',
-				                       'width':600,
-				                       'height':700};
+				        var options = {'title':'total',
+				                       'width':900,
+				                       'height':900};
 
 				        // Instantiate and draw our chart, passing in some options.
 				        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
