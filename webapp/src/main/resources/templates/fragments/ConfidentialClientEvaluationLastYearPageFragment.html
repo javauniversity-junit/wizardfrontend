@@ -15,6 +15,14 @@
 			<h1 class="text-center w3-text-black">Previous Year’s Media
 				Allocation</h1>
 			<script>
+			// Load the Visualization API and the corechart package.
+            google.charts.load('current', {'packages':['corechart']});
+
+
+           // Set a callback to run when the Google Visualization API is loaded.
+            google.charts.setOnLoadCallback(drawChart);
+           
+           
 			var arrayChartDataPoint= [];
 			class ChartDataPoint {
 			    constructor(name, value) {
@@ -24,14 +32,17 @@
 			}
 
 			function addChartDataPoint (name, value) {
-			              let x = new ChartDataPoint(name,value); 
+				console.log("addChartDataPoint");
+				name = "'" + name +  "'";
+			          let x = new ChartDataPoint(name,value); 
 				      arrayChartDataPoint.push(x);
 			   
 			}
 
 			function drawChart() {
 
-				
+				   console.log("drawChart");
+				   console.log("arrayChartDataPoint.length " + arrayChartDataPoint.length);
 				   var data = new google.visualization.DataTable();
 			           data.addColumn('string', 'Topping');
 			           data.addColumn('number', 'Slices');
@@ -42,6 +53,15 @@
 			                   data.addRow([name, value]);
 			          
 			        }//end of for
+			        
+				     // Set chart options
+				        var options = {'title':'How Much Pizza I Ate Last Night',
+				                       'width':600,
+				                       'height':700};
+
+				        // Instantiate and draw our chart, passing in some options.
+				        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+				        chart.draw(data, options);
 			}
 
 
@@ -53,23 +73,18 @@
 
 				/*[# th:each="chartData : ${ConfidentialClientEvaluationOnePageLastYearChartModel}"]*/
 
-					addChartDataPoint.addRow([/*[[${chartData.labelValue}]]*/, /*[[${chartData.labelValue}]]*/]); // Add a row with a string and a date value.
+					addChartDataPoint(/*[[${chartData.label}]]*/, /*[[${chartData.labelValue}]]*/); // Add a row with a string and a date value.
 					
-					/*[/]*/	
+				/*[/]*/	
 					
 
-				/*]]>*/
-				// Load the Visualization API and the corechart package.
-                               google.charts.load('current', {'packages':['corechart']});
-
-
-                              // Set a callback to run when the Google Visualization API is loaded.
-                               google.charts.setOnLoadCallback(drawChart);
-			</script>
+				
+			
+		
 			
             
 
-			
+               /*]]>*/
 			</script>
 			<div id="piechart_3d" style="width: 900px; height: 800px;"></div>
 

@@ -24,7 +24,8 @@ private static final Logger mLog = Logger.getLogger(ChartBuilder.class.getName()
 			
 		int amount = 	parse(model.getLastYearValue1());
 		PieChart pieChart = new PieChart(model.getLastYearLabel1(),amount);
-		mLog.info(" add to piechart [" + model.getLastYearLabel1() + "]");
+		mLog.info(" add to piechart label [" + model.getLastYearLabel1() + "]");
+		mLog.info(" add to piechart label [" + amount + "]");
 		pieCharts.add(pieChart);	
 			
 		} catch (Exception ex) {
