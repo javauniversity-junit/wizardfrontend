@@ -1,3 +1,11 @@
+var canCopyValues = true;
+
+
+
+//can copy values
+function canCopy(copy) {
+	canCopyValues = copy;
+}
 
 
 //class variable for global objects
@@ -6,6 +14,7 @@ var objs = [];
 function copyToOtherMonths(){
 	console.log("start copyToOtherMonths");
 	var jan = $('#jan').val();
+	 if (canCopyValues) {
 	 $('#feb').val(jan);
 	//Set
         $('#mar').val(jan);
@@ -27,6 +36,7 @@ function copyToOtherMonths(){
         $('#nov').val(jan);
 		//Set
         $('#dec').val(jan);
+	 }
 	
 	
 }
