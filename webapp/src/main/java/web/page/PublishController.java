@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.logging.Logger;
 import web.page.*;
 import web.page.marketplacecompetitionpage.MarketPlaceCompetitionPageModel;
+import web.page.planamedipage.MediaChart;
+import web.page.planamedipage.MediaChartHelper;
+import web.page.planamedipage.PlanMediaPageModel;
 import web.page.confidentialclientevaluationnonepage.ConfidentialClientEvaluationOnePageModel;
 import web.model.WizardData;
 import web.page.presentedtopage.PresentedToPageController;
@@ -61,6 +64,16 @@ public class PublishController {
 					publish.setConfidentialClientEvaluationOnePage(true);
 				}
 				mLog.info("found page ConfidentialClientEvaluationOnePageModel");
+				break;
+			case PlanBMediaPage:
+					PlanMediaPageModel dataPageModel = null;
+				dataPageModel = (PlanMediaPageModel) JSONManager.convertFromJson(data.getPagedata(),
+						PlanMediaPageModel.class);
+				MediaChart mediaChart = MediaChartHelper.generate(dataPageModel);
+				model.addAttribute("PlanBMediaPage", mediaChart);
+				if (mediaChart != null) {
+					publish.setPlanBMediaPage(true);
+				}
 				break;
 			case PresentedToPage:
 				PresentedToPageModel presentedToPageModel = null;
