@@ -1,3 +1,5 @@
+package web.page.planamedipage;
+
 public class MediaChart{
      private int jan;
       private int feb;
