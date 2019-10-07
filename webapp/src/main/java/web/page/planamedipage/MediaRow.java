@@ -120,6 +120,78 @@ public class MediaRow {
 	public void setDec(double dec) {
 		this.dec = dec;
 	}
+	public String getJanStr() {
+		return janStr;
+	}
+	public void setJanStr(String janStr) {
+		this.janStr = janStr;
+	}
+	public String getFebStr() {
+		return febStr;
+	}
+	public void setFebStr(String febStr) {
+		this.febStr = febStr;
+	}
+	public String getMarStr() {
+		return marStr;
+	}
+	public void setMarStr(String marStr) {
+		this.marStr = marStr;
+	}
+	public String getAprStr() {
+		return aprStr;
+	}
+	public void setAprStr(String aprStr) {
+		this.aprStr = aprStr;
+	}
+	public String getMayStr() {
+		return mayStr;
+	}
+	public void setMayStr(String mayStr) {
+		this.mayStr = mayStr;
+	}
+	public String getJunStr() {
+		return junStr;
+	}
+	public void setJunStr(String junStr) {
+		this.junStr = junStr;
+	}
+	public String getJulStr() {
+		return julStr;
+	}
+	public void setJulStr(String julStr) {
+		this.julStr = julStr;
+	}
+	public String getAugStr() {
+		return augStr;
+	}
+	public void setAugStr(String augStr) {
+		this.augStr = augStr;
+	}
+	public String getSepStr() {
+		return sepStr;
+	}
+	public void setSepStr(String sepStr) {
+		this.sepStr = sepStr;
+	}
+	public String getOctStr() {
+		return octStr;
+	}
+	public void setOctStr(String octStr) {
+		this.octStr = octStr;
+	}
+	public String getNovStr() {
+		return novStr;
+	}
+	public void setNovStr(String novStr) {
+		this.novStr = novStr;
+	}
+	public String getDecStr() {
+		return decStr;
+	}
+	public void setDecStr(String decStr) {
+		this.decStr = decStr;
+	}
 	
 	
 }

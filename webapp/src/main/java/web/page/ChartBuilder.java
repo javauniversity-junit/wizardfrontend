@@ -159,7 +159,7 @@ private static final Logger mLog = Logger.getLogger(ChartBuilder.class.getName()
 	 
  }
  
-private  static int parse(String amount) throws ParseException {
+public  static int parse(String amount) throws ParseException {
 	   String stramount = amount.replace("$","");
 	   Double doubleAmount = Double.parseDouble(stramount);
 	    int convertedAmount = doubleAmount.intValue();
