@@ -1,9 +1,11 @@
 package web.page.planamedipage;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.List;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
 import web.page.ChartBuilder;
 public class MediaChartHelper {
@@ -13,21 +15,21 @@ public static MediaChart generate(PlanMediaPageModel planMediaPageModel) {
 	MediaChart mediaChart = new MediaChart("green", "green", "green", "green", "green",
 			"green", "green", "green", "green", "green", "green",
 			"green");
-	final ArrayList<MediaRow> mediaRows = new Gson().fromJson(planMediaPageModel.getMediaRows(), ArrayList.class);
-	for (MediaRow mediaRow : mediaRows) {
+	final List<MediaRowWeb> mediaRows = ( List<MediaRowWeb>) new Gson().fromJson(planMediaPageModel.getMediaRows(),  new TypeToken<List<MediaRowWeb>>(){}.getType());
+	for (MediaRowWeb mediaRow : mediaRows) {
 		try {
-			jan = jan + ChartBuilder.parse(mediaRow.getJanStr());
-			feb = feb + ChartBuilder.parse(mediaRow.getFebStr());
-			mar = mar + ChartBuilder.parse(mediaRow.getMarStr());
-			apr = apr + ChartBuilder.parse(mediaRow.getAprStr());
-			may = may + ChartBuilder.parse(mediaRow.getMayStr());
-			jun = jun + ChartBuilder.parse(mediaRow.getJunStr());
-			jul = jul + ChartBuilder.parse(mediaRow.getJulStr());
-			aug = aug + ChartBuilder.parse(mediaRow.getAugStr());
-			sep = sep + ChartBuilder.parse(mediaRow.getSepStr());
-			oct = oct + ChartBuilder.parse(mediaRow.getOctStr());
-			nov = nov + ChartBuilder.parse(mediaRow.getNovStr());
-			dec = dec + ChartBuilder.parse(mediaRow.getDecStr());
+			jan = jan + ChartBuilder.parse(mediaRow.getJan());
+			feb = feb + ChartBuilder.parse(mediaRow.getFeb());
+			mar = mar + ChartBuilder.parse(mediaRow.getMar());
+			apr = apr + ChartBuilder.parse(mediaRow.getApr());
+			may = may + ChartBuilder.parse(mediaRow.getMay());
+			jun = jun + ChartBuilder.parse(mediaRow.getJun());
+			jul = jul + ChartBuilder.parse(mediaRow.getJul());
+			aug = aug + ChartBuilder.parse(mediaRow.getAug());
+			sep = sep + ChartBuilder.parse(mediaRow.getSep());
+			oct = oct + ChartBuilder.parse(mediaRow.getOct());
+			nov = nov + ChartBuilder.parse(mediaRow.getNov());
+			dec = dec + ChartBuilder.parse(mediaRow.getDec());
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
