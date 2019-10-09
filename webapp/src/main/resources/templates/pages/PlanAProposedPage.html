@@ -69,7 +69,7 @@
 						<label for="planAFrequency">C. What is the projected monthly
 							broadcast frequency?</label> <input type="number"
 							th:value="${dataPageModel?.planAFrequency}" class="form-control"
-							id="planAFrequency" name="planAFrequency" oninput="calculate()"/>
+							id="planAFrequency" name="planAFrequency" step="any" min=0 oninput="calculate()"/>
 					</div>
 					<div class="form-group">
 						<label for=planADigitalImpressionsMonthly>D. What are the
