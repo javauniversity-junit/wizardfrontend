@@ -11,6 +11,11 @@ function calculatePlanDaily () {
     
 }
 
+function calculate() {
+	var planAFrequency = document.getElementById("planAFrequency").value;
+	document.getElementById("planAFrequency").value = Math.round(planAFrequency * 10) / 10;    
+}
+
 function FormatAmount(amount) {
 	var i = parseFloat(amount);
 	if(isNaN(i)) { i = 0.00; }
