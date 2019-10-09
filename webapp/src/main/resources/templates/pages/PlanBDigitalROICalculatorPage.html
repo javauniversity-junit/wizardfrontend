@@ -53,7 +53,7 @@
 				<div class="form-group">
 					<label for="planACostPerThousand">B. Cost Per Thousand (CPM)</label> <input
 						type="text" onClick="this.setSelectionRange(0, this.value.length)" th:value="${dataPageModel?.planACostPerThousand}"
-						class="form-control" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+						class="form-control" data-type="currencyWithCents" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 						id="planACostPerThousand" name="planACostPerThousand" />
 				</div>
 				<div class="form-group">
