@@ -1,8 +1,8 @@
 function calculate()
 {
 	
-	var planAAverageSale = formatNumber(document.getElementById("planAAverageSale").value); // a
-	//var planAAverageSale = convertToNumberFromCurrency(document.getElementById("planAAverageSale").value); //a
+	//var planAAverageSale = formatNumber(document.getElementById("planAAverageSale").value); // a
+	var planAAverageSale = convertToNumberFromCurrency(document.getElementById("planAAverageSale").value); //a
 	//var planAAverageSale = document.getElementById("planAAverageSale").value; // a
 	var planAGrossMargin = document.getElementById("planAGrossMargin").value; // b
 	var planAClosingPct = document.getElementById("planAClosingPct").value; // c 
@@ -18,7 +18,8 @@ function calculate()
 		    planAProspectValueRaw = planAAverageSale * (planAGrossMargin/100) * (planAClosingPct/100);
 	}
 	
-	var planAInvestment = formatNumber(document.getElementById("planAInvestment").value); // e
+	//var planAInvestment = formatNumber(document.getElementById("planAInvestment").value); // e
+	var planAInvestment = convertToNumberFromCurrency(document.getElementById("planAInvestment").value); // e
 	var planAProspectsNeeded = planAProspectValueRaw == 0 ? 0 : planAInvestment/planAProspectValueRaw ; // f = e/d
 	var planAProspectSalesNeeded = planAProspectsNeeded * (planAClosingPct/100) ; // g = fc
 	
@@ -31,10 +32,11 @@ function calculate()
 	var planAMonths = convertIntToNumber(document.getElementById("planAMonths").value); // i
 	var planAAdditionalGrossSales = planAGrossProfitOnSales * planAMonths; // j = hi
 	
-	//document.getElementById("planAAverageSale").value = FormatAmount(planAAverageSale);
-	document.getElementById("planAAverageSale").value = planAAverageSale;
+	document.getElementById("planAAverageSale").value = FormatAmount(planAAverageSale);
+	//document.getElementById("planAAverageSale").value = planAAverageSale;
 	document.getElementById("planAInvestment").value = FormatAmount(planAInvestment);
 	document.getElementById("planAProspectValue").value =  planAProspectValue;
+	//document.getElementById("planAProspectValue").value =  55;
 	document.getElementById("planAProspectsNeeded").value =  Math.round(planAProspectsNeeded * 10) / 10;
 	document.getElementById("planAProspectSalesNeeded").value =  Math.round(planAProspectSalesNeeded * 10) / 10;	
 	document.getElementById("planAGrossProfitOnSales").value =  FormatAmount(Math.round(planAGrossProfitOnSales));
@@ -60,13 +62,13 @@ function FormatAmount(amount) {
 
 function convertToNumberFromCurrency(currency)
 {
-	if (currency == null) {
-		return 0;
-	}
+	//if (currency == null) {
+	//	return 0;
+	//}
 		
-	var convert = currency.substring(1);
-	convert = removeComma(convert);
-	convert = Number(convert);
+	//var convert = currency.substring(1);
+	var convert = currency.replace(/,/g, '').replace('$', '');
+	//convert = Number(convert);
 	return convert;
 }
 
