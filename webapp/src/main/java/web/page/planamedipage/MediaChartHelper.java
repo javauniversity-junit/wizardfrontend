@@ -40,6 +40,7 @@ public static MediaChart generate(PlanMediaPageModel planMediaPageModel) {
 	mediaChart.setFeb(feb);
 	mediaChart.setApr(apr);
 	mediaChart.setMar(mar);
+	mediaChart.setMay(may);
 	mediaChart.setJun(jun);
 	mediaChart.setJul(jul);
 	mediaChart.setAug(aug);
