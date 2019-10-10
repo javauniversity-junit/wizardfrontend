@@ -68,7 +68,7 @@
 									type="number" th:value="${dataPageModel?.numberOfLocations}"
 									min="0" max="50" class="form-control" id="numberOfLocations"
 									name="numberOfLocations" 
-									onClick="this.setSelectionRange(0, this.value.length)"/>
+									autofocus="autofocus" onfocus="this.select()"/>
 							</div>
 						</div>
 						<div class="col-4">
