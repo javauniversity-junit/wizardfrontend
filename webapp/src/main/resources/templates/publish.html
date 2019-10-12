@@ -111,6 +111,13 @@
 				th:replace="fragments/ConfidentialClientEvaluationLastYearPageFragment :: ConfidentialClientEvaluationLastYearPage"></div>
 		</div>
 		
+	   <!-- replace PlanAMediaPage begin -->
+		<div th:if="${PublishModel.planAMediaPage}">
+			<div
+				th:replace="fragments/PlanAMediaPagePageFragment :: PlanAMediaPage"></div>
+		</div>
+		
+		
 	   <!-- replace PlanBMediaPage begin -->
 		<div th:if="${PublishModel.planBMediaPage}">
 			<div
