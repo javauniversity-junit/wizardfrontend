@@ -32,7 +32,7 @@
 		<script th:inline="javascript">
 		
 		/*<![CDATA[*/
-		var station = /*[[${PresentedToPage.station}]]*/ 'unknown';
+		var station = /*[[${PresentedToPage?.station}]]*/ 'unknown';
 		var jan = /*[[${PlanBMediaPage.jan}]]*/ 'jan';	
 		var feb = /*[[${PlanBMediaPage.feb}]]*/ 'feb';
 		var apr = /*[[${PlanBMediaPage.apr}]]*/ 'apr';	
