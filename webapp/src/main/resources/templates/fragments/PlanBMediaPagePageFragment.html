@@ -32,6 +32,7 @@
 		<script th:inline="javascript">
 		
 		/*<![CDATA[*/
+		var station = /*[[${PresentedToPage.station}]]*/ 'unknown';
 		var jan = /*[[${PlanBMediaPage.jan}]]*/ 'jan';	
 		var feb = /*[[${PlanBMediaPage.feb}]]*/ 'feb';
 		var apr = /*[[${PlanBMediaPage.apr}]]*/ 'apr';	
@@ -91,9 +92,9 @@
                        2]);
 
       var options = {
-        title: "Density of Precious Metals, in g/cm^3",
-        width: 900,
-        height: 800,
+        title: station,
+        width: 800,
+        height: 600,
         bar: {groupWidth: "30"},
         legend: { position: "none" },
       };
@@ -103,7 +104,7 @@
     
     /*]]>*/
   </script>
-<div id="columnchart_values" style="width: 900px; height: 700px;"></div>
+<div id="columnchart_values" style="width: 800px; height: 600px;"></div>
 		
 		
 		
