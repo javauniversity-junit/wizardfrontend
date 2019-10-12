@@ -14,7 +14,7 @@ var objs = [];
 function copyToOtherMonths(){
 	console.log("start copyToOtherMonths");
 	var jan = $('#jan').val();
-	 if (canCopyValues) {
+	
 	 $('#feb').val(jan);
 	//Set
         $('#mar').val(jan);
@@ -36,7 +36,7 @@ function copyToOtherMonths(){
         $('#nov').val(jan);
 		//Set
         $('#dec').val(jan);
-	 }
+	
 	
 	
 }
@@ -359,7 +359,7 @@ function sortObj() {
 function totalRow() {
 	console.log("start totalRow");
 	
-	copyToOtherMonths();
+	//copyToOtherMonths();
 	 var jan = document.getElementById("jan").value;
 	 var total= 0 ;
 	 if (jan != null) {
