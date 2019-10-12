@@ -65,7 +65,17 @@ public class PublishController {
 				}
 				mLog.info("found page ConfidentialClientEvaluationOnePageModel");
 				break;
-			case PlanBMediaPage:
+			case PlanAMediaPage:
+					PlanMediaPageModel dataPageModel = null;
+				dataPageModel = (PlanMediaPageModel) JSONManager.convertFromJson(data.getPagedata(),
+						PlanMediaPageModel.class);
+				MediaChart mediaChart = MediaChartHelper.generate(dataPageModel);
+				model.addAttribute("PlanAMediaPage", mediaChart);
+				if (mediaChart != null) {
+					publish.setPlanAMediaPage(true);
+				}
+				break;
+								case PlanBMediaPage:
 					PlanMediaPageModel dataPageModel = null;
 				dataPageModel = (PlanMediaPageModel) JSONManager.convertFromJson(data.getPagedata(),
 						PlanMediaPageModel.class);
