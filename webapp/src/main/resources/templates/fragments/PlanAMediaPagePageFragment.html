@@ -10,7 +10,7 @@
              <h2  th:text="${PresentedToPage?.station}" class="text-center w3-text-black">station</h2>
         
             
-            <div id="columnchart_values" style="width: 800px; height: 500px;"></div>
+            <div id="columnchart_values_a" style="width: 800px; height: 500px;"></div>
         </div><!-- end of white content -->
 
         <div class="w3-container d-print-none" style="padding-top: 2%;">
@@ -87,7 +87,7 @@
                 position: "none"
             },
         };
-        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values_a"));
         chart.draw(view, options);
     }
     /*]]>*/
