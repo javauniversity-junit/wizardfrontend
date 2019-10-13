@@ -1,133 +1,62 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org"
-	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
 <head>
+    <title>Wizard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/publish.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
 
+    <script>
+        function printPage() {
+            window.print();
+        }
 
-<title>Wizard</title>
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  	<link rel="stylesheet" href="css/publish.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-<script 
-	src="https://www.gstatic.com/charts/loader.js"></script>
-<script>
-	/*
-	 * throttledresize: special jQuery event that happens at a reduced rate compared to "resize"
-	 *
-	 * latest version and complete README available on Github:
-	 * https://github.com/louisremi/jquery-smartresize
-	 *
-	 * Copyright 2012 @louis_remi
-	 * Licensed under the MIT license.
-	 *
-	 * This saved you an hour of work? 
-	 * Send me music http://www.amazon.co.uk/wishlist/HNTU0468LQON
-	 */
-	(function($) {
-
-		var $event = $.event, $special, dummy = {
-			_ : 0
-		}, frame = 0, wasResized, animRunning;
-
-		$special = $event.special.throttledresize = {
-			setup : function() {
-				$(this).on("resize", $special.handler);
-			},
-			teardown : function() {
-				$(this).off("resize", $special.handler);
-			},
-			handler : function(event, execAsap) {
-				// Save the context
-				var context = this, args = arguments;
-
-				wasResized = true;
-
-				if (!animRunning) {
-					setInterval(function() {
-						frame++;
-
-						if (frame > $special.threshold && wasResized
-								|| execAsap) {
-							// set correct event type
-							event.type = "throttledresize";
-							$event.dispatch.apply(context, args);
-							wasResized = false;
-							frame = 0;
-						}
-						if (frame > 9) {
-							$(dummy).stop();
-							animRunning = false;
-							frame = 0;
-						}
-					}, 30);
-					animRunning = true;
-				}
-			},
-			threshold : 0
-		};
-
-	})(jQuery);
-</script>
-
-
-<script>
-	function printPage() {
-		window.print();
-	}
-	function goBack() {
-		window.history.back();
-	}
-</script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </head>
 <body>
-	<div class="w3-container"> <!-- outer div  -->
+    <div class="w3-container">
+        <!-- outer div  -->
+        <div th:if="${PublishModel.presentedToPage}">
+        <!-- replace presentToFragment begin -->
+           <div th:replace="fragments/PresentedToPageFragment :: PresentedToPage"></div>
+        <!-- replace presentToFragment end -->
+	</div>
+	    
+	<div th:if="${PublishModel.teamCommitmentPage}">    
+        <!-- replace teamCommitmentPageFragment begin -->
+           <div th:replace="fragments/TeamCommitmentPageFragment :: TeamCommitmentPage"></div>
+        <!-- replace TeamCommitmentPageFragment end -->
+	</div>
+	    
+        <!-- replace marketPlaceCompetitionPage begin -->
+        <div th:if="${PublishModel.marketPlaceCompetitionPage}">
+            <div th:replace="fragments/MarketPlaceCompetitionPageFragment :: MarketPlaceCompetitionPage"></div>
+        </div>
 
+        <!-- replace ConfidentialClientEvaluationLastYearPage begin -->
+        <div th:if="${PublishModel.confidentialClientEvaluationOnePage}">
+            <div th:replace="fragments/ConfidentialClientEvaluationLastYearPageFragment :: ConfidentialClientEvaluationLastYearPage"></div>
+        </div>
 
-		<!-- replace presentToFragment begin -->
-			<div
-				th:replace="fragments/PresentedToPageFragment :: PresentedToPage"></div>
-		<!-- replace presentToFragment end -->
-		
-		<!-- replace teamCommitmentPageFragment begin -->
-			<div
-				th:replace="fragments/TeamCommitmentPageFragment :: TeamCommitmentPage"></div>
-	    <!-- replace TeamCommitmentPageFragment end -->
-		
-		 <!-- replace marketPlaceCompetitionPage begin -->
-		<div th:if="${PublishModel.marketPlaceCompetitionPage}">
-			<div
-				th:replace="fragments/MarketPlaceCompetitionPageFragment :: MarketPlaceCompetitionPage"></div>
-		</div>
-		
-	        <!-- replace ConfidentialClientEvaluationLastYearPage begin -->
-		<div th:if="${PublishModel.confidentialClientEvaluationOnePage}">
-			<div
-				th:replace="fragments/ConfidentialClientEvaluationLastYearPageFragment :: ConfidentialClientEvaluationLastYearPage"></div>
-		</div>
-		
-	   <!-- replace PlanAMediaPage begin -->
-		<div th:if="${PublishModel.planAMediaPage}">
-			<div
-				th:replace="fragments/PlanAMediaPagePageFragment :: PlanAMediaPage"></div>
-		</div>
-		
-		
-	   <!-- replace PlanBMediaPage begin -->
-		<div th:if="${PublishModel.planBMediaPage}">
-			<div
-				th:replace="fragments/PlanBMediaPagePageFragment :: PlanBMediaPage"></div>
-		</div>
-		
-		
-		<!-- replace marketPlaceCompetitionPage begin -->
-		
-		<!--
+        <!-- replace PlanAMediaPage begin -->
+        <div th:if="${PublishModel.planAMediaPage}">
+            <div th:replace="fragments/PlanAMediaPagePageFragment :: PlanAMediaPage"></div>
+        </div>
+
+        <!-- replace PlanBMediaPage begin -->
+        <div th:if="${PublishModel.planBMediaPage}">
+            <div th:replace="fragments/PlanBMediaPagePageFragment :: PlanBMediaPage"></div>
+        </div>
+
+        <!-- replace marketPlaceCompetitionPage begin -->
+
+        <!--
 		<div th:if="${PublishModel.PreviousYearMediaAllocationPage}">
 		<div
 			th:replace="fragments/PreviousYearMediaAllocationFragment :: PreviosYearMediaAllocation"></div>
@@ -135,7 +64,9 @@
 			th:replace="fragments/ProposedSchedulePlanAFragment :: ProposedSchedulePlanA"></div>
          -->
 
-	</div> <!-- end of outer -->
+    </div>
+    <!-- end of outer -->
 
 </body>
+
 </html>
