@@ -36,7 +36,7 @@ function copyToOtherMonths(){
         $('#nov').val(jan);
 		//Set
         $('#dec').val(jan);
-	
+	totalRow();
 	
 	
 }
