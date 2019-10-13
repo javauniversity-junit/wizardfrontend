@@ -101,6 +101,7 @@ function addOrUpdate() {
     var oct = document.getElementById("oct").value;
     var nov = document.getElementById("nov").value;
     var dec = document.getElementById("dec").value;
+    var rowTotal = calRowTotal(jan,feb,mar,apr,may,jun,jul,aug,sep,oct,nov,dec);
     
     var update = "false";
     for (i in objs) {
@@ -118,7 +119,7 @@ function addOrUpdate() {
           objs[i].oct = oct;        
           objs[i].nov = nov;   
           objs[i].dec = dec;           
-          
+          objs[i].rt = rowTotal;   
           updatehiddenMediaRow ();
           console.log("After update: ", objs[i]);
           update = "true";
