@@ -69,9 +69,9 @@ public class PublishController {
 					PlanMediaPageModel planAMediaPagedataPageModel = null;
 				planAMediaPagedataPageModel = (PlanMediaPageModel) JSONManager.convertFromJson(data.getPagedata(),
 						PlanMediaPageModel.class);
-				MediaChart mediaChart = MediaChartHelper.generate(planAMediaPagedataPageModel);
-				model.addAttribute("PlanAMediaPage", mediaChart);
-				if (mediaChart != null) {
+				MediaChart mediaChartA = MediaChartHelper.generate(planAMediaPagedataPageModel);
+				model.addAttribute("PlanAMediaPage", mediaChartA);
+				if (mediaChartA != null) {
 					publish.setPlanAMediaPage(true);
 				}
 				break;
