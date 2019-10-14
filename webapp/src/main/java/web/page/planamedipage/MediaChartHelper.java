@@ -83,7 +83,7 @@ public static MediaChart generate(PlanMediaPageModel planMediaPageModel) {
 		mediaChart.setNovColor("blue");
 	}
 	if (planMediaPageModel.getDecType().equalsIgnoreCase("Base")) {
-		mediaChart.setJanColor("blue");
+		mediaChart.setDecColor("blue");
 	}
 	
 	if (planMediaPageModel.getJanType().equalsIgnoreCase("Slow")) {
@@ -120,7 +120,7 @@ public static MediaChart generate(PlanMediaPageModel planMediaPageModel) {
 		mediaChart.setNovColor("red");
 	}
 	if (planMediaPageModel.getDecType().equalsIgnoreCase("Slow")) {
-		mediaChart.setJanColor("red");
+		mediaChart.setDecColor("red");
 	}
 	
 	
