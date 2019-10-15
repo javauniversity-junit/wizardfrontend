@@ -298,7 +298,7 @@ function calculateTwo()
 	}
 	if (proposedValue6 != null) {
 		proposedValue6 = proposedValue6.substring(1);
-		lastYearValue6 = removeComma(proposedValue6);
+		proposedValue6 = removeComma(proposedValue6);
 		proposedValue6Cal = Number(proposedValue6);
 	}
 		if (proposedValue7 != null) {
