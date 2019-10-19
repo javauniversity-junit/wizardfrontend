@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.logging.Logger;
 import web.page.*;
 import web.page.marketplacecompetitionpage.MarketPlaceCompetitionPageModel;
+import web.page.planDigitalroicalculatorpage.PlanDigitalROICalculatorPageModel;
 import web.page.planamedipage.MediaChart;
 import web.page.planamedipage.MediaChartHelper;
 import web.page.planamedipage.PlanMediaPageModel;
@@ -48,6 +49,27 @@ public class PublishController {
 			mLog.info("page name = " + pageName);
 			switch (pageName) {
 
+			/*
+			 * 
+
+
+	,PlanALifetimeValuedPage
+	,PlanBLifetimeValuedPage
+
+
+	,MarketPlaceCompetitionPage
+	,PlanAProposedPage
+	,PlanBProposedPage
+	,ClientObjectivesOnePage
+	,StrategicMarketingPageOne
+	,StrategicMarketingPageTwo
+	,StrategicMarketingPageThree
+	,StrategicMarketingPageFour
+	,PlanABEPPage
+	,PlanBBEPPage
+	,TargetMarketingPage;
+			 */
+			
 			// ConfidentialClientEvaluationOnePage
 			case ConfidentialClientEvaluationOnePage:
 				ConfidentialClientEvaluationOnePageModel confidentialClientEvaluationOnePageModel = null;
@@ -65,6 +87,34 @@ public class PublishController {
 				}
 				mLog.info("found page ConfidentialClientEvaluationOnePageModel");
 				break;
+			case MarketPlaceCompetitionPage:
+				MarketPlaceCompetitionPageModel marketPlaceCompetitionPageModel = null;
+
+				marketPlaceCompetitionPageModel = (MarketPlaceCompetitionPageModel) JSONManager
+						.convertFromJson(data.getPagedata(), MarketPlaceCompetitionPageModel.class);
+				model.addAttribute("MarketPlaceCompetitionPageModel", marketPlaceCompetitionPageModel);
+				publish.setMarketPlaceCompetitionPage(true);
+				mLog.info("found page MarketPlaceCompetitionPageModel");
+				break;
+			case PlanADigitalROICalculatorPage:
+				PlanDigitalROICalculatorPageModel planADigitalROICalculatorPageModel = null;
+
+				planADigitalROICalculatorPageModel = (PlanDigitalROICalculatorPageModel) JSONManager.convertFromJson(data.getPagedata(),
+						PlanDigitalROICalculatorPageModel.class);
+				model.addAttribute("PlanADigitalROICalculatorPage", planADigitalROICalculatorPageModel);
+				//publish.setPresentedToPage(true);
+				mLog.info("found page PlanADigitalROICalculatorPage");
+				break;
+			case PlanBDigitalROICalculatorPage:
+				PlanDigitalROICalculatorPageModel planBDigitalROICalculatorPageModel = null;
+
+				planBDigitalROICalculatorPageModel = (PlanDigitalROICalculatorPageModel) JSONManager.convertFromJson(data.getPagedata(),
+						PlanDigitalROICalculatorPageModel.class);
+				model.addAttribute("PlanBDigitalROICalculatorPage", planBDigitalROICalculatorPageModel);
+				//publish.setPresentedToPage(true);
+				mLog.info("found page PlanBDigitalROICalculatorPage");
+				break;
+
 			case PlanAMediaPage:
 					PlanMediaPageModel planAMediaPagedataPageModel = null;
 				planAMediaPagedataPageModel = (PlanMediaPageModel) JSONManager.convertFromJson(data.getPagedata(),
@@ -94,15 +144,6 @@ public class PublishController {
 				publish.setPresentedToPage(true);
 				mLog.info("found page PresentedToPage");
 				break;
-			case TeamCommitmentPage:
-				TeamCommitmentPageModel teamCommitmentPageModel = null;
-
-				teamCommitmentPageModel = (TeamCommitmentPageModel) JSONManager.convertFromJson(data.getPagedata(),
-						TeamCommitmentPageModel.class);
-				model.addAttribute("TeamCommitmentPage", teamCommitmentPageModel);
-				publish.setTeamCommitmentPage(true);
-				mLog.info("found page TeamCommitmentPage");
-				break;
 			case StrategicMarketingPageOne:
 				StrategicMarketingPageOneModel strategicMarketingPageOneModel = null;
 
@@ -114,15 +155,17 @@ public class PublishController {
 				mLog.info("value found page StrategicMarketingPageOne "
 						+ strategicMarketingPageOneModel.getYearsInBusiness());
 				break;
-			case MarketPlaceCompetitionPage:
-				MarketPlaceCompetitionPageModel marketPlaceCompetitionPageModel = null;
 
-				marketPlaceCompetitionPageModel = (MarketPlaceCompetitionPageModel) JSONManager
-						.convertFromJson(data.getPagedata(), MarketPlaceCompetitionPageModel.class);
-				model.addAttribute("MarketPlaceCompetitionPageModel", marketPlaceCompetitionPageModel);
-				publish.setMarketPlaceCompetitionPage(true);
-				mLog.info("found page MarketPlaceCompetitionPageModel");
+			case TeamCommitmentPage:
+				TeamCommitmentPageModel teamCommitmentPageModel = null;
+
+				teamCommitmentPageModel = (TeamCommitmentPageModel) JSONManager.convertFromJson(data.getPagedata(),
+						TeamCommitmentPageModel.class);
+				model.addAttribute("TeamCommitmentPage", teamCommitmentPageModel);
+				publish.setTeamCommitmentPage(true);
+				mLog.info("found page TeamCommitmentPage");
 				break;
+		
 			}
 			model.addAttribute("PublishModel", publish);
 
