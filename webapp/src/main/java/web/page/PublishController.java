@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.logging.Logger;
 import web.page.*;
 import web.page.marketplacecompetitionpage.MarketPlaceCompetitionPageModel;
+import web.page.planABEPPage.PlanABEPPageModel;
+import web.page.planBBEPPage.PlanBBEPPageModel;
 import web.page.planDigitalroicalculatorpage.PlanDigitalROICalculatorPageModel;
 import web.page.planamedipage.MediaChart;
 import web.page.planamedipage.MediaChartHelper;
@@ -21,6 +23,8 @@ import web.model.WizardData;
 import web.page.presentedtopage.PresentedToPageController;
 import web.page.presentedtopage.PresentedToPageModel;
 import web.page.strategicmarketingpageone.StrategicMarketingPageOneModel;
+import web.page.strategicmarketingpagethree.StrategicMarketingPageThreeModel;
+import web.page.strategicmarketingpagetwo.StrategicMarketingPageTwoModel;
 import web.page.teamcommitmentpage.TeamCommitmentPageModel;
 import web.repository.WizardDataRepository;
 
@@ -61,12 +65,8 @@ public class PublishController {
 	,PlanAProposedPage
 	,PlanBProposedPage
 	,ClientObjectivesOnePage
-	,StrategicMarketingPageOne
-	,StrategicMarketingPageTwo
-	,StrategicMarketingPageThree
-	,StrategicMarketingPageFour
-	,PlanABEPPage
-	,PlanBBEPPage
+
+
 	,TargetMarketingPage;
 			 */
 			
@@ -96,6 +96,16 @@ public class PublishController {
 				publish.setMarketPlaceCompetitionPage(true);
 				mLog.info("found page MarketPlaceCompetitionPageModel");
 				break;
+			case PlanABEPPage:
+				PlanABEPPageModel planABEPPageModel = null;
+
+				planABEPPageModel = (PlanABEPPageModel) JSONManager.convertFromJson(data.getPagedata(),
+						PlanABEPPageModel.class);
+				model.addAttribute("PlanABEPPage", planABEPPageModel);
+				//publish.setPresentedToPage(true);
+				mLog.info("found page PlanABEPPage");
+				break;
+			
 			case PlanADigitalROICalculatorPage:
 				PlanDigitalROICalculatorPageModel planADigitalROICalculatorPageModel = null;
 
@@ -104,6 +114,15 @@ public class PublishController {
 				model.addAttribute("PlanADigitalROICalculatorPage", planADigitalROICalculatorPageModel);
 				//publish.setPresentedToPage(true);
 				mLog.info("found page PlanADigitalROICalculatorPage");
+				break;
+			case PlanBBEPPage:
+				PlanBBEPPageModel planBBEPPageModel = null;
+
+				planBBEPPageModel = (PlanBBEPPageModel) JSONManager.convertFromJson(data.getPagedata(),
+						PlanBBEPPageModel.class);
+				model.addAttribute("PlanBBEPPage", planBBEPPageModel);
+				//publish.setPresentedToPage(true);
+				mLog.info("found page PlanBBEPPage");
 				break;
 			case PlanBDigitalROICalculatorPage:
 				PlanDigitalROICalculatorPageModel planBDigitalROICalculatorPageModel = null;
@@ -155,7 +174,27 @@ public class PublishController {
 				mLog.info("value found page StrategicMarketingPageOne "
 						+ strategicMarketingPageOneModel.getYearsInBusiness());
 				break;
+			case StrategicMarketingPageThree:
+				StrategicMarketingPageThreeModel strategicMarketingPageThreeModel = null;
 
+				strategicMarketingPageThreeModel = (StrategicMarketingPageThreeModel) JSONManager
+						.convertFromJson(data.getPagedata(), StrategicMarketingPageThreeModel.class);
+				model.addAttribute("StrategicMarketingPageThree", strategicMarketingPageThreeModel);
+				mLog.info("found page StrategicMarketingPageTwo");
+
+				mLog.info("value found page StrategicMarketingPageOne ");
+				break;
+			
+			case StrategicMarketingPageTwo:
+				StrategicMarketingPageTwoModel strategicMarketingPageTwoModel = null;
+
+				strategicMarketingPageTwoModel = (StrategicMarketingPageTwoModel) JSONManager
+						.convertFromJson(data.getPagedata(), StrategicMarketingPageTwoModel.class);
+				model.addAttribute("StrategicMarketingPageTwo", strategicMarketingPageTwoModel);
+				mLog.info("found page StrategicMarketingPageTwo");
+
+				mLog.info("value found page StrategicMarketingPageOne ");
+				break;
 			case TeamCommitmentPage:
 				TeamCommitmentPageModel teamCommitmentPageModel = null;
 
