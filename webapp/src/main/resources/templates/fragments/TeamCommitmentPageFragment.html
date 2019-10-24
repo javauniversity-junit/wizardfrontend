@@ -60,8 +60,7 @@
 
 			</div>
 			<div class="w3-container">
-				<div class="col-p-4"
-					th:text="${TeamCommitmentPage?.thirdLevelName}"></div>
+				<div class="col-p-4" th:text="${TeamCommitmentPage?.thirdLevelName}"></div>
 				<div class="col-p-4"
 					th:text="${TeamCommitmentPage?.thirdLevelTitle}"></div>
 				<div class="col-p-4">Date</div>
@@ -81,9 +80,13 @@
 			</div>
 		</div>
 		<div class="w3-container d-print-none" style="padding-top: 2%;">
-			    <button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
-                 <a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
-                <button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
+			<button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
+			<a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
+			<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
+		</div>
+		<div class="divPrint">
+			<small> Copyright © 1984-2017 Executive Decision Systems,
+				Inc. and The Guld Resource Group, LLC. </small>
 		</div>
 	</div>
 	<!-- end of if teamCommitmentPage content -->
