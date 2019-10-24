@@ -160,6 +160,9 @@ private static final Logger mLog = Logger.getLogger(ChartBuilder.class.getName()
  }
  
 public  static int parse(String amount) throws ParseException {
+	   if (amount == null || amount.trim().isEmpty()) {
+		   return 0;
+	   }
 	   String stramount = amount.replace("$","");
 	   stramount = stramount.replace(",","");
 	   Double doubleAmount = Double.parseDouble(stramount);

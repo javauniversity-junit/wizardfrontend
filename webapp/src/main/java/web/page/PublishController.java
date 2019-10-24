@@ -72,6 +72,7 @@ public class PublishController {
 			
 			// ConfidentialClientEvaluationOnePage
 			case ConfidentialClientEvaluationOnePage:
+				try {
 				ConfidentialClientEvaluationOnePageModel confidentialClientEvaluationOnePageModel = null;
 
 				confidentialClientEvaluationOnePageModel = (ConfidentialClientEvaluationOnePageModel) JSONManager
@@ -87,7 +88,12 @@ public class PublishController {
 				}
 				mLog.info("found page ConfidentialClientEvaluationOnePageModel");
 				break;
+				}catch (Exception ex) {
+					mLog.severe("error " + ex.getMessage());
+					break;
+				}
 			case MarketPlaceCompetitionPage:
+				try {
 				MarketPlaceCompetitionPageModel marketPlaceCompetitionPageModel = null;
 
 				marketPlaceCompetitionPageModel = (MarketPlaceCompetitionPageModel) JSONManager
@@ -96,7 +102,12 @@ public class PublishController {
 				publish.setMarketPlaceCompetitionPage(true);
 				mLog.info("found page MarketPlaceCompetitionPageModel");
 				break;
+				}catch (Exception ex) {
+					mLog.severe("error " + ex.getMessage());
+					break;
+				}
 			case PlanABEPPage:
+			    try {
 				PlanABEPPageModel planABEPPageModel = null;
 
 				planABEPPageModel = (PlanABEPPageModel) JSONManager.convertFromJson(data.getPagedata(),
@@ -105,8 +116,13 @@ public class PublishController {
 				//publish.setPresentedToPage(true);
 				mLog.info("found page PlanABEPPage");
 				break;
+			    }catch (Exception ex) {
+					mLog.severe("error " + ex.getMessage());
+					break;
+				}
 			
 			case PlanADigitalROICalculatorPage:
+				try {
 				PlanDigitalROICalculatorPageModel planADigitalROICalculatorPageModel = null;
 
 				planADigitalROICalculatorPageModel = (PlanDigitalROICalculatorPageModel) JSONManager.convertFromJson(data.getPagedata(),
@@ -115,7 +131,12 @@ public class PublishController {
 				//publish.setPresentedToPage(true);
 				mLog.info("found page PlanADigitalROICalculatorPage");
 				break;
+				}catch (Exception ex) {
+					mLog.severe("error " + ex.getMessage());
+					break;
+				}
 			case PlanBBEPPage:
+				try {
 				PlanBBEPPageModel planBBEPPageModel = null;
 
 				planBBEPPageModel = (PlanBBEPPageModel) JSONManager.convertFromJson(data.getPagedata(),
@@ -124,7 +145,12 @@ public class PublishController {
 				//publish.setPresentedToPage(true);
 				mLog.info("found page PlanBBEPPage");
 				break;
+				}catch (Exception ex) {
+					mLog.severe("error " + ex.getMessage());
+					break;
+				}
 			case PlanBDigitalROICalculatorPage:
+				try {
 				PlanDigitalROICalculatorPageModel planBDigitalROICalculatorPageModel = null;
 
 				planBDigitalROICalculatorPageModel = (PlanDigitalROICalculatorPageModel) JSONManager.convertFromJson(data.getPagedata(),
@@ -133,8 +159,12 @@ public class PublishController {
 				//publish.setPresentedToPage(true);
 				mLog.info("found page PlanBDigitalROICalculatorPage");
 				break;
-
+				}catch (Exception ex) {
+					mLog.severe("error " + ex.getMessage());
+					break;
+				}
 			case PlanAMediaPage:
+				try {
 					PlanMediaPageModel planAMediaPagedataPageModel = null;
 				planAMediaPagedataPageModel = (PlanMediaPageModel) JSONManager.convertFromJson(data.getPagedata(),
 						PlanMediaPageModel.class);
@@ -144,7 +174,12 @@ public class PublishController {
 					publish.setPlanAMediaPage(true);
 				}
 				break;
+				}catch (Exception ex) {
+					mLog.severe("error " + ex.getMessage());
+					break;
+				}
 			case PlanBMediaPage:
+				try {
 					PlanMediaPageModel dataPageModel = null;
 				dataPageModel = (PlanMediaPageModel) JSONManager.convertFromJson(data.getPagedata(),
 						PlanMediaPageModel.class);
@@ -154,7 +189,12 @@ public class PublishController {
 					publish.setPlanBMediaPage(true);
 				}
 				break;
+				}catch (Exception ex) {
+					mLog.severe("error " + ex.getMessage());
+					break;
+				}
 			case PresentedToPage:
+				try {
 				PresentedToPageModel presentedToPageModel = null;
 
 				presentedToPageModel = (PresentedToPageModel) JSONManager.convertFromJson(data.getPagedata(),
@@ -163,7 +203,12 @@ public class PublishController {
 				publish.setPresentedToPage(true);
 				mLog.info("found page PresentedToPage");
 				break;
+				}catch (Exception ex) {
+					mLog.severe("error " + ex.getMessage());
+					break;
+				}
 			case StrategicMarketingPageOne:
+				try {
 				StrategicMarketingPageOneModel strategicMarketingPageOneModel = null;
 
 				strategicMarketingPageOneModel = (StrategicMarketingPageOneModel) JSONManager
@@ -174,7 +219,12 @@ public class PublishController {
 				mLog.info("value found page StrategicMarketingPageOne "
 						+ strategicMarketingPageOneModel.getYearsInBusiness());
 				break;
+				}catch (Exception ex) {
+					mLog.severe("error " + ex.getMessage());
+					break;
+				}
 			case StrategicMarketingPageThree:
+				try {
 				StrategicMarketingPageThreeModel strategicMarketingPageThreeModel = null;
 
 				strategicMarketingPageThreeModel = (StrategicMarketingPageThreeModel) JSONManager
@@ -184,8 +234,12 @@ public class PublishController {
 
 				mLog.info("value found page StrategicMarketingPageOne ");
 				break;
-			
+				}catch (Exception ex) {
+					mLog.severe("error " + ex.getMessage());
+					break;
+				}
 			case StrategicMarketingPageTwo:
+				try {
 				StrategicMarketingPageTwoModel strategicMarketingPageTwoModel = null;
 
 				strategicMarketingPageTwoModel = (StrategicMarketingPageTwoModel) JSONManager
@@ -195,7 +249,12 @@ public class PublishController {
 
 				mLog.info("value found page StrategicMarketingPageOne ");
 				break;
+				}catch (Exception ex) {
+					mLog.severe("error " + ex.getMessage());
+					break;
+				}
 			case TeamCommitmentPage:
+				try {
 				TeamCommitmentPageModel teamCommitmentPageModel = null;
 
 				teamCommitmentPageModel = (TeamCommitmentPageModel) JSONManager.convertFromJson(data.getPagedata(),
@@ -204,7 +263,10 @@ public class PublishController {
 				publish.setTeamCommitmentPage(true);
 				mLog.info("found page TeamCommitmentPage");
 				break;
-		
+				}catch (Exception ex) {
+					mLog.severe("error " + ex.getMessage());
+					break;
+				}
 			}
 			model.addAttribute("PublishModel", publish);
 
