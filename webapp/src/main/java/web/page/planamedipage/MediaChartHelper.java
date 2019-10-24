@@ -16,6 +16,9 @@ public static MediaChart generate(PlanMediaPageModel planMediaPageModel) {
 			"green", "green", "green", "green", "green", "green",
 			"green");
 	final List<MediaRowWeb> mediaRows = ( List<MediaRowWeb>) new Gson().fromJson(planMediaPageModel.getMediaRows(),  new TypeToken<List<MediaRowWeb>>(){}.getType());
+	if (mediaRows == null) {
+		return null;
+	}
 	for (MediaRowWeb mediaRow : mediaRows) {
 		try {
 			jan = jan + ChartBuilder.parse(mediaRow.getJan());
