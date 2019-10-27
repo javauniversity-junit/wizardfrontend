@@ -12,7 +12,7 @@
 
 		<div class="whiteGrad">
 
-			<h1 class="text-center w3-text-black">Confidential Client Evaluation</h1>
+			<h1 class="text-center w3-text-black">Previous Year’s Media Allocation </h1>
 			<script>
 			// Load the Visualization API and the corechart package.
             google.charts.load('current', {'packages':['corechart']});
@@ -21,7 +21,7 @@
            // Set a callback to run when the Google Visualization API is loaded.
             google.charts.setOnLoadCallback(drawChart);
            
-           
+            var totalAdvertisingInvestmentValue=0;
 			var arrayChartDataPoint= [];
 			class ChartDataPoint {
 			    constructor(name, value) {
@@ -49,23 +49,26 @@
 				     for (i = 0; i < arrayChartDataPoint.length; i++) {
 			                   var name = arrayChartDataPoint[i].name;
 			                   var value = arrayChartDataPoint[i].value;
+			                   totalAdvertisingInvestmentValue = totalAdvertisingInvestmentValue + value;
+			                   console.log("totalAdvertisingInvestmentValue " + totalAdvertisingInvestmentValue);
 			                   data.addRow([name, value]);
 			          
 			        }//end of for
-			        
+			        totalAdvertisingInvestmentValue = CurrencyFormatted(totalAdvertisingInvestmentValue);
+			        document.getElementById("totalAdvertisingInvestment").innerHTML = totalAdvertisingInvestmentValue;
+				      
 				     // Set chart options
-				        var options = {'title':'Previous Year’s Media Allocation ',
-				                       'width':900,
-				                       'height':900};
+				        //var options = {'title':'Previous Year’s Media Allocation '};
 
 				        // Instantiate and draw our chart, passing in some options.
 				        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
-				        chart.draw(data, options);
+				        chart.draw(data);
+				        //chart.draw(data, options);
 			}
 
 
 			</script>
-      
+
 			<script type="text/javascript" th:inline="javascript">
 				/*<![CDATA[*/
 				
@@ -77,22 +80,20 @@
 				/*[/]*/	
 					
 
-				
-			
-		
-			
-            
-
                /*]]>*/
 			</script>
-			<div id="piechart_3d" style="width: 700px; height: 800px;"></div>
+			<div id="piechart_3d" style="width: 600px; height: 700px;"></div>
 
-		
-			<div class="w3-container d-print-none" style="padding-top: 2%;">
-				<button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
-				<a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
-				<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
-			</div>
+			<div>Total Advertising Investment: <span id="totalAdvertisingInvestment"></span>  </div>
+			<script>
+	     
+			     
+			</script>
+		</div>
+		<div class="w3-container d-print-none" style="padding-top: 2%;">
+			<button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
+			<a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
+			<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
 		</div>
 		<!-- end of if statement -->
 
