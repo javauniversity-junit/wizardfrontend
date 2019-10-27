@@ -2,6 +2,7 @@ package web.page;
 
 public class Publish {
 	private boolean confidentialClientEvaluationOnePage;
+	private boolean confidentialClientEvaluationProposedPage;
 	private boolean presentedToPage;
 	private boolean planADigitalROICalculatorPage;
 	private boolean planBDigitalROICalculatorPage;
@@ -21,6 +22,14 @@ public class Publish {
 	private boolean planABEPPage;
 	private boolean planBBEPPage;
 	private boolean targetMarketingPage;
+	
+	
+	public boolean isConfidentialClientEvaluationProposedPage() {
+		return confidentialClientEvaluationProposedPage;
+	}
+	public void setConfidentialClientEvaluationProposedPage(boolean confidentialClientEvaluationProposedPage) {
+		this.confidentialClientEvaluationProposedPage = confidentialClientEvaluationProposedPage;
+	}
 	public boolean isConfidentialClientEvaluationOnePage() {
 		return confidentialClientEvaluationOnePage;
 	}

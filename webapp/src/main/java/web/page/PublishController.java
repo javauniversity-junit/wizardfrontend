@@ -82,10 +82,22 @@ public class PublishController {
 
 				model.addAttribute("ConfidentialClientEvaluationOnePageLastYearChartModel", pieChart);
 				model.addAttribute("ConfidentialClientEvaluationOnePageModel", pieChart);
-
+				
 				if (pieChart.size() > 0) {
 					publish.setConfidentialClientEvaluationOnePage(true);
 				}
+				
+				//confidentialClientEvaluationProposedPage
+				List<PieChart> pieChartProposed = ChartBuilder
+						.buildNextYearConfidentialClientEvaluation(confidentialClientEvaluationOnePageModel);
+
+				model.addAttribute("ConfidentialClientEvaluationOnePageLastYearChartProposedModel", pieChartProposed);
+				//model.addAttribute("ConfidentialClientEvaluationOnePageModel", pieChartProposed);
+
+				if (pieChartProposed.size() > 0) {
+					publish.setConfidentialClientEvaluationProposedPage(true);
+				}
+				
 				mLog.info("found page ConfidentialClientEvaluationOnePageModel");
 				break;
 				}catch (Exception ex) {

@@ -45,6 +45,11 @@
             <div th:replace="fragments/ConfidentialClientEvaluationLastYearPageFragment :: ConfidentialClientEvaluationLastYearPage"></div>
         </div>
 
+     <!-- replace ConfidentialClientEvaluationProposedPage begin -->
+        <div th:if="${PublishModel.confidentialClientEvaluationProposedPage}">
+            <div th:replace="fragments/ConfidentialClientEvaluationProposedPageFragment :: ConfidentialClientEvaluationProposedPage"></div>
+        </div>
+
         <!-- replace PlanAMediaPage begin -->
         <div th:if="${PublishModel.planAMediaPage}">
             <div th:replace="fragments/PlanAMediaPagePageFragment :: PlanAMediaPage"></div>
