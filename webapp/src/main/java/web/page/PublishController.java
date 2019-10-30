@@ -25,6 +25,7 @@ import web.page.presentedtopage.PresentedToPageModel;
 import web.page.strategicmarketingpageone.StrategicMarketingPageOneModel;
 import web.page.strategicmarketingpagethree.StrategicMarketingPageThreeModel;
 import web.page.strategicmarketingpagetwo.StrategicMarketingPageTwoModel;
+import web.page.targetmarketingpage.TargetMarketingPageModel;
 import web.page.teamcommitmentpage.TeamCommitmentPageModel;
 import web.repository.WizardDataRepository;
 
@@ -67,7 +68,7 @@ public class PublishController {
 	,ClientObjectivesOnePage
 
 
-	,TargetMarketingPage;
+	,;
 			 */
 			
 			// ConfidentialClientEvaluationOnePage
@@ -245,6 +246,21 @@ public class PublishController {
 				mLog.info("found page StrategicMarketingPageTwo");
 
 				mLog.info("value found page StrategicMarketingPageOne ");
+				break;
+				}catch (Exception ex) {
+					mLog.severe("error " + ex.getMessage());
+					break;
+				}
+			case TargetMarketingPage:
+				try {
+					TargetMarketingPageModel targetMarketingPageModel = null;
+
+					targetMarketingPageModel = (TargetMarketingPageModel) JSONManager
+						.convertFromJson(data.getPagedata(), TargetMarketingPageModel.class);
+				model.addAttribute("targetMarketingPageModel", targetMarketingPageModel);
+				mLog.info("found page targetMarketingPageModel");
+
+				publish.setTargetMarketingPage(true);
 				break;
 				}catch (Exception ex) {
 					mLog.severe("error " + ex.getMessage());
