@@ -5,19 +5,9 @@
 	<div th:if="${PublishModel.targetMarketingPage}">
 		<!-- determine if we show presentedToPage content -->
 
-		<div>
-			<a id="TargetMarketingPage"></a>
-
-			<h1 class="text-center w3-text-white">Marketing Solutions</h1>
-
-
-			<h2 class="text-center w3-text-white">Summary, Conclusions, and
-				Recommendations</h2>
-
-		</div>
 
 		<div class="whiteGrad">
-
+			<a id="TargetMarketingPage"></a>
 
 			<div class="w3-container">
 				<p>
@@ -25,34 +15,43 @@
 			</div>
 
 			<div class="w3-row">
-				<p>A. What percentage of your “target” consumers are Men?</p>
+				<p>
+				A. What percentage of your “target” consumers are Men? <span th:text="${targetMarketingPageModel?.pctMen}"></span>  Women ?
+				<span th:text="${targetMarketingPageModel?.pctWomen}"></span>
+				 </p>
 			</div>
 			<div class="w3-row">
 				<p>B. What is the perceived income of your “target” consumer’s
 					household</p>
 			</div>
-			<div class="w3-row">
-				<div class="w3-col m1 w3-center">
-					<input type="checkbox" />
+			<div class="w3-container">
+				<div class="w3-row">
+					<div class="col-p-1 w3-center">
+						<input type="checkbox" id="under50Id" disabled="disabled"/>
+					</div>
+					<div class="col-p-1 w3-center">Under $50K</div>
+					<div class="col-p-1 w3-center">
+						<input type="checkbox" id="5099Id" disabled="disabled" />
+					</div>
+					<div class="col-p-1 w3-center">$50-$99K</div>
+					<div class="col-p-1 w3-center">
+						<input type="checkbox" id="100149Id" disabled="disabled" />
+					</div>
+					<div class="col-p-1 w3-center">$100K-$149K</div>
+					<div class="col-p-1 w3-center">
+						<input type="checkbox" id="150Id" disabled="disabled"/>
+					</div>
+					<div class="col-p-1 w3-center">$150 Plus</div>
 				</div>
-				<div class="w3-col m2 w3-center">Under 50+</div>
-				<div class="w3-col m1 w3-center">
-					<input type="checkbox" />
-				</div>
-				<div class="w3-col m2 w3-center">Under 50+</div>
-				<div class="w3-col m1 w3-center">
-					<input type="checkbox" />
-				</div>
-				<div class="w3-col m2 w3-center">Under 50+</div>
-				<div class="w3-col m1 w3-center">
-					<input type="checkbox" />
-				</div>
-				<div class="w3-col m2 w3-center">Under 50+</div>
+
 			</div>
+
+
 			<div class="w3-row">
 				<p>C. How else would you describe your ideal “target” consumer
 					(i.e. geo-targeting, home value, behavior, lifestyle, interests,
 					family structure, etc)?</p>
+				<p th:text="${targetMarketingPageModel?.describeIdealTargetConsumer}"></p>
 			</div>
 			<div class="w3-row">
 				<h4>A Lenograph is a picture of consumption by target values
@@ -104,22 +103,22 @@
 					<div class='column normal sub-header'>56 +</div>
 				</div>
 				<div class='row'>
-					<div class='column  no-border sub-header'>Have</div>
-					<div class='column normal'>0</div>
-					<div class='column normal'>3</div>
-					<div class='column normal dark-left'>5</div>
-					<div class='column normal dark-right'>8</div>
-					<div class='column normal'>9</div>
-					<div class='column normal'>10</div>
+					<div class='column  no-border sub-header'>HAVE</div>
+					<div class='column normal' th:text="${targetMarketingPageModel?.have12to18}"></div>
+					<div class='column normal' th:text="${targetMarketingPageModel?.have19to25}"></div>
+					<div class='column normal dark-left' th:text="${targetMarketingPageModel?.have26to35}"></div>
+					<div class='column normal dark-right' th:text="${targetMarketingPageModel?.have36to45}"></div>
+					<div class='column normal' th:text="${targetMarketingPageModel?.have46to55}"></div>
+					<div class='column normal' th:text="${targetMarketingPageModel?.have56Plus}"></div>
 				</div>
 				<div class='row'>
-					<div class='column  no-border'>Want</div>
-					<div class='column normal'>0</div>
-					<div class='column normal'>7</div>
-					<div class='column normal dark-left dark-bottom'>10</div>
-					<div class='column normal dark-right dark-bottom'>10</div>
-					<div class='column normal'>9</div>
-					<div class='column normal'>8</div>
+					<div class='column  no-border sub-header'>WANT</div>
+					<div class='column normal' th:text="${targetMarketingPageModel?.want12to18}"></div>
+					<div class='column normal' th:text="${targetMarketingPageModel?.want19to25}"></div>
+					<div class='column normal dark-left dark-bottom' th:text="${targetMarketingPageModel?.want26to35}"></div>
+					<div class='column normal dark-right dark-bottom' th:text="${targetMarketingPageModel?.want36to45}"></div>
+					<div class='column normal' th:text="${targetMarketingPageModel?.want46to55}"></div>
+					<div class='column normal' th:text="${targetMarketingPageModel?.want55Plus}"></div>
 				</div>
 			</div>
 
@@ -134,6 +133,32 @@
 		</div>
 	</div>
 	<!-- end of if statement -->
-
+<script th:inline="javascript">
+    /*<![CDATA[*/
+    	
+    	 var householdIncome = /*[[${targetMarketingPageModel.householdIncome}]]*/ 'householdIncome';
+         var householdIncomeNumber=  Number(householdIncome);
+    
+         switch(householdIncomeNumber) {
+    	  case 1:
+    		  document.getElementById("150Id").checked = true;
+    	    	
+    	    break;
+    	  case 2:
+    		  document.getElementById("100149Id").checked = true;
+    		  
+    	    break;
+    	  case 3:
+    		  document.getElementById("5099Id").checked = true;
+    	    break;
+    	  case 4:
+    		  document.getElementById("under50Id").checked = true;
+    	    break;
+    	  default:
+    	    // code block
+    	}
+    	
+    /*]]>*/
+</script>
 </div>
 <!-- end of PresentedTofragment -->
