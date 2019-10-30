@@ -50,6 +50,11 @@
             <div th:replace="fragments/ConfidentialClientEvaluationProposedPageFragment :: ConfidentialClientEvaluationProposedPage"></div>
         </div>
 
+ <!-- replace TargetMarketingPage begin -->
+        <div th:if="${PublishModel.targetMarketingPage}">
+            <div th:replace="fragments/TargetMarketingPageFragment :: TargetMarketingPage"></div>
+        </div>
+
         <!-- replace PlanAMediaPage begin -->
         <div th:if="${PublishModel.planAMediaPage}">
             <div th:replace="fragments/PlanAMediaPagePageFragment :: PlanAMediaPage"></div>

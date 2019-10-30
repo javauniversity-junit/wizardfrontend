@@ -344,3 +344,102 @@
 	
 }/*  */
 /*# sourceMappingURL=bootstrap-print.css.map */
+        .vertical-center {
+         margin: 0;
+         position: absolute;
+         top: 50%;
+         -ms-transform: translateY(-50%);
+         transform: translateY(-50%);
+         }
+         p.big {
+         line-height: 1.8;
+         }
+         .flip {
+         transform: scale(-1,1);
+         }
+         .some-page-wrapper {
+         margin: 15px;
+         border-color: red;
+         }
+         .row {
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         width: 100%;
+         }
+         .column {
+         display: flex;
+         height: 100px;
+         flex-direction: column;
+         flex-basis: 100%;
+         flex: 1;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         }
+         .column.normal {
+         border: 1px solid black;
+         }
+         .column.dark-left {
+         border-left: 3px solid black;
+         }
+         .column.dark-right {
+         border-right: 3px solid black;
+         }
+         .column.dark-bottom {
+         border-bottom: 3px solid black;
+         }
+         .column.dark-top {
+         border-top: 3px solid black;
+         }
+         .column.no-border {
+         border: none;
+         }
+         .column.no-border-right {
+         border-right: none;
+         }
+         .column.top-header {
+         background-color: yellow;
+         font-size: large;
+         font-weight: bold;
+         }
+         .column.sub-header {
+         font-size: large;
+         font-weight: bold;
+         }
+         input[type="checkbox"]{
+         -webkit-appearance: initial;
+         appearance: initial;
+         background: gray;
+         width: 40px;
+         height: 40px;
+         border: none;
+         position: relative;
+         }
+         input[type="checkbox"]:checked {
+         background: red;
+         }
+         input[type="checkbox"]:checked:after {
+         /* Heres your symbol replacement */
+         content: "X";
+         color: #fff;
+         /* The following positions my tick in the center, 
+         * but you could just overlay the entire box
+         * with a full after element with a background if you want to */
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         -webkit-transform: translate(-50%,-50%);
+         -moz-transform: translate(-50%,-50%);
+         -ms-transform: translate(-50%,-50%);
+         transform: translate(-50%,-50%);
+         /*
+         * If you want to fully change the check appearance, use the following:
+         * content: " ";
+         * width: 100%;
+         * height: 100%;
+         * background: blue;
+         * top: 0;
+         * left: 0;
+         */
+         }

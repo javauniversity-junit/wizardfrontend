@@ -1,0 +1,139 @@
+<!-- begin of TargetMarketingPagefragment -->
+<div th:fragment="TargetMarketingPage"
+	class="grad w3-container pageBreakInside">
+
+	<div th:if="${PublishModel.targetMarketingPage}">
+		<!-- determine if we show presentedToPage content -->
+
+		<div>
+			<a id="TargetMarketingPage"></a>
+
+			<h1 class="text-center w3-text-white">Marketing Solutions</h1>
+
+
+			<h2 class="text-center w3-text-white">Summary, Conclusions, and
+				Recommendations</h2>
+
+		</div>
+
+		<div class="whiteGrad">
+
+
+			<div class="w3-container">
+				<p>
+				<h3>Determining a business’ needed investment in target.</h3>
+			</div>
+
+			<div class="w3-row">
+				<p>A. What percentage of your “target” consumers are Men?</p>
+			</div>
+			<div class="w3-row">
+				<p>B. What is the perceived income of your “target” consumer’s
+					household</p>
+			</div>
+			<div class="w3-row">
+				<div class="w3-col m1 w3-center">
+					<input type="checkbox" />
+				</div>
+				<div class="w3-col m2 w3-center">Under 50+</div>
+				<div class="w3-col m1 w3-center">
+					<input type="checkbox" />
+				</div>
+				<div class="w3-col m2 w3-center">Under 50+</div>
+				<div class="w3-col m1 w3-center">
+					<input type="checkbox" />
+				</div>
+				<div class="w3-col m2 w3-center">Under 50+</div>
+				<div class="w3-col m1 w3-center">
+					<input type="checkbox" />
+				</div>
+				<div class="w3-col m2 w3-center">Under 50+</div>
+			</div>
+			<div class="w3-row">
+				<p>C. How else would you describe your ideal “target” consumer
+					(i.e. geo-targeting, home value, behavior, lifestyle, interests,
+					family structure, etc)?</p>
+			</div>
+			<div class="w3-row">
+				<h4>A Lenograph is a picture of consumption by target values
+					expressed by ratings 1-10, ten being highest.</h4>
+			</div>
+			<div class='some-page-wrapper'>
+				<div class='row'>
+					<div class='column no-border'></div>
+					<div class='column no-border'></div>
+					<div class='column no-border'>
+						<svg class="flip" height="50px"
+							style="enable-background: new 0 0 32 24;" version="1.1"
+							viewBox="0 0 32 24" width="40px" xml:space="preserve"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Layer_1" />
+                  <g id="curved_x5F_arrow">
+                     <path
+								d="M28,14c0-7.73-6.27-14-14-14S0,6.27,0,14C0,8.477,4.477,4,10,4s10,4.477,10,10v2h-4l8,8l8-8h-4V14z"
+								style="fill:red;" />
+                  </g>
+               </svg>
+					</div>
+					<div class='column dark-left no-border-right dark-top top-header'>
+						Target</div>
+					<div class='column dark-right dark-top top-header'>85%</div>
+					<div class='column  no-border'>
+						<svg height="40px" style="enable-background: new 24 32 0 0;"
+							version="1.1" viewBox="0 0 32 24" width="40px"
+							xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Layer_1" />
+                  <g id="curved_x5F_arrow">
+                     <path
+								d="M28,14c0-7.73-6.27-14-14-14S0,6.27,0,14C0,8.477,4.477,4,10,4s10,4.477,10,10v2h-4l8,8l8-8h-4V14z"
+								style="fill:red;" />
+                  </g>
+               </svg>
+					</div>
+					<div class='column  no-border'></div>
+				</div>
+				<div class='row'>
+					<div class='column no-border'></div>
+					<div class='column normal sub-header'>12-18</div>
+					<div class='column normal sub-header'>19-25</div>
+					<div class='column normal dark-left sub-header'>26-35</div>
+					<div class='column normal dark-right sub-header'>36-45</div>
+					<div class='column normal sub-header'>46-55</div>
+					<div class='column normal sub-header'>56 +</div>
+				</div>
+				<div class='row'>
+					<div class='column  no-border sub-header'>Have</div>
+					<div class='column normal'>0</div>
+					<div class='column normal'>3</div>
+					<div class='column normal dark-left'>5</div>
+					<div class='column normal dark-right'>8</div>
+					<div class='column normal'>9</div>
+					<div class='column normal'>10</div>
+				</div>
+				<div class='row'>
+					<div class='column  no-border'>Want</div>
+					<div class='column normal'>0</div>
+					<div class='column normal'>7</div>
+					<div class='column normal dark-left dark-bottom'>10</div>
+					<div class='column normal dark-right dark-bottom'>10</div>
+					<div class='column normal'>9</div>
+					<div class='column normal'>8</div>
+				</div>
+			</div>
+
+
+
+
+		</div>
+		<div class="w3-container d-print-none" style="padding-top: 2%;">
+			<button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
+			<a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
+			<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
+		</div>
+	</div>
+	<!-- end of if statement -->
+
+</div>
+<!-- end of PresentedTofragment -->
