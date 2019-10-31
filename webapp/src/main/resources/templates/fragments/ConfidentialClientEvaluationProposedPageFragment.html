@@ -12,7 +12,8 @@
 
 		<div class="whiteGrad">
 
-			<h1 class="text-center w3-text-black">Proposed Year’s Media Allocation </h1>
+			<h1 class="text-center w3-text-black">Proposed Year’s Media
+				Allocation</h1>
 			<script>
 			// Load the Visualization API and the corechart package.
             google.charts.load('current', {'packages':['corechart']});
@@ -59,11 +60,21 @@
 				      
 				     // Set chart options
 				        //var options = {'title':'Previous Year’s Media Allocation '};
-
+					var options = {
+        				width: '100%',
+                		height: '100%',
+          
+             			chartArea: {
+            				left: "3%",
+            				top: "3%",
+            				height: "94%",
+            				width: "94%"
+            			  }
+        				};
 				        // Instantiate and draw our chart, passing in some options.
 				        var chart = new google.visualization.PieChart(document.getElementById('piechart_3dProposed'));
-				        chart.draw(data);
-				        //chart.draw(data, options);
+				        //chart.draw(data);
+				        chart.draw(data, options);
 			}
 
 
@@ -82,9 +93,13 @@
 
                /*]]>*/
 			</script>
-			<div id="piechart_3dProposed" style="width: 600px; height: 700px;"></div>
-
-			<div>Total Advertising Investment (TAI): <span id="totalAdvertisingInvestmentProposedValue"></span>  </div>
+			<div id="chart_wrap">
+				<div id="piechart_3dProposed"></div>
+			</div>
+			<div>
+				Total Advertising Investment (TAI): <span
+					id="totalAdvertisingInvestmentProposedValue"></span>
+			</div>
 			<script>
 	     
 			     
