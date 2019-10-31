@@ -9,8 +9,13 @@
              <h2 class="text-center w3-text-black">Proposed Media Plan</h2>
              <h2  th:text="${PresentedToPage?.station}" class="text-center w3-text-black">station</h2>
         
+<<<<<<< HEAD
             <div id="chart_wrap">
             <div id="columnchart_values"></div>
+=======
+           <div id="chart_wrap">
+              <div id="columnchart_values" ></div>
+>>>>>>> 6bbbed590181c33db47a0ba3703bc1a2dfc4f91c
             </div>
             <div class="box green col-p-2"> </div>
             <div class="col-p-2"> Spiked Months</div>
@@ -96,11 +101,13 @@
         var options = {
         		width: '100%',
                 height: '100%',
-            chartArea: {
-                left: "3%",
-                top: "3%",
-                height: "94%",
-                width: "94%"
+          
+             chartArea: {
+            left: "3%",
+            top: "3%",
+            height: "94%",
+            width: "94%"
+            }
         };
         var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
         chart.draw(view, options);
@@ -109,7 +116,8 @@
     /*]]>*/
 </script>
 <style>
-#chart_wrap {
+
+    #chart_wrap {
     border:1px solid gray;
     position: relative;
     padding-bottom: 100%;
@@ -123,6 +131,7 @@
     width:100%;
     height:100%;
 }
+
 </style>    
     
 </div>
