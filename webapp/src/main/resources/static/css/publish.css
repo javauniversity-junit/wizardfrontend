@@ -318,6 +318,7 @@
 		color: black !important;
 		-webkit-print-color-adjust: exact !important;
 		display: block;
+		height:100vh;
 		page-break-before: always;
 		/* print information */
 	}
