@@ -20,6 +20,14 @@
 	overflow: hidden;
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
+input {
+  border:none;
+}
+
+
 #piechart_3d,#piechart_3dProposed {
 	position: absolute;
 	top: 0;
