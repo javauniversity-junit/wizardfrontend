@@ -318,6 +318,12 @@ input {
     page-break-inside: avoid;
     width: 3;
   }
+  .centerDev {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
   /* Hide link's href URL in print. */
  
     .pageBreakBefore {
