@@ -83,6 +83,7 @@ public class PublishController {
 
 				model.addAttribute("ConfidentialClientEvaluationOnePageLastYearChartModel", pieChart);
 				model.addAttribute("ConfidentialClientEvaluationOnePageModel", pieChart);
+				model.addAttribute("ConfidentialClientEvaluationPageDataModel", confidentialClientEvaluationOnePageModel);
 				
 				if (pieChart.size() > 0) {
 					publish.setConfidentialClientEvaluationOnePage(true);

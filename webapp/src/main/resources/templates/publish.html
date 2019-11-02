@@ -40,6 +40,12 @@
             <div th:replace="fragments/MarketPlaceCompetitionPageFragment :: MarketPlaceCompetitionPage"></div>
         </div>
 
+
+<!-- replace ConfidentialClientEvaluationPageDataFragment begin -->
+        <div th:if="${PublishModel.confidentialClientEvaluationOnePage}">
+            <div th:replace="fragments/ConfidentialClientEvaluationPageDataFragment :: ConfidentialClientEvaluationPageData"></div>
+        </div>
+
         <!-- replace ConfidentialClientEvaluationLastYearPage begin -->
         <div th:if="${PublishModel.confidentialClientEvaluationOnePage}">
             <div th:replace="fragments/ConfidentialClientEvaluationLastYearPageFragment :: ConfidentialClientEvaluationLastYearPage"></div>
