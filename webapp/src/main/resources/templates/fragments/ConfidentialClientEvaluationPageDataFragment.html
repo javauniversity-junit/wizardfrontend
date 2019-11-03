@@ -9,52 +9,102 @@
 		</div>
 		<div class="whiteGrad">
 			<fieldset>
-				<p>Determination of Total Advertising Investment (TAI). This is
-					what the client should put back in their business for reinvestment</p>
+				<h2>Determination of Total Advertising Investment (TAI). This is
+					what the client should put back in their business for re-investment</h2>
 
 
-				<div class="centerDiv">
-					<div class="row">
-						<div class="col-6">Previous Year's Media Allocation</div>
-						<div class="col-6">Proposed Month Media Allocation</div>
+				<div class="centerDiv" style="padding-top: 25px;">
 
+					<div class="w3-col s6">
+						<div class="w3-row thick" style="padding-bottom: 15px;">Previous Year's Media Allocation</div>
+						<div class="w3-row">
+							<div class="w3-col s2">
+								<input type="text" autofocus="autofocus"
+									th:value="${ConfidentialClientEvaluationPageDataModel?.lastYearLabel1}"
+									class="form-control" id="lastYearLabel1" name="lastYearLabel1"
+									readonly />
+							</div>
+							<div class="w3-col s2">
+								<input type="text" class="underline" readonly
+									th:value="${ConfidentialClientEvaluationPageDataModel?.lastYearValue1}"
+									id="lastYearValue1" name="lastYearValue1" />
+							</div>
+						</div>
+						<!-- end of row -->
+
+						<div class="w3-row">
+							<div class="w3-col s2">
+								<input maxlength="50"
+									th:value="${ConfidentialClientEvaluationPageDataModel?.lastYearLabel2}"
+									type="text" readonly class="form-control" id="lastYearLabel2"
+									name="lastYearLabel2" />
+							</div>
+							<div class="w3-col s2">
+								<input maxlength="50" type="text" class="underline"
+									id="lastYearValue2"
+									th:value="${ConfidentialClientEvaluationPageDataModel?.lastYearValue2}"
+									name="lastYearValue2" />
+							</div>
+						</div>
+						<!-- end of row -->
+
+
+					</div>
+					<!-- end of previous -->
+					<div class="w3-col s6">
+						<div class="w3-row thick" style="padding-bottom: 15px;">Proposed Month Media Allocation</div>
+
+						<div class="w3-row">
+							<div class="w3-col s2">
+								<input type="text" maxlength="50"
+									th:value="${ConfidentialClientEvaluationPageDataModel?.proposedLabel1}"
+									class="form-control" id="proposedLabel1" name="proposedLabel1" />
+							</div>
+							<div class="w3-col s2">
+								<input type="text" class="underline" id="proposedValue1"
+									readonly maxlength="50"
+									th:value="${ConfidentialClientEvaluationPageDataModel?.proposedValue1}"
+									name="proposedValue1" />
+							</div>
+						</div>
+						<!-- end of row -->
+
+						<div class="w3-row">
+							<div class="w3-col s2">
+								<input maxlength="50"
+									th:value="${ConfidentialClientEvaluationPageDataModel?.lastYearLabel2}"
+									type="text" readonly class="form-control" id="lastYearLabel2"
+									name="lastYearLabel2" />
+							</div>
+							<div class="w3-col s2">
+								<input maxlength="50" type="text" class="underline"
+									id="lastYearValue2"
+									th:value="${ConfidentialClientEvaluationPageDataModel?.lastYearValue2}"
+									name="lastYearValue2" />
+							</div>
+						</div>
+						<!-- end of row -->
 
 
 
 
 					</div>
+
+
+
+
+
+
 				</div>
 
 
 
 
 
+				<div class="row media"></div>
 				<div class="row media">
-					<div class="col-6">
-						<input type="text" autofocus="autofocus"
-							th:value="${ConfidentialClientEvaluationPageDataModel?.lastYearLabel1}"
-							class="form-control" id="lastYearLabel1" name="lastYearLabel1"
-							readonly />
-					</div>
-					<div class="col-6">
-						<input type="text" readonly
-							th:value="${ConfidentialClientEvaluationPageDataModel?.lastYearValue1}"
-							id="lastYearValue1" name="lastYearValue1" />
-					</div>
-				</div>
-				<div class="row media">
-					<div class="col-6">
-						<input maxlength="50"
-							th:value="${ConfidentialClientEvaluationPageDataModel?.lastYearLabel2}"
-							type="text" readonly class="form-control" id="lastYearLabel2"
-							name="lastYearLabel2" />
-					</div>
-					<div class="col-6">
-						<input maxlength="50" type="text" class="form-control"
-							id="lastYearValue2"
-							th:value="${ConfidentialClientEvaluationPageDataModel?.lastYearValue2}"
-							name="lastYearValue2" />
-					</div>
+					<div class="col-6"></div>
+					<div class="col-6"></div>
 				</div>
 				<div class="row media">
 					<div class="col-6">
@@ -289,18 +339,8 @@
 					<div class="col-6">Amount:</div>
 				</div>
 				<div class="row media">
-					<div class="col-6">
-						<input type="text" autofocus="autofocus" onfocus="this.select()"
-							maxlength="50"
-							th:value="${ConfidentialClientEvaluationPageDataModel?.proposedLabel1}"
-							class="form-control" id="proposedLabel1" name="proposedLabel1" />
-					</div>
-					<div class="col-6">
-						<input type="text" class="form-control" id="proposedValue1"
-							readonly maxlength="50"
-							th:value="${ConfidentialClientEvaluationPageDataModel?.proposedValue1}"
-							pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="proposedValue1" />
-					</div>
+					<div class="col-6"></div>
+					<div class="col-6"></div>
 				</div>
 				<div class="row media">
 					<div class="col-6">
