@@ -8,7 +8,7 @@
 
 		</div>
 		<div class="whiteGrad">
-			<fieldset>
+			
 				<h2>Determination of Total Advertising Investment (TAI). This is
 					what the client should put back in their business for re-investment</h2>
 
@@ -181,7 +181,7 @@
 					</div>
 					<div class="col-6">
 						<input type="text" class="form-control" id="lastYearValue8"
-							data-type="currency" readonly
+							 readonly
 							th:value="${ConfidentialClientEvaluationPageDataModel?.lastYearValue8}"
 							name="lastYearValue8" />
 					</div>
@@ -275,7 +275,7 @@
 						<div class="row">
 							<div class="col-2">C.</div>
 							<div class="col-10">
-								<input data-type="currency" readonly type="text" maxlength="50"
+								<input  readonly type="text" maxlength="50"
 									th:value="${ConfidentialClientEvaluationPageDataModel?.taiNext12Months}"
 									class="form-control" id="taiNext12Months"
 									name="taiNext12Months">
@@ -489,7 +489,7 @@
 							<div class="col-10">
 								<input type="text"
 									th:value="${ConfidentialClientEvaluationPageDataModel?.salesGoals}"
-									data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+									
 									readonly class="form-control" id="salesGoals" name="salesGoals">
 							</div>
 						</div>
@@ -527,7 +527,7 @@
 							</div>
 						</div>
 					</div>
-			</fieldset>
+			
 		</div>
 		<!--  end of content -->
 		<div class="w3-container d-print-none" style="padding-top: 2%;">
@@ -538,6 +538,5 @@
 	</div>
 </div>
 
-<script src="js/currency.js "></script>
 <script src="js/ConfidentialClientEvaluationOnePage.js"></script>
 <!-- end of ConfidentialClientEvaluationPageData -->

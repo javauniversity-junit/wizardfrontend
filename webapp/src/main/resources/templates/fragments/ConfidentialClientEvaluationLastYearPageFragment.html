@@ -16,15 +16,15 @@
 				Allocation</h1>
 			<script>
 			// Load the Visualization API and the corechart package.
-            google.charts.load('current', {'packages':['corechart']});
+            //google.charts.load('current', {'packages':['corechart']});
 
 
            // Set a callback to run when the Google Visualization API is loaded.
             google.charts.setOnLoadCallback(drawChart);
            
             var totalAdvertisingInvestmentValue=0;
-			var arrayChartDataPoint= [];
-			class ChartDataPoint {
+			var arrayChartDataPointLastYear= [];
+			class ChartDataPointLastYear {
 			    constructor(name, value) {
 			        this.name = name;
 			        this.value = value;
@@ -34,22 +34,22 @@
 			function addChartDataPoint (name, value) {
 				console.log("addChartDataPoint");
 				//name = "'" + name +  "'";
-			          let x = new ChartDataPoint(name,value); 
-				      arrayChartDataPoint.push(x);
+			          let x = new ChartDataPointLastYear(name,value); 
+				      arrayChartDataPointLastYear.push(x);
 			   
 			}
 
 			function drawChart() {
 
 				   console.log("drawChart");
-				   console.log("arrayChartDataPoint.length " + arrayChartDataPoint.length);
+				   console.log("arrayChartDataPointLastYear.length " + arrayChartDataPointLastYear.length);
 				   var data = new google.visualization.DataTable();
 			           data.addColumn('string', 'Topping');
 			           data.addColumn('number', 'Slices');
 				
-				     for (i = 0; i < arrayChartDataPoint.length; i++) {
-			                   var name = arrayChartDataPoint[i].name;
-			                   var value = arrayChartDataPoint[i].value;
+				     for (i = 0; i < arrayChartDataPointLastYear.length; i++) {
+			                   var name = arrayChartDataPointLastYear[i].name;
+			                   var value = arrayChartDataPointLastYear[i].value;
 			                   totalAdvertisingInvestmentValue = totalAdvertisingInvestmentValue + value;
 			                   console.log("totalAdvertisingInvestmentValue " + totalAdvertisingInvestmentValue);
 			                   data.addRow([name, value]);
