@@ -151,15 +151,38 @@
 										id="lastYearValue9" name="lastYearValue9" />
 								</div>
 							</div>
-
+							<div class="w3-row">
+								<div class="w3-col s2">Total</div>
+								<div class="w3-col s2">
+									<input type="text" class="underline" id="totalMediaInvestment"
+										th:value="${ConfidentialClientEvaluationPageDataModel?.totalMediaInvestment}"
+										readonly tabindex="-1" name="totalMediaInvestment" />
+								</div>
+							</div>
 
 
 							<!-- end of row -->
 
+						<div class="w3-row" style="padding-top: 2%"> <!-- B -->
+							
+							<div class="w3-col s3">
+								<input style="text-align: center;" type="text" maxlength="50" readonly class="underline"
+									th:value="${ConfidentialClientEvaluationPageDataModel?.totalMediaInvestment}"
+									id="totalMediaInvestmentInput" name="totalMediaInvestmentInput">
+							</div>
+						</div>
+				
 
 
+
+
+<!--  add -->
 						</div>
 					</div>
+					
+					
+					
+					
 					<!-- end of previous  -->
 					<div class="inner">
 						<div class="w3-col s6">
@@ -294,8 +317,14 @@
 								</div>
 							</div>
 							<!-- end of row -->
-
-
+							<div class="w3-row">
+								<div class="w3-col s2">Total</div>
+								<div class="w3-col s2">
+									<input id="totalMediaInvestmentTwo" class="underline"
+										th:value="${ConfidentialClientEvaluationPageDataModel?.totalMediaInvestmentTwo}"
+										readonly tabindex="-1" name="totalMediaInvestmentTwo" />
+								</div>
+							</div>
 
 
 						</div>
@@ -311,19 +340,12 @@
 
 
 
+<!--  need to remove -->
 
 
 
 
-
-				<div class="row media">
-					<div class="col-6">Total Media Investment:</div>
-					<div class="col-6">
-						<input type="text" class="form-control" id="totalMediaInvestment"
-							th:value="${ConfidentialClientEvaluationPageDataModel?.totalMediaInvestment}"
-							readonly tabindex="-1" name="totalMediaInvestment" />
-					</div>
-				</div>
+				<div class="row media"></div>
 				<div class="row media">
 					<div class="col-4">
 						<div class="row">
@@ -464,14 +486,7 @@
 
 
 
-				<div class="row media">
-					<div class="col-6">Total Media Investment:</div>
-					<div class="col-6">
-						<input id="totalMediaInvestmentTwo"
-							th:value="${ConfidentialClientEvaluationPageDataModel?.totalMediaInvestmentTwo}"
-							readonly tabindex="-1" name="totalMediaInvestmentTwo" />
-					</div>
-				</div>
+
 				<div class="row media">
 					<div class="col-4">
 						<div class="row">
