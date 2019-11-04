@@ -329,8 +329,6 @@
 					</div>
 
 					<div style="padding-top: 25px;">
-
-
 						<div class="w3-row">
 							<!-- B -->
 							<div class="w3-col s2">
@@ -362,13 +360,6 @@
 								</u>
 
 							</div>
-
-
-
-
-
-
-
 						</div>
 
 						<div class="w3-row">
@@ -387,6 +378,59 @@
 
 					</div>
 
+
+					<div style="padding-top: 25px;">
+						<div class="w3-row">
+							<!-- B -->
+							<div class="w3-col s2">
+								<u> <pre
+										th:text="${'    ' + ConfidentialClientEvaluationPageDataModel?.taiNext12Months + '    '}"></pre>
+								</u>
+
+							</div>
+
+							<div class="w3-col s1" style="padding-top: 25px;">
+								<span> / </span>
+							</div>
+
+							<div class="w3-col s2">
+
+								<u> <pre
+										th:text="${'    ' + ConfidentialClientEvaluationPageDataModel?.pctGrossSales + '%    '}"></pre>
+								</u>
+
+							</div>
+							<div class="w3-col s1" style="padding-top: 25px;">
+								<span> = </span>
+							</div>
+
+							<div class="w3-col s2">
+
+								<u> <pre
+										th:text="${'    ' + ConfidentialClientEvaluationPageDataModel?.estimatedGrossSalesNext12Months + '%    '}"></pre>
+								</u>
+
+							</div>
+						</div>
+
+						<div class="w3-row">
+							<!-- B -->
+							<div class="w3-col s2">
+								<span>Sretch Goals </span>
+							</div>
+							<div class="w3-col s1">&nbsp;</div>
+							<div class="w3-col s2">Next 12 Months</div>
+							<div class="w3-col s1">&nbsp;</div>
+							<div class="w3-col s2">
+								<span>Sretch Gross Sales Next 12 Months </span>
+							</div>
+						</div>
+
+
+					</div>
+
+
+
 				</div>
 
 
@@ -394,225 +438,41 @@
 				<!--  need to remove -->
 
 
-
-
-				<div class="row media"></div>
-				<div class="row media">
-					<div class="col-4">
-						<div class="row">
-							<div class="col-2">B.</div>
-							<div class="col-10">
-								<input type="text" maxlength="50" readonly tabindex="-1"
-									th:value="${ConfidentialClientEvaluationPageDataModel?.totalMediaInvestment}"
-									class="form-control" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
-									id="totalMediaInvestmentInput" name="totalMediaInvestmentInput">
-							</div>
-						</div>
-					</div>
-					<div class="col-4 ">
-						<div class="row">
-							<div class="col-2">/</div>
-							<div class="col-10">
-								<div class="input-group mb-3">
-									<input readonly tabindex="-1" type="number" maxlength="50"
-										th:value="${ConfidentialClientEvaluationPageDataModel?.pctTAIGrossSalesLastYear}"
-										class="form-control" id="pctTAIGrossSalesLastYear"
-										name="pctTAIGrossSalesLastYear">
-									<div class="input-group-append">
-										<span class="input-group-text">%</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-4 ">
-						<div class="row">
-							<div class="col-2">=</div>
-							<div class="col-10"></div>
-						</div>
-					</div>
-				</div>
-				<div class="row media">
-					<div class="col-4">
-						<div class="row">
-							<div class="col-2"></div>
-							<div class="col-10">
-								<div class="row">Total Advertising Investment</div>
-								<div class="row">(TAI) Last 12 Months</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-4 ">
-						<div class="row">
-							<div class="col-2"></div>
-							<div class="col-10">Adv % of Gross Sales</div>
-						</div>
-					</div>
-					<div class="col-4 ">
-						<div class="row">
-							<div class="col-2"></div>
-							<div class="col-10">Gross Sales Last Year</div>
-						</div>
-					</div>
-				</div>
-				<div class="row media">
-					<div class="col-4">
-						<div class="row">
-							<div class="col-2">C.</div>
-							<div class="col-10">
-								<input readonly type="text" maxlength="50"
-									th:value="${ConfidentialClientEvaluationPageDataModel?.taiNext12Months}"
-									class="form-control" id="taiNext12Months"
-									name="taiNext12Months">
-							</div>
-						</div>
-					</div>
-					<div class="col-4 ">
-						<div class="row">
-							<div class="col-2">/</div>
-							<div class="col-10">
-								<div class="input-group mb-3">
-									<input type="number"
-										th:value="${ConfidentialClientEvaluationPageDataModel?.pctGrossSales}"
-										readonly class="form-control" maxlength="50" tabindex="-1"
-										id="pctGrossSales" name="pctGrossSales">
-									<div class="input-group-append">
-										<span class="input-group-text">%</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-4 ">
-						<div class="row">
-							<div class="col-2">=</div>
-							<div class="col-10">
-								<input type="text" readonly
-									th:value="${ConfidentialClientEvaluationPageDataModel?.estimatedGrossSalesNext12Months}"
-									class="form-control" id="estimatedGrossSalesNext12Months"
-									name="estimatedGrossSalesNext12Months">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row media">
-					<div class="col-4">
-						<div class="row">
-							<div class="col-2"></div>
-							<div class="col-10">
-								<div class="row">Total Advertising Investment (TAI)</div>
-								<div class="row">Next 12 Months</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-4 ">
-						<div class="row">
-							<div class="col-2"></div>
-							<div class="col-10">Adv % of Gross Sales</div>
-						</div>
-					</div>
-					<div class="col-4 ">
-						<div class="row">
-							<div class="col-2"></div>
-							<div class="col-10">Estimated Gross Sales Next 12 Months</div>
-						</div>
-					</div>
-				</div>
-				<p>D. Proposed 12 Month Media Allocation:</p>
-				<div class="row media">
-					<div class="col-6">Media:</div>
-					<div class="col-6">Amount:</div>
-				</div>
-				<div class="row media">
-					<div class="col-6"></div>
-					<div class="col-6"></div>
-				</div>
-
-
-
-
-
-
-				<div class="row media">
-					<div class="col-4">
-						<div class="row">
-							<div class="col-2">E.</div>
-							<div class="col-10">
-								<input type="text" maxlength="50" readonly
-									th:value="${ConfidentialClientEvaluationPageDataModel?.taiShouldBe}"
-									id="taiShouldBe" name="taiShouldBe" />
-							</div>
-						</div>
-					</div>
-					<div class="col-4 ">
-						<div class="row">
-							<div class="col-2">/</div>
-							<div class="col-10">
-								<div class="input-group mb-3">
-									<input type="number"
-										th:value="${ConfidentialClientEvaluationPageDataModel?.industryAverage}"
-										class="form-control" id="industryAverage"
-										name="industryAverage" readonly tabindex="-1">
-									<div class="input-group-append">
-										<span class="input-group-text">%</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-4 ">
-						<div class="row">
-							<div class="col-2">=</div>
-							<div class="col-10">
-								<input type="text"
-									th:value="${ConfidentialClientEvaluationPageDataModel?.salesGoals}"
-									readonly class="form-control" id="salesGoals" name="salesGoals">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row media">
-					<div class="col-4">
-						<div class="row">
-							<div class="col-2"></div>
-							<div class="col-10">
-								<div class="row">Stretch Goal Total Advertising</div>
-								<div class="row">Investment (TAI) Next 12 Months</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-4 ">
-						<div class="row">
-							<div class="col-2"></div>
-							<div class="col-10">
-								<div class="row ">Adv % of Gross Sales</div>
-								<div class="row" style="color: red;">(using industry
-									average or if</div>
-								<div class="row" style="color: red;">not known the current
-									Adv %</div>
-								<div class="row" style="color: red;">of gross sales)</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-4 ">
-						<div class="row">
-							<div class="col-2"></div>
-							<div class="col-10">
-								<div class="row">Stretch Sales Goal</div>
-								<div class="row">For Next 12 Months</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<!--  end of content -->
 			</div>
-		</div>
+
+		</div><!-- end of white content -->
+
+
+
 		<!--  do not remove -->
-		<input type="hidden" id="totalMediaInvestmentInput"
+		<input type="hidden" maxlength="50" readonly
+			th:value="${ConfidentialClientEvaluationPageDataModel?.taiShouldBe}"
+			id="taiShouldBe" name="taiShouldBe" /> <input type="hidden"
+			th:value="${ConfidentialClientEvaluationPageDataModel?.industryAverage}"
+			id="industryAverage"> <input type="hidden"
+			th:value="${ConfidentialClientEvaluationPageDataModel?.salesGoals}"
+			readonly class="form-control" id="salesGoals"> <input
+			type="hidden" id="totalMediaInvestmentInput"
 			name="totalMediaInvestmentInput"> <input type="hidden"
 			id="pctTAIGrossSalesLastYear"> <input type="hidden"
-			id="grossSalesLastyear">
+			id="grossSalesLastyear"> <input type="hidden"
+			th:value="${ConfidentialClientEvaluationPageDataModel?.taiNext12Months}"
+			id="taiNext12Months"> <input type="hidden" maxlength="50"
+			readonly tabindex="-1"
+			th:value="${ConfidentialClientEvaluationPageDataModel?.totalMediaInvestment}"
+			class="form-control" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+			id="totalMediaInvestmentInput" name="totalMediaInvestmentInput">
+
+		<input type="hidden" maxlength="50"
+			th:value="${ConfidentialClientEvaluationPageDataModel?.pctTAIGrossSalesLastYear}"
+			class="form-control" id="pctTAIGrossSalesLastYear"
+			name="pctTAIGrossSalesLastYear"> <input type="hidden"
+			th:value="${ConfidentialClientEvaluationPageDataModel?.pctGrossSales}"
+			id="pctGrossSales" name="pctGrossSales"> <input type="hidden"
+			readonly
+			th:value="${ConfidentialClientEvaluationPageDataModel?.estimatedGrossSalesNext12Months}"
+			class="form-control" id="estimatedGrossSalesNext12Months"
+			name="estimatedGrossSalesNext12Months">
 		<!--  end of do not remove -->
 
 		<div class="w3-container d-print-none" style="padding-top: 2%;">
@@ -621,7 +481,10 @@
 			<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
 		</div>
 
-	</div>
 
-	<script src="js/ConfidentialClientEvaluationOnePage.js"></script>
+
+		<script src="js/ConfidentialClientEvaluationOnePage.js"></script>
+		<!--  end of content -->
+	</div>
 	<!-- end of ConfidentialClientEvaluationPageData -->
+</div>
