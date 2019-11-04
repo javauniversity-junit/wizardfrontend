@@ -12,6 +12,9 @@
   width: 80%;
   margin: 0 auto;
 }
+.extend-underline u:after {
+    content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+}
 input.underline {
   border: 0;
   width: 200px;

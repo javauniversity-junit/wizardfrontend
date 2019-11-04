@@ -163,26 +163,24 @@
 
 							<!-- end of row -->
 
-						<div class="w3-row" style="padding-top: 2%"> <!-- B -->
-							
-							<div class="w3-col s3">
-								<input style="text-align: center;" type="text" maxlength="50" readonly class="underline"
-									th:value="${ConfidentialClientEvaluationPageDataModel?.totalMediaInvestment}"
-									id="totalMediaInvestmentInput" name="totalMediaInvestmentInput">
-							</div>
-						</div>
-				
 
 
 
 
-<!--  add -->
+
+
+
+
+
+
+
+							<!--  add -->
 						</div>
 					</div>
-					
-					
-					
-					
+
+
+
+
 					<!-- end of previous  -->
 					<div class="inner">
 						<div class="w3-col s6">
@@ -330,17 +328,53 @@
 						</div>
 					</div>
 
+					<div style="padding-top: 25px;">
 
 
+						<div class="w3-row">
+							<!-- B -->
+							<div class="w3-col s2">
+								<span class="extend-underline"><u
+									th:text="${ConfidentialClientEvaluationPageDataModel?.totalMediaInvestment}"></u></span>
+							</div>
+							
+							<div class="w3-col s1">
+							<span> / </span> 
+							</div>
+							
+							<div class="w3-col s2">
+							<span class="extend-underline">
+							<u
+								th:text="${ConfidentialClientEvaluationPageDataModel?.pctTAIGrossSalesLastYear + '%'}"></u>
+								</span>
+                            </div>
+							<input type="hidden" id="totalMediaInvestmentInput"
+								name="totalMediaInvestmentInput"> <input type="hidden"
+								id="pctTAIGrossSalesLastYear">
 
+
+						</div>
+
+						<div class="w3-row">
+							<!-- B -->
+							<div class="w3-col s2">
+							<span>Total Adv Investment </span>
+							</div>
+							<div class="w3-col s1"></div>
+							<div class="w3-col s2">
+							Next 12 Months
+							</div>
+							
+						</div>
+
+
+					</div>
 
 				</div>
 
 
 
-
-
-<!--  need to remove -->
+				<!--  need to remove -->
 
 
 
