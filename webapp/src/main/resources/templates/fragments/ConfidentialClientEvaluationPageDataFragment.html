@@ -334,23 +334,39 @@
 						<div class="w3-row">
 							<!-- B -->
 							<div class="w3-col s2">
-								<span class="extend-underline"><u
-									th:text="${ConfidentialClientEvaluationPageDataModel?.totalMediaInvestment}"></u></span>
+								<u> <pre
+										th:text="${'    ' + ConfidentialClientEvaluationPageDataModel?.totalMediaInvestment + '    '}"></pre>
+								</u>
+
 							</div>
-							
-							<div class="w3-col s1">
-							<span> / </span> 
+
+							<div class="w3-col s1" style="padding-top: 25px;">
+								<span> / </span>
 							</div>
-							
+
 							<div class="w3-col s2">
-							<span class="extend-underline">
-							<u
-								th:text="${ConfidentialClientEvaluationPageDataModel?.pctTAIGrossSalesLastYear + '%'}"></u>
-								</span>
-                            </div>
-							<input type="hidden" id="totalMediaInvestmentInput"
-								name="totalMediaInvestmentInput"> <input type="hidden"
-								id="pctTAIGrossSalesLastYear">
+
+								<u> <pre
+										th:text="${'    ' + ConfidentialClientEvaluationPageDataModel?.pctTAIGrossSalesLastYear + '%    '}"></pre>
+								</u>
+
+							</div>
+							<div class="w3-col s1" style="padding-top: 25px;">
+								<span> = </span>
+							</div>
+
+							<div class="w3-col s2">
+
+								<u> <pre
+										th:text="${'    ' + ConfidentialClientEvaluationPageDataModel?.grossSalesLastyear + '%    '}"></pre>
+								</u>
+
+							</div>
+
+
+
+
+
 
 
 						</div>
@@ -358,13 +374,14 @@
 						<div class="w3-row">
 							<!-- B -->
 							<div class="w3-col s2">
-							<span>Total Adv Investment </span>
+								<span>Total Adv Investment </span>
 							</div>
-							<div class="w3-col s1"></div>
+							<div class="w3-col s1">&nbsp;</div>
+							<div class="w3-col s2">Next 12 Months</div>
+							<div class="w3-col s1">&nbsp;</div>
 							<div class="w3-col s2">
-							Next 12 Months
+								<span>Estimated Gross Sales Next 12 Months </span>
 							</div>
-							
 						</div>
 
 
@@ -411,12 +428,7 @@
 					<div class="col-4 ">
 						<div class="row">
 							<div class="col-2">=</div>
-							<div class="col-10">
-								<input type="text" maxlength="50" readonly
-									th:value="${ConfidentialClientEvaluationPageDataModel?.grossSalesLastyear}"
-									class="form-control" id="grossSalesLastyear"
-									name="grossSalesLastyear">
-							</div>
+							<div class="col-10"></div>
 						</div>
 					</div>
 				</div>
@@ -596,6 +608,13 @@
 				<!--  end of content -->
 			</div>
 		</div>
+		<!--  do not remove -->
+		<input type="hidden" id="totalMediaInvestmentInput"
+			name="totalMediaInvestmentInput"> <input type="hidden"
+			id="pctTAIGrossSalesLastYear"> <input type="hidden"
+			id="grossSalesLastyear">
+		<!--  end of do not remove -->
+
 		<div class="w3-container d-print-none" style="padding-top: 2%;">
 			<button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
 			<a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
