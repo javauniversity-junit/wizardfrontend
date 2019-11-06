@@ -1,37 +1,45 @@
-.box{
-	width:5px;
-	height:5px;
+.box {
+	width: 5px;
+	height: 5px;
 }
+
 .numbers {
-    line-height:10px;
+	line-height: 10px;
 }
+
 .thick {
-  font-weight: bold;
+	font-weight: bold;
 }
+
 .inner {
-  width: 80%;
-  margin: 0 auto;
+	width: 80%;
+	margin: 0 auto;
 }
+
 .extend-underline u:after {
-    content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+	content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
 }
+
 input.underline {
-  border: 0;
-  width: 200px;
-  outline: 0;
-  background: transparent;
-  border-bottom: 1px solid black;
+	border: 0;
+	width: 200px;
+	outline: 0;
+	background: transparent;
+	border-bottom: 1px solid black;
 }
- 
-.red{
-	background:red;
+
+.red {
+	background: red;
 }
-.green{
-	background:green;
+
+.green {
+	background: green;
 }
-.blue{
-	background:blue;
+
+.blue {
+	background: blue;
 }
+
 #chart_wrap {
 	border: 1px solid gray;
 	position: relative;
@@ -40,21 +48,24 @@ input.underline {
 	overflow: hidden;
 }
 
-textarea:focus, input:focus{
-    outline: none;
+textarea:focus,
+input:focus {
+	outline: none;
 }
+
 input {
-  border:none;
+	border: none;
 }
 
-
-#piechart_3d,#piechart_3dProposed {
+#piechart_3d,
+#piechart_3dProposed {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 }
+
 .chart_div {
 	position: absolute;
 	top: 0;
@@ -64,42 +75,42 @@ input {
 }
 
 div.curved-text {
-    border: 3px solid black;
-    border-radius: 7px;
-    padding: 8px;
-    background-color: white;
-    color: #000;
-    text-align:center;
-    width:150px;
-     font-weight: bold;
-  
-  
+	border: 3px solid black;
+	border-radius: 7px;
+	padding: 8px;
+	background-color: white;
+	color: #000;
+	text-align: center;
+	width: 150px;
+	font-weight: bold;
 }
 
 .grad {
 	padding: 2%;
 	color: white;
-    min-height: 800px;
-    height: auto !important;
-    height: 800px;
+	min-height: 800px;
+	height: auto !important;
+	height: 800px;
 	background-image: linear-gradient(green, black);
 	/* Standard syntax (must be last) */
 }
+
 .full-width-div {
-    position: absolute;
-    width: 100%;
-    left: 0;
+	position: absolute;
+	width: 100%;
+	left: 0;
 }
+
 .whiteGrad {
 	padding: 2%;
 	color: black;
 	background-image: linear-gradient(white, white);
 	/* Standard syntax (must be last) */
 }
-    .text-center{
-         text-align: center;
-    }
-    
+
+.text-center {
+	text-align: center;
+}
 
 #chart_wrap {
 	position: relative;
@@ -123,249 +134,313 @@ div.curved-text {
 	/* Standard syntax
 	/* Standard syntax (must be last) */
 }
+
 .full-width-div {
-    position: absolute;
-    width: 100%;
-    left: 0;
+	position: absolute;
+	width: 100%;
+	left: 0;
 }
+
 .whiteGrad {
 	padding: 1%;
 	color: black;
 	background-image: linear-gradient(white, white);
-    height: 100%;
+	height: 100%;
 	/* Standard syntax (must be last) */
 }
-    
-  .col-p-1, .col-p-2, .col-p-3, .col-p-4, .col-p-5, .col-p-6, .col-p-7, .col-p-8, .col-p-9, .col-p-10, .col-p-11, .col-p-12 {
-    float: left;
-    position: relative;
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .col-p-12 {
-    width: 100%;
-  }
-  .col-p-11 {
-    width: 91.66666667%;
-  }
-  .col-p-10 {
-    width: 83.33333333%;
-  }
-  .col-p-9 {
-    width: 75%;
-  }
-  .col-p-8 {
-    width: 66.66666667%;
-  }
-  .col-p-7 {
-    width: 58.33333333%;
-  }
-  .col-p-6 {
-    width: 50%;
-  }
-  .col-p-5 {
-    width: 41.66666667%;
-  }
-  .col-p-4 {
-    width: 33.33333333%;
-  }
-  .col-p-3 {
-    width: 25%;
-  }
-  .col-p-2 {
-    width: 16.66666667%;
-  }
-  .col-p-1 {
-    width: 8.33333333%;
-  }
-  .col-p-pull-12 {
-    right: 100%;
-  }
-  .col-p-pull-11 {
-    right: 91.66666667%;
-  }
-  .col-p-pull-10 {
-    right: 83.33333333%;
-  }
-  .col-p-pull-9 {
-    right: 75%;
-  }
-  .col-p-pull-8 {
-    right: 66.66666667%;
-  }
-  .col-p-pull-7 {
-    right: 58.33333333%;
-  }
-  .col-p-pull-6 {
-    right: 50%;
-  }
-  .col-p-pull-5 {
-    right: 41.66666667%;
-  }
-  .col-p-pull-4 {
-    right: 33.33333333%;
-  }
-  .col-p-pull-3 {
-    right: 25%;
-  }
-  .col-p-pull-2 {
-    right: 16.66666667%;
-  }
-  .col-p-pull-1 {
-    right: 8.33333333%;
-  }
-  .col-p-pull-0 {
-    right: auto;
-  }
-  .col-p-push-12 {
-    left: 100%;
-  }
-  .col-p-push-11 {
-    left: 91.66666667%;
-  }
-  .col-p-push-10 {
-    left: 83.33333333%;
-  }
-  .col-p-push-9 {
-    left: 75%;
-  }
-  .col-p-push-8 {
-    left: 66.66666667%;
-  }
-  .col-p-push-7 {
-    left: 58.33333333%;
-  }
-  .col-p-push-6 {
-    left: 50%;
-  }
-  .col-p-push-5 {
-    left: 41.66666667%;
-  }
-  .col-p-push-4 {
-    left: 33.33333333%;
-  }
-  .col-p-push-3 {
-    left: 25%;
-  }
-  .col-p-push-2 {
-    left: 16.66666667%;
-  }
-  .col-p-push-1 {
-    left: 8.33333333%;
-  }
-  .col-p-push-0 {
-    left: auto;
-  }
-  .col-p-offset-12 {
-    margin-left: 100%;
-  }
-  .col-p-offset-11 {
-    margin-left: 91.66666667%;
-  }
-  .col-p-offset-10 {
-    margin-left: 83.33333333%;
-  }
-  .col-p-offset-9 {
-    margin-left: 75%;
-  }
-  .col-p-offset-8 {
-    margin-left: 66.66666667%;
-  }
-  .col-p-offset-7 {
-    margin-left: 58.33333333%;
-  }
-  .col-p-offset-6 {
-    margin-left: 50%;
-  }
-  .col-p-offset-5 {
-    margin-left: 41.66666667%;
-  }
-  .col-p-offset-4 {
-    margin-left: 33.33333333%;
-  }
-  .col-p-offset-3 {
-    margin-left: 25%;
-  }
-  .col-p-offset-2 {
-    margin-left: 16.66666667%;
-  }
-  .col-p-offset-1 {
-    margin-left: 8.33333333%;
-  }
-  .col-p-offset-0 {
-    margin-left: 0%;
-  }   
-    
-    
+
+.col-p-1,
+.col-p-2,
+.col-p-3,
+.col-p-4,
+.col-p-5,
+.col-p-6,
+.col-p-7,
+.col-p-8,
+.col-p-9,
+.col-p-10,
+.col-p-11,
+.col-p-12 {
+	float: left;
+	position: relative;
+	min-height: 1px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.col-p-12 {
+	width: 100%;
+}
+
+.col-p-11 {
+	width: 91.66666667%;
+}
+
+.col-p-10 {
+	width: 83.33333333%;
+}
+
+.col-p-9 {
+	width: 75%;
+}
+
+.col-p-8 {
+	width: 66.66666667%;
+}
+
+.col-p-7 {
+	width: 58.33333333%;
+}
+
+.col-p-6 {
+	width: 50%;
+}
+
+.col-p-5 {
+	width: 41.66666667%;
+}
+
+.col-p-4 {
+	width: 33.33333333%;
+}
+
+.col-p-3 {
+	width: 25%;
+}
+
+.col-p-2 {
+	width: 16.66666667%;
+}
+
+.col-p-1 {
+	width: 8.33333333%;
+}
+
+.col-p-pull-12 {
+	right: 100%;
+}
+
+.col-p-pull-11 {
+	right: 91.66666667%;
+}
+
+.col-p-pull-10 {
+	right: 83.33333333%;
+}
+
+.col-p-pull-9 {
+	right: 75%;
+}
+
+.col-p-pull-8 {
+	right: 66.66666667%;
+}
+
+.col-p-pull-7 {
+	right: 58.33333333%;
+}
+
+.col-p-pull-6 {
+	right: 50%;
+}
+
+.col-p-pull-5 {
+	right: 41.66666667%;
+}
+
+.col-p-pull-4 {
+	right: 33.33333333%;
+}
+
+.col-p-pull-3 {
+	right: 25%;
+}
+
+.col-p-pull-2 {
+	right: 16.66666667%;
+}
+
+.col-p-pull-1 {
+	right: 8.33333333%;
+}
+
+.col-p-pull-0 {
+	right: auto;
+}
+
+.col-p-push-12 {
+	left: 100%;
+}
+
+.col-p-push-11 {
+	left: 91.66666667%;
+}
+
+.col-p-push-10 {
+	left: 83.33333333%;
+}
+
+.col-p-push-9 {
+	left: 75%;
+}
+
+.col-p-push-8 {
+	left: 66.66666667%;
+}
+
+.col-p-push-7 {
+	left: 58.33333333%;
+}
+
+.col-p-push-6 {
+	left: 50%;
+}
+
+.col-p-push-5 {
+	left: 41.66666667%;
+}
+
+.col-p-push-4 {
+	left: 33.33333333%;
+}
+
+.col-p-push-3 {
+	left: 25%;
+}
+
+.col-p-push-2 {
+	left: 16.66666667%;
+}
+
+.col-p-push-1 {
+	left: 8.33333333%;
+}
+
+.col-p-push-0 {
+	left: auto;
+}
+
+.col-p-offset-12 {
+	margin-left: 100%;
+}
+
+.col-p-offset-11 {
+	margin-left: 91.66666667%;
+}
+
+.col-p-offset-10 {
+	margin-left: 83.33333333%;
+}
+
+.col-p-offset-9 {
+	margin-left: 75%;
+}
+
+.col-p-offset-8 {
+	margin-left: 66.66666667%;
+}
+
+.col-p-offset-7 {
+	margin-left: 58.33333333%;
+}
+
+.col-p-offset-6 {
+	margin-left: 50%;
+}
+
+.col-p-offset-5 {
+	margin-left: 41.66666667%;
+}
+
+.col-p-offset-4 {
+	margin-left: 33.33333333%;
+}
+
+.col-p-offset-3 {
+	margin-left: 25%;
+}
+
+.col-p-offset-2 {
+	margin-left: 16.66666667%;
+}
+
+.col-p-offset-1 {
+	margin-left: 8.33333333%;
+}
+
+.col-p-offset-0 {
+	margin-left: 0%;
+}
 
 @media print {
-  body{
-    -webkit-print-color-adjust: exact; /*chrome & webkit browsers*/
-    color-adjust: exact; /*firefox & IE */
-  } 
-  .divPrint * { visibility: visible; }
-  /* Always insert a page break after the element */
-  .always-page-break-after,
-  .always-pba {
-    page-break-after: always;
-  }
-  /* Avoid page break after the element (if possible) */
-  .avoid-page-break-after,
-  .avoid-pba {
-    page-break-after: avoid;
-  }
-  /* Insert page breaks after the element so that the next page is formatted as a left page */
-  .left-page-break-after,
-  .left-pba {
-    page-break-after: left;
-  }
-  /* Insert page breaks after the element so that the next page is formatted as a right page */
-  .right-page-break-after,
-  .right-pba {
-    page-break-after: right;
-  }
-  /* Always insert a page break before the element */
-  .always-page-break-before,
-  .always-pbb {
-    page-break-before: always;
-  }
-  /* Avoid page break before the element (if possible) */
-  .avoid-page-break-before,
-  .avoid-pbb {
-    page-break-before: avoid;
-  }
-  /* Insert page breaks before the element so that the next page is formatted as a left page */
-  .left-page-break-before,
-  .left-pbb {
-    page-break-before: left;
-  }
-  /* Insert page breaks before the element so that the next page is formatted as a right page */
-  .right-page-break-before,
-  .right-pbb {
-    page-break-before: right;
-  }
-  /* Avoid page break inside the element (if possible) */
-  .avoid-page-break-inside,
-  .avoid-pbi {
-    page-break-inside: avoid;
-    width: 3;
-  }
-  .centerDev {
-  margin: auto;
-  width: 60%;
- 
-  padding: 50px;
-}
-  /* Hide link's href URL in print. */
- 
-    .pageBreakBefore {
+	body {
+		-webkit-print-color-adjust: exact;
+		/*chrome & webkit browsers*/
+		color-adjust: exact;
+		/*firefox & IE */
+	}
+	.divPrint * {
+		visibility: visible;
+	}
+	/* Always insert a page break after the element */
+	.always-page-break-after,
+	.always-pba {
+		page-break-after: always;
+	}
+	/* Avoid page break after the element (if possible) */
+	.avoid-page-break-after,
+	.avoid-pba {
+		page-break-after: avoid;
+	}
+	/* Insert page breaks after the element so that the next page is formatted as a left page */
+	.left-page-break-after,
+	.left-pba {
+		page-break-after: left;
+	}
+	/* Insert page breaks after the element so that the next page is formatted as a right page */
+	.right-page-break-after,
+	.right-pba {
+		page-break-after: right;
+	}
+	/* Always insert a page break before the element */
+	.always-page-break-before,
+	.always-pbb {
+		page-break-before: always;
+	}
+	/* Avoid page break before the element (if possible) */
+	.avoid-page-break-before,
+	.avoid-pbb {
+		page-break-before: avoid;
+	}
+	/* Insert page breaks before the element so that the next page is formatted as a left page */
+	.left-page-break-before,
+	.left-pbb {
+		page-break-before: left;
+	}
+	/* Insert page breaks before the element so that the next page is formatted as a right page */
+	.right-page-break-before,
+	.right-pbb {
+		page-break-before: right;
+	}
+	/* Avoid page break inside the element (if possible) */
+	.avoid-page-break-inside,
+	.avoid-pbi {
+		page-break-inside: avoid;
+		width: 3;
+	}
+	.centerDev {
+		margin: auto;
+		width: 60%;
+		padding: 50px;
+	}
+	/* Hide link's href URL in print. */
+	.pageBreakBefore {
 		background-color: black !important;
 		font-size: medium !important;
 		color: black !important;
 		-webkit-print-color-adjust: exact !important;
 		display: block;
-		height:100vh;
+		height: 100vh;
 		page-break-before: always;
 		/* print information */
 	}
@@ -383,113 +458,133 @@ div.curved-text {
 		-webkit-print-color-adjust: exact !important;
 		page-break-inside: avoid;
 	}
-    .grad {
-	padding: 1%;
-	color: white;
-	background-image: linear-gradient(green, black);
-    min-height: 700px;
-    height: auto !important;
-    height: 700px;
-	/* Standard syntax (must be last) */
+	.grad {
+		padding: 1%;
+		color: white;
+		background-image: linear-gradient(green, black);
+		min-height: 700px;
+		height: auto !important;
+		height: 700px;
+		/* Standard syntax (must be last) */
+	}
+	.d-print-none {
+		display: none !important;
+	}
 }
-    .d-print-none {
-    display: none !important;
-  }
-  
-    
-	
-}/*  */
+
+
+/*  */
+
+
 /*# sourceMappingURL=bootstrap-print.css.map */
-        .vertical-center {
-         margin: 0;
-         position: absolute;
-         top: 50%;
-         -ms-transform: translateY(-50%);
-         transform: translateY(-50%);
-         }
-         p.big {
-         line-height: 1.8;
-         }
-         .flip {
-         transform: scale(-1,1);
-         }
-         .some-page-wrapper {
-         margin: 15px;
-         border-color: red;
-         }
-         .row {
-         display: flex;
-         flex-direction: row;
-         flex-wrap: wrap;
-         width: 100%;
-         }
-         .column {
-         display: flex;
-         height: 100px;
-         flex-direction: column;
-         flex-basis: 100%;
-         flex: 1;
-         align-items: center;
-         justify-content: center;
-         text-align: center;
-         }
-         .column.normal {
-         border: 1px solid black;
-         }
-         .column.dark-left {
-         border-left: 3px solid black;
-         }
-         .column.dark-right {
-         border-right: 3px solid black;
-         }
-         .column.dark-bottom {
-         border-bottom: 3px solid black;
-         }
-         .column.dark-top {
-         border-top: 3px solid black;
-         }
-         .column.no-border {
-         border: none;
-         }
-         .column.no-border-right {
-         border-right: none;
-         }
-         .column.top-header {
-         background-color: yellow;
-         font-size: large;
-         font-weight: bold;
-         }
-         .column.sub-header {
-         font-size: large;
-         font-weight: bold;
-         }
-         input[type="checkbox"]{
-         -webkit-appearance: initial;
-         appearance: initial;
-         background: gray;
-         width: 40px;
-         height: 40px;
-         border: none;
-         position: relative;
-         }
-         input[type="checkbox"]:checked {
-         background: red;
-         }
-         input[type="checkbox"]:checked:after {
-         /* Heres your symbol replacement */
-         content: "X";
-         color: #fff;
-         /* The following positions my tick in the center, 
+
+.vertical-center {
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+p.big {
+	line-height: 1.8;
+}
+
+.flip {
+	transform: scale(-1, 1);
+}
+
+.some-page-wrapper {
+	margin: 15px;
+	border-color: red;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.column {
+	display: flex;
+	height: 100px;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.column.normal {
+	border: 1px solid black;
+}
+
+.column.dark-left {
+	border-left: 3px solid black;
+}
+
+.column.dark-right {
+	border-right: 3px solid black;
+}
+
+.column.dark-bottom {
+	border-bottom: 3px solid black;
+}
+
+.column.dark-top {
+	border-top: 3px solid black;
+}
+
+.column.no-border {
+	border: none;
+}
+
+.column.no-border-right {
+	border-right: none;
+}
+
+.column.top-header {
+	background-color: yellow;
+	font-size: large;
+	font-weight: bold;
+}
+
+.column.sub-header {
+	font-size: large;
+	font-weight: bold;
+}
+
+input[type="checkbox"] {
+	-webkit-appearance: initial;
+	appearance: initial;
+	background: gray;
+	width: 40px;
+	height: 40px;
+	border: none;
+	position: relative;
+}
+
+input[type="checkbox"]:checked {
+	background: red;
+}
+
+input[type="checkbox"]:checked:after {
+	/* Heres your symbol replacement */
+	content: "X";
+	color: #fff;
+	/* The following positions my tick in the center, 
          * but you could just overlay the entire box
          * with a full after element with a background if you want to */
-         position: absolute;
-         left: 50%;
-         top: 50%;
-         -webkit-transform: translate(-50%,-50%);
-         -moz-transform: translate(-50%,-50%);
-         -ms-transform: translate(-50%,-50%);
-         transform: translate(-50%,-50%);
-         /*
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	/*
          * If you want to fully change the check appearance, use the following:
          * content: " ";
          * width: 100%;
@@ -498,4 +593,4 @@ div.curved-text {
          * top: 0;
          * left: 0;
          */
-         }
+}
