@@ -6,72 +6,88 @@
 
 
 		<div class="whiteGrad">
-		
-		
-		<div>
-			<a id="MarketPlaceCompetitionPage"></a>
-			
-			<h1 class="text-center">Marketplace Competition</h1>
-			
-			
-			
-		
-		</div>
-		
+
+
+			<div>
+				<a id="MarketPlaceCompetitionPage"></a>
+
+				<h1 class="text-center">Marketplace Competition</h1>
+
+
+
+
+			</div>
+
 			<div class="w3-row">
-				<div class="w3-col s2">
-					
-						<span>How long have you been
-							in business?</span>
-					
+				<div class="w3-col s3">
+
+					<span>How long have you been in business?</span>
+
 				</div>
-				<div class="w3-col s2">
-					
-						<span 
-							th:text="${StrategicMarketingPageOne?.yearsInBusiness}"></span>
-					
+				<div class="w3-col s1">
+
+					<span th:text="${StrategicMarketingPageOne?.yearsInBusiness}"></span>
+
+				</div>
+
+				<div class="w3-col s3">
+
+					<span>How many locations?</span>
+
+				</div>
+				<div class="w3-col s1">
+
+					<span><span
+						th:text="${StrategicMarketingPageOne?.numberOfLocations}"></span></span>
+
 				</div>
 
 				<div class="w3-col s2">
-					
-						<span>How many locations?</span>
-					
-				</div>
-				<div class="w3-col s2">
-					
-						<span><span
-							th:text="${StrategicMarketingPageOne?.numberOfLocations}"></span></span>
-					
-				</div>
 
-				<div class="w3-col s2">
-					
-						<span>Plan to Expand?</span>
-					
+					<span>Plan to Expand?</span>
+
 				</div>
 				<div class="w3-col s2">
-					
-						<span class="form-control, border-0"><span
-							th:text="${StrategicMarketingPageOne?.planToExpand}"></span></span>
-					
+
+					<span th:text="${StrategicMarketingPageOne?.planToExpand}"></span>
+
 				</div>
 			</div>
-			
-			
-			
-			
 
-			<p>
-				How long have you been in business? <span
-					th:text="${StrategicMarketingPageOne?.yearsInBusiness}"></span>
-			</p>
-			<h2>Presented To</h2>
-			<span th:text="${PresentedToPage?.clientContactName}"></span>
-			
-			<h2>Presented By</h2>
-		
-			<p>Copyright © 1984-2017 Executive Decision Systems, Inc. and The
-				Guld Resource Group, LLC. </p>
+			<div class="w3-row" style="padding-top: 5%;">
+				<div class="w3-col s6">
+					<span class="curved-text"> 1<sup>st</sup> Tier
+					</span>&nbsp; <span
+						th:text="${MarketPlaceCompetitionPageModel?.firstTierBusiness}"></span>
+				</div>
+				<div class="w3-col s6">
+					<span class="curved-text"> 2<sup>nd</sup> Tier
+					</span>&nbsp; <span
+						th:text="${MarketPlaceCompetitionPageModel?.secondTierBusiness}"></span>
+				</div>
+				
+				
+				
+			</div>
+
+			<div class="w3-row" style="padding-top: 5%;">
+				<div class="w3-col s6">
+					<span class="curved-text"> 3<sup>rd</sup> Tier
+					</span>&nbsp; <span
+						th:text="${MarketPlaceCompetitionPageModel?.thirdTierBusiness}"></span>
+				</div>
+				<div class="w3-col s6">
+					<span class="curved-text"> 4<sup>th</sup> Tier
+					</span>&nbsp; <span
+						th:text="${MarketPlaceCompetitionPageModel?.fourthTierBusiness}"></span>
+				</div>
+				
+				
+				
+			</div>
+
+
+
 		</div>
 		<div class="w3-container d-print-none" style="padding-top: 2%;">
 			<button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
@@ -79,5 +95,7 @@
 			<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
 		</div>
 
-	</div><!-- end of if statement -->
-</div><!-- begin of MarketPlaceCompetitionfragment -->
+	</div>
+	<!-- end of if statement -->
+</div>
+<!-- begin of MarketPlaceCompetitionfragment -->
