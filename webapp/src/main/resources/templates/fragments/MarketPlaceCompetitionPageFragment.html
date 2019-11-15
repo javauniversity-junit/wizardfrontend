@@ -4,56 +4,62 @@
 	<div th:if="${PublishModel.marketPlaceCompetitionPage}">
 		<!-- determine if we show content -->
 
+
+		<div class="whiteGrad">
+		
+		
 		<div>
 			<a id="MarketPlaceCompetitionPage"></a>
 			
-			<h1 class="text-center w3-text-white">Marketplace Competition</h1>
+			<h1 class="text-center">Marketplace Competition</h1>
 			
 			
-			<h2 class="text-center w3-text-white">Summary, Conclusions, and
-				Recommendations</h2>
+			
 		
 		</div>
-
-		<div class="whiteGrad">
-			<div class="row">
-				<div class="col-4">
-					<div class="row, form-group">
-						<span class="form-control, border-0">How long have you been
+		
+			<div class="w3-row">
+				<div class="w3-col s2">
+					
+						<span>How long have you been
 							in business?</span>
-					</div>
+					
 				</div>
-				<div class="col-1">
-					<div class="row, form-group">
-						<span class="form-control, border-0"
+				<div class="w3-col s2">
+					
+						<span 
 							th:text="${StrategicMarketingPageOne?.yearsInBusiness}"></span>
-					</div>
+					
 				</div>
 
-				<div class="col-3">
-					<div class="row, form-group">
-						<span class="form-control, border-0">How many locations?</span>
-					</div>
+				<div class="w3-col s2">
+					
+						<span>How many locations?</span>
+					
 				</div>
-				<div class="col-1">
-					<div class="row, form-group">
-						<span class="form-control, border-0"><span
+				<div class="w3-col s2">
+					
+						<span><span
 							th:text="${StrategicMarketingPageOne?.numberOfLocations}"></span></span>
-					</div>
+					
 				</div>
 
-				<div class="col-2">
-					<div class="row, form-group">
-						<span class="form-control, border-0">Plan to Expand?</span>
-					</div>
+				<div class="w3-col s2">
+					
+						<span>Plan to Expand?</span>
+					
 				</div>
-				<div class="col-1">
-					<div class="row, form-group">
+				<div class="w3-col s2">
+					
 						<span class="form-control, border-0"><span
 							th:text="${StrategicMarketingPageOne?.planToExpand}"></span></span>
-					</div>
+					
 				</div>
 			</div>
+			
+			
+			
+			
 
 			<p>
 				How long have you been in business? <span
