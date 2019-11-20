@@ -181,6 +181,7 @@ div.curved-text {
 
 .whiteGrad {
 	padding: 2%;
+	min-height: 700px;
 	color: black;
 	background-image: linear-gradient(white, white);
 	/* Standard syntax (must be last) */
