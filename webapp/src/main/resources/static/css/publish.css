@@ -1,3 +1,10 @@
+.position-bottom {
+  position: absolute;
+  
+  bottom: 10px;
+
+}
+
 .fill-arrow-green {
   fill: #002b00;
 }
