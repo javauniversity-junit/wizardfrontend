@@ -87,11 +87,18 @@
 			<a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
 			<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
 		</div>
-		
-		<div class="divPrint position-bottom w3-white">
-			<small> Copyright © 1984-2017 Executive Decision Systems,
-				Inc. and The Guld Resource Group, LLC. </small>
-		</div>
+		<div id="TeamCommitmentPageCopyRightId"></div>
+		<script th:inline="javascript">
+			/*<![CDATA[*/
+			$(function() {
+				// Store
+
+				$("#TeamCommitmentPageCopyRightId").load("copyright.html");
+			});
+			/*]]>*/
+		</script>
+
+
 	</div>
 	<!-- end of if teamCommitmentPage content -->
 
