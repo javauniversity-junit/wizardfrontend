@@ -459,11 +459,30 @@ div.curved-text {
 	margin-left: 0%;
 }
 
+
+
 @media print {
+	
+	 @page {size: A4 landscape;max-height:100%; max-width:100%}
+	.whiteGrad {
+	padding: 2%;
+	width: 90%;
+    height:90%;
+	
+	
+	margin: auto;
+	margin-top: 0px !important;
+	border: 1px solid;
+	color: black;
+	background-image: linear-gradient(white, white);
+	/* Standard syntax (must be last) */
+}
 	body {
 		-webkit-print-color-adjust: exact;
 		/*chrome & webkit browsers*/
 		color-adjust: exact;
+	    height:100%;
+	
 		/*firefox & IE */
 	}
 	.divPrint * {
@@ -527,7 +546,7 @@ div.curved-text {
 		color: black !important;
 		-webkit-print-color-adjust: exact !important;
 		display: block;
-		height: 100vh;
+		/*height: 100vh;*/
 		page-break-before: always;
 		/* print information */
 	}
