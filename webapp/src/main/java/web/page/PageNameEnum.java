@@ -20,5 +20,9 @@ public enum PageNameEnum {
 	,StrategicMarketingPageFour
 	,PlanABEPPage
 	,PlanBBEPPage
-	,TargetMarketingPage;
+	,TargetMarketingPage
+	,PlanAFlightDatesPage
+	,PlanBFlightDatesPage
+	,PlanConceptOnePage
+	,PlanConceptTwoPage;
 }

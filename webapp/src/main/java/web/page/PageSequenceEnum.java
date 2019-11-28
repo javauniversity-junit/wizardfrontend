@@ -20,7 +20,11 @@ public enum PageSequenceEnum {
 	,PlanAMediaPage_Sequence(18)
 	,PlanBMediaPage_Sequence(19)
 	,PlanADigitalROICalculatorPage_Sequence(21)
-	,PlanBDigitalROICalculatorPage_Sequence(22);
+	,PlanBDigitalROICalculatorPage_Sequence(22)
+	,PlanAFlightDatesPage_Sequence(23)
+	,PlanBFlightDatesPage_Sequence(24)
+	,PlanConceptOnePage_Sequence(25)
+	,PlanConceptTwoPage_Sequence(26);
 
 
 	

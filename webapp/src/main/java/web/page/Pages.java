@@ -23,6 +23,10 @@ public enum Pages {
 	,TEAMCOMMITMENTPAGE(PageNameEnum.TeamCommitmentPage, PageSequenceEnum.TEAMCOMMITMENTPAGE_SEQUENCE.getDatabaseValue())
 	,CLIENTOBJECTIVESONEPAGE(PageNameEnum.ClientObjectivesOnePage, PageSequenceEnum.CLIENTOBJECTIVESONEPAGE_SEQUENCE.getDatabaseValue())
 	,MARKETPLACECOMPETITIONPAGE(PageNameEnum.MarketPlaceCompetitionPage, PageSequenceEnum.MARKETPLACECOMPETITIONPAGE_SEQUENCE.getDatabaseValue())
+	,PlanAFlightDatesPage(PageNameEnum.PlanAFlightDatesPage, PageSequenceEnum.PlanAFlightDatesPage_Sequence.getDatabaseValue())
+	,PlanBFlightDatesPage(PageNameEnum.PlanBFlightDatesPage, PageSequenceEnum.PlanBFlightDatesPage_Sequence.getDatabaseValue())
+	,PlanConceptOnePage(PageNameEnum.PlanConceptOnePage, PageSequenceEnum.PlanConceptOnePage_Sequence.getDatabaseValue())
+	,PlanConceptTwoPage(PageNameEnum.PlanConceptTwoPage, PageSequenceEnum.PlanConceptTwoPage_Sequence.getDatabaseValue())
 	,TargetMarketingPage(PageNameEnum.TargetMarketingPage, PageSequenceEnum.TargetMarketingPage_Sequence.getDatabaseValue());
 	
 	private PageNameEnum pageName;
