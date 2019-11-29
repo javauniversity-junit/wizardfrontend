@@ -67,4 +67,73 @@ public class ExtraPageControl {
 		return "pages/PlanBFlightDatesPage";
 	}
 	
+	
+	@RequestMapping(value = "/savePlanBFlightDatesPage", method = RequestMethod.POST)
+	public String savePlanBFlightDatesPage(@RequestParam String wizardId
+			,@RequestParam (defaultValue ="") String textareaId
+			,@RequestParam String wizarddataid 
+			,@RequestParam String nextPage
+			,@RequestParam String publishNextPage
+			,@RequestParam(required=false, value="next") String next
+	        ,@RequestParam(required=false, value="publish") String publish){
+		mLog.info("starting save");
+		
+		//internal next page or publish
+		String internalNextPage = nextPage;
+		if (publish != null) {
+			internalNextPage= publishNextPage;
+		}
+		
+		WizardData wizardData = new WizardData();
+		wizardData.setPagename(PageNameEnum.PlanBFlightDatesPage.toString());
+		wizardData.setPagesequence(Pages.PlanBFlightDatesPage.getPageSequence());
+		if (wizarddataid != null && wizarddataid.trim().length() > 0 ) {
+			Integer wizardDataInt = Integer.valueOf(wizarddataid);
+			wizardData.setWizarddataid(wizardDataInt);
+		}
+		Integer wizardIdInt = Integer.valueOf(wizardId);
+		wizardData.setWizardid(wizardIdInt);
+		ExtraPageModel model  = new ExtraPageModel(textareaId);
+		String pageData = JSONManager.convertToJson(model);
+		
+		wizardData.setPagedata(pageData);
+		wizardDataRepository.save(wizardData);
+		//model.addAttribute("wizard", wizard);
+		return internalNextPage;
+	}
+	@RequestMapping(value = "/savePlanAFlightDatesPage", method = RequestMethod.POST)
+	public String savePlanAFlightDatesPage(@RequestParam String wizardId
+			,@RequestParam (defaultValue ="") String textareaId
+			,@RequestParam String wizarddataid 
+			,@RequestParam String nextPage
+			,@RequestParam String publishNextPage
+			,@RequestParam(required=false, value="next") String next
+	        ,@RequestParam(required=false, value="publish") String publish){
+		mLog.info("starting save");
+		
+		//internal next page or publish
+		String internalNextPage = nextPage;
+		if (publish != null) {
+			internalNextPage= publishNextPage;
+		}
+		
+		WizardData wizardData = new WizardData();
+		wizardData.setPagename(PageNameEnum.PlanAFlightDatesPage.toString());
+		wizardData.setPagesequence(Pages.PlanAFlightDatesPage.getPageSequence());
+		if (wizarddataid != null && wizarddataid.trim().length() > 0 ) {
+			Integer wizardDataInt = Integer.valueOf(wizarddataid);
+			wizardData.setWizarddataid(wizardDataInt);
+		}
+		Integer wizardIdInt = Integer.valueOf(wizardId);
+		wizardData.setWizardid(wizardIdInt);
+		ExtraPageModel model  = new ExtraPageModel(textareaId);
+		String pageData = JSONManager.convertToJson(model);
+		
+		wizardData.setPagedata(pageData);
+		wizardDataRepository.save(wizardData);
+		//model.addAttribute("wizard", wizard);
+		return internalNextPage;
+	}
+	
+	
 }
