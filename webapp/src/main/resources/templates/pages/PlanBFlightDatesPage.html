@@ -61,7 +61,7 @@
 
 		<div>
 			<form onsubmit="save()" method="post" action="savePlanBFlightDatesPage" autocomplete="off">
-			<textarea id="textareaId" name="textareaId">
+			<textarea id="textareaId" name="textareaId" th:text="${dataPageModel?.textArea}">
 
 
   <h2 style="text-align: center;">Plan A</h2>
