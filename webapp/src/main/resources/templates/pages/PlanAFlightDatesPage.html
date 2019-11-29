@@ -61,7 +61,7 @@
 
 		<div>
 			<form method="post" action="savePresentedToPage" autocomplete="off">
-			<textarea id="basic-example">
+				<textarea id="basic-example">
 
 
   <h2 style="text-align: center;">Plan B</h2>
@@ -266,7 +266,27 @@ this station will not discriminate in any contract for advertising on the basis 
 <P>Thank you for your trust and confidence</P>
 
 <P>Accepted for- John Smith Date: 12 Dec 2019  | Accepted for Nancy Williams 23 May 2019 </p>
-</textarea>	
+</textarea>
+
+
+				<input type="hidden" id="nextPage"
+						th:value="'redirect:/TeamCommitmentPage?ID=' + ${wizard.wizardid}"
+						name="nextPage" /> 
+				   <input type="hidden" id="publishNextPage"
+						th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
+						name="publishNextPage" /> 	
+						<input type="hidden" id="wizardId"
+						th:value="${wizard.wizardid}" name="wizardId" /> 
+						<input
+						type="hidden" id="wizarddataid"
+						th:value="${wizardData?.wizarddataid}" name="wizarddataid" />
+
+
+					<input name="next" value="Next" type="submit" class="btn btn-primary" style="background-color: #C0B879;" />
+					<input name="publish" value="Publish" type="submit" class="btn btn-primary" style="background-color: #C0B879;" />
+
+
+
 			</form>
 			<div class="container" style="padding-top:2%;">
 
