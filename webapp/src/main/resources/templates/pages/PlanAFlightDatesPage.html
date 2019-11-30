@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>(19 of 20)Flight Dates</title>
+<title>(20 of 20) Presented To</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
@@ -60,11 +60,16 @@
 	<div class="container" style="padding-top: 1%;">
 
 		<div>
-			<form id="formId" onsubmit="save()" method="post" action="savePlanAFlightDatesPage" autocomplete="off">
-				<textarea id="textareaId" name="textareaId" th:text="${dataPageModel?.textArea}">
+			<form onsubmit="save()" method="post" action="savePlanAFlightDatesPage" autocomplete="off">
+			
+			
+			<!-- IF dataPageModel != null -->
+			<textarea th:if="${dataPageModel != null}" id="textareaId" name="textareaId" th:text="${dataPageModel?.textArea}"/>
+			<!-- ELSE -->
+			<textarea th:unless="${dataPageModel != null}" id="textareaId" name="textareaId" >
 
 
-  <h2 style="text-align: center;">Plan B</h2>
+  <h2 style="text-align: center;">Plan A</h2>
 
   <h2>For the benefit of the client WWWW agrees to develop a marketing strategy to help
 </h2>
@@ -266,14 +271,14 @@ this station will not discriminate in any contract for advertising on the basis 
 <P>Thank you for your trust and confidence</P>
 
 <P>Accepted for- John Smith Date: 12 Dec 2019  | Accepted for Nancy Williams 23 May 2019 </p>
-</textarea>
+</textarea>	
 
-		<input type="hidden" id="nextPage"
+<input type="hidden" id="nextPage"
 					th:value="'redirect:/PlanALifetimeValuedPage?ID=' + ${wizard.wizardid}"
 					name="nextPage" /> 
 					
 					<input type="hidden" id="previousPage"
-					th:value="'redirect:/PlanAFlightDatesPage?ID=' + ${wizard.wizardid}"
+					th:value="'redirect:/PlanAProposedPage?ID=' + ${wizard.wizardid}"
 					name="previousPage" /> 
 					
 					<input type="hidden" id="publishPage"
@@ -288,8 +293,6 @@ this station will not discriminate in any contract for advertising on the basis 
 					style="background-color: #C0B879;" /> <input name="previous"
 					value="Previous" type="submit" class="btn btn-primary"
 					style="background-color: #C0B879;" />
-
-
 			</form>
 			<div class="container" style="padding-top:2%;">
 
@@ -322,10 +325,7 @@ this station will not discriminate in any contract for advertising on the basis 
 
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js"></script>
-
-
 <script src="js/extrapage.js"></script>
-
 	<script th:inline="javascript">
 		/*<![CDATA[*/
 		$(function() {
@@ -338,3 +338,4 @@ this station will not discriminate in any contract for advertising on the basis 
 
 </body>
 </html>
+

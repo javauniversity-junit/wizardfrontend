@@ -120,7 +120,6 @@ public class ExtraPageControl {
 		mLog.info("starting save");
 
 		// internal next page or publish
-		// internal next page or publish
 		String internalNextPage = nextPage;
 		if (publish != null) {
 			internalNextPage = publishPage;
@@ -128,6 +127,7 @@ public class ExtraPageControl {
 		if (previous != null) {
 			internalNextPage = previousPage;
 		}
+
 		WizardData wizardData = new WizardData();
 		wizardData.setPagename(PageNameEnum.PlanAFlightDatesPage.toString());
 		wizardData.setPagesequence(Pages.PlanAFlightDatesPage.getPageSequence());
