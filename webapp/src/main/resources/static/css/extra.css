@@ -19,23 +19,23 @@ a {
 	text-decoration: none
 }
 
-b,
-b *,
-strong,
-strong * {
+.mce-content-body b,
+.mce-content-body b *,
+.mce-content-body strong,
+.mce-content-body strong * {
 	font-weight: 700
 }
 
-ol,
-ul {
+.mce-content-body ol,
+.mce-content-body ul {
 	list-style: none
 }
 
-pre {
+.mce-content-body pre {
 	font: inherit
 }
 
-button,
+.mce-content-body button,
 input,
 input:not([type]),
 input[type=button],
