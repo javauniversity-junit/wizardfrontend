@@ -268,23 +268,26 @@ this station will not discriminate in any contract for advertising on the basis 
 <P>Accepted for- John Smith Date: 12 Dec 2019  | Accepted for Nancy Williams 23 May 2019 </p>
 </textarea>
 
-
-				<input type="hidden" id="nextPage"
-						th:value="'redirect:/TeamCommitmentPage?ID=' + ${wizard.wizardid}"
-						name="nextPage" /> 
-				   <input type="hidden" id="publishNextPage"
-						th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
-						name="publishNextPage" /> 	
-						<input type="hidden" id="wizardId"
-						th:value="${wizard.wizardid}" name="wizardId" /> 
-						<input
-						type="hidden" id="wizarddataid"
-						th:value="${wizardData?.wizarddataid}" name="wizarddataid" />
-
-
-					<input name="next" value="Next" type="submit" class="btn btn-primary" style="background-color: #C0B879;" />
-					<input name="publish" value="Publish" type="submit" class="btn btn-primary" style="background-color: #C0B879;" />
-
+		<input type="hidden" id="nextPage"
+					th:value="'redirect:/PlanALifetimeValuedPage?ID=' + ${wizard.wizardid}"
+					name="nextPage" /> 
+					
+					<input type="hidden" id="previousPage"
+					th:value="'redirect:/PlanAFlightDatesPage?ID=' + ${wizard.wizardid}"
+					name="previousPage" /> 
+					
+					<input type="hidden" id="publishPage"
+					th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
+					name="publishPage" /> <input type="hidden" id="wizardId"
+					th:value="${wizard.wizardid}" name="wizardId" /> <input
+					type="hidden" id="wizarddataid"
+					th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> <input
+					name="next" type="submit" value="Next" class="btn btn-primary"
+					style="background-color: #C0B879;" /> <input name="publish"
+					type="submit" value="Publish" class="btn btn-primary"
+					style="background-color: #C0B879;" /> <input name="previous"
+					value="Previous" type="submit" class="btn btn-primary"
+					style="background-color: #C0B879;" />
 
 
 			</form>

@@ -61,10 +61,15 @@
 
 		<div>
 			<form onsubmit="save()" method="post" action="savePlanBFlightDatesPage" autocomplete="off">
-			<textarea id="textareaId" name="textareaId" th:text="${dataPageModel?.textArea}">
+			
+			
+			<!-- IF dataPageModel != null -->
+			<textarea th:if="${dataPageModel != null}" id="textareaId" name="textareaId" th:text="${dataPageModel?.textArea}"/>
+			<!-- ELSE -->
+			<textarea th:unless="${dataPageModel != null}" id="textareaId" name="textareaId" >
 
 
-  <h2 style="text-align: center;">Plan A</h2>
+  <h2 style="text-align: center;">Plan B</h2>
 
   <h2>For the benefit of the client WWWW agrees to develop a marketing strategy to help
 </h2>
