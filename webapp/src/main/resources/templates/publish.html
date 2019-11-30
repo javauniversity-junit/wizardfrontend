@@ -87,6 +87,14 @@
         <div th:replace="fragments/MarketingStrategiesFragment :: MarketingStrategiesPage"></div>
         
 
+  <!-- replace PlanBFlightDatesPageModel begin -->
+        <div th:if="${PublishModel.planBFlightDatesPage}">
+            <div th:replace="fragments/PlanBFlightDatesPageFragment :: PlanBFlightDates"></div>
+        </div>
+        
+
+
+
         <!-- replace marketPlaceCompetitionPage begin -->
 
         <!--

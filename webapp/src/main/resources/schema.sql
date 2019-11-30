@@ -55,6 +55,10 @@ create table IF NOT EXISTS contact (
    primary key (wizarddataid)
 ) ;
 
+
+ALTER TABLE `wizarddata` 
+CHANGE COLUMN `pagedata` `pagedata` LONGTEXT NOT NULL ;
+
 --
 -- Indexes for dumped tables
 --

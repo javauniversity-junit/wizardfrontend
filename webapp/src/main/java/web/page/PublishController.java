@@ -19,6 +19,7 @@ import web.page.planamedipage.MediaChart;
 import web.page.planamedipage.MediaChartHelper;
 import web.page.planamedipage.PlanMediaPageModel;
 import web.page.confidentialclientevaluationnonepage.ConfidentialClientEvaluationOnePageModel;
+import web.page.extra.ExtraPageModel;
 import web.model.WizardData;
 import web.page.presentedtopage.PresentedToPageController;
 import web.page.presentedtopage.PresentedToPageModel;
@@ -149,6 +150,36 @@ public class PublishController {
 					mLog.severe("error " + ex.getMessage());
 					break;
 				}
+				
+				
+			case PlanAFlightDatesPage:
+				try {
+					ExtraPageModel planAFlightDatesPageModel = null;
+
+					planAFlightDatesPageModel = (ExtraPageModel) JSONManager.convertFromJson(data.getPagedata(),
+							ExtraPageModel.class);
+					model.addAttribute("PlanAFlightDatesPage", planAFlightDatesPageModel);
+					publish.setPlanAFlightDatesPage(true);
+					mLog.info("found page PlanAFlightDatesPage");
+					break;
+					}catch (Exception ex) {
+						mLog.severe("error " + ex.getMessage());
+						break;
+					}
+			case PlanBFlightDatesPage:
+				try {
+					ExtraPageModel planBFlightDatesPageModel = null;
+
+					planBFlightDatesPageModel = (ExtraPageModel) JSONManager.convertFromJson(data.getPagedata(),
+							ExtraPageModel.class);
+					model.addAttribute("PlanBFlightDatesPageModel", planBFlightDatesPageModel);
+					publish.setPlanBFlightDatesPage(true);
+					mLog.info("found page planBFlightDatesPageModel");
+					break;
+					}catch (Exception ex) {
+						mLog.severe("error " + ex.getMessage());
+						break;
+					}
 			case PlanBBEPPage:
 				try {
 				PlanBBEPPageModel planBBEPPageModel = null;
