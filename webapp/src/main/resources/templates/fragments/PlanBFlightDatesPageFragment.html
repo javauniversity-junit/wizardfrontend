@@ -10,7 +10,20 @@
 		</div>
        <link rel="stylesheet" href="css/codepen.css">
   
-		<div th:text="${PlanBFlightDatesPageModel?.textArea}">
+		<div>
+		<script th:inline="javascript">
+			/*<![CDATA[*/
+
+    			var message = /*[[${PlanBFlightDatesPageModel?.textArea}]]*/ 'default';
+    			 document.write(unescape(message));
+			     console.log(message);
+
+			/*]]>*/
+				</script>
+          
+           
+		
+			
 		
 		
 		</div>
