@@ -93,8 +93,14 @@
             <div th:replace="fragments/PlanBFlightDatesPageFragment :: PlanBFlightDates"></div>
         </div>
         
-
-
+ <!-- replace CreateConceptOnePageModel begin -->
+        <div th:if="${PublishModel.createConceptOnePage}">
+            <div th:replace="fragments/CreateConceptOnePageFragment :: CreateConceptOne"></div>
+        </div>
+ <!-- replace CreateConceptTwoPageModel begin -->
+        <div th:if="${PublishModel.createConceptTwoPage}">
+            <div th:replace="fragments/CreateConceptTwoPageFragment :: CreateConceptTwo"></div>
+        </div>
 
         <!-- replace marketPlaceCompetitionPage begin -->
 

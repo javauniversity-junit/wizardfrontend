@@ -23,8 +23,8 @@ public enum PageSequenceEnum {
 	,PlanBDigitalROICalculatorPage_Sequence(22)
 	,PlanAFlightDatesPage_Sequence(23)
 	,PlanBFlightDatesPage_Sequence(24)
-	,PlanConceptOnePage_Sequence(25)
-	,PlanConceptTwoPage_Sequence(26);
+	,CreateConceptOnePage_Sequence(25)
+	,CreateConceptTwoPage_Sequence(26);
 
 
 	

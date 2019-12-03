@@ -23,6 +23,6 @@ public enum PageNameEnum {
 	,TargetMarketingPage
 	,PlanAFlightDatesPage
 	,PlanBFlightDatesPage
-	,PlanConceptOnePage
-	,PlanConceptTwoPage;
+	,CreateConceptOnePage
+	,CreateConceptTwoPage;
 }

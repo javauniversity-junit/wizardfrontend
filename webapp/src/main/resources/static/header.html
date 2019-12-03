@@ -19,38 +19,33 @@
 <script type="text/javascript">
 	var id = sessionStorage.getItem("ID");
 	console.log("id = " + id);
-        
+
 	function openWindow(page) {
 		var pageURL = page + "?ID=" + id;
-                location.href = pageURL;
+		location.href = pageURL;
 		//window.open(pageURL);
 	}
 	var consoleVisible = false;
 
 	function turnOnConsole() {
 		try {
-			
-	       if (consoleVisible) {
-		    appender.hide();
-					
-		   consoleVisible = false;
-		} else {
-		   appender.show();
-					
-		   consoleVisible = true;
+
+			if (consoleVisible) {
+				appender.hide();
+
+				consoleVisible = false;
+			} else {
+				appender.show();
+
+				consoleVisible = true;
+			}
+
+			appender.show();
+		} catch (err) {
+			console.log(err);
 		}
-		
-			
-			
-                 appender.show();
-                }
-          catch(err) {
-		  console.log(err);
-	  }
-		
 
 	}
-	
 </script>
 <header class="header">
 	<nav class="navbar navbar-expand-lg">
@@ -76,39 +71,54 @@
 						role="button" data-toggle="dropdown" aria-haspopup="true"
 						aria-expanded="false"> Pages </a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="javascript:openWindow('PresentedToPage');">Presented To</a> 
-							<a class="dropdown-item" href="javascript:openWindow('TeamCommitmentPage');">Team Commitment</a> 
-							<a class="dropdown-item" href="javascript:openWindow('MarketPlaceCompetitionPage');">Market Place Competition</a> 
-							<a class="dropdown-item" href="javascript:openWindow('ClientObjectivesOnePage');">Client Objectives</a> 
-							
-							<a class="dropdown-item" href="javascript:openWindow('StrategicMarketingPageOne');">Strategic Marketing</a> 
-							<a class="dropdown-item" href="javascript:openWindow('TargetMarketingPage');">Target Marketing</a> 
-							<a class="dropdown-item" href="javascript:openWindow('ConfidentialClientEvaluationOnePage');">Confidential Client Evaluation</a> 
-							<a class="dropdown-item" href="javascript:openWindow('PlanAProposedPage');">Plan A Proposed</a> 
-							
-							<a class="dropdown-item" href="javascript:openWindow('PlanABEPPage');">Plan A EDS Break Even Point Analysis</a> 
-							<a class="dropdown-item" href="javascript:openWindow('PlanALifetimeValuedPage');">Plan A Lifetime Value Analysis</a> 
-							<a class="dropdown-item" href="javascript:openWindow('PlanADigitalROICalculatorPage');">Plan A Digital ROI Calculator</a> 
-							<a class="dropdown-item" href="javascript:openWindow('PlanBProposedPage');">Plan B Proposed Schedule - Brand Equity Months</a> 
-							
-							<a class="dropdown-item" href="javascript:openWindow('PlanBBEPPage');">Plan B EDS Break Even Point Analysis (BEP)</a> 
-							<a class="dropdown-item" href="javascript:openWindow('PlanBLifetimeValuedPage');">Plan B Lifetime Value Analysis</a> 
-							<a class="dropdown-item" href="javascript:openWindow('PlanBDigitalROICalculatorPage');"> Plan B Digital ROI Calculatorr</a> 
-							<a class="dropdown-item" href="javascript:openWindow('PlanAMediaPage');">Plan A Proposed 12 Month Media Investment </a> 
-							
-							<a class="dropdown-item" href="javascript:openWindow('PlanBMediaPage');">Plan B Proposed 12 Month Media Investment </a> 
-						    <a class="dropdown-item" href="javascript:openWindow('PlanAFlightDatesPage');">Flight A Dates </a> 
-						      
-							<a class="dropdown-item" href="javascript:openWindow('PlanBFlightDatesPage');">Flight B Dates </a> 
+							<a class="dropdown-item"
+								href="javascript:openWindow('PresentedToPage');">Presented
+								To</a> <a class="dropdown-item"
+								href="javascript:openWindow('TeamCommitmentPage');">Team
+								Commitment</a> <a class="dropdown-item"
+								href="javascript:openWindow('MarketPlaceCompetitionPage');">Market
+								Place Competition</a> <a class="dropdown-item"
+								href="javascript:openWindow('ClientObjectivesOnePage');">Client
+								Objectives</a> <a class="dropdown-item"
+								href="javascript:openWindow('StrategicMarketingPageOne');">Strategic
+								Marketing</a> <a class="dropdown-item"
+								href="javascript:openWindow('TargetMarketingPage');">Target
+								Marketing</a> <a class="dropdown-item"
+								href="javascript:openWindow('ConfidentialClientEvaluationOnePage');">Confidential
+								Client Evaluation</a> <a class="dropdown-item"
+								href="javascript:openWindow('PlanAProposedPage');">Plan A
+								Proposed</a> <a class="dropdown-item"
+								href="javascript:openWindow('PlanABEPPage');">Plan A EDS
+								Break Even Point Analysis</a> <a class="dropdown-item"
+								href="javascript:openWindow('PlanALifetimeValuedPage');">Plan
+								A Lifetime Value Analysis</a> <a class="dropdown-item"
+								href="javascript:openWindow('PlanADigitalROICalculatorPage');">Plan
+								A Digital ROI Calculator</a> <a class="dropdown-item"
+								href="javascript:openWindow('PlanBProposedPage');">Plan B
+								Proposed Schedule - Brand Equity Months</a> <a class="dropdown-item"
+								href="javascript:openWindow('PlanBBEPPage');">Plan B EDS
+								Break Even Point Analysis (BEP)</a> <a class="dropdown-item"
+								href="javascript:openWindow('PlanBLifetimeValuedPage');">Plan
+								B Lifetime Value Analysis</a> <a class="dropdown-item"
+								href="javascript:openWindow('PlanBDigitalROICalculatorPage');">
+								Plan B Digital ROI Calculatorr</a> <a class="dropdown-item"
+								href="javascript:openWindow('PlanAMediaPage');">Plan A
+								Proposed 12 Month Media Investment </a> <a class="dropdown-item"
+								href="javascript:openWindow('PlanBMediaPage');">Plan B
+								Proposed 12 Month Media Investment </a> <a class="dropdown-item"
+								href="javascript:openWindow('PlanAFlightDatesPage');">Flight
+								A Dates </a> <a class="dropdown-item"
+								href="javascript:openWindow('PlanBFlightDatesPage');">Flight
+								B Dates </a> <a class="dropdown-item"
+								href="javascript:openWindow('CreateConceptOnePage');">Create Concept I
+								</a> <a class="dropdown-item"
+								href="javascript:openWindow('CreateConceptTwoPage');">Create Concept II </a>
 
-						
-						
-						
-						
-						</div>
-						
-						
-				</li>
+
+
+
+
+						</div></li>
 
 
 

@@ -24,8 +24,21 @@ public class Publish {
 	private boolean targetMarketingPage;
 	private boolean planBFlightDatesPage;
 	private boolean planAFlightDatesPage;
+	private boolean createConceptOnePage;
+	private boolean createConceptTwoPage;
 	
-	
+	public boolean isCreateConceptOnePage() {
+		return createConceptOnePage;
+	}
+	public void setCreateConceptOnePage(boolean createConceptOnePage) {
+		this.createConceptOnePage = createConceptOnePage;
+	}
+	public boolean isCreateConceptTwoPage() {
+		return createConceptTwoPage;
+	}
+	public void setCreateConceptTwoPage(boolean createConceptTwoPage) {
+		this.createConceptTwoPage = createConceptTwoPage;
+	}
 	public boolean isPlanBFlightDatesPage() {
 		return planBFlightDatesPage;
 	}

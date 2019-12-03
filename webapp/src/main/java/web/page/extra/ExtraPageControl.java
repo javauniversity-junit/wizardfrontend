@@ -32,6 +32,126 @@ public class ExtraPageControl {
 
 	private static final Logger mLog = Logger.getLogger(ExtraPageControl.class.getName());
 
+	@RequestMapping(value = "/CreateConceptOnePage", method = RequestMethod.GET)
+	public String detailCreateConceptOnePage(Model model, @RequestParam String ID) {
+		mLog.info("starting detail");
+		// get wizard header
+		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
+		Wizard wizard = wizardOpt.orElse(null);
+		WizardData wizardData = wizardDataRepository
+				.findByPagesequenceAndWizardid(Pages.CreateConceptOnePage.getPageSequence(), wizard.getWizardid());
+		ExtraPageModel dataPageModel = null;
+		if (wizardData != null) {
+			dataPageModel = (ExtraPageModel) JSONManager.convertFromJson(wizardData.getPagedata(),
+					ExtraPageModel.class);
+
+		}
+		// DemographicManager.convertFromJson(json)
+		model.addAttribute("wizardData", wizardData);
+		model.addAttribute("dataPageModel", dataPageModel);
+		model.addAttribute("wizard", wizard);
+		return "pages/CreateConceptOnePage";
+	}
+	
+	@RequestMapping(value = "/saveCreateConceptOnePage", method = RequestMethod.POST)
+	public String saveCreateConceptOnePage(@RequestParam String wizardId,
+			@RequestParam(defaultValue = "") String textareaId, @RequestParam String wizarddataid,
+			@RequestParam String previousPage, @RequestParam String publishPage,
+			@RequestParam(required = false, value = "next") String next,
+			@RequestParam(required = false, value = "publish") String publish,
+			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage) {
+		mLog.info("starting save");
+
+		// internal next page or publish
+		String internalNextPage = nextPage;
+		if (publish != null) {
+			internalNextPage = publishPage;
+		}
+		if (previous != null) {
+			internalNextPage = previousPage;
+		}
+
+		WizardData wizardData = new WizardData();
+		wizardData.setPagename(PageNameEnum.CreateConceptOnePage.toString());
+		wizardData.setPagesequence(Pages.CreateConceptOnePage.getPageSequence());
+		if (wizarddataid != null && wizarddataid.trim().length() > 0) {
+			Integer wizardDataInt = Integer.valueOf(wizarddataid);
+			wizardData.setWizarddataid(wizardDataInt);
+		}
+		Integer wizardIdInt = Integer.valueOf(wizardId);
+		wizardData.setWizardid(wizardIdInt);
+		ExtraPageModel model = new ExtraPageModel(textareaId);
+		String pageData = JSONManager.convertToJson(model);
+
+		wizardData.setPagedata(pageData);
+		wizardDataRepository.save(wizardData);
+		// model.addAttribute("wizard", wizard);
+		return internalNextPage;
+	}
+
+	@RequestMapping(value = "/CreateConceptTwoPage", method = RequestMethod.GET)
+	public String detailCreateConceptTwoPage(Model model, @RequestParam String ID) {
+		mLog.info("starting detail");
+		// get wizard header
+		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
+		Wizard wizard = wizardOpt.orElse(null);
+		WizardData wizardData = wizardDataRepository
+				.findByPagesequenceAndWizardid(Pages.CreateConceptTwoPage.getPageSequence(), wizard.getWizardid());
+		ExtraPageModel dataPageModel = null;
+		if (wizardData != null) {
+			dataPageModel = (ExtraPageModel) JSONManager.convertFromJson(wizardData.getPagedata(),
+					ExtraPageModel.class);
+
+		}
+		// DemographicManager.convertFromJson(json)
+		model.addAttribute("wizardData", wizardData);
+		model.addAttribute("dataPageModel", dataPageModel);
+		model.addAttribute("wizard", wizard);
+		return "pages/CreateConceptTwoPage";
+	}
+	
+	@RequestMapping(value = "/saveCreateConceptTwoPage", method = RequestMethod.POST)
+	public String saveCreateConceptTwoPage(@RequestParam String wizardId,
+			@RequestParam(defaultValue = "") String textareaId, @RequestParam String wizarddataid,
+			@RequestParam String previousPage, @RequestParam String publishPage,
+			@RequestParam(required = false, value = "next") String next,
+			@RequestParam(required = false, value = "publish") String publish,
+			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage) {
+		mLog.info("starting save");
+
+		// internal next page or publish
+		String internalNextPage = nextPage;
+		if (publish != null) {
+			internalNextPage = publishPage;
+		}
+		if (previous != null) {
+			internalNextPage = previousPage;
+		}
+
+		WizardData wizardData = new WizardData();
+		wizardData.setPagename(PageNameEnum.CreateConceptTwoPage.toString());
+		wizardData.setPagesequence(Pages.CreateConceptTwoPage.getPageSequence());
+		if (wizarddataid != null && wizarddataid.trim().length() > 0) {
+			Integer wizardDataInt = Integer.valueOf(wizarddataid);
+			wizardData.setWizarddataid(wizardDataInt);
+		}
+		Integer wizardIdInt = Integer.valueOf(wizardId);
+		wizardData.setWizardid(wizardIdInt);
+		ExtraPageModel model = new ExtraPageModel(textareaId);
+		String pageData = JSONManager.convertToJson(model);
+
+		wizardData.setPagedata(pageData);
+		wizardDataRepository.save(wizardData);
+		// model.addAttribute("wizard", wizard);
+		return internalNextPage;
+	}
+
+	
+	
+	
+	
+	
+	
 	@RequestMapping(value = "/PlanAFlightDatesPage", method = RequestMethod.GET)
 	public String detailPlanAFlightDatesPage(Model model, @RequestParam String ID) {
 		mLog.info("starting detail");
