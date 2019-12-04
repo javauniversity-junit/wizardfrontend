@@ -25,5 +25,6 @@ public enum PageNameEnum {
 	,PlanBFlightDatesPage
 	,CreateConceptOnePage
 	,CreateConceptTwoPage
-	,ProfileOfConsumersPage;
+	,ProfileOfConsumersPage
+	,DigitalMobileSocialStrategies;
 }
