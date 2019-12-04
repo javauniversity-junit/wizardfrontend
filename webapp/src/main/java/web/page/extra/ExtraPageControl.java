@@ -40,7 +40,7 @@ public class ExtraPageControl {
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
 		WizardData wizardData = wizardDataRepository
-				.findByPagesequenceAndWizardid(Pages.DigitalMobileSocialStrategiesPage.getPageSequence(), wizard.getWizardid());
+				.findByPagesequenceAndWizardid(Pages.digitalMobileSocialStrategiesPage.getPageSequence(), wizard.getWizardid());
 		ExtraPageModel dataPageModel = null;
 		if (wizardData != null) {
 			dataPageModel = (ExtraPageModel) JSONManager.convertFromJson(wizardData.getPagedata(),
