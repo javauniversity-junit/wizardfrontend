@@ -28,6 +28,7 @@ public enum Pages {
 	,CreateConceptOnePage(PageNameEnum.CreateConceptOnePage, PageSequenceEnum.CreateConceptOnePage_Sequence.getDatabaseValue())
 	,CreateConceptTwoPage(PageNameEnum.CreateConceptTwoPage, PageSequenceEnum.CreateConceptTwoPage_Sequence.getDatabaseValue())
         ,ProfileOfConsumersPage(PageNameEnum.ProfileOfConsumersPage, PageSequenceEnum.ProfileOfConsumersPage_Sequence.getDatabaseValue())
+	,DigitalMobileSocialStrategiesPage(PageNameEnum.DigitalMobileSocialStrategiesPage, PageSequenceEnum.DigitalMobileSocialStrategiesPage_Sequence.getDatabaseValue())
 	,TargetMarketingPage(PageNameEnum.TargetMarketingPage, PageSequenceEnum.TargetMarketingPage_Sequence.getDatabaseValue());
 	
 	private PageNameEnum pageName;
