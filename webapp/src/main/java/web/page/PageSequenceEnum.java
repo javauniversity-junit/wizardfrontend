@@ -25,7 +25,8 @@ public enum PageSequenceEnum {
 	,PlanBFlightDatesPage_Sequence(24)
 	,CreateConceptOnePage_Sequence(25)
 	,CreateConceptTwoPage_Sequence(26)
-	,ProfileOfConsumersPage_Sequence(26);
+	,ProfileOfConsumersPage_Sequence(27)
+	,DigitalMobileSocialStrategiesPage_Sequence(28);
 
 
 	
