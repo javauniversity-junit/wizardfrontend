@@ -280,6 +280,24 @@ public class PublishController {
 					mLog.severe("error " + ex.getMessage());
 					break;
 				}
+					
+					
+			case ProfileOfConsumersPage:
+				try {
+					ExtraPageModel profileOfConsumersPageModel = null;
+
+					profileOfConsumersPageModel = (ExtraPageModel) JSONManager.convertFromJson(data.getPagedata(),
+							ExtraPageModel.class);
+					model.addAttribute("ProfileOfConsumersPageModel", profileOfConsumersPageModel);
+					publish.setProfileOfConsumersPage(true);
+					mLog.info("found page profileOfConsumersPageModel");
+					break;
+					}catch (Exception ex) {
+						mLog.severe("error " + ex.getMessage());
+						break;
+					}		
+					
+					
 			case StrategicMarketingPageOne:
 				try {
 				StrategicMarketingPageOneModel strategicMarketingPageOneModel = null;
