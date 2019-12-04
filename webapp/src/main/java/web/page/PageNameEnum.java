@@ -27,4 +27,5 @@ public enum PageNameEnum {
 	,CreateConceptTwoPage
 	,ProfileOfConsumersPage
 	,DigitalMobileSocialStrategiesPage;
+	
 }
