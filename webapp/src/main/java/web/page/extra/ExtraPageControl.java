@@ -54,7 +54,7 @@ public class ExtraPageControl {
 		return "pages/ProfileOfConsumersPage";
 	}
 	
-	@RequestMapping(value = "/saveProfileOfConsumersPage", method = RequestMethod.POST)
+	@RequestMapping(value = "/saveDigitalMobileSocialStrategiesPage", method = RequestMethod.POST)
 	public String saveDigitalMobileSocialStrategiesPage(@RequestParam String wizardId,
 			@RequestParam(defaultValue = "") String textareaId, @RequestParam String wizarddataid,
 			@RequestParam String previousPage, @RequestParam String publishPage,
