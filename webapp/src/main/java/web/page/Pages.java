@@ -27,6 +27,7 @@ public enum Pages {
 	,PlanBFlightDatesPage(PageNameEnum.PlanBFlightDatesPage, PageSequenceEnum.PlanBFlightDatesPage_Sequence.getDatabaseValue())
 	,CreateConceptOnePage(PageNameEnum.CreateConceptOnePage, PageSequenceEnum.CreateConceptOnePage_Sequence.getDatabaseValue())
 	,CreateConceptTwoPage(PageNameEnum.CreateConceptTwoPage, PageSequenceEnum.CreateConceptTwoPage_Sequence.getDatabaseValue())
+        ,CreateConceptTwoPage(PageNameEnum.CreateConceptTwoPage, PageSequenceEnum.CreateConceptTwoPage_Sequence.getDatabaseValue())
 	,TargetMarketingPage(PageNameEnum.TargetMarketingPage, PageSequenceEnum.TargetMarketingPage_Sequence.getDatabaseValue());
 	
 	private PageNameEnum pageName;
