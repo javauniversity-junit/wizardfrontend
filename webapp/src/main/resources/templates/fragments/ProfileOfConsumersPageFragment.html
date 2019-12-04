@@ -1,1 +1,34 @@
+<div th:fragment="ProfileOfConsumersPage"
+	class="grad container pageBreakInside" style="height: 100%;">
 
+	<div th:if="${PublishModel.profileOfConsumersPage}">
+
+		<div>
+			<a id="ProfileOfConsumersPage"></a>
+			<p class="text-justify"></p>
+
+		</div>
+      
+  
+		<div class="whiteGrad mce-content-body">
+		<script th:inline="javascript">
+			/*<![CDATA[*/
+
+    			var message = /*[[${ProfileOfConsumersPageModel?.textArea}]]*/ 'default';
+    			 document.write(unescape(message));
+			     console.log(message);
+
+			/*]]>*/
+				</script>	
+		</div>
+
+
+	<div class="w3-container d-print-none" style="padding-top: 2%;">
+		<button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
+		<a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
+		<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
+	</div>
+		<div class="CopyRightId"></div>
+	</div>
+
+</div>
