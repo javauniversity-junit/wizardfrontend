@@ -135,21 +135,7 @@ public class PublishController {
 						mLog.severe("error " + ex.getMessage());
 						break;
 					}
-					case CreateConceptOnePage:
-				try {
-					ExtraPageModel createConceptOnePageModel = null;
-
-					createConceptOnePageModel = (ExtraPageModel) JSONManager.convertFromJson(data.getPagedata(),
-							ExtraPageModel.class);
-					model.addAttribute("CreateConceptOnePageModel", createConceptOnePageModel);
-					publish.setCreateConceptOnePage(true);
-					mLog.info("found page createConceptOnePageModel");
-					break;
-					}catch (Exception ex) {
-						mLog.severe("error " + ex.getMessage());
-						break;
-					}			
-		
+					
 			case MarketPlaceCompetitionPage:
 				try {
 				MarketPlaceCompetitionPageModel marketPlaceCompetitionPageModel = null;
