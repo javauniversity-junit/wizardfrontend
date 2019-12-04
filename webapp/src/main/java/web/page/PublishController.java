@@ -121,7 +121,7 @@ public class PublishController {
 						mLog.severe("error " + ex.getMessage());
 						break;
 					}
-			case DigitalMobileSocialStrategiesagePage:
+			case DigitalMobileSocialStrategiesPage:
 				try {
 					ExtraPageModel digitalMobileSocialStrategiesPageModel = null;
 
