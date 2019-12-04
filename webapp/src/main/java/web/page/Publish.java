@@ -26,6 +26,15 @@ public class Publish {
 	private boolean planAFlightDatesPage;
 	private boolean createConceptOnePage;
 	private boolean createConceptTwoPage;
+	private boolean digitalMobileSocialStrategiesPage;
+
+    public boolean isDigitalMobileSocialStrategiesPage() {
+        return digitalMobileSocialStrategiesPage;
+    }
+
+    public void setDigitalMobileSocialStrategiesPage(boolean digitalMobileSocialStrategiesPage) {
+        this.digitalMobileSocialStrategiesPage = digitalMobileSocialStrategiesPage;
+    }
 	
 	    private boolean profileOfConsumersPage;
 
