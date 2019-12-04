@@ -27,6 +27,16 @@ public class Publish {
 	private boolean createConceptOnePage;
 	private boolean createConceptTwoPage;
 	
+	    private boolean profileOfConsumersPage;
+
+    public boolean isProfileOfConsumersPage() {
+        return profileOfConsumersPage;
+    }
+
+    public void setProfileOfConsumersPage(boolean profileOfConsumersPage) {
+        this.profileOfConsumersPage = profileOfConsumersPage;
+    }
+	
 	public boolean isCreateConceptOnePage() {
 		return createConceptOnePage;
 	}
