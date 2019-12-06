@@ -61,7 +61,12 @@
 
 		<div>
 			<form onsubmit="save()" method="post" action="saveCreateConceptTwoPage" autocomplete="off">
+			<fieldset>
 			
+				<legend>
+					(24 of 24) Create Concept II <span
+						th:text="${wizard.name}"></span>
+				</legend>
 			
 			<!-- IF dataPageModel != null -->
 			<textarea th:if="${dataPageModel != null}" id="textareaId" name="textareaId" th:text="${dataPageModel?.textArea}"/>
@@ -84,11 +89,11 @@
 </textarea>	
 
 <input type="hidden" id="nextPage"
-					th:value="'redirect:/PlanALifetimeValuedPage?ID=' + ${wizard.wizardid}"
+					th:value="'redirect:/ProfileOfConsumersPage?ID=' + ${wizard.wizardid}"
 					name="nextPage" /> 
 					
 					<input type="hidden" id="previousPage"
-					th:value="'redirect:/PlanAProposedPage?ID=' + ${wizard.wizardid}"
+					th:value="'redirect:/CreateConceptOnePage?ID=' + ${wizard.wizardid}"
 					name="previousPage" /> 
 					
 					<input type="hidden" id="publishPage"
@@ -103,13 +108,14 @@
 					style="background-color: #C0B879;" /> <input name="previous"
 					value="Previous" type="submit" class="btn btn-primary"
 					style="background-color: #C0B879;" />
+					</fieldset>
 			</form>
 			<div class="container" style="padding-top:2%;">
 
 				<div class="progress">
 					<div class="progress-bar" role="progressbar" aria-valuenow="5"
 						aria-valuemin="0" aria-valuemax="100"
-						style="width: 5%; background-color: #C0B879;">5%</div>
+						style="width: 93%; background-color: #C0B879;">93%</div>
 				</div>
 			</div>
 

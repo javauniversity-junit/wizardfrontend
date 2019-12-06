@@ -5,7 +5,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>(21 of 23) Create Concepts I</title>
+<title>(22 of 23) Create Concepts I</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
@@ -61,7 +61,12 @@
 
 		<div>
 			<form onsubmit="save()" method="post" action="saveCreateConceptOnePage" autocomplete="off">
+				<fieldset>
 			
+				<legend>
+					(22 of 24) Create Concepts <span
+						th:text="${wizard.name}"></span>
+				</legend>
 			
 			<!-- IF dataPageModel != null -->
 			<textarea th:if="${dataPageModel != null}" id="textareaId" name="textareaId" th:text="${dataPageModel?.textArea}"/>
@@ -84,11 +89,11 @@
 </textarea>	
 
 <input type="hidden" id="nextPage"
-					th:value="'redirect:/PlanALifetimeValuedPage?ID=' + ${wizard.wizardid}"
+					th:value="'redirect:/CreateConceptTwoPage?ID=' + ${wizard.wizardid}"
 					name="nextPage" /> 
 					
 					<input type="hidden" id="previousPage"
-					th:value="'redirect:/PlanAProposedPage?ID=' + ${wizard.wizardid}"
+					th:value="'redirect:/PlanBFlightDatesPage?ID=' + ${wizard.wizardid}"
 					name="previousPage" /> 
 					
 					<input type="hidden" id="publishPage"
@@ -103,13 +108,14 @@
 					style="background-color: #C0B879;" /> <input name="previous"
 					value="Previous" type="submit" class="btn btn-primary"
 					style="background-color: #C0B879;" />
+			</fieldset>
 			</form>
 			<div class="container" style="padding-top:2%;">
 
 				<div class="progress">
 					<div class="progress-bar" role="progressbar" aria-valuenow="5"
 						aria-valuemin="0" aria-valuemax="100"
-						style="width: 5%; background-color: #C0B879;">5%</div>
+						style="width: 92%; background-color: #C0B879;">92%</div>
 				</div>
 			</div>
 
