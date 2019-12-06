@@ -444,7 +444,7 @@
 
 
 						<input type="hidden" id="nextPage"
-							th:value="'redirect:/PlanAMediaPage?ID=' + ${wizard.wizardid}"
+							th:value="'redirect:/PlanAFlightDatesPage?ID=' + ${wizard.wizardid}"
 							name="nextPage" /> 
 							
 							<input type="hidden" id="previousPage"
@@ -459,7 +459,7 @@
 							th:value="${dataPageModel?.mediaRows}" name="mediarows" /> <input
 							type="hidden" id="wizarddataid"
 							th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> <input
-							name="next" type="hidden" value="Next" class="btn btn-primary"
+							name="next" type="submit" value="Next" class="btn btn-primary"
 							style="background-color: #C0B879;" /> <input name="publish"
 							type="submit" value="Publish" class="btn btn-primary"
 							style="background-color: #C0B879;" /> <input name="previous"
