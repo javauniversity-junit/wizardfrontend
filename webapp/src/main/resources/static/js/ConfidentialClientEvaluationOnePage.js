@@ -14,8 +14,22 @@ function canCopy(copy) {
 }
 
 function setProposedValues() {
-	console.log("can copy " + canCopyValues);
-	if (canCopyValues) {
+	
+	
+	  document.getElementById('proposedLabel1').value = document.getElementById("lastYearLabel1").value;
+	  document.getElementById('proposedLabel2').value = document.getElementById("lastYearLabel2").value;
+	  document.getElementById('proposedLabel3').value = document.getElementById("lastYearLabel3").value;
+	  document.getElementById('proposedLabel4').value = document.getElementById("lastYearLabel4").value;
+	  document.getElementById('proposedLabel5').value = document.getElementById("lastYearLabel5").value;
+	  document.getElementById('proposedLabel6').value = document.getElementById("lastYearLabel6").value;
+	  document.getElementById('proposedLabel7').value = document.getElementById("lastYearLabel7").value;
+	  document.getElementById('proposedLabel8').value = document.getElementById("lastYearLabel8").value;
+	  document.getElementById('proposedLabel9').value = document.getElementById("lastYearLabel9").value;
+	  
+	
+	
+	
+	
 	 // if (document.getElementById('proposedValue1').value == null || document.getElementById('proposedValue1').value == "")
     document.getElementById('proposedValue1').value = document.getElementById("lastYearValue1").value;;
 	
@@ -35,7 +49,7 @@ function setProposedValues() {
      document.getElementById('proposedValue8').value = document.getElementById("lastYearValue8").value;;
  //if (document.getElementById('proposedValue9').value == null || document.getElementById('proposedValue9').value == "")
      document.getElementById('proposedValue9').value = document.getElementById("lastYearValue9").value;;
-	}
+	
  
 }
 
