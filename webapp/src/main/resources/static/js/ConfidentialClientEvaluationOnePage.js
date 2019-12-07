@@ -1,17 +1,3 @@
-var canCopyValues = true;
-function changeProposed(lastYearValueObj,proposedObj) {
- // var x = document.getElementById("myInput").value;
- //x = this.value;
-//if (proposedObj.value == "")
-          proposedObj.value =lastYearValueObj.value;
- 
-}
-
-
-//can copy values
-function canCopy(copy) {
-	canCopyValues = copy;
-}
 
 function setProposedValues() {
 	
@@ -49,7 +35,8 @@ function setProposedValues() {
      document.getElementById('proposedValue8').value = document.getElementById("lastYearValue8").value;;
  //if (document.getElementById('proposedValue9').value == null || document.getElementById('proposedValue9').value == "")
      document.getElementById('proposedValue9').value = document.getElementById("lastYearValue9").value;;
-	
+     calculateOne();
+ 	calculateTwo();
  
 }
 
@@ -345,7 +332,7 @@ function calculateTwo()
 function totalRow() {
 	calculateOne();
 	calculateTwo();
-	setProposedValues();
+	//setProposedValues();
 	//document.getElementById("totalRow").value = total;
 }
 var arrayChartDataPoint= [];
