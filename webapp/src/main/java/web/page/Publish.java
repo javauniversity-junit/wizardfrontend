@@ -24,6 +24,16 @@ public class Publish {
 	private boolean targetMarketingPage;
 	private boolean planBFlightDatesPage;
 	private boolean planAFlightDatesPage;
+	
+	private boolean planAMediaPageFlightDates;
+	public boolean isPlanAMediaPageFlightDates() {
+		return planAMediaPageFlightDates;
+	}
+
+	public void setPlanAMediaPageFlightDates(boolean planAMediaPageFlightDates) {
+		this.planAMediaPageFlightDates = planAMediaPageFlightDates;
+	}
+
 	private boolean createConceptOnePage;
 	private boolean createConceptTwoPage;
 	private boolean digitalMobileSocialStrategiesPage;

@@ -180,6 +180,7 @@ public class PublishController {
 					break;
 				}
 				
+			
 				
 			case PlanAFlightDatesPage:
 				try {
@@ -244,6 +245,7 @@ public class PublishController {
 						PlanMediaPageModel.class);
 				MediaChart mediaChartA = MediaChartHelper.generate(planAMediaPagedataPageModel);
 				model.addAttribute("PlanAMediaPage", mediaChartA);
+				model.addAttribute("PlanAMediaPagedataPageModel", planAMediaPagedataPageModel);
 				if (mediaChartA != null) {
 					publish.setPlanAMediaPage(true);
 				}
