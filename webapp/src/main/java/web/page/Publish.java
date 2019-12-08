@@ -24,7 +24,16 @@ public class Publish {
 	private boolean targetMarketingPage;
 	private boolean planBFlightDatesPage;
 	private boolean planAFlightDatesPage;
+	private boolean clientObjectivesPage;
 	
+	public boolean isClientObjectivesPage() {
+		return clientObjectivesPage;
+	}
+
+	public void setClientObjectivesPage(boolean clientObjectivesPage) {
+		this.clientObjectivesPage = clientObjectivesPage;
+	}
+
 	private boolean planAMediaPageFlightDates;
 	public boolean isPlanAMediaPageFlightDates() {
 		return planAMediaPageFlightDates;

@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import java.util.logging.Logger;
 import web.page.*;
+import web.page.clientobjectivesonepage.ClientObjectivesOnePageModel;
+import web.page.clientobjectivesonepage.ClientObjectivesOnePageTwoModel;
+import web.page.clientobjectivesonepage.ClientObjectivesPageHelper;
 import web.page.marketplacecompetitionpage.MarketPlaceCompetitionPageModel;
 import web.page.planABEPPage.PlanABEPPageModel;
 import web.page.planBBEPPage.PlanBBEPPageModel;
@@ -73,6 +76,21 @@ public class PublishController {
 			 */
 			
 			// ConfidentialClientEvaluationOnePage
+			case ClientObjectivesOnePage:
+				try {
+					
+					ClientObjectivesOnePageModel clientObjectivesOnePageModel = null;
+					clientObjectivesOnePageModel =(ClientObjectivesOnePageModel) JSONManager.convertFromJson(data.getPagedata(),ClientObjectivesOnePageModel.class);	
+					List<ClientObjectivesOnePageTwoModel> orderList = ClientObjectivesPageHelper.getList(true, clientObjectivesOnePageModel);
+					model.addAttribute("ClientObjectivesPageModel", orderList);
+			        publish.setClientObjectivesPage(true);
+					mLog.info("found page ClientObjectivesOnePageTwoModel");
+					break;
+					}catch (Exception ex) {
+						mLog.severe("error " + ex.getMessage());
+						break;
+					}
+				
 			case ConfidentialClientEvaluationOnePage:
 				try {
 				ConfidentialClientEvaluationOnePageModel confidentialClientEvaluationOnePageModel = null;

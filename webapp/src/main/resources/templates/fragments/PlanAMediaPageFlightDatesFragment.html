@@ -1,11 +1,11 @@
 <div th:fragment="PlanAMediaPageFlightDates"
 	class="grad container pageBreakInside" style="height: 100%;">
-<div th:if="${PublishModel.planAMediaPage}">
+	<div th:if="${PublishModel.planAMediaPage}">
 
-	<input type="hidden" id="mediarows"
-		th:value="${PlanAMediaPagedataPageModel?.mediaRows}" name="mediarows" />
+		<input type="hidden" id="mediarows"
+			th:value="${PlanAMediaPagedataPageModel?.mediaRows}" name="mediarows" />
 
-	   <div>
+		<div>
 			<a id="PlanAMediaPageFlightDates"></a>
 			<p class="text-justify"></p>
 
@@ -13,7 +13,30 @@
 
 
 		<div class="whiteGrad mce-content-body">
+		
+			<div th:if="${PublishModel.clientObjectivesPage}">
+				<ol>
+					<li th:each="selectedModel : ${ClientObjectivesPageModel}"><span
+						th:id="${selectedModel?.label}"> <script
+								th:inline="javascript">
+							/*<![CDATA[*/
 
+							var message = /*[[${selectedModel?.label}]]*/'default';
+							//message = "'" + message + "'";
+							addLabel(message);
+
+							/*]]>*/
+						</script>
+
+					</span></li>
+
+
+
+				</ol>
+
+
+
+			</div>
 			<div id="spreadSheet">
 				<table class="table table-striped" id="headerTable">
 					<thead>
@@ -83,20 +106,22 @@
 			</template>
 		</div>
 		<!-- end of spreadsheet -->
+		<script src="js/ClientObjectivesOnePageControl.js">
+	
+		</script>
 
-
-	<script src="js/medialSpreadSheet.js">
-		
-	</script>
-	<script src="js/media.js">
-		
-	</script>
-	<script>
-	const mediaRows = document.getElementById("mediarows").value
-    if (mediaRows.length > 4) {
-    	objs = JSON.parse(mediaRows);
-    }
-		buildSpreadSheet();
-	</script>
+		<script src="js/medialSpreadSheet.js">
+			
+		</script>
+		<script src="js/media.js">
+			
+		</script>
+		<script>
+			const mediaRows = document.getElementById("mediarows").value
+			if (mediaRows.length > 4) {
+				objs = JSON.parse(mediaRows);
+			}
+			buildSpreadSheet();
+		</script>
 	</div>
 </div>
