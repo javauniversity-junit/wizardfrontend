@@ -1,3 +1,6 @@
+var monthlyAverage =0;
+var dailyCost = o;
+
 function buildSpreadSheet() {
 
 	// determine to hide spread sheet
@@ -21,8 +24,7 @@ function buildSpreadSheet() {
 	var octTotal = 0;
 	var novTotal = 0;
 	var decTotal = 0;
-	var monthlyAverage =0;
-	var dailyCost = o;
+
 	// Test to see if the browser supports the HTML template element by checking
 	// for the presence of the template element's content attribute.
 	if ('content' in document.createElement('template')) {
