@@ -21,6 +21,8 @@ function buildSpreadSheet() {
 	var octTotal = 0;
 	var novTotal = 0;
 	var decTotal = 0;
+	var monthlyAverage =0;
+	var dailyCost = o;
 	// Test to see if the browser supports the HTML template element by checking
 	// for the presence of the template element's content attribute.
 	if ('content' in document.createElement('template')) {
@@ -106,7 +108,11 @@ function buildSpreadSheet() {
 		grandtotal = grandtotal +julTotal + augTotal + sepTotal;
 		grandtotal = grandtotal +octTotal + novTotal + decTotal;
 		td[13].textContent = CurrencyFormatted(grandtotal);
-
+                monthlyAverage = grandtotal/12;
+		monthlyAverage = Math.round(monthlyAverage);
+		dailyCost = Math.round(monthlyAverage/30);
+		
+		
 		tfoot.appendChild(clone);
 
 	} else {
