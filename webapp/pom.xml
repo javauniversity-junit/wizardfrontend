@@ -106,9 +106,20 @@
  <build>
   <finalName>scrs</finalName>
   <plugins>
+	  
 	<plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-jar-plugin</artifactId>
+
+       <configuration>
+          <archive>
+            <index>true</index>
+            <manifest>
+              <addClasspath>true</addClasspath>
+            </manifest>
+          </archive>
+        </configuration>
+		
     <executions>
         <execution>
             <id>jar-services-provided</id>
