@@ -111,11 +111,6 @@
         <artifactId>maven-war-plugin</artifactId>
         <version>3.2.2</version>
         <configuration>
-          <archive>
-            <manifest>
-              <failOnMissingWebXml>false</failOnMissingWebXml>
-            </manifest>
-          </archive>
           <warSourceDirectory>src/main/webapp</warSourceDirectory>	
         </configuration>
       </plugin>
