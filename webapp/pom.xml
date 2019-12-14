@@ -36,7 +36,6 @@
 		<scope>provided</scope>
 	</dependency>
 	 <dependency>
-    <version>2.5</version>
     <groupId>javax.el</groupId>
     <artifactId>javax.el-api</artifactId>
     <version>3.0.0</version>
@@ -45,6 +44,7 @@
  <dependency>
     <groupId>commons-io</groupId>
     <artifactId>commons-io</artifactId>
+    <version>2.5</version>
 </dependency>
  <!-- https://mvnrepository.com/artifact/jfree/jfreechart -->
 
@@ -106,21 +106,16 @@
  <build>
   <finalName>scrs</finalName>
   <plugins>
-	  
-	 
-<!-- Package as an executable jar -->
-	  
-<plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-	  
-<!-- Package as an war for web -->	  
        <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
         <version>3.2.2</version>
         <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+            </manifest>
+          </archive>
           <warSourceDirectory>src/main/webapp</warSourceDirectory>	
         </configuration>
       </plugin>
