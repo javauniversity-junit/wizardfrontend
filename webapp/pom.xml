@@ -110,23 +110,10 @@
 	 
 
 	  
-	  
-	<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-jar-plugin</artifactId>
-
-       
-		
-    <executions>
-        <execution>
-            <id>jar-services-provided</id>
-            <phase>compile</phase>
-            <goals>
-                <goal>jar</goal>
-            </goals>
-        </execution>
-    </executions>
-</plugin>
+<plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
 	  
 	  
        <plugin>
