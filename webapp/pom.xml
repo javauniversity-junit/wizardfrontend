@@ -6,7 +6,25 @@
  <groupId>com.jackrutorial</groupId>
  <artifactId>scrs</artifactId>
  
- <packaging>war</packaging>
+
+	
+ <profiles>
+        <profile>
+            <id>webapp</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <packaging.type>war</packaging.type>
+            </properties>
+        </profile>
+        <profile>
+            <id>batch</id>
+            <properties>
+                <packaging.type>jar</packaging.type>
+            </properties>
+                </profile>
+          </profiles>	
 
  <name>SpringBootSigninSignupExample</name>
  <description>Demo project for Spring Boot</description>
