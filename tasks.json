@@ -3,9 +3,9 @@
         {
             "type": "che",
             "label": "run webapp",
-            "command": "SPRING_DATASOURCE_URL=jdbc:mysql://db/petclinic \\\nSPRING_DATASOURCE_USERNAME=petclinic \\\nSPRING_DATASOURCE_PASSWORD=password \\\njava -jar -Dspring.profiles.active=mysql \\\n-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005 \\\ntarget/*.jar\n",
+            "command": "java -jar  \\\n-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005 \\\ntarget/*.jar\n",
             "target": {
-                "workingDir": "${CHE_PROJECTS_ROOT}/web-java-spring-petclinic",
+                "workingDir": "${CHE_PROJECTS_ROOT}/license/webapp",
                 "component": "tools"
             }
         },
