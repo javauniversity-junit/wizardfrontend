@@ -20,9 +20,9 @@
         {
             "type": "che",
             "label": "maven build",
-            "command": "mvn clean install",
+            "command": "mvn clean package -f pom-dev.xml",
             "target": {
-                "workingDir": "${CHE_PROJECTS_ROOT}/web-java-spring-petclinic",
+                "workingDir": "${CHE_PROJECTS_ROOT}/license/webapp",
                 "component": "tools"
             }
         }
