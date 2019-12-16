@@ -6,25 +6,7 @@
  <groupId>com.jackrutorial</groupId>
  <artifactId>scrs</artifactId>
  
-
-	
- <profiles>
-        <profile>
-            <id>webapp</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <packaging.type>war</packaging.type>
-            </properties>
-        </profile>
-        <profile>
-            <id>batch</id>
-            <properties>
-                <packaging.type>jar</packaging.type>
-            </properties>
-                </profile>
-          </profiles>	
+ <packaging>war</packaging>
 
  <name>SpringBootSigninSignupExample</name>
  <description>Demo project for Spring Boot</description>
@@ -124,13 +106,19 @@
  <build>
   <finalName>scrs</finalName>
   <plugins>
-	       
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-       
-     
+       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.2</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addClasspath>true</addClasspath>
+            </manifest>
+          </archive>
+          <warSourceDirectory>src/main/webapp</warSourceDirectory>	
+        </configuration>
+      </plugin>
   </plugins>
  </build>
 </project>
