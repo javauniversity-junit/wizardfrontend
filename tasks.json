@@ -3,7 +3,7 @@
         {
             "type": "che",
             "label": "run webapp",
-            "command": "java --spring.config.location=file:///${CHE_PROJECTS_ROOT}/license/webapp/target/application-codeeny.properties -jar  \\\n-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005 \\\ntarget/*.jar\n",
+            "command": "java -jar --spring.config.location=file:///${CHE_PROJECTS_ROOT}/license/webapp/target/application-codeeny.properties   \\\n-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005 \\\ntarget/*.jar\n",
             "target": {
                 "workingDir": "${CHE_PROJECTS_ROOT}/license/webapp",
                 "component": "tools"
