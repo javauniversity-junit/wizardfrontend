@@ -1,5 +1,5 @@
 var monthlyAverage =0;
-var dailyCost = o;
+var dailyCost = 0;
 
 function buildSpreadSheet() {
 
