@@ -13,29 +13,38 @@
 
 
 		<div class="whiteGrad mce-content-body">
-		
+			<p>In return for fulfilling stated goals Premium Auto Centers
+				agrees to invest in the following long-term plan</p>
+			<!-- if="${PublishModel.clientObjectivesPage} -->
 			<div th:if="${PublishModel.clientObjectivesPage}">
-			
-					<!-- end of spreadsheet -->
+
+
+				<!-- end of spreadsheet -->
 				<script src="js/ClientObjectivesOnePageControl.js">
-	
+					
 				</script>
-			
-			
-				<ol>
-					<li th:each="selectedModel : ${ClientObjectivesPageModel}"><span
-						th:id="${selectedModel?.label}"> <script
+
+
+
+
+				</script>
+				<script src="js/media.js">
+				<!-- loop thru clientObjectives -->
+					<ol>
+					<li th:each="selectedModel : ${ClientObjectivesPageModel}"> < span
+					th: id = "${selectedModel?.label}" > <script
 								th:inline="javascript">
-							/*<![CDATA[*/
+					/*<![CDATA[*/
 
-							var message = /*[[${selectedModel?.label}]]*/'default';
-							//message = "'" + message + "'";
-							addLabel(message);
+					var message = /*[[${selectedModel?.label}]]*/'default';
+					//message = "'" + message + "'";
+					addLabel(message);
 
-							/*]]>*/
-						</script>
+					/*]]>*/
+				</script>
 
-					</span></li>
+				</span>
+				</li>
 
 
 
@@ -43,6 +52,14 @@
 
 
 
+			</div>
+			<div>
+				<h2 style="text-align: center;">Plan A</h2>
+
+				<h2
+					th:text="'For the benefit of the client ' + ${PresentedToPage?.clientContactName} + ' agrees to develop a marketing strategy to help' ">
+
+					WWWW</h2>
 			</div>
 			<div id="spreadSheet">
 				<table class="table table-striped" id="headerTable">
@@ -111,13 +128,32 @@
 				<td>110</td>
 			</tr>
 			</template>
+
+
+
+			<div>
+
+				<p>Client may cancel after 13 weeks from schedule start date
+					with two weeks’ notice and no short rate. This offer is good for 10
+					business days from the date of presentation. In accordance with
+					Paragraphs 49 and 50 of United States Federal Communications
+					Commission Report and Order No. FCC 07-217, this station will not
+					discriminate in any contract for advertising on the basis of race
+					or ethnicity, and all such contracts will be evaluated, accepted,
+					negotiated and completed without regard to race or ethnicity</p>
+
+				<h2>Analysis of Schedule:</h2>
+			</div>
 		</div>
 
 
-		<script src="js/medialSpreadSheet.js">
+		<!-- end of spreadsheet -->
+		<script src="js/ClientObjectivesOnePageControl.js">
 			
 		</script>
-		<script src="js/media.js">
+
+
+		<script src="js/medialSpreadSheet.js">
 			
 		</script>
 		<script>
