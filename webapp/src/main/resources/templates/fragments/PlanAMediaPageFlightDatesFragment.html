@@ -15,6 +15,13 @@
 		<div class="whiteGrad mce-content-body">
 		
 			<div th:if="${PublishModel.clientObjectivesPage}">
+			
+					<!-- end of spreadsheet -->
+				<script src="js/ClientObjectivesOnePageControl.js">
+	
+				</script>
+			
+			
 				<ol>
 					<li th:each="selectedModel : ${ClientObjectivesPageModel}"><span
 						th:id="${selectedModel?.label}"> <script
@@ -105,10 +112,7 @@
 			</tr>
 			</template>
 		</div>
-		<!-- end of spreadsheet -->
-		<script src="js/ClientObjectivesOnePageControl.js">
-	
-		</script>
+
 
 		<script src="js/medialSpreadSheet.js">
 			
