@@ -15,12 +15,12 @@
 		<div class="whiteGrad mce-content-body">
 		       <p>In return for fulfilling stated goals Premium Auto Centers
 		agrees to invest in the following long-term plan </p>
-			
+			<!-- if="${PublishModel.clientObjectivesPage} -->
 			<div th:if="${PublishModel.clientObjectivesPage}">
 				
 				 		</script>
 		<script src="js/media.js">
-				
+				<!-- loop thru clientObjectives -->
 				<ol>
 					<li th:each="selectedModel : ${ClientObjectivesPageModel}"><span
 						th:id="${selectedModel?.label}"> <script
