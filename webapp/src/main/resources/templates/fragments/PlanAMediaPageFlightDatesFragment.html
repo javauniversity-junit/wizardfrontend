@@ -35,6 +35,16 @@
 					<li th:each="selectedModel : ${ClientObjectivesPageModel}">
 					<span
 						th:id="${selectedModel?.label}"> 
+						
+						
+						<script th:inline="javascript">
+					          /*<![CDATA[*/
+						var message = /*[[${selectedModel?.label}]]*/'default';
+						//message = "'" + message + "'";
+						addLabel(message);
+						/*]]>*/
+						</script>
+						
 						</span>
 				  </li>
 
