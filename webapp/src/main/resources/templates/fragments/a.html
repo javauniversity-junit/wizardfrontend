@@ -1,104 +1,167 @@
+<div th:fragment="PlanAMediaPageFlightDates"
+	class="grad container pageBreakInside" style="height: 100%;">
+	<div th:if="${PublishModel.planAMediaPage}">
 
-<div class="w3-container">
-	<p>
-	<h3>Determining a business’ needed investment in target.</h3>
-</div>
+		<input type="hidden" id="mediarows"
+			th:value="${PlanAMediaPagedataPageModel?.mediaRows}" name="mediarows" />
 
-<div class="w3-row">
-	<p>A. What percentage of your “target” consumers are Men?</p>
-</div>
-<div class="w3-row">
-	<p>B. What is the perceived income of your “target” consumer’s
-		household</p>
-</div>
-<div class="w3-row">
-	<div class="w3-col m1 w3-center">
-		<input type="checkbox" />
-	</div>
-	<div class="w3-col m2 w3-center">Under 50+</div>
-	<div class="w3-col m1 w3-center">
-		<input type="checkbox" />
-	</div>
-	<div class="w3-col m2 w3-center">Under 50+</div>
-	<div class="w3-col m1 w3-center">
-		<input type="checkbox" />
-	</div>
-	<div class="w3-col m2 w3-center">Under 50+</div>
-	<div class="w3-col m1 w3-center">
-		<input type="checkbox" />
-	</div>
-	<div class="w3-col m2 w3-center">Under 50+</div>
-</div>
-<div class="w3-row">
-	<p>C. How else would you describe your ideal “target” consumer
-		(i.e. geo-targeting, home value, behavior, lifestyle, interests,
-		family structure, etc)?</p>
-</div>
-<div class="w3-row">
-	<h4>A Lenograph is a picture of consumption by target values
-		expressed by ratings 1-10, ten being highest.</h4>
-</div>
-<div class='some-page-wrapper'>
-	<div class='row'>
-		<div class='column no-border'></div>
-		<div class='column no-border'></div>
-		<div class='column no-border'>
-			<svg class="flip" height="50px"
-				style="enable-background: new 0 0 32 24;" version="1.1"
-				viewBox="0 0 32 24" width="40px" xml:space="preserve"
-				xmlns="http://www.w3.org/2000/svg"
-				xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <g id="Layer_1" />
-                  <g id="curved_x5F_arrow">
-                     <path
-					d="M28,14c0-7.73-6.27-14-14-14S0,6.27,0,14C0,8.477,4.477,4,10,4s10,4.477,10,10v2h-4l8,8l8-8h-4V14z"
-					style="fill:red;" />
-                  </g>
-               </svg>
+		<div>
+			<a id="PlanAMediaPageFlightDates"></a>
+			<p class="text-justify"></p>
+
 		</div>
-		<div class='column dark-left no-border-right dark-top top-header'>
-			Target</div>
-		<div class='column dark-right dark-top top-header'>85%</div>
-		<div class='column  no-border'>
-			<svg height="40px" style="enable-background: new 24 32 0 0;"
-				version="1.1" viewBox="0 0 32 24" width="40px" xml:space="preserve"
-				xmlns="http://www.w3.org/2000/svg"
-				xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <g id="Layer_1" />
-                  <g id="curved_x5F_arrow">
-                     <path
-					d="M28,14c0-7.73-6.27-14-14-14S0,6.27,0,14C0,8.477,4.477,4,10,4s10,4.477,10,10v2h-4l8,8l8-8h-4V14z"
-					style="fill:red;" />
-                  </g>
-               </svg>
+
+
+		<div class="whiteGrad mce-content-body">
+			<p>In return for fulfilling stated goals Premium Auto Centers
+				agrees to invest in the following long-term plan</p>
+			<!-- if="${PublishModel.clientObjectivesPage} -->
+			<div th:if="${PublishModel.clientObjectivesPage}">
+
+
+				<!-- end of spreadsheet -->
+				<script src="js/ClientObjectivesOnePageControl.js">
+					
+				</script>
+
+
+
+
+				</script>
+				<script src="js/media.js">
+				<!-- loop thru clientObjectives -->
+					<ol>
+					<li th:each="selectedModel : ${ClientObjectivesPageModel}"> < span
+					th: id = "${selectedModel?.label}" > <script
+								th:inline="javascript">
+					/*<![CDATA[*/
+
+					var message = /*[[${selectedModel?.label}]]*/'default';
+					//message = "'" + message + "'";
+					addLabel(message);
+
+					/*]]>*/
+				</script>
+
+				</span>
+				</li>
+
+
+
+				</ol>
+
+
+
+			</div>
+			<div>
+				<h2 style="text-align: center;">Plan A</h2>
+
+				<h2
+					th:text="'For the benefit of the client ' + ${PresentedToPage?.clientContactName} + ' agrees to develop a marketing strategy to help' ">
+
+					WWWW</h2>
+			</div>
+			<div id="spreadSheet">
+				<table class="table table-striped" id="headerTable">
+					<thead>
+						<tr>
+							<th>Media</th>
+							<th>Jan</th>
+							<th>Feb</th>
+							<th>Mar</th>
+							<th>Apr</th>
+							<th>May</th>
+							<th>Jun</th>
+							<th>Jul</th>
+							<th>Aug</th>
+							<th>Sep</th>
+							<th>Oct</th>
+							<th>Nov</th>
+							<th>Dec</th>
+							<th>Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- existing data could optionally be included here -->
+					</tbody>
+					<tfoot>
+						<!-- existing data could optionally be included here -->
+
+					</tfoot>
+				</table>
+			</div>
+
+			<template id="productrow">
+			<tr>
+				<td>www</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+				<td>11</td>
+				<td>12</td>
+				<td>110</td>
+			</tr>
+			</template>
+
+			<template id="footerrow">
+			<tr>
+				<td>total</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+				<td>11</td>
+				<td>12</td>
+				<td>110</td>
+			</tr>
+			</template>
+
+
+
+			<div>
+
+				<p>Client may cancel after 13 weeks from schedule start date
+					with two weeks’ notice and no short rate. This offer is good for 10
+					business days from the date of presentation. In accordance with
+					Paragraphs 49 and 50 of United States Federal Communications
+					Commission Report and Order No. FCC 07-217, this station will not
+					discriminate in any contract for advertising on the basis of race
+					or ethnicity, and all such contracts will be evaluated, accepted,
+					negotiated and completed without regard to race or ethnicity</p>
+
+				<h2>Analysis of Schedule:</h2>
+			</div>
 		</div>
-		<div class='column  no-border'></div>
-	</div>
-	<div class='row'>
-		<div class='column no-border'></div>
-		<div class='column normal sub-header'>12-18</div>
-		<div class='column normal sub-header'>19-25</div>
-		<div class='column normal dark-left sub-header'>26-35</div>
-		<div class='column normal dark-right sub-header'>36-45</div>
-		<div class='column normal sub-header'>46-55</div>
-		<div class='column normal sub-header'>56 +</div>
-	</div>
-	<div class='row'>
-		<div class='column  no-border sub-header'>Have</div>
-		<div class='column normal'>0</div>
-		<div class='column normal'>3</div>
-		<div class='column normal dark-left'>5</div>
-		<div class='column normal dark-right'>8</div>
-		<div class='column normal'>9</div>
-		<div class='column normal'>10</div>
-	</div>
-	<div class='row'>
-		<div class='column  no-border'>Want</div>
-		<div class='column normal'>0</div>
-		<div class='column normal'>7</div>
-		<div class='column normal dark-left dark-bottom'>10</div>
-		<div class='column normal dark-right dark-bottom'>10</div>
-		<div class='column normal'>9</div>
-		<div class='column normal'>8</div>
+
+
+		<!-- end of spreadsheet -->
+		<script src="js/ClientObjectivesOnePageControl.js">
+			
+		</script>
+
+
+		<script src="js/medialSpreadSheet.js">
+			
+		</script>
+		<script>
+			const mediaRows = document.getElementById("mediarows").value
+			if (mediaRows.length > 4) {
+				objs = JSON.parse(mediaRows);
+			}
+			buildSpreadSheet();
+		</script>
 	</div>
 </div>
