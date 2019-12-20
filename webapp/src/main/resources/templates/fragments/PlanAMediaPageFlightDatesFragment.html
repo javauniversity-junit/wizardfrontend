@@ -138,11 +138,17 @@
 			
 		</script>
 		<script>
+			console.group("medialSpreadSheet");
+
+
+
 			const mediaRows = document.getElementById("mediarows").value;
+			console.log("mediaRows [" + mediaRows+ "]");
 			if (mediaRows.length > 4) {
 				objs = JSON.parse(mediaRows);
 			}
 			buildSpreadSheet();
+			console.groupEnd();
 		</script>
 
 
