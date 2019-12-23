@@ -34,7 +34,7 @@
 			<div th:if="${PublishModel.clientObjectivesPage}">
 
 				<ol>
-					<li th:each="selectedModel : ${ClientObjectivesPageModel}">
+		<li th:each="selectedModel : ${ClientObjectivesPageModel} th:if="${selectedModel?.sortOrder} != 0"">
 					<span
 						th:id="${selectedModel?.label}"> 
 						
