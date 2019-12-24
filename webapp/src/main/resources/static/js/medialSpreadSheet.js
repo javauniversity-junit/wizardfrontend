@@ -2,14 +2,19 @@ var monthlyAverage =0;
 var dailyCost = 0;
 function dailyCostAndMonthlyAverage()
 {
+	
 	console.group("dailyCostAndMonthlyAverage");
 	console.log("monthlyAverage " + monthlyAverage);
 	console.log("dailyCost " + dailyCost);
+	var monthlyAverageFormattted = CurrencyFormatted(monthlyAverage);
+	var dailyCostFormattted = CurrencyFormatted(dailyCost);
+	console.log("monthlyAverageFormattted " + monthlyAverageFormattted);
+	console.log("dailyCostFormattted " + dailyCostFormattted);
 	
 	console.groupEnd();
 	
-	document.getElementById("monthlyAverageId").textContent = monthlyAverage;
-	document.getElementById("dailyCostId").textContent = dailyCost;
+	document.getElementById("monthlyAverageId").textContent = monthlyAverageFormattted;
+	document.getElementById("dailyCostId").textContent = dailyCostFormattted;
 }	
 function buildSpreadSheet() {
 
