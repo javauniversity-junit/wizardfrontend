@@ -2,8 +2,8 @@ var monthlyAverage =0;
 var dailyCost = 0;
 function dailyCostAndMonthlyAverage()
 {
-	document.getElementById("monthlyAverageId").innerHTML = monthlyAverage;
-	document.getElementById("dailyCostId").innerHTML = dailyCost;
+	document.getElementById("monthlyAverageId").textContent = monthlyAverage;
+	document.getElementById("dailyCostId").textContent = dailyCost;
 }	
 function buildSpreadSheet() {
 
