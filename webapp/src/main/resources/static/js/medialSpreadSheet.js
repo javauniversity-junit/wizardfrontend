@@ -1,6 +1,10 @@
 var monthlyAverage =0;
 var dailyCost = 0;
-
+function dailyCostAndMonthlyAverage()
+{
+	document.getElementById("monthlyAverageId").innerHTML = monthlyAverage;
+	document.getElementById("dailyCostId").innerHTML = dailyCost;
+}	
 function buildSpreadSheet() {
 
 	// determine to hide spread sheet
