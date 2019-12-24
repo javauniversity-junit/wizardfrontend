@@ -151,6 +151,7 @@
 				objs = JSON.parse(mediaRows);
 			}
 			buildSpreadSheet();
+			dailyCostAndMonthlyAverage();
 			console.groupEnd();
 		</script>
 
@@ -169,11 +170,11 @@
 		</h2>
 
   		<p>
-   		 AVERAGE MONTHLY CLIENT INVESTMENT $55555
+			AVERAGE MONTHLY CLIENT INVESTMENT <span id="monthlyAverageId"></span>
 .
   		</p>
   		<p>
-  		 AVERAGE DAILY CLIENT INVESTMENT $55555
+  		 AVERAGE DAILY CLIENT INVESTMENT <span id="dailyCostId"></span
 
   		</p>
 			</div>	       
