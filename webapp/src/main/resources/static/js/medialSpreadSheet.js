@@ -2,6 +2,12 @@ var monthlyAverage =0;
 var dailyCost = 0;
 function dailyCostAndMonthlyAverage()
 {
+	console.group("dailyCostAndMonthlyAverage");
+	console.log("monthlyAverage " + monthlyAverage);
+	console.log("dailyCost " + dailyCost);
+	
+	console.groupEnd();
+	
 	document.getElementById("monthlyAverageId").textContent = monthlyAverage;
 	document.getElementById("dailyCostId").textContent = dailyCost;
 }	
