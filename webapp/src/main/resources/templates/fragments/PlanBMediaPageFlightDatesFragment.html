@@ -2,8 +2,8 @@
 	class="grad container pageBreakInside" style="height: 100%;">
 	<div th:if="${PublishModel.planBMediaPage}">
 
-		<input type="hidden" id="mediarows"
-			th:value="${PlanBMediaPagedataPageModel?.mediaRows}" name="mediarows" />
+		<input type="hidden" id="mediarowsB"
+			th:value="${PlanBMediaPagedataPageModel?.mediaRows}" name="mediarowsB" />
 
 		<div>
 			<a id="PlanAMediaPageFlightDates"></a>
@@ -65,7 +65,7 @@
 			<p>In return for fulfilling stated goals Premium Auto Centers
 				agrees to invest in the following long-term plan</p>
 			
-			<div id="spreadSheet">
+			<div id="spreadSheetA">
 				<table class="table table-striped" id="headerTable">
 					<thead>
 						<tr>
@@ -145,7 +145,7 @@
 
 
 
-			const mediaRows = document.getElementById("mediarows").value;
+			const mediaRows = document.getElementById("mediarowsB").value;
 			console.log("mediaRows [" + mediaRows+ "]");
 			if (mediaRows.length > 4) {
 				objs = JSON.parse(mediaRows);
