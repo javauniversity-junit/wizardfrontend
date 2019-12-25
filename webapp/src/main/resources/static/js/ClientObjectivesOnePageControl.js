@@ -27,8 +27,9 @@ map.set('increaseMarketShareLabel', 'Increase Market Share');
 map.set('otherLabel', 'Other:');
 
 
-
-
+function addSelection(id) {
+	document.getElementById(id).className = 'bold-text';
+ }
 
 
 function addLabel(key) {
