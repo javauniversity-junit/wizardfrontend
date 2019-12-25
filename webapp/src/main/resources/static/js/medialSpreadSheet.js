@@ -201,7 +201,7 @@ function buildSpreadSheetB() {
 		var template = document.querySelector('#productrowB');
 
 		// Clone the new row and insert it into the table
-		var tbody = document.querySelector("tbodyB");
+		var tbody = document.querySelector('#tbodyB');
 		// remove all nodes
 		while (tbody.firstChild) {
 			tbody.firstChild.remove();
