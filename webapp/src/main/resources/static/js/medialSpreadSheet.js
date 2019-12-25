@@ -199,7 +199,7 @@ function buildSpreadSheetB() {
 		// Instantiate the table with the existing HTML tbody
 		// and the row with the template
 		var template = document.querySelector('#productrowB');
-
+                console.log("template "  + template);
 		// Clone the new row and insert it into the table
 		var tbody = document.querySelector('#tbodyB');
 		// remove all nodes
@@ -250,10 +250,10 @@ function buildSpreadSheetB() {
 
 		// Instantiate the table with the existing HTML tfoot
 		// and the row with the template
-		var template = document.querySelector('#footerrow');
+		var template = document.querySelector('#footerrowB');
 
 		// Clone the new row and insert it into the table
-		var tfoot = document.querySelector("tfoot");
+		var tfoot = document.querySelector("#tfootB");
 		// remove all nodes
 		while (tfoot.firstChild) {
 			tfoot.firstChild.remove();
