@@ -163,13 +163,19 @@ function buildSpreadSheet() {
 }// end of function
 
 function buildSpreadSheetB() {
+	console.group("buildSpreadSheetB");
+	
+	
 
 	// determine to hide spread sheet
 	if (objs === undefined || objs.length == 0) {
 		// array empty or does not exist
+		console.log("array empty or does not exist" );
+	
 		$('#spreadSheetB').hide();
 		return;
 	} else {
+		console.log("array empty or does exists" );
 		$('#spreadSheetB').show();
 	}
 
@@ -282,5 +288,5 @@ function buildSpreadSheetB() {
 		// Find another way to add the rows to the table because
 		// the HTML template element is not supported.
 	}// end of footer
-
+console.groupEnd();
 }// end of function
