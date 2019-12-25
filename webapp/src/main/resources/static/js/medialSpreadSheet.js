@@ -175,7 +175,7 @@ function buildSpreadSheetB() {
 		$('#spreadSheetB').hide();
 		return;
 	} else {
-		console.log("array empty or does exists" );
+		console.log("array  does exists" );
 		$('#spreadSheetB').show();
 	}
 
@@ -198,10 +198,10 @@ function buildSpreadSheetB() {
 
 		// Instantiate the table with the existing HTML tbody
 		// and the row with the template
-		var template = document.querySelector('#productrow');
+		var template = document.querySelector('#productrowB');
 
 		// Clone the new row and insert it into the table
-		var tbody = document.querySelector("tbody");
+		var tbody = document.querySelector("tbodyB");
 		// remove all nodes
 		while (tbody.firstChild) {
 			tbody.firstChild.remove();
