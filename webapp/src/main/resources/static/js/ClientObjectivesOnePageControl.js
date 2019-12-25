@@ -1,4 +1,6 @@
-const map = new Map();
+
+try {
+  const map = new Map();
 map.set('introduceNewDepartmentLabel', 'Introduce New Department/Products/Services');
 map.set('featureSpecificProductsLabel', 'Feature Specific Products/Services');
 map.set('callAttentiontoBrandsPrivateLabelsCarriedLabel', 'Call Attention to Brands/Private Labels Carried');
@@ -23,6 +25,13 @@ map.set('establishorReestablishBusinessImageLabel', 'Improve Reputation and List
 map.set('createPentUpDemandLabel', 'Enhance Website (Mobile, Response, SEO, SEM)');
 map.set('increaseMarketShareLabel', 'Increase Market Share');
 map.set('otherLabel', 'Other:');
+}
+catch(err) {
+ console.log(err);
+}
+
+
+
 
 
 function addLabel(key) {
