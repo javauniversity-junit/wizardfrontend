@@ -113,7 +113,15 @@
    <!-- replace PlanAMediaPageFlightDatesFragment begin -->
         <div th:if="${PublishModel.planAMediaPage}">
             <div th:replace="fragments/PlanAMediaPageFlightDatesFragment :: PlanAMediaPageFlightDates"></div>
+        </div>  
+	    
+	    
+	    
+	   <!-- replace PlanBMediaPageFlightDatesFragment begin -->
+        <div th:if="${PublishModel.planBMediaPage}">
+            <div th:replace="fragments/PlanBMediaPageFlightDatesFragment :: PlanBMediaPageFlightDates"></div>
         </div>      
+    
 
         <!-- replace marketPlaceCompetitionPage begin -->
 
