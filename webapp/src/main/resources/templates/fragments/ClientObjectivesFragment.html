@@ -1,5 +1,8 @@
-<div class="container" style="padding-top: 1%;">
-
+<!-- begin of ClientObjectivesPageModelfragment -->
+<div th:fragment="ClientObjectivesPage"
+	class="grad w3-container pageBreakInside">
+<div th:if="${PublishModel.clientObjectivesPage}" class="container" style="padding-top: 1%;">
+<!-- content-->
     <div>
 
         <fieldset>
@@ -306,11 +309,20 @@
         </fieldset>
 
     </div>
+	
+	<script th:each="selectedModel : ${ClientObjectivesPageModel}" >
+    		addSelection(selectedModel?.label);
+       </script>
 
+			
+	
+	
+	
+	
+	
 </div>
 
 <!-- JavaScript files-->
 
-<script>
-    addSelection('featureSpecificProductsLabel');
-</script>
+
+</div>
