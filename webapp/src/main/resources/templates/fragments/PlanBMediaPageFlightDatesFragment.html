@@ -1,9 +1,9 @@
-<div th:fragment="PlanAMediaPageFlightDates"
+<div th:fragment="PlanBMediaPageFlightDates"
 	class="grad container pageBreakInside" style="height: 100%;">
-	<div th:if="${PublishModel.planAMediaPage}">
+	<div th:if="${PublishModel.planBMediaPage}">
 
-		<input type="hidden" id="mediarows"
-			th:value="${PlanAMediaPagedataPageModel?.mediaRows}" name="mediarows" />
+		<input type="hidden" id="mediarowsB"
+			th:value="${PlanBMediaPagedataPageModel?.mediaRows}" name="mediarowsB" />
 
 		<div>
 			<a id="PlanAMediaPageFlightDates"></a>
@@ -14,20 +14,14 @@
 
 		<div class="whiteGrad mce-content-body">
 			<div>
-				<h2 style="text-align: center;">Plan A</h2>
+				<h2 style="text-align: center;">Plan B</h2>
 
 				<h2
 					th:text="'For the benefit of the client ' + ${PresentedToPage?.clientContactName} + ' agrees to develop a marketing strategy to help' ">
 
 					WWWW</h2>
 			</div>
-                        <script src="js/ClientObjectivesOnePageControl.js">
-				
-			</script>
-
-			<script src="js/media.js">
-				
-			</script>
+            
 
 
 			<!-- if="${PublishModel.clientObjectivesPage} -->
@@ -65,7 +59,7 @@
 			<p>In return for fulfilling stated goals Premium Auto Centers
 				agrees to invest in the following long-term plan</p>
 			
-			<div id="spreadSheet">
+			<div id="spreadSheetB">
 				<table class="table table-striped" id="headerTable">
 					<thead>
 						<tr>
@@ -85,17 +79,17 @@
 							<th>Total</th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody id="tbodyB">
 						<!-- existing data could optionally be included here -->
 					</tbody>
-					<tfoot>
+					<tfoot id="tfootB">
 						<!-- existing data could optionally be included here -->
 
 					</tfoot>
 				</table>
 			</div>
 
-			<template id="productrow">
+			<template id="productrowB">
 			<tr>
 				<td>www</td>
 				<td>1</td>
@@ -114,7 +108,7 @@
 			</tr>
 			</template>
 
-			<template id="footerrow">
+			<template id="footerrowB">
 			<tr>
 				<td>total</td>
 				<td>1</td>
@@ -141,16 +135,16 @@
 			
 		</script>
 		<script>
-			console.group("medialSpreadSheet");
+			console.group("medialSpreadSheetB");
 
 
 
-			const mediaRows = document.getElementById("mediarows").value;
-			console.log("mediaRows [" + mediaRows+ "]");
-			if (mediaRows.length > 4) {
-				objs = JSON.parse(mediaRows);
+			const mediaRowsB = document.getElementById("mediarowsB").value;
+			console.log("mediaRowsB [" + mediaRowsB + "]");
+			if (mediaRowsB.length > 4) {
+				objs = JSON.parse(mediaRowsB);
 			}
-			buildSpreadSheet();
+			buildSpreadSheetB();
 			
 			console.groupEnd();
 		</script>
@@ -170,11 +164,11 @@
 		</h2>
 
   		<p>
-			AVERAGE MONTHLY CLIENT INVESTMENT <span id="monthlyAverageId"></span>
+			AVERAGE MONTHLY CLIENT INVESTMENT <span id="monthlyAverageIdB"></span>
 .
   		</p>
   		<p>
-			AVERAGE DAILY CLIENT INVESTMENT <span id="dailyCostId"></span>
+			AVERAGE DAILY CLIENT INVESTMENT <span id="dailyCostIdB"></span>
 
   		</p>
 		 <p> 
@@ -213,7 +207,7 @@
 		       
 		       
 		  <script>
-	               dailyCostAndMonthlyAverage();
+	               dailyCostAndMonthlyAverageB();
 		       </script>
 			</div>	       
 	</div>

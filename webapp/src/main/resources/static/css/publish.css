@@ -4,6 +4,9 @@
   bottom: 0;
 
 }
+.bold-text {
+  font-weight: bold;
+}
 
 .fill-arrow-green {
   fill: #002b00;

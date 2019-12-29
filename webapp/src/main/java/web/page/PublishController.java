@@ -274,10 +274,11 @@ public class PublishController {
 				}
 			case PlanBMediaPage:
 				try {
-					PlanMediaPageModel dataPageModel = null;
-				dataPageModel = (PlanMediaPageModel) JSONManager.convertFromJson(data.getPagedata(),
+					PlanMediaPageModel planBMediaPagedataPageModel = null;
+				planBMediaPagedataPageModel = (PlanMediaPageModel) JSONManager.convertFromJson(data.getPagedata(),
 						PlanMediaPageModel.class);
-				MediaChart mediaChart = MediaChartHelper.generate(dataPageModel);
+				MediaChart mediaChart = MediaChartHelper.generate(planBMediaPagedataPageModel);
+					model.addAttribute("PlanBMediaPagedataPageModel", planBMediaPagedataPageModel);
 				model.addAttribute("PlanBMediaPage", mediaChart);
 				if (mediaChart != null) {
 					publish.setPlanBMediaPage(true);

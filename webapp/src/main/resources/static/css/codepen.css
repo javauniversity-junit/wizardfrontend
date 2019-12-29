@@ -143,12 +143,14 @@ body {
 }
 
 .mce-content-body p {
-	margin: 25px 0
+	margin: 25px 0;
+	padding: 0;
 }
 
 .mce-content-body pre {
 	font-family: monospace
 }
+
 
 .mce-content-body ol,
 .mce-content-body ul {

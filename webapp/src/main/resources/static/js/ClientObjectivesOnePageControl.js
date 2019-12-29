@@ -1,3 +1,5 @@
+
+
 const map = new Map();
 map.set('introduceNewDepartmentLabel', 'Introduce New Department/Products/Services');
 map.set('featureSpecificProductsLabel', 'Feature Specific Products/Services');
@@ -23,6 +25,11 @@ map.set('establishorReestablishBusinessImageLabel', 'Improve Reputation and List
 map.set('createPentUpDemandLabel', 'Enhance Website (Mobile, Response, SEO, SEM)');
 map.set('increaseMarketShareLabel', 'Increase Market Share');
 map.set('otherLabel', 'Other:');
+
+
+function addSelection(id) {
+	document.getElementById(id).className = 'bold-text';
+ }
 
 
 function addLabel(key) {
