@@ -6,13 +6,55 @@
 		
 		<div>
 			<a id="ClientObjectivesPage"></a>
-			<p class="text-justify"></p>
-
+			<div class="text-justify">
+				<h1 class="text-center w3-text-white">Strategic Marketing</h1>
+			</div>
+			
+			
+		
 		</div>
 		
 		<!-- content-->
 		<div class="whiteGrad mce-content-body grid-container">
+            <div>
+            <p>If you had the power to improve three things in your marketing, what would 
+            they be in order of their priority?
+            </p>
+            </div>
+            <div>
+            <ol>
+		<li th:each="selectedModel : ${ClientObjectivesPageModel}" 
+	            th:if="${selectedModel.sortOrder} != 0">
+				
+			
+			<span> 
+						
+						
+						<script th:inline="javascript">
+					          /*<![CDATA[*/
+					    console.group("translate label to text");
+						var label = /*[[${selectedModel?.label}]]*/'default';
+						console.log("label " + label);
+						//message = "'" + message + "'";
+						var text = getLabelText(label);
+						console.log("text	 " + text);
+						document.write(text);
+						console.groupEnd();
+						/*]]>*/
+						</script>
+						
+						</span>
+				  </li>
 
+
+
+				</ol>
+            
+            </div>
+            
+            
+            
+            
 			<fieldset>
 				<legend> Client Objectives </legend>
 
@@ -282,13 +324,24 @@
 				</fieldset>
 
 			</fieldset>
+            <div>
+            
+            <p>What are the biggest misconceptions consumers have about the business?</p>
+            <p style="padding-left: 5%;line-height: normal;" th:text="${StrategicMarketingPageOne?.misconceptions}" >
+            </p>
+            
+            <p> What are the clients most distinctive selling advantages?</p>
+            <p style="padding-left: 5%;line-height: normal;" th:text="${StrategicMarketingPageOne?.sellingAdvantages}" >
+            </p>
 
+           </div>
 		</div>
 			<div class="w3-container d-print-none" style="padding-top: 2%;">
 			    <button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
                  <a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
                 <button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
 		</div>
+		<div class="CopyRightId"></div>
 <!-- select items -->
 		<script th:each="selectedModel : ${ClientObjectivesPageModel}" th:inline="javascript">
 		/*<![CDATA[*/

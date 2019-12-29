@@ -57,3 +57,14 @@ function addLabel(key) {
 	}
 	
 }
+
+
+function getLabelText(key) {
+	if (map.has(key)) {
+	  var keyvalue = map.get(key);
+	  return keyvalue;
+	} else {
+		return key;
+	}
+	
+}

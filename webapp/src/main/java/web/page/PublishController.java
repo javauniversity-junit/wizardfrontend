@@ -327,6 +327,7 @@ public class PublishController {
 				strategicMarketingPageOneModel = (StrategicMarketingPageOneModel) JSONManager
 						.convertFromJson(data.getPagedata(), StrategicMarketingPageOneModel.class);
 				model.addAttribute("StrategicMarketingPageOne", strategicMarketingPageOneModel);
+				publish.setStrategicMarketingPageOne(true);
 				mLog.info("found page StrategicMarketingPageOne");
 
 				mLog.info("value found page StrategicMarketingPageOne "
