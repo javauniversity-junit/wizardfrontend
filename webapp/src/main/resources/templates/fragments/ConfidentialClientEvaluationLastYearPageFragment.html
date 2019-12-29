@@ -32,16 +32,20 @@
 			}
 
 			function addChartDataPoint (name, value) {
-				console.log("addChartDataPoint");
-				//name = "'" + name +  "'";
+				
+				console.group("addChartDataPoint");
+				console.log("name " + name);
+				console.log("value " + value);
+				
 			          let x = new ChartDataPointLastYear(name,value); 
 				      arrayChartDataPointLastYear.push(x);
+				      console.groupEnd();
 			   
 			}
 
 			function drawChart() {
 
-				   console.log("drawChart");
+				   console.group("drawChart");
 				   console.log("arrayChartDataPointLastYear.length " + arrayChartDataPointLastYear.length);
 				   var data = new google.visualization.DataTable();
 			           data.addColumn('string', 'Topping');
@@ -74,6 +78,7 @@
 				        // Instantiate and draw our chart, passing in some options.
 				        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
 				        chart.draw(data,options);
+				        console.groupEnd();
 				        //chart.draw(data, options);
 			}
 

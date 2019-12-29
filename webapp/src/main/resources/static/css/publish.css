@@ -6,6 +6,8 @@
 }
 .bold-text {
   font-weight: bold;
+  color: black;
+  background-color: #FFFF00;
 }
 
 .fill-arrow-green {

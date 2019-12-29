@@ -28,7 +28,23 @@ map.set('otherLabel', 'Other:');
 
 
 function addSelection(id) {
-	document.getElementById(id).className = 'bold-text';
+	console.group("addSelection");
+	console.log("id " + id);
+	var myElement = document.getElementById(id);
+	 if(myElement){
+		 console.log("id does exists " + id);
+
+		 myElement.className = 'bold-text';
+	 } else {
+		 console.log("id does NOT exists " + id);
+	  }
+	
+	
+	console.groupEnd();
+	
+	
+	
+	
  }
 
 

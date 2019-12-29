@@ -32,16 +32,17 @@
 			}
 
 			function addChartDataPointProposed (name, value) {
-				console.log("addChartDataPoint");
+				console.group("addChartDataPointProposed");
 				//name = "'" + name +  "'";
 			          let x = new ChartDataPointProposed(name,value); 
 				      arrayChartDataPointProposed.push(x);
+				      console.groupEnd();
 			   
 			}
 
 			function drawChartProposed() {
 
-				   console.log("drawChartProposed");
+				   console.group("drawChartProposed");
 				   console.log("arrayChartDataPointProposed.length " + arrayChartDataPointProposed.length);
 				   var data = new google.visualization.DataTable();
 			           data.addColumn('string', 'Topping');

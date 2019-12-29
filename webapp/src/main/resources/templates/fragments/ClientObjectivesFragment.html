@@ -3,15 +3,22 @@
 	class="grad w3-container pageBreakInside">
 	<div th:if="${PublishModel.clientObjectivesPage}" class="container"
 		style="padding-top: 1%;">
-		<!-- content-->
+		
 		<div>
+			<a id="ClientObjectivesPage"></a>
+			<p class="text-justify"></p>
+
+		</div>
+		
+		<!-- content-->
+		<div class="whiteGrad mce-content-body grid-container">
 
 			<fieldset>
 				<legend> Client Objectives </legend>
 
 				<fieldset>
 					<legend>PRODUCT / SERVICE</legend>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span id="introduceNewDepartmentLabel"
@@ -24,7 +31,7 @@
 						</div>
 
 					</div>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span id="featureSpecificProductsLabel"> <script>
@@ -35,7 +42,7 @@
 						</div>
 
 					</div>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span
@@ -47,7 +54,7 @@
 						</div>
 
 					</div>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span id="promoteOffPriceItemsServicesLabel">
@@ -59,7 +66,7 @@
 						</div>
 
 					</div>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span id="utilizeCoopVendorDollarsLabel">
@@ -76,7 +83,7 @@
 
 				<fieldset>
 					<legend>CONSUMER</legend>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span id="retainCurrentConsumersLabel"> <script>
@@ -87,7 +94,7 @@
 						</div>
 
 					</div>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span id="increaseCustomerVisitsLabel"> <script>
@@ -98,7 +105,7 @@
 						</div>
 
 					</div>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span id="increaseTrafficLeadCallsLabel">
@@ -110,7 +117,7 @@
 						</div>
 
 					</div>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span id="expandTargetConsumersLabel"> <script>
@@ -121,7 +128,7 @@
 						</div>
 
 					</div>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span id="changeConsumerAttitudesLabel"> <script>
@@ -137,7 +144,7 @@
 
 				<fieldset>
 					<legend>PROMOTION</legend>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span id="makePromotionalEventsStrongerLabel">
@@ -149,7 +156,7 @@
 						</div>
 
 					</div>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span
@@ -161,7 +168,7 @@
 						</div>
 
 					</div>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span id="developDatabaseMarketingLabel">
@@ -173,7 +180,7 @@
 						</div>
 
 					</div>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span id="initiateCauseMarketingProgramLabel">
@@ -185,7 +192,7 @@
 						</div>
 
 					</div>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span id="developSpeciallyStagedEventLabel">
@@ -202,7 +209,7 @@
 
 				<fieldset>
 					<legend>BRAND</legend>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span id="maintainMarketDominanceLabel"> <script>
@@ -213,7 +220,7 @@
 						</div>
 
 					</div>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span id="improveBusinessNameBrandLabel">
@@ -225,7 +232,7 @@
 						</div>
 
 					</div>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span
@@ -237,7 +244,7 @@
 						</div>
 
 					</div>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span id="createPentUpDemandLabel"> <script>
@@ -248,7 +255,7 @@
 						</div>
 
 					</div>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span id="increaseMarketShareLabel"> <script>
@@ -259,7 +266,7 @@
 						</div>
 
 					</div>
-					<div>
+					<div class="grid-item">
 
 						<div>
 							<label> <span id="otherLabel"> <script>
@@ -277,9 +284,17 @@
 			</fieldset>
 
 		</div>
-
-		<script th:each="selectedModel : ${ClientObjectivesPageModel}">
-    		addSelection(selectedModel?.label);
+			<div class="w3-container d-print-none" style="padding-top: 2%;">
+			    <button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
+                 <a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
+                <button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
+		</div>
+<!-- select items -->
+		<script th:each="selectedModel : ${ClientObjectivesPageModel}" th:inline="javascript">
+		/*<![CDATA[*/
+		var label = /*[[${selectedModel?.label}]]*/'default';
+		addSelection(label);
+		/*]]>*/
        </script>
 
 
