@@ -11,8 +11,9 @@
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
-    <script src="js/currency.js "></script>
+    <script src="js/ClientObjectivesOnePageControl.js"></script>
+    <script src="js/media.js"></script>
+    <script src="js/currency.js"></script>
 
     <script>
         function printPage() {
@@ -48,6 +49,12 @@
         <div th:if="${PublishModel.marketPlaceCompetitionPage}">
             <div th:replace="fragments/MarketPlaceCompetitionPageFragment :: MarketPlaceCompetitionPage"></div>
         </div>
+
+
+   <!-- replace ClientObjectivesFragment begin -->
+        <div th:if="${PublishModel.clientObjectivesPage}">
+            <div th:replace="fragments/ClientObjectivesFragment :: ClientObjectivesPage"></div>
+        </div>  
 
 
 <!-- replace ConfidentialClientEvaluationPageDataFragment begin -->
@@ -122,6 +129,8 @@
             <div th:replace="fragments/PlanBMediaPageFlightDatesFragment :: PlanBMediaPageFlightDates"></div>
         </div>      
     
+    
+    	
 
         <!-- replace marketPlaceCompetitionPage begin -->
 
