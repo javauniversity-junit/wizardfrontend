@@ -165,6 +165,11 @@
 
 <script th:inline="javascript">
 /*<![CDATA[*/
+	
+	console.group("TargetHeaderRow");
+
+
+	
     var want12to18 = /*[[${targetMarketingPageModel?.want12to18}]]*/ '0';
 	  var want19to25 = /*[[${targetMarketingPageModel?.want19to25}]]*/ '0';
 	  var want26to35 = /*[[${targetMarketingPageModel?.want26to35}]]*/ '0';
@@ -176,6 +181,33 @@
 	var want26to35_want36to45 = false;
 	var want36to45_want46to55 = false;
 	var want46to55_want55Plus = false;
+	var targetHeaderRowNumber = 0;
+	console.log("want12to18 " + want12to18);
+console.log("want19to25 " + want19to25);
+console.log("want26to35 " + want26to35);
+	
+		console.log("want36to45 " + want36to45);
+console.log("want46to55 " + want46to55);
+console.log("want55Plus " + want55Plus)
+	
+	if (want19to25 == 10 && want26to35 == 10) {
+		targetHeaderRowNumber = 1;
+		console.log("want19to25_want26to35 ");
+	}
+	if (want26to35 == 10 && want36to45 == 10) {
+		targetHeaderRowNumber = 2;
+		console.log("want26to35_want36to45 ");
+	}	
+if (want36to45 == 10 && want46to55 == 10) {
+		targetHeaderRowNumber = 3;
+		console.log("want36to45_want46to55");
+	}
+if (want46to55 == 10 && want55Plus == 10) {
+		targetHeaderRowNumber = 4;
+		console.log("want46to55_want55Plus");
+	}	
+	
+	console.groupEnd();
 	
     			
 /*]]>*/
