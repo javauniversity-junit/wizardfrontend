@@ -182,31 +182,36 @@
 	var want36to45_want46to55 = false;
 	var want46to55_want55Plus = false;
 	var targetHeaderRowNumber = 0;
-	want12to18 = Number(want12to18);
-	want19to25 = Number(want19to25);
+	//want12to18 = Number(want12to18);
+	//want19to25 = Number(want19to25);
 	
-	console.log("want12to18 " + want12to18);
+	console.log("want12to18 [" + want12to18 + "]");
 console.log("want19to25 [" + want19to25 + "]");
 console.log("want26to35 [" + want26to35 + "]");
 	
 		console.log("want36to45 " + want36to45);
 console.log("want46to55 " + want46to55);
 console.log("want55Plus " + want55Plus)
+	if (want19to25 == 10 && want12to18 == 10) {
+		targetHeaderRowNumber = 1;
+		console.log("want12to18_want19to25 ");
+	}
+	
 	
 	if (want19to25 == 10 && want26to35 == 10) {
-		targetHeaderRowNumber = 1;
+		targetHeaderRowNumber = 2;
 		console.log("want19to25_want26to35 ");
 	}
 	if (want26to35 == 10 && want36to45 == 10) {
-		targetHeaderRowNumber = 2;
+		targetHeaderRowNumber = 3;
 		console.log("want26to35_want36to45 ");
 	}	
 if (want36to45 == 10 && want46to55 == 10) {
-		targetHeaderRowNumber = 3;
+		targetHeaderRowNumber = 4;
 		console.log("want36to45_want46to55");
 	}
 if (want46to55 == 10 && want55Plus == 10) {
-		targetHeaderRowNumber = 4;
+		targetHeaderRowNumber = 5;
 		console.log("want46to55_want55Plus");
 	}	
 	console.log(" ten [" + 10 + "]");
