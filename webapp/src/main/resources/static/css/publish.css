@@ -1,3 +1,6 @@
+.hide {
+	 visibility: hidden;
+}
 .position-bottom {
   position: absolute;
   
