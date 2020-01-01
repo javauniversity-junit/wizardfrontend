@@ -161,5 +161,28 @@
     	
     /*]]>*/
 </script>
+
+
+<script th:inline="javascript">
+/*<![CDATA[*/
+    var want12to18 = /*[[${targetMarketingPageModel?.want12to18}]]*/ '0';
+	  var want19to25 = /*[[${targetMarketingPageModel?.want19to25}]]*/ '0';
+	  var want26to35 = /*[[${targetMarketingPageModel?.want26to35}]]*/ '0';
+	  var want36to45 = /*[[${targetMarketingPageModel?.want36to45}]]*/ '0';
+	  var want46to55 = /*[[${targetMarketingPageModel?.want46to55}]]*/ '0';
+	  var want55Plus = /*[[${targetMarketingPageModel?.want55Plus}]]*/ '0';
+	
+	var want19to25_want26to35 = false;
+	var want26to35_want36to45 = false;
+	var want36to45_want46to55 = false;
+	var want46to55_want55Plus = false;
+	
+    			
+/*]]>*/
+</script>	
+
+	
+	
+	
 </div>
 <!-- end of PresentedTofragment -->
