@@ -16,9 +16,10 @@
 
 			<div class="w3-row">
 				<p>
-				A. What percentage of your “target” consumers are Men? <span th:text="${targetMarketingPageModel?.pctMen}"></span>  Women ?
-				<span th:text="${targetMarketingPageModel?.pctWomen}"></span>
-				 </p>
+					A. What percentage of your “target” consumers are Men? <span
+						th:text="${targetMarketingPageModel?.pctMen}"></span> Women ? <span
+						th:text="${targetMarketingPageModel?.pctWomen}"></span>
+				</p>
 			</div>
 			<div class="w3-row">
 				<p>B. What is the perceived income of your “target” consumer’s
@@ -27,7 +28,7 @@
 			<div class="w3-container">
 				<div class="w3-row">
 					<div class="col-p-1 w3-center">
-						<input type="checkbox" id="under50Id" disabled="disabled"/>
+						<input type="checkbox" id="under50Id" disabled="disabled" />
 					</div>
 					<div class="col-p-1 w3-center">Under $50K</div>
 					<div class="col-p-1 w3-center">
@@ -39,7 +40,7 @@
 					</div>
 					<div class="col-p-1 w3-center">$100K-$149K</div>
 					<div class="col-p-1 w3-center">
-						<input type="checkbox" id="150Id" disabled="disabled"/>
+						<input type="checkbox" id="150Id" disabled="disabled" />
 					</div>
 					<div class="col-p-1 w3-center">$150 Plus</div>
 				</div>
@@ -51,54 +52,110 @@
 				<p>C. How else would you describe your ideal “target” consumer
 					(i.e. geo-targeting, home value, behavior, lifestyle, interests,
 					family structure, etc)?</p>
-				<p th:text="${targetMarketingPageModel?.describeIdealTargetConsumer}"></p>
+				<p
+					th:text="${targetMarketingPageModel?.describeIdealTargetConsumer}"></p>
 			</div>
 			<div class="w3-row">
 				<h4>A Lenograph is a picture of consumption by target values
 					expressed by ratings 1-10, ten being highest.</h4>
 			</div>
 			<div class='some-page-wrapper'>
-				
-				
-				<div class='row' id="want19to25_want26to35" th:if="${targetMarketingPageModel.want12to18 == 10}">
-					<div class='column no-border'></div>
-					<div class='column no-border'></div>
-					<div class='column no-border'>
-						<svg class="flip" height="50px"
-							style="enable-background: new 0 0 32 24;" version="1.1"
-							viewBox="0 0 32 24" width="40px" xml:space="preserve"
-							xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink">
+
+				<!-- th:block rather than unneeded div -->
+				<th:block th:switch="${targetMarketingHeaderRow.rowStatus}">
+					<div th:case="'Want12to18ToWant19to25'">
+						<!-- print object is not active -->
+					</div>
+					<div th:case="'Want19to25ToWant26to35'">
+
+						<div class='row'>
+							<div class='column no-border'></div>
+							
+							<div class='column no-border'>
+								<svg class="flip" height="50px"
+									style="enable-background: new 0 0 32 24;" version="1.1"
+									viewBox="0 0 32 24" width="40px" xml:space="preserve"
+									xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g id="Layer_1" />
                   <g id="curved_x5F_arrow">
                      <path
-								d="M28,14c0-7.73-6.27-14-14-14S0,6.27,0,14C0,8.477,4.477,4,10,4s10,4.477,10,10v2h-4l8,8l8-8h-4V14z"
-								style="fill:red;" />
+										d="M28,14c0-7.73-6.27-14-14-14S0,6.27,0,14C0,8.477,4.477,4,10,4s10,4.477,10,10v2h-4l8,8l8-8h-4V14z"
+										style="fill:red;" />
                   </g>
                </svg>
-					</div>
-					<div class='column dark-left no-border-right dark-top top-header'>
-						Target</div>
-					<div class='column dark-right dark-top top-header'>85%</div>
-					<div class='column  no-border'>
-						<svg height="40px" style="enable-background: new 24 32 0 0;"
-							version="1.1" viewBox="0 0 32 24" width="40px"
-							xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-							xmlns:xlink="http://www.w3.org/1999/xlink">
+							</div>
+							<div class='column no-border'></div>
+							<div class='column dark-left no-border-right dark-top top-header'>
+								Target</div>
+							<div class='column dark-right dark-top top-header'>85%</div>
+							<div class='column  no-border'>
+								<svg height="40px" style="enable-background: new 24 32 0 0;"
+									version="1.1" viewBox="0 0 32 24" width="40px"
+									xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink">
                   <g id="Layer_1" />
                   <g id="curved_x5F_arrow">
                      <path
-								d="M28,14c0-7.73-6.27-14-14-14S0,6.27,0,14C0,8.477,4.477,4,10,4s10,4.477,10,10v2h-4l8,8l8-8h-4V14z"
-								style="fill:red;" />
+										d="M28,14c0-7.73-6.27-14-14-14S0,6.27,0,14C0,8.477,4.477,4,10,4s10,4.477,10,10v2h-4l8,8l8-8h-4V14z"
+										style="fill:red;" />
                   </g>
                </svg>
+							</div>
+							<div class='column  no-border'></div>
+						</div>
 					</div>
-					<div class='column  no-border'></div>
-				</div>
-				
-				
-				
-				
+					<div th:case="'Want26to35ToWant36to45'">
+												<div class='row'>
+							<div class='column no-border'></div>
+							<div class='column no-border'></div>
+							<div class='column no-border'>
+								<svg class="flip" height="50px"
+									style="enable-background: new 0 0 32 24;" version="1.1"
+									viewBox="0 0 32 24" width="40px" xml:space="preserve"
+									xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Layer_1" />
+                  <g id="curved_x5F_arrow">
+                     <path
+										d="M28,14c0-7.73-6.27-14-14-14S0,6.27,0,14C0,8.477,4.477,4,10,4s10,4.477,10,10v2h-4l8,8l8-8h-4V14z"
+										style="fill:red;" />
+                  </g>
+               </svg>
+							</div>
+							<div class='column dark-left no-border-right dark-top top-header'>
+								Target</div>
+							<div class='column dark-right dark-top top-header'>85%</div>
+							<div class='column  no-border'>
+								<svg height="40px" style="enable-background: new 24 32 0 0;"
+									version="1.1" viewBox="0 0 32 24" width="40px"
+									xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g id="Layer_1" />
+                  <g id="curved_x5F_arrow">
+                     <path
+										d="M28,14c0-7.73-6.27-14-14-14S0,6.27,0,14C0,8.477,4.477,4,10,4s10,4.477,10,10v2h-4l8,8l8-8h-4V14z"
+										style="fill:red;" />
+                  </g>
+               </svg>
+							</div>
+							<div class='column  no-border'></div>
+						</div>
+					</div>
+					<div th:case="'Want36to45ToWant46to55'">
+						<!-- print object is not active -->
+					</div>
+					<div th:case="'Want46to55ToWant55Plus'">
+						<!-- print object is new and active -->
+					</div>
+				</th:block>
+
+
+
+
+
+
+
 				<div class='row'>
 					<div class='column no-border'></div>
 					<div class='column normal sub-header'>12-18</div>
@@ -110,21 +167,33 @@
 				</div>
 				<div class='row'>
 					<div class='column  no-border sub-header'>HAVE</div>
-					<div class='column normal' th:text="${targetMarketingPageModel?.have12to18}"></div>
-					<div class='column normal' th:text="${targetMarketingPageModel?.have19to25}"></div>
-					<div class='column normal dark-left' th:text="${targetMarketingPageModel?.have26to35}"></div>
-					<div class='column normal dark-right' th:text="${targetMarketingPageModel?.have36to45}"></div>
-					<div class='column normal' th:text="${targetMarketingPageModel?.have46to55}"></div>
-					<div class='column normal' th:text="${targetMarketingPageModel?.have56Plus}"></div>
+					<div class='column normal'
+						th:text="${targetMarketingPageModel?.have12to18}"></div>
+					<div class='column normal'
+						th:text="${targetMarketingPageModel?.have19to25}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.have26to35}"></div>
+					<div class='column normal dark-right'
+						th:text="${targetMarketingPageModel?.have36to45}"></div>
+					<div class='column normal'
+						th:text="${targetMarketingPageModel?.have46to55}"></div>
+					<div class='column normal'
+						th:text="${targetMarketingPageModel?.have56Plus}"></div>
 				</div>
 				<div class='row'>
 					<div class='column  no-border sub-header'>WANT</div>
-					<div class='column normal' th:text="${targetMarketingPageModel?.want12to18}"></div>
-					<div class='column normal' th:text="${targetMarketingPageModel?.want19to25}"></div>
-					<div class='column normal dark-left dark-bottom' th:text="${targetMarketingPageModel?.want26to35}"></div>
-					<div class='column normal dark-right dark-bottom' th:text="${targetMarketingPageModel?.want36to45}"></div>
-					<div class='column normal' th:text="${targetMarketingPageModel?.want46to55}"></div>
-					<div class='column normal' th:text="${targetMarketingPageModel?.want55Plus}"></div>
+					<div class='column normal'
+						th:text="${targetMarketingPageModel?.want12to18}"></div>
+					<div class='column normal'
+						th:text="${targetMarketingPageModel?.want19to25}"></div>
+					<div class='column normal dark-left dark-bottom'
+						th:text="${targetMarketingPageModel?.want26to35}"></div>
+					<div class='column normal dark-right dark-bottom'
+						th:text="${targetMarketingPageModel?.want36to45}"></div>
+					<div class='column normal'
+						th:text="${targetMarketingPageModel?.want46to55}"></div>
+					<div class='column normal'
+						th:text="${targetMarketingPageModel?.want55Plus}"></div>
 				</div>
 			</div>
 
@@ -140,125 +209,120 @@
 		<div class="CopyRightId"></div>
 	</div>
 	<!-- end of if statement -->
-<script th:inline="javascript">
-    /*<![CDATA[*/
-    	
-    	 var householdIncome = /*[[${targetMarketingPageModel.householdIncome}]]*/ 'householdIncome';
-         var householdIncomeNumber=  Number(householdIncome);
-    
-         switch(householdIncomeNumber) {
-    	  case 1:
-    		  document.getElementById("150Id").checked = true;
-    	    	
-    	    break;
-    	  case 2:
-    		  document.getElementById("100149Id").checked = true;
-    		  
-    	    break;
-    	  case 3:
-    		  document.getElementById("5099Id").checked = true;
-    	    break;
-    	  case 4:
-    		  document.getElementById("under50Id").checked = true;
-    	    break;
-    	  default:
-    	    // code block
-    	}
-    	
-    /*]]>*/
-</script>
+	<script th:inline="javascript">
+		/*<![CDATA[*/
+
+		var householdIncome = /*[[${targetMarketingPageModel.householdIncome}]]*/'householdIncome';
+		var householdIncomeNumber = Number(householdIncome);
+
+		switch (householdIncomeNumber) {
+		case 1:
+			document.getElementById("150Id").checked = true;
+
+			break;
+		case 2:
+			document.getElementById("100149Id").checked = true;
+
+			break;
+		case 3:
+			document.getElementById("5099Id").checked = true;
+			break;
+		case 4:
+			document.getElementById("under50Id").checked = true;
+			break;
+		default:
+			// code block
+		}
+
+		/*]]>*/
+	</script>
 
 
-<script th:inline="javascript">
-/*<![CDATA[*/
-	
-	console.group("TargetHeaderRow");
+	<script th:inline="javascript">
+		/*<![CDATA[*/
 
+		console.group("TargetHeaderRow");
 
-	
-    var want12to18 = /*[[${targetMarketingPageModel?.want12to18}]]*/ '0';
-	  var want19to25 = /*[[${targetMarketingPageModel?.want19to25}]]*/ '0';
-	  var want26to35 = /*[[${targetMarketingPageModel?.want26to35}]]*/ '0';
-	  var want36to45 = /*[[${targetMarketingPageModel?.want36to45}]]*/ '0';
-	  var want46to55 = /*[[${targetMarketingPageModel?.want46to55}]]*/ '0';
-	  var want55Plus = /*[[${targetMarketingPageModel?.want55Plus}]]*/ '0';
-	
-	var want19to25_want26to35 = false;
-	var want26to35_want36to45 = false;
-	var want36to45_want46to55 = false;
-	var want46to55_want55Plus = false;
-	var targetHeaderRowNumber = 0;
-	//want12to18 = Number(want12to18);
-	//want19to25 = Number(want19to25);
-	
-	console.log("want12to18 [" + want12to18 + "]");
-console.log("want19to25 [" + want19to25 + "]");
-console.log("want26to35 [" + want26to35 + "]");
-	
+		var want12to18 = /*[[${targetMarketingPageModel?.want12to18}]]*/'0';
+		var want19to25 = /*[[${targetMarketingPageModel?.want19to25}]]*/'0';
+		var want26to35 = /*[[${targetMarketingPageModel?.want26to35}]]*/'0';
+		var want36to45 = /*[[${targetMarketingPageModel?.want36to45}]]*/'0';
+		var want46to55 = /*[[${targetMarketingPageModel?.want46to55}]]*/'0';
+		var want55Plus = /*[[${targetMarketingPageModel?.want55Plus}]]*/'0';
+
+		var want19to25_want26to35 = false;
+		var want26to35_want36to45 = false;
+		var want36to45_want46to55 = false;
+		var want46to55_want55Plus = false;
+		var targetHeaderRowNumber = 0;
+		//want12to18 = Number(want12to18);
+		//want19to25 = Number(want19to25);
+
+		console.log("want12to18 [" + want12to18 + "]");
+		console.log("want19to25 [" + want19to25 + "]");
+		console.log("want26to35 [" + want26to35 + "]");
+
 		console.log("want36to45 " + want36to45);
-console.log("want46to55 " + want46to55);
-console.log("want55Plus " + want55Plus)
-	if (want19to25 == 10 && want12to18 == 10) {
-		targetHeaderRowNumber = 1;
-		console.log("want12to18_want19to25 ");
-	}
-	
-	
-	if (want19to25 == 10 && want26to35 == 10) {
-		targetHeaderRowNumber = 2;
-		console.log("want19to25_want26to35 ");
-	}
-	if (want26to35 == 10 && want36to45 == 10) {
-		targetHeaderRowNumber = 3;
-		console.log("want26to35_want36to45 ");
-	}	
-if (want36to45 == 10 && want46to55 == 10) {
-		targetHeaderRowNumber = 4;
-		console.log("want36to45_want46to55");
-	}
-if (want46to55 == 10 && want55Plus == 10) {
-		targetHeaderRowNumber = 5;
-		console.log("want46to55_want55Plus");
-	}	
-	console.log(" ten [" + 10 + "]");
-	console.log("targetHeaderRowNumber [" + targetHeaderRowNumber + "]");
-	
-	// console.log("document.getElementById("want19to25_want26to35").style.display [" + document.getElementById("want19to25_want26to35").style.display + "]");
-    		 var aa = document.getElementById("want19to25_want26to35");
-	//console.log(" element " + aa);
-	//var test = document.getElementById("want19to25_want26to35").style.display;
-			// console.log(" style [" + test + "]");
-	//document.getElementById("want19to25_want26to35").style.display = 'none';//hide
-         switch(targetHeaderRowNumber) {
-    	  case 1:
-			
-			 
-			 //document.getElementById("want19to25_want26to35").style.display = 'block';
-			 //document.getElementById("want19to25_want26to35").visibility = 'visible';
-    	    	
-    	    break;
-    	  case 2:
-    		 // document.getElementById("100149Id").checked = true;
-    		  
-    	    break;
-    	  case 3:
-    		 // document.getElementById("5099Id").checked = true;
-    	    break;
-    	  case 4:
-    		  //document.getElementById("under50Id").checked = true;
-    	    break;
-    	  default:
-    	    // code block
-    	}	
-	
-	console.groupEnd();
-	
-    			
-/*]]>*/
-</script>	
+		console.log("want46to55 " + want46to55);
+		console.log("want55Plus " + want55Plus)
+		if (want19to25 == 10 && want12to18 == 10) {
+			targetHeaderRowNumber = 1;
+			console.log("want12to18_want19to25 ");
+		}
 
-	
-	
-	
+		if (want19to25 == 10 && want26to35 == 10) {
+			targetHeaderRowNumber = 2;
+			console.log("want19to25_want26to35 ");
+		}
+		if (want26to35 == 10 && want36to45 == 10) {
+			targetHeaderRowNumber = 3;
+			console.log("want26to35_want36to45 ");
+		}
+		if (want36to45 == 10 && want46to55 == 10) {
+			targetHeaderRowNumber = 4;
+			console.log("want36to45_want46to55");
+		}
+		if (want46to55 == 10 && want55Plus == 10) {
+			targetHeaderRowNumber = 5;
+			console.log("want46to55_want55Plus");
+		}
+		console.log(" ten [" + 10 + "]");
+		console.log("targetHeaderRowNumber [" + targetHeaderRowNumber + "]");
+
+		// console.log("document.getElementById("want19to25_want26to35").style.display [" + document.getElementById("want19to25_want26to35").style.display + "]");
+		var aa = document.getElementById("want19to25_want26to35");
+		//console.log(" element " + aa);
+		//var test = document.getElementById("want19to25_want26to35").style.display;
+		// console.log(" style [" + test + "]");
+		//document.getElementById("want19to25_want26to35").style.display = 'none';//hide
+		switch (targetHeaderRowNumber) {
+		case 1:
+
+			//document.getElementById("want19to25_want26to35").style.display = 'block';
+			//document.getElementById("want19to25_want26to35").visibility = 'visible';
+
+			break;
+		case 2:
+			// document.getElementById("100149Id").checked = true;
+
+			break;
+		case 3:
+			// document.getElementById("5099Id").checked = true;
+			break;
+		case 4:
+			//document.getElementById("under50Id").checked = true;
+			break;
+		default:
+			// code block
+		}
+
+		console.groupEnd();
+
+		/*]]>*/
+	</script>
+
+
+
+
 </div>
 <!-- end of PresentedTofragment -->

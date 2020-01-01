@@ -29,6 +29,7 @@ import web.page.presentedtopage.PresentedToPageModel;
 import web.page.strategicmarketingpageone.StrategicMarketingPageOneModel;
 import web.page.strategicmarketingpagethree.StrategicMarketingPageThreeModel;
 import web.page.strategicmarketingpagetwo.StrategicMarketingPageTwoModel;
+import web.page.targetmarketingpage.TargetMarketingHeaderRow;
 import web.page.targetmarketingpage.TargetMarketingPageModel;
 import web.page.teamcommitmentpage.TeamCommitmentPageModel;
 import web.repository.WizardDataRepository;
@@ -359,8 +360,10 @@ public class PublishController {
 					targetMarketingPageModel = (TargetMarketingPageModel) JSONManager
 						.convertFromJson(data.getPagedata(), TargetMarketingPageModel.class);
 				model.addAttribute("targetMarketingPageModel", targetMarketingPageModel);
+				TargetMarketingHeaderRow targetMarketingHeaderRow =
+						new TargetMarketingHeaderRow(targetMarketingPageModel);
 				mLog.info("found page targetMarketingPageModel");
-
+				model.addAttribute("targetMarketingHeaderRow", targetMarketingHeaderRow);
 				publish.setTargetMarketingPage(true);
 				break;
 				}catch (Exception ex) {
