@@ -58,7 +58,7 @@
 					expressed by ratings 1-10, ten being highest.</h4>
 			</div>
 			<div class='some-page-wrapper'>
-				<div class='row'>
+				<div class='row hide' id="want19to25_want26to35">
 					<div class='column no-border'></div>
 					<div class='column no-border'></div>
 					<div class='column no-border'>
@@ -206,6 +206,27 @@ if (want46to55 == 10 && want55Plus == 10) {
 		targetHeaderRowNumber = 4;
 		console.log("want46to55_want55Plus");
 	}	
+	
+	
+         switch(targetHeaderRowNumber) {
+    	  case 1:
+    		  
+			 document.getElementById("want19to25_want26to35").visibility = 'visible';
+    	    	
+    	    break;
+    	  case 2:
+    		 // document.getElementById("100149Id").checked = true;
+    		  
+    	    break;
+    	  case 3:
+    		 // document.getElementById("5099Id").checked = true;
+    	    break;
+    	  case 4:
+    		  //document.getElementById("under50Id").checked = true;
+    	    break;
+    	  default:
+    	    // code block
+    	}	
 	
 	console.groupEnd();
 	
