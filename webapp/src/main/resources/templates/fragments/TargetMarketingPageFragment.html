@@ -58,7 +58,9 @@
 					expressed by ratings 1-10, ten being highest.</h4>
 			</div>
 			<div class='some-page-wrapper'>
-				<div class='row' id="want19to25_want26to35">
+				
+				
+				<div class='row' id="want19to25_want26to35" th:if="${targetMarketingPageModel.want12to18 == 10}">
 					<div class='column no-border'></div>
 					<div class='column no-border'></div>
 					<div class='column no-border'>
@@ -93,6 +95,10 @@
 					</div>
 					<div class='column  no-border'></div>
 				</div>
+				
+				
+				
+				
 				<div class='row'>
 					<div class='column no-border'></div>
 					<div class='column normal sub-header'>12-18</div>
@@ -222,12 +228,12 @@ if (want46to55 == 10 && want55Plus == 10) {
 	//console.log(" element " + aa);
 	//var test = document.getElementById("want19to25_want26to35").style.display;
 			// console.log(" style [" + test + "]");
-	document.getElementById("want19to25_want26to35").style.display = 'none';//hide
+	//document.getElementById("want19to25_want26to35").style.display = 'none';//hide
          switch(targetHeaderRowNumber) {
     	  case 1:
 			
 			 
-			 document.getElementById("want19to25_want26to35").style.display = 'block';
+			 //document.getElementById("want19to25_want26to35").style.display = 'block';
 			 //document.getElementById("want19to25_want26to35").visibility = 'visible';
     	    	
     	    break;
