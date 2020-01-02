@@ -3,7 +3,7 @@
 	class="grad w3-container pageBreakInside">
 
 	<div th:if="${PublishModel.targetMarketingPage}">
-		<!-- determine if we show presentedToPage content -->
+		<!-- determine if we show TargetMarketingPagefragment content -->
 
 
 		<div class="whiteGrad">
@@ -67,7 +67,7 @@
 						<!-- Want12to18ToWant19to25 -->
 					</div>
 					<div th:case="'Want19to25ToWant26to35'">
-<!-- Want19to25ToWant26to35 -->
+						<!-- Want19to25ToWant26to35 -->
 						<div class='row'>
 							<div class='column no-border'></div>
 
@@ -147,10 +147,10 @@
 					</div>
 					<div th:case="'Want36to45ToWant46to55'">
 					<!-- Want36to45ToWant46to55 -->
-												<div class='row'>
+								<div class='row'>
 							<div class='column no-border'></div>
 							<div class='column no-border'></div>
-							<div class='column no-border'>
+							<div class='column no-border'></div>
 							<div class='column no-border'>
 								<svg class="flip" height="50px"
 									style="enable-background: new 0 0 32 24;" version="1.1"
@@ -181,9 +181,12 @@
                   </g>
                </svg>
 							</div>
-							<div class='column  no-border'></div>
+							
+							<!--<div class='column  no-border'></div>  -->
+							
+							
+							
 						</div>
-					</div>
 					</div>
 					<div th:case="'Want46to55ToWant55Plus'">
 						<!-- Want46to55ToWant55Plus -->
