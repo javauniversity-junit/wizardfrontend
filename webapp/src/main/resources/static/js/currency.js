@@ -75,11 +75,12 @@ function formatCurrency(input, blur) {
   
   // get input value
   var input_val = input.val();
- 
+  input_val = input_val.trim();
   
   // don't validate empty input
   if (input_val === "") { 
-	 input_val = "0"; 
+	  totalRow(); 
+	  return;
    }
 	
  //remove period
