@@ -258,6 +258,7 @@ public class PublishController {
 					break;
 				}
 			case PlanAMediaPage:
+				mLog.info("found page PlanAMediaPage");
 				try {
 					PlanMediaPageModel planAMediaPagedataPageModel = null;
 				planAMediaPagedataPageModel = (PlanMediaPageModel) JSONManager.convertFromJson(data.getPagedata(),
@@ -274,6 +275,7 @@ public class PublishController {
 					break;
 				}
 			case PlanBMediaPage:
+				mLog.info("found page PlanBMediaPage");
 				try {
 					PlanMediaPageModel planBMediaPagedataPageModel = null;
 				planBMediaPagedataPageModel = (PlanMediaPageModel) JSONManager.convertFromJson(data.getPagedata(),

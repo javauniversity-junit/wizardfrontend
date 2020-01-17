@@ -34,55 +34,58 @@
     
     <script th:inline="javascript">
     /*<![CDATA[*/
-    var station = /*[[${PresentedToPage?.station}]]*/ 'unknown';
-    var jan = /*[[${PlanAMediaPage.jan}]]*/ 'jan';
-    var feb = /*[[${PlanAMediaPage.feb}]]*/ 'feb';
-    var apr = /*[[${PlanAMediaPage.apr}]]*/ 'apr';
-    var mar = /*[[${PlanAMediaPage.mar}]]*/ 'mar';
-    var may = /*[[${PlanAMediaPage.may}]]*/ 'may';
-    var jun = /*[[${PlanAMediaPage.jun}]]*/ 'jun';
-    var jul = /*[[${PlanAMediaPage.jul}]]*/ 'jul';
-    var aug = /*[[${PlanAMediaPage.aug}]]*/ 'aug';
-    var sep = /*[[${PlanAMediaPage.sep}]]*/ 'sep';
-    var oct = /*[[${PlanAMediaPage.oct}]]*/ 'oct';
-    var nov = /*[[${PlanAMediaPage.nov}]]*/ 'nov';
-    var dec = /*[[${PlanAMediaPage.dec}]]*/ 'dec';
-    var janColor = /*[[${PlanAMediaPage.janColor}]]*/ 'janColor';
-    var febColor = /*[[${PlanAMediaPage.febColor}]]*/ 'febColor';
-    var aprColor = /*[[${PlanAMediaPage.aprColor}]]*/ 'aprColor';
-    var marColor = /*[[${PlanAMediaPage.marColor}]]*/ 'marColor';
-    var mayColor = /*[[${PlanAMediaPage.mayColor}]]*/ 'mayColor';
-    var junColor = /*[[${PlanAMediaPage.junColor}]]*/ 'junColor';
-    var julColor = /*[[${PlanAMediaPage.julColor}]]*/ 'julColor';
-    var augColor = /*[[${PlanAMediaPage.augColor}]]*/ 'augColor';
-    var sepColor = /*[[${PlanAMediaPage.sepColor}]]*/ 'sepColor';
-    var octColor = /*[[${PlanAMediaPage.octColor}]]*/ 'octColor';
-    var novColor = /*[[${PlanAMediaPage.novColor}]]*/ 'novColor';
-    var decColor = /*[[${PlanAMediaPage.decColor}]]*/ 'decColor';
-    google.charts.load("current", {
-        packages: ['corechart']
-    });
+    var stationa = /*[[${PresentedToPage?.station}]]*/ 'unknown';
+    var jana = /*[[${PlanAMediaPage.jan}]]*/ 'jan';
+    var feba = /*[[${PlanAMediaPage.feb}]]*/ 'feb';
+    var apra = /*[[${PlanAMediaPage.apr}]]*/ 'apr';
+    var mara = /*[[${PlanAMediaPage.mar}]]*/ 'mar';
+    var maya = /*[[${PlanAMediaPage.may}]]*/ 'may';
+    var juna = /*[[${PlanAMediaPage.jun}]]*/ 'jun';
+    var jula = /*[[${PlanAMediaPage.jul}]]*/ 'jul';
+    var auga = /*[[${PlanAMediaPage.aug}]]*/ 'aug';
+    var sepa = /*[[${PlanAMediaPage.sep}]]*/ 'sep';
+    var octa = /*[[${PlanAMediaPage.oct}]]*/ 'oct';
+    var nova = /*[[${PlanAMediaPage.nov}]]*/ 'nov';
+    var deca = /*[[${PlanAMediaPage.dec}]]*/ 'dec';
+    var janColora = /*[[${PlanAMediaPage.janColor}]]*/ 'janColor';
+    var febColora = /*[[${PlanAMediaPage.febColor}]]*/ 'febColor';
+    var aprColora = /*[[${PlanAMediaPage.aprColor}]]*/ 'aprColor';
+    var marColora = /*[[${PlanAMediaPage.marColor}]]*/ 'marColor';
+    var mayColora = /*[[${PlanAMediaPage.mayColor}]]*/ 'mayColor';
+    var junColora = /*[[${PlanAMediaPage.junColor}]]*/ 'junColor';
+    var julColora = /*[[${PlanAMediaPage.julColor}]]*/ 'julColor';
+    var augColora = /*[[${PlanAMediaPage.augColor}]]*/ 'augColor';
+    var sepColora = /*[[${PlanAMediaPage.sepColor}]]*/ 'sepColor';
+    var octColora = /*[[${PlanAMediaPage.octColor}]]*/ 'octColor';
+    var novColora = /*[[${PlanAMediaPage.novColor}]]*/ 'novColor';
+    var decColora = /*[[${PlanAMediaPage.decColor}]]*/ 'decColor';
+
     google.charts.setOnLoadCallback(drawChartPlanAMediaPage);
     function drawChartPlanAMediaPage() {
-        var data = google.visualization.arrayToDataTable([
+    	
+    	console.group("drawChartPlanAMediaPage");
+    	
+    
+    	
+        var dataA = google.visualization.arrayToDataTable([
             ["Element", "Density", {
                 role: "style"
             }],
-            ["Jan", jan, janColor],
-            ["Feb", feb, febColor],
-            ["Mar", mar, marColor],
-            ["Apr", apr, aprColor],
-            ["May", may, mayColor],
-            ["Jun", jun, junColor],
-            ["Jul", jul, julColor],
-            ["Aug", aug, augColor],
-            ["Sep", sep, sepColor],
-            ["Oct", oct, octColor],
-            ["Nov", nov, novColor],
-            ["Dec", dec, decColor]
+            ["Jan", jana, janColora],
+            ["Feb", feba, febColora],
+            ["Mar", mara, marColora],
+            ["Apr", apra, aprColora],
+            ["May", maya, mayColora],
+            ["Jun", juna, junColora],
+            ["Jul", jula, julColora],
+            ["Aug", auga, augColora],
+            ["Sep", sepa, sepColora],
+            ["Oct", octa, octColora],
+            ["Nov", nova, novColora],
+            ["Dec", deca, decColora]
         ]);
-        var view = new google.visualization.DataView(data);
-        view.setColumns([0, 1, {
+        var viewA = new google.visualization.DataView(dataA);
+        viewA.setColumns([0, 1, {
                 calc: "stringify",
                 sourceColumn: 1,
                 type: "string",
@@ -99,7 +102,9 @@
             },
         };
         var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values_a"));
-        chart.draw(view, options);
+        chart.draw(viewA, options);
+        console.log("drawChartPlanAMediaPage draw ");
+    	console.groupEnd();
     }
     /*]]>*/
 </script>

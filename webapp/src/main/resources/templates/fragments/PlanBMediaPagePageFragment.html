@@ -62,12 +62,11 @@
     var novColor = /*[[${PlanBMediaPage.novColor}]]*/ 'novColor';
     var decColor = /*[[${PlanBMediaPage.decColor}]]*/ 'decColor';
 
-    google.charts.load("current", {
-        packages: ['corechart']
-    });
+ 
     google.charts.setOnLoadCallback(drawChartPlanBMediaPage);
 
     function drawChartPlanBMediaPage() {
+    	console.group("drawChartPlanBMediaPage");
         var data = google.visualization.arrayToDataTable([
             ["Element", "Density", {
                 role: "style"
@@ -102,8 +101,10 @@
                     position: "none"
                 },
             };
-        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
-        chart.draw(view, options);
+        var chartB = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+        chartB.draw(view, options);
+        		
+        console.groupEnd();
     }
 
     /*]]>*/
