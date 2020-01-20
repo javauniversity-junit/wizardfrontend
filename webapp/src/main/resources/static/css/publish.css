@@ -7,6 +7,30 @@
   bottom: 0;
 
 }
+.list {
+	line-height:300%;
+	padding-left:2%;
+
+
+}
+
+
+/* signature & title part */
+.completed-by, .signature, .title  { float: left; }
+.signature, .title { 
+  margin: 20px 10px;
+  border-top: 1px solid #000;
+  width: 200px; 
+  text-align: center;
+}
+
+/* phone & date part */
+ .date > .line, .phone > .line {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+  width: 100px; 
+}
+
 .bold-text {
   font-weight: bold;
   color: black;
