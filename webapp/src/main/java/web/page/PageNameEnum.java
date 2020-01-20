@@ -21,7 +21,7 @@ public enum PageNameEnum {
 	,PlanABEPPage
 	,PlanBBEPPage
 	,TargetMarketingPage
-	,PlanAFlightDatesPage
+	,PlanAExcelPage
 	,PlanBFlightDatesPage
 	,CreateConceptOnePage
 	,CreateConceptTwoPage

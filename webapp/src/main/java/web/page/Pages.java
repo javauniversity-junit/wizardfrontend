@@ -23,7 +23,7 @@ public enum Pages {
 	,TEAMCOMMITMENTPAGE(PageNameEnum.TeamCommitmentPage, PageSequenceEnum.TEAMCOMMITMENTPAGE_SEQUENCE.getDatabaseValue())
 	,CLIENTOBJECTIVESONEPAGE(PageNameEnum.ClientObjectivesOnePage, PageSequenceEnum.CLIENTOBJECTIVESONEPAGE_SEQUENCE.getDatabaseValue())
 	,MARKETPLACECOMPETITIONPAGE(PageNameEnum.MarketPlaceCompetitionPage, PageSequenceEnum.MARKETPLACECOMPETITIONPAGE_SEQUENCE.getDatabaseValue())
-	,PlanAFlightDatesPage(PageNameEnum.PlanAFlightDatesPage, PageSequenceEnum.PlanAFlightDatesPage_Sequence.getDatabaseValue())
+	,PlanAExcelPage(PageNameEnum.PlanAExcelPage, PageSequenceEnum.PlanAExcelPage_Sequence.getDatabaseValue())
 	,PlanBFlightDatesPage(PageNameEnum.PlanBFlightDatesPage, PageSequenceEnum.PlanBFlightDatesPage_Sequence.getDatabaseValue())
 	,CreateConceptOnePage(PageNameEnum.CreateConceptOnePage, PageSequenceEnum.CreateConceptOnePage_Sequence.getDatabaseValue())
 	,CreateConceptTwoPage(PageNameEnum.CreateConceptTwoPage, PageSequenceEnum.CreateConceptTwoPage_Sequence.getDatabaseValue())

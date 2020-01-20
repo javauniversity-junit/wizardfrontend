@@ -23,7 +23,15 @@ public class Publish {
 	private boolean planBBEPPage;
 	private boolean targetMarketingPage;
 	private boolean planBFlightDatesPage;
-	private boolean planAFlightDatesPage;
+	private boolean planAPlanAExcelPage;
+	public boolean isPlanAPlanAExcelPage() {
+		return planAPlanAExcelPage;
+	}
+
+	public void setPlanAPlanAExcelPage(boolean planAPlanAExcelPage) {
+		this.planAPlanAExcelPage = planAPlanAExcelPage;
+	}
+
 	private boolean clientObjectivesPage;
 	
 	public boolean isClientObjectivesPage() {
@@ -83,12 +91,8 @@ public class Publish {
 	public void setPlanBFlightDatesPage(boolean planBFlightDatesPage) {
 		this.planBFlightDatesPage = planBFlightDatesPage;
 	}
-	public boolean isPlanAFlightDatesPage() {
-		return planAFlightDatesPage;
-	}
-	public void setPlanAFlightDatesPage(boolean planAFlightDatesPage) {
-		this.planAFlightDatesPage = planAFlightDatesPage;
-	}
+	
+	
 	public boolean isConfidentialClientEvaluationProposedPage() {
 		return confidentialClientEvaluationProposedPage;
 	}

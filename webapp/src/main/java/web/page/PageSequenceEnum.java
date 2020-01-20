@@ -21,12 +21,12 @@ public enum PageSequenceEnum {
 	,PlanBMediaPage_Sequence(19)
 	,PlanADigitalROICalculatorPage_Sequence(21)
 	,PlanBDigitalROICalculatorPage_Sequence(22)
-	,PlanAFlightDatesPage_Sequence(23)
 	,PlanBFlightDatesPage_Sequence(24)
 	,CreateConceptOnePage_Sequence(25)
 	,CreateConceptTwoPage_Sequence(26)
 	,ProfileOfConsumersPage_Sequence(27)
-	,DigitalMobileSocialStrategiesPage_Sequence(28);
+	,DigitalMobileSocialStrategiesPage_Sequence(28)
+	,PlanAExcelPage_Sequence(29);
 
 
 	

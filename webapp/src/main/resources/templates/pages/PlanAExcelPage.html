@@ -63,39 +63,39 @@
 
 		<div>
 			<form onsubmit="save()" method="post"
-				action="savePlanAFlightDatesPage" autocomplete="off">
+				action="savePlanAExcelPage" autocomplete="off">
 				<fieldset>
 
-					<legend> Proposed Schedule – Plan A </legend>
+					<legend> Plan A Excel </legend>
 
 					<!-- IF dataPageModel != null -->
 
 					<div class="w3-row">
-						<div class="w3-col m8" th:if="${dataPageModel != null}">
+						<div class="w3-col m9" th:if="${dataPageModel != null}">
 							<!-- data saved -->
 							<textarea id="textareaId" name="textareaId"
 								th:text="${dataPageModel?.textArea}" />
 						</div>
-						<div class="w3-col m4" th:if="${dataPageModel != null}"
+						<div class="w3-col m3" th:if="${dataPageModel != null}"
 							style="padding-left: 2%;">
 							
-							<p>Build</p>
+						<p style="padding-top: 30%;">Build</p>
 							<p>Brand</p>
 							<p>Equity</p>
 							<p>Monthly</p>
 							<p>Schedule</p>
-
-							<p>Spike</p>
+							<hr>
+							<p style="padding-top: 2%;">Spike</p>
 							<p>Monthly</p>
 							<p>Schedule</p>
-
-							<p>Slow</p>
+							<hr>
+							<p style="padding-top: 2%;">Slow</p>
 							<p>Performing</p>
 							<p>Monthly</p>
 							<p>Schedule</p>
 						</div>
 						<!-- ELSE -->
-						<div class="w3-col m8" th:unless="${dataPageModel != null}">
+						<div class="w3-col m9" th:unless="${dataPageModel != null}">
 							<textarea id="textareaId" name="textareaId"> <!-- equal no data saved -->
 
 
@@ -269,19 +269,20 @@
 
 </textarea>
 						</div>
-						<div class="w3-col m4" th:unless="${dataPageModel != null}"
+						<div class="w3-col m3" th:unless="${dataPageModel != null}"
 							style="padding-left: 2%;">
-							<p style="padding-top: 30%;">Build</p>
+							<!-- Data not found -->
+						<p style="padding-top: 30%;">Build</p>
 							<p>Brand</p>
 							<p>Equity</p>
 							<p>Monthly</p>
 							<p>Schedule</p>
-
-							<p style="padding-top: 40%;">Spike</p>
+							<hr>
+							<p style="padding-top: 2%;">Spike</p>
 							<p>Monthly</p>
 							<p>Schedule</p>
-
-							<p style="padding-top: 40%;">Slow</p>
+							<hr>
+							<p style="padding-top: 2%;">Slow</p>
 							<p>Performing</p>
 							<p>Monthly</p>
 							<p>Schedule</p>
