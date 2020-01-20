@@ -11,11 +11,32 @@
       
   
 		<div class="whiteGrad mce-content-body">
+		<div class="w3-row">
+		<div id="excelBDataId" class="w3-col m9" style="padding-left: 2%;">
+		</div>
+		<div class="w3-col m3">
+		<p style="padding-top: 30%;">Build</p>
+							<p>Brand</p>
+							<p>Equity</p>
+							<p>Monthly</p>
+							<p>Schedule</p>
+							<hr>
+							<p style="padding-top: 2%;">Spike</p>
+							<p>Monthly</p>
+							<p>Schedule</p>
+							<hr>
+							<p style="padding-top: 2%;">Slow</p>
+							<p>Performing</p>
+							<p>Monthly</p>
+							<p>Schedule</p>
+		</div>
+		</div>
 		<script th:inline="javascript">
 			/*<![CDATA[*/
 
     			var message = /*[[${PlanBExcelPageModel?.textArea}]]*/ 'default';
-    			 document.write(unescape(message));
+    			 //document.write(unescape(message));
+    			 document.getElementById("excelBDataId").innerHTML = message;
 			     console.log(message);
 
 			/*]]>*/
