@@ -1,0 +1,89 @@
+<!-- begin of ClientPolicyAgreementPageFragment -->
+<div th:fragment="ClientPolicyAgreement"
+	class="grad w3-container pageBreakInside">
+
+
+
+	<div>
+		<a id="PresentedToPage"></a>
+
+
+
+	</div>
+
+	<div class="whiteGrad">
+		<div align="center">
+			<h2>Client Policy Agreement</h2>
+
+		</div>
+
+		<div>
+			At <span th:text="${PresentedToPage?.clientContactName}"></span>- <span
+				th:text="${PresentedToPage?.clientBusinessName}"></span>
+		</div>
+		<div style="padding-top: 3%;">We have an agreement, which we
+			will discuss with all of our business partners and review throughout
+			the year</div>
+		<div class="w3-row">
+
+			<div class="w3-col">
+				<ol class="list">
+					<li>We will conduct a confidential needs analysis (Database)
+						to gain a complete understanding of your business, your market and
+						your stated objectives.  </li>
+					<li>You will be supplied with a customized Summary of
+						Conclusions and Recommendations (SCR) that is tailored to help you
+						achieve your business goals.</li>
+					<li>You can be sure that your Marketing Representative will be
+						professional, objective and totally focused on your needs (vs.
+						what’s only in the best interest of the station group).</li>
+					<li>You will be offered total production and digital services
+						and once complete, we will provide all creative to you for your
+						final approval before going on-air or on-line.</li>
+					<li>The order will be placed as requested and you can expect a
+						duplicate of your submitted broadcast schedules and net figures so
+						that you know all times and costs.</li>
+					<li>You will be contacted following the first week on air to
+						ensure that everything is running as scheduled.</li>
+					<li>You will be provided with the latest qualitative research
+						and will be continuously updated on relevant market information
+						and changes.</li>
+
+					<li>You can expect an exceptional customer experience
+						including follow-through on all promises made and prompt return
+						phone calls.</li>
+					<li>While we will be in constant contact, you will be asked to
+						formally evaluate our performance and your results every 3, 6, 9
+						and 12 months.  </li>
+					<li>If any of the above conditions are not met, please contact
+					<span th:text="${PresentedToPage?.portfolioManagerName}"></span> at  <span
+				th:text="${PresentedToPage?.portfolioPhoneNumber}"></span>
+					</li>
+				</ol>
+			</div>
+
+
+
+		</div>
+
+		<div align="center" style="padding-top: 5%;">
+
+			<span class="signature">Signed by Account Executive</span> <span
+				class="title">Date</span> <span class="signature">Signed by
+				Client</span> <span class="title">Date</span>
+		</div>
+
+
+	</div>
+	<div class="w3-container d-print-none" style="padding-top: 2%;">
+		<button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
+		<a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
+		<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
+	</div>
+	<div class="CopyRightId"></div>
+
+</div>
+<!-- end of if statement -->
+
+</div>
+<!-- end of PresentedTofragment -->
