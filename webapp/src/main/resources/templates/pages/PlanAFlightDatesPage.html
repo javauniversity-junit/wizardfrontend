@@ -66,114 +66,222 @@
 				action="savePlanAFlightDatesPage" autocomplete="off">
 				<fieldset>
 
-					<legend>
-						(20 of 24) Flight A Dates <span th:text="${wizard.name}"></span>
-					</legend>
+					<legend> Proposed Schedule – Plan A </legend>
 
 					<!-- IF dataPageModel != null -->
 
 					<div class="w3-row">
-						<div class="w3-col m8">
-							<!-- data -->
-							<textarea th:if="${dataPageModel != null}" id="textareaId"
+						<div class="w3-col m8" th:if="${dataPageModel != null}">
+							<!-- data saved -->
+							<textarea id="textareaId"
 								name="textareaId" th:text="${dataPageModel?.textArea}" />
 						</div>
-						<div class="w3-col m4" style="padding-left: 2%;">
-						    <p>Build</p>
-						    <p>Brand</p>
-						    <p>Equity</p>
-						    <p>Monthly</p>
-						    <p>Schedule</p>
-						    
-						    <p>Spike</p>
-						    <p>Monthly</p>
-						    <p>Schedule</p>
-						    
-						    <p>Slow</p>
-						    <p>Performing</p>
-						    <p>Monthly</p>
-						    <p>Schedule</p>
+						<div  class="w3-col m4" th:if="${dataPageModel != null}"
+							style="padding-left: 2%;">
+							<p>Build</p>
+							<p>Brand</p>
+							<p>Equity</p>
+							<p>Monthly</p>
+							<p>Schedule</p>
+
+							<p>Spike</p>
+							<p>Monthly</p>
+							<p>Schedule</p>
+
+							<p>Slow</p>
+							<p>Performing</p>
+							<p>Monthly</p>
+							<p>Schedule</p>
 						</div>
 						<!-- ELSE -->
-						<div class="w3-col">
-							<textarea th:unless="${dataPageModel != null}" id="textareaId"
-								name="textareaId">
+						<div class="w3-col m8" th:unless="${dataPageModel != null}">
+							<textarea  id="textareaId"
+								name="textareaId"> <!-- equal no data saved -->
 
-
-  <h2 style="text-align: center;">Proposed Schedule – Plan A   </h2>
-
-
-
-
-
-
-
-
-  <table style="text-align: center;">
-   
-    <thead>
-      <tr>
-        <th>Station</th>
-        <th>Days</th>
-        <th>DayPart</th>
-        <th>Weekly 	Commercials</th>
-        
-      </tr>
-    </thead>
-    <tbody>
-
-    <tr>
-        <td>WAAA</td>
-        <td>M - F</td>
-        <td>6:00am - 7:00pm</td>
-        <td>15</td>
-      </tr>
-   <tr>
-        <td>WAAA</td>
-        <td>M - F</td>
-        <td>7:00pm - 12mid</td>
-        <td>5</td>
-      </tr>
-
-<tr>
-        <td>WBBB</td>
-        <td>M - F</td>
-        <td>6:00am - 7:00pm</td>
-        <td>15</td>
-      </tr>
-   <tr>
-        <td>WBBB</td>
-        <td>M - F</td>
-        <td>7:00pm - 12mid</td>
-        <td>5</td>
-      </tr>
-
-    </tbody>
-  </table>
+<table style="text-align: center;">
+	<thead>
+		<tr>
+			<th>Station</th>
+			<th>Days</th>
+			<th>DayPart</th>
+			<th>Weekly 	Commercials</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>WAAA</td>
+			<td>M - F</td>
+			<td>6:00am - 7:00pm</td>
+			<td>15</td>
+		</tr>
+		<tr>
+			<td>WAAA</td>
+			<td>M - F</td>
+			<td>7:00pm - 12mid</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td>WBBB</td>
+			<td>M - F</td>
+			<td>6:00am - 7:00pm</td>
+			<td>15</td>
+		</tr>
+		<tr>
+			<td>WBBB</td>
+			<td>M - F</td>
+			<td>7:00pm - 12mid</td>
+			<td>5</td>
+		</tr>
+	</tbody>
+</table>
+ 								 
 
 
 
-
-  <h2>Analysis of Schedule:
-</h2>
-
+ 
   <p>
-    AVERAGE MONTHLY CLIENT INVESTMENT $55555
-.
+    Total number of commercials: 80
   </p>
   <p>
-   AVERAGE DAILY CLIENT INVESTMENT $55555
+   #Weeks/Months: 2
 
   </p>
 
 
-<P>Thank you for your trust and confidence</P>
+<P>Contiunity Investment: $2,000</P>
 
-<P>Accepted for- John Smith Date: 12 Dec 2019  | Accepted for Nancy Williams 23 May 2019 </p>
+<!-- Spike -->
+
+<table style="text-align: center;">
+	<thead>
+		<tr>
+			<th>Station</th>
+			<th>Days</th>
+			<th>DayPart</th>
+			<th>Weekly 	Commercials</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>WAAA</td>
+			<td>M - F</td>
+			<td>6:00am - 7:00pm</td>
+			<td>15</td>
+		</tr>
+		<tr>
+			<td>WAAA</td>
+			<td>M - F</td>
+			<td>7:00pm - 12mid</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td>WBBB</td>
+			<td>M - F</td>
+			<td>6:00am - 7:00pm</td>
+			<td>15</td>
+		</tr>
+		<tr>
+			<td>WBBB</td>
+			<td>M - F</td>
+			<td>7:00pm - 12mid</td>
+			<td>5</td>
+		</tr>
+	</tbody>
+</table>
+ 								 
+
+
+
+ 
+  <p>
+    Total number of commercials: 80
+  </p>
+  <p>
+   #Weeks/Months: 2
+
+  </p>
+
+
+<P>Average Spike Investment: $2,000</P>
+
+
+<!-- base -->
+
+<table style="text-align: center;">
+	<thead>
+		<tr>
+			<th>Station</th>
+			<th>Days</th>
+			<th>DayPart</th>
+			<th>Weekly 	Commercials</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>WAAA</td>
+			<td>M - F</td>
+			<td>6:00am - 7:00pm</td>
+			<td>15</td>
+		</tr>
+		<tr>
+			<td>WAAA</td>
+			<td>M - F</td>
+			<td>7:00pm - 12mid</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td>WBBB</td>
+			<td>M - F</td>
+			<td>6:00am - 7:00pm</td>
+			<td>15</td>
+		</tr>
+		<tr>
+			<td>WBBB</td>
+			<td>M - F</td>
+			<td>7:00pm - 12mid</td>
+			<td>5</td>
+		</tr>
+	</tbody>
+</table>
+ 								 
+
+
+
+ 
+  <p>
+    Total number of commercials: 80
+  </p>
+  <p>
+   #Weeks/Months: 2
+
+  </p>
+
+
+<P>Base Investment: $2,000</P>
+
+
+
+
+
+
 </textarea>
 						</div>
-												<div class="w3-col m4">
-						    YYfafadfadfadfadfasdfdfasdfdfsad
+						<div  class="w3-col m4" th:unless="${dataPageModel != null}"
+							style="padding-left: 2%;">
+							<p>Build</p>
+							<p>Brand</p>
+							<p>Equity</p>
+							<p>Monthly</p>
+							<p>Schedule</p>
+
+							<p>Spike</p>
+							<p>Monthly</p>
+							<p>Schedule</p>
+
+							<p>Slow</p>
+							<p>Performing</p>
+							<p>Monthly</p>
+							<p>Schedule</p>
 						</div>
 					</div>
 
