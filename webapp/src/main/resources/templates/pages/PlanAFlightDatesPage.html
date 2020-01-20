@@ -16,22 +16,24 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
 	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
 	crossorigin="anonymous" />
-   
+
 
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.css" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- Font Awesome CSS-->
+<link rel="stylesheet"
+	href="https://d19m59y37dris4.cloudfront.net/blackandwhite/2-0-0/vendor/font-awesome/css/font-awesome.min.css">
 
- <!-- Font Awesome CSS-->
-    <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/blackandwhite/2-0-0/vendor/font-awesome/css/font-awesome.min.css">
-  
 <!-- Favicon-->
 <link rel="shortcut icon" href="./img/tools_wizard.png">
 
 </head>
 <body>
-<script src="https://cdn.tiny.cloud/1/d5s7yeul5jnhtk9c7dv0oswtm488cvisrrsq0i3zwb5rkr0b/tinymce/5/tinymce.min.js"></script>
-<script>
+	<script
+		src="https://cdn.tiny.cloud/1/d5s7yeul5jnhtk9c7dv0oswtm488cvisrrsq0i3zwb5rkr0b/tinymce/5/tinymce.min.js"></script>
+	<script>
    tinymce.init({
      selector: 'textarea#textareaId',
      height: 700,
@@ -60,205 +62,97 @@
 	<div class="container" style="padding-top: 1%;">
 
 		<div>
-			<form onsubmit="save()" method="post" action="savePlanAFlightDatesPage" autocomplete="off">
+			<form onsubmit="save()" method="post"
+				action="savePlanAFlightDatesPage" autocomplete="off">
 				<fieldset>
-			
-				<legend>
-					(20 of 24) Flight A Dates <span
-						th:text="${wizard.name}"></span>
-				</legend>
-			
-			<!-- IF dataPageModel != null -->
-			<textarea th:if="${dataPageModel != null}" id="textareaId" name="textareaId" th:text="${dataPageModel?.textArea}"/>
-			<!-- ELSE -->
-			<textarea th:unless="${dataPageModel != null}" id="textareaId" name="textareaId" >
+
+					<legend>
+						(20 of 24) Flight A Dates <span th:text="${wizard.name}"></span>
+					</legend>
+
+					<!-- IF dataPageModel != null -->
+
+					<div class="w3-row">
+						<div class="w3-col m8">
+							<!-- data -->
+							<textarea th:if="${dataPageModel != null}" id="textareaId"
+								name="textareaId" th:text="${dataPageModel?.textArea}" />
+						</div>
+						<div class="w3-col m4" style="padding-left: 2%;">
+						    <p>Build</p>
+						    <p>Brand</p>
+						    <p>Equity</p>
+						    <p>Monthly</p>
+						    <p>Schedule</p>
+						    
+						    <p>Spike</p>
+						    <p>Monthly</p>
+						    <p>Schedule</p>
+						    
+						    <p>Slow</p>
+						    <p>Performing</p>
+						    <p>Monthly</p>
+						    <p>Schedule</p>
+						</div>
+						<!-- ELSE -->
+						<div class="w3-col">
+							<textarea th:unless="${dataPageModel != null}" id="textareaId"
+								name="textareaId">
 
 
-  <h2 style="text-align: center;">Plan A</h2>
-
-  <h2>For the benefit of the client WWWW agrees to develop a marketing strategy to help
-</h2>
+  <h2 style="text-align: center;">Proposed Schedule – Plan A   </h2>
 
 
-<p>In return for fulfilling stated goals Premium Auto Centers
-		agrees to invest in the following long-term plan </p>
 
-  <ol>
-    <li> Initiate Cause Marketing Programs
-</li>
-    <li>Tech recruitment</li>
-</li>
-    <li>Expand Target Consumers (by age, sex, geography)
-</li>
-  </ol>
+
+
 
 
 
   <table style="text-align: center;">
-    <caption> FLIGHT DATES:</caption>	
+   
     <thead>
       <tr>
-        <th>Media</th>
-        <th>Jan</th>
-        <th>Feb</th>
-        <th>Mar</th>
-        <th>Apr</th>
-
-        <th>May</th>
-        <th>jun</th>
-        <th>Jul</th>
-        <th>Augr</th>
-
-        <th>Sep</th>
-        <th>Oct</th>
-        <th>Nov</th>
-        <th>Dec</th>
+        <th>Station</th>
+        <th>Days</th>
+        <th>DayPart</th>
+        <th>Weekly 	Commercials</th>
+        
       </tr>
     </thead>
     <tbody>
 
-<tr>
-        <td>WWW</td>
-        <td>$100</td>
-        <td>$50</td>
-
-        <td>$60</td>
-        <td>$70</td>
-        
-     <td>$100</td>
-        <td>$50</td>
-
-        <td>$60</td>
-        <td>$70</td>
-     <td>$100</td>
-        <td>$50</td>
-
-        <td>$60</td>
-        <td>$70</td>
-
+    <tr>
+        <td>WAAA</td>
+        <td>M - F</td>
+        <td>6:00am - 7:00pm</td>
+        <td>15</td>
       </tr>
-
+   <tr>
+        <td>WAAA</td>
+        <td>M - F</td>
+        <td>7:00pm - 12mid</td>
+        <td>5</td>
+      </tr>
 
 <tr>
-        <td>WWW</td>
-        <td>$100</td>
-        <td>$50</td>
-
-        <td>$60</td>
-        <td>$70</td>
-        
-     <td>$100</td>
-        <td>$50</td>
-
-        <td>$60</td>
-        <td>$70</td>
-     <td>$100</td>
-        <td>$50</td>
-
-        <td>$60</td>
-        <td>$70</td>
-
+        <td>WBBB</td>
+        <td>M - F</td>
+        <td>6:00am - 7:00pm</td>
+        <td>15</td>
       </tr>
-
-
-      <tr>
-        <td>WWW</td>
-        <td>$100</td>
-        <td>$50</td>
-
-        <td>$60</td>
-        <td>$70</td>
-        
-     <td>$100</td>
-        <td>$50</td>
-
-        <td>$60</td>
-        <td>$70</td>
-     <td>$100</td>
-        <td>$50</td>
-
-        <td>$60</td>
-        <td>$70</td>
-
+   <tr>
+        <td>WBBB</td>
+        <td>M - F</td>
+        <td>7:00pm - 12mid</td>
+        <td>5</td>
       </tr>
-      <tr>
-        <td>WWW2</td>
-        <td>$100</td>
-        <td>$50</td>
-
-        <td>$60</td>
-        <td>$70</td>
-        
-     <td>$100</td>
-        <td>$50</td>
-
-        <td>$60</td>
-        <td>$70</td>
-     <td>$100</td>
-        <td>$50</td>
-
-        <td>$60</td>
-        <td>$70</td>
-
-      </tr>
-
-
-     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-
-        <td></td>
-        <td></td>
-        
-     <td></td>
-        <td></td>
-
-        <td></td>
-        <td></td>
-     <td></td>
-        <td></td>
-
-        <td></td>
-        <td></td>
-
-      </tr>
-<tr>
-        <td>Total</td>
-        <td>$100</td>
-        <td>$50</td>
-
-        <td>$60</td>
-        <td>$70</td>
-        
-     <td>$100</td>
-        <td>$50</td>
-
-        <td>$60</td>
-        <td>$70</td>
-     <td>$100</td>
-        <td>$50</td>
-
-        <td>$60</td>
-        <td>$70</td>
-
-      </tr>
-
-
-
-
-
 
     </tbody>
   </table>
 
 
-  <p>
-    Client may cancel after 13 weeks from schedule start date with two weeks’ notice and no short rate. This offer is good for 10 business days 
-from the date of presentation. In accordance with Paragraphs 49 and 50 of United States Federal Communications Commission Report and Order No. FCC 07-217, 
-this station will not discriminate in any contract for advertising on the basis of race
- or ethnicity, and all such contracts will be evaluated, accepted, negotiated and completed without regard to race or ethnicity
-  </p>
+
 
   <h2>Analysis of Schedule:
 </h2>
@@ -276,31 +170,32 @@ this station will not discriminate in any contract for advertising on the basis 
 <P>Thank you for your trust and confidence</P>
 
 <P>Accepted for- John Smith Date: 12 Dec 2019  | Accepted for Nancy Williams 23 May 2019 </p>
-</textarea>	
+</textarea>
+						</div>
+												<div class="w3-col m4">
+						    YYfafadfadfadfadfasdfdfasdfdfsad
+						</div>
+					</div>
 
-<input type="hidden" id="nextPage"
-					th:value="'redirect:/PlanBFlightDatesPage?ID=' + ${wizard.wizardid}"
-					name="nextPage" /> 
-					
-					<input type="hidden" id="previousPage"
-					th:value="'redirect:/PlanBMediaPage?ID=' + ${wizard.wizardid}"
-					name="previousPage" /> 
-					
-					<input type="hidden" id="publishPage"
-					th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
-					name="publishPage" /> <input type="hidden" id="wizardId"
-					th:value="${wizard.wizardid}" name="wizardId" /> <input
-					type="hidden" id="wizarddataid"
-					th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> <input
-					name="next" type="submit" value="Next" class="btn btn-primary"
-					style="background-color: #C0B879;" /> <input name="publish"
-					type="submit" value="Publish" class="btn btn-primary"
-					style="background-color: #C0B879;" /> <input name="previous"
-					value="Previous" type="submit" class="btn btn-primary"
-					style="background-color: #C0B879;" />
-					</fieldset>
+					<input type="hidden" id="nextPage"
+						th:value="'redirect:/PlanBFlightDatesPage?ID=' + ${wizard.wizardid}"
+						name="nextPage" /> <input type="hidden" id="previousPage"
+						th:value="'redirect:/PlanBMediaPage?ID=' + ${wizard.wizardid}"
+						name="previousPage" /> <input type="hidden" id="publishPage"
+						th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
+						name="publishPage" /> <input type="hidden" id="wizardId"
+						th:value="${wizard.wizardid}" name="wizardId" /> <input
+						type="hidden" id="wizarddataid"
+						th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> <input
+						name="next" type="submit" value="Next" class="btn btn-primary"
+						style="background-color: #C0B879;" /> <input name="publish"
+						type="submit" value="Publish" class="btn btn-primary"
+						style="background-color: #C0B879;" /> <input name="previous"
+						value="Previous" type="submit" class="btn btn-primary"
+						style="background-color: #C0B879;" />
+				</fieldset>
 			</form>
-			<div class="container" style="padding-top:2%;">
+			<div class="container" style="padding-top: 2%;">
 
 				<div class="progress">
 					<div class="progress-bar" role="progressbar" aria-valuenow="5"
@@ -331,7 +226,7 @@ this station will not discriminate in any contract for advertising on the basis 
 
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js"></script>
-<script src="js/extrapage.js"></script>
+	<script src="js/extrapage.js"></script>
 	<script th:inline="javascript">
 		/*<![CDATA[*/
 		$(function() {
