@@ -73,10 +73,10 @@
 					<div class="w3-row">
 						<div class="w3-col m8" th:if="${dataPageModel != null}">
 							<!-- data saved -->
-							<textarea id="textareaId"
-								name="textareaId" th:text="${dataPageModel?.textArea}" />
+							<textarea id="textareaId" name="textareaId"
+								th:text="${dataPageModel?.textArea}" />
 						</div>
-						<div  class="w3-col m4" th:if="${dataPageModel != null}"
+						<div class="w3-col m4" th:if="${dataPageModel != null}"
 							style="padding-left: 2%;">
 							<p>Build</p>
 							<p>Brand</p>
@@ -95,8 +95,9 @@
 						</div>
 						<!-- ELSE -->
 						<div class="w3-col m8" th:unless="${dataPageModel != null}">
-							<textarea  id="textareaId"
-								name="textareaId"> <!-- equal no data saved -->
+							<textarea id="textareaId" name="textareaId"> <!-- equal no data saved -->
+<fieldset>
+<legend>Spike</legend>
 
 <table style="text-align: center;">
 	<thead>
@@ -149,9 +150,11 @@
 
 
 <P>Contiunity Investment: $2,000</P>
+</fieldset>
 
 <!-- Spike -->
-
+<fieldset>
+<legend>Spike</legend>
 <table style="text-align: center;">
 	<thead>
 		<tr>
@@ -203,9 +206,11 @@
 
 
 <P>Average Spike Investment: $2,000</P>
-
+</fieldset>	
 
 <!-- base -->
+<fieldset>
+<legend>Weeks</legend>
 
 <table style="text-align: center;">
 	<thead>
@@ -243,7 +248,7 @@
 		</tr>
 	</tbody>
 </table>
- 								 
+ 						 
 
 
 
@@ -259,14 +264,14 @@
 
 <P>Base Investment: $2,000</P>
 
-
+</fieldset>		
 
 
 
 
 </textarea>
 						</div>
-						<div  class="w3-col m4" th:unless="${dataPageModel != null}"
+						<div class="w3-col m4" th:unless="${dataPageModel != null}"
 							style="padding-left: 2%;">
 							<p>Build</p>
 							<p>Brand</p>
