@@ -22,14 +22,26 @@ public class Publish {
 	private boolean planABEPPage;
 	private boolean planBBEPPage;
 	private boolean targetMarketingPage;
-	private boolean planBFlightDatesPage;
-	private boolean planAPlanAExcelPage;
-	public boolean isPlanAPlanAExcelPage() {
-		return planAPlanAExcelPage;
+	private boolean planBExcelPage;
+	private boolean planAExcelPage;
+	
+
+	
+
+	public boolean isPlanBExcelPage() {
+		return planBExcelPage;
 	}
 
-	public void setPlanAPlanAExcelPage(boolean planAPlanAExcelPage) {
-		this.planAPlanAExcelPage = planAPlanAExcelPage;
+	public void setPlanBExcelPage(boolean planBExcelPage) {
+		this.planBExcelPage = planBExcelPage;
+	}
+
+	public boolean isPlanAExcelPage() {
+		return planAExcelPage;
+	}
+
+	public void setPlanAExcelPage(boolean planAExcelPage) {
+		this.planAExcelPage = planAExcelPage;
 	}
 
 	private boolean clientObjectivesPage;
@@ -85,12 +97,8 @@ public class Publish {
 	public void setCreateConceptTwoPage(boolean createConceptTwoPage) {
 		this.createConceptTwoPage = createConceptTwoPage;
 	}
-	public boolean isPlanBFlightDatesPage() {
-		return planBFlightDatesPage;
-	}
-	public void setPlanBFlightDatesPage(boolean planBFlightDatesPage) {
-		this.planBFlightDatesPage = planBFlightDatesPage;
-	}
+	
+	
 	
 	
 	public boolean isConfidentialClientEvaluationProposedPage() {

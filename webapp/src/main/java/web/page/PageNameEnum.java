@@ -22,7 +22,7 @@ public enum PageNameEnum {
 	,PlanBBEPPage
 	,TargetMarketingPage
 	,PlanAExcelPage
-	,PlanBFlightDatesPage
+	,PlanBExcelPage
 	,CreateConceptOnePage
 	,CreateConceptTwoPage
 	,ProfileOfConsumersPage

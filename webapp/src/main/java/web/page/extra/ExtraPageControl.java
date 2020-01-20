@@ -301,14 +301,14 @@ public class ExtraPageControl {
 		return "pages/PlanAExcelPage";
 	}
 
-	@RequestMapping(value = "/PlanBFlightDatesPage", method = RequestMethod.GET)
+	@RequestMapping(value = "/PlanBExcelPage", method = RequestMethod.GET)
 	public String detailPlanBFlightDatesPage(Model model, @RequestParam String ID) {
 		mLog.info("starting detail");
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
 		WizardData wizardData = wizardDataRepository
-				.findByPagesequenceAndWizardid(Pages.PlanBFlightDatesPage.getPageSequence(), wizard.getWizardid());
+				.findByPagesequenceAndWizardid(Pages.PlanBExcelPage.getPageSequence(), wizard.getWizardid());
 		ExtraPageModel dataPageModel = null;
 		if (wizardData != null) {
 			dataPageModel = (ExtraPageModel) JSONManager.convertFromJson(wizardData.getPagedata(),
@@ -322,7 +322,7 @@ public class ExtraPageControl {
 		return "pages/PlanBFlightDatesPage";
 	}
 
-	@RequestMapping(value = "/savePlanBFlightDatesPage", method = RequestMethod.POST)
+	@RequestMapping(value = "/savePlanBExcelPage", method = RequestMethod.POST)
 	public String savePlanBFlightDatesPage(@RequestParam String wizardId,
 			@RequestParam(defaultValue = "") String textareaId, @RequestParam String wizarddataid,
 			@RequestParam String previousPage, @RequestParam String publishPage,
@@ -341,8 +341,8 @@ public class ExtraPageControl {
 		}
 
 		WizardData wizardData = new WizardData();
-		wizardData.setPagename(PageNameEnum.PlanBFlightDatesPage.toString());
-		wizardData.setPagesequence(Pages.PlanBFlightDatesPage.getPageSequence());
+		wizardData.setPagename(PageNameEnum.PlanBExcelPage.toString());
+		wizardData.setPagesequence(Pages.PlanBExcelPage.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);

@@ -24,7 +24,7 @@ public enum Pages {
 	,CLIENTOBJECTIVESONEPAGE(PageNameEnum.ClientObjectivesOnePage, PageSequenceEnum.CLIENTOBJECTIVESONEPAGE_SEQUENCE.getDatabaseValue())
 	,MARKETPLACECOMPETITIONPAGE(PageNameEnum.MarketPlaceCompetitionPage, PageSequenceEnum.MARKETPLACECOMPETITIONPAGE_SEQUENCE.getDatabaseValue())
 	,PlanAExcelPage(PageNameEnum.PlanAExcelPage, PageSequenceEnum.PlanAExcelPage_Sequence.getDatabaseValue())
-	,PlanBFlightDatesPage(PageNameEnum.PlanBFlightDatesPage, PageSequenceEnum.PlanBFlightDatesPage_Sequence.getDatabaseValue())
+	,PlanBExcelPage(PageNameEnum.PlanBExcelPage, PageSequenceEnum.PlanBExcelPage_Sequence.getDatabaseValue())
 	,CreateConceptOnePage(PageNameEnum.CreateConceptOnePage, PageSequenceEnum.CreateConceptOnePage_Sequence.getDatabaseValue())
 	,CreateConceptTwoPage(PageNameEnum.CreateConceptTwoPage, PageSequenceEnum.CreateConceptTwoPage_Sequence.getDatabaseValue())
         ,ProfileOfConsumersPage(PageNameEnum.ProfileOfConsumersPage, PageSequenceEnum.ProfileOfConsumersPage_Sequence.getDatabaseValue())

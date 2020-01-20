@@ -203,27 +203,27 @@ public class PublishController {
 				
 			case PlanAExcelPage:
 				try {
-					ExtraPageModel planAPlanAExcelPageModel = null;
+					ExtraPageModel planAExcelPageModel = null;
 
-					planAPlanAExcelPageModel = (ExtraPageModel) JSONManager.convertFromJson(data.getPagedata(),
+					planAExcelPageModel = (ExtraPageModel) JSONManager.convertFromJson(data.getPagedata(),
 							ExtraPageModel.class);
-					model.addAttribute("PlanAPlanAExcelPage", planAPlanAExcelPageModel);
-					publish.setPlanAPlanAExcelPage(true);
-					mLog.info("found page planAPlanAExcelPageModel");
+					model.addAttribute("PlanAPlanAExcelPage", planAExcelPageModel);
+					publish.setPlanAExcelPage(true);
+					mLog.info("found page planAExcelPageModel");
 					break;
 					}catch (Exception ex) {
 						mLog.severe("error " + ex.getMessage());
 						break;
 					}
-			case PlanBFlightDatesPage:
+			case PlanBExcelPage:
 				try {
-					ExtraPageModel planBFlightDatesPageModel = null;
+					ExtraPageModel planBExcelPagePageModel = null;
 
-					planBFlightDatesPageModel = (ExtraPageModel) JSONManager.convertFromJson(data.getPagedata(),
+					planBExcelPagePageModel = (ExtraPageModel) JSONManager.convertFromJson(data.getPagedata(),
 							ExtraPageModel.class);
-					model.addAttribute("PlanBFlightDatesPageModel", planBFlightDatesPageModel);
-					publish.setPlanBFlightDatesPage(true);
-					mLog.info("found page planBFlightDatesPageModel");
+					model.addAttribute("PlanBExcelPage", planBExcelPagePageModel);
+					publish.setPlanBExcelPage(true);
+					mLog.info("found page PlanAExcelPage");
 					break;
 					}catch (Exception ex) {
 						mLog.severe("error " + ex.getMessage());
