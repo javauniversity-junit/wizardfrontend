@@ -1,10 +1,10 @@
-<div th:fragment="PlanBFlightDates"
+<div th:fragment="PlanBExcelPage"
 	class="grad container pageBreakInside" style="height: 100%;">
 
-	<div th:if="${PublishModel.planBFlightDatesPage}">
+	<div th:if="${PublishModel.planBExcelPage}">
 
 		<div>
-			<a id="PlanBFlightDates"></a>
+			<a id="PlanBExcelPage"></a>
 			<p class="text-justify"></p>
 
 		</div>
@@ -14,7 +14,7 @@
 		<script th:inline="javascript">
 			/*<![CDATA[*/
 
-    			var message = /*[[${PlanBFlightDatesPageModel?.textArea}]]*/ 'default';
+    			var message = /*[[${PlanBExcelPageModel?.textArea}]]*/ 'default';
     			 document.write(unescape(message));
 			     console.log(message);
 
