@@ -319,7 +319,7 @@ public class ExtraPageControl {
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("dataPageModel", dataPageModel);
 		model.addAttribute("wizard", wizard);
-		return "pages/PlanBFlightDatesPage";
+		return "pages/PlanBExcelPage";
 	}
 
 	@RequestMapping(value = "/savePlanBExcelPage", method = RequestMethod.POST)
