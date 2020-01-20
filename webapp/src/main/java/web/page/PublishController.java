@@ -207,7 +207,7 @@ public class PublishController {
 
 					planAExcelPageModel = (ExtraPageModel) JSONManager.convertFromJson(data.getPagedata(),
 							ExtraPageModel.class);
-					model.addAttribute("PlanAPlanAExcelPage", planAExcelPageModel);
+					model.addAttribute("PlanAExcelPageModel", planAExcelPageModel);
 					publish.setPlanAExcelPage(true);
 					mLog.info("found page planAExcelPageModel");
 					break;

@@ -1,19 +1,19 @@
-<div th:fragment="PlanBExcelPage"
+<div th:fragment="PlanAExcelPage"
 	class="grad container pageBreakInside" style="height: 100%;">
 
-	<div th:if="${PublishModel.planBExcelPage}">
-<!-- replace PlanBExcelPage begin -->
+	<div th:if="${PublishModel.planAExcelPage}">
+<!-- replace PlanAExcelPage begin -->
 		<div>
-			<a id="PlanBExcelPage"></a>
+			<a id="PlanAExcelPage"></a>
 			<p class="text-justify"></p>
-	<h1 class="text-center w3-text-white">Proposed Schedule – Plan B </h1>
+			<h1 class="text-center w3-text-white">Proposed Schedule – Plan A </h1>
 
 		</div>
       
   
 		<div class="whiteGrad mce-content-body">
 		<div class="w3-row">
-		<div id="excelBDataId" class="w3-col m9" >
+		<div id="excelADataId" class="w3-col m9" >
 		</div>
 		<div class="w3-col m3" style="padding-left: 2%;">
 		<p style="padding-top: 20%;">Build</p>
@@ -35,10 +35,10 @@
 		<script th:inline="javascript">
 			/*<![CDATA[*/
 
-    			var messageBexcel = /*[[${PlanBExcelPageModel?.textArea}]]*/ 'default';
+    			var messageA = /*[[${PlanAExcelPageModel?.textArea}]]*/ 'default';
     			 //document.write(unescape(message));
-    			 document.getElementById("excelBDataId").innerHTML = messageBexcel;
-			     console.log(messageBexcel);
+    			 document.getElementById("excelADataId").innerHTML = messageA;
+			     console.log(messageA);
 
 			/*]]>*/
 				</script>	

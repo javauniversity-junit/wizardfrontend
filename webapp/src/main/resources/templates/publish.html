@@ -101,6 +101,12 @@
         <!-- replace MarketingStrategiesPage begin -->
         <div th:replace="fragments/MarketingStrategiesFragment :: MarketingStrategiesPage"></div>
         
+        
+        <!-- replace PlanAExcelPage begin -->
+        <div th:if="${PublishModel.planAExcelPage}">
+            <div th:replace="fragments/PlanAExcelPageFragment :: PlanAExcelPage"></div>
+        </div>
+        
 
   <!-- replace PlanBExcelPage begin -->
         <div th:if="${PublishModel.planBExcelPage}">
