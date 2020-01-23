@@ -26,7 +26,8 @@ public enum PageSequenceEnum {
 	,ProfileOfConsumersPage_Sequence(27)
 	,DigitalMobileSocialStrategiesPage_Sequence(28)
 	,PlanAExcelPage_Sequence(29)
-	,PlanBExcelPage_Sequence(30);
+	,PlanBExcelPage_Sequence(30)
+	,MarketingStrategiesPage_Sequence(31);
 
 
 	
