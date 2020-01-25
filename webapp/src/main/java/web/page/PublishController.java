@@ -71,7 +71,12 @@ public class PublishController {
 	,PlanAProposedPage
 	,PlanBProposedPage
 	,ClientObjectivesOnePage
+	
 
+	
+
+
+	,MarketingStrategiesPage
 
 	,;
 			 */
@@ -169,6 +174,22 @@ public class PublishController {
 					mLog.severe("error " + ex.getMessage());
 					break;
 				}
+			case MarketingStrategiesPage:
+				try {
+					ExtraPageModel marketingStrategiesPageModel = null;
+
+					marketingStrategiesPageModel = (ExtraPageModel) JSONManager.convertFromJson(data.getPagedata(),
+							ExtraPageModel.class);
+					model.addAttribute("MarketingStrategiesPageModel", marketingStrategiesPageModel);
+					publish.setMarketingStrategiesPage(true);
+					mLog.info("found page marketingStrategiesPageModel");
+					break;
+					}catch (Exception ex) {
+						mLog.severe("error " + ex.getMessage());
+						break;
+					}	
+				
+				
 			case PlanABEPPage:
 			    try {
 				PlanABEPPageModel planABEPPageModel = null;

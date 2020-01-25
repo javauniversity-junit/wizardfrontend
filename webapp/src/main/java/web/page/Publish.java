@@ -24,9 +24,18 @@ public class Publish {
 	private boolean targetMarketingPage;
 	private boolean planBExcelPage;
 	private boolean planAExcelPage;
+	private boolean marketingStrategiesPage;
 	
 
 	
+
+	public boolean isMarketingStrategiesPage() {
+		return marketingStrategiesPage;
+	}
+
+	public void setMarketingStrategiesPage(boolean marketingStrategiesPage) {
+		this.marketingStrategiesPage = marketingStrategiesPage;
+	}
 
 	public boolean isPlanBExcelPage() {
 		return planBExcelPage;
