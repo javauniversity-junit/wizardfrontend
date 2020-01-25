@@ -1,44 +1,29 @@
-<div th:fragment="PlanAExcelPage"
+<div th:fragment="MarketingStrategiesPage"
 	class="grad container pageBreakInside" style="height: 100%;">
 
-	<div th:if="${PublishModel.planAExcelPage}">
+	<div th:if="${PublishModel.marketingStrategiesPage}">
 <!-- replace PlanAExcelPage begin -->
 		<div>
-			<a id="PlanAExcelPage"></a>
+			<a id="MarketingStrategiesPage"></a>
 			<p class="text-justify"></p>
-			<h1 class="text-center w3-text-white">Proposed Schedule – Plan A </h1>
+			<h1 class="text-center w3-text-white">Marketing Strategies </h1>
 
 		</div>
       
   
 		<div class="whiteGrad mce-content-body">
 		<div class="w3-row">
-		<div id="excelADataId" class="w3-col m9" >
+		<div id="MarketingStrategiesPageId" class="w3-row" >
 		</div>
-		<div class="w3-col m3" style="padding-left: 2%;">
-		<p style="padding-top: 20%;">Build</p>
-							<p>Brand</p>
-							<p>Equity</p>
-							<p>Monthly</p>
-							<p>Schedule</p>
-						
-							<p style="padding-top: 70%;">Spike</p>
-							<p>Monthly</p>
-							<p>Schedule</p>
-						
-							<p style="padding-top: 80%;">Slow</p>
-							<p>Performing</p>
-							<p>Monthly</p>
-							<p>Schedule</p>
-		</div>
+		
 		</div>
 		<script th:inline="javascript">
 			/*<![CDATA[*/
 
-    			var messageA = /*[[${PlanAExcelPageModel?.textArea}]]*/ 'default';
+    			var MarketingStrategiesPageIdMessage = /*[[${MarketingStrategiesPageModel?.textArea}]]*/ 'default';
     			 //document.write(unescape(message));
-    			 document.getElementById("excelADataId").innerHTML = messageA;
-			     console.log(messageA);
+    			 document.getElementById("MarketingStrategiesPageId").innerHTML = MarketingStrategiesPageIdMessage;
+			    
 
 			/*]]>*/
 				</script>	
