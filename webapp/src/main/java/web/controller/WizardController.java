@@ -1,36 +1,24 @@
 package web.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
+import java.sql.SQLException;
+import java.util.Optional;
+import java.util.logging.Logger;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-import web.data.MyUserDetailsService;
 import web.data.MyUserPrincipal;
-import web.model.Agent;
-import web.model.Contact;
 import web.model.Wizard;
 import web.repository.WizardRepository;
-
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.Authentication;
-import java.security.Principal;
-import java.sql.SQLException;
-
-
-
-import java.util.Optional;
-import java.util.logging.Logger;
 
 @Controller    // This means that this class is a Controller
 public class WizardController {

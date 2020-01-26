@@ -9,12 +9,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
+import org.springframework.security.core.Authentication;
+import web.data.MyUserPrincipal;
 import web.model.Wizard;
 import web.model.WizardData;
 import web.page.Pages;
-import web.page.presentedtopage.PresentedToPageController;
-import web.page.presentedtopage.PresentedToPageModel;
+
 import web.page.JSONManager;
 import web.page.PageNameEnum;
 import web.repository.WizardDataRepository;
@@ -217,8 +217,10 @@ public class ExtraPageControl {
 	
 	
 	@RequestMapping(value = "/CreateConceptOnePage", method = RequestMethod.GET)
-	public String detailCreateConceptOnePage(Model model, @RequestParam String ID) {
+	public String detailCreateConceptOnePage(Model model, @RequestParam String ID, Authentication authentication) {
 		mLog.info("starting detail");
+		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
+		
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
@@ -234,7 +236,14 @@ public class ExtraPageControl {
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("dataPageModel", dataPageModel);
 		model.addAttribute("wizard", wizard);
-		return "pages/CreateConceptOnePage";
+		String nextPage = "pages/CreateConceptOnePage";//radio
+		String clientType = userDetails.getContact().getClientType();
+		mLog.info("clientType [" + clientType + "]");
+		if (clientType.equals("TV")) {
+			nextPage = "pages/CreateConceptOneTVPage";//TV
+		}
+		mLog.info("nextPage [" + nextPage + "]");
+		return nextPage;
 	}
 	
 	@RequestMapping(value = "/saveCreateConceptOnePage", method = RequestMethod.POST)
@@ -274,8 +283,10 @@ public class ExtraPageControl {
 	}
 
 	@RequestMapping(value = "/CreateConceptTwoPage", method = RequestMethod.GET)
-	public String detailCreateConceptTwoPage(Model model, @RequestParam String ID) {
+	public String detailCreateConceptTwoPage(Model model, @RequestParam String ID,  Authentication authentication) {
 		mLog.info("starting detail");
+		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
+		
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
@@ -291,7 +302,13 @@ public class ExtraPageControl {
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("dataPageModel", dataPageModel);
 		model.addAttribute("wizard", wizard);
-		return "pages/CreateConceptTwoPage";
+		String nextPage = "pages/CreateConceptTwoPage";//radio
+		String clientType = userDetails.getContact().getClientType();
+		mLog.info("clientType [" + clientType + "]");
+		if (clientType.equals("TV")) {
+			nextPage = "pages/CreateConceptTwoTVPage";//TV
+		}
+		return nextPage;
 	}
 	
 	@RequestMapping(value = "/saveCreateConceptTwoPage", method = RequestMethod.POST)
@@ -337,8 +354,16 @@ public class ExtraPageControl {
 	
 	
 	@RequestMapping(value = "/PlanAExcelPage", method = RequestMethod.GET)
-	public String detailPlanAFlightDatesPage(Model model, @RequestParam String ID) {
+	public String detailPlanAExcelPage(Model model, @RequestParam String ID, Authentication authentication) {
 		mLog.info("starting PlanAExcelPage");
+		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
+		String nextPage = "pages/PlanAExcelPage";//radio
+		String clientType = userDetails.getContact().getClientType();
+		mLog.info("clientType [" + clientType + "]");
+		if (clientType.equals("TV")) {
+			nextPage = "pages/PlanAExcelTVPage";//TV
+		}
+		mLog.info("nextPage [" + nextPage + "]");
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
@@ -356,12 +381,19 @@ public class ExtraPageControl {
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("dataPageModel", dataPageModel);
 		model.addAttribute("wizard", wizard);
-		return "pages/PlanAExcelPage";
+		return nextPage;
 	}
 
 	@RequestMapping(value = "/PlanBExcelPage", method = RequestMethod.GET)
-	public String detailPlanBFlightDatesPage(Model model, @RequestParam String ID) {
+	public String detailPlanBExcelPage(Model model, @RequestParam String ID, Authentication authentication) {
 		mLog.info("starting detail");
+		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
+		String nextPage = "pages/PlanBExcelPage";//radio
+		String clientType = userDetails.getContact().getClientType();
+		mLog.info("clientType [" + clientType + "]");
+		if (clientType.equals("TV")) {
+			nextPage = "pages/PlanBExcelTVPage";//TV
+		}
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
@@ -377,7 +409,7 @@ public class ExtraPageControl {
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("dataPageModel", dataPageModel);
 		model.addAttribute("wizard", wizard);
-		return "pages/PlanBExcelPage";
+		return nextPage;
 	}
 
 	@RequestMapping(value = "/savePlanBExcelPage", method = RequestMethod.POST)
