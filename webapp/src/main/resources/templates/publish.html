@@ -96,6 +96,12 @@
             <div th:replace="fragments/PlanBMediaPagePageFragment :: PlanBMediaPage"></div>
         </div>
         
+	  
+	          <!-- replace PlanAProposedPage begin -->
+        <div th:if="${PublishModel.planAProposedPage}">
+            <div th:replace="fragments/PlanAProposedPageFragment :: PlanAProposedPage"></div>
+        </div>
+	  
 	    
 	 <!-- replace ProfileOfConsumersPageModel begin -->
         <div th:if="${PublishModel.profileOfConsumersPage}">

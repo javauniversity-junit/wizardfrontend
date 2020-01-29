@@ -8,6 +8,17 @@
             border-radius: 8px;
         }
 
+
+label {
+color: black;
+font-weight: bold;
+
+}
+
+.topPadding {
+	padding-top: 4%;
+}
+
 .hide {
 	 visibility: hidden;
 }
