@@ -251,6 +251,20 @@ public class PublishController {
 					mLog.severe("error " + ex.getMessage());
 					break;
 				}
+			case PlanBProposedPage:
+				try {
+					PlanProposedPageModel planBProposedPageModel = null;
+
+					planBProposedPageModel = (PlanProposedPageModel) JSONManager.convertFromJson(data.getPagedata(),
+							PlanProposedPageModel.class);
+				model.addAttribute("PlanBProposedPageModel", planBProposedPageModel);
+				publish.setPlanBProposedPage(true);
+				mLog.info("found page planBProposedPage");
+				break;
+				}catch (Exception ex) {
+					mLog.severe("error " + ex.getMessage());
+					break;
+				}
 			case PlanBExcelPage:
 				try {
 					ExtraPageModel planBExcelPagePageModel = null;
