@@ -1,0 +1,90 @@
+<div th:fragment="PlanALifetimeValuedPage"
+	class="grad container pageBreakInside" style="height: 100%;">
+	<div th:if="${PublishModel.planALifetimeValuedPage}" class="container"
+		style="padding-top: 1%;">
+		
+		<div>
+			<a id="PlanALifetimeValuedPage"></a>
+			<p class="text-justify"></p>
+			
+
+		</div>
+		
+		
+		<div class="whiteGrad mce-content-body" style="padding-top: 1%;">
+
+			<div class="w3-row">
+				<label for="averageSale">A. Average sale (ticket,
+					transaction, invoice)</label> <input type="text" id="averageSale"
+					th:value="${PlanALifetimeValuedPageModel?.averageSale}" name="averageSale" />
+			</div>
+			<div class="w3-row">
+				<label for="grossProfitMargin">B. Times gross profit margin
+					on average sale (sale less cost of goods sold)</label>
+				<div class="input-group mb-3">
+					<input type="number" th:value="${PlanALifetimeValuedPageModel?.grossProfitMargin}"
+						id="grossProfitMargin" name="grossProfitMargin" />
+					<div class="input-group-append">
+						<span class="input-group-text">%</span>
+					</div>
+				</div>
+			</div>
+			<div class="w3-row">
+				<label for="secondLevelName">C. Equals gross profit per
+					average sale (A*B)</label> <input type="currency" id="grossProfitPerSale"
+					name="grossProfitPerSale" readonly tabindex="-1"
+					th:value="${PlanALifetimeValuedPageModel?.grossProfitPerSale}"
+					aria-describedby="grossProfitPerSale" />
+			</div>
+			<div class="w3-row">
+				<label for="averageRepeatSales">D. Times the average repeat
+					sales per year (per customer/client)</label> <input type="number" readonly
+					th:value="${PlanALifetimeValuedPageModel?.averageRepeatSales}"
+					id="averageRepeatSales" name="averageRepeatSales" />
+			</div>
+			<div class="w3-row">
+				<label for="averageCustomerValue">E. Equals the average
+					customer/client value per year (C*D)</label> <input readonly tabindex="-1"
+					name="averageCustomerValue" id="averageCustomerValue"
+					th:value="${PlanALifetimeValuedPageModel?.averageCustomerValue}" />
+			</div>
+			<div class="w3-row">
+				<label for="yearsOfPatronage">F. Times the average number of
+					years of patronage</label> <input type="number"
+					th:value="${PlanALifetimeValuedPageModel?.yearsOfPatronage}" id="yearsOfPatronage"
+					name="yearsOfPatronage" />
+			</div>
+			<div class="w3-row">
+				<label for="lifetimeValuePerCustomer">G. Equals the lifetime
+					value of one customer/client (E*F)</label> <input type="text"
+					onClick="this.setSelectionRange(0, this.value.length)"
+					id="lifetimeValuePerCustomer" name="lifetimeValuePerCustomer"
+					readonly tabindex="-1"
+					th:value="${PlanALifetimeValuedPageModel?.lifetimeValuePerCustomer}"
+					aria-describedby="lifetimeValuePerCustomer" />
+			</div>
+			<div class="w3-row">
+				<label for="monthlyInvestmentAverage">H. So if your base
+					monthly advertising investment averages</label> <input
+					id="monthlyInvestmentAverage"
+					th:value="${PlanALifetimeValuedPageModelOther?.planAMonthly}"
+					name="monthlyInvestmentAverage" readonly tabindex="-1" />
+			</div>
+			<div class="w3-row">
+				<label for="prospectsNeededToBreakEven">I. Then monthly
+					customers/clients needed to break even (H/G)</label> <input
+					id="prospectsNeededToBreakEven" readonly tabindex="-1"
+					th:value="${PlanALifetimeValuedPageModel?.prospectsNeededToBreakEven}"
+					name="prospectsNeededToBreakEven" />
+			</div>
+
+		</div>
+			<div class="w3-container d-print-none" style="padding-top: 2%;">
+			<button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
+			<a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
+			<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
+		</div>
+		<div class="CopyRightId"></div>
+
+	</div>
+</div>

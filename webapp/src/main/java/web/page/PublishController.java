@@ -18,6 +18,7 @@ import web.page.marketplacecompetitionpage.MarketPlaceCompetitionPageModel;
 import web.page.planABEPPage.PlanABEPPageModel;
 import web.page.planBBEPPage.PlanBBEPPageModel;
 import web.page.planDigitalroicalculatorpage.PlanDigitalROICalculatorPageModel;
+import web.page.planalifetimevaluedpage.PlanALifetimeValuedPageModel;
 import web.page.planamedipage.MediaChart;
 import web.page.planamedipage.MediaChartHelper;
 import web.page.planamedipage.PlanMediaPageModel;
@@ -265,6 +266,22 @@ public class PublishController {
 					mLog.severe("error " + ex.getMessage());
 					break;
 				}
+			case PlanALifetimeValuedPage:
+				try {
+					PlanALifetimeValuedPageModel planALifetimeValuedPageModel = null;
+
+					planALifetimeValuedPageModel = (PlanALifetimeValuedPageModel) JSONManager.convertFromJson(data.getPagedata(),
+							PlanALifetimeValuedPageModel.class);
+				model.addAttribute("PlanALifetimeValuedPageModel", planALifetimeValuedPageModel);
+				publish.setPlanALifetimeValuedPage(true);
+				mLog.info("found page PlanALifetimeValuedPage");
+				break;
+				}catch (Exception ex) {
+					mLog.severe("error " + ex.getMessage());
+					break;
+				}	
+				//
+				
 			case PlanBExcelPage:
 				try {
 					ExtraPageModel planBExcelPagePageModel = null;
