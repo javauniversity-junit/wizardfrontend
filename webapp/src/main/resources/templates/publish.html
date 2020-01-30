@@ -34,18 +34,18 @@
     <div class="w3-container">
         <!-- outer div  -->
         <div th:if="${PublishModel.presentedToPage}">
-        <!-- replace presentToFragment begin -->
+        <!-- replace presentToFragment slide 1 begin -->
            <div th:replace="fragments/PresentedToPageFragment :: PresentedToPage"></div>
         <!-- replace presentToFragment end -->
 	</div>
 	    
 	<div th:if="${PublishModel.teamCommitmentPage}">    
-        <!-- replace teamCommitmentPageFragment begin -->
+        <!-- replace teamCommitmentPageFragment  slide 2 begin -->
            <div th:replace="fragments/TeamCommitmentPageFragment :: TeamCommitmentPage"></div>
         <!-- replace TeamCommitmentPageFragment end -->
 	</div>
 	    
-        <!-- replace marketPlaceCompetitionPage begin -->
+        <!-- replace marketPlaceCompetitionPage slide 3 begin -->
         <div th:if="${PublishModel.marketPlaceCompetitionPage}">
             <div th:replace="fragments/MarketPlaceCompetitionPageFragment :: MarketPlaceCompetitionPage"></div>
         </div>
