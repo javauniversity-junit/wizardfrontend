@@ -36,29 +36,24 @@
 
 				<div class="w3-row topPadding">
 					<label for="planAFrequency">Average Projected Monthly
-						Broadcast Frequency: </label> <input type="number" readonly
-						th:value="${PlanAProposedPageModel?.planAFrequency}" 
-						id="planAFrequency" name="planAFrequency" />
+						Broadcast Frequency: </label> <span
+						th:text="${PlanAProposedPageModel?.planAFrequency}"></span>
 				</div>
 				<div class="w3-row topPadding">
 					<label for=planADigitalImpressionsMonthly>Average Estimated
-						Monthly Digital Gross Impressions: </label> <input type="number" readonly
-						th:value="${PlanAProposedPageModel?.planADigitalImpressionsMonthly}"
-						id="planADigitalImpressionsMonthly"
-						name="planADigitalImpressionsMonthly" />
+						Monthly Digital Gross Impressions: </label> <span
+						th:text="${PlanAProposedPageModel?.planADigitalImpressionsMonthly}"></span>
 				</div>
 				<div class="w3-row topPadding">
 					<label for=planAMonthly>Average Base Monthly
-						Advertising Investment: </label> <input type="currency" readonly
-						th:value="${PlanAProposedPageModel?.planAMonthly}" 
-						id="planAMonthly" name="planAMonthly" />
+						Advertising Investment: </label> <span
+						th:text="${PlanAProposedPageModel?.planAMonthly}"></span>
 				</div>
 
 				<div class="w3-row topPadding">
 					<label for=planADaily>Average Base Daily Advertising
-						Investment:</label> <input 
-						th:value="${PlanAProposedPageModel?.planADaily}"  readonly
-						id="planADaily" name="planADaily"/>
+						Investment:</label> <span 
+						th:text="${PlanAProposedPageModel?.planADaily}"></span>
 				</div>
 
 

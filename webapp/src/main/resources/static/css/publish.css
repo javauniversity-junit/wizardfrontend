@@ -289,6 +289,10 @@ div.curved-text {
 	/* Standard syntax (must be last) */
 }
 
+.underline {
+border-bottom: 1px solid black;
+}
+
 .col-p-1,
 .col-p-2,
 .col-p-3,

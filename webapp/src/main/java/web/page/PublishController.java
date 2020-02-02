@@ -194,12 +194,12 @@ public class PublishController {
 				
 			case PlanABEPPage:
 			    try {
-				PlanABEPPageModel planABEPPageModel = null;
+			    PlanABEPPageModel planABEPPageModel = null;
 
 				planABEPPageModel = (PlanABEPPageModel) JSONManager.convertFromJson(data.getPagedata(),
 						PlanABEPPageModel.class);
-				model.addAttribute("PlanABEPPage", planABEPPageModel);
-				//publish.setPresentedToPage(true);
+				model.addAttribute("PlanABEPPageModel", planABEPPageModel);
+				publish.setPlanABEPPage(true);
 				mLog.info("found page PlanABEPPage");
 				break;
 			    }catch (Exception ex) {

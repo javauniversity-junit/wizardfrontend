@@ -8,65 +8,55 @@
 		<div>
 			<a id="PlanBProposedPage"></a>
 			<p class="text-justify"></p>
-			
+
 
 		</div>
 
 
 		<div class="whiteGrad mce-content-body">
-<h1 class="text-center w3-text-black">Plan B Proposed Schedule -
+			<h1 class="text-center w3-text-black">Plan B Proposed Schedule -
 				Brand Equity Months</h1>
-				
-				<h2 class="text-center w3-text-black" th:text="${PresentedToPage?.clientContactName}">
-				</h2> 
-				<h2 class="text-center w3-text-black"
-					th:text="${PresentedToPage?.clientBusinessName}"></h2>
-			
-				
-				<div class="w3-row topPadding">
-					<label for="planACity">Market/City: going to dominate: </label> <input readonly
-						th:value="${PlanBProposedPageModel?.planACity}" type="text"
-						id="planACity" name="planACity"
-						aria-describedby="planACity" />
-				</div>
 
-				<div class="w3-row topPadding">
-					<label for="planAReach">Average Projected Broadcast monthly
-						reach: </label> <input type="text" readonly
-						th:value="${PlanBProposedPageModel?.planAReach}" 
-						id="planAReach" name="planAReach" />
-				</div>
+			<h2 class="text-center w3-text-black"
+				th:text="${PresentedToPage?.clientContactName}"></h2>
+			<h2 class="text-center w3-text-black"
+				th:text="${PresentedToPage?.clientBusinessName}"></h2>
 
 
-				<div class="w3-row topPadding">
-					<label for="planAFrequency">Average Projected Monthly
-						Broadcast Frequency: </label> <input type="number" readonly
-						th:value="${PlanBProposedPageModel?.planAFrequency}" 
-						id="planAFrequency" name="planAFrequency" />
-				</div>
-				<div class="w3-row topPadding">
-					<label for=planADigitalImpressionsMonthly>Average Estimated
-						Monthly Digital Gross Impressions: </label> <input type="number" readonly
-						th:value="${PlanBProposedPageModel?.planADigitalImpressionsMonthly}"
-						id="planADigitalImpressionsMonthly"
-						name="planADigitalImpressionsMonthly" />
-				</div>
-				<div class="w3-row topPadding">
-					<label for=planAMonthly>Average Base Monthly
-						Advertising Investment: </label> <input type="currency" readonly
-						th:value="${PlanBProposedPageModel?.planAMonthly}" 
-						id="planAMonthly" name="planAMonthly" />
-				</div>
+			<div class="w3-row topPadding">
+				<label for="planACity">Market/City: going to dominate: </label> <span
+					th:text="${PlanBProposedPageModel?.planACity}"></span>
+			</div>
 
-				<div class="w3-row topPadding">
-					<label for=planADaily>Average Base Daily Advertising
-						Investment:</label> <input 
-						th:value="${PlanBProposedPageModel?.planADaily}"  readonly
-						id="planADaily" name="planADaily"/>
-				</div>
+			<div class="w3-row topPadding">
+				<label for="planAReach">Average Projected Broadcast monthly
+					reach: </label> <span th:text="${PlanBProposedPageModel?.planAReach}"></span>
+			</div>
 
 
-		
+			<div class="w3-row topPadding">
+				<label for="planAFrequency">Average Projected Monthly
+					Broadcast Frequency: </label> <span
+					th:text="${PlanBProposedPageModel?.planAFrequency}"></span>
+			</div>
+			<div class="w3-row topPadding">
+				<label for=planADigitalImpressionsMonthly>Average Estimated
+					Monthly Digital Gross Impressions: </label> <span
+					th:text="${PlanBProposedPageModel?.planADigitalImpressionsMonthly}"></span>
+			</div>
+			<div class="w3-row topPadding">
+				<label for=planAMonthly>Average Base Monthly Advertising
+					Investment: </label> <span
+					th:text="${PlanBProposedPageModel?.planAMonthly}"></span>
+			</div>
+
+			<div class="w3-row topPadding">
+				<label for=planADaily>Average Base Daily Advertising
+					Investment:</label> <span th:text="${PlanBProposedPageModel?.planADaily}"></span>
+			</div>
+
+
+
 
 
 
@@ -79,8 +69,8 @@
 			<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
 		</div>
 		<div class="CopyRightId"></div>
-		
-		
+
+
 	</div>
 
 </div>
