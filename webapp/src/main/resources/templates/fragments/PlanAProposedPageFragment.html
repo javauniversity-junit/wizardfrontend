@@ -24,17 +24,13 @@
 			
 				
 				<div class="w3-row topPadding">
-					<label for="planACity">Market/City: going to dominate: </label> <input readonly
-						th:value="${PlanAProposedPageModel?.planACity}" type="text"
-						id="planACity" name="planACity"
-						aria-describedby="planACity" />
+					<label for="planACity">Market/City: going to dominate: </label> <span
+						th:text="${PlanAProposedPageModel?.planACity}"></span>
 				</div>
 
 				<div class="w3-row topPadding">
 					<label for="planAReach">Average Projected Broadcast monthly
-						reach: </label> <input type="text" readonly
-						th:value="${PlanAProposedPageModel?.planAReach}" 
-						id="planAReach" name="planAReach" />
+						reach: </label> <span th:text="${PlanAProposedPageModel?.planAReach}"></span>
 				</div>
 
 
