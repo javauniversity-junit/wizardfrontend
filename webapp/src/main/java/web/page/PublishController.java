@@ -302,8 +302,8 @@ public class PublishController {
 
 				planBBEPPageModel = (PlanBBEPPageModel) JSONManager.convertFromJson(data.getPagedata(),
 						PlanBBEPPageModel.class);
-				model.addAttribute("PlanBBEPPage", planBBEPPageModel);
-				//publish.setPresentedToPage(true);
+				model.addAttribute("PlanBBEPPageModel", planBBEPPageModel);
+				publish.setPlanBBEPPage(true);
 				mLog.info("found page PlanBBEPPage");
 				break;
 				}catch (Exception ex) {

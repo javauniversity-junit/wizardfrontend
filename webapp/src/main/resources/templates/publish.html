@@ -114,6 +114,12 @@
             <div th:replace="fragments/PlanBProposedPageFragment :: PlanBProposedPage"></div>
         </div>
         
+        <!-- replace PlanBBEPPage begin -->
+        <div th:if="${PublishModel.planBBEPPage}">
+            <div th:replace="fragments/PlanBBEPPageFragment :: PlanBBEPPage"></div>
+        </div>
+        
+        
          <!-- replace PlanALifetimeValuedPage begin -->
         <div th:if="${PublishModel.planALifetimeValuedPage}">
             <div th:replace="fragments/PlanALifetimeValuedPageFragment :: PlanALifetimeValuedPage"></div>
