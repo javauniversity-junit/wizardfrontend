@@ -56,21 +56,24 @@
             <div th:replace="fragments/ClientObjectivesFragment :: ClientObjectivesPage"></div>
         </div>  
 
+ <!-- replace TargetMarketingPage begin slide 5-->
+        <div th:if="${PublishModel.targetMarketingPage}">
+            <div th:replace="fragments/TargetMarketingPageFragment :: TargetMarketingPage"></div>
+        </div>
 
-<!-- replace ConfidentialClientEvaluationPageDataFragment slide 5 begin -->
+<!-- replace ConfidentialClientEvaluationPageDataFragment slide 6 begin -->
         <div th:if="${PublishModel.confidentialClientEvaluationOnePage}">
             <div th:replace="fragments/ConfidentialClientEvaluationPageDataFragment :: ConfidentialClientEvaluationPageData"></div>
         </div>
 
-        <!-- replace ConfidentialClientEvaluationLastYearPage slide 6 begin -->
+  
+
+        <!-- replace ConfidentialClientEvaluationLastYearPage slide 7 begin -->
         <div th:if="${PublishModel.confidentialClientEvaluationOnePage}">
             <div th:replace="fragments/ConfidentialClientEvaluationLastYearPageFragment :: ConfidentialClientEvaluationLastYearPage"></div>
         </div>
         
-         <!-- replace TargetMarketingPage begin -->
-        <div th:if="${PublishModel.targetMarketingPage}">
-            <div th:replace="fragments/TargetMarketingPageFragment :: TargetMarketingPage"></div>
-        </div>
+      
         
 
      <!-- replace ConfidentialClientEvaluationProposedPage begin -->
