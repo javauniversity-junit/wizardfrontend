@@ -57,25 +57,27 @@
         </div>  
 
 
-<!-- replace ConfidentialClientEvaluationPageDataFragment begin -->
+<!-- replace ConfidentialClientEvaluationPageDataFragment slide 5 begin -->
         <div th:if="${PublishModel.confidentialClientEvaluationOnePage}">
             <div th:replace="fragments/ConfidentialClientEvaluationPageDataFragment :: ConfidentialClientEvaluationPageData"></div>
         </div>
 
-        <!-- replace ConfidentialClientEvaluationLastYearPage begin -->
+        <!-- replace ConfidentialClientEvaluationLastYearPage slide 6 begin -->
         <div th:if="${PublishModel.confidentialClientEvaluationOnePage}">
             <div th:replace="fragments/ConfidentialClientEvaluationLastYearPageFragment :: ConfidentialClientEvaluationLastYearPage"></div>
         </div>
+        
+         <!-- replace TargetMarketingPage begin -->
+        <div th:if="${PublishModel.targetMarketingPage}">
+            <div th:replace="fragments/TargetMarketingPageFragment :: TargetMarketingPage"></div>
+        </div>
+        
 
      <!-- replace ConfidentialClientEvaluationProposedPage begin -->
         <div th:if="${PublishModel.confidentialClientEvaluationProposedPage}">
             <div th:replace="fragments/ConfidentialClientEvaluationProposedPageFragment :: ConfidentialClientEvaluationProposedPage"></div>
         </div>
 
- <!-- replace TargetMarketingPage begin -->
-        <div th:if="${PublishModel.targetMarketingPage}">
-            <div th:replace="fragments/TargetMarketingPageFragment :: TargetMarketingPage"></div>
-        </div>
 
    <!-- replace LongRangeStrategicPlansPage begin -->
         <div th:replace="fragments/LongRangeStrategicPlansFragment :: LongRangeStrategicPlansPage"></div>
