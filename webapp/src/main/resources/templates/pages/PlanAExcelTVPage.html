@@ -66,7 +66,7 @@
 				action="savePlanAExcelPage" autocomplete="off">
 				<fieldset>
 
-					<legend> Plan A Excel </legend>
+					<legend> Plan A Excel TV </legend>
 
 					<!-- IF dataPageModel != null -->
 
@@ -300,7 +300,7 @@
 					</div>
 
 					<input type="hidden" id="nextPage"
-						th:value="'redirect:/PlanBFlightDatesPage?ID=' + ${wizard.wizardid}"
+						th:value="'redirect:/PlanBExcelPage?ID=' + ${wizard.wizardid}"
 						name="nextPage" /> <input type="hidden" id="previousPage"
 						th:value="'redirect:/PlanBMediaPage?ID=' + ${wizard.wizardid}"
 						name="previousPage" /> <input type="hidden" id="publishPage"
