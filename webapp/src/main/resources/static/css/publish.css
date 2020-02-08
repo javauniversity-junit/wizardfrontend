@@ -44,7 +44,10 @@ font-weight: bold;
   width: 200px; 
   text-align: center;
 }
-
+hr.dark {
+  border: 2px solid black;
+  font-weight: bold;
+}
 /* phone & date part */
  .date > .line, .phone > .line {
   display: inline-block;
