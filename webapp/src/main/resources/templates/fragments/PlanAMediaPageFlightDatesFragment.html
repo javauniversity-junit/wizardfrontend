@@ -17,7 +17,7 @@
 				<h2 style="text-align: center;">Plan A</h2>
 
 				<h2
-					th:text="'For the benefit of the client ' + ${PresentedToPage?.clientContactName} + ' agrees to develop a marketing strategy to help' ">
+					th:text="'For the benefit of the client ' + ${PresentedToPage?.station} + ' agrees to develop a marketing strategy to help' ">
 
 					WWWW</h2>
 			</div>
@@ -37,12 +37,13 @@
 				
 			
 			<span
-						th:id="${selectedModel?.label}"> 
+						th:id="${selectedModel?.label} + '-a' "> 
 						
 						
 						<script th:inline="javascript">
 					          /*<![CDATA[*/
 						var message = /*[[${selectedModel?.label}]]*/'default';
+					          message = message + "-a";	
 						//message = "'" + message + "'";
 						addLabel(message);
 						/*]]>*/

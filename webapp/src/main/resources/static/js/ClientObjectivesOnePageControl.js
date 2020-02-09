@@ -49,12 +49,43 @@ function addSelection(id) {
 
 
 function addLabel(key) {
-	if (map.has(key)) {
-	  var keyvalue = map.get(key);
+	
+	console.group("addLabel");
+	console.log("key [" + key + "]");
+	var lookupKey = key;
+	
+	
+	  var findString  = key.indexOf("-a");
+      if (findString != -1 ) {
+    	  //console.log("did not find -a")
+      } else {
+    	  lookupKey = key.replace("-a", "");
+    	  console.log("lookupKey [" + lookupKey + "]");
+    	  
+      }
+	
+      
+      findString  = key.indexOf("-b");
+      if (findString != -1 ) {
+    	  //console.log("did not find -b")
+      } else {
+    	  lookupKey = key.replace("-b", "");
+    	  console.log("lookupKey [" + lookupKey + "]");
+    	  
+      }
+
+	
+	
+	
+	
+	if (map.has(lookupKey)) {
+	  var keyvalue = map.get(lookupKey);
 	  document.getElementById(key).innerHTML = keyvalue;
 	} else {
 		document.getElementById(key).innerHTML = key;
 	}
+	
+	console.groupEnd();
 	
 }
 
