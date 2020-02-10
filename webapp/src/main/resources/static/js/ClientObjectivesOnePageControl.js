@@ -56,23 +56,32 @@ function addLabel(key) {
 	
 	
 	  var findString  = key.indexOf("-a");
-      if (findString != -1 ) {
-    	  //console.log("did not find -a")
+	  console.log("findString 1 [" + findString + "]")
+      if (findString == -1 ) {
+    	  //did not find -a
+    	  console.log("did not find -a")
+    	  findString  = key.indexOf("-b");
+    	  console.log("findString 2 [" + findString + "]")
+          if (findString == -1 ) {
+        	  console.log("did not find -b")
+          } else {
+        	  //found -b
+        	  lookupKey = key.replace("-b", "");
+        	  console.log("lookupKey -b [" + lookupKey + "]");
+        	  
+          }
+    	  
+    	  
+    	  
       } else {
+    	  //found -a
     	  lookupKey = key.replace("-a", "");
-    	  console.log("lookupKey [" + lookupKey + "]");
+    	  console.log("lookupKey -a [" + lookupKey + "]");
     	  
       }
 	
       
-      findString  = key.indexOf("-b");
-      if (findString != -1 ) {
-    	  //console.log("did not find -b")
-      } else {
-    	  lookupKey = key.replace("-b", "");
-    	  console.log("lookupKey [" + lookupKey + "]");
-    	  
-      }
+    
 
 	
 	
