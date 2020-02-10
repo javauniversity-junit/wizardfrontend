@@ -21,36 +21,32 @@
 
 					WWWW</h2>
 			</div>
-                        
-				
-			
 
-		
+
+
+
+
 
 
 			<!-- if="${PublishModel.clientObjectivesPage} -->
 			<div th:if="${PublishModel.clientObjectivesPage}">
 
-				<ol>
-		<li th:each="selectedModel : ${ClientObjectivesPageModel}" 
-	            th:if="${selectedModel.sortOrder} != 0">
-				
 			
-			<span
-						th:id="${selectedModel?.label} + '-a' "> 
-						
-						
-						<script th:inline="javascript">
-					          /*<![CDATA[*/
-						var message = /*[[${selectedModel?.label}]]*/'default';
-					          message = message + "-a";	
-						//message = "'" + message + "'";
-						addLabel(message);
-						/*]]>*/
+
+				<ol>
+					<li style="color: red;" th:each="selectedModel : ${ClientObjectivesPageModel}"
+						th:if="${selectedModel.sortOrder} != 0"><span style='color:black;'
+						th:id="${selectedModel?.label} + '-a' "> <script
+								th:inline="javascript">
+							/*<![CDATA[*/
+							var message = /*[[${selectedModel?.label}]]*/'default';
+							message = message + "-a";
+							//message = "'" + message + "'";
+							addLabel(message);
+							/*]]>*/
 						</script>
-						
-						</span>
-				  </li>
+
+					</span></li>
 
 
 
@@ -63,25 +59,25 @@
 
 			<p>In return for fulfilling stated goals Premium Auto Centers
 				agrees to invest in the following long-term plan</p>
-			
+
 			<div id="spreadSheet">
 				<table class="table table-striped" id="headerTable">
 					<thead>
 						<tr>
-							<th>Media</th>
-							<th>Jan</th>
-							<th>Feb</th>
-							<th>Mar</th>
-							<th>Apr</th>
-							<th>May</th>
-							<th>Jun</th>
-							<th>Jul</th>
-							<th>Aug</th>
-							<th>Sep</th>
-							<th>Oct</th>
-							<th>Nov</th>
-							<th>Dec</th>
-							<th>Total</th>
+							<th style="background-color: green; color: white;">Media</th>
+							<th style="background-color: green; color: white;">Jan</th>
+							<th style="background-color: green; color: white;">Feb</th>
+							<th style="background-color: green; color: white;">Mar</th>
+							<th style="background-color: green; color: white;">Apr</th>
+							<th style="background-color: green; color: white;">May</th>
+							<th style="background-color: green; color: white;">Jun</th>
+							<th style="background-color: green; color: white;">Jul</th>
+							<th style="background-color: green; color: white;">Aug</th>
+							<th style="background-color: green; color: white;">Sep</th>
+							<th style="background-color: green; color: white;">Oct</th>
+							<th style="background-color: green; color: white;">Nov</th>
+							<th style="background-color: green; color: white;">Dec</th>
+							<th style="background-color: green; color: white;">Total</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -115,7 +111,7 @@
 
 			<template id="footerrow">
 			<tr>
-				<td>Total</td>
+				<td>Monthly Totals</td>
 				<td>1</td>
 				<td>2</td>
 				<td>3</td>
@@ -135,85 +131,74 @@
 
 
 			<div>
-				
-		<script src="js/medialSpreadSheet.js">
-			
-		</script>
-		<script>
-			console.group("medialSpreadSheet");
+
+				<script src="js/medialSpreadSheet.js">
+					
+				</script>
+				<script>
+					console.group("medialSpreadSheet");
+
+					const mediaRows = document.getElementById("mediarows").value;
+					console.log("mediaRows [" + mediaRows + "]");
+					if (mediaRows.length > 4) {
+						objs = JSON.parse(mediaRows);
+					}
+					buildSpreadSheet();
+
+					console.groupEnd();
+				</script>
+
+
+			</div>
+
+			<div>
+				<p>Client may cancel after 13 weeks from schedule start date
+					with two weeks’ notice and no short rate. This offer is good for 10
+					business days from the date of presentation. In accordance with
+					Paragraphs 49 and 50 of United States Federal Communications
+					Commission Report and Order No. FCC 07-217, this station will not
+					discriminate in any contract for advertising on the basis of race
+					or ethnicity, and all such contracts will be evaluated, accepted,
+					negotiated and completed without regard to race or ethnicity</p>
+
+				<h2>Analysis of Schedule:</h2>
+
+				<p>
+					AVERAGE MONTHLY CLIENT INVESTMENT <span id="monthlyAverageId"></span>
+					.
+				</p>
+				<p>
+					AVERAGE DAILY CLIENT INVESTMENT <span id="dailyCostId"></span>
+
+				</p>
+				<p>Thank you for your trust and confidence</p>
+
+
+				<div class="b w3-row">
+					<div class="w3-col w3-container m6">
+						<hr class="new4" />
+					</div>
+					<div class="w3-col w3-container m6">
+						<hr class="new4" />
+					</div>
+
+				</div>
+
+				<div class="b w3-row">
+					<div class="w3-col w3-container m3">Accepted for</div>
+					<div class="w3-col w3-container m3">Date</div>
+
+					<div class="w3-col w3-container m3">Accepted for</div>
+					<div class="w3-col w3-container m3">Date</div>
+
+				</div>
 
 
 
-			const mediaRows = document.getElementById("mediarows").value;
-			console.log("mediaRows [" + mediaRows+ "]");
-			if (mediaRows.length > 4) {
-				objs = JSON.parse(mediaRows);
-			}
-			buildSpreadSheet();
-			
-			console.groupEnd();
-		</script>
 
-
+				<script>
+					dailyCostAndMonthlyAverage();
+				</script>
+			</div>
 		</div>
-			
-               <div>
-		         <p>
-   			 Client may cancel after 13 weeks from schedule start date with two weeks’ notice and no short rate. This offer is good for 10 business days 
-				from the date of presentation. In accordance with Paragraphs 49 and 50 of United States Federal Communications Commission Report and Order No. FCC 07-217, 
-			this station will not discriminate in any contract for advertising on the basis of race
- 			or ethnicity, and all such contracts will be evaluated, accepted, negotiated and completed without regard to race or ethnicity
- 			 </p>
-
- 		 <h2>Analysis of Schedule:
-		</h2>
-
-  		<p>
-			AVERAGE MONTHLY CLIENT INVESTMENT <span id="monthlyAverageId"></span>
-.
-  		</p>
-  		<p>
-			AVERAGE DAILY CLIENT INVESTMENT <span id="dailyCostId"></span>
-
-  		</p>
-		 <p> 
-			 Thank you for your trust and confidence 
-		  </p>
-
-		       
-		<div class="b w3-row">
-  			<div class="w3-col w3-container m6">
-   		 <hr class="new4"/>
- 		 </div>
- 		 <div class="w3-col w3-container m6">
- 		   <hr class="new4"/>
- 		 </div>
- 
-		</div>
-
-		<div class="b w3-row">
- 		 <div class="w3-col w3-container m3">
-  		  Accepted for
-  		</div>
- 		 <div class="w3-col w3-container m3">
-  				  Date
-  		</div>
- 
-  		 <div class="w3-col w3-container m3">
-   			 Accepted for
-  		</div>
- 		 <div class="w3-col w3-container m3">
-   			 Date
-  		</div>
- 
 	</div>
-       
-		       
-		       
-		       
-		  <script>
-	               dailyCostAndMonthlyAverage();
-		       </script>
-			</div>	       
-	</div>
-</div>

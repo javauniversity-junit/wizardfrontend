@@ -11,9 +11,9 @@
 
 
 
-.tableHeader th {
+.tableHeader table th{
   background-color: green;
-  color: black;
+  color: white;
 
 }
 

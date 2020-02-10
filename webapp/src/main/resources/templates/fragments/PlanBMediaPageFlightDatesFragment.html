@@ -28,11 +28,11 @@
 			<div th:if="${PublishModel.clientObjectivesPage}">
 
 				<ol>
-		<li th:each="selectedModel : ${ClientObjectivesPageModel}" 
+		<li style="color: red;" th:each="selectedModel : ${ClientObjectivesPageModel}" 
 	            th:if="${selectedModel.sortOrder} != 0">
 				
 			
-			<span
+			<span style='color:black;' 
 						th:id="${selectedModel?.label} + '-b' "> 
 						
 						
@@ -61,23 +61,23 @@
 				agrees to invest in the following long-term plan</p>
 			
 			<div id="spreadSheetB">
-				<table class="table table-striped tableHeader" id="headerTable">
+				<table class="table table-striped" id="headerTable">
 					<thead>
 						<tr>
-							<th>Media</th>
-							<th>Jan</th>
-							<th>Feb</th>
-							<th>Mar</th>
-							<th>Apr</th>
-							<th>May</th>
-							<th>Jun</th>
-							<th>Jul</th>
-							<th>Aug</th>
-							<th>Sep</th>
-							<th>Oct</th>
-							<th>Nov</th>
-							<th>Dec</th>
-							<th>Total</th>
+							<th style="background-color: green;color: white;">Media</th>
+							<th style="background-color: green;color: white;">Jan</th>
+							<th style="background-color: green;color: white;">Feb</th>
+							<th style="background-color: green;color: white;">Mar</th>
+							<th style="background-color: green;color: white;">Apr</th>
+							<th style="background-color: green;color: white;">May</th>
+							<th style="background-color: green;color: white;">Jun</th>
+							<th style="background-color: green;color: white;">Jul</th>
+							<th style="background-color: green;color: white;">Aug</th>
+							<th style="background-color: green;color: white;">Sep</th>
+							<th style="background-color: green;color: white;">Oct</th>
+							<th style="background-color: green;color: white;">Nov</th>
+							<th style="background-color: green;color: white;">Dec</th>
+							<th style="background-color: green;color: white;">Total</th>
 						</tr>
 					</thead>
 					<tbody id="tbodyB">
@@ -111,7 +111,7 @@
 
 			<template id="footerrowB">
 			<tr>
-				<td>Total</td>
+				<td> Monthly Totals</td>
 				<td>1</td>
 				<td>2</td>
 				<td>3</td>
