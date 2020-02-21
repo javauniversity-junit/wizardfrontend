@@ -27,7 +27,7 @@
 			<!-- if="${PublishModel.clientObjectivesPage} -->
 			<div th:if="${PublishModel.clientObjectivesPage}">
 
-				<ol>
+				<ol class="center-ol">
 		<li style="color: red;" th:each="selectedModel : ${ClientObjectivesPageModel}" 
 	            th:if="${selectedModel.sortOrder} != 0">
 				

@@ -8,8 +8,16 @@
             border-radius: 8px;
         }
 
-
-
+.center-ol
+{
+ text-align: center;
+ list-style-position: inside;
+}
+ol.center-ol li
+{
+ text-align: left;
+ margin-left: 45%;
+}
 
 .tableHeader table th{
   background-color: green;
