@@ -1,15 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato);
-* {
-	border: 0;
-	padding: 0;
-	margin: 0;
-	background: 0 0;
-	color: black;
-	box-sizing: border-box;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	font-weight: bold;
-}
+
 
 :focus {
 	outline: 0
