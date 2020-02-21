@@ -1,3 +1,10 @@
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 .bordered {
             width: 200px;
             height: 100px;
