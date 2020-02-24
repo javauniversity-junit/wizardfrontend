@@ -1,0 +1,56 @@
+<!-- begin of StrategicMarketingPageTwoFragment -->
+<div th:fragment="StrategicMarketingPageTwo"
+	class="grad container pageBreakBefore">
+	<div th:if="${PublishModel.strategicMarketingPageTwo}">
+		<!-- begin if TeamCommitment content -->
+		<div>
+			<a id="StrategicMarketingPageTwo"></a>
+<div class="text-justify">
+				<h1 class="text-center w3-text-white">Strategic Marketing II</h1>
+			</div>
+			
+
+		</div>
+
+		<div class="whiteGrad">
+			
+			
+			<div class="w3-row">
+			5. What image does the client want the company's 
+						name to project to their customers / consumers?
+			</div>
+			<div class="w3-row" style="padding-left:2%;">
+			   <span th:text="${StrategicMarketingPageTwo?.companyNameProjectImage}"></span>
+			</div>
+
+		<div class="w3-row" style="padding-top:2%;">
+			Current Company Slogan
+			</div>
+			<div class="w3-row" style="padding-left:2%;">
+			   <span th:text="${StrategicMarketingPageTwo?.currentCompanySlogan}"></span>
+			</div>
+
+		
+		</div>
+		
+		<div class="w3-container d-print-none" style="padding-top: 2%;">
+			<button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
+			<a href="#MarketPlaceCompetitionPage" class="w3-btn w3-white">Next</a>
+			<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
+		</div>
+		<div class="w3-row">
+		      <div class="CopyRightId w3-col m8"></div>
+		      <div class=" w3-col m2"></div>
+		      <div align="right" class="w3-col m2">
+			-CONFIDENTIAL- 6      
+		      </div>	      
+		</div>
+
+
+	</div>
+	<!-- end of if StrategicMarketingPageTwo content -->
+
+
+
+</div>
+<!-- end of StrategicMarketingPageTwoFragment -->

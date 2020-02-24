@@ -417,9 +417,26 @@ public class PublishController {
 				strategicMarketingPageThreeModel = (StrategicMarketingPageThreeModel) JSONManager
 						.convertFromJson(data.getPagedata(), StrategicMarketingPageThreeModel.class);
 				model.addAttribute("StrategicMarketingPageThree", strategicMarketingPageThreeModel);
+				publish.setStrategicMarketingPageThree(true);
+				mLog.info("found page StrategicMarketingPageThree");
+
+			;
+				break;
+				}catch (Exception ex) {
+					mLog.severe("error " + ex.getMessage());
+					break;
+				}
+			case StrategicMarketingPageTwo:
+				try {
+				StrategicMarketingPageTwoModel strategicMarketingPageTwoModel = null;
+
+				strategicMarketingPageTwoModel = (StrategicMarketingPageTwoModel) JSONManager
+						.convertFromJson(data.getPagedata(), StrategicMarketingPageTwoModel.class);
+				model.addAttribute("StrategicMarketingPageTwo", strategicMarketingPageTwoModel);
+				publish.setStrategicMarketingPageTwo(true);
 				mLog.info("found page StrategicMarketingPageTwo");
 
-				mLog.info("value found page StrategicMarketingPageOne ");
+				
 				break;
 				}catch (Exception ex) {
 					mLog.severe("error " + ex.getMessage());
@@ -442,21 +459,7 @@ public class PublishController {
 					mLog.severe("error " + ex.getMessage());
 					break;
 				}
-			case StrategicMarketingPageTwo:
-				try {
-				StrategicMarketingPageTwoModel strategicMarketingPageTwoModel = null;
-
-				strategicMarketingPageTwoModel = (StrategicMarketingPageTwoModel) JSONManager
-						.convertFromJson(data.getPagedata(), StrategicMarketingPageTwoModel.class);
-				model.addAttribute("StrategicMarketingPageTwo", strategicMarketingPageTwoModel);
-				mLog.info("found page StrategicMarketingPageTwo");
-
-				mLog.info("value found page StrategicMarketingPageOne ");
-				break;
-				}catch (Exception ex) {
-					mLog.severe("error " + ex.getMessage());
-					break;
-				}
+		
 			case TeamCommitmentPage:
 				try {
 				TeamCommitmentPageModel teamCommitmentPageModel = null;
