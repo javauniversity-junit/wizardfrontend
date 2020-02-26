@@ -30,56 +30,58 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 	private AgentRepository mAgentRepository;
 	@Autowired
 	private ContactRepository mContactRepository;
-    public CustomAuthenticationProvider() {
-        super();
-    }
 
-    // API
+	public CustomAuthenticationProvider() {
+		super();
+	}
 
-    @Override
-    public Authentication authenticate(final Authentication authentication) throws AuthenticationException {
-	     mLog.info("------------starting authenticate-------------");
-	     Contact contact = null;
-        final String name = authentication.getName();
-        final String password = authentication.getCredentials().toString();
-        if (name.equals("admin") && password.equals("admin")) {
-            final List<GrantedAuthority> grantedAuths = new ArrayList<>();
-            grantedAuths.add(new SimpleGrantedAuthority("ROLE_USER"));
-            final UserDetails principal = new User(name, password, grantedAuths);
-            final Authentication auth = new UsernamePasswordAuthenticationToken(principal, password, grantedAuths);
-            return auth;
-        } else {
-        	Agent agent = mAgentRepository.findByAddressAndPassword(name,password);
-        	
-        	if (agent == null ) {
-        		mLog.info("could not find agent [" + name);
-        		return null;
-        	}
-		mLog.info("found agent [" + name);
-        	Optional<Contact> contactOpt = mContactRepository.findById(agent.getContactId());
-        	contact = contactOpt.orElse(null);
-        if (contact == null) {
-        	mLog.info("could not find contact---------" + agent.getContactId());
-        	return null;
-        }
-		//determine if contact is valid
-		boolean hasExpired = web.util.CalendarHelper.hasExpired(contact.getStartDate(),contact.getEndDate());
-		 mLog.info("Has an invalid license [" + hasExpired + "]" );
-		if (hasExpired) {
-			return null;
+	// API
+
+	@Override
+	public Authentication authenticate(final Authentication authentication) throws AuthenticationException {
+		mLog.info("------------starting authenticate-------------");
+		Contact contact = null;
+		final String name = authentication.getName();
+		final String password = authentication.getCredentials().toString();
+		if (name.equals("admin") && password.equals("admin")) {
+			final List<GrantedAuthority> grantedAuths = new ArrayList<>();
+			grantedAuths.add(new SimpleGrantedAuthority("ROLE_USER"));
+			final UserDetails principal = new User(name, password, grantedAuths);
+			final Authentication auth = new UsernamePasswordAuthenticationToken(principal, password, grantedAuths);
+			return auth;
+		} else {
+			Agent agent = mAgentRepository.findByAddressAndPassword(name, password);
+
+			if (agent == null) {
+				mLog.info("could not find agent [" + name);
+				return null;
+			}
+			mLog.info("found agent [" + name);
+			Optional<Contact> contactOpt = mContactRepository.findById(agent.getContactId());
+			contact = contactOpt.orElse(null);
+			if (contact == null) {
+				mLog.info("could not find contact---------" + agent.getContactId());
+				return null;
+			}
+			// determine if contact is valid
+			boolean hasExpired = web.util.CalendarHelper.hasExpired(contact.getStartDate(), contact.getEndDate());
+			mLog.info("Has an invalid license [" + hasExpired + "]");
+			if (hasExpired) {
+				return null;
+			}
+			// Contact contact = contactList.get(0);
+			final List<GrantedAuthority> grantedAuths = new ArrayList<>();
+			grantedAuths.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
+			MyUserPrincipal myUserPrincipal = new MyUserPrincipal(agent, contact);
+			final Authentication auth = new UsernamePasswordAuthenticationToken(myUserPrincipal, password,
+					grantedAuths);
+			return auth;
 		}
-        	//Contact contact = contactList.get(0);
-        	final List<GrantedAuthority> grantedAuths = new ArrayList<>();
-            grantedAuths.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
-            MyUserPrincipal myUserPrincipal = new MyUserPrincipal(agent, contact);
-            final Authentication auth = new UsernamePasswordAuthenticationToken(myUserPrincipal, password, grantedAuths);
-            return auth;
-        }
-    }
+	}
 
-    @Override
-    public boolean supports(final Class<?> authentication) {
-        return authentication.equals(UsernamePasswordAuthenticationToken.class);
-    }
+	@Override
+	public boolean supports(final Class<?> authentication) {
+		return authentication.equals(UsernamePasswordAuthenticationToken.class);
+	}
 
 }

@@ -14,16 +14,16 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Entity // This tells Hibernate to make a table out of this class
-@Table(name="users")
+@Table(name = "users")
 public class User {
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private Integer id;
-    
-    @Column(name= "enabled")
-    private boolean enabled;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
 
-    public boolean isEnabled() {
+	@Column(name = "enabled")
+	private boolean enabled;
+
+	public boolean isEnabled() {
 		return enabled;
 	}
 
@@ -31,12 +31,10 @@ public class User {
 		this.enabled = enabled;
 	}
 
-	@Column(name= "password")
-    private String password;
-    @Column(name= "username")
-    private String name;
-
-
+	@Column(name = "password")
+	private String password;
+	@Column(name = "username")
+	private String name;
 
 	public Integer getId() {
 		return id;
@@ -62,11 +60,9 @@ public class User {
 		this.password = password;
 	}
 
-    @ManyToMany(cascade=CascadeType.ALL )
-    @JoinTable(name="user_role", joinColumns=@JoinColumn(name="user_id"), inverseJoinColumns=@JoinColumn(name="role_id"))
-    private Set<Role> roles;
-
-
+	@ManyToMany(cascade = CascadeType.ALL)
+	@JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+	private Set<Role> roles;
 
 	public Set<Role> getRoles() {
 		return roles;
@@ -75,6 +71,5 @@ public class User {
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
 	}
-    
-}
 
+}

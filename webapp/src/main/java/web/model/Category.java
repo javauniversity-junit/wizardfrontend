@@ -9,24 +9,18 @@ import javax.persistence.*;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-
-
 @Entity // This tells Hibernate to make a table out of this class
 public class Category {
 	private static Logger mLog = Logger.getLogger("Category");
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private Integer id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
 
-    private String name;	
+	private String name;
 
-    @OneToMany
-    @JoinTable(
-            name="webclient",
-            joinColumns = @JoinColumn( name="category_id"),
-            inverseJoinColumns = @JoinColumn( name="id")
-    )
-    private List<WebClient> mWebClients;
+	@OneToMany
+	@JoinTable(name = "webclient", joinColumns = @JoinColumn(name = "category_id"), inverseJoinColumns = @JoinColumn(name = "id"))
+	private List<WebClient> mWebClients;
 
 	public List<WebClient> getmWebClients() {
 		return mWebClients;
@@ -39,17 +33,17 @@ public class Category {
 	public Integer getId() {
 		return id;
 	}
-	
+
 	public String toString() {
 		Gson gson = new Gson();
 		String json = null;
-		 // convert map to JSON String
-		//.json.gson.
+		// convert map to JSON String
+		// .json.gson.
 		json = gson.toJson(mWebClients);
-		
-		//remove \
-	String test  = json.replaceAll("\"", "'");
-	mLog.info(test);
+
+		// remove \
+		String test = json.replaceAll("\"", "'");
+		mLog.info(test);
 		return test;
 	}
 
@@ -65,8 +59,4 @@ public class Category {
 		this.name = name;
 	}
 
-
-    
-    
 }
-

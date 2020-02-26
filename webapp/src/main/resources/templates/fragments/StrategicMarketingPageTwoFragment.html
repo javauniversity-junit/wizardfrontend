@@ -5,50 +5,55 @@
 		<!-- begin if TeamCommitment content -->
 		<div>
 			<a id="StrategicMarketingPageTwo"></a>
-<div class="text-justify">
+			<div class="text-justify">
 				<h1 class="text-center w3-text-white">Strategic Marketing II</h1>
 			</div>
-			
+
 
 		</div>
 
 		<div class="whiteGrad">
-			
-			
-			<div class="w3-row">
-			5. What image does the client want the company's 
-						name to project to their customers / consumers?
-			</div>
-			<div class="w3-row" style="padding-left:2%;">
-			   <span th:text="${StrategicMarketingPageTwo?.companyNameProjectImage}"></span>
+
+
+			<div class="w3-row">5. What image does the client want the
+				company's name to project to their customers / consumers?</div>
+			<div class="w3-row" style="padding-left: 2%;">
+				<span
+					th:text="${StrategicMarketingPageTwo?.companyNameProjectImage}"></span>
 			</div>
 
-		<div class="w3-row" style="padding-top:2%;">
-			Current Company Slogan
-			</div>
-			<div class="w3-row" style="padding-left:2%;">
-			   <span th:text="${StrategicMarketingPageTwo?.currentCompanySlogan}"></span>
+			<div class="w3-row" style="padding-top: 2%;">Current Company
+				Slogan</div>
+			<div class="w3-row" style="padding-left: 2%;">
+				<span th:text="${StrategicMarketingPageTwo?.currentCompanySlogan}"></span>
 			</div>
 
-			<div class="w3-row" style="padding-left:2%;">
-			  Does their current slogan project the same image? 
+			<div class="w3-row" style="padding-left: 2%;">
+				Does their current slogan project the same image? <span
+					th:text="${StrategicMarketingPageOne?.planToExpand} ? 'Yes' : 'No'">/span>
+				
 			</div>
-		
-		
-		
+
+
+<div class="w3-row" style="padding-top: 2%;">6. a. What are your poorest performing months?</div>
+			<div class="w3-row" style="padding-left: 2%;">
+				<span
+					th:text="${StrategicMarketingPageThree?.poorestJanuary} ? 'Jan' : ''">/span>
+					<span
+					th:text="${StrategicMarketingPageThree?.poorestFebruary} ? 'Jan' : ''">/span>
+			</div>
+
 		</div>
-		
+
 		<div class="w3-container d-print-none" style="padding-top: 2%;">
 			<button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
 			<a href="#MarketPlaceCompetitionPage" class="w3-btn w3-white">Next</a>
 			<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
 		</div>
 		<div class="w3-row">
-		      <div class="CopyRightId w3-col m8"></div>
-		      <div class=" w3-col m2"></div>
-		      <div align="right" class="w3-col m2">
-			-CONFIDENTIAL- 6      
-		      </div>	      
+			<div class="CopyRightId w3-col m8"></div>
+			<div class=" w3-col m2"></div>
+			<div align="right" class="w3-col m2">-CONFIDENTIAL- 6</div>
 		</div>
 
 

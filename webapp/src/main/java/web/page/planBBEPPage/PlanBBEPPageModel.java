@@ -5,18 +5,19 @@ public class PlanBBEPPageModel {
 	private String planBGrossMargin;
 	private String planBClosingPct;
 	private String planBProspectValue;
-	
+
 	private String planBInvestment;
 	private String planBProspectsNeeded;
 	private String planBProspectSalesNeeded;
-	
+
 	private String planBGrossProfitOnSales;
 	private String planBMonths;
 	private String planBAdditionalGrossSales;
-	
-	public PlanBBEPPageModel(String planBAverageSale, String planBGrossMargin, String planBClosingPct, String planBProspectValue,
-			String planBInvestment, String planBProspectsNeeded, String planBProspectSalesNeeded, String planBGrossProfitOnSales,
-			String planBMonths, String planBAdditionalGrossSales) {
+
+	public PlanBBEPPageModel(String planBAverageSale, String planBGrossMargin, String planBClosingPct,
+			String planBProspectValue, String planBInvestment, String planBProspectsNeeded,
+			String planBProspectSalesNeeded, String planBGrossProfitOnSales, String planBMonths,
+			String planBAdditionalGrossSales) {
 		super();
 		this.planBAverageSale = planBAverageSale;
 		this.planBGrossMargin = planBGrossMargin;
@@ -109,7 +110,5 @@ public class PlanBBEPPageModel {
 	public void setPlanBAdditionalGrossSales(String planBAdditionalGrossSales) {
 		this.planBAdditionalGrossSales = planBAdditionalGrossSales;
 	}
-	
-	
-	
+
 }

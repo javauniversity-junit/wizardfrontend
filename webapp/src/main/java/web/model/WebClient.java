@@ -17,19 +17,19 @@ import com.google.gson.Gson;
 @Table(name = "webclient")
 public class WebClient {
 	private static Logger mLog = Logger.getLogger("WebClient");
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    private Integer id;
-    
-    @NotNull
-    @Column(name="name")
-    private String name;
-    
-    @NotNull
-    @Column(name="executiondate")
-    private String executionDate;
-    
-    public String getExecutionDate() {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer id;
+
+	@NotNull
+	@Column(name = "name")
+	private String name;
+
+	@NotNull
+	@Column(name = "executiondate")
+	private String executionDate;
+
+	public String getExecutionDate() {
 		return executionDate;
 	}
 
@@ -38,10 +38,10 @@ public class WebClient {
 	}
 
 	@NotNull
-    @Column(name="description")
-    private String description;
-    
-   public String getDescription() {
+	@Column(name = "description")
+	private String description;
+
+	public String getDescription() {
 		return description;
 	}
 
@@ -49,13 +49,14 @@ public class WebClient {
 		this.description = description;
 	}
 
-@NotNull 
-    @Column(name="url")  
-    private String url;
-    @Column(name="request")
-    @Size(max = 1004)
-    private  String request;
-    public String getRequest() {
+	@NotNull
+	@Column(name = "url")
+	private String url;
+	@Column(name = "request")
+	@Size(max = 1004)
+	private String request;
+
+	public String getRequest() {
 		return request;
 	}
 
@@ -63,29 +64,29 @@ public class WebClient {
 		this.request = request;
 	}
 
-	@NotNull // JSR303 
-    @Column(name="author_id") 
-    private Integer authorId;
-     @NotNull // JSR303 
-     @Column(name="category_id")
-    private Integer categoryId;
-    @NotNull // JSR303 
-    @Column(name="header")
-    private transient String header;
+	@NotNull // JSR303
+	@Column(name = "author_id")
+	private Integer authorId;
+	@NotNull // JSR303
+	@Column(name = "category_id")
+	private Integer categoryId;
+	@NotNull // JSR303
+	@Column(name = "header")
+	private transient String header;
 
-
-    public String toString() {
+	public String toString() {
 		Gson gson = new Gson();
 		String json = null;
-		 // convert map to JSON String
-		//.json.gson.
+		// convert map to JSON String
+		// .json.gson.
 		json = gson.toJson(this);
-		
-		//remove \
-	String test  = json.replaceAll("\"", "'");
-	mLog.info(json);
+
+		// remove \
+		String test = json.replaceAll("\"", "'");
+		mLog.info(json);
 		return json;
 	}
+
 	public String getUrl() {
 		return url;
 	}
@@ -93,8 +94,6 @@ public class WebClient {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-
-	
 
 	public Integer getAuthorId() {
 		return authorId;
@@ -136,8 +135,4 @@ public class WebClient {
 		this.name = name;
 	}
 
-
-    
-    
 }
-

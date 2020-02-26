@@ -2,10 +2,6 @@ package web.page.clientobjectivesonepage;
 
 public class ClientObjectivesOnePageModel {
 
-
-	
-
-
 	public boolean isUtilizeCoopVendorDollars() {
 		return utilizeCoopVendorDollars;
 	}
@@ -18,12 +14,8 @@ public class ClientObjectivesOnePageModel {
 		return introduceNewDepartmentSortOrder;
 	}
 
-
-
-	public ClientObjectivesOnePageModel(boolean introduceNewDepartment
-			, boolean featureSpecificProducts,
-			boolean callAttentiontoBrandsPrivateLabelsCarried, 
-			boolean promoteOffPriceItemsServices,
+	public ClientObjectivesOnePageModel(boolean introduceNewDepartment, boolean featureSpecificProducts,
+			boolean callAttentiontoBrandsPrivateLabelsCarried, boolean promoteOffPriceItemsServices,
 			boolean utilizeCoopVendorDollars, boolean retainCurrentConsumers, boolean increaseCustomerVisits,
 			boolean increaseTrafficLeadCalls, boolean expandTargetConsumers, boolean changeConsumerAttitudes,
 			boolean makePromotionalEventsStronger, boolean increaseDigitalMobileOnlineResponse,
@@ -280,7 +272,7 @@ public class ClientObjectivesOnePageModel {
 	private boolean increaseMarketShare;
 
 	private boolean other;
-	
+
 	private int introduceNewDepartmentSortOrder;
 	private int featureSpecificProductsSortOrder;
 	private int callAttentiontoBrandsPrivateLabelsCarriedSortOrder;
@@ -308,11 +300,12 @@ public class ClientObjectivesOnePageModel {
 	private int otherSortOrder;
 	private String otherText;
 	private int utilizeCoopVendorDollarsSortOrder;
-	
-	public String getOtherText () {
+
+	public String getOtherText() {
 		return otherText;
 	}
-	public void setOtherText (String otherText) {
+
+	public void setOtherText(String otherText) {
 		this.otherText = otherText;
 	}
 

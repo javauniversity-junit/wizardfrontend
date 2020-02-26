@@ -32,7 +32,7 @@ public class ExtraPageControl {
 
 	private static final Logger mLog = Logger.getLogger(ExtraPageControl.class.getName());
 //MarketingStrategiesPage
-	
+
 	@RequestMapping(value = "/MarketingStrategiesPage", method = RequestMethod.GET)
 	public String detailMarketingStrategiesPage(Model model, @RequestParam String ID) {
 		mLog.info("starting detail");
@@ -53,7 +53,7 @@ public class ExtraPageControl {
 		model.addAttribute("wizard", wizard);
 		return "pages/ProfileOfConsumersPage";
 	}
-	
+
 	@RequestMapping(value = "/saveMarketingStrategiesPage", method = RequestMethod.POST)
 	public String saveMarketingStrategiesPage(@RequestParam String wizardId,
 			@RequestParam(defaultValue = "") String textareaId, @RequestParam String wizarddataid,
@@ -89,16 +89,15 @@ public class ExtraPageControl {
 		// model.addAttribute("wizard", wizard);
 		return internalNextPage;
 	}
-	
-	
+
 	@RequestMapping(value = "/DigitalMobileSocialStrategiesPage", method = RequestMethod.GET)
 	public String detailDigitalMobileSocialStrategiesPage(Model model, @RequestParam String ID) {
 		mLog.info("starting detail");
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
-		WizardData wizardData = wizardDataRepository
-				.findByPagesequenceAndWizardid(Pages.DigitalMobileSocialStrategiesPage.getPageSequence(), wizard.getWizardid());
+		WizardData wizardData = wizardDataRepository.findByPagesequenceAndWizardid(
+				Pages.DigitalMobileSocialStrategiesPage.getPageSequence(), wizard.getWizardid());
 		ExtraPageModel dataPageModel = null;
 		if (wizardData != null) {
 			dataPageModel = (ExtraPageModel) JSONManager.convertFromJson(wizardData.getPagedata(),
@@ -111,7 +110,7 @@ public class ExtraPageControl {
 		model.addAttribute("wizard", wizard);
 		return "pages/DigitalMobileSocialStrategiesPage";
 	}
-	
+
 	@RequestMapping(value = "/saveDigitalMobileSocialStrategiesPage", method = RequestMethod.POST)
 	public String saveDigitalMobileSocialStrategiesPage(@RequestParam String wizardId,
 			@RequestParam(defaultValue = "") String textareaId, @RequestParam String wizarddataid,
@@ -147,10 +146,7 @@ public class ExtraPageControl {
 		// model.addAttribute("wizard", wizard);
 		return internalNextPage;
 	}
-	
-	
-	
-	
+
 	@RequestMapping(value = "/ProfileOfConsumersPage", method = RequestMethod.GET)
 	public String detailProfileOfConsumersPage(Model model, @RequestParam String ID) {
 		mLog.info("starting detail");
@@ -171,7 +167,7 @@ public class ExtraPageControl {
 		model.addAttribute("wizard", wizard);
 		return "pages/ProfileOfConsumersPage";
 	}
-	
+
 	@RequestMapping(value = "/saveProfileOfConsumersPage", method = RequestMethod.POST)
 	public String saveProfileOfConsumersPage(@RequestParam String wizardId,
 			@RequestParam(defaultValue = "") String textareaId, @RequestParam String wizarddataid,
@@ -207,20 +203,12 @@ public class ExtraPageControl {
 		// model.addAttribute("wizard", wizard);
 		return internalNextPage;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	@RequestMapping(value = "/CreateConceptOnePage", method = RequestMethod.GET)
 	public String detailCreateConceptOnePage(Model model, @RequestParam String ID, Authentication authentication) {
 		mLog.info("starting detail");
 		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
-		
+
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
@@ -236,16 +224,16 @@ public class ExtraPageControl {
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("dataPageModel", dataPageModel);
 		model.addAttribute("wizard", wizard);
-		String nextPage = "pages/CreateConceptOnePage";//radio
+		String nextPage = "pages/CreateConceptOnePage";// radio
 		String clientType = userDetails.getContact().getClientType();
 		mLog.info("clientType [" + clientType + "]");
 		if (clientType.equals("TV")) {
-			nextPage = "pages/CreateConceptOneTVPage";//TV
+			nextPage = "pages/CreateConceptOneTVPage";// TV
 		}
 		mLog.info("nextPage [" + nextPage + "]");
 		return nextPage;
 	}
-	
+
 	@RequestMapping(value = "/saveCreateConceptOnePage", method = RequestMethod.POST)
 	public String saveCreateConceptOnePage(@RequestParam String wizardId,
 			@RequestParam(defaultValue = "") String textareaId, @RequestParam String wizarddataid,
@@ -283,10 +271,10 @@ public class ExtraPageControl {
 	}
 
 	@RequestMapping(value = "/CreateConceptTwoPage", method = RequestMethod.GET)
-	public String detailCreateConceptTwoPage(Model model, @RequestParam String ID,  Authentication authentication) {
+	public String detailCreateConceptTwoPage(Model model, @RequestParam String ID, Authentication authentication) {
 		mLog.info("starting detail");
 		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
-		
+
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
@@ -302,15 +290,15 @@ public class ExtraPageControl {
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("dataPageModel", dataPageModel);
 		model.addAttribute("wizard", wizard);
-		String nextPage = "pages/CreateConceptTwoPage";//radio
+		String nextPage = "pages/CreateConceptTwoPage";// radio
 		String clientType = userDetails.getContact().getClientType();
 		mLog.info("clientType [" + clientType + "]");
 		if (clientType.equals("TV")) {
-			nextPage = "pages/CreateConceptTwoTVPage";//TV
+			nextPage = "pages/CreateConceptTwoTVPage";// TV
 		}
 		return nextPage;
 	}
-	
+
 	@RequestMapping(value = "/saveCreateConceptTwoPage", method = RequestMethod.POST)
 	public String saveCreateConceptTwoPage(@RequestParam String wizardId,
 			@RequestParam(defaultValue = "") String textareaId, @RequestParam String wizarddataid,
@@ -347,21 +335,15 @@ public class ExtraPageControl {
 		return internalNextPage;
 	}
 
-	
-	
-	
-	
-	
-	
 	@RequestMapping(value = "/PlanAExcelPage", method = RequestMethod.GET)
 	public String detailPlanAExcelPage(Model model, @RequestParam String ID, Authentication authentication) {
 		mLog.info("starting PlanAExcelPage");
 		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
-		String nextPage = "pages/PlanAExcelPage";//radio
+		String nextPage = "pages/PlanAExcelPage";// radio
 		String clientType = userDetails.getContact().getClientType();
 		mLog.info("clientType [" + clientType + "]");
 		if (clientType.equals("TV")) {
-			nextPage = "pages/PlanAExcelTVPage";//TV
+			nextPage = "pages/PlanAExcelTVPage";// TV
 		}
 		mLog.info("nextPage [" + nextPage + "]");
 		// get wizard header
@@ -376,7 +358,7 @@ public class ExtraPageControl {
 			dataPageModel = (ExtraPageModel) JSONManager.convertFromJson(wizardData.getPagedata(),
 					ExtraPageModel.class);
 
-		} 
+		}
 		// DemographicManager.convertFromJson(json)
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("dataPageModel", dataPageModel);
@@ -388,11 +370,11 @@ public class ExtraPageControl {
 	public String detailPlanBExcelPage(Model model, @RequestParam String ID, Authentication authentication) {
 		mLog.info("starting detail");
 		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
-		String nextPage = "pages/PlanBExcelPage";//radio
+		String nextPage = "pages/PlanBExcelPage";// radio
 		String clientType = userDetails.getContact().getClientType();
 		mLog.info("clientType [" + clientType + "]");
 		if (clientType.equals("TV")) {
-			nextPage = "pages/PlanBExcelTVPage";//TV
+			nextPage = "pages/PlanBExcelTVPage";// TV
 		}
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));

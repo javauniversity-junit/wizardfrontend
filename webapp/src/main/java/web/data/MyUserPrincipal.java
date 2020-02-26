@@ -9,10 +9,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import web.model.Agent;
 import web.model.Contact;
 
-
-
 public class MyUserPrincipal implements UserDetails {
-	 public Agent getAgent() {
+	public Agent getAgent() {
 		return agent;
 	}
 
@@ -29,16 +27,17 @@ public class MyUserPrincipal implements UserDetails {
 	}
 
 	private Agent agent;
-	 private Contact contact;
-	    public MyUserPrincipal(Agent agent, Contact contact) {
-	        this.agent = agent;
-	        this.contact = contact;
-	    }
+	private Contact contact;
+
+	public MyUserPrincipal(Agent agent, Contact contact) {
+		this.agent = agent;
+		this.contact = contact;
+	}
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		return AuthorityUtils.createAuthorityList("ROLE_USER");
-		
+
 	}
 
 	@Override
