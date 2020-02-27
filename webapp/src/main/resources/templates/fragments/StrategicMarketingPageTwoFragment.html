@@ -31,15 +31,32 @@
 			<div class="w3-row" style="padding-left: 2%;">
 				Does their current slogan project the same image? <span
 					th:text="${StrategicMarketingPageOne?.planToExpand} ? 'Yes' : 'No'">/span>
+
+
+
 				
 			</div>
 
 
-<div class="w3-row" style="padding-top: 2%;">6. a. What are your poorest performing months?</div>
+			<div class="w3-row" style="padding-top: 2%;">
+				<div class="w3-col">6. a. What are your poorest performing
+					months?</div>
+				<div class="w3-col">7 a. What is the most frequent compliment
+					you get?</div>
+
+			</div>
+
+
+
+
+
 			<div class="w3-row" style="padding-left: 2%;">
-				<span
-					th:text="${PoorestMonths}">/span>
-					
+				<div class="w3-col">
+					<span th:text="${PoorestMonths}"></span>
+				</div>
+				<div class="w3-col">
+					<span th:text="${PoorestMonths}"></span>
+				</div>
 			</div>
 
 		</div>
