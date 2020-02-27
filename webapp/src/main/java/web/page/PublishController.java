@@ -416,8 +416,8 @@ public class PublishController {
 							.convertFromJson(data.getPagedata(), StrategicMarketingPageThreeModel.class);
 					model.addAttribute("StrategicMarketingPageThree", strategicMarketingPageThreeModel);
 					
-					String poorestMonths = StrategicMarketingHelper.poorestMonths(strategicMarketingPageThreeModel);
-					model.addAttribute("PoorestMonths", poorestMonths);
+					StrategicMarketingHelper strategicMarketingHelper = new StrategicMarketingHelper(strategicMarketingPageThreeModel);
+					model.addAttribute("StrategicMarketingHelper", strategicMarketingHelper);
 					publish.setStrategicMarketingPageThree(true);
 					mLog.info("found page StrategicMarketingPageThree");
 
