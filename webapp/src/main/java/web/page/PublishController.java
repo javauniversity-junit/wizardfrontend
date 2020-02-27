@@ -29,6 +29,7 @@ import web.model.WizardData;
 import web.page.presentedtopage.PresentedToPageController;
 import web.page.presentedtopage.PresentedToPageModel;
 import web.page.strategicmarketingpageone.StrategicMarketingPageOneModel;
+import web.page.strategicmarketingpagethree.StrategicMarketingHelper;
 import web.page.strategicmarketingpagethree.StrategicMarketingPageThreeModel;
 import web.page.strategicmarketingpagetwo.StrategicMarketingPageTwoModel;
 import web.page.targetmarketingpage.TargetMarketingHeaderRow;
@@ -415,8 +416,8 @@ public class PublishController {
 							.convertFromJson(data.getPagedata(), StrategicMarketingPageThreeModel.class);
 					model.addAttribute("StrategicMarketingPageThree", strategicMarketingPageThreeModel);
 					
-					
-					model.addAttribute("StrategicMarketingPageThreeMonths", builder.toString());
+					String poorestMonths = StrategicMarketingHelper.poorestMonths(strategicMarketingPageThreeModel);
+					model.addAttribute("PoorestMonths", poorestMonths);
 					publish.setStrategicMarketingPageThree(true);
 					mLog.info("found page StrategicMarketingPageThree");
 
