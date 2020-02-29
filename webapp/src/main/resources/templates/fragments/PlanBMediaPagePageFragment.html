@@ -13,7 +13,7 @@
 			<div id="columnchart_values" style="width: 100%; height: 100%;"></div>
 			
             <div class="box green col-p-2"> </div>
-            <div class="col-p-2"> Spiked Months</div>
+            <div class="col-p-2"> Spike Months</div>
             <div class="box red col-p-2"></div>
             <div class="col-p-2" >Slow Months</div>
             <div class="box blue col-p-2"></div>
@@ -84,6 +84,12 @@
             ["Nov", nov, novColor],
             ["Dec", dec, decColor]
         ]);
+        
+        //format data
+          var formatter = new google.visualization.NumberFormat(
+      		{negativeColor: 'red', negativeParens: true, pattern: '$###,###'});
+  			formatter.format(data, 1);    
+   
         var view = new google.visualization.DataView(data);
         view.setColumns([0, 1, {
                 calc: "stringify",
@@ -97,6 +103,7 @@
                 bar: {
                     groupWidth: "30"
                 },
+                vAxis: { format: 'currency'},
                 legend: {
                     position: "none"
                 },

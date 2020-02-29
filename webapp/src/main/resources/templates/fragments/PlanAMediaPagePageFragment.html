@@ -84,6 +84,10 @@
             ["Nov", nova, novColora],
             ["Dec", deca, decColora]
         ]);
+        //format data
+        var formatter = new google.visualization.NumberFormat(
+    		{negativeColor: 'red', negativeParens: true, pattern: '$###,###'});
+			formatter.format(dataA, 1);    
         var viewA = new google.visualization.DataView(dataA);
         viewA.setColumns([0, 1, {
                 calc: "stringify",
@@ -97,6 +101,7 @@
             bar: {
                 groupWidth: "30"
             },
+            vAxis: { format: 'currency'},
             legend: {
                 position: "none"
             },
