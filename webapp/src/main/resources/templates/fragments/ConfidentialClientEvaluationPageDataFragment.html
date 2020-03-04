@@ -9,8 +9,8 @@
 		</div>
 		<div class="whiteGrad">
 			<div class="inner">
-				<h2>Determination of Total Advertising Investment (TAI). This
-					is what the client should put back in their business for
+				<h2>I. Determination of Total Advertising Investment (TAI).
+					This is what the client should put back in their business for
 					re-investment</h2>
 
 
@@ -152,7 +152,7 @@
 								</div>
 							</div>
 							<div class="w3-row">
-								<div class="w3-col m6">Total</div>
+								<div class="w3-col m6">Total Adv. Investment</div>
 								<div class="w3-col m6">
 									<input type="text" class="underline" id="totalMediaInvestment"
 										th:value="${ConfidentialClientEvaluationPageDataModel?.totalMediaInvestment}"
@@ -316,7 +316,7 @@
 							</div>
 							<!-- end of row -->
 							<div class="w3-row">
-								<div class="w3-col m6">Total</div>
+								<div class="w3-col m6">Total Adv. Investment</div>
 								<div class="w3-col m6">
 									<input id="totalMediaInvestmentTwo" class="underline"
 										th:value="${ConfidentialClientEvaluationPageDataModel?.totalMediaInvestmentTwo}"
@@ -328,107 +328,71 @@
 						</div>
 					</div>
 
-					<div style="padding-top: 25px;">
-						<div class="w3-row">
-							<!-- B -->
-							<div class="w3-col s3">
-								<u> <span
-										th:text="${'    ' + ConfidentialClientEvaluationPageDataModel?.totalMediaInvestment + '    '}"></span>
-								</u>
 
-							</div>
+					<!-- first row -->
+					<div class="w3-row" style="padding-top: 4%;"></div>
+					<div class="w3-row" style="padding-top: 4%;">
+						<div class="w3-col m1 w3-center">B.</div>
+						<div class="w3-col m3 w3-center underline"
+							th:text="${ConfidentialClientEvaluationPageDataModel?.totalMediaInvestment}">>
 
-							<div class="w3-col s1" style="padding-top: 25px;">
-								<span> / </span>
-							</div>
 
-							<div class="w3-col s3">
-
-								<u> <span
-										th:text="${'    ' + ConfidentialClientEvaluationPageDataModel?.pctTAIGrossSalesLastYear + '%    '}"></span>
-								</u>
-
-							</div>
-							<div class="w3-col s1" style="padding-top: 25px;">
-								<span> = </span>
-							</div>
-
-							<div class="w3-col s3">
-
-								<u> <span
-										th:text="${'    ' + ConfidentialClientEvaluationPageDataModel?.grossSalesLastyear + '%    '}"></span>
-								</u>
-
-							</div>
+						</div>
+						<div class="w3-col m1 w3-center ">/</div>
+						<div class="w3-col m3 w3-center underline"
+							th:text="${ConfidentialClientEvaluationPageDataModel?.pctTAIGrossSalesLastYear + '%'}">
 						</div>
 
-						<div class="w3-row">
-							<!-- B -->
-							<div class="w3-col s3">
-								<span>Total Adv Investment </span>
-							</div>
-							<div class="w3-col s1">&nbsp;</div>
-							<div class="w3-col s3">Next 12 Months</div>
-							<div class="w3-col s1">&nbsp;</div>
-							<div class="w3-col s3">
-								<span>Estimated Gross Sales Next 12 Months </span>
-							</div>
-						</div>
 
+
+						<div class="w3-col m1 w3-center">=</div>
+						<div class="w3-col m3 w3-center underline"
+							th:text="${ConfidentialClientEvaluationPageDataModel?.grossSalesLastyear + '%'}">
+
+						</div>
 
 					</div>
 
-
-					<div style="padding-top: 25px;">
-						<div class="w3-row">
-							<!-- B -->
-							<div class="w3-col s3">
-								<u> <span
-										th:text="${'    ' + ConfidentialClientEvaluationPageDataModel?.taiNext12Months + '    '}"></span>
-								</u>
-
-							</div>
-
-							<div class="w3-col s1" style="padding-top: 25px;">
-								<span> / </span>
-							</div>
-
-							<div class="w3-col s3">
-
-								<u> <span
-										th:text="${'    ' + ConfidentialClientEvaluationPageDataModel?.pctGrossSales + '%    '}"></span>
-								</u>
-
-							</div>
-							<div class="w3-col s1" style="padding-top: 25px;">
-								<span> = </span>
-							</div>
-
-							<div class="w3-col s3">
-
-								<u> <span
-										th:text="${'    ' + ConfidentialClientEvaluationPageDataModel?.estimatedGrossSalesNext12Months + '%    '}"></span>
-								</u>
-
-							</div>
-						</div>
-
-						<div class="w3-row">
-							<!-- B -->
-							<div class="w3-col s3">
-								<span>Sretch Goals </span>
-							</div>
-							<div class="w3-col s1">&nbsp;</div>
-							<div class="w3-col s3">Next 12 Months</div>
-							<div class="w3-col s1">&nbsp;</div>
-							<div class="w3-col s3">
-								<span>Sretch Gross Sales Next 12 Months </span>
-							</div>
-						</div>
-
+					<!-- second row -->
+					<div class="w3-row">
+						<div class="w3-col m1 w3-center">&nbsp;</div>
+						<div class="w3-col m3 w3-center">Total Adv Investment Next
+							12 Months</div>
+						<div class="w3-col m1 w3-center ">&nbsp;</div>
+						<div class="w3-col m3 w3-center">Adv % of Gross Sales</div>
+						<div class="w3-col m1 w3-center">&nbsp;</div>
+						<div class="w3-col m3 w3-center">Estimated Gross Sales next
+							12 mos.</div>
 
 					</div>
 
+					<!-- third row -->
+
+					<div class="w3-row" style="padding-top: 1%";>
+						<div class="w3-col m1 w3-center">C.</div>
+						<div class="w3-col m3 w3-center underline"
+							th:text="${ConfidentialClientEvaluationPageDataModel?.taiNext12Months}">$100,000</div>
+						<div class="w3-col m1 w3-center ">/</div>
+						<div class="w3-col m3 w3-center underline"
+							th:text="${ ConfidentialClientEvaluationPageDataModel?.pctGrossSales + '%'}"></div>
+						<div class="w3-col m1 w3-center">=</div>
+						<div class="w3-col m3 w3-center underline"
+							th:text="${ConfidentialClientEvaluationPageDataModel?.estimatedGrossSalesNext12Months }"></div>
+
+					</div>
+
+					<!-- fifth row -->
+					<div class="w3-row">
+						<div class="w3-col m1 w3-center">&nbsp;</div>
+						<div class="w3-col m3 w3-center">Stretch Goal Total Adv
+							Investment</div>
+						<div class="w3-col m1 w3-center ">&nbsp;</div>
+						<div class="w3-col m3 w3-center">Adv % of Gross Sales</div>
+						<div class="w3-col m1 w3-center">&nbsp;</div>
+						<div class="w3-col m3 w3-center">Stretch Gross Sales Goals
+							Next 12 Months</div>
+
+					</div>
 
 
 				</div>
@@ -440,7 +404,8 @@
 
 			</div>
 
-		</div><!-- end of white content -->
+		</div>
+		<!-- end of white content -->
 
 
 
@@ -480,8 +445,12 @@
 			<a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
 			<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
 		</div>
-		<div class="CopyRightId"></div>
 
+		<div class="w3-row">
+			<div class="CopyRightId w3-col m8"></div>
+			<div class=" w3-col m2"></div>
+			<div align="right" class="w3-col m2">-CONFIDENTIAL- 7</div>
+		</div>
 
 
 		<script src="js/ConfidentialClientEvaluationOnePage.js"></script>
