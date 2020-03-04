@@ -81,7 +81,10 @@ hr.dark {
 
 .bold-text {
   font-weight: bold;
-  color: black;
+}
+
+.highlight {
+  font-weight: bold;
   background-color: #FFFF00;
 }
 
