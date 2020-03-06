@@ -369,7 +369,11 @@
 		<script th:each="selectedModel : ${ClientObjectivesPageModel}" th:inline="javascript">
 		/*<![CDATA[*/
 		var label = /*[[${selectedModel?.label}]]*/'default';
-		addSelection(label);
+		var key = /*[[${selectedModel?.key}]]*/'key';	
+		if (key == "other") {
+			label = 'otherLabel';
+		}
+			addSelection(label);
 		/*]]>*/
        </script>
 
