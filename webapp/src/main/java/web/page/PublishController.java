@@ -91,6 +91,7 @@ public class PublishController {
 					List<ClientObjectivesOnePageTwoModel> orderList = ClientObjectivesPageHelper.getList(true,
 							clientObjectivesOnePageModel);
 					model.addAttribute("ClientObjectivesPageModel", orderList);
+					model.addAttribute("ClientObjectivesPage",clientObjectivesOnePageModel );
 					publish.setClientObjectivesPage(true);
 					mLog.info("found page ClientObjectivesOnePageTwoModel");
 					break;
