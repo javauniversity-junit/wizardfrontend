@@ -310,9 +310,29 @@
 					<div class="grid-item">
 
 						<div>
-							<label> <span id="otherLabel"> <script>
-									addLabel("otherLabel");
-									</script>
+							<label> <span id="otherLabel"> 
+								
+								
+								<!-- set other text -->
+		<script th:inline="javascript">
+		/*<![CDATA[*/
+			
+			console.group("other text");
+
+
+
+                      var label = /*[[${ClientObjectivesPageModel.otherText} ? ${ClientObjectivesPageModel.otherText} : 'null'  ]]*/'default';
+		      console.log("label " + label);
+		      if (label!= "null") {
+		         addOtherText(label);
+		      }
+			console.groupEnd();
+			
+		/*]]>*/
+                </script>
+								
+								
+								
 
 							</span>
 							</label>
