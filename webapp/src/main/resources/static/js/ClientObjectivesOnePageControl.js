@@ -34,7 +34,7 @@ function addSelection(id) {
 	 if(myElement){
 		 console.log("id does exists " + id);
 
-		 myElement.className = 'bold-text';
+		 myElement.className = 'highlight';
 	 } else {
 		 console.log("id does NOT exists " + id);
 	  }
