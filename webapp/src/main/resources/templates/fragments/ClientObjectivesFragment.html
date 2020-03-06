@@ -319,7 +319,11 @@
 			
 			console.group("other text");
 
-                        var user = /*[[${ClientObjectivesPage?.otherText}]]*/ 'User Name';
+                        var label = /*[[${ClientObjectivesPage?.otherText}]]*/ 'label';
+			if (label != "") {
+			   addOtherText(label);
+			}
+			
 			console.groupEnd();
 			
 		/*]]>*/
