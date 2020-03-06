@@ -98,6 +98,9 @@ function addLabel(key) {
 	
 }
 
+function addOtherText(otherTextLabel) {
+	document.getElementById("otherLabel").innerHTML = otherTextLabel;
+}
 
 function getLabelText(key) {
 	if (map.has(key)) {
