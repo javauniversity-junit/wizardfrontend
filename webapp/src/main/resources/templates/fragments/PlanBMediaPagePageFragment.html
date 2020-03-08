@@ -99,15 +99,21 @@
             },
             2
         ]);
-        var options = {
-                bar: {
-                    groupWidth: "30"
-                },
-                vAxis: { format: 'currency'},
-                legend: {
-                    position: "none"
-                },
-            };
+       var options = {
+            bar: {
+                groupWidth: "90%"
+            },
+	    chartArea: {
+            	left: "3%",
+            	top: "3%",
+            	height: "94%",
+            	width: "94%"
+            },
+            vAxis: { format: 'currency'},
+            legend: {
+                position: "none"
+            },
+        };
         var chartB = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
         chartB.draw(view, options);
         		
