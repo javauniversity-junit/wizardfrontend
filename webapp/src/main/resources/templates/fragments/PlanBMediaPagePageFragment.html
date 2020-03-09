@@ -25,7 +25,13 @@
             <a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
             <button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
         </div>
-        <div class="CopyRightId"></div>
+        <div class="w3-row">
+		      <div class="CopyRightId w3-col m8"></div>
+		      <div class=" w3-col m2"></div>
+		      <div align="right" class="w3-col m2">
+			-CONFIDENTIAL- 23     
+		      </div>	      
+		</div>
     </div>
     <!-- end of if statement -->
     
@@ -68,7 +74,7 @@
     function drawChartPlanBMediaPage() {
     	console.group("drawChartPlanBMediaPage");
         var data = google.visualization.arrayToDataTable([
-            ["Element", "Density", {
+            ["Element", "Month", {
                 role: "style"
             }],
            ["Jan", jan, janColor],
@@ -99,21 +105,17 @@
             },
             2
         ]);
-       var options = {
-            bar: {
-                groupWidth: "90%"
-            },
-	    chartArea: {
-            	left: "3%",
-            	top: "3%",
-            	height: "94%",
-            	width: "94%"
-            },
-            vAxis: { format: 'currency'},
-            legend: {
-                position: "none"
-            },
-        };
+        var options = {
+        		width: '50%',
+        		height: 600,
+                        bar: {
+                            groupWidth: "95%"
+                        },
+                        vAxis: { format: 'currency'},
+                        legend: {
+                            position: "none"
+                        },
+                    };
         var chartB = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
         chartB.draw(view, options);
         		
