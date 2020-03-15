@@ -127,6 +127,12 @@
         <div th:if="${PublishModel.planAMediaPage}">
             <div th:replace="fragments/PlanAMediaPagePageFragment :: PlanAMediaPage"></div>
         </div>
+        
+             <!-- replace PlanAExcelPage Slide 18 begin -->
+        <div th:if="${PublishModel.planAExcelPage}">
+            <div th:replace="fragments/PlanAExcelPageFragment :: PlanAExcelPage"></div>
+        </div>
+        
 
         <!-- replace PlanBMediaPage begin -->
         <div th:if="${PublishModel.planBMediaPage}">
@@ -166,11 +172,7 @@
 	  
         
         
-        <!-- replace PlanAExcelPage begin -->
-        <div th:if="${PublishModel.planAExcelPage}">
-            <div th:replace="fragments/PlanAExcelPageFragment :: PlanAExcelPage"></div>
-        </div>
-        
+   
 
   <!-- replace PlanBExcelPage begin -->
         <div th:if="${PublishModel.planBExcelPage}">

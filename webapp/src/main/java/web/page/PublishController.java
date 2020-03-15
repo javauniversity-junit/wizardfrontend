@@ -246,6 +246,10 @@ public class PublishController {
 
 					planAExcelPageModel = (ExtraPageModel) JSONManager.convertFromJson(data.getPagedata(),
 							ExtraPageModel.class);
+					String textArea = planAExcelPageModel.getTextArea();
+					textArea = textArea.replaceAll("\\r\\n", "");
+					mLog.info("text  planAExcelPageModel [" + textArea + "]");
+					planAExcelPageModel.setTextArea(textArea);
 					model.addAttribute("PlanAExcelPageModel", planAExcelPageModel);
 					publish.setPlanAExcelPage(true);
 					mLog.info("found page planAExcelPageModel");
