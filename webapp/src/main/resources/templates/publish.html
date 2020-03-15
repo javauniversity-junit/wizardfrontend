@@ -108,6 +108,11 @@
         <div th:if="${PublishModel.createConceptTwoPage}">
             <div th:replace="fragments/CreateConceptTwoFragment :: CreateConceptTwo"></div>
         </div>
+        
+    <!-- replace DigitalMobileSocialStrategies slide 14 begin -->
+        <div th:if="${PublishModel.digitalMobileSocialStrategiesPage}">
+            <div th:replace="fragments/DigitalMobileSocialStrategiesPageFragment :: DigitalMobileSocialStrategies"></div>
+        </div>     
 
    <!-- replace LongRangeStrategicPlansPage begin -->
         <div th:replace="fragments/LongRangeStrategicPlansFragment :: LongRangeStrategicPlansPage"></div>
