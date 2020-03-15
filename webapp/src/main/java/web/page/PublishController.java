@@ -151,6 +151,20 @@ public class PublishController {
 					mLog.severe("error " + ex.getMessage());
 					break;
 				}
+			case CreateConceptTwoPage:
+				try {
+					ExtraPageModel createConceptTwoPageModel = null;
+
+					createConceptTwoPageModel = (ExtraPageModel) JSONManager.convertFromJson(data.getPagedata(),
+							ExtraPageModel.class);
+					model.addAttribute("CreateConceptTwoPageModel", createConceptTwoPageModel);
+					publish.setCreateConceptTwoPage(true);
+					mLog.info("found page createConceptTwoPageModel");
+					break;
+				} catch (Exception ex) {
+					mLog.severe("error " + ex.getMessage());
+					break;
+				}
 			case DigitalMobileSocialStrategiesPage:
 				try {
 					ExtraPageModel digitalMobileSocialStrategiesPageModel = null;
