@@ -93,7 +93,10 @@
             <div th:replace="fragments/ProfileOfConsumersPageFragment :: ProfileOfConsumersPage"></div>
         </div>    
 	    
-
+   <!-- replace MarketingStrategiesPage slide 11 begin -->
+        <div th:if="${PublishModel.marketingStrategiesPage}">
+            <div th:replace="fragments/MarketingStrategiesPageFragment :: MarketingStrategiesPage"></div>
+        </div>  
 
    <!-- replace LongRangeStrategicPlansPage begin -->
         <div th:replace="fragments/LongRangeStrategicPlansFragment :: LongRangeStrategicPlansPage"></div>
@@ -144,9 +147,7 @@
         </div>
 	    
 	
-	    
-        <!-- replace MarketingStrategiesPage begin -->
-        <div th:replace="fragments/MarketingStrategiesFragment :: MarketingStrategiesPage"></div>
+	  
         
         
         <!-- replace PlanAExcelPage begin -->
@@ -159,10 +160,7 @@
         <div th:if="${PublishModel.planBExcelPage}">
             <div th:replace="fragments/PlanBExcelPageFragment :: PlanBExcelPage"></div>
         </div>
-       <!-- replace marketingStrategiesPage begin -->
-        <div th:if="${PublishModel.marketingStrategiesPage}">
-            <div th:replace="fragments/MarketingStrategiesPageFragment :: MarketingStrategiesPage"></div>
-        </div>   
+     
   
         
  <!-- replace CreateConceptOnePageModel begin -->
