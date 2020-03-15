@@ -98,6 +98,17 @@
             <div th:replace="fragments/MarketingStrategiesFragment :: MarketingStrategiesPage"></div>
         </div>  
 
+
+
+ <!-- replace CreateConceptOnePageModel slide 12 begin -->
+        <div th:if="${PublishModel.createConceptOnePage}">
+            <div th:replace="fragments/CreateConceptOneFragment :: CreateConceptOne"></div>
+        </div>
+ <!-- replace CreateConceptTwoPageModel slide 13 begin -->
+        <div th:if="${PublishModel.createConceptTwoPage}">
+            <div th:replace="fragments/CreateConceptTwoFragment :: CreateConceptTwo"></div>
+        </div>
+
    <!-- replace LongRangeStrategicPlansPage begin -->
         <div th:replace="fragments/LongRangeStrategicPlansFragment :: LongRangeStrategicPlansPage"></div>
    
@@ -163,14 +174,7 @@
      
   
         
- <!-- replace CreateConceptOnePageModel begin -->
-        <div th:if="${PublishModel.createConceptOnePage}">
-            <div th:replace="fragments/CreateConceptOneFragment :: CreateConceptOne"></div>
-        </div>
- <!-- replace CreateConceptTwoPageModel begin -->
-        <div th:if="${PublishModel.createConceptTwoPage}">
-            <div th:replace="fragments/CreateConceptTwoFragment :: CreateConceptTwo"></div>
-        </div>
+
         
         
    <!-- replace PlanAMediaPageFlightDatesFragment begin -->
