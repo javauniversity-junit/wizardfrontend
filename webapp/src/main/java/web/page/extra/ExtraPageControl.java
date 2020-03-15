@@ -51,7 +51,7 @@ public class ExtraPageControl {
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("dataPageModel", dataPageModel);
 		model.addAttribute("wizard", wizard);
-		return "pages/ProfileOfConsumersPage";
+		return "pages/MarketingStrategiesPage";
 	}
 
 	@RequestMapping(value = "/saveMarketingStrategiesPage", method = RequestMethod.POST)
