@@ -429,6 +429,8 @@ public class PublishController {
 					break;
 				}
 			case StrategicMarketingPageTwo:
+				mLog.info("start StrategicMarketingPageTwo");
+
 				try {
 					StrategicMarketingPageTwoModel strategicMarketingPageTwoModel = null;
 
