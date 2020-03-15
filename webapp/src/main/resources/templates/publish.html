@@ -88,6 +88,13 @@
         </div>
 
 
+ <!-- replace ProfileOfConsumersPageModel slide 10 begin -->
+        <div th:if="${PublishModel.profileOfConsumersPage}">
+            <div th:replace="fragments/ProfileOfConsumersPageFragment :: ProfileOfConsumersPage"></div>
+        </div>    
+	    
+
+
    <!-- replace LongRangeStrategicPlansPage begin -->
         <div th:replace="fragments/LongRangeStrategicPlansFragment :: LongRangeStrategicPlansPage"></div>
    
@@ -136,11 +143,7 @@
             <div th:replace="fragments/PlanALifetimeValuedPageFragment :: PlanALifetimeValuedPage"></div>
         </div>
 	    
-	 <!-- replace ProfileOfConsumersPageModel begin -->
-        <div th:if="${PublishModel.profileOfConsumersPage}">
-            <div th:replace="fragments/ProfileOfConsumersPageFragment :: ProfileOfConsumersPage"></div>
-        </div>    
-	    
+	
 	    
         <!-- replace MarketingStrategiesPage begin -->
         <div th:replace="fragments/MarketingStrategiesFragment :: MarketingStrategiesPage"></div>
