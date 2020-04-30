@@ -18,19 +18,19 @@
 			</div>
 
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m8 w3-center">A. Average sale (ticket,
+				<div class="w3-col m7 w3-center">A. Average sale (ticket,
 					transaction, invoice)</div>
 				<div class="w3-col m1 w3-center ">=</div>
-				<div class="w3-col m3 w3-center underline"
+				<div class="w3-col m2 w3-center underline"
 					th:text="${PlanALifetimeValuedPageModel?.averageSale}">$100,000</div>
 			</div>
 
 
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m8 w3-center">B. Times gross profit margin
+				<div class="w3-col m7 w3-center">B. Times gross profit margin
 					on average sale (sale less cost of goods sold)</div>
 				<div class="w3-col m1 w3-center ">=</div>
-				<div class="w3-col m3 w3-center underline"
+				<div class="w3-col m2 w3-center underline"
 					th:text="${PlanALifetimeValuedPageModel?.grossProfitMargin}">$100,000</div>
 				<div class="input-group-append">
 					<span class="input-group-text">%</span>
@@ -39,62 +39,62 @@
 
 
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m8 w3-center">C. Equals gross profit per
+				<div class="w3-col m7 w3-center">C. Equals gross profit per
 					average sale (A*B)</div>
 				<div class="w3-col m1 w3-center ">=</div>
-				<div class="w3-col m3 w3-center underline"
+				<div class="w3-col m2 w3-center underline"
 					th:text="${PlanALifetimeValuedPageModel?.grossProfitPerSale}">$100,000</div>
 			</div>
 
 
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m8 w3-center">D. Times the average repeat
+				<div class="w3-col m7 w3-center">D. Times the average repeat
 					sales per year (per customer/client)</div>
 				<div class="w3-col m1 w3-center ">=</div>
-				<div class="w3-col m3 w3-center underline"
+				<div class="w3-col m2 w3-center underline"
 					th:text="${PlanALifetimeValuedPageModel?.averageRepeatSales}">$100,000</div>
 			</div>
 
 
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m8 w3-center">E. Equals the average
+				<div class="w3-col m7 w3-center">E. Equals the average
 					customer/client value per year (C*D)</div>
 				<div class="w3-col m1 w3-center ">=</div>
-				<div class="w3-col m3 w3-center underline"
+				<div class="w3-col m2 w3-center underline"
 					th:text="${PlanALifetimeValuedPageModel?.averageCustomerValue}">$100,000</div>
 			</div>
 
 
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m8 w3-center">F. Times the average number
+				<div class="w3-col m7 w3-center">F. Times the average number
 					of years of patronage</div>
 				<div class="w3-col m1 w3-center ">=</div>
-				<div class="w3-col m3 w3-center underline"
+				<div class="w3-col m2 w3-center underline"
 					th:text="${PlanALifetimeValuedPageModel?.yearsOfPatronage}">$100,000</div>
 			</div>
 
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m8 w3-center">G. Equals the lifetime value
+				<div class="w3-col m7 w3-center">G. Equals the lifetime value
 					of one customer/client (E*F)</div>
 				<div class="w3-col m1 w3-center ">=</div>
-				<div class="w3-col m3 w3-center underline"
+				<div class="w3-col m2 w3-center underline"
 					th:text="${PlanALifetimeValuedPageModel?.lifetimeValuePerCustomer}">$100,000</div>
 			</div>
 
 
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m8 w3-center">H. So if your base monthly
+				<div class="w3-col m7 w3-center">H. So if your base monthly
 					advertising investment averages</div>
 				<div class="w3-col m1 w3-center ">=</div>
-				<div class="w3-col m3 w3-center underline"
-					th:text="${PlanALifetimeValuedPageModelOther?.planAMonthly}">$100,000</div>
+				
+				<div class="w3-col m2 w3-center underline" th:text="${PlanALifetimeValuedPageModelOther?.planAMonthly ne null} ? ${PlanALifetimeValuedPageModelOther?.planAMonthly} : '0'">$100,000</div>
 			</div>
 
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m8 w3-center">I. Then monthly
+				<div class="w3-col m7 w3-center">I. Then monthly
 					customers/clients needed to break even (H/G)</div>
 				<div class="w3-col m1 w3-center ">=</div>
-				<div class="w3-col m3 w3-center underline"
+				<div class="w3-col m2 w3-center underline"
 					th:text="${PlanALifetimeValuedPageModel?.prospectsNeededToBreakEven}">$100,000</div>
 			</div>
 
