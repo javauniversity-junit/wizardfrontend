@@ -134,6 +134,12 @@
         </div>
         
 
+   <!-- replace PlanALifetimeValuedPageFragment slide 21 begin -->
+        <div th:if="${PublishModel.planALifetimeValuedPage}">
+            <div th:replace="fragments/PlanALifetimeValuedPageFragment :: PlanALifetimeValuedPage"></div>
+        </div>
+
+
         <!-- replace PlanBMediaPage begin -->
         <div th:if="${PublishModel.planBMediaPage}">
             <div th:replace="fragments/PlanBMediaPagePageFragment :: PlanBMediaPage"></div>
@@ -163,10 +169,7 @@
         </div>
         
         
-         <!-- replace PlanALifetimeValuedPageFragment begin -->
-        <div th:if="${PublishModel.planALifetimeValuedPage}">
-            <div th:replace="fragments/PlanALifetimeValuedPageFragment :: PlanALifetimeValuedPage"></div>
-        </div>
+      
 	    
 	
 	  
