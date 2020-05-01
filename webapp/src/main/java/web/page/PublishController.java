@@ -22,6 +22,7 @@ import web.page.planalifetimevaluedpage.PlanALifetimeValuedPageModel;
 import web.page.planamedipage.MediaChart;
 import web.page.planamedipage.MediaChartHelper;
 import web.page.planamedipage.PlanMediaPageModel;
+import web.page.planbLifetimevaluedpage.PlanBLifetimeValuedPageModel;
 import web.page.planproposedpage.PlanProposedPageModel;
 import web.page.confidentialclientevaluationnonepage.ConfidentialClientEvaluationOnePageModel;
 import web.page.extra.ExtraPageModel;
@@ -301,7 +302,21 @@ public class PublishController {
 					break;
 				}
 				//
+			case PlanBLifetimeValuedPage:
+				try {
+					PlanBLifetimeValuedPageModel planBLifetimeValuedPageModel = null;
 
+					planBLifetimeValuedPageModel = (PlanBLifetimeValuedPageModel) JSONManager
+							.convertFromJson(data.getPagedata(), PlanBLifetimeValuedPageModel.class);
+					model.addAttribute("PlanBLifetimeValuedPageModel", planBLifetimeValuedPageModel);
+					publish.setPlanBLifetimeValuedPage(true);
+					mLog.info("found page PlanBLifetimeValuedPage");
+					break;
+				} catch (Exception ex) {
+					mLog.severe("error " + ex.getMessage());
+					break;
+				}
+				//
 			case PlanBExcelPage:
 				try {
 					ExtraPageModel planBExcelPagePageModel = null;

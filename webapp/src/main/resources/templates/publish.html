@@ -169,7 +169,10 @@
         </div>
         
         
-      
+         <!-- replace PlanBLifetimeValuedPageFragment slide 27 begin -->
+        <div th:if="${PublishModel.planBLifetimeValuedPage}">
+            <div th:replace="fragments/PlanBLifetimeValuedPageFragment :: PlanBLifetimeValuedPage"></div>
+        </div>
 	    
 	
 	  
