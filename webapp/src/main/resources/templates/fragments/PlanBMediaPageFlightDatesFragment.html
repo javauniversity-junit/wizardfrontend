@@ -3,7 +3,8 @@
 	<div th:if="${PublishModel.planBMediaPage}">
 
 		<input type="hidden" id="mediarowsB"
-			th:value="${PlanBMediaPagedataPageModel?.mediaRows}" name="mediarowsB" />
+			th:value="${PlanBMediaPagedataPageModel?.mediaRows}"
+			name="mediarowsB" />
 
 		<div>
 			<a id="PlanAMediaPageFlightDates"></a>
@@ -21,32 +22,29 @@
 
 					WWWW</h2>
 			</div>
-            
+
 
 
 			<!-- if="${PublishModel.clientObjectivesPage} -->
 			<div th:if="${PublishModel.clientObjectivesPage}">
 
 				<ol class="center-ol">
-		<li style="color: red;" th:each="selectedModel : ${ClientObjectivesPageModel}" 
-	            th:if="${selectedModel.sortOrder} != 0">
-				
-			
-			<span style='color:black;' 
-						th:id="${selectedModel?.label} + '-b' "> 
-						
-						
-						<script th:inline="javascript">
-					          /*<![CDATA[*/
-						var message = /*[[${selectedModel?.label}]]*/'default';
-					          message = message + "-b";
-						//message = "'" + message + "'";
-						addLabel(message);
-						/*]]>*/
-						</script>
-						
-						</span>
-				  </li>
+					<li style="color: red;"
+						th:each="selectedModel : ${ClientObjectivesPageModel}"
+						th:if="${selectedModel.sortOrder} != 0"><span
+						style='color: black;' th:id="${selectedModel?.label} + '-b' ">
+
+
+							<script th:inline="javascript">
+								/*<![CDATA[*/
+								var message = /*[[${selectedModel?.label}]]*/'default';
+								message = message + "-b";
+								//message = "'" + message + "'";
+								addLabel(message);
+								/*]]>*/
+							</script>
+
+					</span></li>
 
 
 
@@ -59,25 +57,25 @@
 
 			<p>In return for fulfilling stated goals Premium Auto Centers
 				agrees to invest in the following long-term plan</p>
-			
+
 			<div id="spreadSheetB">
 				<table class="table table-striped" id="headerTable">
 					<thead>
 						<tr>
-							<th style="background-color: green;color: white;">Media</th>
-							<th style="background-color: green;color: white;">Jan</th>
-							<th style="background-color: green;color: white;">Feb</th>
-							<th style="background-color: green;color: white;">Mar</th>
-							<th style="background-color: green;color: white;">Apr</th>
-							<th style="background-color: green;color: white;">May</th>
-							<th style="background-color: green;color: white;">Jun</th>
-							<th style="background-color: green;color: white;">Jul</th>
-							<th style="background-color: green;color: white;">Aug</th>
-							<th style="background-color: green;color: white;">Sep</th>
-							<th style="background-color: green;color: white;">Oct</th>
-							<th style="background-color: green;color: white;">Nov</th>
-							<th style="background-color: green;color: white;">Dec</th>
-							<th style="background-color: green;color: white;">Total</th>
+							<th style="background-color: green; color: white;">Media</th>
+							<th style="background-color: green; color: white;">Jan</th>
+							<th style="background-color: green; color: white;">Feb</th>
+							<th style="background-color: green; color: white;">Mar</th>
+							<th style="background-color: green; color: white;">Apr</th>
+							<th style="background-color: green; color: white;">May</th>
+							<th style="background-color: green; color: white;">Jun</th>
+							<th style="background-color: green; color: white;">Jul</th>
+							<th style="background-color: green; color: white;">Aug</th>
+							<th style="background-color: green; color: white;">Sep</th>
+							<th style="background-color: green; color: white;">Oct</th>
+							<th style="background-color: green; color: white;">Nov</th>
+							<th style="background-color: green; color: white;">Dec</th>
+							<th style="background-color: green; color: white;">Total</th>
 						</tr>
 					</thead>
 					<tbody id="tbodyB">
@@ -111,7 +109,7 @@
 
 			<template id="footerrowB">
 			<tr>
-				<td> Monthly Totals</td>
+				<td>Monthly Totals</td>
 				<td>1</td>
 				<td>2</td>
 				<td>3</td>
@@ -131,85 +129,86 @@
 
 
 			<div>
-				
-		<script src="js/medialSpreadSheet.js">
-			
-		</script>
-		<script>
-			console.group("medialSpreadSheetB");
+
+				<script src="js/medialSpreadSheet.js">
+					
+				</script>
+				<script>
+					console.group("medialSpreadSheetB");
+
+					const mediaRowsB = document.getElementById("mediarowsB").value;
+					console.log("mediaRowsB [" + mediaRowsB + "]");
+					if (mediaRowsB.length > 4) {
+						objs = JSON.parse(mediaRowsB);
+					}
+					buildSpreadSheetB();
+
+					console.groupEnd();
+				</script>
+
+
+			</div>
+
+			<div>
+				<p>Client may cancel after 13 weeks from schedule start date
+					with two weeks’ notice and no short rate. This offer is good for 10
+					business days from the date of presentation. In accordance with
+					Paragraphs 49 and 50 of United States Federal Communications
+					Commission Report and Order No. FCC 07-217, this station will not
+					discriminate in any contract for advertising on the basis of race
+					or ethnicity, and all such contracts will be evaluated, accepted,
+					negotiated and completed without regard to race or ethnicity</p>
+
+				<h2>Analysis of Schedule:</h2>
+
+				<p>
+					AVERAGE MONTHLY CLIENT INVESTMENT <span id="monthlyAverageIdB"></span>
+					.
+				</p>
+				<p>
+					AVERAGE DAILY CLIENT INVESTMENT <span id="dailyCostIdB"></span>
+
+				</p>
+				<p>Thank you for your trust and confidence</p>
+
+
+				<div class="b w3-row">
+					<div class="w3-col w3-container m6">
+						<hr class="new4" />
+					</div>
+					<div class="w3-col w3-container m6">
+						<hr class="new4" />
+					</div>
+
+				</div>
+
+				<div class="b w3-row">
+					<div class="w3-col w3-container m3">Accepted for</div>
+					<div class="w3-col w3-container m3">Date</div>
+
+					<div class="w3-col w3-container m3">Accepted for</div>
+					<div class="w3-col w3-container m3">Date</div>
+
+				</div>
 
 
 
-			const mediaRowsB = document.getElementById("mediarowsB").value;
-			console.log("mediaRowsB [" + mediaRowsB + "]");
-			if (mediaRowsB.length > 4) {
-				objs = JSON.parse(mediaRowsB);
-			}
-			buildSpreadSheetB();
-			
-			console.groupEnd();
-		</script>
+
+				<script>
+					dailyCostAndMonthlyAverageB();
+				</script>
+			</div>
 
 
+			<div class="w3-container d-print-none" style="padding-top: 2%;">
+				<button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
+				<a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
+				<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
+			</div>
+			<div class="w3-row">
+				<div class="CopyRightId w3-col m8"></div>
+				<div class=" w3-col m2"></div>
+				<div align="right" class="w3-col m2">-CONFIDENTIAL- 30</div>
+			</div>
 		</div>
-			
-               <div>
-		         <p>
-   			 Client may cancel after 13 weeks from schedule start date with two weeks’ notice and no short rate. This offer is good for 10 business days 
-				from the date of presentation. In accordance with Paragraphs 49 and 50 of United States Federal Communications Commission Report and Order No. FCC 07-217, 
-			this station will not discriminate in any contract for advertising on the basis of race
- 			or ethnicity, and all such contracts will be evaluated, accepted, negotiated and completed without regard to race or ethnicity
- 			 </p>
-
- 		 <h2>Analysis of Schedule:
-		</h2>
-
-  		<p>
-			AVERAGE MONTHLY CLIENT INVESTMENT <span id="monthlyAverageIdB"></span>
-.
-  		</p>
-  		<p>
-			AVERAGE DAILY CLIENT INVESTMENT <span id="dailyCostIdB"></span>
-
-  		</p>
-		 <p> 
-			 Thank you for your trust and confidence 
-		  </p>
-
-		       
-		<div class="b w3-row">
-  			<div class="w3-col w3-container m6">
-   		 <hr class="new4"/>
- 		 </div>
- 		 <div class="w3-col w3-container m6">
- 		   <hr class="new4"/>
- 		 </div>
- 
-		</div>
-
-		<div class="b w3-row">
- 		 <div class="w3-col w3-container m3">
-  		  Accepted for
-  		</div>
- 		 <div class="w3-col w3-container m3">
-  				  Date
-  		</div>
- 
-  		 <div class="w3-col w3-container m3">
-   			 Accepted for
-  		</div>
- 		 <div class="w3-col w3-container m3">
-   			 Date
-  		</div>
- 
 	</div>
-       
-		       
-		       
-		       
-		  <script>
-	               dailyCostAndMonthlyAverageB();
-		       </script>
-			</div>	       
-	</div>
-</div>
