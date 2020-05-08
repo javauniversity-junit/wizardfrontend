@@ -233,7 +233,7 @@ public class PublishController {
 					planADigitalROICalculatorPageModel = (PlanDigitalROICalculatorPageModel) JSONManager
 							.convertFromJson(data.getPagedata(), PlanDigitalROICalculatorPageModel.class);
 					model.addAttribute("PlanADigitalROICalculatorPage", planADigitalROICalculatorPageModel);
-					// publish.setPresentedToPage(true);
+					publish.setPlanADigitalROICalculatorPage(true);
 					mLog.info("found page PlanADigitalROICalculatorPage");
 					break;
 				} catch (Exception ex) {

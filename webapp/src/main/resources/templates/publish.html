@@ -140,6 +140,11 @@
         </div>
 
 
+   <!-- replace PlanADigitalROICalculatorPageFragment slide 22 begin -->
+        <div th:if="${PublishModel.planADigitalROICalculatorPage}">
+            <div th:replace="fragments/PlanADigitalROICalculatorPageFragment :: PlanADigitalROICalculator"></div>
+        </div> 
+        
         <!-- replace PlanBMediaPage begin -->
         <div th:if="${PublishModel.planBMediaPage}">
             <div th:replace="fragments/PlanBMediaPagePageFragment :: PlanBMediaPage"></div>
@@ -187,10 +192,14 @@
      
   
         
-
+   <!-- replace PlanADigitalROICalculatorPageFragment slide 28 begin -->
+        <div th:if="${PublishModel.planADigitalROICalculatorPage}">
+            <div th:replace="fragments/PlanADigitalROICalculatorPageFragment :: PlanADigitalROICalculator"></div>
+        </div>  
+	    
         
         
-   <!-- replace PlanAMediaPageFlightDatesFragment begin -->
+   <!-- replace PlanAMediaPageFlightDatesFragment slide 29 begin -->
         <div th:if="${PublishModel.planAMediaPage}">
             <div th:replace="fragments/PlanAMediaPageFlightDatesFragment :: PlanAMediaPageFlightDates"></div>
         </div>  
