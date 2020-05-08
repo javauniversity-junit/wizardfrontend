@@ -301,6 +301,11 @@ public class PublishController {
 					mLog.severe("error " + ex.getMessage());
 					break;
 				}
+				
+				
+//PlanBDigitalROICalculatorPage
+				
+	
 				//
 			case PlanBLifetimeValuedPage:
 				try {
@@ -352,7 +357,7 @@ public class PublishController {
 					planBDigitalROICalculatorPageModel = (PlanDigitalROICalculatorPageModel) JSONManager
 							.convertFromJson(data.getPagedata(), PlanDigitalROICalculatorPageModel.class);
 					model.addAttribute("PlanBDigitalROICalculatorPage", planBDigitalROICalculatorPageModel);
-					// publish.setPresentedToPage(true);
+					publish.setPlanBDigitalROICalculatorPage(true);
 					mLog.info("found page PlanBDigitalROICalculatorPage");
 					break;
 				} catch (Exception ex) {

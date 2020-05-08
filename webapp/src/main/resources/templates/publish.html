@@ -180,7 +180,10 @@
         </div>
 	    
 	
-	  
+	   <!-- replace PlanBDigitalROICalculatorPageFragment slide 28 begin -->
+        <div th:if="${PublishModel.planBDigitalROICalculatorPage}">
+            <div th:replace="fragments/PlanBDigitalROICalculatorPageFragment :: PlanBDigitalROICalculator"></div>
+        </div> 
         
         
    
