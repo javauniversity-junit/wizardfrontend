@@ -138,7 +138,10 @@
             <div th:replace="fragments/PlanAProposedPageFragment :: PlanAProposedPage"></div>
         </div>
         
-	    
+	    <!-- replace PlanABEPPage slide 20 begin -->
+        <div th:if="${PublishModel.planABEPPage}">
+            <div th:replace="fragments/PlanABEPPageFragment :: PlanABEPPage"></div>
+        </div>
 	    
    <!-- replace PlanALifetimeValuedPageFragment slide 21 begin -->
         <div th:if="${PublishModel.planALifetimeValuedPage}">
@@ -151,18 +154,18 @@
             <div th:replace="fragments/PlanADigitalROICalculatorPageFragment :: PlanADigitalROICalculator"></div>
         </div> 
         
-        <!-- replace PlanBMediaPage begin -->
+        <!-- replace PlanBMediaPage slide 23 begin -->
         <div th:if="${PublishModel.planBMediaPage}">
             <div th:replace="fragments/PlanBMediaPagePageFragment :: PlanBMediaPage"></div>
         </div>
         
-	  
+	  <!-- replace PlanBExcelPage slide 24 begin -->
+        <div th:if="${PublishModel.planBExcelPage}">
+            <div th:replace="fragments/PlanBExcelPageFragment :: PlanBExcelPage"></div>
+        </div>
 	
         
-        <!-- replace PlanABEPPage begin -->
-        <div th:if="${PublishModel.planABEPPage}">
-            <div th:replace="fragments/PlanABEPPageFragment :: PlanABEPPage"></div>
-        </div>
+        
 	  
 	  
 	        <!-- replace PlanBProposedPage begin -->
@@ -186,10 +189,7 @@
         
    
 
-  <!-- replace PlanBExcelPage begin -->
-        <div th:if="${PublishModel.planBExcelPage}">
-            <div th:replace="fragments/PlanBExcelPageFragment :: PlanBExcelPage"></div>
-        </div>
+  
      
   
       <!-- replace PlanBDigitalROICalculatorPageFragment slide 28 begin -->
