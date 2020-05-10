@@ -133,7 +133,13 @@
             <div th:replace="fragments/PlanAExcelPageFragment :: PlanAExcelPage"></div>
         </div>
         
-
+          <!-- replace PlanAProposedPage begin  slide 19-->
+        <div th:if="${PublishModel.planAProposedPage}">
+            <div th:replace="fragments/PlanAProposedPageFragment :: PlanAProposedPage"></div>
+        </div>
+        
+	    
+	    
    <!-- replace PlanALifetimeValuedPageFragment slide 21 begin -->
         <div th:if="${PublishModel.planALifetimeValuedPage}">
             <div th:replace="fragments/PlanALifetimeValuedPageFragment :: PlanALifetimeValuedPage"></div>
@@ -151,11 +157,7 @@
         </div>
         
 	  
-	          <!-- replace PlanAProposedPage begin -->
-        <div th:if="${PublishModel.planAProposedPage}">
-            <div th:replace="fragments/PlanAProposedPageFragment :: PlanAProposedPage"></div>
-        </div>
-        
+	
         
         <!-- replace PlanABEPPage begin -->
         <div th:if="${PublishModel.planABEPPage}">
