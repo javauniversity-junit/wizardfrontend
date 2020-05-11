@@ -12,14 +12,39 @@
 		</div>
 
 
+		<script
+			src="https://cdn.tiny.cloud/1/d5s7yeul5jnhtk9c7dv0oswtm488cvisrrsq0i3zwb5rkr0b/tinymce/5/tinymce.min.js"></script>
+		<script>
+			tinymce
+					.init({
+						selector : 'textarea#textareaId',
+						height : 900,
+						toolbar : false,
+						statusbar : false,
+						menubar : false,
+						plugins : [
+								'advlist autolink lists link image charmap print preview anchor',
+								'searchreplace visualblocks code fullscreen',
+								'insertdatetime media table paste code help wordcount' ],
+						content_css : [
+								'//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+								'css/codepen.css' ]
+					});
+		</script>
+
+		<style>
+#textareaId {
+    height : 10000000px;
+}
+</style>
+
+
 		<div class="whiteGrad mce-content-body">
 			<div class="w3-row">
-				<textarea 
-					th:text="${PlanAExcelPageModel?.textArea}" />
-			</div>
-			
-			<div class="w3-row">
-				<div id="excelADataId" class="w3-col m9"></div>
+				<div class="w3-col m9">
+					<textarea id="textareaId" name="textareaId"
+						th:text="${PlanAExcelPageModel?.textArea}" />
+				</div>
 				<div class="w3-col m3" style="padding-left: 2%;">
 					<p style="padding-top: 20%;">Build</p>
 					<p>Brand</p>
@@ -31,35 +56,29 @@
 					<p>Monthly</p>
 					<p>Schedule</p>
 
-					<p style="padding-top: 80%;">Slow</p>
+					<p style="padding-top: 60%;">Slow</p>
 					<p>Performing</p>
 					<p>Monthly</p>
 					<p>Schedule</p>
 				</div>
 			</div>
-			<script th:inline="javascript">
-				/*<![CDATA[*/
-
-				var messageA = /*[[${PlanAExcelPageModel?.textArea}]]*/'default';
-				//document.write(unescape(message));
-				document.getElementById("excelADataId").innerHTML = messageA;
-				console.log(messageA);
-
-				/*]]>*/
-			</script>
 		</div>
 
 
-		<div class="w3-container d-print-none" style="padding-top: 2%;">
-			<button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
-			<a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
-			<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
-		</div>
-		<div class="w3-row">
-			<div class="CopyRightId w3-col m8"></div>
-			<div class=" w3-col m2"></div>
-			<div align="right" class="w3-col m2">-CONFIDENTIAL- 18</div>
-		</div>
+
 	</div>
+
+
+	<div class="w3-container d-print-none" style="padding-top: 2%;">
+		<button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
+		<a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
+		<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
+	</div>
+	<div class="w3-row">
+		<div class="CopyRightId w3-col m8"></div>
+		<div class=" w3-col m2"></div>
+		<div align="right" class="w3-col m2">-CONFIDENTIAL- 18</div>
+	</div>
+</div>
 
 </div>
