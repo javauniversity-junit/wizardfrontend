@@ -12,51 +12,28 @@
 		</div>
 
 
-		<script
-			src="https://cdn.tiny.cloud/1/d5s7yeul5jnhtk9c7dv0oswtm488cvisrrsq0i3zwb5rkr0b/tinymce/5/tinymce.min.js"></script>
-		<script>
-			tinymce
-					.init({
-						selector : 'textarea#textareaId',
-						height : 900,
-						toolbar : false,
-						statusbar : false,
-						menubar : false,
-						plugins : [
-								'advlist autolink lists link image charmap print preview anchor',
-								'searchreplace visualblocks code fullscreen',
-								'insertdatetime media table paste code help wordcount' ],
-						content_css : [
-								'//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
-								'css/codepen.css' ]
-					});
-		</script>
+		
 
-		<style>
-#textareaId {
-    height : 100%;
-}
-</style>
 
 
 		<div class="whiteGrad mce-content-body">
 			<div class="w3-row">
 				<div class="w3-col m9">
-					<textarea id="textareaId" name="textareaId"
+					<textarea class="editor" id="textareaId" name="textareaId"
 						th:text="${PlanAExcelPageModel?.textArea}" />
 				</div>
 				<div class="w3-col m3" style="padding-left: 2%;">
-					<p style="padding-top: 20%;">Build</p>
+					<p style="padding-top: 10%;">Build</p>
 					<p>Brand</p>
 					<p>Equity</p>
 					<p>Monthly</p>
 					<p>Schedule</p>
 
-					<p style="padding-top: 70%;">Spike</p>
+					<p style="padding-top: 50%;">Spike</p>
 					<p>Monthly</p>
 					<p>Schedule</p>
 
-					<p style="padding-top: 60%;">Slow</p>
+					<p style="padding-top: 50%;">Slow</p>
 					<p>Performing</p>
 					<p>Monthly</p>
 					<p>Schedule</p>
