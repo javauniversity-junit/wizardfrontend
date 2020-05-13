@@ -7,7 +7,7 @@
 	<div>
 		<a id="PresentedToPage"></a>
 
-		
+
 
 	</div>
 
@@ -21,12 +21,12 @@
 			serve long-term alliances. Please help me know how well we are
 			servicing you by grading each of the following segments 1 to 5 with 5
 			being the highest. Place the chosen number on each line.</div>
-		<div>
-			This agreement is between <span
-				th:text="${PresentedToPage?.clientContactName}"></span>- <span
-				th:text="${PresentedToPage?.clientBusinessName}"></span>
+		<div style="padding-top: 5%;">
+			<h1>This agreement is between <span
+				th:text="${PresentedToPage?.clientContactName}"></span> & <span
+				th:text="${PresentedToPage?.clientBusinessName}"></span> </h1>
 		</div>
-		<div style="padding-top: 3%;">CONTINUOUS BASIC SERVICE</div>
+		<div style="padding-top: 3%;"><h1>CONTINUOUS BASIC SERVICE</h1></div>
 		<div class="w3-row">
 			<div class="w3-col m9">
 				<ul class="list">
@@ -61,12 +61,17 @@
 
 		</div>
 
-		<div align="center" style="padding-top: 5%;">
-
-			<span class="signature">Signed by Account Executive</span> <span
-				class="title">Date</span> <span class="signature">Signed by
-				Client</span> <span class="title">Date</span>
-		</div>
+		
+			<div style="padding-top: 5%; padding-bottom: 5%;padding-left: 15%;" class="w3-row">
+				<div class="w3-col m1"></div>
+				<div class="w3-col m10">
+					<span class="signature">Signed by Account Executive</span> <span
+						class="title">Date</span> <span class="signature">Signed by
+						Client</span> <span class="title">Date</span>
+				</div>
+				<div class="w3-col m1"></div>
+			</div>
+		
 
 
 	</div>
@@ -76,12 +81,10 @@
 		<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
 	</div>
 	<div class="w3-row">
-		      <div class="CopyRightId w3-col m8"></div>
-		      <div class=" w3-col m2"></div>
-		      <div align="right" class="w3-col m2">
-			-CONFIDENTIAL- 32     
-		      </div>	      
-		</div>
+		<div class="CopyRightId w3-col m8"></div>
+		<div class=" w3-col m2"></div>
+		<div align="right" class="w3-col m2">-CONFIDENTIAL- 32</div>
+	</div>
 
 </div>
 <!-- end of if statement -->
