@@ -30,9 +30,7 @@
 				<div class="w3-col m1 w3-center ">=</div>
 				<div class="w3-col m2 w3-center underline"
 					th:text="${PlanBDigitalROICalculatorPage?.planACostPerThousand}">$100,000</div>
-				<div class="input-group-append">
-					<span class="input-group-text">%</span>
-				</div>
+				
 			</div>
 
 
@@ -50,7 +48,7 @@
 					.1%, etc.)</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				<div class="w3-col m2 w3-center underline"
-					th:text="${PlanBDigitalROICalculatorPage?.planAClickThroughRate}">$100,000</div>
+					th:text="${PlanBDigitalROICalculatorPage?.planAClickThroughRate} + '%'">$100,000</div>
 			</div>
 
 
@@ -124,7 +122,7 @@
 				<div class="w3-col m7 w3-center">M. % Monthly Return on Investment (L/A)</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				<div class="w3-col m2 w3-center underline"
-					th:text="${PlanBDigitalROICalculatorPage?.planAMonthlyROIP}">$100,000</div>
+					th:text="${PlanBDigitalROICalculatorPage?.planAMonthlyROIP} + '%'">$100,000</div>
 			</div>
 
 		</div>
