@@ -23,11 +23,11 @@
 
 				<div class="w3-col m1">=</div>
 
-				<div class="w3-col m3">
-					<span class="underline"
-						th:text="${PlanABEPPageModel?.planAAverageSale}"
-						name="planAAverageSale"></span>
-				</div>
+
+				<div class="underline w3-col m2 w3-center"
+					th:text="${PlanABEPPageModel?.planAAverageSale}"
+					name="planAAverageSale"></div>
+
 			</div>
 			<div class="w3-row topPadding">
 				<div class="w3-col w3-center m8">
@@ -35,10 +35,10 @@
 						average sale (sale less cost of goods sold)</label>
 				</div>
 				<div class="w3-col m1">=</div>
-				<div class="w3-col m3">
-					<span class="underline"
-						th:text="${PlanABEPPageModel?.planAGrossMargin}"></span><span>%</span>
-				</div>
+
+				<div class="underline w3-col m2 w3-center"
+					th:text="${PlanABEPPageModel?.planAGrossMargin} + '%'"></div>
+
 
 
 
@@ -51,8 +51,8 @@
 					</label>
 				</div>
 				<div class="w3-col m1">=</div>
-				<div class="w3-col m3 underline" th:text="${PlanABEPPageModel?.planAClosingPct} + '%'">	
-				</div>
+				<div class="w3-col m2 w3-center underline"
+					th:text="${PlanABEPPageModel?.planAClosingPct} + '%'"></div>
 
 			</div>
 			<div class="w3-row topPadding">
@@ -61,10 +61,10 @@
 						(A*B*C)</label>
 				</div>
 				<div class="w3-col m1">=</div>
-				<div class="w3-col m3">
-					<span class="underline"
-						th:text="${PlanABEPPageModel?.planAProspectValue}"></span>
-				</div>
+
+				<div class="underline w3-col m2 w3-center"
+					th:text="${PlanABEPPageModel?.planAProspectValue}"></div>
+
 			</div>
 
 
@@ -75,79 +75,75 @@
 				</div>
 
 				<div class="w3-col m1">=</div>
-				<div class="w3-col m3">
 
-					<span class="underline"
-						th:text="${PlanAProposedPageModel?.planAMonthly}"></span>
-				</div>
 
-			</div>
-			<div class="w3-row topPadding">
-				<div class="w3-col w3-center m8">
-					<label for="planAProspectsNeeded">F. Monthly prospects
-						needed to pay for advertising investment (E/D)</label>
-				</div>
-				<div class="w3-col m1">=</div>
-				<div class="w3-col m3">
-					<span class="underline"
-						th:text="${PlanABEPPageModel?.planAProspectsNeeded}"></span>
-				</div>
-			</div>
-			<div class="w3-row topPadding">
-				<div class="w3-col w3-center m8">
-					<label for="planAProspectSalesNeeded">G. Number of monthly
-						sales needed to break even (F*C)</label>
-				</div>
-				<div class="w3-col m1">=</div>
-				<div class="w3-col m3">
-					<span class="underline"
-						th:text="${PlanABEPPageModel?.planAProspectSalesNeeded}"></span>
-				</div>
-			</div>
-			<div class="w3-row topPadding">
-				<div class="w3-col w3-center m8">
-					<label for="planAGrossProfitOnSales">H. Gross sales per
-						month needed to break even (G*A)</label>
-				</div>
-				<div class="w3-col m1">=</div>
-				<div class="w3-col m3">
-					<span class="underline"
-						th:text="${PlanABEPPageModel?.planAGrossProfitOnSales}"></span>
-				</div>
-			</div>
-			<div class="w3-row topPadding">
-				<div class="w3-col w3-center m8">
-					<label for="planAMonths">I. Number of months to run in
-						proposed marketing plan</label>
-				</div>
-				<div class="w3-col m1">=</div>
-				<div class="w3-col m3">
-					<span class="underline" th:text="${PlanBBEPPageModel?.planBMonths}"
-						name="planAMonths"></span>
-				</div>
-			</div>
-			<div class="w3-row topPadding">
-			<div class="w3-col w3-center m8">
-				<label for="planAAdditionalGrossSales">J. Additional gross
-					sales per year needed to break even (H*I)</label>
+				<div class="underline w3-col m2 w3-center"></div>
+				<div class="w3-row topPadding">
+					<div class="w3-col w3-center m8">
+						<label for="planAProspectsNeeded">F. Monthly prospects
+							needed to pay for advertising investment (E/D)</label>
 					</div>
 					<div class="w3-col m1">=</div>
-				<div class="w3-col m3">
-					 <span class="underline"
-					th:text="${PlanABEPPageModel?.planAAdditionalGrossSales}"></span>
+
+					<div class="underline w3-col m2 w3-center"
+						th:text="${PlanABEPPageModel?.planAProspectsNeeded}"></div>
+
+				</div>
+				<div class="w3-row topPadding">
+					<div class="w3-col w3-center m8">
+						<label for="planAProspectSalesNeeded">G. Number of monthly
+							sales needed to break even (F*C)</label>
 					</div>
+					<div class="w3-col m1">=</div>
+
+					<div class="underline w3-col m2 w3-center"
+						th:text="${PlanABEPPageModel?.planAProspectSalesNeeded}"></div>
+
+				</div>
+				<div class="w3-row topPadding">
+					<div class="w3-col w3-center m8">
+						<label for="planAGrossProfitOnSales">H. Gross sales per
+							month needed to break even (G*A)</label>
+					</div>
+					<div class="w3-col m1">=</div>
+
+					<div class="underline w3-col m2 w3-center"
+						th:text="${PlanABEPPageModel?.planAGrossProfitOnSales}"></div>
+
+				</div>
+				<div class="w3-row topPadding">
+					<div class="w3-col w3-center m8">
+						<label for="planAMonths">I. Number of months to run in
+							proposed marketing plan</label>
+					</div>
+					<div class="w3-col m1">=</div>
+
+					<div class="underline w3-col m2 w3-center"
+						th:text="${PlanBBEPPageModel?.planBMonths}" name="planAMonths"></div>
+
+				</div>
+				<div class="w3-row topPadding">
+					<div class="w3-col w3-center m8">
+						<label for="planAAdditionalGrossSales">J. Additional gross
+							sales per year needed to break even (H*I)</label>
+					</div>
+					<div class="w3-col m1">=</div>
+
+					<div class="underline w3-col m2 w3-center"
+						th:text="${PlanABEPPageModel?.planAAdditionalGrossSales}"></div>
+
+				</div>
+			</div>
+			<div class="w3-container d-print-none" style="padding-top: 2%;">
+				<button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
+				<a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
+				<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
+			</div>
+
+			<div class="w3-row">
+				<div class="CopyRightId w3-col m8"></div>
+				<div class=" w3-col m2"></div>
+				<div align="right" class="w3-col m2">-CONFIDENTIAL- 26</div>
 			</div>
 		</div>
-		<div class="w3-container d-print-none" style="padding-top: 2%;">
-			<button class="w3-btn w3-white" onclick="javascript:printPage();">Print</button>
-			<a href="#TeamCommitmentPage" class="w3-btn w3-white">Next</a>
-			<button class="w3-btn w3-white" onclick="javascript:goBack();">Return</button>
-		</div>
-		
-				<div class="w3-row">
-			<div class="CopyRightId w3-col m8"></div>
-			<div class=" w3-col m2"></div>
-			<div align="right" class="w3-col m2">-CONFIDENTIAL- 26</div>
-		</div>
 	</div>
-</div>
