@@ -1,9 +1,15 @@
-Lookup the files in eclipse\plugins\org.eclipse.platform_4.2.x.y\css for your current style sheet (probably e4_default_win7.css), and then just add the following rule:
+ssh wizard@97.74.232.85 password Superman123#
 
-#org-eclipse-jdt-ui-PackageExplorer Tree,
-#org-eclipse-ui-navigator-ProjectExplorer Tree {
-  font-size: 10px; /* <-- Desired font size */
-}
+/etc/cron.daily
+
+database backups
+/home/databasebackup
+
+stat -f '%Su' /home/databasebackup
+sudo chmod -R 777 /home/databasebackup
+
+
+sshpass -p Superman123# ssh wizard@97.74.232.85 "cp /home/backups/23May2020/license-23May2020.sql .;echo copiedfileWorked; exit"
 
 
 https://spring.io/guides/gs/serving-web-content/
