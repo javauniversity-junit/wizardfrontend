@@ -38,8 +38,13 @@
 				<div class="w3-col m7 w3-center">C. Monthly Impressions (A/B *
 					1,000)</div>
 				<div class="w3-col m1 w3-center ">=</div>
-				<div class="w3-col m2 w3-center underline"
+				<div id="planAClosingPctNumber" class="w3-col m2 w3-center underline"
 					th:text="${PlanBDigitalROICalculatorPage?.planAClosingPctNumber}">$100,000</div>
+					<script>
+					      var planAClosingPctNumber = document.getElementById("planAClosingPctNumber");
+					      var formattedPlanAClosingPctNumber = formatNumber(planAClosingPctNumber.innerHTML);
+					      planAClosingPctNumber.innerHTML = formattedPlanAClosingPctNumber;
+					</script>
 			</div>
 
 
