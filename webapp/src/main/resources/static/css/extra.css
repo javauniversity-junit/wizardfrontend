@@ -8,6 +8,9 @@ a {
 	text-decoration: none
 }
 
+.rowPaddingTop {
+	padding-top: 1%
+}
 .mce-content-body b,
 .mce-content-body b *,
 .mce-content-body strong,
