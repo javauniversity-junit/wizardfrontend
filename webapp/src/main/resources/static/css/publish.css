@@ -40,7 +40,9 @@ font-weight: bold;
 }
 
 .topPadding {
-	padding-top: 4%;
+	padding-top: 2%;
+	padding-left: 5%;
+	font-size: 1.275em; /* 30px/16=1.875em */
 }
 
 .hide {
@@ -272,6 +274,7 @@ div.curved-text {
 .whiteGrad {
 	padding: 2%;
 	min-height: 700px;
+	font-size: 1.275em; /* 30px/16=1.875em */
 	position: relative;
 	color: black;
 	background-image: linear-gradient(white, white);
