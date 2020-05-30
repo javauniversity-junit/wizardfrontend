@@ -30,9 +30,13 @@
 
 			<div class="w3-row topPadding">
 				<label for="planAReach">Average Projected Broadcast monthly
-					reach: </label> <span th:text="${PlanBProposedPageModel?.planAReach}"></span>
+					reach: </label> <span id="planAReachB" th:text="${PlanBProposedPageModel?.planAReach}"></span>
 			</div>
-
+            <script>
+            var planAReachB = document.getElementById("planAReachB").innerHTML;
+            planAReachB = formatNumber(planAReachB); 
+            document.getElementById("planAReachB").innerHTML = planAReachB;
+            </script>
 
 			<div class="w3-row topPadding">
 				<label for="planAFrequency">Average Projected Monthly
@@ -41,9 +45,14 @@
 			</div>
 			<div class="w3-row topPadding">
 				<label for=planADigitalImpressionsMonthly>Average Estimated
-					Monthly Digital Gross Impressions: </label> <span
+					Monthly Digital Gross Impressions: </label> <span id="planADigitalImpressionsMonthlyB"
 					th:text="${PlanBProposedPageModel?.planADigitalImpressionsMonthly}"></span>
 			</div>
+			     <script>
+            var planADigitalImpressionsMonthlyB = document.getElementById("planADigitalImpressionsMonthlyB").innerHTML;
+            planADigitalImpressionsMonthlyB = formatNumber(planADigitalImpressionsMonthlyB); 
+            document.getElementById("planADigitalImpressionsMonthlyB").innerHTML = planADigitalImpressionsMonthlyB;
+            </script>
 			<div class="w3-row topPadding">
 				<label for=planAMonthly>Average Base Monthly Advertising
 					Investment: </label> <span

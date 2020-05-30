@@ -31,10 +31,8 @@
 					on average sale (sale less cost of goods sold)</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				<div class="w3-col m2 w3-center underline"
-					th:text="${PlanALifetimeValuedPageModel?.grossProfitMargin}">$100,000</div>
-				<div class="input-group-append">
-					<span class="input-group-text">%</span>
-				</div>
+					th:text="${PlanALifetimeValuedPageModel?.grossProfitMargin} + '%'">$100,000</div>
+				
 			</div>
 
 
@@ -87,7 +85,7 @@
 					advertising investment averages</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				
-				<div class="w3-col m2 w3-center underline" th:text="${PlanALifetimeValuedPageModelOther?.planAMonthly ne null} ? ${PlanALifetimeValuedPageModelOther?.planAMonthly} : '0'">$100,000</div>
+				<div class="w3-col m2 w3-center underline" th:text="${PlanAProposedPageModel?.planAMonthly ne null} ? ${PlanAProposedPageModel?.planAMonthly} : '0'">$100,000</div>
 			</div>
 
 			<div class="w3-row" style="padding-top: 1%";>

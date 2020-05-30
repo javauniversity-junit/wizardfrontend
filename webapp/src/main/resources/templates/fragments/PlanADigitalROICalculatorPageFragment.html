@@ -29,10 +29,8 @@
 				<div class="w3-col m7 w3-center">B. Cost Per Thousand (CPM)</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				<div class="w3-col m2 w3-center underline"
-					th:text="${PlanADigitalROICalculatorPage?.planACostPerThousand}">$100,000</div>
-				<div class="input-group-append">
-					<span class="input-group-text">%</span>
-				</div>
+					th:text="${PlanADigitalROICalculatorPage?.planACostPerThousand} + '%'">$100,000</div>
+				
 			</div>
 
 
@@ -40,8 +38,13 @@
 				<div class="w3-col m7 w3-center">C. Monthly Impressions (A/B *
 					1,000)</div>
 				<div class="w3-col m1 w3-center ">=</div>
-				<div class="w3-col m2 w3-center underline"
+				<div class="w3-col m2 w3-center underline" id="planAClosingPctNumber"
 					th:text="${PlanADigitalROICalculatorPage?.planAClosingPctNumber}">$100,000</div>
+					<script>
+            var planAClosingPctNumber = document.getElementById("planAClosingPctNumber").innerHTML;
+            planAClosingPctNumber = formatNumber(planAClosingPctNumber); 
+            document.getElementById("planAClosingPctNumber").innerHTML = planAClosingPctNumber;
+            </script>
 			</div>
 
 
@@ -50,7 +53,7 @@
 					.1%, etc.)</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				<div class="w3-col m2 w3-center underline"
-					th:text="${PlanADigitalROICalculatorPage?.planAClickThroughRate}">$100,000</div>
+					th:text="${PlanADigitalROICalculatorPage?.planAClickThroughRate} + '%'">$100,000</div>
 			</div>
 
 
@@ -117,14 +120,14 @@
 				<div class="w3-col m7 w3-center">L. $ Monthly Return on Investment (K-A)</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				<div class="w3-col m2 w3-center underline"
-					th:text="${PlanADigitalROICalculatorPage?.planAMonthlyROID}">$100,000</div>
+					th:text="${PlanADigitalROICalculatorPage?.planAMonthlyROID}  ">$100,000</div>
 			</div>
 
 	<div class="w3-row" style="padding-top: 1%";>
 				<div class="w3-col m7 w3-center">M. % Monthly Return on Investment (L/A)</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				<div class="w3-col m2 w3-center underline"
-					th:text="${PlanADigitalROICalculatorPage?.planAMonthlyROIP}">$100,000</div>
+					th:text="${PlanADigitalROICalculatorPage?.planAMonthlyROIP} + '%'">$100,000</div>
 			</div>
 
 		</div>
