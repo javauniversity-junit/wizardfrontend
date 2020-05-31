@@ -210,12 +210,19 @@ input.underline {
 	background: blue;
 }
 
-#chart_wrap {
+.chartwrap {
 	border: 1px solid gray;
 	position: relative;
-	padding-bottom: 100%;
+	padding-left: 5%;
 	height: 0;
 	overflow: hidden;
+}
+#chart_wrap {
+    border: 1px solid gray;
+    position: relative;
+    padding-bottom: 100%;
+    height: 0;
+    overflow: hidden;
 }
 
 textarea:focus,
