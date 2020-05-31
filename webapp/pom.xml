@@ -47,7 +47,12 @@
     <version>2.5</version>
 </dependency>
  <!-- https://mvnrepository.com/artifact/jfree/jfreechart -->
-
+<!-- https://mvnrepository.com/artifact/javax.xml.crypto/jsr105-api -->
+<dependency>
+    <groupId>javax.xml.crypto</groupId>
+    <artifactId>jsr105-api</artifactId>
+    <version>1.0.1</version>
+</dependency>
 
 <dependency>
  <groupId>org.hibernate</groupId>
