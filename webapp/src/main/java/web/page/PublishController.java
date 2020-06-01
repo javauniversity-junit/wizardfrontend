@@ -60,10 +60,10 @@ public class PublishController {
 	}
 	
 	@RequestMapping(value = "/PublishLink", method = RequestMethod.GET)
-	public String PublishLink(Model model, @RequestParam String ID) {
-		String encryptId = EncryptionDecryptionManager.encrypt(ID);
-		model.addAttribute("encryptId", encryptId);
-		return "link";
+	public String PublishLink(Model model, @RequestParam String encryptId) {
+		String id = EncryptionDecryptionManager.encrypt(encryptId);
+		model.addAttribute("encryptId", id);
+		return "share";
 	}
 	
 	

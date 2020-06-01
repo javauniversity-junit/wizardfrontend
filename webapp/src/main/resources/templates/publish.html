@@ -19,9 +19,12 @@
 
 <script>
 	function printPage() {
-		window.print();
+		document.getElementById("shareForm").submit();
 	}
 
+	function share() {
+		window.print();
+	}
 	function goBack() {
 		window.history.back();
 	}
@@ -34,8 +37,10 @@
 			'packages' : [ 'corechart' ]
 		});
 	</script>
-	<input type="hidden" id="encryptId"
-						th:value="${encryptId}" name="encryptId" /> 
+	<form id="shareForm" method="get" action="PublishLink" autocomplete="off">
+		<input type="hidden" id="encryptId" th:value="${encryptId}"
+			name="encryptId" />
+	</form>
 	<div class="w3-container">
 		<!-- outer div  -->
 		<div th:if="${PublishModel.presentedToPage}">
