@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -63,11 +64,13 @@ public class PublishController {
 		return detail;
 	}
 	
+
 	@RequestMapping(value = "/PublishClient", method = RequestMethod.GET)
 	public String clientView(Model model, @RequestParam String ID) {
 		String decryptId = EncryptionDecryptionManager.decrypt(ID);
 		String detail = detail(model, decryptId);
 		return detail;
+		//return "a";
 	}
 	
 	@RequestMapping(value = "/PublishLink", method = RequestMethod.GET)
@@ -75,7 +78,7 @@ public class PublishController {
 		StringBuffer buffer = new StringBuffer();
 		String domain = env.getProperty("domain");
 		buffer.append(domain);
-		buffer.append("/PublishLink");
+		buffer.append("PublishClient");
 		buffer.append("?ID=");
 		buffer.append(encryptId);
 		
@@ -94,7 +97,7 @@ public class PublishController {
 		// DemographicManager.convertFromJson(json)
 		
 		model.addAttribute("PresentedToPage", dataPageModel);	
-		model.addAttribute("encryptId", id);
+		model.addAttribute("link", buffer.toString());
 		return "share";
 	}
 	

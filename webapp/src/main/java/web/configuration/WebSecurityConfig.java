@@ -24,9 +24,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	private static final Logger mLog = Logger.getLogger(WebSecurityConfig.class.getName());
 
 	@Override
+
 	protected void configure(HttpSecurity http) throws Exception {
-		http.csrf().disable().authorizeRequests().antMatchers("/", "/index.html", "/header.html", "/footer.html")
-				.permitAll().antMatchers("/css/**", "/vendor/**", "/js/**", "/img/**").permitAll().anyRequest()
+		//http.ignoring().antMatchers("/api/v1/signup");
+		http.csrf().disable().authorizeRequests().antMatchers("/", "/copyright.html","/index.html", "/header.html", "/footer.html")
+				.permitAll().antMatchers("/css/**", "/fonts/**","/vendor/**", "/js/**", "/img/**","copyright.html").permitAll().anyRequest()
 				.permitAll().anyRequest().authenticated().and().formLogin().loginPage("/login").permitAll().and()
 				.logout().permitAll();
 	}
@@ -38,8 +40,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	public void configure(WebSecurity web) throws Exception {
-
-		// web.ignoring().antMatchers("/resources/**");
+		web.ignoring().antMatchers("/PublishClient");
+		 web.ignoring().antMatchers("/resources/**");
+		 
+		 
 	}
 
 }
