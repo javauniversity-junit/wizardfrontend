@@ -18,34 +18,35 @@
 <body class="grad w3-text-white">
 	<div class="w3-container">
 		<h1 class="text-center">Marketing Solutions</h1>
-		<h2 class="text-center	">Summary, Conclusions, and
+		<h2 class="text-center">Summary, Conclusions, and
 			Recommendations</h2>
-		<div class="w3-card-4" style="width: 90%;">
-			<header class="w3-container w3-black">
+		<div class="w3-card-8 text-center" style="width: 90%;">
+			<header class="w3-container" style="background-image: linear-gradient(green, black);">
 				<h2>
-					Hello <span>Mark</span> This presentation is provided by <span>
+					Hello <span th:text="${PresentedToPage?.clientContactName}">Mark</span> This presentation is provided by
+					 <span th:text="${PresentedToPage?.portfolioManagerName}">
 						Michael Guld </span>
 				</h2>
 			</header>
-			<div class="w3-container">
+			<div class="w3-container w3-xlarge">
 				<p>
 					View the presentation: <span>https://join.freeconferencecall.com/hintonandrew510
 					</span>
 				</p>
 				<p>
 					For additional assistance connecting to the presentation please
-					called at : <span>7777777777777</span>
+					called me by phone at: <span th:text="${PresentedToPage?.portfolioPhoneNumber}">7777777777777</span>
 				</p>
 			</div>
 			<p>
-				<button onclick="closePage()" type="button">Close</button>
+				<button onclick="closePage()" type="button">Close And Return to Presentation</button>
 			</p>
 			<script>
 				function closePage() {
 					window.history.back();
 				}
 			</script>
-			<div class="position-bottom">
+			<footer class="position-bottom" style="background-image: linear-gradient(green, black);">
 				<p>
 					<small>Copyright © 1984-2020 Executive Decision Systems,
 						Inc. and The Guld Resource Group, LLC. The data, formulas, and
@@ -57,7 +58,7 @@
 						The Guld Resource Group, LLC permitting such use. All rights
 						reserved. To report violations, please call (804) 356-7006.</small>
 				</p>
-			</div>
+			</footer>
 		</div>
 
 
