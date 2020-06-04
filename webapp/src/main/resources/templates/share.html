@@ -28,12 +28,17 @@
 						Michael Guld </span>
 				</h2>
 			</header>
-			<div class="w3-container w3-xlarge">
+			<div class="w3-container w3-large">
 				<p>
 					View the presentation:<mark> 
 					<span th:text="${link}">https://join.freeconferencecall.com/hintonandrew510
 					</span>
 					</mark>
+				</p>
+				<p>
+					
+					<a class="w3-button w3-yellow" th:href="${mailToMessage}" href="mailto:someone@yoursite.com?cc=someoneelse@theirsite.com, another@thatsite.com, me@mysite.com&bcc=lastperson@theirsite.com&subject=Big%20News&body=Body-goes-here">Send Email</a>
+					
 				</p>
 				<p>
 					For additional assistance connecting to the presentation please

@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,6 +29,7 @@ import web.page.planbLifetimevaluedpage.PlanBLifetimeValuedPageModel;
 import web.page.planproposedpage.PlanProposedPageModel;
 import web.page.confidentialclientevaluationnonepage.ConfidentialClientEvaluationOnePageModel;
 import web.page.extra.ExtraPageModel;
+import web.data.MyUserPrincipal;
 import web.model.Wizard;
 import web.model.WizardData;
 
@@ -78,10 +80,14 @@ public class PublishController {
 	}
 	
 	@RequestMapping(value = "/PublishLink", method = RequestMethod.GET)
-	public String PublishLink(Model model, @RequestParam String encryptId) {
+	public String PublishLink(Model model, @RequestParam String encryptId , Authentication authentication) {
+		
+	
+		
 		StringBuffer buffer = new StringBuffer();
 		StringBuffer domainBuffer = new StringBuffer();
 
+		
 		String domain = null;
 		try {
 		String host = envUtil.getHostname();
@@ -111,7 +117,11 @@ public class PublishController {
 		buffer.append("PublishClient");
 		buffer.append("?ID=");
 		buffer.append(encryptId);
-		
+		mLog.info("buffer " + buffer.toString());
+		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
+		String mailToMessage = env.getProperty("mailtoMessage");
+		mailToMessage = java.text.MessageFormat.format(mailToMessage, userDetails.getUsername(),buffer.toString());
+		mLog.info("mailToMessage " + mailToMessage);
 		String id = EncryptionDecryptionManager.decrypt(encryptId);
 	
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(id));
@@ -128,6 +138,7 @@ public class PublishController {
 		
 		model.addAttribute("PresentedToPage", dataPageModel);	
 		model.addAttribute("link", buffer.toString());
+		model.addAttribute("mailToMessage", mailToMessage);
 		return "share";
 	}
 	
