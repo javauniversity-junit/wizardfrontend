@@ -123,6 +123,7 @@ public class ClientObjectivesPageController {
 			@RequestParam(defaultValue = "0") String changeConsumerAttitudesSortOrderStr,
 			@RequestParam(defaultValue = "0") String makePromotionalEventsStrongerSortOrderStr,
 			@RequestParam(defaultValue = "0") String increaseDigitalMobileOnlineResponseSortOrderStr,
+			@RequestParam(defaultValue = "0") String quarterlySeasonalCampaignSortOrderStr,
 			@RequestParam(defaultValue = "0") String developAQuarterlySpikeSortOrderStr,
 			@RequestParam(defaultValue = "0") String developDatabaseMarketingSortOrderStr,
 			@RequestParam(defaultValue = "0") String initiateCauseMarketingProgramSortOrderStr,
@@ -135,6 +136,7 @@ public class ClientObjectivesPageController {
 			@RequestParam(defaultValue = "0") String otherSortOrderStr,
 			@RequestParam(defaultValue = "") String otherText,
 			@RequestParam(defaultValue = "0") String utilizeCoopVendorDollarsSortOrderortOrderStr,
+			@RequestParam(defaultValue = "false") boolean quarterlySeasonalCampaign,
 			@RequestParam String wizarddataid, @RequestParam String previousPage, @RequestParam String publishPage,
 			@RequestParam(required = false, value = "next") String next,
 			@RequestParam(required = false, value = "publish") String publish,
@@ -156,6 +158,11 @@ public class ClientObjectivesPageController {
 		int makePromotionalEventsStrongerSortOrder = Integer.parseInt(makePromotionalEventsStrongerSortOrderStr);
 		int increaseDigitalMobileOnlineResponseSortOrder = Integer
 				.parseInt(increaseDigitalMobileOnlineResponseSortOrderStr);
+		
+		//aa
+		int quarterlySeasonalCampaignSortOrder = Integer
+				.parseInt(quarterlySeasonalCampaignSortOrderStr);
+		
 		int developAQuarterlySpikeSortOrder = Integer.parseInt(developAQuarterlySpikeSortOrderStr);
 		int developDatabaseMarketingSortOrder = Integer.parseInt(developDatabaseMarketingSortOrderStr);
 		int initiateCauseMarketingProgramSortOrder = Integer.parseInt(initiateCauseMarketingProgramSortOrderStr);
@@ -189,7 +196,7 @@ public class ClientObjectivesPageController {
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
 
-		ClientObjectivesOnePageModel pageModel = new ClientObjectivesOnePageModel(introduceNewDepartment,
+		ClientObjectivesOnePageModel pageModel = new ClientObjectivesOnePageModel(quarterlySeasonalCampaign,quarterlySeasonalCampaignSortOrder, introduceNewDepartment,
 				featureSpecificProducts, callAttentiontoBrandsPrivateLabelsCarried, promoteOffPriceItemsServices,
 				utilizeCoopVendorDollars, retainCurrentConsumers, increaseCustomerVisits, increaseTrafficLeadCalls,
 				expandTargetConsumers, changeConsumerAttitudes, makePromotionalEventsStronger,

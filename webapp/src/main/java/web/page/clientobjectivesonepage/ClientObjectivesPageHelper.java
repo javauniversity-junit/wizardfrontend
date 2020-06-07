@@ -75,6 +75,14 @@ public class ClientObjectivesPageHelper {
 			orderList.add(modelObj);
 
 		}
+		if (clientObjectivesOnePageModel.isQuarterlySeasonalCampaign()) {
+			ClientObjectivesOnePageTwoModel modelObj = new ClientObjectivesOnePageTwoModel(
+					"quarterlySeasonalCampaign",
+					clientObjectivesOnePageModel.getQuarterlySeasonalCampaignSortOrder());
+			orderList.add(modelObj);
+
+		}
+		
 		if (clientObjectivesOnePageModel.isIncreaseDigitalMobileOnlineResponse()) {
 			ClientObjectivesOnePageTwoModel modelObj = new ClientObjectivesOnePageTwoModel(
 					"increaseDigitalMobileOnlineResponse",
@@ -82,6 +90,9 @@ public class ClientObjectivesPageHelper {
 			orderList.add(modelObj);
 
 		}
+		
+		
+		
 		if (clientObjectivesOnePageModel.isIncreaseMarketShare()) {
 			ClientObjectivesOnePageTwoModel modelObj = new ClientObjectivesOnePageTwoModel("increaseMarketShare",
 					clientObjectivesOnePageModel.getIncreaseMarketShareSortOrder());

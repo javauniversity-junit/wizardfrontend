@@ -14,7 +14,7 @@ public class ClientObjectivesOnePageModel {
 		return introduceNewDepartmentSortOrder;
 	}
 
-	public ClientObjectivesOnePageModel(boolean introduceNewDepartment, boolean featureSpecificProducts,
+	public ClientObjectivesOnePageModel(boolean quarterlySeasonalCampaign,int quarterlySeasonalCampaignSortOrder, boolean introduceNewDepartment, boolean featureSpecificProducts,
 			boolean callAttentiontoBrandsPrivateLabelsCarried, boolean promoteOffPriceItemsServices,
 			boolean utilizeCoopVendorDollars, boolean retainCurrentConsumers, boolean increaseCustomerVisits,
 			boolean increaseTrafficLeadCalls, boolean expandTargetConsumers, boolean changeConsumerAttitudes,
@@ -32,8 +32,10 @@ public class ClientObjectivesOnePageModel {
 			int developSpeciallyStagedEventSortOrder, int maintainMarketDominanceSortOrder,
 			int improveBusinessNameBrandSortOrder, int establishorReestablishBusinessImageSortOrder,
 			int createPentUpDemandSortOrder, int increaseMarketShareSortOrder, int otherSortOrder,
-			int utilizeCoopVendorDollarsSortOrder, String otherText) {
+			int utilizeCoopVendorDollarsSortOrder, String otherText ) {
 		super();
+		this.quarterlySeasonalCampaign = quarterlySeasonalCampaign;
+		this.quarterlySeasonalCampaignSortOrder = quarterlySeasonalCampaignSortOrder;
 		this.introduceNewDepartment = introduceNewDepartment;
 		this.featureSpecificProducts = featureSpecificProducts;
 		this.callAttentiontoBrandsPrivateLabelsCarried = callAttentiontoBrandsPrivateLabelsCarried;
@@ -260,6 +262,7 @@ public class ClientObjectivesOnePageModel {
 
 	private boolean makePromotionalEventsStronger;
 	private boolean increaseDigitalMobileOnlineResponse;
+	private boolean quarterlySeasonalCampaign;
 	private boolean developAQuarterlySpike;
 	private boolean developDatabaseMarketing;
 	private boolean initiateCauseMarketingProgram;
@@ -286,6 +289,24 @@ public class ClientObjectivesOnePageModel {
 
 	private int makePromotionalEventsStrongerSortOrder;
 	private int increaseDigitalMobileOnlineResponseSortOrder;
+	private int quarterlySeasonalCampaignSortOrder;
+	
+	public boolean isQuarterlySeasonalCampaign() {
+		return quarterlySeasonalCampaign;
+	}
+
+	public void setQuarterlySeasonalCampaign(boolean quarterlySeasonalCampaign) {
+		this.quarterlySeasonalCampaign = quarterlySeasonalCampaign;
+	}
+
+	public int getQuarterlySeasonalCampaignSortOrder() {
+		return quarterlySeasonalCampaignSortOrder;
+	}
+
+	public void setQuarterlySeasonalCampaignSortOrder(int quarterlySeasonalCampaignSortOrder) {
+		this.quarterlySeasonalCampaignSortOrder = quarterlySeasonalCampaignSortOrder;
+	}
+
 	private int developAQuarterlySpikeSortOrder;
 	private int developDatabaseMarketingSortOrder;
 	private int initiateCauseMarketingProgramSortOrder;

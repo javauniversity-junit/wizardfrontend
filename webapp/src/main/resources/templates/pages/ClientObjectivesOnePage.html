@@ -239,6 +239,21 @@
 						<div class="form-group">
 
 							<div class="checkbox">
+								<label><input name="quarterlySeasonalCampaign"
+									type="checkbox"
+									th:checked="${dataPageModel?.quarterlySeasonalCampaign}">
+									<span id="quarterlySeasonalCampaignLabel">
+									<script>
+									addLabel("quarterlySeasonalCampaignLabel");
+									</script>
+									
+									</span></label>
+							</div>
+
+						</div>
+						<div class="form-group">
+
+							<div class="checkbox">
 								<label><input name="developDatabaseMarketing"
 									type="checkbox"
 									th:checked="${dataPageModel?.developDatabaseMarketing}">
@@ -398,6 +413,9 @@
 
 	<input type="hidden" name="makePromotionalEventsStrongerSortOrderStr" th:value="${dataPageModel?.makePromotionalEventsStrongerSortOrder}" />
 	<input type="hidden" name="increaseDigitalMobileOnlineResponseSortOrderStr" th:value="${dataPageModel?.increaseDigitalMobileOnlineResponseSortOrder}" />
+	<input type="hidden" name="quarterlySeasonalCampaignSortOrder" th:value="${dataPageModel?.quarterlySeasonalCampaignSortOrder}" />
+	
+	
 	<input type="hidden" name="developAQuarterlySpikeSortOrderStr"  th:value="${dataPageModel?.developAQuarterlySpikeSortOrder}" />
 	<input type="hidden" name="developDatabaseMarketingSortOrderStr" th:value="${dataPageModel?.developDatabaseMarketingSortOrder}">
 	<input type="hidden" name="initiateCauseMarketingProgramSortOrderStr" th:value="${dataPageModel?.initiateCauseMarketingProgramSortOrder}" />

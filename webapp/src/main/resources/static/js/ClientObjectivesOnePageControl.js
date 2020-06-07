@@ -6,6 +6,7 @@ map.set('featureSpecificProductsLabel', 'Feature Specific Products/Services');
 map.set('callAttentiontoBrandsPrivateLabelsCarriedLabel', 'Call Attention to Brands/Private Labels Carried');
 map.set('promoteOffPriceItemsServicesLabel', 'Promote Off-price Items/Services');
 
+map.set('quarterlySeasonalCampaignLabel', 'Establish a quarterly spike/seasonal campaign');
 
 map.set('utilizeCoopVendorDollarsLabel', 'Utilize Co-op/Vendor Dollars');
 map.set('retainCurrentConsumersLabel', 'Retain/Recapture Consumers');

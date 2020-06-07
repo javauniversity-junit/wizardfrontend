@@ -88,29 +88,9 @@ public class PublishController {
 		StringBuffer domainBuffer = new StringBuffer();
 
 		
-		String domain = null;
-		try {
-		String host = envUtil.getHostname();
-		String port = envUtil.getPort();
-		String protocol = env.getProperty("protcol");
-		String rootPath = env.getProperty("rootpath");
-		domainBuffer.append(protocol);
-		domainBuffer.append("://");
-		domainBuffer.append(host);
-		domainBuffer.append(":");
-		domainBuffer.append(port);
-		domainBuffer.append("/");
-		domainBuffer.append(rootPath);
-		domainBuffer.append("/");
-		mLog.info("host = " + host);
+		String domain = env.getProperty("domain");
 		
-		domain = domainBuffer.toString();
-		mLog.info("port = " + port);
 		
-		} catch (Exception e) {
-			domain = env.getProperty("domain");
-			mLog.severe("error  = " + e.getMessage());
-		}
 		
 		//mLog.info("domainA = " + domainA);
 		buffer.append(domain);

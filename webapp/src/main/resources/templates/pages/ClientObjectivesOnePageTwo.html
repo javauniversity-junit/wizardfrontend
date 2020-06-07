@@ -37,14 +37,15 @@
 
 	<div class="container" style="padding-top: 1%;">
 		<div>
-			<form method="post" action="saveClientObjectivesOnePage" autocomplete="off">
+			<form method="post" action="saveClientObjectivesOnePage"
+				autocomplete="off">
 
 				<fieldset>
 					<legend>
 						(5 of 24) Client Objectives - <span th:text="${wizard.name}"></span>
 					</legend>
 					<p>Order the client objectives that were selected on the
-							previous page</p>
+						previous page</p>
 					<div class="form-group">
 
 						<table class="table">
@@ -85,79 +86,70 @@
 
 
 
-				<input name="introduceNewDepartment" type="hidden"
-					th:value="${dataPageModel?.introduceNewDepartment}" /> <input
-					name="featureSpecificProducts" type="hidden"
-					th:value="${dataPageModel?.featureSpecificProducts}" /> <input
-					name="callAttentiontoBrandsPrivateLabelsCarried" type="hidden"
-					th:value="${dataPageModel?.callAttentiontoBrandsPrivateLabelsCarried}" />
+					<input name="introduceNewDepartment" type="hidden"
+						th:value="${dataPageModel?.introduceNewDepartment}" /> <input
+						name="featureSpecificProducts" type="hidden"
+						th:value="${dataPageModel?.featureSpecificProducts}" /> <input
+						name="callAttentiontoBrandsPrivateLabelsCarried" type="hidden"
+						th:value="${dataPageModel?.callAttentiontoBrandsPrivateLabelsCarried}" />
 
-<input name="utilizeCoopVendorDollars" type="hidden"
-					th:value="${dataPageModel?.utilizeCoopVendorDollars}" />
+					<input name="utilizeCoopVendorDollars" type="hidden"
+						th:value="${dataPageModel?.utilizeCoopVendorDollars}" /> <input
+						name="promoteOffPriceItemsServices" type="hidden"
+						th:value="${dataPageModel?.promoteOffPriceItemsServices}" /> <input
+						name="retainCurrentConsumers" type="hidden"
+						th:value="${dataPageModel?.retainCurrentConsumers}" /> <input
+						name="retainCurrentConsumers" type="hidden"
+						th:value="${dataPageModel?.retainCurrentConsumers}" /> <input
+						name="increaseCustomerVisits" type="hidden"
+						th:value="${dataPageModel?.increaseCustomerVisits}" /> <input
+						name="increaseTrafficLeadCalls" type="hidden"
+						th:value="${dataPageModel?.increaseTrafficLeadCalls}" /> <input
+						name="expandTargetConsumers" type="hidden"
+						th:value="${dataPageModel?.expandTargetConsumers}" /> <input
+						name="changeConsumerAttitudes" type="hidden"
+						th:value="${dataPageModel?.changeConsumerAttitudes}" /> <input
+						name="makePromotionalEventsStronger" type="hidden"
+						th:value="${dataPageModel?.makePromotionalEventsStronger}" /> <input
+						name="quarterlySeasonalCampaign" type="hidden"
+						th:value="${dataPageModel?.quarterlySeasonalCampaign}" /> <input
+						name="increaseDigitalMobileOnlineResponse" type="hidden"
+						th:value="${dataPageModel?.increaseDigitalMobileOnlineResponse}" />
 
-
-
-
-
-				<input name="promoteOffPriceItemsServices" type="hidden"
-					th:value="${dataPageModel?.promoteOffPriceItemsServices}" /> 
-					<input
-					name="retainCurrentConsumers" type="hidden"
-					th:value="${dataPageModel?.retainCurrentConsumers}" /> 
-					<input
-					name="retainCurrentConsumers" type="hidden"
-					th:value="${dataPageModel?.retainCurrentConsumers}" /> 
-					<input
-					name="increaseCustomerVisits" type="hidden"
-					th:value="${dataPageModel?.increaseCustomerVisits}" /> <input
-					name="increaseTrafficLeadCalls" type="hidden"
-					th:value="${dataPageModel?.increaseTrafficLeadCalls}" /> 
-					<input 
-					 name="expandTargetConsumers" type="hidden"
-					th:value="${dataPageModel?.expandTargetConsumers}" /> <input
-					name="changeConsumerAttitudes" type="hidden"
-					th:value="${dataPageModel?.changeConsumerAttitudes}" /> <input
-					name="makePromotionalEventsStronger" type="hidden"
-					th:value="${dataPageModel?.makePromotionalEventsStronger}" /> <input
-					name="increaseDigitalMobileOnlineResponse" type="hidden"
-					th:value="${dataPageModel?.increaseDigitalMobileOnlineResponse}" />
-
-				<input name="developDatabaseMarketing" type="hidden"
-					th:value="${dataPageModel?.developDatabaseMarketing}" /> <input
-					name="initiateCauseMarketingProgram" type="hidden"
-					th:value="${dataPageModel?.initiateCauseMarketingProgram}" /> <input
-					name="developSpeciallyStagedEvent" type="hidden"
-					th:value="${dataPageModel?.developSpeciallyStagedEvent}" /> <input
-					name="maintainMarketDominance" type="hidden"
-					th:value="${dataPageModel?.maintainMarketDominance}" /> <input
-					name="improveBusinessNameBrand" type="hidden"
-					th:value="${dataPageModel?.improveBusinessNameBrand}" /> <input
-					name="establishorReestablishBusinessImage" type="hidden"
-					th:value="${dataPageModel?.establishorReestablishBusinessImage}" />
-				<input name="createPentUpDemand" type="hidden"
-					th:value="${dataPageModel?.createPentUpDemand}" /> <input
-					name="increaseMarketShare" type="hidden"
-					th:value="${dataPageModel?.increaseMarketShare}" /> <input
-					name="other" type="hidden" th:value="${dataPageModel?.other}" /> 
-					<input
-					name="otherText" type="hidden" th:value="${dataPageModel?.otherText}" />
-					<input
-					type="hidden"
-					th:value="'redirect:/StrategicMarketingPageOne?ID=' + ${wizard.wizardid}"
-					name="nextPage" /> <input type="hidden" id="previousPage"
-					th:value="'redirect:/ClientObjectivesOnePage?ID=' + ${wizard.wizardid}"
-					name="previousPage" /> <input type="hidden" id="publishPage"
-					th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
-					name="publishPage" /> <input type="hidden" id="wizardId"
-					th:value="${wizard.wizardid}" name="wizardId" /> <input
-					type="hidden" id="wizarddataid"
-					th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> <input
-					name="next" type="submit" value="Next" class="btn btn-primary"
-					style="background-color: #C0B879;" /> <input name="publish"
-					type="submit" value="Publish" class="btn btn-primary"
-					style="background-color: #C0B879;" /> <input name="previous"
-					value="Previous" type="submit" class="btn btn-primary"
-					style="background-color: #C0B879;" />
+					<input name="developDatabaseMarketing" type="hidden"
+						th:value="${dataPageModel?.developDatabaseMarketing}" /> <input
+						name="initiateCauseMarketingProgram" type="hidden"
+						th:value="${dataPageModel?.initiateCauseMarketingProgram}" /> <input
+						name="developSpeciallyStagedEvent" type="hidden"
+						th:value="${dataPageModel?.developSpeciallyStagedEvent}" /> <input
+						name="maintainMarketDominance" type="hidden"
+						th:value="${dataPageModel?.maintainMarketDominance}" /> <input
+						name="improveBusinessNameBrand" type="hidden"
+						th:value="${dataPageModel?.improveBusinessNameBrand}" /> <input
+						name="establishorReestablishBusinessImage" type="hidden"
+						th:value="${dataPageModel?.establishorReestablishBusinessImage}" />
+					<input name="createPentUpDemand" type="hidden"
+						th:value="${dataPageModel?.createPentUpDemand}" /> <input
+						name="increaseMarketShare" type="hidden"
+						th:value="${dataPageModel?.increaseMarketShare}" /> <input
+						name="other" type="hidden" th:value="${dataPageModel?.other}" />
+					<input name="otherText" type="hidden"
+						th:value="${dataPageModel?.otherText}" /> <input type="hidden"
+						th:value="'redirect:/StrategicMarketingPageOne?ID=' + ${wizard.wizardid}"
+						name="nextPage" /> <input type="hidden" id="previousPage"
+						th:value="'redirect:/ClientObjectivesOnePage?ID=' + ${wizard.wizardid}"
+						name="previousPage" /> <input type="hidden" id="publishPage"
+						th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
+						name="publishPage" /> <input type="hidden" id="wizardId"
+						th:value="${wizard.wizardid}" name="wizardId" /> <input
+						type="hidden" id="wizarddataid"
+						th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> <input
+						name="next" type="submit" value="Next" class="btn btn-primary"
+						style="background-color: #C0B879;" /> <input name="publish"
+						type="submit" value="Publish" class="btn btn-primary"
+						style="background-color: #C0B879;" /> <input name="previous"
+						value="Previous" type="submit" class="btn btn-primary"
+						style="background-color: #C0B879;" />
 				</fieldset>
 			</form>
 			<div class="container" style="padding-top: 2%;">
@@ -190,7 +182,7 @@
 		integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
 		crossorigin="anonymous"></script>
 
-		<script th:inline="javascript">
+	<script th:inline="javascript">
 		/*<![CDATA[*/
 		$(function() {
 			// Store
