@@ -1,3 +1,15 @@
+.arrow-text {
+	font-size: 1.3em;
+	padding-top: 2%;
+}
+.arrow_dim {
+	padding-left: 2%;
+	padding-right: 2%;
+	
+}
+img.longrange {
+	width: 250px;
+}
 .vertical-center {
   margin: 0;
   position: absolute;
