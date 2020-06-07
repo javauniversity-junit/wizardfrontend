@@ -1,167 +1,75 @@
-<div th:fragment="PlanAMediaPageFlightDates"
-	class="grad container pageBreakInside" style="height: 100%;">
-	<div th:if="${PublishModel.planAMediaPage}">
+<div class="grid-container" style="padding-top: 5%;">
+			<div class="w3-row" >
+				<div class="w3-col m2 arrow-text">SATURATION</div>
+				<div class="w3-col m2 arrow_dim">
 
-		<input type="hidden" id="mediarows"
-			th:value="${PlanAMediaPagedataPageModel?.mediaRows}" name="mediarows" />
-
-		<div>
-			<a id="PlanAMediaPageFlightDates"></a>
-			<p class="text-justify"></p>
-
-		</div>
-
-
-		<div class="whiteGrad mce-content-body">
-			<p>In return for fulfilling stated goals Premium Auto Centers
-				agrees to invest in the following long-term plan</p>
-			<!-- if="${PublishModel.clientObjectivesPage} -->
-			<div th:if="${PublishModel.clientObjectivesPage}">
-
-
-				<!-- end of spreadsheet -->
-				<script src="js/ClientObjectivesOnePageControl.js">
-					
-				</script>
+					<img src="./img/arrow_black.svg" alt="" class="img-fluid longrange">
+				</div>
 
 
 
+				<div class="w3-col m2 arrow-text">13 WEEKS</div>
 
-				</script>
-				<script src="js/media.js">
-				<!-- loop thru clientObjectives -->
-					<ol>
-					<li th:each="selectedModel : ${ClientObjectivesPageModel}"> < span
-					th: id = "${selectedModel?.label}" > <script
-								th:inline="javascript">
-					/*<![CDATA[*/
+				<div class="w3-col m3 arrow_dim">
 
-					var message = /*[[${selectedModel?.label}]]*/'default';
-					//message = "'" + message + "'";
-					addLabel(message);
-
-					/*]]>*/
-				</script>
-
-				</span>
-				</li>
+					<img src="./img/arrow_black.svg" alt="" class="img-fluid longrange">
+				</div>
 
 
 
-				</ol>
+				<div class="col-sm-1 arrow-text">AWARENESS</div>
+
+			</div>
+
+			<!--  second row -->
+			<div class="w3-row" style="padding-top: 2%;">
+				<div class="col-sm-2 arrow-text">PENETRATION</div>
+				<div class="col-sm-2 arrow_dim">
+
+					<img src="./img/arrow_green.svg" alt="" class="img-fluid longrange">
+				</div>
+
+
+
+				<div class="col-sm-2 arrow-text">26 WEEKS</div>
+
+				<div class="col-sm-3 arrow_dim">
+
+					<img src="./img/arrow_green.svg" alt="" class="img-fluid longrange">
+				</div>
+
+
+
+				<div class="col-sm-1 arrow-text">RECOGNITION</div>
+
+
 
 
 
 			</div>
-			<div>
-				<h2 style="text-align: center;">Plan A</h2>
 
-				<h2
-					th:text="'For the benefit of the client ' + ${PresentedToPage?.clientContactName} + ' agrees to develop a marketing strategy to help' ">
 
-					WWWW</h2>
+			<!-- last row -->
+			<div class="w3-row arrow-text" style="padding-top: 2%;">
+				<div class="w3-col m2">DOMINANCE</div>
+				<div class="w3-col m2 arrow_dim">
+
+					<img src="./img/arrow_yellow.svg" alt=""
+						class="img-fluid longrange">
+				</div>
+
+
+
+				<div class="w3-col m2 arrow-text">52 WEEKS</div>
+
+				<div class="w3-col m3 arrow_dim">
+
+					<img src="./img/arrow_yellow.svg" alt=""
+						class="img-fluid longrange">
+				</div>
+
+
+
+				<div class="w3-col m1 arrow-text">ACCEPTANCE</div>
 			</div>
-			<div id="spreadSheet">
-				<table class="table table-striped" id="headerTable">
-					<thead>
-						<tr>
-							<th>Media</th>
-							<th>Jan</th>
-							<th>Feb</th>
-							<th>Mar</th>
-							<th>Apr</th>
-							<th>May</th>
-							<th>Jun</th>
-							<th>Jul</th>
-							<th>Aug</th>
-							<th>Sep</th>
-							<th>Oct</th>
-							<th>Nov</th>
-							<th>Dec</th>
-							<th>Total</th>
-						</tr>
-					</thead>
-					<tbody>
-						<!-- existing data could optionally be included here -->
-					</tbody>
-					<tfoot>
-						<!-- existing data could optionally be included here -->
-
-					</tfoot>
-				</table>
-			</div>
-
-			<template id="productrow">
-			<tr>
-				<td>www</td>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-				<td>6</td>
-				<td>7</td>
-				<td>8</td>
-				<td>9</td>
-				<td>10</td>
-				<td>11</td>
-				<td>12</td>
-				<td>110</td>
-			</tr>
-			</template>
-
-			<template id="footerrow">
-			<tr>
-				<td>total</td>
-				<td>1</td>
-				<td>2</td>
-				<td>3</td>
-				<td>4</td>
-				<td>5</td>
-				<td>6</td>
-				<td>7</td>
-				<td>8</td>
-				<td>9</td>
-				<td>10</td>
-				<td>11</td>
-				<td>12</td>
-				<td>110</td>
-			</tr>
-			</template>
-
-
-
-			<div>
-
-				<p>Client may cancel after 13 weeks from schedule start date
-					with two weeks’ notice and no short rate. This offer is good for 10
-					business days from the date of presentation. In accordance with
-					Paragraphs 49 and 50 of United States Federal Communications
-					Commission Report and Order No. FCC 07-217, this station will not
-					discriminate in any contract for advertising on the basis of race
-					or ethnicity, and all such contracts will be evaluated, accepted,
-					negotiated and completed without regard to race or ethnicity</p>
-
-				<h2>Analysis of Schedule:</h2>
-			</div>
-		</div>
-
-
-		<!-- end of spreadsheet -->
-		<script src="js/ClientObjectivesOnePageControl.js">
-			
-		</script>
-
-
-		<script src="js/medialSpreadSheet.js">
-			
-		</script>
-		<script>
-			const mediaRows = document.getElementById("mediarows").value
-			if (mediaRows.length > 4) {
-				objs = JSON.parse(mediaRows);
-			}
-			buildSpreadSheet();
-		</script>
-	</div>
-</div>
+		</div> <!-- last of container div -->

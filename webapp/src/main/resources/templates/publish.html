@@ -11,8 +11,12 @@
 <link rel="stylesheet" href="css/publish.css">
 <link rel="stylesheet" href="css/extra.css">
 <script src="https://www.gstatic.com/charts/loader.js"></script>
+
 <script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
 <script src="js/ClientObjectivesOnePageControl.js"></script>
 <script src="js/media.js"></script>
 <script src="js/currency.js"></script>
@@ -37,7 +41,8 @@
 			'packages' : [ 'corechart' ]
 		});
 	</script>
-	<form id="shareForm" method="get" action="PublishLink" autocomplete="off">
+	<form id="shareForm" method="get" action="PublishLink"
+		autocomplete="off">
 		<input type="hidden" id="encryptId" th:value="${encryptId}"
 			name="encryptId" />
 	</form>
