@@ -1,12 +1,21 @@
 .arrow-text {
 	font-size: 1.3em;
-	padding-left: 2%;
+	
 	padding-top: 2.15%;
+}
+.arrow-text-middle {
+	padding-left: 9%;
 }
 .arrow_dim {
 	padding-left: 2%;
 	padding-right: 2%;
 	
+}
+​path {
+    fill: blue;
+}​
+svg:path.green {
+	fill: #002b00;;
 }
 img.longrange {
 	width: 250px;
