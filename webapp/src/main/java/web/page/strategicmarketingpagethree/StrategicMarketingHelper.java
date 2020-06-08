@@ -48,7 +48,7 @@ public class StrategicMarketingHelper {
 		mLog.info("builder " + builder.toString());
 		if (tue) {
 			if (mon) {
-				builder.append(",Tuesday");
+				builder.append(", Tuesday");
 			} else {
 				builder.append("Tuesday");
 			}
@@ -57,7 +57,7 @@ public class StrategicMarketingHelper {
 		mLog.info("builder " + builder.toString());
 		if (wed) {
 			if (mon || tue) {
-				builder.append(",Wednesday");
+				builder.append(", Wednesday");
 			} else {
 				builder.append("Wednesday");
 			}
@@ -66,7 +66,7 @@ public class StrategicMarketingHelper {
 
 		if (thu) {
 			if (mon || tue || wed) {
-				builder.append(",Thursday");
+				builder.append(", Thursday");
 			} else {
 				builder.append("Thursday");
 			}
@@ -75,7 +75,7 @@ public class StrategicMarketingHelper {
 
 		if (fri) {
 			if (mon || tue || wed || thu) {
-				builder.append(",Friday");
+				builder.append(", Friday");
 			} else {
 				builder.append("Friday");
 			}
@@ -84,7 +84,7 @@ public class StrategicMarketingHelper {
 
 		if (sat) {
 			if (mon || tue || wed || thu || fri) {
-				builder.append(",Saturday");
+				builder.append(", Saturday");
 			} else {
 				builder.append("Saturday");
 			}
@@ -92,7 +92,7 @@ public class StrategicMarketingHelper {
 		}
 		if (sun) {
 			if (mon || tue || wed || thu || fri || sat) {
-				builder.append(",Sunday");
+				builder.append(", Sunday");
 			} else {
 				builder.append("Sunday");
 			}
@@ -132,7 +132,7 @@ public class StrategicMarketingHelper {
 		mLog.info("builder " + builder.toString());
 		if (feb) {
 			if (jan) {
-				builder.append(",February");
+				builder.append(", February");
 			} else {
 				builder.append("February");
 			}
@@ -141,7 +141,7 @@ public class StrategicMarketingHelper {
 		mLog.info("builder " + builder.toString());
 		if (mar) {
 			if (jan || feb) {
-				builder.append(",March");
+				builder.append(", March");
 			} else {
 				builder.append("March");
 			}
@@ -150,7 +150,7 @@ public class StrategicMarketingHelper {
 
 		if (apr) {
 			if (jan || feb || mar) {
-				builder.append(",April");
+				builder.append(", April");
 			} else {
 				builder.append("April");
 			}
@@ -159,7 +159,7 @@ public class StrategicMarketingHelper {
 
 		if (may) {
 			if (jan || feb || mar || apr) {
-				builder.append(",May");
+				builder.append(", May");
 			} else {
 				builder.append("May");
 			}
@@ -168,7 +168,7 @@ public class StrategicMarketingHelper {
 
 		if (jun) {
 			if (jan || feb || mar || apr || may) {
-				builder.append(",June");
+				builder.append(", June");
 			} else {
 				builder.append("June");
 			}
@@ -176,7 +176,7 @@ public class StrategicMarketingHelper {
 		}
 		if (jul) {
 			if (jan || feb || mar || apr || may || jun) {
-				builder.append(",July");
+				builder.append(", July");
 			} else {
 				builder.append("July");
 			}
@@ -185,7 +185,7 @@ public class StrategicMarketingHelper {
 
 		if (aug) {
 			if (jan || feb || mar || apr || may || jun || jul) {
-				builder.append(",August");
+				builder.append(", August");
 			} else {
 				builder.append("August");
 			}
@@ -194,7 +194,7 @@ public class StrategicMarketingHelper {
 
 		if (sep) {
 			if (jan || feb || mar || apr || may || jun || jul || aug) {
-				builder.append(",September");
+				builder.append(", September");
 			} else {
 				builder.append("September");
 			}
@@ -203,7 +203,7 @@ public class StrategicMarketingHelper {
 
 		if (oct) {
 			if (jan || feb || mar || apr || may || jun || jul || aug || sep) {
-				builder.append(",October");
+				builder.append(", October");
 			} else {
 				builder.append("October");
 			}
@@ -212,7 +212,7 @@ public class StrategicMarketingHelper {
 
 		if (nov) {
 			if (jan || feb || mar || apr || may || jun || jul || aug || sep || oct) {
-				builder.append(",November");
+				builder.append(", November");
 			} else {
 				builder.append("November");
 			}
@@ -221,7 +221,7 @@ public class StrategicMarketingHelper {
 
 		if (dec) {
 			if (jan || feb || mar || apr || may || jun || jul || aug || sep || oct || nov) {
-				builder.append(",December");
+				builder.append(", December");
 			} else {
 				builder.append("December");
 			}
@@ -255,7 +255,7 @@ public class StrategicMarketingHelper {
 		mLog.info("builder " + builder.toString());
 		if (feb) {
 			if (jan) {
-				builder.append(",February");
+				builder.append(", February");
 			} else {
 				builder.append("February");
 			}
@@ -264,7 +264,7 @@ public class StrategicMarketingHelper {
 		mLog.info("builder " + builder.toString());
 		if (mar) {
 			if (jan || feb) {
-				builder.append(",March");
+				builder.append(", March");
 			} else {
 				builder.append("March");
 			}
@@ -273,7 +273,7 @@ public class StrategicMarketingHelper {
 
 		if (apr) {
 			if (jan || feb || mar) {
-				builder.append(",April");
+				builder.append(", April");
 			} else {
 				builder.append("April");
 			}
@@ -282,7 +282,7 @@ public class StrategicMarketingHelper {
 
 		if (may) {
 			if (jan || feb || mar || apr) {
-				builder.append(",May");
+				builder.append(", May");
 			} else {
 				builder.append("May");
 			}
@@ -291,7 +291,7 @@ public class StrategicMarketingHelper {
 
 		if (jun) {
 			if (jan || feb || mar || apr || may) {
-				builder.append(",June");
+				builder.append(", June");
 			} else {
 				builder.append("June");
 			}
@@ -299,7 +299,7 @@ public class StrategicMarketingHelper {
 		}
 		if (jul) {
 			if (jan || feb || mar || apr || may || jun) {
-				builder.append(",July");
+				builder.append(", July");
 			} else {
 				builder.append("July");
 			}
@@ -308,7 +308,7 @@ public class StrategicMarketingHelper {
 
 		if (aug) {
 			if (jan || feb || mar || apr || may || jun || jul) {
-				builder.append(",August");
+				builder.append(", August");
 			} else {
 				builder.append("August");
 			}
@@ -317,7 +317,7 @@ public class StrategicMarketingHelper {
 
 		if (sep) {
 			if (jan || feb || mar || apr || may || jun || jul || aug) {
-				builder.append(",September");
+				builder.append(", September");
 			} else {
 				builder.append("September");
 			}
@@ -326,7 +326,7 @@ public class StrategicMarketingHelper {
 
 		if (oct) {
 			if (jan || feb || mar || apr || may || jun || jul || aug || sep) {
-				builder.append(",October");
+				builder.append(", October");
 			} else {
 				builder.append("October");
 			}
@@ -335,7 +335,7 @@ public class StrategicMarketingHelper {
 
 		if (nov) {
 			if (jan || feb || mar || apr || may || jun || jul || aug || sep || oct) {
-				builder.append(",November");
+				builder.append(", November");
 			} else {
 				builder.append("November");
 			}
@@ -344,7 +344,7 @@ public class StrategicMarketingHelper {
 
 		if (dec) {
 			if (jan || feb || mar || apr || may || jun || jul || aug || sep || oct || nov) {
-				builder.append(",December");
+				builder.append(", December");
 			} else {
 				builder.append("December");
 			}
