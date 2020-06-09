@@ -17,8 +17,10 @@
 svg:path.green {
 	fill: #002b00;
 }
+/* width: 250px; */
 img.longrange {
-	width: 250px;
+	
+ 	width: 1em;
 }
 .vertical-center {
   margin: 0;
