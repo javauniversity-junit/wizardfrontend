@@ -11,6 +11,10 @@
 	padding-right: 2%;
 	
 }
+.responsive {
+  width: 100%;
+  height: auto;
+}
 ​path {
     fill: blue;
 }​
@@ -20,7 +24,7 @@ svg:path.green {
 /* width: 250px; */
 img.longrange {
 	
- 	width: 250px;
+ 	width: 200px;
 }
 .vertical-center {
   margin: 0;
@@ -305,7 +309,7 @@ div.curved-text {
 .whiteGrad {
 	padding: 2%;
 	min-height: 700px;
-	font-size: 1.275em; /* 30px/16=1.875em */
+	font-size: 1.0275em; /* 30px/16=1.875em */
 	position: relative;
 	color: black;
 	background-image: linear-gradient(white, white);
