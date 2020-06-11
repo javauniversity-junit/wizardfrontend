@@ -87,7 +87,7 @@
 </textarea>	
 
 <input type="hidden" id="nextPage"
-					th:value="'redirect:/PlanALifetimeValuedPage?ID=' + ${wizard.wizardid}"
+					th:value="'redirect:/MarketingStrategiesPage?ID=' + ${wizard.wizardid}"
 					name="nextPage" /> 
 					
 					<input type="hidden" id="previousPage"
@@ -99,9 +99,14 @@
 					name="publishPage" /> <input type="hidden" id="wizardId"
 					th:value="${wizard.wizardid}" name="wizardId" /> <input
 					type="hidden" id="wizarddataid"
-					th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> <input
-					name="next" type="hidden" value="Next" class="btn btn-primary"
-					style="background-color: #C0B879;" /> <input name="publish"
+					th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> 
+					<input
+					name="next" type="submit" value="Next" class="btn btn-primary"
+					style="background-color: #C0B879;" />
+					
+					 
+					
+					<input name="publish"
 					type="submit" value="Publish" class="btn btn-primary"
 					style="background-color: #C0B879;" /> <input name="previous"
 					value="Previous" type="submit" class="btn btn-primary"
