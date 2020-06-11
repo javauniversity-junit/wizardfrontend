@@ -15,16 +15,20 @@
 			</div>
 
 			<div class="w3-row">
-				<p>
-					A. What percentage of your “target” consumers are Men? <span
+				<p><strong>
+					A. What percentage of your “target” consumers are Men? </strong><span
 						th:text="${targetMarketingPageModel?.pctMen + '%'}">
-						</span> Women ? <span
+						</span>
+						<span style="padding-left: 2%;">
+						<strong>Women?</strong>  
+						</span>
+						<span 
 						th:text="${targetMarketingPageModel?.pctWomen + '%'}"></span>
 				</p>
 			</div>
 			<div class="w3-row">
-				<p>B. What is the perceived income of your “target” consumer’s
-					household</p>
+				<p><strong>B. What is the perceived income of your “target” consumer’s
+					household?</strong></p>
 			</div>
 			<div class="w3-container">
 				<div class="w3-row">
@@ -50,9 +54,9 @@
 
 
 			<div class="w3-row">
-				<p>C. How else would you describe your ideal “target” consumer
+				<p><strong>C. How else would you describe your ideal “target” consumer
 					(i.e. geo-targeting, home value, behavior, lifestyle, interests,
-					family structure, etc)?</p>
+					family structure, etc)?</strong></p>
 				<p
 					th:text="${targetMarketingPageModel?.describeIdealTargetConsumer}"></p>
 			</div>
