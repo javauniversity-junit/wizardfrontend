@@ -213,6 +213,11 @@ hr.dark {
 	width: 80%;
 	margin: 0 auto;
 }
+div.sign {
+  margin-top: -8px !important;
+  padding: 0px !important;
+}
+
 
 .extend-underline u:after {
 	content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";

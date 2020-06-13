@@ -15,12 +15,10 @@
 				<h1 class="text-center w3-text-black">Team Commitment</h1>
 			</div>
 			<div class="w3-row">
-			    <div class="w3-col m8">
-			         <h2>The following proposal will be submitted to </h2>
+			    <div class="w3-col m12">
+			         <h2 th:text="'The following proposal will be submitted to ' + ${PresentedToPage?.clientContactName}">The following proposal will be submitted to </h2>
 			    </div>
-			    <div class="w3-col m4">
-			    <h1 th:text="${PresentedToPage?.clientContactName}"></h1>
-			    </div>
+			    
 				
 			</div>
 			
@@ -33,56 +31,70 @@
 				your team.</p>
 
 
+
+
+
+
+
+
 			<div class="w3-container" style="padding-top: 5%;">
-				<div class="w3-container">
-					<div class="col-p-12">
+				<div class="w3-row">
+					<div class=" w3-col m12">
 						<hr class="dark">
 					</div>
 
 				</div>
-				<div class="w3-container" style="padding-bottom: 2%;">
-					<div class="bold-text col-p-4" th:text="${TeamCommitmentPage?.topLevelName}"></div>
-					<div class="bold-text col-p-4" th:text="${TeamCommitmentPage?.topLevelTitle}"></div>
-					<div class="bold-text col-p-4">Date</div>
+				<div class="w3-row sign" style="padding-bottom: 2%; padding-left:5%;">
+				
+					<div style="padding-left:5%;" class="bold-text w3-col m4" th:text="${TeamCommitmentPage?.topLevelName}"></div>
+					<div class="bold-text  w3-col m4" th:text="${TeamCommitmentPage?.topLevelTitle}"></div>
+					<div class="bold-text  w3-col m4">Date</div>
 				</div>
-				<div class="w3-container">
-					<div class="col-p-12">
+				<div class="w3-row">
+					<div class=" w3-col m12">
 						<hr class="dark">
 					</div>
 
 				</div>
-				<div class="w3-container" style="padding-bottom: 2%;">
-					<div class="bold-text col-p-4"
+				
+				<div class="ww3-row sign" style="padding-bottom: 2%;">
+					<div class="bold-text  w3-col m4"
 						th:text="${TeamCommitmentPage?.secondLevelName}"></div>
-					<div class="bold-text col-p-4"
+					<div class="bold-text  w3-col m4"
 						th:text="${TeamCommitmentPage?.secondLevelTitle}"></div>
-					<div class="bold-text col-p-4">Date</div>
+					<div class="bold-text  w3-col m4">Date</div>
 				</div>
-				<div class="w3-container">
-					<div class="col-p-12">
+				
+				
+				
+				<div class="w3-row">
+					<div class="w3-col m12">
 						<hr class="dark">
 					</div>
 
 				</div>
-				<div class="w3-container" style="padding-bottom: 2%;">
-					<div class="bold-text col-p-4"
+				<div class="w3-row sign" style="padding-bottom: 2%;">
+					<div class="bold-text w3-col m4"
 						th:text="${TeamCommitmentPage?.thirdLevelName}"></div>
-					<div class="bold-text col-p-4"
+					<div class="bold-text w3-col m4"
 						th:text="${TeamCommitmentPage?.thirdLevelTitle}"></div>
-					<div class="bold-text col-p-4">Date</div>
+					<div class="bold-text w3-col m4">Date</div>
 				</div>
-				<div class="w3-container">
-					<div class="col-p-12">
+				
+				
+				<div class="w3-row">
+					<div class="w3-col m12">
 						<hr class="dark">
 					</div>
 
+
 				</div>
-				<div class="w3-container" style="padding-bottom: 2%;">
-					<div class="bold-text col-p-4"
+				<div class="w3-row sign" style="padding-bottom: 2%;">
+					<div class="bold-text w3-col m4"
 						th:text="${TeamCommitmentPage?.fourthLevelName}"></div>
-					<div class="bold-text col-p-4"
+					<div class="bold-text w3-col m4"
 						th:text="${TeamCommitmentPage?.fourthLevelTitle}"></div>
-					<div class="bold-textcol-p-4">Date</div>
+					<div class="bold-text w3-col m4">Date</div>
 				</div>
 			</div>
 		</div>
