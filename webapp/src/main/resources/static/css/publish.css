@@ -214,7 +214,8 @@ hr.dark {
 	margin: 0 auto;
 }
 div.sign {
-  vertical-align: top;
+    width:  1px;
+    border-top: 2px solid black;
 }
 
 
