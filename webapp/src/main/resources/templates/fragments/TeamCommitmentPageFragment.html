@@ -16,7 +16,7 @@
 			</div>
 			<div class="w3-row">
 			    <div class="w3-col m12">
-			         <h2 th:text="'The following proposal will be submitted to ' + ${PresentedToPage?.clientContactName}">The following proposal will be submitted to </h2>
+			         <h2 th:text="'The following proposal will be submitted to ' + ${PresentedToPage?.clientBusinessName}">The following proposal will be submitted to </h2>
 			    </div>
 			    
 				
@@ -41,38 +41,38 @@
 				
 				<div class="w3-row" style="padding-bottom: 4%;">
 				
-					<div  class="sign bold-text w3-col m4" th:text="${TeamCommitmentPage?.topLevelName}"></div>
-					<div class="sign bold-text  w3-col m4" th:text="${TeamCommitmentPage?.topLevelTitle}"></div>
-					<div class="sign bold-text  w3-col m4">Date</div>
+					<div  class="sign  w3-col m4" th:text="${TeamCommitmentPage?.topLevelName}"></div>
+					<div class="sign   w3-col m4" th:text="${TeamCommitmentPage?.topLevelTitle}"></div>
+					<div class="sign   w3-col m4" style="text-align: right;">Date</div>
 				</div>
 				
 				
 				<div class="w3-row" style="padding-bottom: 4%;">
-					<div class="sign bold-text  w3-col m4"
+					<div class="sign   w3-col m4"
 						th:text="${TeamCommitmentPage?.secondLevelName}"></div>
-					<div class="sign bold-text  w3-col m4"
+					<div class="sign   w3-col m4"
 						th:text="${TeamCommitmentPage?.secondLevelTitle}"></div>
-					<div class="sign bold-text  w3-col m4">Date</div>
+					<div class="sign   w3-col m4" style="text-align: right;">Date</div>
 				</div>
 				
 				
 				
 				
 				<div class="w3-row" style="padding-bottom: 4%;">
-					<div class="sign bold-text w3-col m4"
+					<div class="sign  w3-col m4"
 						th:text="${TeamCommitmentPage?.thirdLevelName}"></div>
-					<div class="sign bold-text w3-col m4"
+					<div class="sign  w3-col m4"
 						th:text="${TeamCommitmentPage?.thirdLevelTitle}"></div>
-					<div class="sign bold-text w3-col m4">Date</div>
+					<div class="sign  w3-col m4" style="text-align: right;">Date</div>
 				</div>
 				
 				
 				<div class="w3-row" style="padding-bottom: 4%;">
-					<div class="sign bold-text w3-col m4"
+					<div class="sign  w3-col m4"
 						th:text="${TeamCommitmentPage?.fourthLevelName}"></div>
-					<div class="sign bold-text w3-col m4"
+					<div class="sign  w3-col m4"
 						th:text="${TeamCommitmentPage?.fourthLevelTitle}"></div>
-					<div class="sign bold-text w3-col m4">Date</div>
+					<div class="sign  w3-col m4" style="text-align: right;">Date</div>
 				</div>
 			</div>
 		</div>
