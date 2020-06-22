@@ -32,7 +32,10 @@ function FormatAmount(amount) {
 	s = "$" + s.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	return s;
 }
-
+function totalRow() {
+	calculatePlanDaily();
+	calculate();
+}
 /* tinas */
 function CommaFormatted(amount) {
 	
