@@ -14,11 +14,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.Authentication;
+import  com.scr.market.data.MyUserPrincipal;
 import java.security.Principal;
 import java.sql.SQLException;
 
 import com.scr.market.model.*;
 import com.scr.market.repository.*;
+
+
 
 import java.util.Optional;
 import java.util.logging.Logger;
@@ -71,17 +74,19 @@ public class AgentController {
 	}
 
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public String add(@RequestParam String email, @RequestParam String password) throws SQLException {
+	public String add(@RequestParam String email, @RequestParam String password, Authentication authentication) throws SQLException {
 		// @ResponseBody means the returned String is the response, not a view name
 		// @RequestParam means it is a parameter from the GET or POST request
 		mLog.info("starting add");
 		mLog.info("email " + email);
 		mLog.info("password " + password);
-		mLog.info("contact.getContactId() " + contact.getContactId());
+		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
+		
+		mLog.info("contact.getContactId() " + userDetails.getContact().getContactId());
 		Agent agent = new Agent();
 		agent.setAddress(email);
 		agent.setPassword(password);
-		agent.setContactId(contact.getContactId());
+		agent.setContactId(userDetails.getContact().getContactId());
 
         try {
 		agentRepository.save(agent);

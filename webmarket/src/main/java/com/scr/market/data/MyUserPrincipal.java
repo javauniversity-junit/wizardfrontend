@@ -16,6 +16,14 @@ public class MyUserPrincipal implements UserDetails {
 	        this.contact = contact;
 	    }
 
+	public Contact getContact() {
+			return contact;
+		}
+
+		public void setContact(Contact contact) {
+			this.contact = contact;
+		}
+
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		return AuthorityUtils.createAuthorityList("ROLE_USER");
