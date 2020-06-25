@@ -86,6 +86,7 @@ public class AgentController {
         try {
 		agentRepository.save(agent);
         } catch (Exception ex) {
+        	mLog.severe("SQl Error " + ex.getMessage());
         	throw new DataIntegrityViolationException("Duplicate email address");
         }
 
