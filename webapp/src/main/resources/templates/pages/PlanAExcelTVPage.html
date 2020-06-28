@@ -71,34 +71,18 @@
 					<!-- IF dataPageModel != null -->
 
 					<div class="w3-row">
-						<div class="w3-col m9" th:if="${dataPageModel != null}">
+						<div class="w3-col m12" th:if="${dataPageModel != null}">
 							<!-- data saved -->
 							<textarea id="textareaId" name="textareaId"
 								th:text="${dataPageModel?.textArea}" />
 						</div>
-						<div class="w3-col m3" th:if="${dataPageModel != null}"
-							style="padding-left: 2%;">
-							
-						<p style="padding-top: 30%;">Build</p>
-							<p>Brand</p>
-							<p>Equity</p>
-							<p>Monthly</p>
-							<p>Schedule</p>
-							<hr>
-							<p style="padding-top: 2%;">Spike</p>
-							<p>Monthly</p>
-							<p>Schedule</p>
-							<hr>
-							<p style="padding-top: 2%;">Slow</p>
-							<p>Performing</p>
-							<p>Monthly</p>
-							<p>Schedule</p>
-						</div>
+						
 						<!-- ELSE -->
-						<div class="w3-col m9" th:unless="${dataPageModel != null}">
+						<div class="w3-col m12" th:unless="${dataPageModel != null}">
 							<textarea id="textareaId" name="textareaId"> <!-- equal no data saved -->
 
-
+<fieldset>
+<legend>Brand Equity Months</legend>
 <table style="text-align: center;">
 	<thead>
 		<tr>
@@ -139,25 +123,26 @@
 		</tr>
 	</tbody>
 </table>
- 								 
+</fieldset> 								 
 
 
 
  
   <p>
-    Total number of commercials: 80
+    Total number of commercials:  
   </p>
   <p>
-   #Weeks/Months: 2
+   #Weeks/Months:  
 
   </p>
 
 
-<P>Contiunity Investment: $2,000</P>
+<P>Contiunity Investment:  </P>
 
 
 <!-- Spike -->
-
+<fieldset>
+<legend>Spike Monthly Schedule</legend>
 <table style="text-align: center;">
 	<thead>
 		<tr>
@@ -197,26 +182,27 @@
 		</tr>
 	</tbody>
 </table>
- 								 
+ 	</fieldset>							 
 
 
 
  
   <p>
-    Total number of commercials: 80
+    Total number of commercials:  
   </p>
   <p>
-   #Weeks/Months: 2
+   #Weeks/Months:  
 
   </p>
 
 
-<P>Average Spike Investment: $2,000</P>
+<P>Average Spike Investment:  </P>
 
 
 <!-- base -->
 
-
+<fieldset>
+<legend>Slow Performing Months</legend>
 <table style="text-align: center;">
 	<thead>
 		<tr>
@@ -258,20 +244,20 @@
 	</tbody>
 </table>
  						 
-
+</fieldset>
 
 
  
   <p>
-    Total number of commercials: 80
+    Total number of commercials:  
   </p>
   <p>
-   #Weeks/Months: 2
+   #Weeks/Months:  
 
   </p>
 
 
-<P>Base Investment: $2,000</P>
+<P>Base Investment:  </P>
 
 	
 
@@ -280,24 +266,7 @@
 
 </textarea>
 						</div>
-						<div class="w3-col m3" th:unless="${dataPageModel != null}"
-							style="padding-left: 2%;">
-							<!-- Data not found -->
-						<p style="padding-top: 30%;">Build</p>
-							<p>Brand</p>
-							<p>Equity</p>
-							<p>Monthly</p>
-							<p>Schedule</p>
-							<hr>
-							<p style="padding-top: 2%;">Spike</p>
-							<p>Monthly</p>
-							<p>Schedule</p>
-							<hr>
-							<p style="padding-top: 2%;">Slow</p>
-							<p>Performing</p>
-							<p>Monthly</p>
-							<p>Schedule</p>
-						</div>
+						
 					</div>
 
 					<input type="hidden" id="nextPage"

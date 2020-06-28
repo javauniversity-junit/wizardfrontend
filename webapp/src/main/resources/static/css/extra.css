@@ -53,7 +53,7 @@ textarea {
 }
 
 @font-face {
-	font-family: aileron;
+	font-family: Verdana,sans-serif;
 	font-style: normal;
 	font-weight: 200;
 	src: url(../fonts/aileron-ultra-light.eot?#iefix) format("embedded-opentype"), url(../fonts/aileron-ultra-light.woff) format("woff"), url(../fonts/aileron-ultra-light.ttf) format("truetype")
@@ -76,7 +76,7 @@ body {
 }
 
 .mce-content-body {
-	font-family: Lato!important;
+	font-family: Verdana,sans-serif!important;
 	font-size: 18px;
 	color: black;
 	padding: 0 25px 25px
