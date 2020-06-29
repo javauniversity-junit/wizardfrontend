@@ -76,29 +76,13 @@
 							<textarea id="textareaId" name="textareaId"
 								th:text="${dataPageModel?.textArea}" />
 						</div>
-						<div class="w3-col m3" th:if="${dataPageModel != null}"
-							style="padding-left: 2%;">
-							
-						<p style="padding-top: 30%;">Build</p>
-							<p>Brand</p>
-							<p>Equity</p>
-							<p>Monthly</p>
-							<p>Schedule</p>
-							<hr>
-							<p style="padding-top: 2%;">Spike</p>
-							<p>Monthly</p>
-							<p>Schedule</p>
-							<hr>
-							<p style="padding-top: 2%;">Slow</p>
-							<p>Performing</p>
-							<p>Monthly</p>
-							<p>Schedule</p>
-						</div>
+					
 						<!-- ELSE -->
 						<div class="w3-col m9" th:unless="${dataPageModel != null}">
 							<textarea id="textareaId" name="textareaId"> <!-- equal no data saved -->
 
-
+<fieldset>
+<legend>Brand Equity Months</legend>
 <table style="text-align: center;">
 	<thead>
 		<tr>
@@ -111,54 +95,55 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td>WAAA</td>
-			<td>M - F</td>
-			<td>AM News</td>
-			<td>5AM - 6AM</td>
-			<td>15</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
 		</tr>
 		<tr>
-			<td>WAAA</td>
-			<td>M - F</td>
-	         <td>Noon News</td>
-			<td>5AM - 6AM</td>
-			<td>5</td>
+			<td></td>
+			<td></td>
+	         <td></td>
+			<td></td>
+			<td></td>
 		</tr>
 		<tr>
-			<td>WBBB</td>
-			<td>M - F</td>
-		     <td>Late News</td>
-			<td>5AM - 6AM</td>
-			<td>15</td>
+			<td></td>
+			<td></td>
+		     <td></td>
+			<td></td>
+			<td></td>
 		</tr>
 		<tr>
-			<td>WBBB</td>
-			<td>M - F</td>
-			<td>Late Show</td>
-			<td>5AM - 6AM</td>
-			<td>5</td>
+			<td> </td>
+			<td> </td>
+			<td> </td>
+			<td> </td>
+			<td> </td>
 		</tr>
 	</tbody>
 </table>
-						 
+</fieldset>						 
 
 
 
  
   <p>
-    Total number of commercials: 80
+    Total number of commercials:  
   </p>
   <p>
-   #Weeks/Months: 2
+   #Weeks/Months:  
 
   </p>
 
 
-<P>Continuity Investment: $2,000</P>
+<P>Continuity Investment:  </P>
 
 
 <!-- Spike -->
-
+<fieldset>
+<legend>Spike Monthly Schedule</legend>
 <table style="text-align: center;">
 	<thead>
 		<tr>
@@ -171,55 +156,57 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td>WAAA</td>
-			<td>M - F</td>
-			<td>AM News</td>
-			<td>5AM - 6AM</td>
-			<td>15</td>
+			<td> </td>
+			<td> </td>
+			<td> </td>
+			<td> </td>
+			<td></td>
 		</tr>
 		<tr>
-			<td>WAAA</td>
-			<td>M - F</td>
-	         <td>Noon News</td>
-			<td>5AM - 6AM</td>
-			<td>5</td>
+			<td> </td>
+			<td> </td>
+	         <td></td>
+			<td></td>
+			<td></td>
 		</tr>
 		<tr>
-			<td>WBBB</td>
-			<td>M - F</td>
-		     <td>Late News</td>
-			<td>5AM - 6AM</td>
-			<td>15</td>
+			<td></td>
+			<td></td>
+		     <td></td>
+			<td></td>
+			<td></td>
 		</tr>
 		<tr>
-			<td>WBBB</td>
-			<td>M - F</td>
-			<td>Late Show</td>
-			<td>5AM - 6AM</td>
-			<td>5</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
 		</tr>
 	</tbody>
 </table>
-
+</fieldset>
  								 
 
 
 
  
   <p>
-    Total number of commercials: 80
+    Total number of commercials:  
   </p>
   <p>
-   #Weeks/Months: 2
+   #Weeks/Months:  
 
   </p>
 
 
-<P>Average Spike Investment: $2,000</P>
+<P>Average Spike Investment:  </P>
 
 
 <!-- base -->
 
+<fieldset>
+<legend>Slow Performing Months</legend>
 
 <table style="text-align: center;">
 	<thead>
@@ -232,46 +219,46 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td>WAAA</td>
-			<td>M - F</td>
-			<td>6:00am - 7:00pm</td>
-			<td>15</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
 		</tr>
 		<tr>
-			<td>WAAA</td>
-			<td>M - F</td>
-			<td>7:00pm - 12mid</td>
-			<td>5</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
 		</tr>
 		<tr>
-			<td>WBBB</td>
-			<td>M - F</td>
-			<td>6:00am - 7:00pm</td>
-			<td>15</td>
-		</tr>
-		<tr>
-			<td>WBBB</td>
-			<td>M - F</td>
-			<td>7:00pm - 12mid</td>
-			<td>5</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
 		</tr>
 	</tbody>
 </table>
- 						 
+</fieldset> 						 
 
 
 
  
   <p>
-    Total number of commercials: 80
+    Total number of commercials:  
   </p>
   <p>
-   #Weeks/Months: 2
+   #Weeks/Months:  
 
   </p>
 
 
-<P>Base Investment: $2,000</P>
+<P>Base Investment:  </P>
 
 	
 
