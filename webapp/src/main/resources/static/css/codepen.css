@@ -57,11 +57,11 @@ input[type=url],
 input[type=week],
 select,
 textarea {
-	font: inherit
+	font-family: Verdana,sans-serif;
 }
 
 @font-face {
-	font-family: aileron;
+	font-family: Verdana,sans-serif;
 	font-style: normal;
 	font-weight: 200;
 	src: url(../fonts/aileron-ultra-light.eot?#iefix) format("embedded-opentype"), url(../fonts/aileron-ultra-light.woff) format("woff"), url(../fonts/aileron-ultra-light.ttf) format("truetype")
@@ -84,7 +84,7 @@ body {
 }
 
 .mce-content-body {
-	font-family: Lato!important;
+	font-family: Verdana,sans-serif;
 	font-size: 14px;
 	color: #626262;
 	padding: 0 25px 25px
@@ -96,7 +96,7 @@ body {
 
 .mce-content-body h1 {
 	font-size: 34px;
-	font-family: aileron;
+	font-family: Verdana,sans-serif;
 	font-weight: 200;
 	line-height: 1.4em;
 	margin: 25px 0 15px
@@ -104,7 +104,7 @@ body {
 
 .mce-content-body h2 {
 	font-size: 30px;
-	font-family: aileron;
+	font-family: Verdana,sans-serif;
 	font-weight: 200;
 	line-height: 1.4em;
 	margin: 25px 0 15px
@@ -112,7 +112,7 @@ body {
 
 .mce-content-body h3 {
 	font-size: 26px;
-	font-family: aileron;
+	font-family: Verdana,sans-serif;
 	font-weight: 200;
 	line-height: 1.4em;
 	margin: 25px 0 15px
@@ -120,7 +120,7 @@ body {
 
 .mce-content-body h4 {
 	font-size: 22px;
-	font-family: aileron;
+	font-family: Verdana,sans-serif;
 	font-weight: 200;
 	line-height: 1.4em;
 	margin: 25px 0 15px
@@ -128,7 +128,7 @@ body {
 
 .mce-content-body h5 {
 	font-size: 18px;
-	font-family: aileron;
+	font-family: Verdana,sans-serif;
 	font-weight: 200;
 	line-height: 1.4em;
 	margin: 25px 0 15px
@@ -136,7 +136,7 @@ body {
 
 .mce-content-body h6 {
 	font-size: 14px;
-	font-family: aileron;
+	font-family: Verdana,sans-serif;
 	font-weight: 200;
 	line-height: 1.4em;
 	margin: 25px 0 15px
@@ -148,7 +148,7 @@ body {
 }
 
 .mce-content-body pre {
-	font-family: monospace
+	font-family: Verdana,sans-serif;
 }
 
 
