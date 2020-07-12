@@ -1,6 +1,7 @@
 function calculatePlanDaily () {
+	console.group("calculatePlanDaily");
 	//clear
-	console.clear();
+	//console.clear();
 
 	var planMonthly = document.getElementById("planAMonthly").value;
 	planMonthly_unformatted = planMonthly.replace(/\,/g, "");
@@ -8,6 +9,8 @@ function calculatePlanDaily () {
     //var planDaily = formatCurrency(Math.round(planMonthly_unformatted / 30));
 	var planDaily = Math.round(planMonthly_unformatted / 30)
     document.getElementById("planADaily").value = FormatAmount(planDaily);
+	console.log("planADaily " +  document.getElementById("planADaily").value);
+	console.groupEnd();
     
 }
 
@@ -41,3 +44,5 @@ function CommaFormatted(amount) {
 	
 	return amount;
 }
+//initial
+calculate();
