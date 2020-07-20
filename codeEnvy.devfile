@@ -1,5 +1,5 @@
 projects:
-  - name: web-java-spring-petclinic
+  - name: web-java-spring-license
     source:
       type: git
       location: 'https://github.com/hintonandrew510/wizardfrontend.git'
