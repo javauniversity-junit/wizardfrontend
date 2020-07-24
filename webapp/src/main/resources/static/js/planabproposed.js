@@ -4,11 +4,16 @@ function calculatePlanDaily () {
 	//console.clear();
 
 	var planMonthly = document.getElementById("planAMonthly").value;
-	planMonthly_unformatted = planMonthly.replace(/\,/g, "");
-	planMonthly_unformatted = planMonthly.replace(/\$/g, "");		
-    //var planDaily = formatCurrency(Math.round(planMonthly_unformatted / 30));
+	convertToNumberFromCurrency(planMonthly);
+	//planMonthly_unformatted = planMonthly.replace(/\,/g, "");
+	//planMonthly_unformatted = planMonthly.replace(/\$/g, "");		
+	planMonthly_unformatted = convertToNumberFromCurrency(planMonthly);
+	console.log("planMonthly_unformatted " +  planMonthly_unformatted);
+	//var planDaily = formatCurrency(Math.round(planMonthly_unformatted / 30));
 	var planDaily = Math.round(planMonthly_unformatted / 30)
-    document.getElementById("planADaily").value = FormatAmount(planDaily);
+   // document.getElementById("planADaily").value = FormatAmount(planDaily);
+	document.getElementById("planADaily").value = CurrencyFormatted(planDaily);
+	
 	console.log("planADaily " +  document.getElementById("planADaily").value);
 	console.groupEnd();
     
