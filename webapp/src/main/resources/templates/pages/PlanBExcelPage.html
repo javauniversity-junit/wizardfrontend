@@ -20,7 +20,6 @@
 
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/css/bootstrap-formhelpers.css" />
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <!-- Font Awesome CSS-->
 <link rel="stylesheet"
@@ -53,7 +52,7 @@
      ' removeformat | help',
      content_css: [
        '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
-       'css/codepen.css'
+       'css/extra.css'
      ]
    });
 </script>
@@ -82,7 +81,7 @@
 						</div>
 					
 						<!-- ELSE -->
-						<div class="w3-col m9" th:unless="${dataPageModel != null}">
+						<div class="w3-col m12" th:unless="${dataPageModel != null}">
 							<textarea id="textareaId" name="textareaId"> <!-- equal no data saved -->
 
 <fieldset>
@@ -137,7 +136,7 @@
   </p>
 
 
-<P>Continuity Investment:  </P>
+<P>Brand Equity Month Investment:  </P>
 
 
 <!-- Spike -->
@@ -250,7 +249,7 @@
   </p>
 
 
-<P>Base Investment:  </P>
+<P>Slow Performing Month:  </P>
 
 	
 
@@ -262,20 +261,7 @@
 						<div class="w3-col m3" th:unless="${dataPageModel != null}"
 							style="padding-left: 2%;">
 							<!-- Data not found -->
-						<p style="padding-top: 30%;">Build</p>
-							<p>Brand</p>
-							<p>Equity</p>
-							<p>Monthly</p>
-							<p>Schedule</p>
-							<hr>
-							<p style="padding-top: 2%;">Spike</p>
-							<p>Monthly</p>
-							<p>Schedule</p>
-							<hr>
-							<p style="padding-top: 2%;">Slow</p>
-							<p>Performing</p>
-							<p>Monthly</p>
-							<p>Schedule</p>
+						
 						</div>
 					</div>
 
