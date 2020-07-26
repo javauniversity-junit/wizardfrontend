@@ -156,7 +156,8 @@ function formatCurrencyWithCents(input, blur) {
 	  
 	  // don't validate empty input
 	  if (input_val === "") { 
-		 input_val = "0"; 
+		 input_val = ""; 
+		 return;
 	   }
 		
 	 //remove period
