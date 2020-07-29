@@ -13,12 +13,12 @@
 
 		<div class="whiteGrad" style="padding-top: 1%;">
 			<div align="center">
-				<h2>Digital ROI Calculator – Plan B</h2>
+				<h1>Digital ROI Calculator – Plan B</h1>
 
 			</div>
 
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m7 w3-center">A. Monthly Digital Investment</div>
+				<div class="w3-col bold-text m7 w3-center">A. Monthly Digital Investment</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				<div class="w3-col m2 w3-center underline"
 					th:text="${PlanBDigitalROICalculatorPage?.planAMonthlyDigitalInvestment}">$100,000</div>
@@ -26,7 +26,7 @@
 
 
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m7 w3-center">B. Cost Per Thousand (CPM)</div>
+				<div class="w3-col bold-text m7 w3-center">B. Cost Per Thousand (CPM)</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				<div class="w3-col m2 w3-center underline"
 					th:text="${PlanBDigitalROICalculatorPage?.planACostPerThousand}">$100,000</div>
@@ -35,7 +35,7 @@
 
 
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m7 w3-center">C. Monthly Impressions (A/B *
+				<div class="w3-col bold-text m7 w3-center">C. Monthly Impressions (A/B *
 					1,000)</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				<div id="planAClosingPctNumber" class="w3-col m2 w3-center underline"
@@ -49,7 +49,7 @@
 
 
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m7 w3-center">D. Click Through Rate (.01%,
+				<div class="w3-col bold-text m7 w3-center">D. Click Through Rate (.01%,
 					.1%, etc.)</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				<div class="w3-col m2 w3-center underline"
@@ -58,7 +58,7 @@
 
 
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m7 w3-center">E. Equals the average
+				<div class="w3-col bold-text m7 w3-center">E. Equals the average
 					customer/client value per year (C*D)</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				<div class="w3-col m2 w3-center underline"
@@ -67,14 +67,14 @@
 
 
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m7 w3-center">F. Cost Per Clicks (A/E)</div>
+				<div class="w3-col bold-text m7 w3-center">F. Cost Per Clicks (A/E)</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				<div class="w3-col m2 w3-center underline"
 					th:text="${PlanBDigitalROICalculatorPage?.planACostPerClicks}">$100,000</div>
 			</div>
 
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m7 w3-center">G. Sales Conversion
+				<div class="w3-col bold-text m7 w3-center">G. Sales Conversion
 					Percentage (2%, 10%, etc.)</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				<div class="w3-col m2 w3-center underline"
@@ -82,8 +82,8 @@
 			</div>
 
 
-			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m7 w3-center">H. Monthly Number of
+			<div class="w3-row" stylebold-text="padding-top: 1%";>
+				<div class="w3-col bold-text m7 w3-center">H. Monthly Number of
 					Conversions (E*G)</div>
 				<div class="w3-col m1 w3-center ">=</div>
 
@@ -92,7 +92,7 @@
 			</div>
 
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m7 w3-center">I. Cost Per Conversion (A/H)</div>
+				<div class="w3-col bold-text m7 w3-center">I. Cost Per Conversion (A/H)</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				<div class="w3-col m2 w3-center underline"
 					th:text="${PlanBDigitalROICalculatorPage?.planACostPerConversion}">$100,000</div>
@@ -104,27 +104,27 @@
 		
 
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m7 w3-center">J. Projected Gross Profit Per Conversion ($100, $1,000, etc.)</div>
+				<div class="w3-col bold-text m7 w3-center">J. Projected Gross Profit Per Conversion ($100, $1,000, etc.)</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				<div class="w3-col m2 w3-center underline"
 					th:text="${PlanBDigitalROICalculatorPage?.planAProjectedGrossProfit}">$100,000</div>
 			</div>
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m7 w3-center">K. Monthly Gross Profit Generated from all Conversions (H*J)</div>
+				<div class="w3-col bold-text m7 w3-center">K. Monthly Gross Profit Generated from all Conversions (H*J)</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				<div class="w3-col m2 w3-center underline"
 					th:text="${PlanBDigitalROICalculatorPage?.planAMonthlyGrossProfit}">$100,000</div>
 			</div>
 
 			<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m7 w3-center">L. $ Monthly Return on Investment (K-A)</div>
+				<div class="w3-col bold-text m7 w3-center">L. $ Monthly Return on Investment (K-A)</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				<div class="w3-col m2 w3-center underline"
 					th:text="${PlanBDigitalROICalculatorPage?.planAMonthlyROID}">$100,000</div>
 			</div>
 
 	<div class="w3-row" style="padding-top: 1%";>
-				<div class="w3-col m7 w3-center">M. % Monthly Return on Investment (L/A)</div>
+				<div class="w3-col bold-text m7 w3-center">M. % Monthly Return on Investment (L/A)</div>
 				<div class="w3-col m1 w3-center ">=</div>
 				<div class="w3-col m2 w3-center underline"
 					th:text="${PlanBDigitalROICalculatorPage?.planAMonthlyROIP} + '%'">$100,000</div>
