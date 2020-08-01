@@ -222,6 +222,10 @@ div.sign {
 .extend-underline u:after {
 	content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
 }
+u {
+font-size: 1.275em;	
+}
+
 
 input.underline {
 	border: 0;
