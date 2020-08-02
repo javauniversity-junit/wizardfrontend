@@ -34,11 +34,12 @@ public class PresentedToPageController {
 	@RequestMapping(value = "/PresentedToPage", method = RequestMethod.GET)
 	public String detail(Model model, @RequestParam String ID) {
 		mLog.info("starting detail");
-		
+		mLog.info("ID " + ID);
 
 		// get wizard header
-		ID = EncryptionDecryptionManager.decrypt(ID);
-		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
+		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		mLog.info("decryptID " + decryptID);
+		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
 		Wizard wizard = wizardOpt.orElse(null);
 		WizardData wizardData = wizardDataRepository
 				.findByPagesequenceAndWizardid(Pages.PRESENTEDTOPAGE.getPageSequence(), wizard.getWizardid());

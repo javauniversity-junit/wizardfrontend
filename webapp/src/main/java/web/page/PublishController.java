@@ -66,7 +66,8 @@ public class PublishController {
 	
 	@RequestMapping(value = "/Publish", method = RequestMethod.GET)
 	public String agentView(Model model, @RequestParam String ID) {
-		String detail = detail(model, ID);
+		String decryptId = EncryptionDecryptionManager.decrypt(ID);
+		String detail = detail(model, decryptId);
 		return detail;
 	}
 	

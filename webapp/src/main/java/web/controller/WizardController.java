@@ -1,6 +1,12 @@
 package web.controller;
 
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
 
@@ -44,7 +50,7 @@ public class WizardController {
 		// @RequestParam means it is a parameter from the GET or POST request
 		mLog.info("starting add");
 		mLog.info("name " + name);
-		mLog.info("wizardId " + wizardId);
+	
 		Wizard wizard = new Wizard();
 		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
 		if (wizardId != null && !wizardId.equals("")) {
@@ -55,19 +61,25 @@ public class WizardController {
 
 		wizard.setName(name);
 		wizard.setAgentid(userDetails.getAgent().getAgentid());
-
+		String encodeId = null;
 		try {
 			wizard = wizardRepository.save(wizard);
 			//add encrypt
+			mLog.info("wizardId [" + wizard.getWizardid() + "]");
 			String encrypt = EncryptionDecryptionManager.encrypt(wizard.getWizardid());
 			wizard.setEncrypt(encrypt);
 			wizard = wizardRepository.save(wizard);
-		
+			mLog.info("encrypt [" + encrypt + "]");
+			//encodeId = java.net.URLEncoder.encode(encrypt, "UTF_8");
+			encodeId = EncryptionDecryptionManager.encode(encrypt);
+			mLog.info("encodeId [" + encodeId + "]");
 		} catch (Exception ex) {
-			mLog.severe(ex.getMessage());
+			mLog.severe("EROOR [" + ex.getMessage() +"]");
 			throw new DataIntegrityViolationException("Duplicate name");
 		}
-		String nextPage = "redirect:/PresentedToPage?ID=" + wizard.getEncrypt();
+		//String encodeId = URLEncoder.encode(wizard.getEncrypt(), StandardCharsets.UTF_8);
+		
+		String nextPage = "redirect:/PresentedToPage?ID=" + encodeId;
 ////PresentedToPage?ID=PresentedToPage
 		return nextPage;
 
@@ -91,10 +103,22 @@ public class WizardController {
 				hasRows = true;
 			}
 		}
+		List <Wizard> listEncode= new ArrayList();  
+		//loop en encode
+		for (Wizard wizard : wizards) {
+			try {
+				String encodeIdValue = EncryptionDecryptionManager.encode(wizard.getEncrypt());
+				wizard.setEncrypt(encodeIdValue);
+				listEncode.add(wizard);
+			} catch (Exception e) {
+				mLog.severe(e.getMessage());
+				e.printStackTrace();
+			}
+        }
 
 		mLog.info("has rows [" + hasRows + "]");
 		// add to model
-		model.addAttribute("wizards", wizards);
+		model.addAttribute("wizards", listEncode);
 		// add to model
 		model.addAttribute("hasRows", hasRows);
 
@@ -114,6 +138,8 @@ public class WizardController {
 		Sort sort = new Sort(Direction.ASC, "name");
 
 		Iterable<Wizard> wizards = wizardRepository.findByAgentid(userDetails.getAgent().getAgentid(), sort);
+		
+		
 		
 		if (wizards != null) {
 			

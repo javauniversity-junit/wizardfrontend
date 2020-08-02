@@ -1,5 +1,7 @@
 package web.util;
 import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
@@ -11,7 +13,16 @@ import javax.crypto.spec.SecretKeySpec;
 public class EncryptionDecryptionManager {
 	 private static SecretKeySpec secretKey;
 	    private static byte[] key;
-	 
+	 public static String encode(String valueToEncode) {
+		String encodedValue = null;
+		try {
+			encodedValue = URLEncoder.encode( valueToEncode, StandardCharsets.UTF_8.toString());
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    return encodedValue;
+	 }
 	   static 
 	    {
 	    	String myKey = "test";
