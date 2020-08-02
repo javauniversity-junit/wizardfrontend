@@ -1,2 +1,0 @@
-ALTER TABLE `license`.`wizard` 
-ADD COLUMN `encrypt` VARCHAR(45) NULL AFTER `name`;
