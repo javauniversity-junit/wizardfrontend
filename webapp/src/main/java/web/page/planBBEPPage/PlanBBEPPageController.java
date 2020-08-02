@@ -20,6 +20,7 @@ import web.page.JSONManager;
 import web.page.PageNameEnum;
 import web.repository.WizardDataRepository;
 import web.repository.WizardRepository;
+import web.util.EncryptionDecryptionManager;
 
 @Controller // This means that this class is a Controller
 public class PlanBBEPPageController {
@@ -36,8 +37,11 @@ public class PlanBBEPPageController {
 	@RequestMapping(value = "/PlanBBEPPage", method = RequestMethod.GET)
 	public String detail(Model model, @RequestParam String ID) {
 		mLog.info("starting detail");
+		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		mLog.info("decryptID " + decryptID);
 		// get wizard header
-		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
+		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
+	
 		Wizard wizard = wizardOpt.orElse(null);
 		WizardData wizardData = wizardDataRepository.findByPagesequenceAndWizardid(Pages.PlanBBEPPage.getPageSequence(),
 				wizard.getWizardid());
@@ -105,6 +109,7 @@ public class PlanBBEPPageController {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
+		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
 

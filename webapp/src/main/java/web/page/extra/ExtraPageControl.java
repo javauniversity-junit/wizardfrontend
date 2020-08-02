@@ -19,6 +19,7 @@ import web.page.JSONManager;
 import web.page.PageNameEnum;
 import web.repository.WizardDataRepository;
 import web.repository.WizardRepository;
+import web.util.EncryptionDecryptionManager;
 
 @Controller // This means that this class is a Controller
 public class ExtraPageControl {
@@ -37,7 +38,9 @@ public class ExtraPageControl {
 	public String detailMarketingStrategiesPage(Model model, @RequestParam String ID) {
 		mLog.info("starting detail");
 		// get wizard header
-		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
+		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		mLog.info("decryptID " + decryptID);
+		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
 		Wizard wizard = wizardOpt.orElse(null);
 		WizardData wizardData = wizardDataRepository
 				.findByPagesequenceAndWizardid(Pages.MarketingStrategiesPage.getPageSequence(), wizard.getWizardid());
@@ -79,6 +82,8 @@ public class ExtraPageControl {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
+		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+		mLog.info("decryptID " + wizardId);
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
 		ExtraPageModel model = new ExtraPageModel(textareaId);
@@ -94,7 +99,9 @@ public class ExtraPageControl {
 	public String detailDigitalMobileSocialStrategiesPage(Model model, @RequestParam String ID) {
 		mLog.info("starting detail");
 		// get wizard header
-		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
+		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		mLog.info("decryptID " + decryptID);
+		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
 		Wizard wizard = wizardOpt.orElse(null);
 		WizardData wizardData = wizardDataRepository.findByPagesequenceAndWizardid(
 				Pages.DigitalMobileSocialStrategiesPage.getPageSequence(), wizard.getWizardid());
@@ -136,6 +143,8 @@ public class ExtraPageControl {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
+		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+		mLog.info("decryptID " + wizardId);
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
 		ExtraPageModel model = new ExtraPageModel(textareaId);
@@ -151,7 +160,11 @@ public class ExtraPageControl {
 	public String detailProfileOfConsumersPage(Model model, @RequestParam String ID) {
 		mLog.info("starting detail");
 		// get wizard header
-		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
+		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		mLog.info("decryptID " + decryptID);
+		// get wizard header
+		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
+	
 		Wizard wizard = wizardOpt.orElse(null);
 		WizardData wizardData = wizardDataRepository
 				.findByPagesequenceAndWizardid(Pages.ProfileOfConsumersPage.getPageSequence(), wizard.getWizardid());
@@ -193,6 +206,8 @@ public class ExtraPageControl {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
+		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+		mLog.info("decryptID " + wizardId);
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
 		ExtraPageModel model = new ExtraPageModel(textareaId);
@@ -208,9 +223,10 @@ public class ExtraPageControl {
 	public String detailCreateConceptOnePage(Model model, @RequestParam String ID, Authentication authentication) {
 		mLog.info("starting detail");
 		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
-
+		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		mLog.info("decryptID " + decryptID);
 		// get wizard header
-		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
+		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
 		Wizard wizard = wizardOpt.orElse(null);
 		WizardData wizardData = wizardDataRepository
 				.findByPagesequenceAndWizardid(Pages.CreateConceptOnePage.getPageSequence(), wizard.getWizardid());
@@ -259,6 +275,8 @@ public class ExtraPageControl {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
+		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+		mLog.info("decryptID " + wizardId);
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
 		ExtraPageModel model = new ExtraPageModel(textareaId);
@@ -274,9 +292,11 @@ public class ExtraPageControl {
 	public String detailCreateConceptTwoPage(Model model, @RequestParam String ID, Authentication authentication) {
 		mLog.info("starting detail");
 		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
-
+		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		mLog.info("decryptID " + decryptID);
 		// get wizard header
-		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
+		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
+	
 		Wizard wizard = wizardOpt.orElse(null);
 		WizardData wizardData = wizardDataRepository
 				.findByPagesequenceAndWizardid(Pages.CreateConceptTwoPage.getPageSequence(), wizard.getWizardid());
@@ -324,6 +344,8 @@ public class ExtraPageControl {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
+		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+		mLog.info("decryptID " + wizardId);
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
 		ExtraPageModel model = new ExtraPageModel(textareaId);
@@ -346,8 +368,11 @@ public class ExtraPageControl {
 			nextPage = "pages/PlanAExcelTVPage";// TV
 		}
 		mLog.info("nextPage [" + nextPage + "]");
+		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		mLog.info("decryptID " + decryptID);
 		// get wizard header
-		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
+		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
+	
 		Wizard wizard = wizardOpt.orElse(null);
 		WizardData wizardData = wizardDataRepository
 				.findByPagesequenceAndWizardid(Pages.PlanAExcelPage.getPageSequence(), wizard.getWizardid());
@@ -377,7 +402,11 @@ public class ExtraPageControl {
 			nextPage = "pages/PlanBExcelTVPage";// TV
 		}
 		// get wizard header
-		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
+		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		mLog.info("decryptID " + decryptID);
+		// get wizard header
+		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
+	
 		Wizard wizard = wizardOpt.orElse(null);
 		WizardData wizardData = wizardDataRepository
 				.findByPagesequenceAndWizardid(Pages.PlanBExcelPage.getPageSequence(), wizard.getWizardid());
@@ -419,6 +448,8 @@ public class ExtraPageControl {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
+		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+		mLog.info("decryptID " + wizardId);
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
 		ExtraPageModel model = new ExtraPageModel(textareaId);
@@ -455,6 +486,8 @@ public class ExtraPageControl {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
+		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+		mLog.info("decryptID " + wizardId);
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
 		ExtraPageModel model = new ExtraPageModel(textareaId);

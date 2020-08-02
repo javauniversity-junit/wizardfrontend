@@ -434,17 +434,17 @@
 					
 					
 					<input type="hidden" id="nextPage"
-						th:value="'redirect:/ClientObjectivesOnePageTwo?ID=' + ${wizard.wizardid}"
+						th:value="'redirect:/ClientObjectivesOnePageTwo?ID=' + ${wizard.encrypt}"
 						name="nextPage" /> 
 						<input type="hidden" id="previousPage"
-						th:value="'redirect:/MarketPlaceCompetitionPage?ID=' + ${wizard.wizardid}"
+						th:value="'redirect:/MarketPlaceCompetitionPage?ID=' + ${wizard.encrypt}"
 						name="previousPage" /> 
 						<input type="hidden" id="publishPage"
-						th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
+						th:value="'redirect:/Publish?ID=' + ${wizard.encrypt}"
 						name="publishPage" /> 
 						
 						<input type="hidden" id="wizardId"
-						th:value="${wizard.wizardid}" name="wizardId" /> <input
+						th:value="${wizard.encrypt}" name="wizardId" /> <input
 						type="hidden" id="wizarddataid"
 						th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> <input
 						name="next" type="submit" value="Next" class="btn btn-primary"
@@ -489,7 +489,7 @@
 		/*<![CDATA[*/
 		$(function() {
 			// Store
-            sessionStorage.setItem("ID", /*[[${wizard.wizardid}]]*/);
+            sessionStorage.setItem("ID", /*[[${wizard.encrypt}]]*/);
 			$("#headerId").load("header.html");
 		});
 		/*]]>*/

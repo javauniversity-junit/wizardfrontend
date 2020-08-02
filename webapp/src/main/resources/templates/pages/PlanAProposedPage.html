@@ -96,17 +96,17 @@
 					</div>
 
 					<input type="hidden" id="nextPage"
-						th:value="'redirect:/PlanABEPPage?ID=' + ${wizard.wizardid}"
+						th:value="'redirect:/PlanABEPPage?ID=' + ${wizard.encrypt}"
 						name="nextPage" /> 
 							<input type="hidden" id="previousPage"
-						th:value="'redirect:/ConfidentialClientEvaluationOnePage?ID=' + ${wizard.wizardid}"
+						th:value="'redirect:/ConfidentialClientEvaluationOnePage?ID=' + ${wizard.encrypt}"
 						name="previousPage" /> 	
 					  <input type="hidden" id="publishPage"
-						th:value="'redirect:/Publish?ID=' + ${wizard.wizardid}"
+						th:value="'redirect:/Publish?ID=' + ${wizard.encrypt}"
 						name="publishPage" /> 
 				
 					<input type="hidden" id="wizardId"
-						th:value="${wizard.wizardid}" name="wizardId" /> 
+						th:value="${wizard.encrypt}" name="wizardId" /> 
 					<input
 						type="hidden" id="wizarddataid"
 						th:value="${wizardData?.wizarddataid}" name="wizarddataid" /> 
@@ -160,7 +160,7 @@
 		/*<![CDATA[*/
 		$(function() {
 			// Store
-            sessionStorage.setItem("ID", /*[[${wizard.wizardid}]]*/);
+            sessionStorage.setItem("ID", /*[[${wizard.encrypt}]]*/);
 			$("#headerId").load("header.html");
 		});
 		/*]]>*/

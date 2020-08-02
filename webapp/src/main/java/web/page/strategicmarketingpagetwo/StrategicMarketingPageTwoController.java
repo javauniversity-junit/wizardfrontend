@@ -18,6 +18,7 @@ import web.page.JSONManager;
 import web.page.PageNameEnum;
 import web.repository.WizardDataRepository;
 import web.repository.WizardRepository;
+import web.util.EncryptionDecryptionManager;
 
 @Controller // This means that this class is a Controller
 public class StrategicMarketingPageTwoController {
@@ -34,9 +35,11 @@ public class StrategicMarketingPageTwoController {
 	@RequestMapping(value = "/StrategicMarketingPageTwo", method = RequestMethod.GET)
 	public String detail(Model model, @RequestParam String ID) {
 		mLog.info("starting detail");
+		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		mLog.info("decryptID " + decryptID);
 		// get wizard header
-		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
-		Wizard wizard = wizardOpt.orElse(null);
+		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
+			Wizard wizard = wizardOpt.orElse(null);
 		WizardData wizardData = wizardDataRepository
 				.findByPagesequenceAndWizardid(Pages.StrategicMarketingTwo.getPageSequence(), wizard.getWizardid());
 		StrategicMarketingPageTwoModel dataPageModel = null;
@@ -93,6 +96,7 @@ public class StrategicMarketingPageTwoController {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
+		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
 		StrategicMarketingPageTwoModel pageModel = new StrategicMarketingPageTwoModel(competitionA, competitionB,
