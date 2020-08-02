@@ -30,7 +30,10 @@ public class EncryptionDecryptionManager {
 	            e.printStackTrace();
 	        }
 	    }
-	 
+	   public static String encrypt(Integer intToEncrypt)  {
+		   String encrypt = encrypt(intToEncrypt.toString()) ; 
+		   return encrypt;
+	   }
 	    public static String encrypt(String strToEncrypt) 
 	    {
 	        try

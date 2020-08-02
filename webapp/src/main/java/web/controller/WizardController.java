@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import web.data.MyUserPrincipal;
 import web.model.Wizard;
 import web.repository.WizardRepository;
+import web.util.EncryptionDecryptionManager;
 
 @Controller // This means that this class is a Controller
 public class WizardController {
@@ -29,6 +30,7 @@ public class WizardController {
 
 	@RequestMapping(value = "/detail", method = RequestMethod.GET)
 	public String detail(Model model, @RequestParam String ID) {
+		ID= EncryptionDecryptionManager.decrypt(ID);
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
 		model.addAttribute("wizard", wizard);
@@ -56,10 +58,16 @@ public class WizardController {
 
 		try {
 			wizard = wizardRepository.save(wizard);
+			//add encrypt
+			String encrypt = EncryptionDecryptionManager.encrypt(wizard.getWizardid());
+			wizard.setEncrypt(encrypt);
+			wizard = wizardRepository.save(wizard);
+		
 		} catch (Exception ex) {
+			mLog.severe(ex.getMessage());
 			throw new DataIntegrityViolationException("Duplicate name");
 		}
-		String nextPage = "redirect:/PresentedToPage?ID=" + wizard.getWizardid();
+		String nextPage = "redirect:/PresentedToPage?ID=" + wizard.getEncrypt();
 ////PresentedToPage?ID=PresentedToPage
 		return nextPage;
 
@@ -93,5 +101,34 @@ public class WizardController {
 		return "wizards";
 
 	}
+	
+	
+	@GetMapping(path = "/updateAllWizards")
+	public String updateAll(Model model, Authentication authentication) {
+		mLog.info("starting getAll wizards");
+
+		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
+		// Authentication authentication = authenticationFacade.getAuthentication();
+		// sort by nameAuthentication authentication =
+		// authenticationFacade.getAuthentication();
+		Sort sort = new Sort(Direction.ASC, "name");
+
+		Iterable<Wizard> wizards = wizardRepository.findByAgentid(userDetails.getAgent().getAgentid(), sort);
+		
+		if (wizards != null) {
+			
+          for (Wizard wizard : wizards) {
+        	  String encrypt= EncryptionDecryptionManager.encrypt(wizard.getWizardid());
+        	  wizard.setEncrypt(encrypt);
+        	  wizardRepository.save(wizard);
+          }
+		}
+
+		mLog.info("completed update");
+
+		return "updateWizards";
+
+	}
+
 
 }

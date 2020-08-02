@@ -9,6 +9,8 @@ import javax.persistence.Table;
 
 import org.springframework.web.context.annotation.SessionScope;
 
+import web.util.EncryptionDecryptionManager;
+
 @Entity // This tells Hibernate to make a table out of this class
 @Table(name = "wizard")
 @SessionScope
@@ -16,6 +18,15 @@ public class Wizard {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer wizardid;
+    private String encrypt;
+
+	public String getEncrypt() {
+		return encrypt;
+	}
+
+	public void setEncrypt(String encrypt) {
+		this.encrypt = encrypt;
+	}
 
 	public Integer getWizardid() {
 		return wizardid;

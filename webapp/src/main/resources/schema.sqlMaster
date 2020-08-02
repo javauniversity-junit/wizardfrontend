@@ -120,12 +120,11 @@ CREATE TABLE `wizard` (
   `wizardid` int(11) NOT NULL AUTO_INCREMENT,
   `agentid` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `encrypt` varchar(45) NULL,
   PRIMARY KEY (`wizardid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
---
+-- `encrypt` varchar(45) NULL,
 -- Dumping data for table `wizard`
 --
 

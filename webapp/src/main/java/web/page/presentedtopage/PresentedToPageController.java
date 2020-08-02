@@ -17,6 +17,7 @@ import web.page.JSONManager;
 import web.page.PageNameEnum;
 import web.repository.WizardDataRepository;
 import web.repository.WizardRepository;
+import web.util.EncryptionDecryptionManager;
 
 @Controller // This means that this class is a Controller
 public class PresentedToPageController {
@@ -33,7 +34,10 @@ public class PresentedToPageController {
 	@RequestMapping(value = "/PresentedToPage", method = RequestMethod.GET)
 	public String detail(Model model, @RequestParam String ID) {
 		mLog.info("starting detail");
+		
+
 		// get wizard header
+		ID = EncryptionDecryptionManager.decrypt(ID);
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
 		WizardData wizardData = wizardDataRepository
@@ -60,7 +64,7 @@ public class PresentedToPageController {
 			@RequestParam(required = false, value = "next") String next,
 			@RequestParam(required = false, value = "publish") String publish) {
 		mLog.info("starting save");
-
+		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
 		// internal next page or publish
 		String internalNextPage = nextPage;
 		if (publish != null) {
