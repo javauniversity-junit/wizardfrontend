@@ -54,6 +54,8 @@ public class WizardController {
 		Wizard wizard = new Wizard();
 		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
 		if (wizardId != null && !wizardId.equals("")) {
+			wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+			mLog.info("decryptID " + wizardId);
 			int wizardIdInt = Integer.parseInt(wizardId);
 			wizard.setWizardid(wizardIdInt);
 
