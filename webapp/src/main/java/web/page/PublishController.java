@@ -83,14 +83,14 @@ public class PublishController {
 	@RequestMapping(value = "/PublishLink", method = RequestMethod.GET)
 	public String PublishLink(Model model, @RequestParam String encryptId , Authentication authentication) {
 		
-	
+		mLog.info("encryptId  [" + encryptId + "]");
 		
 		StringBuffer buffer = new StringBuffer();
 		StringBuffer domainBuffer = new StringBuffer();
 
 		
 		String domain = env.getProperty("domain");
-		
+		//encryptId = EncryptionDecryptionManager.encode(encryptId);
 		
 		
 		//mLog.info("domainA = " + domainA);
@@ -104,7 +104,8 @@ public class PublishController {
 		mailToMessage = java.text.MessageFormat.format(mailToMessage, userDetails.getUsername(),buffer.toString());
 		mLog.info("mailToMessage " + mailToMessage);
 		String id = EncryptionDecryptionManager.decrypt(encryptId);
-	
+		mLog.info("id  [" + id + "]");
+		
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(id));
 		Wizard wizard = wizardOpt.orElse(null);
 		WizardData wizardData = wizardDataRepository
@@ -129,6 +130,7 @@ public class PublishController {
 	public String detail(Model model,  String ID) {
 		Integer idInt = Integer.parseInt(ID);
 		String encryptId = EncryptionDecryptionManager.encrypt(ID);
+		encryptId = EncryptionDecryptionManager.encode(encryptId);
 		model.addAttribute("encryptId", encryptId);
 		Publish publish = new Publish();
 		// get all pages
