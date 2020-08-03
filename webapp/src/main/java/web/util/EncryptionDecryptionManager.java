@@ -6,13 +6,29 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.Base64;
- 
+import java.util.logging.Logger;
+
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
+
+import web.controller.WizardController;
  
 public class EncryptionDecryptionManager {
+	private static final Logger mLog = Logger.getLogger(EncryptionDecryptionManager.class.getName());
 	 private static SecretKeySpec secretKey;
 	    private static byte[] key;
+	  
+	    public static String decode(String valueToEncode) {
+	    	try {
+				String decodeValue = java.net.URLDecoder.decode(valueToEncode, StandardCharsets.UTF_8.toString());
+			    return decodeValue;
+	    	} catch (UnsupportedEncodingException e) {
+				// TODO Auto-generated catch block
+	    		mLog.severe(e.getMessage());
+				e.printStackTrace();
+			}
+	    return null;
+	    }
 	 public static String encode(String valueToEncode) {
 		String encodedValue = null;
 		try {
@@ -65,10 +81,11 @@ public class EncryptionDecryptionManager {
 	    {
 	        try
 	        {
-	            
+	            //decode first
+	        	String decodeValue = decode(strToDecrypt);
 	            Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
 	            cipher.init(Cipher.DECRYPT_MODE, secretKey);
-	            return new String(cipher.doFinal(Base64.getDecoder().decode(strToDecrypt)));
+	            return new String(cipher.doFinal(Base64.getDecoder().decode(decodeValue)));
 	        } 
 	        catch (Exception e) 
 	        {
