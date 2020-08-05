@@ -100,7 +100,7 @@ public class PlanBMediaPageController {
 				Integer wizardDataInt = Integer.valueOf(wizarddataid);
 				wizardDataB.setWizarddataid(wizardDataInt);
 			}
-			Integer wizardIdInt = Integer.valueOf(wizardId);
+			Integer wizardIdInt = Integer.valueOf(decryptID);
 			wizardDataB.setWizardid(wizardIdInt);
 			wizardDataB.setPagedata(pageData);
 			wizardDataRepository.save(wizardDataB);
