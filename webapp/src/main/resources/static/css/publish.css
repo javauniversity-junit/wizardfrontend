@@ -118,6 +118,17 @@ hr.dark {
   background-color: #FFFF00;
 }
 
+.left-indent-small {
+	padding-left:2%;
+}
+.left-indent {
+	padding-left:3%;
+}
+
+.left-indent-sub {
+	padding-left:5%;
+}
+
 .fill-arrow-green {
   fill: #002b00;
 }
