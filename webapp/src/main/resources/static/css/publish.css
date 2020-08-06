@@ -11,6 +11,9 @@
 	padding-right: 2%;
 	
 }
+.numberident {
+	text-indent: 2em;
+}
 .responsive {
   width: 100%;
   height: auto;
@@ -120,6 +123,9 @@ hr.dark {
 
 .left-indent-small {
 	padding-left:2%;
+}
+.left-indent-small-sub {
+	padding-left:4%;
 }
 .left-indent {
 	padding-left:3%;
