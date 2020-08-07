@@ -48,13 +48,19 @@ img.longrange {
 
 .center-ol
 {
- text-align: center;
  list-style-position: inside;
 }
+
 ol.center-ol li
 {
- text-align: left;
- margin-left: 45%;
+
+ margin-left: 25%;
+ padding: 5px 0px;
+}
+ol.center-ol1 li::before {
+  content: "";
+  width: 20px;
+  display: inline-block;
 }
 
 .tableHeader table th{
