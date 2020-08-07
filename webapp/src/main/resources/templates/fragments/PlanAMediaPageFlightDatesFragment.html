@@ -14,12 +14,22 @@
 
 		<div class="whiteGrad">
 			<div>
-				<h1 style="text-align: center;">Plan A</h1>
-
-				<h3
-					th:text="'For the benefit of the client ' + ${PresentedToPage?.station} + ' agrees to develop a marketing strategy to help' ">
-
-					WWWW</h3>
+				<h1 class="w3-center">Plan A</h1>
+                <div class="w3-row">
+                
+                <div class="w3-col m4"> For the benefit of the client,  </div>
+                
+                <div class="w3-col m1 w3-center"> <u class="flight" th:text="${PresentedToPage?.station}" ></u>  </div>
+               
+                <div class="w3-col m7 w3-right-align"> agrees to develop a marketing strategy to help  </div>
+                
+                </div>
+                
+                
+						
+				
+				
+				
 			</div>
 
 
@@ -61,7 +71,8 @@
 
 			<p>In return for fulfilling stated goals Premium Auto Centers
 				agrees to invest in the following long-term plan</p>
-
+            <div class="bold-text w3-center">FLIGHT DATES:</div>
+			
 			<div class="mce-content-body" id="spreadSheet">
 				<table class="table table-striped" id="headerTable">
 					<thead>
@@ -173,7 +184,7 @@
 					<span class="bold-text">AVERAGE DAILY CLIENT INVESTMENT</span> <span id="dailyCostId"></span>
 
 				</p>
-				<p>Thank you for your trust and confidence</p>
+				<p class="w3-center">Thank you for your trust and confidence</p>
 
 
 				<div class="b w3-row">

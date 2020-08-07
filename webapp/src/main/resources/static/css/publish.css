@@ -68,7 +68,10 @@ ol.center-ol1 li::before {
   color: white;
 
 }
-
+.flight {
+	text-indent: 3em;
+	font-size: 1.8em;
+}
 
 label {
 color: black;
