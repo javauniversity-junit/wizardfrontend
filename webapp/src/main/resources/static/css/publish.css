@@ -95,7 +95,8 @@ color: black;
 
 }
 .list {
-	
+
+	line-height:200%;
 	padding-left:2%;
 
 
@@ -107,7 +108,7 @@ color: black;
 .signature, .title { 
   margin: 20px 10px;
   border-top: 1px solid #000;
-  width: 200px; 
+  width: 220px; 
   text-align: center;
 }
 hr.dark {
@@ -120,7 +121,11 @@ hr.dark {
   border-bottom: 1px solid #000;
   width: 100px; 
 }
-
+/* Thick red border */
+hr.new4 {
+	line-height: 80%;
+  border: 1px solid black;
+}
 .bold-text {
   font-weight: bold;
 }

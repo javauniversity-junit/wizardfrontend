@@ -22,13 +22,17 @@
 			servicing you by grading each of the following segments 1 to 5 with 5
 			being the highest. Place the chosen number on each line.</div>
 		<div style="padding-top: 5%;">
-			<h1 class="text-center">This agreement is between <span
-				th:text="${PresentedToPage?.station}"></span> & <span
-				th:text="${PresentedToPage?.clientBusinessName}"></span> </h1>
+			<h2 class="text-center">
+				This agreement is between <span
+					th:text="${PresentedToPage?.station}"></span> & <span
+					th:text="${PresentedToPage?.clientBusinessName}"></span>
+			</h2>
 		</div>
-		<div style="padding-top: 3%;"><h2>CONTINUOUS BASIC SERVICE</h2></div>
-		<div class="w3-row">
-			<div class="w3-col m9">
+		<div style="padding-top: 3%; padding-left: 2%;">
+			<h2>CONTINUOUS BASIC SERVICE</h2>
+		</div>
+		<div class="w3-row" style="padding-left: 2%;">
+			<div class="w3-col m10">
 				<ul class="list">
 					<li>The Marketing Representative has a full understanding of
 						my business needs, goals and objectives.</li>
@@ -47,7 +51,7 @@
 				</ul>
 			</div>
 
-			<div class="w3-col m3">
+			<div class="w3-col m2">
 				<ul class="list" style="list-style-type: none">
 					<li>_____</li>
 					<li>_____</li>
@@ -61,17 +65,18 @@
 
 		</div>
 
-		
-			<div style="padding-top: 5%; padding-bottom: 5%;padding-left: 15%;" class="w3-row">
-				<div class="w3-col m1"></div>
-				<div class="w3-col m10">
-					<span class="signature">Signed by Account Executive</span> <span
-						class="title">Date</span> <span class="signature">Signed by
-						Client</span> <span class="title">Date</span>
-				</div>
-				<div class="w3-col m1"></div>
-			</div>
-		
+
+		<div style="padding-top: 5%; padding-bottom: 5%; padding-left: 5%;">
+
+			<hr class="new4" />
+			<div class="w3-col m5">Signed by Account Executive</div>
+			<div class="w3-col m1 w3-left-align">Date</div>
+			<div class="w3-col m5">Signed by Client</div>
+			<div class="w3-col m1 w3-left-align">Date</div>
+
+
+		</div>
+
 
 
 	</div>
