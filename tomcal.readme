@@ -1,0 +1,6 @@
+Configure Apache to Start on Boot And then start Apache:
+
+sudo systemctl start tomcat8 Be sure that tomcat8 starts at boot:
+sudo systemctl enable tomcat8 Other useful commands for tomcat8 To check the status of tomcat:
+sudo systemctl status tomcat8 To stop Apache:
+sudo systemctl stop tomcat8
