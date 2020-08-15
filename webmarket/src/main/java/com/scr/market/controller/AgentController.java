@@ -90,9 +90,10 @@ public class AgentController {
 
         try {
 		agentRepository.save(agent);
+		mLog.info("agent " + agent.getAgentid());
         } catch (Exception ex) {
         	mLog.severe("SQl Error " + ex.getMessage());
-        	throw new DataIntegrityViolationException("Duplicate email address");
+        	throw new DataIntegrityViolationException(ex.getMessage());
         }
 
 		return "redirect:/agents";
@@ -100,15 +101,12 @@ public class AgentController {
 	}
 
 	@GetMapping(path = "/agents")
-	public String getAll(Model model, Principal principal) {
+	public String getAll(Model model, Principal principal, Authentication authentication) {
 		mLog.info("starting getAll");
 		String principalName = "unKnown";
-		if (principal != null) {
-			principalName = principal.getName();
-			// get logon user id
-			contact = contactRepository.findByEmailaddress(principalName);
-			mLog.info("starting getAll");
-		}
+		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
+		contact = userDetails.getContact();
+		
 
 		mLog.info("principalName [" + principalName + "]");
 		// Authentication authentication = authenticationFacade.getAuthentication();

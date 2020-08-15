@@ -45,6 +45,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         	Contact contact = mContactRepository.findByEmailaddressAndPassword(name,password);
         	
         	if (contact == null ) {
+        		mLog.info("Invalid [" + name + " " +  password + "]" );
         		return null;
         	}
 		//determine if contact is valid
