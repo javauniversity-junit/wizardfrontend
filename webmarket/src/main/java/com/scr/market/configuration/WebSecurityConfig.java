@@ -12,8 +12,11 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 
 import com.scr.market.data.MyUserDetailsService;
+
+
 
 import java.util.logging.Logger;
 //.antMatchers("/css/**", "/js/**", "/img/**").permitAll().anyRequest().permitAll()    
@@ -28,6 +31,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         mLog.info("starting configure");
+        http.formLogin()
+        .failureHandler(customAuthenticationFailureHandler());
+	
         http
 	    .csrf().disable()
             .authorizeRequests()
@@ -72,5 +78,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) throws Exception {
        
       // web.ignoring().antMatchers("/resources/**");
+    }
+	@Bean
+    public AuthenticationFailureHandler customAuthenticationFailureHandler() {
+		//mLog.log("customAuthenticationFailureHandler");
+        return new CustomAuthenticationFailureHandler();
     }
 }

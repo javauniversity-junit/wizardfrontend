@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AccountExpiredException;
+import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -46,13 +48,16 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         	
         	if (contact == null ) {
         		mLog.info("Invalid [" + name + " " +  password + "]" );
-        		return null;
+        		AuthenticationException ex=new AuthenticationCredentialsNotFoundException("Credentials Not Found");
+				throw ex;
+        		
         	}
 		//determine if contact is valid
 		boolean hasExpired = com.scr.market.util.CalendarHelper.hasExpired(contact.getStartDate(),contact.getEndDate());
 		 mLog.info("Has an invalid license [" + hasExpired + "]" );
 		if (hasExpired) {
-			return null;
+			AuthenticationException ex=new AccountExpiredException("License has expired");
+			throw ex;
 		}
         	//Contact contact = contactList.get(0);
         	final List<GrantedAuthority> grantedAuths = new ArrayList<>();
