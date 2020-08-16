@@ -14,6 +14,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 
 //.antMatchers("/css/**", "/js/**", "/img/**").permitAll().anyRequest().permitAll()    
 @Configuration
@@ -26,7 +27,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 
 	protected void configure(HttpSecurity http) throws Exception {
+		
+		 http.formLogin()
+	        .failureHandler(customAuthenticationFailureHandler());
+		
+		
 		//http.ignoring().antMatchers("/api/v1/signup");
+		//http.failureHandler(customAuthenticationFailureHandler());
 		http.csrf().disable().authorizeRequests().antMatchers("/", "/copyright.html","/index.html", "/header.html", "/footer.html")
 				.permitAll().antMatchers("/css/**", "/fonts/**","/vendor/**", "/js/**", "/img/**","copyright.html").permitAll().anyRequest()
 				.permitAll().anyRequest().authenticated().and().formLogin().loginPage("/login").permitAll().and()
@@ -35,6 +42,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
+		
 		auth.authenticationProvider(authProvider);
 	}
 
@@ -44,6 +52,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		 web.ignoring().antMatchers("/resources/**");
 		 
 		 
+		 
 	}
+
+	@Bean
+    public AuthenticationFailureHandler customAuthenticationFailureHandler() {
+		//mLog.log("customAuthenticationFailureHandler");
+        return new CustomAuthenticationFailureHandler();
+    }
 
 }

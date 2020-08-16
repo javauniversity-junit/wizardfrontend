@@ -5,7 +5,10 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AccountExpiredException;
+import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
 import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
@@ -22,6 +25,8 @@ import web.repository.AgentRepository;
 import web.repository.ContactRepository;
 
 import java.util.logging.Logger;
+
+
 
 @Component
 public class CustomAuthenticationProvider implements AuthenticationProvider {
@@ -41,6 +46,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 	public Authentication authenticate(final Authentication authentication) throws AuthenticationException {
 		mLog.info("------------starting authenticate-------------");
 		Contact contact = null;
+	
 		final String name = authentication.getName();
 		final String password = authentication.getCredentials().toString();
 		if (name.equals("admin") && password.equals("admin")) {
@@ -54,20 +60,26 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 
 			if (agent == null) {
 				mLog.info("could not find agent [" + name);
-				return null;
+				//return null;
+				throw new BadCredentialsException("Could not find agent");
+				
 			}
 			mLog.info("found agent [" + name);
 			Optional<Contact> contactOpt = mContactRepository.findById(agent.getContactId());
 			contact = contactOpt.orElse(null);
 			if (contact == null) {
 				mLog.info("could not find contact---------" + agent.getContactId());
-				return null;
+				AuthenticationException ex=new AuthenticationCredentialsNotFoundException("Credentials Not Found");
+				throw ex;
+				//return null;
 			}
 			// determine if contact is valid
 			boolean hasExpired = web.util.CalendarHelper.hasExpired(contact.getStartDate(), contact.getEndDate());
 			mLog.info("Has an invalid license [" + hasExpired + "]");
 			if (hasExpired) {
-				return null;
+				AuthenticationException ex=new AccountExpiredException("License has expired");
+				throw ex;
+				//return null;
 			}
 			// Contact contact = contactList.get(0);
 			final List<GrantedAuthority> grantedAuths = new ArrayList<>();
