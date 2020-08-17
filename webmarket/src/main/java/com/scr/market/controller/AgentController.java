@@ -128,6 +128,7 @@ public class AgentController {
 		model.addAttribute("agents", agents);
 		// add to model
 		model.addAttribute("hasRows", hasRows);
+		model.addAttribute("contact", contact);
 
 		return "agents";
 

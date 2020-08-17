@@ -40,7 +40,7 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item"><a href="index.html" class="nav-link link-scroll">Home</a></li>
               <li class="nav-item"><a href="agents" class="nav-link link-scroll">Agents </a></li>
-              <li class="nav-item"><a href="logut" class="nav-link link-scroll">Logout</a></li>
+              <li class="nav-item"><a href="logout" class="nav-link link-scroll">Logout</a></li>
               
             </ul>
           </div>
@@ -57,9 +57,9 @@
 	    
 	    
      <div class="container" style="background-color: white;color:black;">
-  
+  <h1  th:text="${contact?.name}"></h1>
   <a href="add.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Add Agent</a> 
-	     
+	    
 <div th:if="${hasRows}">
      <table class="table" style="background-color: white;color:black;">
       <thead>
