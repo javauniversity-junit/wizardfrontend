@@ -166,8 +166,8 @@ public class WizardController {
 		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
 
 		model.addAttribute("agent", userDetails.getAgent());
-		// add to model
-		model.addAttribute("hasRows", hasRows);
+		model.addAttribute("contact", userDetails.getContact());
+		
 
 		return "about";
 
