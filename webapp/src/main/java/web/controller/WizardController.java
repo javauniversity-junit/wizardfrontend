@@ -157,6 +157,23 @@ public class WizardController {
 		return "updateWizards";
 
 	}
+	
+	
+	@GetMapping(path = "/about")
+	public String about(Model model, Authentication authentication) {
+		mLog.info("starting about");
+
+		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
+
+		model.addAttribute("wizards", listEncode);
+		// add to model
+		model.addAttribute("hasRows", hasRows);
+
+		return "about";
+
+	}
+	
+	
 
 
 }
