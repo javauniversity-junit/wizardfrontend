@@ -1,129 +1,151 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+	rel="stylesheet">
+<link
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+	rel="stylesheet">
 <link href="bootstrap-accordions-faqs.css" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 
 <style>
 h2 {
-    font-family: Arial, Verdana;
-    font-weight: 800;
-    font-size: 2.5rem;
-    color: #091f2f;
-    text-transform: uppercase;
+	font-family: Arial, Verdana;
+	font-weight: 800;
+	font-size: 2.5rem;
+	color: #091f2f;
+	text-transform: uppercase;
 }
 
-.accordion-section .panel-default > .panel-heading {
-    border: 0;
-    background: #f4f4f4;
-    padding: 0;
+.accordion-section .panel-default>.panel-heading {
+	border: 0;
+	background: #f4f4f4;
+	padding: 0;
 }
 
 .accordion-section .panel-default .panel-title a {
-    display: block;
-    font-style: italic;
-    font-size: 1.5rem;
+	display: block;
+	font-style: italic;
+	font-size: 1.5rem;
 }
 
 .accordion-section .panel-default .panel-title a:after {
-    font-family: 'FontAwesome';
-    font-style: normal;
-    font-size: 3rem;
-    content: "\f106";
-    color: #1f7de2;
-    float: right;
-    margin-top: -12px;
+	font-family: 'FontAwesome';
+	font-style: normal;
+	font-size: 3rem;
+	content: "\f106";
+	color: #1f7de2;
+	float: right;
+	margin-top: -12px;
 }
 
 .accordion-section .panel-default .panel-title a.collapsed:after {
-    content: "\f107";
+	content: "\f107";
 }
 
 .accordion-section .panel-default .panel-body {
-    font-size: 1.2rem;
+	font-size: 1.2rem;
 }
-
 </style>
 </head>
 <body>
+	<header class="header">
+		<nav class="navbar navbar-expand-lg">
+			<div class="container">
+				<a href="#intro" class="navbar-brand link-scroll"><img
+					src="./img/logo.png" alt="" class="img-fluid" width="160"
+					height="40"></a>
+				<button type="button" data-toggle="collapse"
+					data-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation"
+					class="navbar-toggler navbar-toggler-right">
+					<i class="fa fa-bars"></i>
+				</button>
+				<div id="navbarSupportedContent" class="collapse navbar-collapse">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a href="index.html"
+							class="nav-link link-scroll">Home</a></li>
+						<li class="nav-item"><a href="wizards"
+							class="nav-link link-scroll">Wizard/SCR</a></li>
+						<li class="nav-item"><a href="about"
+							class="nav-link link-scroll">About</a></li>
+						<li class="nav-item"><a href="logout"
+							class="nav-link link-scroll">Logout</a></li>
 
-<section class="accordion-section clearfix mt-3" aria-label="Question Accordions">
-  <div class="container">
-  
-	  <h2>Frequently Asked Questions </h2>
-	  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-		<div class="panel panel-default">
-		  <div class="panel-heading p-3 mb-3" role="tab" id="heading0">
-			<h3 class="panel-title">
-			  <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
-				What are the benefits of Solodev CMS?
-			  </a>
-			</h3>
-		  </div>
-		  <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
-			<div class="panel-body px-3 mb-4">
-			  <p>With Solodev CMS, you and your visitors will benefit from a finely-tuned technology stack that drives the highest levels of site performance, speed and engagement - and contributes more to your bottom line. Our users fell in love with:</p>
-			  <ul>
-				<li>Light speed deployment on the most secure and stable cloud infrastructure available on the market.</li>
-				<li>Scalability – pay for what you need today and add-on options as you grow.</li>
-				<li>All of the bells and whistles of other enterprise CMS options but without the design limitations - this CMS simply lets you realize your creative visions.</li>
-				<li>Amazing support backed by a team of Solodev pros – here when you need them.</li>
-			  </ul>
+					</ul>
+				</div>
 			</div>
-		  </div>
-		</div>
-		
-		<div class="panel panel-default">
-		  <div class="panel-heading p-3 mb-3" role="tab" id="heading1">
-			<h3 class="panel-title">
-			  <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
-				How easy is it to build a website with Solodev CMS?
-			  </a>
-			</h3>
-		  </div>
-		  <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
-			<div class="panel-body px-3 mb-4">
-			  <p>Building a website is extremely easy. With a working knowledge of HTML and CSS you will be able to have a site up and running in no time.</p>
+		</nav>
+	</header>
+
+	<section class="accordion-section clearfix mt-3"
+		aria-label="Question Accordions">
+		<div class="container">
+
+			<h2>General Information</h2>
+			<div class="panel-group" id="accordion" role="tablist"
+				aria-multiselectable="true">
+				<div class="panel panel-default">
+					<div class="panel-heading p-3 mb-3" role="tab" id="heading0">
+						<h3 class="panel-title">
+							<a class="collapsed" role="button" title=""
+								data-toggle="collapse" data-parent="#accordion"
+								href="#collapse0" aria-expanded="true" aria-controls="collapse0">
+								Show my profile </a>
+						</h3>
+					</div>
+					<div id="collapse0" class="panel-collapse collapse" role="tabpanel"
+						aria-labelledby="heading0">
+						<div class="panel-body px-3 mb-4">
+							<div class="form-group">
+								<label for="bio">Email Address</label>
+								 <input type="text" th:value="${agent.address}" readonly class="form-control">
+								
+								
+							</div>
+							<div class="form-group">
+								<label for="bio">Station</label>
+								<input type="text" th:value="${contact.name}" readonly class="form-control">
+								<input type="text" th:value="${contact.address}" readonly class="form-control">
+								<input type="text" th:value="${contact.phone}" readonly class="form-control">
+								<input type="text" th:value="${contact.streetaddress}" readonly class="form-control">
+								<input type="text" th:value="${contact.city}" readonly class="form-control">
+								<input type="text" th:value="${contact.clientType}" readonly class="form-control">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading p-3 mb-3" role="tab" id="heading1">
+						<h3 class="panel-title">
+							<a class="collapsed" role="button" title=""
+								data-toggle="collapse" data-parent="#accordion"
+								href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+								How do I get support? </a>
+						</h3>
+					</div>
+					<div id="collapse1" class="panel-collapse collapse" role="tabpanel"
+						aria-labelledby="heading1">
+						<div class="panel-body px-3 mb-4">
+							<p>If you encounter any problems, please contact michael.guld@guldresource.com</p>
+						</div>
+					</div>
+				</div>
+
+				
+
+				
 			</div>
-		  </div>
+
 		</div>
-		
-		<div class="panel panel-default">
-		  <div class="panel-heading p-3 mb-3" role="tab" id="heading2">
-			<h3 class="panel-title">
-			  <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
-				What is the uptime for Solodev CMS?
-			  </a>
-			</h3>
-		  </div>
-		  <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
-			<div class="panel-body px-3 mb-4">
-			  <p>Using Amazon AWS technology which is an industry leader for reliability you will be able to experience an uptime in the vicinity of 99.95%.</p>
-			</div>
-		  </div>
-		</div>
-		
-		<div class="panel panel-default">
-		  <div class="panel-heading p-3 mb-3" role="tab" id="heading3">
-			<h3 class="panel-title">
-			  <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
-				Can Solodev CMS handle multiple websites for my company?
-			  </a>
-			</h3>
-		  </div>
-		  <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
-			<div class="panel-body px-3 mb-4">
-			  <p>Yes, Solodev CMS is built to handle the needs of any size company. With our Multi-Site Management, you will be able to easily manage all of your websites.</p>
-			</div>
-		  </div>
-		</div>
-	  </div>
-  
-  </div>
-</section>
+	</section>
 </body>
 </html>
