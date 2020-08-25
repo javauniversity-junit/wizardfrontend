@@ -126,7 +126,7 @@ hr.new4 {
 	line-height: 80%;
   border: 1px solid black;
 }
-.bold-text {
+.bold-text,h1 {
   font-weight: bold;
 }
 
