@@ -22,9 +22,19 @@
 <script src="js/currency.js"></script>
 
 <script>
+
 	function printPage() {
 		document.getElementById("shareForm").submit();
 	}
+	
+	function gotoSection(elementToScroll) {
+		  console.group("gotoSection");
+		  console.log("section [" + elementToScroll + "]");
+		  
+		  var elmnt = document.getElementById(elementToScroll);
+		  elmnt.scrollIntoView();
+		  console.groupEnd();
+     }
 
 	function share() {
 		window.print();
