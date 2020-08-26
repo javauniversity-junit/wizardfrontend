@@ -101,6 +101,26 @@ color: black;
 
 
 }
+.firstMarketRevenue:after {
+  content:"\A \00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0 #1 in Market Revenue ";
+  white-space: pre; /* or pre-wrap */
+}
+
+.secondMarketRevenue:after {
+  content:"\A \00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0 #2 in Market Revenue ";
+  white-space: pre; /* or pre-wrap */
+}
+.thirdMarketRevenue:after {
+  content:"\A \00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0 #3 in Market Revenue ";
+  white-space: pre; /* or pre-wrap */
+}
+
+.fourthMarketRevenue:after {
+  content:"\A \00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0 #4 in Market Revenue ";
+  white-space: pre; /* or pre-wrap */
+}
+
+
 
 
 /* signature & title part */
