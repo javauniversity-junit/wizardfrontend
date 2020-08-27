@@ -356,7 +356,7 @@ div.curved-text {
 	min-height: 800px;
 	height: auto !important;
 	height: 800px;
-	background-image: linear-gradient(green, black);
+	background-image: linear-gradient(#1F497D, #EEECE1);
 	/* Standard syntax (must be last) */
 }
 
@@ -397,8 +397,8 @@ div.curved-text {
 
 .grad {
 	padding: 1%;
-	color: white;
-	background-image: linear-gradient(green, black);
+	color: black;
+	background-image: linear-gradient(#1F497D, #EEECE1);
 	/* Standard syntax
 	/* Standard syntax (must be last) */
 }
