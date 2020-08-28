@@ -356,7 +356,7 @@ div.curved-text {
 	min-height: 800px;
 	height: auto !important;
 	height: 800px;
-	background-image: linear-gradient(#1F497D, #EEECE1);
+	background-image: linear-gradient(#0a1c31, #d7d3a6);
 	/* Standard syntax (must be last) */
 }
 
@@ -398,7 +398,7 @@ div.curved-text {
 .grad {
 	padding: 1%;
 	color: black;
-	background-image: linear-gradient(#1F497D, #EEECE1);
+	background-image: linear-gradient(#0a1c31, #d7d3a6);
 	/* Standard syntax
 	/* Standard syntax (must be last) */
 }
@@ -752,7 +752,7 @@ border-bottom: 1px solid black;
 	.grad {
 		padding: 1%;
 		color: white;
-		background-image: linear-gradient(green, black);
+		background-image: linear-gradient(#0a1c31, #d7d3a6);
 		min-height: 700px;
 		height: auto !important;
 		height: 700px;
