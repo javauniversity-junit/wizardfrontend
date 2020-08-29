@@ -92,11 +92,11 @@ public class EncryptionDecryptionManager {
 	        {
 	            //decode first
 	        	mLog.info("strToDecrypt [" + strToDecrypt + "]");
-	        	String decodeValue = decode(strToDecrypt);
-	        	mLog.info("decodeValue [" + decodeValue + "]");
+	        	//String decodeValue = decode(strToDecrypt);
+	        	//mLog.info("decodeValue [" + decodeValue + "]");
 	            Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
 	            cipher.init(Cipher.DECRYPT_MODE, secretKey);
-	            return new String(cipher.doFinal(Base64.getDecoder().decode(decodeValue)));
+	            return new String(cipher.doFinal(Base64.getDecoder().decode(strToDecrypt)));
 	        } 
 	        catch (Exception e) 
 	        {

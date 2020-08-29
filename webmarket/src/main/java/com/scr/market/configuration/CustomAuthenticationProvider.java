@@ -44,7 +44,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
             final Authentication auth = new UsernamePasswordAuthenticationToken(principal, password, grantedAuths);
             return auth;
         } else {
-        	Contact contact = mContactRepository.findByEmailaddressAndPassword(name,password);
+        	Contact contact = mContactRepository.findByAddressAndPassword(name,password);
         	
         	if (contact == null ) {
         		mLog.info("Invalid [" + name + " " +  password + "]" );

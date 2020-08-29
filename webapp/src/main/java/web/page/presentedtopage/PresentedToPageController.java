@@ -34,7 +34,7 @@ public class PresentedToPageController {
 	@RequestMapping(value = "/PresentedToPage", method = RequestMethod.GET)
 	public String detail(Model model, @RequestParam String ID) {
 		mLog.info("starting detail");
-		mLog.info("ID " + ID);
+		mLog.info("ID [" + ID + "]");
 
 		// get wizard header
 		String decryptID = EncryptionDecryptionManager.decrypt(ID);
