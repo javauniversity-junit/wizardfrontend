@@ -20,22 +20,25 @@ public class EncryptionDecryptionManager {
 	  
 	    public static String decode(String valueToEncode) {
 	    	try {
+	    		mLog.info("valueToEncode [ " + valueToEncode + "]");
 				String decodeValue = java.net.URLDecoder.decode(valueToEncode, StandardCharsets.UTF_8.toString());
 			    return decodeValue;
 	    	} catch (UnsupportedEncodingException e) {
 				// TODO Auto-generated catch block
 	    		mLog.severe(e.getMessage());
-				e.printStackTrace();
+				//e.printStackTrace();
 			}
 	    return null;
 	    }
 	 public static String encode(String valueToEncode) {
 		String encodedValue = null;
 		try {
+			mLog.info("valueToEncode [ " + valueToEncode + "]");
 			encodedValue = URLEncoder.encode( valueToEncode, StandardCharsets.UTF_8.toString());
+			mLog.info("encodedValue [ " + encodedValue + "]");
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			mLog.severe(e.getMessage());
 		}
 	    return encodedValue;
 	 }
@@ -51,10 +54,11 @@ public class EncryptionDecryptionManager {
 	            secretKey = new SecretKeySpec(key, "AES");
 	        } 
 	        catch (NoSuchAlgorithmException e) {
-	            e.printStackTrace();
+	        	mLog.severe(e.getMessage());
+	            
 	        } 
 	        catch (UnsupportedEncodingException e) {
-	            e.printStackTrace();
+	        	mLog.severe(e.getMessage());
 	        }
 	    }
 	   public static String encrypt(Integer intToEncrypt)  {
@@ -68,11 +72,16 @@ public class EncryptionDecryptionManager {
 	            
 	            Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
 	            cipher.init(Cipher.ENCRYPT_MODE, secretKey);
-	            return Base64.getEncoder().encodeToString(cipher.doFinal(strToEncrypt.getBytes("UTF-8")));
+	            String encrptyValue = Base64.getEncoder().encodeToString(cipher.doFinal(strToEncrypt.getBytes("UTF-8")));
+	            mLog.info("encrptyValue [" + encrptyValue + "]");
+	            
+	            //encrptyValue = encode(encrptyValue);
+	            //mLog.info("encode [" + encrptyValue + "]");
+	            return encrptyValue;
 	        } 
 	        catch (Exception e) 
 	        {
-	            System.out.println("Error while encrypting: " + e.toString());
+	        	mLog.severe("Error while encrypting: " + e.toString());
 	        }
 	        return null;
 	    }
@@ -82,14 +91,16 @@ public class EncryptionDecryptionManager {
 	        try
 	        {
 	            //decode first
+	        	mLog.info("strToDecrypt [" + strToDecrypt + "]");
 	        	String decodeValue = decode(strToDecrypt);
+	        	mLog.info("decodeValue [" + decodeValue + "]");
 	            Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5PADDING");
 	            cipher.init(Cipher.DECRYPT_MODE, secretKey);
 	            return new String(cipher.doFinal(Base64.getDecoder().decode(decodeValue)));
 	        } 
 	        catch (Exception e) 
 	        {
-	            System.out.println("Error while decrypting: " + e.toString());
+	            mLog.severe("Error while decrypting: " + e.toString());
 	        }
 	        return null;
 	    }

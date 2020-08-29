@@ -50,6 +50,7 @@ public class WizardController {
 		// @RequestParam means it is a parameter from the GET or POST request
 		mLog.info("starting add");
 		mLog.info("name " + name);
+		mLog.info("wizardId " + wizardId);
 	
 		Wizard wizard = new Wizard();
 		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
@@ -120,7 +121,8 @@ public class WizardController {
 
 		mLog.info("has rows [" + hasRows + "]");
 		// add to model
-		model.addAttribute("wizards", listEncode);
+		//model.addAttribute("wizards", listEncode);
+		model.addAttribute("wizards", wizards);
 		// add to model
 		model.addAttribute("hasRows", hasRows);
 

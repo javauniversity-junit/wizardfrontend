@@ -38,7 +38,7 @@ public class PresentedToPageController {
 
 		// get wizard header
 		String decryptID = EncryptionDecryptionManager.decrypt(ID);
-		mLog.info("decryptID " + decryptID);
+		mLog.info("decryptID [" + decryptID + "]");
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
 		Wizard wizard = wizardOpt.orElse(null);
 		WizardData wizardData = wizardDataRepository
