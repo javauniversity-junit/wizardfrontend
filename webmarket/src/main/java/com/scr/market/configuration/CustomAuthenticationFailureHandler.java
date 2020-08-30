@@ -5,6 +5,7 @@ import org.springframework.security.authentication.AccountExpiredException;
 import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 
 
@@ -30,6 +31,11 @@ public class CustomAuthenticationFailureHandler implements AuthenticationFailure
 		mLog.info("AUTH ERROR " + exception.getMessage());
 		
 		
+		if (exception instanceof UsernameNotFoundException) {
+			mLog.info("UsernameNotFoundException");
+			request.getSession().setAttribute("UsernameNotFoundException", "UsernameNotFoundException");
+			
+		}
 		if (exception instanceof BadCredentialsException) {
 			mLog.info("BadCredentialsException");
 			request.getSession().setAttribute("BadCredentialsException", "BadCredentialsException");

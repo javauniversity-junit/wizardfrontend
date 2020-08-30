@@ -85,6 +85,8 @@
 		credentials</div>
 		<div class="alert alert-danger" th:if="${session.BadCredentialsException}">Invalid
 		email address or password</div>
+           <div class="alert alert-danger" th:if="${session.UsernameNotFoundException}">Duplicate 
+		email address</div>
             
          
         <div class="alert alert-success" th:if="${param.logout}">

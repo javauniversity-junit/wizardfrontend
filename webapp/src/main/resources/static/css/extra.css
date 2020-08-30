@@ -7,9 +7,11 @@
 a {
 	text-decoration: none
 }
-
-.rowPaddingTop {
+.rowPaddingInnerTop {
 	padding-top: 1%
+}
+.rowPaddingTop {
+	padding-top: 3%
 }
 .mce-content-body b,
 .mce-content-body b *,

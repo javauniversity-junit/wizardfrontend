@@ -14,6 +14,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
 import com.scr.market.data.MyUserPrincipal;
@@ -36,6 +37,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
     public Authentication authenticate(final Authentication authentication) throws AuthenticationException {
 	     mLog.info("starting authenticate");
         final String name = authentication.getName();
+        Contact contact = null;
         final String password = authentication.getCredentials().toString();
         if (name.equals("admin") && password.equals("admin")) {
             final List<GrantedAuthority> grantedAuths = new ArrayList<>();
@@ -44,8 +46,13 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
             final Authentication auth = new UsernamePasswordAuthenticationToken(principal, password, grantedAuths);
             return auth;
         } else {
-        	Contact contact = mContactRepository.findByAddressAndPassword(name,password);
-        	
+        	try {
+        	contact = mContactRepository.findByAddressAndPassword(name,password);
+        	} catch (Exception e) {
+        		mLog.severe(e.getMessage() );
+        		UsernameNotFoundException usernameNotFoundException = new UsernameNotFoundException("duplicate email addresses");
+        	    throw usernameNotFoundException;
+        	}
         	if (contact == null ) {
         		mLog.info("Invalid [" + name + " " +  password + "]" );
         		AuthenticationException ex=new AuthenticationCredentialsNotFoundException("Credentials Not Found");
