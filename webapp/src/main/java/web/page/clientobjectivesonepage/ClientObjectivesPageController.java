@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -38,9 +40,9 @@ public class ClientObjectivesPageController {
 	private static final Logger mLog = Logger.getLogger(ClientObjectivesPageController.class.getName());
 
 	@RequestMapping(value = "/ClientObjectivesOnePage", method = RequestMethod.GET)
-	public String detail(Model model, @RequestParam String ID) {
+	public String detail(Model model, @RequestParam String ID,  HttpSession session) {
 		mLog.info("starting detail");
-		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		String decryptID = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + decryptID);
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
@@ -60,9 +62,9 @@ public class ClientObjectivesPageController {
 	}
 
 	@RequestMapping(value = "/ClientObjectivesOnePageTwo", method = RequestMethod.GET)
-	public String detailPageTwo(Model model, @RequestParam String ID) {
+	public String detailPageTwo(Model model, @RequestParam String ID, HttpSession session) {
 		mLog.info("starting detail");
-		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		String decryptID = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + decryptID);
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
@@ -145,7 +147,7 @@ public class ClientObjectivesPageController {
 			@RequestParam String wizarddataid, @RequestParam String previousPage, @RequestParam String publishPage,
 			@RequestParam(required = false, value = "next") String next,
 			@RequestParam(required = false, value = "publish") String publish,
-			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage) {
+			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage, HttpSession session) {
 		mLog.info("starting save saveClientObjectivesOnePage");
 		mLog.info("utilizeCoopVendorDollars save" + utilizeCoopVendorDollars);
 
@@ -198,7 +200,7 @@ public class ClientObjectivesPageController {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
-		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+		wizardId = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + wizardId);
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);

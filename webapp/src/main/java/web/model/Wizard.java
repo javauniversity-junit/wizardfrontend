@@ -21,6 +21,7 @@ public class Wizard {
     private String encrypt;
 
 	public String getEncrypt() {
+		//encrypt = EncryptionDecryptionManager.encode(encrypt);
 		return encrypt;
 	}
 

@@ -3,6 +3,8 @@ package web.page.teamcommitmentpage;
 import java.util.Optional;
 import java.util.logging.Logger;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,9 +35,9 @@ public class TeamCommitmentPageController {
 	private static final Logger mLog = Logger.getLogger(TeamCommitmentPageController.class.getName());
 
 	@RequestMapping(value = "/TeamCommitmentPage", method = RequestMethod.GET)
-	public String detail(Model model, @RequestParam String ID) {
+	public String detail(Model model, @RequestParam String ID, HttpSession session) {
 		mLog.info("starting detail");
-		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		String decryptID = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + decryptID);
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
@@ -71,7 +73,7 @@ public class TeamCommitmentPageController {
 			@RequestParam String previousPage, @RequestParam String publishPage,
 			@RequestParam(required = false, value = "next") String next,
 			@RequestParam(required = false, value = "publish") String publish,
-			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage) {
+			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage, HttpSession session) {
 		mLog.info("starting save");
 
 		// internal next page or publish
@@ -90,7 +92,7 @@ public class TeamCommitmentPageController {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
-		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+		wizardId = session.getAttribute("ID").toString();
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
 		TeamCommitmentPageModel demographic = new TeamCommitmentPageModel(topLevelName, topLevelTitle, secondLevelName,

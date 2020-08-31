@@ -3,6 +3,8 @@ package web.page.planproposedpage;
 import java.util.Optional;
 import java.util.logging.Logger;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,9 +34,9 @@ public class PlanAProposedPageController {
 	private static final Logger mLog = Logger.getLogger(PlanAProposedPageController.class.getName());
 
 	@RequestMapping(value = "/PlanAProposedPage", method = RequestMethod.GET)
-	public String detail(Model model, @RequestParam String ID) {
+	public String detail(Model model, @RequestParam String ID, HttpSession session) {
 		mLog.info("starting detail");
-		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		String decryptID = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + decryptID);
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
@@ -64,7 +66,7 @@ public class PlanAProposedPageController {
 			, @RequestParam String previousPage, @RequestParam String publishPage,
 			@RequestParam(required = false, value = "next") String next,
 			@RequestParam(required = false, value = "publish") String publish,
-			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage) {
+			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage, HttpSession session) {
 		mLog.info("starting save");
 
 		String internalNextPage = nextPage;
@@ -82,7 +84,7 @@ public class PlanAProposedPageController {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
-		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+		wizardId = session.getAttribute("ID").toString();
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt); // todo - fix constuctor
 		PlanProposedPageModel demographic = new PlanProposedPageModel(planACity, planAReach, planAFrequency,

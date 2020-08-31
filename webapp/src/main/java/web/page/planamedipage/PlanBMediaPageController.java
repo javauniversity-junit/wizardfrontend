@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,10 +36,10 @@ public class PlanBMediaPageController {
 	private static final Logger mLog = Logger.getLogger(PlanBMediaPageController.class.getName());
 
 	@RequestMapping(value = "/PlanBMediaPage", method = RequestMethod.GET)
-	public String detail(Model model, @RequestParam String ID) {
+	public String detail(Model model, @RequestParam String ID, HttpSession session) {
 		mLog.info("starting detail");
 		mLog.info("starting detail");
-		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		String decryptID = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + decryptID);
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
@@ -59,14 +61,14 @@ public class PlanBMediaPageController {
 
 	@RequestMapping(value = "/importPlanAMediaPage", method = RequestMethod.POST)
 	public String copyMediaPlanAtoB(@RequestParam String wizardId, @RequestParam String wizarddataid,
-			@RequestParam String nextPage) {
+			@RequestParam String nextPage, HttpSession session) {
 		mLog.info("starting importPlanAMediaPage");
 		// internal next page or publish
 		String internalNextPage = nextPage;
 
 
 		mLog.info("starting detail");
-		String decryptID = EncryptionDecryptionManager.decrypt(wizardId);
+		String decryptID = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + decryptID);
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
@@ -126,7 +128,7 @@ public class PlanBMediaPageController {
 			@RequestParam(required = false, value = "") String dectype,@RequestParam String previousPage,
 			@RequestParam(required = false, value = "") String mediarows, @RequestParam String nextPage,
 			@RequestParam String publishPage, @RequestParam(required = false, value = "next") String next,
-			@RequestParam(required = false, value = "publish") String publish) {
+			@RequestParam(required = false, value = "publish") String publish, HttpSession session) {
 		mLog.info("starting save");
 		// internal next page or publish
 		String internalNextPage = nextPage;
@@ -144,7 +146,7 @@ public class PlanBMediaPageController {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
-		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+		wizardId = session.getAttribute("ID").toString();
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
 		List<MediaRow> mediaRowList = null;

@@ -3,6 +3,8 @@ package web.page.extra;
 import java.util.Optional;
 import java.util.logging.Logger;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,7 +22,6 @@ import web.page.PageNameEnum;
 import web.repository.WizardDataRepository;
 import web.repository.WizardRepository;
 import web.util.EncryptionDecryptionManager;
-
 @Controller // This means that this class is a Controller
 public class ExtraPageControl {
 	@Autowired // This means to get the bean called userRepository
@@ -35,10 +36,10 @@ public class ExtraPageControl {
 //MarketingStrategiesPage
 
 	@RequestMapping(value = "/MarketingStrategiesPage", method = RequestMethod.GET)
-	public String detailMarketingStrategiesPage(Model model, @RequestParam String ID) {
+	public String detailMarketingStrategiesPage(Model model, @RequestParam String ID, HttpSession session) {
 		mLog.info("starting detail");
 		// get wizard header
-		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		String decryptID = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + decryptID);
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
 		Wizard wizard = wizardOpt.orElse(null);
@@ -63,7 +64,7 @@ public class ExtraPageControl {
 			@RequestParam String previousPage, @RequestParam String publishPage,
 			@RequestParam(required = false, value = "next") String next,
 			@RequestParam(required = false, value = "publish") String publish,
-			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage) {
+			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage, HttpSession session) {
 		mLog.info("starting save");
 
 		// internal next page or publish
@@ -82,7 +83,7 @@ public class ExtraPageControl {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
-		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+		wizardId = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + wizardId);
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
@@ -96,10 +97,10 @@ public class ExtraPageControl {
 	}
 
 	@RequestMapping(value = "/DigitalMobileSocialStrategiesPage", method = RequestMethod.GET)
-	public String detailDigitalMobileSocialStrategiesPage(Model model, @RequestParam String ID) {
+	public String detailDigitalMobileSocialStrategiesPage(Model model, @RequestParam String ID, HttpSession session) {
 		mLog.info("starting detail");
 		// get wizard header
-		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		String decryptID = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + decryptID);
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
 		Wizard wizard = wizardOpt.orElse(null);
@@ -124,7 +125,7 @@ public class ExtraPageControl {
 			@RequestParam String previousPage, @RequestParam String publishPage,
 			@RequestParam(required = false, value = "next") String next,
 			@RequestParam(required = false, value = "publish") String publish,
-			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage) {
+			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage, HttpSession session) {
 		mLog.info("starting save");
 
 		// internal next page or publish
@@ -143,7 +144,7 @@ public class ExtraPageControl {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
-		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+		wizardId = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + wizardId);
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
@@ -157,10 +158,10 @@ public class ExtraPageControl {
 	}
 
 	@RequestMapping(value = "/ProfileOfConsumersPage", method = RequestMethod.GET)
-	public String detailProfileOfConsumersPage(Model model, @RequestParam String ID) {
+	public String detailProfileOfConsumersPage(Model model, @RequestParam String ID,  HttpSession session) {
 		mLog.info("starting detail");
 		// get wizard header
-		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		String decryptID = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + decryptID);
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
@@ -187,7 +188,7 @@ public class ExtraPageControl {
 			@RequestParam String previousPage, @RequestParam String publishPage,
 			@RequestParam(required = false, value = "next") String next,
 			@RequestParam(required = false, value = "publish") String publish,
-			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage) {
+			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage, HttpSession session) {
 		mLog.info("starting save");
 
 		// internal next page or publish
@@ -206,7 +207,7 @@ public class ExtraPageControl {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
-		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+		wizardId = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + wizardId);
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
@@ -220,10 +221,10 @@ public class ExtraPageControl {
 	}
 
 	@RequestMapping(value = "/CreateConceptOnePage", method = RequestMethod.GET)
-	public String detailCreateConceptOnePage(Model model, @RequestParam String ID, Authentication authentication) {
+	public String detailCreateConceptOnePage(Model model, @RequestParam String ID, Authentication authentication, HttpSession session) {
 		mLog.info("starting detail");
 		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
-		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		String decryptID = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + decryptID);
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
@@ -256,7 +257,7 @@ public class ExtraPageControl {
 			@RequestParam String previousPage, @RequestParam String publishPage,
 			@RequestParam(required = false, value = "next") String next,
 			@RequestParam(required = false, value = "publish") String publish,
-			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage) {
+			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage, HttpSession session) {
 		mLog.info("starting save");
 
 		// internal next page or publish
@@ -275,7 +276,7 @@ public class ExtraPageControl {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
-		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+		wizardId = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + wizardId);
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
@@ -289,10 +290,10 @@ public class ExtraPageControl {
 	}
 
 	@RequestMapping(value = "/CreateConceptTwoPage", method = RequestMethod.GET)
-	public String detailCreateConceptTwoPage(Model model, @RequestParam String ID, Authentication authentication) {
+	public String detailCreateConceptTwoPage(Model model, @RequestParam String ID, Authentication authentication, HttpSession session ) {
 		mLog.info("starting detail");
 		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
-		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		String decryptID = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + decryptID);
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
@@ -325,7 +326,7 @@ public class ExtraPageControl {
 			@RequestParam String previousPage, @RequestParam String publishPage,
 			@RequestParam(required = false, value = "next") String next,
 			@RequestParam(required = false, value = "publish") String publish,
-			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage) {
+			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage, HttpSession session) {
 		mLog.info("starting save");
 
 		// internal next page or publish
@@ -344,7 +345,7 @@ public class ExtraPageControl {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
-		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+		wizardId = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + wizardId);
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
@@ -358,7 +359,7 @@ public class ExtraPageControl {
 	}
 
 	@RequestMapping(value = "/PlanAExcelPage", method = RequestMethod.GET)
-	public String detailPlanAExcelPage(Model model, @RequestParam String ID, Authentication authentication) {
+	public String detailPlanAExcelPage(Model model, @RequestParam String ID, Authentication authentication, HttpSession session) {
 		mLog.info("starting PlanAExcelPage");
 		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
 		String nextPage = "pages/PlanAExcelPage";// radio
@@ -368,7 +369,7 @@ public class ExtraPageControl {
 			nextPage = "pages/PlanAExcelTVPage";// TV
 		}
 		mLog.info("nextPage [" + nextPage + "]");
-		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		String decryptID = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + decryptID);
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
@@ -392,7 +393,7 @@ public class ExtraPageControl {
 	}
 
 	@RequestMapping(value = "/PlanBExcelPage", method = RequestMethod.GET)
-	public String detailPlanBExcelPage(Model model, @RequestParam String ID, Authentication authentication) {
+	public String detailPlanBExcelPage(Model model, @RequestParam String ID, Authentication authentication, HttpSession session) {
 		mLog.info("starting detail");
 		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
 		String nextPage = "pages/PlanBExcelPage";// radio
@@ -402,7 +403,7 @@ public class ExtraPageControl {
 			nextPage = "pages/PlanBExcelTVPage";// TV
 		}
 		// get wizard header
-		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		String decryptID = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + decryptID);
 		// get wizard header
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
@@ -429,7 +430,7 @@ public class ExtraPageControl {
 			@RequestParam String previousPage, @RequestParam String publishPage,
 			@RequestParam(required = false, value = "next") String next,
 			@RequestParam(required = false, value = "publish") String publish,
-			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage) {
+			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage, HttpSession session) {
 		mLog.info("starting save");
 
 		// internal next page or publish
@@ -448,7 +449,7 @@ public class ExtraPageControl {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
-		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+		wizardId = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + wizardId);
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);
@@ -467,7 +468,7 @@ public class ExtraPageControl {
 			@RequestParam String previousPage, @RequestParam String publishPage,
 			@RequestParam(required = false, value = "next") String next,
 			@RequestParam(required = false, value = "publish") String publish,
-			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage) {
+			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage, HttpSession session) {
 		mLog.info("starting save");
 
 		// internal next page or publish
@@ -486,7 +487,7 @@ public class ExtraPageControl {
 			Integer wizardDataInt = Integer.valueOf(wizarddataid);
 			wizardData.setWizarddataid(wizardDataInt);
 		}
-		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+		wizardId = session.getAttribute("ID").toString();
 		mLog.info("decryptID " + wizardId);
 		Integer wizardIdInt = Integer.valueOf(wizardId);
 		wizardData.setWizardid(wizardIdInt);

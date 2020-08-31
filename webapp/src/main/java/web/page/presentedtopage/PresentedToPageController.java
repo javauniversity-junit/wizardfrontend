@@ -3,6 +3,8 @@ package web.page.presentedtopage;
 import java.util.Optional;
 import java.util.logging.Logger;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,12 +34,12 @@ public class PresentedToPageController {
 	private static final Logger mLog = Logger.getLogger(PresentedToPageController.class.getName());
 
 	@RequestMapping(value = "/PresentedToPage", method = RequestMethod.GET)
-	public String detail(Model model, @RequestParam String ID) {
+	public String detail(Model model, @RequestParam String ID,HttpSession session) {
 		mLog.info("starting detail");
 		mLog.info("ID [" + ID + "]");
 
 		// get wizard header
-		String decryptID = EncryptionDecryptionManager.decrypt(ID);
+		String decryptID = session.getAttribute("ID").toString();
 		mLog.info("decryptID [" + decryptID + "]");
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
 		Wizard wizard = wizardOpt.orElse(null);
@@ -49,6 +51,7 @@ public class PresentedToPageController {
 					PresentedToPageModel.class);
 
 		}
+		session.setAttribute("ID", decryptID);
 		// DemographicManager.convertFromJson(json)
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("dataPageModel", dataPageModel);
@@ -63,9 +66,10 @@ public class PresentedToPageController {
 			@RequestParam(defaultValue = "") String clientContactName, @RequestParam(defaultValue = "") String station,
 			@RequestParam String wizarddataid, @RequestParam String nextPage, @RequestParam String publishNextPage,
 			@RequestParam(required = false, value = "next") String next,
-			@RequestParam(required = false, value = "publish") String publish) {
+			@RequestParam(required = false, value = "publish") String publish,  HttpSession session) {
 		mLog.info("starting save");
-		wizardId = EncryptionDecryptionManager.decrypt(wizardId);
+		
+		wizardId = session.getAttribute("ID").toString();
 		// internal next page or publish
 		String internalNextPage = nextPage;
 		if (publish != null) {

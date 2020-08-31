@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
 
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
@@ -65,16 +66,16 @@ public class PublishController {
 	private WizardRepository wizardRepository;
 	
 	@RequestMapping(value = "/Publish", method = RequestMethod.GET)
-	public String agentView(Model model, @RequestParam String ID) {
-		String decryptId = EncryptionDecryptionManager.decrypt(ID);
+	public String agentView(Model model, @RequestParam String ID, HttpSession session) {
+		String decryptId = session.getAttribute("ID").toString();
 		String detail = detail(model, decryptId);
 		return detail;
 	}
 	
 
 	@RequestMapping(value = "/PublishClient", method = RequestMethod.GET)
-	public String clientView(Model model, @RequestParam String ID) {
-		String decryptId = EncryptionDecryptionManager.decrypt(ID);
+	public String clientView(Model model, @RequestParam String ID, HttpSession session) {
+		String decryptId = session.getAttribute("ID").toString();
 		String detail = detail(model, decryptId);
 		return detail;
 		//return "a";
