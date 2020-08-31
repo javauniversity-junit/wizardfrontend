@@ -37,9 +37,10 @@ public class PresentedToPageController {
 	public String detail(Model model, @RequestParam String ID,HttpSession session) {
 		mLog.info("starting detail");
 		mLog.info("ID [" + ID + "]");
+		
 
 		// get wizard header
-		String decryptID = session.getAttribute("ID").toString();
+		String decryptID = EncryptionDecryptionManager.decrypt(ID);
 		mLog.info("decryptID [" + decryptID + "]");
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
 		Wizard wizard = wizardOpt.orElse(null);

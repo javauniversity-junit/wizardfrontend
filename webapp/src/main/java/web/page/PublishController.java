@@ -74,8 +74,12 @@ public class PublishController {
 	
 
 	@RequestMapping(value = "/PublishClient", method = RequestMethod.GET)
-	public String clientView(Model model, @RequestParam String ID, HttpSession session) {
-		String decryptId = session.getAttribute("ID").toString();
+	public String clientView(Model model, @RequestParam String ID) {
+		mLog.info("ID  [" + ID + "]");
+		//String idDecode  = EncryptionDecryptionManager.decode(ID);
+		//mLog.info("idDecode  [" + idDecode + "]");
+		String decryptId = EncryptionDecryptionManager.decrypt(ID);
+		mLog.info("decryptId  [" + decryptId + "]");
 		String detail = detail(model, decryptId);
 		return detail;
 		//return "a";
@@ -85,20 +89,22 @@ public class PublishController {
 	public String PublishLink(Model model, @RequestParam String encryptId , Authentication authentication) {
 		
 		mLog.info("encryptId  [" + encryptId + "]");
+		encryptId = EncryptionDecryptionManager.decode(encryptId);
 		
+		mLog.info(" decode encryptId  [" + encryptId + "]");
 		StringBuffer buffer = new StringBuffer();
 		StringBuffer domainBuffer = new StringBuffer();
 
 		
 		String domain = env.getProperty("domain");
 		//encryptId = EncryptionDecryptionManager.encode(encryptId);
-		
+		String decodeEncryptId = EncryptionDecryptionManager.encode(encryptId);
 		
 		//mLog.info("domainA = " + domainA);
 		buffer.append(domain);
 		buffer.append("PublishClient");
 		buffer.append("?ID=");
-		buffer.append(encryptId);
+		buffer.append(decodeEncryptId);
 		mLog.info("buffer " + buffer.toString());
 		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
 		String mailToMessage = env.getProperty("mailtoMessage");
