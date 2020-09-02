@@ -146,7 +146,7 @@ hr.new4 {
 	line-height: 80%;
   border: 1px solid black;
 }
-.bold-text,h1 {
+.bold-text,h1,legend {
   font-weight: bold;
 }
 
