@@ -1,4 +1,30 @@
+.totalNumberOfCommercials::before {
+  content: "Total number of commercials:  ";
+  font-weight: bold;
+  
+}
+.averageSpikeInvestment::before {
+  content: "Average Spike Investment:";
+  font-weight: bold;
+  
+}
 
+.weeksMonths::before {
+  content: "#Weeks/Months:  ";
+  font-weight: bold;
+  
+}
+.slowPerformingMonthInvestment::before {
+  content: "Slow Performing Month
+Investment: ";
+  font-weight: bold;
+  
+}
+.brandEquityMonthInvestment::before {
+  content: "Brand Equity Month Investment:  ";
+  font-weight: bold;
+  
+}
 
 :focus {
 	outline: 0
@@ -11,7 +37,7 @@ a {
 	padding-top: 1%
 }
 .rowPaddingTop {
-	padding-top: 3%
+	padding-top: 4%
 }
 .mce-content-body b,
 .mce-content-body b *,
