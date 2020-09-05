@@ -37,11 +37,17 @@ public class PresentedToPageController {
 	public String detail(Model model, @RequestParam String ID,HttpSession session) {
 		mLog.info("starting detail");
 		mLog.info("ID [" + ID + "]");
-		
+		String decryptID = null;
+		if (session.getAttribute("ID") == null) {
+			decryptID = EncryptionDecryptionManager.decrypt(ID);
+			mLog.info("decryptID [" + decryptID + "]");
+		} else {
+			decryptID = session.getAttribute("ID").toString();
+			mLog.info("session id [" + decryptID + "]");
+		}
 
 		// get wizard header
-		String decryptID = EncryptionDecryptionManager.decrypt(ID);
-		mLog.info("decryptID [" + decryptID + "]");
+		
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(decryptID));
 		Wizard wizard = wizardOpt.orElse(null);
 		WizardData wizardData = wizardDataRepository
@@ -72,6 +78,7 @@ public class PresentedToPageController {
 		mLog.info("starting save");
 		
 		wizardId = session.getAttribute("ID").toString();
+		mLog.info("ID [" + wizardId + "]");
 		// internal next page or publish
 		String internalNextPage = nextPage;
 		if (publish != null) {

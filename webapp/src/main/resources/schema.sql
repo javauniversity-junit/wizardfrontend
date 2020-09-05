@@ -60,10 +60,18 @@ create table IF NOT EXISTS contact (
 ALTER TABLE `wizarddata` 
 CHANGE COLUMN `pagedata` `pagedata` LONGTEXT NOT NULL ;
 
-ALTER TABLE `wizarddata`
-ADD COLUMN  `excluded`  TINYINT(1) AFTER `pagesequence`;
 
---
+
+
+
+--ALTER TABLE `wizarddata`
+--ADD COLUMN  `excluded`  TINYINT(1) AFTER `pagesequence`;
+--update table wizarddata set excluded = 0;
+--update  wizarddata
+--set excluded = 0
+--where wizarddataid >  0
+--ALTER TABLE `license`.`wizarddata` 
+--CHANGE COLUMN `excluded` `excluded` TINYINT(1) NULL DEFAULT 0 ;
 -- Indexes for dumped tables
 --
 
