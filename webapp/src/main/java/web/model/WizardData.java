@@ -24,7 +24,7 @@ public class WizardData {
 	public void setExcluded(boolean excluded) {
 		this.excluded = excluded;
 	}
-	public String isExcluded() {
+	public boolean isExcluded() {
 		return excluded;
 	}
 	public Integer getWizarddataid() {
