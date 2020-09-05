@@ -19,7 +19,14 @@ public class WizardData {
 	private String pagedata;
 	private Integer wizardid;
 	private Integer pagesequence;
+	private boolean excluded;
 
+	public void setExcluded(boolean excluded) {
+		this.excluded = excluded;
+	}
+	public String isExcluded() {
+		return excluded;
+	}
 	public Integer getWizarddataid() {
 		return wizarddataid;
 	}

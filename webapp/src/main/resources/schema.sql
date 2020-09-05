@@ -60,6 +60,9 @@ create table IF NOT EXISTS contact (
 ALTER TABLE `wizarddata` 
 CHANGE COLUMN `pagedata` `pagedata` LONGTEXT NOT NULL ;
 
+ALTER TABLE `wizarddata`
+ADD COLUMN  `excluded`  TINYINT(1) AFTER `pagesequence`;
+
 --
 -- Indexes for dumped tables
 --

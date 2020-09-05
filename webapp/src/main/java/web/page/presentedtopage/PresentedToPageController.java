@@ -63,6 +63,7 @@ public class PresentedToPageController {
 	@RequestMapping(value = "/savePresentedToPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId, @RequestParam(defaultValue = "") String portfolioPhoneNumber,
 			@RequestParam(defaultValue = "") String portfolioManagerName,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam(defaultValue = "") String clientBusinessName,
 			@RequestParam(defaultValue = "") String clientContactName, @RequestParam(defaultValue = "") String station,
 			@RequestParam String wizarddataid, @RequestParam String nextPage, @RequestParam String publishNextPage,
@@ -76,8 +77,20 @@ public class PresentedToPageController {
 		if (publish != null) {
 			internalNextPage = publishNextPage;
 		}
+		boolean shouldExclude = false;
+		if(excluded != null)
+  		{
+    			mLog.info("checkbox is checked");
+			shouldExclude = true;
+  		}
+ 		
+		
+		
 
 		WizardData wizardData = new WizardData();
+		wizardData.setExcluded(shouldExclude);
+		
+		
 		wizardData.setPagename(PageNameEnum.PresentedToPage.toString());
 		wizardData.setPagesequence(Pages.PRESENTEDTOPAGE.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {
