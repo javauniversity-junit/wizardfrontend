@@ -498,7 +498,10 @@ public class PublishController {
 					presentedToPageModel = (PresentedToPageModel) JSONManager.convertFromJson(data.getPagedata(),
 							PresentedToPageModel.class);
 					model.addAttribute("PresentedToPage", presentedToPageModel);
-					publish.setPresentedToPage(true);
+					if (!data.isExcluded()) {
+						mLog.info("include page PresentedToPage");
+					      publish.setPresentedToPage(true);
+					}
 					mLog.info("found page PresentedToPage");
 					break;
 				} catch (Exception ex) {
