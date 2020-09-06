@@ -25,7 +25,7 @@
 <!-- Font Awesome CSS-->
 <link rel="stylesheet"
 	href="https://d19m59y37dris4.cloudfront.net/blackandwhite/2-0-0/vendor/font-awesome/css/font-awesome.min.css">
-
+<link rel="stylesheet" href="css/scr.css">
 <!-- Favicon-->
 <link rel="shortcut icon" href="./img/tools_wizard.png">
 
@@ -62,11 +62,13 @@
 	<div class="container" style="padding-top: 1%;">
 
 		<div>
-			<form onsubmit="save()" method="post"
-				action="savePlanBExcelPage" autocomplete="off">
+			<form onsubmit="save()" method="post" action="savePlanBExcelPage"
+				autocomplete="off">
 				<fieldset>
 
-					<legend class="bold-text"> <strong>Plan B Proposed TV Commercial Schedule</strong></legend>
+					<legend class="bold-text">
+						<strong>Plan B Proposed TV Commercial Schedule</strong>
+					</legend>
 
 					<!-- IF dataPageModel != null -->
 
@@ -76,13 +78,15 @@
 							<textarea id="textareaId" name="textareaId"
 								th:text="${dataPageModel?.textArea}" />
 						</div>
-					
+
 						<!-- ELSE -->
 						<div class="w3-col m9" th:unless="${dataPageModel != null}">
 							<textarea id="textareaId" name="textareaId"> <!-- equal no data saved -->
 
 <fieldset>
-<legend class="bold-text"><strong>Brand Equity Months</strong></legend>
+<legend class="bold-text">
+										<strong>Brand Equity Months</strong>
+									</legend>
 <table style="text-align: center;">
 	<thead>
 		<tr>
@@ -135,7 +139,9 @@
 
 <!-- Spike -->
 <fieldset>
-<legend class="bold-text"><strong>Spike Monthly Schedule</strong></legend>
+<legend class="bold-text">
+										<strong>Spike Monthly Schedule</strong>
+									</legend>
 <table style="text-align: center;">
 	<thead>
 		<tr>
@@ -246,7 +252,7 @@
 						<div class="w3-col m3" th:unless="${dataPageModel != null}"
 							style="padding-left: 2%;">
 							<!-- Data not found -->
-						<p style="padding-top: 30%;">Build</p>
+							<p style="padding-top: 30%;">Build</p>
 							<p>Brand</p>
 							<p>Equity</p>
 							<p>Monthly</p>
@@ -262,7 +268,13 @@
 							<p>Schedule</p>
 						</div>
 					</div>
-
+					<div
+						class="form-group custom-control custom-switch-extra custom-switch custom-switch-md">
+						<input name="excluded" id="excluded"
+							th:checked="${wizardData?.excluded}" type="checkbox"
+							class="custom-control-input"> <label for="excluded"
+							class="custom-control-label">Exclude from presentation</label>
+					</div>
 					<input type="hidden" id="nextPage"
 						th:value="'redirect:/CreateConceptOnePage?ID=' + ${wizard.encrypt}"
 						name="nextPage" /> <input type="hidden" id="previousPage"

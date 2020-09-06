@@ -24,7 +24,7 @@
 
  <!-- Font Awesome CSS-->
     <link rel="stylesheet" href="https://d19m59y37dris4.cloudfront.net/blackandwhite/2-0-0/vendor/font-awesome/css/font-awesome.min.css">
-  
+  <link rel="stylesheet" href="css/scr.css">		
 <!-- Favicon-->
 <link rel="shortcut icon" href="./img/tools_wizard.png">
 
@@ -85,7 +85,13 @@
 
 
 </textarea>	
-
+<div
+						class="form-group custom-control custom-switch-extra custom-switch custom-switch-md">
+						<input name="excluded" id="excluded"
+							th:checked="${wizardData?.excluded}" type="checkbox"
+							class="custom-control-input"> <label for="excluded"
+							class="custom-control-label">Exclude from presentation</label>
+					</div>
 <input type="hidden" id="nextPage"
 					th:value="'redirect:/MarketingStrategiesPage?ID=' + ${wizard.encrypt}"
 					name="nextPage" /> 
