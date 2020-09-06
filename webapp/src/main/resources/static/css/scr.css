@@ -1,5 +1,7 @@
 * for sm */
-
+.custom-switch-extra {
+	padding-top:2%;
+}
 .custom-switch.custom-switch-sm .custom-control-label {
     padding-left: 1rem;
     padding-bottom: 1rem;

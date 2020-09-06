@@ -280,8 +280,12 @@ public class PublishController {
 					marketPlaceCompetitionPageModel = (MarketPlaceCompetitionPageModel) JSONManager
 							.convertFromJson(data.getPagedata(), MarketPlaceCompetitionPageModel.class);
 					model.addAttribute("MarketPlaceCompetitionPageModel", marketPlaceCompetitionPageModel);
-					publish.setMarketPlaceCompetitionPage(true);
-					mLog.info("found page MarketPlaceCompetitionPageModel");
+					if (!data.isExcluded()) {
+						publish.setMarketPlaceCompetitionPage(true);
+						mLog.info("found page MarketPlaceCompetitionPageModel");
+					}
+					
+
 					break;
 				} catch (Exception ex) {
 					mLog.severe("error " + ex.getMessage());
@@ -294,8 +298,12 @@ public class PublishController {
 					marketingStrategiesPageModel = (ExtraPageModel) JSONManager.convertFromJson(data.getPagedata(),
 							ExtraPageModel.class);
 					model.addAttribute("MarketingStrategiesPageModel", marketingStrategiesPageModel);
-					publish.setMarketingStrategiesPage(true);
-					mLog.info("found page marketingStrategiesPageModel");
+					if (!data.isExcluded()) {
+						publish.setMarketingStrategiesPage(true);
+						mLog.info("found page marketingStrategiesPageModel");
+					}
+					
+					
 					break;
 				} catch (Exception ex) {
 					mLog.severe("error " + ex.getMessage());
@@ -602,8 +610,12 @@ public class PublishController {
 					teamCommitmentPageModel = (TeamCommitmentPageModel) JSONManager.convertFromJson(data.getPagedata(),
 							TeamCommitmentPageModel.class);
 					model.addAttribute("TeamCommitmentPage", teamCommitmentPageModel);
-					publish.setTeamCommitmentPage(true);
-					mLog.info("found page TeamCommitmentPage");
+					if (!data.isExcluded()) {
+						publish.setTeamCommitmentPage(true);
+						mLog.info("found page TeamCommitmentPage");
+						}
+					
+					
 					break;
 				} catch (Exception ex) {
 					mLog.severe("error " + ex.getMessage());

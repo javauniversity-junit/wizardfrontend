@@ -61,6 +61,7 @@ public class MarketPlaceCompetitionPageController {
 
 	@RequestMapping(value = "/saveMarketPlaceCompetitionPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam(required = false, value = "") String firstTierBusiness,
 			@RequestParam(required = false, value = "") String secondTierBusiness,
 			@RequestParam(required = false, value = "") String thirdTierBusiness,
@@ -76,7 +77,7 @@ public class MarketPlaceCompetitionPageController {
 			@RequestParam(required = false, value = "publish") String publish,
 			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage, HttpSession session) {
 		mLog.info("starting save");
-
+		boolean shouldExclude = excluded != null ? true: false;
 		// internal next page or publish
 		String internalNextPage = nextPage;
 		if (publish != null) {
@@ -87,6 +88,7 @@ public class MarketPlaceCompetitionPageController {
 		}
 
 		WizardData wizardData = new WizardData();
+		wizardData.setExcluded(shouldExclude);
 		wizardData.setPagename(PageNameEnum.MarketPlaceCompetitionPage.toString());
 		wizardData.setPagesequence(Pages.MARKETPLACECOMPETITIONPAGE.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {

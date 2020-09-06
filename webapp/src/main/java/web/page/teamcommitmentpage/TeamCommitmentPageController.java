@@ -63,6 +63,7 @@ public class TeamCommitmentPageController {
 	 */
 	@RequestMapping(value = "/saveTeamCommitmentPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId, @RequestParam(defaultValue = "") String topLevelName,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam(defaultValue = "") String topLevelTitle,
 			@RequestParam(defaultValue = "") String secondLevelName,
 			@RequestParam(defaultValue = "") String secondLevelTitle,
@@ -76,6 +77,11 @@ public class TeamCommitmentPageController {
 			@RequestParam(required = false, value = "previous") String previous, @RequestParam String nextPage, HttpSession session) {
 		mLog.info("starting save");
 
+		boolean shouldExclude = excluded != null ? true: false;
+		
+ 		
+		
+		
 		// internal next page or publish
 		String internalNextPage = nextPage;
 		if (publish != null) {
@@ -86,6 +92,7 @@ public class TeamCommitmentPageController {
 		}
 
 		WizardData wizardData = new WizardData();
+		wizardData.setExcluded(shouldExclude);
 		wizardData.setPagename(PageNameEnum.TeamCommitmentPage.toString());
 		wizardData.setPagesequence(Pages.TEAMCOMMITMENTPAGE.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {
