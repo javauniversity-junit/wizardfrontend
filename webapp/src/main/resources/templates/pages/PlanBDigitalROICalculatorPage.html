@@ -5,13 +5,13 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title> Plan B Digital ROI Calculator</title>
+<title>Plan B Digital ROI Calculator</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
 
 <!-- Bootstrap CSS-->
-    
+
 
 
 <!-- Bootstrap CSS-->
@@ -20,7 +20,7 @@
 	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
 	crossorigin="anonymous" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-
+<link rel="stylesheet" href="css/scr.css">
 <!-- Favicon-->
 <link rel="shortcut icon" href="./img/icon.png">
 
@@ -37,116 +37,143 @@
 
 
 	<div class="container" style="padding-top: 1%;">
-		<form method="post" action="savePlanBDigitalROICalculatorPage" autocomplete="off">
+		<form method="post" action="savePlanBDigitalROICalculatorPage"
+			autocomplete="off">
 			<fieldset>
-			
+
 				<legend>
 					(17 of 26) Plan B Digital ROI Calculator - <span
 						th:text="${wizard.name}"></span>
 				</legend>
 				<div class="form-group">
-					<label for="planAMonthlyDigitalInvestment">A. Monthly Digital Investment</label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)" class="form-control"
-						id="planAMonthlyDigitalInvestment" th:value="${dataPageModel?.planAMonthlyDigitalInvestment}" 
+					<label for="planAMonthlyDigitalInvestment">A. Monthly
+						Digital Investment</label> <input type="text"
+						onClick="this.setSelectionRange(0, this.value.length)"
+						class="form-control" id="planAMonthlyDigitalInvestment"
+						th:value="${dataPageModel?.planAMonthlyDigitalInvestment}"
 						data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 						name="planAMonthlyDigitalInvestment" />
 				</div>
 				<div class="form-group">
-					<label for="planACostPerThousand">B. Cost Per Thousand (CPM)</label> <input
-						type="text" onClick="this.setSelectionRange(0, this.value.length)" th:value="${dataPageModel?.planACostPerThousand}"
-						class="form-control" data-type="currencyWithCents" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
-						id="planACostPerThousand" name="planACostPerThousand" />
+					<label for="planACostPerThousand">B. Cost Per Thousand
+						(CPM)</label> <input type="text"
+						onClick="this.setSelectionRange(0, this.value.length)"
+						th:value="${dataPageModel?.planACostPerThousand}"
+						class="form-control" data-type="currencyWithCents"
+						pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" id="planACostPerThousand"
+						name="planACostPerThousand" />
 				</div>
 				<div class="form-group">
-					<label for="planAClosingPctNumber">C. Monthly Impressions (A/B * 1,000)</label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)" class="form-control"
-						id="planAClosingPctNumber" name="planAClosingPctNumber" readonly tabindex="-1" 
+					<label for="planAClosingPctNumber">C. Monthly Impressions
+						(A/B * 1,000)</label> <input type="text"
+						onClick="this.setSelectionRange(0, this.value.length)"
+						class="form-control" id="planAClosingPctNumber"
+						name="planAClosingPctNumber" readonly tabindex="-1"
 						th:value="${dataPageModel?.planAClosingPctNumber}" required
 						aria-describedby="planAClosingPctNumber" />
 				</div>
 				<div class="form-group">
-					<label for="planAClickThroughRate">D. Click Through Rate (.01%, .1%, etc.)</label> 
+					<label for="planAClickThroughRate">D. Click Through Rate
+						(.01%, .1%, etc.)</label>
 					<div class="input-group mb-3">
-					<input type="number"
-						th:value="${dataPageModel?.planAClickThroughRate}" step=".01"
-						class="form-control" id="planAClickThroughRate" oninput="calculate()"
-						name="planAClickThroughRate" />
-					<div class="input-group-append"><span class="input-group-text">%</span></div>		
-				</div>
+						<input type="number"
+							th:value="${dataPageModel?.planAClickThroughRate}" step=".01"
+							class="form-control" id="planAClickThroughRate"
+							oninput="calculate()" name="planAClickThroughRate" />
+						<div class="input-group-append">
+							<span class="input-group-text">%</span>
+						</div>
+					</div>
 				</div>
 				<div class="form-group">
-					<label for="planAMonthlyClicks">E. Monthly # Clicks (C*D)</label> <input readonly tabindex="-1" 
-						name="planAMonthlyClicks" id="planAMonthlyClicks"
-						class="form-control"
+					<label for="planAMonthlyClicks">E. Monthly # Clicks (C*D)</label> <input
+						readonly tabindex="-1" name="planAMonthlyClicks"
+						id="planAMonthlyClicks" class="form-control"
 						th:value="${dataPageModel?.planAMonthlyClicks}" />
 				</div>
 				<div class="form-group">
-					<label for="planACostPerClicks">F. Cost Per Clicks (A/E)</label> <input readonly tabindex="-1" 
-						th:value="${dataPageModel?.planACostPerClicks}" class="form-control"
-						id="planACostPerClicks" name="planACostPerClicks" />
+					<label for="planACostPerClicks">F. Cost Per Clicks (A/E)</label> <input
+						readonly tabindex="-1"
+						th:value="${dataPageModel?.planACostPerClicks}"
+						class="form-control" id="planACostPerClicks"
+						name="planACostPerClicks" />
 				</div>
 				<div class="form-group">
-					<label for="planASalesConversionPercentage">G. Sales Conversion Percentage (2%, 10%, etc.)</label> 
+					<label for="planASalesConversionPercentage">G. Sales
+						Conversion Percentage (2%, 10%, etc.)</label>
 					<div class="input-group mb-3">
-					<input type="number" oninput="calculate()"
-						class="form-control" id="planASalesConversionPercentage"
-						name="planASalesConversionPercentage"  
-						th:value="${dataPageModel?.planASalesConversionPercentage}"
-						aria-describedby="planASalesConversionPercentage" />
-					<div class="input-group-append"><span class="input-group-text">%</span></div>		
-				</div>
+						<input type="number" oninput="calculate()" class="form-control"
+							id="planASalesConversionPercentage"
+							name="planASalesConversionPercentage"
+							th:value="${dataPageModel?.planASalesConversionPercentage}"
+							aria-describedby="planASalesConversionPercentage" />
+						<div class="input-group-append">
+							<span class="input-group-text">%</span>
+						</div>
+					</div>
 				</div>
 				<div class="form-group">
-					<label for="planAMonthlyConversions">H. Monthly Number of Conversions (E*G)</label>
-					<input readonly tabindex="-1" 
-						class="form-control" 
-						id="planAMonthlyConversions"
+					<label for="planAMonthlyConversions">H. Monthly Number of
+						Conversions (E*G)</label> <input readonly tabindex="-1"
+						class="form-control" id="planAMonthlyConversions"
 						th:value="${dataPageModel?.planAMonthlyConversions}"
 						name="planAMonthlyConversions" />
 				</div>
 				<div class="form-group">
-					<label for="planACostPerConversion">I. Cost Per Conversion (A/H)</label> <input
-						class="form-control" id="planACostPerConversion" readonly tabindex="-1"  
+					<label for="planACostPerConversion">I. Cost Per Conversion
+						(A/H)</label> <input class="form-control" id="planACostPerConversion"
+						readonly tabindex="-1"
 						th:value="${dataPageModel?.planACostPerConversion}"
 						name="planACostPerConversion" />
 				</div>
 				<div class="form-group">
-					<label for="planAProjectedGrossProfit">J. Projected Gross Profit Per Conversion ($100, $1,000, etc.)</label> 
-					<input type="text" onClick="this.setSelectionRange(0, this.value.length)" data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+					<label for="planAProjectedGrossProfit">J. Projected Gross
+						Profit Per Conversion ($100, $1,000, etc.)</label> <input type="text"
+						onClick="this.setSelectionRange(0, this.value.length)"
+						data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
 						class="form-control" id="planAProjectedGrossProfit"
 						th:value="${dataPageModel?.planAProjectedGrossProfit}"
 						name="planAProjectedGrossProfit" />
 				</div>
-				
+
 				<div class="form-group">
-					<label for="planAMonthlyGrossProfit">K. Monthly Gross Profit Generated from all Conversions (H*J)</label> <input
-						class="form-control" id="planAMonthlyGrossProfit" readonly tabindex="-1"  
-						th:value="${dataPageModel?.planAMonthlyGrossProfit}"
+					<label for="planAMonthlyGrossProfit">K. Monthly Gross
+						Profit Generated from all Conversions (H*J)</label> <input
+						class="form-control" id="planAMonthlyGrossProfit" readonly
+						tabindex="-1" th:value="${dataPageModel?.planAMonthlyGrossProfit}"
 						name="planAMonthlyGrossProfit" />
-				</div>				
+				</div>
 				<div class="form-group">
-					<label for="planAMonthlyROID">L. $ Monthly Return on Investment (K-A)</label> <input
-						class="form-control" id="planAMonthlyROID" readonly tabindex="-1"  
+					<label for="planAMonthlyROID">L. $ Monthly Return on
+						Investment (K-A)</label> <input class="form-control" id="planAMonthlyROID"
+						readonly tabindex="-1"
 						th:value="${dataPageModel?.planAMonthlyROID}"
 						name="planAMonthlyROID" />
 				</div>
 				<div class="form-group">
-					<label for="planAMonthlyROIP">M. % Monthly Return on Investment (L/A)</label> 
+					<label for="planAMonthlyROIP">M. % Monthly Return on
+						Investment (L/A)</label>
 					<div class="input-group mb-3">
-					<input
-						class="form-control" id="planAMonthlyROIP" readonly tabindex="-1"  
-						th:value="${dataPageModel?.planAMonthlyROIP}"
-						name="planAMonthlyROIP" />
-					<div class="input-group-append"><span class="input-group-text">%</span></div>		
+						<input class="form-control" id="planAMonthlyROIP" readonly
+							tabindex="-1" th:value="${dataPageModel?.planAMonthlyROIP}"
+							name="planAMonthlyROIP" />
+						<div class="input-group-append">
+							<span class="input-group-text">%</span>
+						</div>
+					</div>
 				</div>
-				</div>			
+				<div
+					class="form-group custom-control custom-switch-extra custom-switch custom-switch-md">
+					<input name="excluded" id="excluded"
+						th:checked="${wizardData?.excluded}" type="checkbox"
+						class="custom-control-input"> <label for="excluded"
+						class="custom-control-label">Exclude from presentation</label>
+				</div>
 				<input type="hidden" id="nextPage"
 					th:value="'redirect:/PlanAMediaPage?ID=' + ${wizard.encrypt}"
-					name="nextPage" /> 
-					
-					<input type="hidden" id="previousPage"
+					name="nextPage" /> <input type="hidden" id="previousPage"
 					th:value="'redirect:/PlanBLifetimeValuedPage?ID=' + ${wizard.encrypt}"
-					name="previousPage" /> 
-					
-					<input type="hidden" id="publishPage"
+					name="previousPage" /> <input type="hidden" id="publishPage"
 					th:value="'redirect:/Publish?ID=' + ${wizard.encrypt}"
 					name="publishPage" /> <input type="hidden" id="wizardId"
 					th:value="${wizard.encrypt}" name="wizardId" /> <input
@@ -177,7 +204,7 @@
 	<script
 		src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
-<script
+	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<script
@@ -199,7 +226,7 @@
 	</script>
 	<script src="js/plandigitalcalculate.js"></script>
 
-		<script th:inline="javascript">
+	<script th:inline="javascript">
 		/*<![CDATA[*/
 		$(function() {
 			// Store

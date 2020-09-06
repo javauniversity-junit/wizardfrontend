@@ -19,19 +19,20 @@
 	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
 	crossorigin="anonymous" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-	
-	<script src="js/media.js">
+
+<script src="js/media.js">
 	</script>
-	<script src="js/medialSpreadSheet.js">	
+<script src="js/medialSpreadSheet.js">	
 	</script>
+<link rel="stylesheet" href="css/scr.css">
 <!-- Favicon-->
 <link rel="shortcut icon" href="./img/icon.png">
 
 
 
-	
-	
-	
+
+
+
 
 </head>
 
@@ -54,77 +55,78 @@
 	</template>
 
 	<div class="container">
-  
-  <div id="spreadSheet">      
-  <table class="table table-striped" id="headerTable">
-    <thead>
-      <tr>
-        <th>Media</th>
-        <th>Jan</th>
-        <th>Feb</th>
-        <th>Mar</th>
-        <th>Apr</th>
-        <th>May</th>    
-        <th>Jun</th>
-        <th>Jul</th>
-        <th>Aug</th>
-        <th>Sep</th>
-        <th>Oct</th> 
-        <th>Nov</th>
-        <th>Dec</th> 
-        <th>Total</th> 
-      </tr>
-    </thead>
-    <tbody>
-      <!-- existing data could optionally be included here --> 
-     </tbody>
-      <tfoot>
-        <!-- existing data could optionally be included here --> 
-   
-     </tfoot>
-  </table>
-</div>
-	
-<template id="productrow">
-   <tr>
-        <td>www</td>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td>10</td>
-         <td>11</td>
-        <td>12</td>
-        <td>110</td>
-      </tr>
-</template>
 
-<template id="footerrow">
-    <tr>
-        <td>Total</td>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td>10</td>
-         <td>11</td>
-        <td>12</td>
-        <td>110</td>
-      </tr>
-     </template>
-	</div> <!-- end of spreadsheet -->
-	
-	
+		<div id="spreadSheet">
+			<table class="table table-striped" id="headerTable">
+				<thead>
+					<tr>
+						<th>Media</th>
+						<th>Jan</th>
+						<th>Feb</th>
+						<th>Mar</th>
+						<th>Apr</th>
+						<th>May</th>
+						<th>Jun</th>
+						<th>Jul</th>
+						<th>Aug</th>
+						<th>Sep</th>
+						<th>Oct</th>
+						<th>Nov</th>
+						<th>Dec</th>
+						<th>Total</th>
+					</tr>
+				</thead>
+				<tbody>
+					<!-- existing data could optionally be included here -->
+				</tbody>
+				<tfoot>
+					<!-- existing data could optionally be included here -->
+
+				</tfoot>
+			</table>
+		</div>
+
+		<template id="productrow">
+		<tr>
+			<td>www</td>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+			<td>10</td>
+			<td>11</td>
+			<td>12</td>
+			<td>110</td>
+		</tr>
+		</template>
+
+		<template id="footerrow">
+		<tr>
+			<td>Total</td>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+			<td>7</td>
+			<td>8</td>
+			<td>9</td>
+			<td>10</td>
+			<td>11</td>
+			<td>12</td>
+			<td>110</td>
+		</tr>
+		</template>
+	</div>
+	<!-- end of spreadsheet -->
+
+
 
 	<div class="container" style="padding-top: 1%;">
 		<div class="row">
@@ -138,99 +140,125 @@
 				<form id="myForm">
 					<fieldset>
 						<legend>
-						(18 of 26)	Plan A Proposed 12 Month Media Investment <span
+							(18 of 26) Plan A Proposed 12 Month Media Investment <span
 								th:text="${wizard.name}"></span>
 						</legend>
-						
-						<div class="form-group row"
-							style="padding: 1%;">
+
+						<div class="form-group row" style="padding: 1%;">
 
 							<button type="button" onClick="javascript:copyToOtherMonths()"
 								class="btn btn-success btn-lg btn-block">Fill</button>
-							
+
 						</div>
-						
+
 						<div class="form-group row">
 							<div class="col-4">
 								<label for="ex1">Jan</label> <input class="form-control"
-									id="jan" name="jan" type="text" onClick="this.setSelectionRange(0, this.value.length)" data-type="currency" 
-									pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$">
+									id="jan" name="jan" type="text"
+									onClick="this.setSelectionRange(0, this.value.length)"
+									data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$">
 							</div>
 							<div class="col-4">
-								<label for="ex2">Feb</label> <input class="form-control" 
-									id="feb" type="text" onClick="this.setSelectionRange(0, this.value.length)" data-type="currency"
-									pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="feb">
+								<label for="ex2">Feb</label> <input class="form-control"
+									id="feb" type="text"
+									onClick="this.setSelectionRange(0, this.value.length)"
+									data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+									name="feb">
 							</div>
 							<div class="col-4">
 								<label for="ex3">Mar</label> <input class="form-control"
-									id="mar" type="text" onClick="this.setSelectionRange(0, this.value.length)" data-type="currency"
-									pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="mar">
+									id="mar" type="text"
+									onClick="this.setSelectionRange(0, this.value.length)"
+									data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+									name="mar">
 							</div>
 						</div>
 
 						<div class="form-group row">
 							<div class="col-4">
 								<label for="ex1">Apr</label> <input class="form-control"
-									id="apr" type="text" onClick="this.setSelectionRange(0, this.value.length)" data-type="currency"
-									pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="apr">
+									id="apr" type="text"
+									onClick="this.setSelectionRange(0, this.value.length)"
+									data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+									name="apr">
 							</div>
 							<div class="col-4">
 								<label for="ex2">May</label> <input class="form-control"
-									id="may" type="text" onClick="this.setSelectionRange(0, this.value.length)" data-type="currency"
-									pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="may">
+									id="may" type="text"
+									onClick="this.setSelectionRange(0, this.value.length)"
+									data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+									name="may">
 							</div>
 							<div class="col-4">
 								<label for="ex3">Jun</label> <input class="form-control"
-									id="jun" type="text" onClick="this.setSelectionRange(0, this.value.length)" data-type="currency"
-									pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="jun">
+									id="jun" type="text"
+									onClick="this.setSelectionRange(0, this.value.length)"
+									data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+									name="jun">
 							</div>
 						</div>
 
 						<div class="form-group row">
 							<div class="col-4">
 								<label for="ex1">Jul</label> <input class="form-control"
-									id="jul" type="text" onClick="this.setSelectionRange(0, this.value.length)" data-type="currency"
-									pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="jul">
+									id="jul" type="text"
+									onClick="this.setSelectionRange(0, this.value.length)"
+									data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+									name="jul">
 							</div>
 							<div class="col-4">
 								<label for="ex2">Aug</label> <input class="form-control"
-									id="aug" type="text" onClick="this.setSelectionRange(0, this.value.length)" data-type="currency"
-									pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="aug">
+									id="aug" type="text"
+									onClick="this.setSelectionRange(0, this.value.length)"
+									data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+									name="aug">
 							</div>
 							<div class="col-4">
 								<label for="ex3">Sep</label> <input class="form-control"
-									id="sep" type="text" onClick="this.setSelectionRange(0, this.value.length)" data-type="currency"
-									pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="sep">
+									id="sep" type="text"
+									onClick="this.setSelectionRange(0, this.value.length)"
+									data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+									name="sep">
 							</div>
 						</div>
 
 						<div class="form-group row">
 							<div class="col-4">
 								<label for="ex1">Oct</label> <input class="form-control"
-									id="oct" type="text" onClick="this.setSelectionRange(0, this.value.length)" data-type="currency"
-									pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="oct">
+									id="oct" type="text"
+									onClick="this.setSelectionRange(0, this.value.length)"
+									data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+									name="oct">
 							</div>
 							<div class="col-4">
 								<label for="ex2">Nov</label> <input class="form-control"
-									id="nov" type="text" onClick="this.setSelectionRange(0, this.value.length)" data-type="currency"
-									pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="nov">
+									id="nov" type="text"
+									onClick="this.setSelectionRange(0, this.value.length)"
+									data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+									name="nov">
 							</div>
 							<div class="col-4">
 								<label for="ex3">Dec</label> <input class="form-control"
-									id="dec" type="text" onClick="this.setSelectionRange(0, this.value.length)" data-type="currency"
-									pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="dec">
+									id="dec" type="text"
+									onClick="this.setSelectionRange(0, this.value.length)"
+									data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
+									name="dec">
 							</div>
 						</div>
 						<div class="form-group row" style="padding: 2%;">
-						<label for="totalRow">Total</label>
-						  <input id="totalRow" type="text" onClick="this.setSelectionRange(0, this.value.length)" class="form-control" disabled />
+							<label for="totalRow">Total</label> <input id="totalRow"
+								type="text"
+								onClick="this.setSelectionRange(0, this.value.length)"
+								class="form-control" disabled />
 						</div>
 
 						<div class="form-group row" style="padding: 2%;">
 
 							<label for="ex1">Name</label> <input class="form-control"
-								id="medianame" type="text" onClick="this.setSelectionRange(0, this.value.length)" name="medianame" /> <input
-								id="idname" type="hidden" name="idname" />
+								id="medianame" type="text"
+								onClick="this.setSelectionRange(0, this.value.length)"
+								name="medianame" /> <input id="idname" type="hidden"
+								name="idname" />
 
 						</div>
 
@@ -247,6 +275,13 @@
 								class="btn btn-success btn-lg btn-block">Update</button>
 							<button type="button" onClick="javascript:deleteRow()"
 								class="btn btn-success btn-lg btn-block">Delete</button>
+						</div>
+						<div
+							class="form-group custom-control custom-switch-extra custom-switch custom-switch-md">
+							<input name="excluded" id="excluded"
+								th:checked="${wizardData?.excluded}" type="checkbox"
+								class="custom-control-input"> <label for="excluded"
+								class="custom-control-label">Exclude from presentation</label>
 						</div>
 
 
@@ -278,8 +313,8 @@
 							</div>
 							<div class="col-3">
 								<label for="ex3">Mar</label> <select class="selectpicker"
-									name="martype"id="martype">
-									<option >Base</option>
+									name="martype" id="martype">
+									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
 								</select>
@@ -287,7 +322,7 @@
 							<div class="col-3">
 								<label for="ex3">Apr</label> <select class="selectpicker"
 									name="aprtype" id="aprtype">
-									<option >Base</option>
+									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
 								</select>
@@ -297,7 +332,7 @@
 							<div class="col-3">
 								<label for="ex1">May</label> <select class="selectpicker"
 									name="maytype" id="maytype">
-									<option >Base</option>
+									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
 								</select>
@@ -306,7 +341,7 @@
 							<div class="col-3">
 								<label for="ex2">Jun</label> <select class="selectpicker"
 									name="juntype" id="juntype">
-									<option >Base</option>
+									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
 								</select>
@@ -314,7 +349,7 @@
 							<div class="col-3">
 								<label for="ex3">Jul</label> <select class="selectpicker"
 									name="jultype" id="jultype">
-									<option >Base</option>
+									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
 								</select>
@@ -322,7 +357,7 @@
 							<div class="col-3">
 								<label for="ex3">Aug</label> <select class="selectpicker"
 									name="augtype" id="augtype">
-									<option >Base</option>
+									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
 								</select>
@@ -332,7 +367,7 @@
 							<div class="col-3">
 								<label for="ex1">Sep</label> <select class="selectpicker"
 									name="septype" id="septype">
-									<option >Base</option>
+									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
 								</select>
@@ -341,7 +376,7 @@
 							<div class="col-3">
 								<label for="ex2">Oct</label> <select class="selectpicker"
 									name="octtype" id="octtype">
-									<option >Base</option>
+									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
 								</select>
@@ -349,7 +384,7 @@
 							<div class="col-3">
 								<label for="ex3">Nov</label> <select class="selectpicker"
 									name="novtype" id="novtype">
-									<option >Base</option>
+									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
 								</select>
@@ -357,14 +392,14 @@
 							<div class="col-3">
 								<label for="ex3">Dec</label> <select class="selectpicker"
 									name="dectype" id="dectype">
-									<option >Base</option>
+									<option>Base</option>
 									<option>Slow</option>
 									<option>Spike</option>
 								</select>
 							</div>
-							
+
 						</div>
-					
+
 
 						<script th:inline="javascript">
 							/*<![CDATA[*/
@@ -438,8 +473,8 @@
 						</script>
 
 
-						
-						
+
+
 
 
 
@@ -447,14 +482,9 @@
 
 						<input type="hidden" id="nextPage"
 							th:value="'redirect:/PlanBMediaPage?ID=' + ${wizard.encrypt}"
-							name="nextPage" /> 
-							
-							<input type="hidden" id="previousPage"
+							name="nextPage" /> <input type="hidden" id="previousPage"
 							th:value="'redirect:/PlanBDigitalROICalculatorPage?ID=' + ${wizard.encrypt}"
-							name="previousPage" /> 
-							
-							
-							<input type="hidden" id="publishPage"
+							name="previousPage" /> <input type="hidden" id="publishPage"
 							th:value="'redirect:/Publish?ID=' + ${wizard.encrypt}"
 							name="publishPage" /> <input type="hidden" id="wizardId"
 							th:value="${wizard.encrypt}" name="wizardId" /> <input
@@ -491,7 +521,7 @@
 	<script
 		src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 
-<script
+	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<script
@@ -511,7 +541,7 @@
 	<script src="js/currency.js">	
 	</script>
 
-		<script th:inline="javascript">
+	<script th:inline="javascript">
 		/*<![CDATA[*/
 		$(function() {
 			// Store
