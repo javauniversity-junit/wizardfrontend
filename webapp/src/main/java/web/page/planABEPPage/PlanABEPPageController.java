@@ -72,6 +72,7 @@ public class PlanABEPPageController {
 
 	@RequestMapping(value = "/savePlanABEPPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId, @RequestParam String wizarddataid,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam(defaultValue = "", name = "planAAverageSale") String planAAverageSale,
 			@RequestParam(defaultValue = "", name = "planAGrossMargin") String planAGrossMargin,
 			@RequestParam(defaultValue = "", name = "planAClosingPct") String planAClosingPct,
@@ -98,6 +99,8 @@ public class PlanABEPPageController {
 		}
 
 		WizardData wizardData = new WizardData();
+		boolean shouldExclude = excluded != null ? true: false;
+		wizardData.setExcluded(shouldExclude);
 		wizardData.setPagename(PageNameEnum.PlanABEPPage.toString());
 		wizardData.setPagesequence(Pages.PlanABEPPage.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {

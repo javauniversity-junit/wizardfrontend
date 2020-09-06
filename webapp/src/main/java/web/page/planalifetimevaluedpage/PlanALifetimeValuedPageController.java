@@ -73,6 +73,7 @@ public class PlanALifetimeValuedPageController {
 
 	@RequestMapping(value = "/savePlanALifetimeValuedPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId, @RequestParam(defaultValue = "") String wizarddataid,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam(defaultValue = "") String averageSale,
 			@RequestParam(defaultValue = "") String averageRepeatSales,
 			@RequestParam(defaultValue = "") String grossProfitMargin,
@@ -97,6 +98,8 @@ public class PlanALifetimeValuedPageController {
 		}
 
 		WizardData wizardData = new WizardData();
+		boolean shouldExclude = excluded != null ? true: false;
+		wizardData.setExcluded(shouldExclude);
 		wizardData.setPagename(PageNameEnum.PlanALifetimeValuedPage.toString());
 		wizardData.setPagesequence(Pages.PlanALifetimeValuedPage.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {

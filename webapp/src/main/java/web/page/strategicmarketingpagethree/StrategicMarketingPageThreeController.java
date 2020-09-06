@@ -59,6 +59,7 @@ public class StrategicMarketingPageThreeController {
 
 	@RequestMapping(value = "/saveStrategicMarketingPageThree", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId, @RequestParam String wizarddataid,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam(value = "poorestJanuary", required = false, defaultValue = "false") boolean poorestJanuary,
 			@RequestParam(value = "poorestFebruary", required = false, defaultValue = "false") boolean poorestFebruary,
 			@RequestParam(value = "poorestMarch", required = false, defaultValue = "false") boolean poorestMarch,
@@ -113,6 +114,8 @@ public class StrategicMarketingPageThreeController {
 		}
 
 		WizardData wizardData = new WizardData();
+		boolean shouldExclude = excluded != null ? true: false;
+		wizardData.setExcluded(shouldExclude);
 		wizardData.setPagename(PageNameEnum.StrategicMarketingPageThree.toString());
 		wizardData.setPagesequence(Pages.StrategicMarketingThree.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {

@@ -61,6 +61,7 @@ public class PlanAMediaPageController {
 
 	@RequestMapping(value = "/savePlanAMediaPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId, @RequestParam String wizarddataid,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam(required = false, value = "") String jantype,
 			@RequestParam(required = false, value = "") String febtype,
 			@RequestParam(required = false, value = "") String martype,
@@ -89,6 +90,9 @@ public class PlanAMediaPageController {
 		}
 
 		WizardData wizardData = new WizardData();
+		boolean shouldExclude = excluded != null ? true: false;
+		wizardData.setExcluded(shouldExclude);	
+		
 		wizardData.setPagename(PageNameEnum.PlanAMediaPage.toString());
 		wizardData.setPagesequence(Pages.PlanAMediaPage.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {

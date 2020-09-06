@@ -97,6 +97,7 @@ public class ClientObjectivesPageController {
 	 */
 	@RequestMapping(value = "/saveClientObjectivesOnePage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam(defaultValue = "false") boolean introduceNewDepartment,
 			@RequestParam(defaultValue = "false") boolean featureSpecificProducts,
 			@RequestParam(defaultValue = "false") boolean callAttentiontoBrandsPrivateLabelsCarried,
@@ -194,6 +195,9 @@ public class ClientObjectivesPageController {
 		}
 
 		WizardData wizardData = new WizardData();
+		boolean shouldExclude = excluded != null ? true: false;
+		wizardData.setExcluded(shouldExclude);	
+		
 		wizardData.setPagename(PageNameEnum.ClientObjectivesOnePage.toString());
 		wizardData.setPagesequence(Pages.CLIENTOBJECTIVESONEPAGE.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {

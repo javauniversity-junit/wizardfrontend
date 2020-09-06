@@ -59,6 +59,7 @@ public class PlanAProposedPageController {
 
 	@RequestMapping(value = "/savePlanAProposedPage", method = RequestMethod.POST) // replace with my class variables
 	public String save(@RequestParam String wizardId, @RequestParam(defaultValue = "") String planACity,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam(defaultValue = "") String planAReach, @RequestParam(defaultValue = "") String planAFrequency,
 			@RequestParam(defaultValue = "") String planADigitalImpressionsMonthly,
 			@RequestParam(defaultValue = "") String planAMonthly, @RequestParam(defaultValue = "") String planADaily,
@@ -78,6 +79,8 @@ public class PlanAProposedPageController {
 		}
 
 		WizardData wizardData = new WizardData();
+		boolean shouldExclude = excluded != null ? true: false;
+		wizardData.setExcluded(shouldExclude);	
 		wizardData.setPagename(PageNameEnum.PlanAProposedPage.toString());
 		wizardData.setPagesequence(Pages.PlanAProposedPage.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {

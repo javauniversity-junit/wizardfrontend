@@ -59,6 +59,7 @@ public class StrategicMarketingPageTwoController {
 
 	@RequestMapping(value = "/saveStrategicMarketingPageTwo", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId, @RequestParam String wizarddataid,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam(required = false, value = "competitionA", defaultValue = "") String competitionA,
 			@RequestParam(required = false, value = "competitionB", defaultValue = "") String competitionB,
 			@RequestParam(required = false, value = "currentCompanySlogan", defaultValue = "") String currentCompanySlogan,
@@ -92,6 +93,8 @@ public class StrategicMarketingPageTwoController {
 		}
 
 		WizardData wizardData = new WizardData();
+		boolean shouldExclude = excluded != null ? true: false;
+		wizardData.setExcluded(shouldExclude);
 		wizardData.setPagename(PageNameEnum.StrategicMarketingPageTwo.toString());
 		wizardData.setPagesequence(Pages.StrategicMarketingTwo.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {

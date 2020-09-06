@@ -71,6 +71,7 @@ public class PlanBLifetimeValuedPageController {
 
 	@RequestMapping(value = "/savePlanBLifetimeValuedPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId, @RequestParam String wizarddataid,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam String averageSale, @RequestParam Integer averageRepeatSales,
 			@RequestParam Integer grossProfitMargin, @RequestParam Integer yearsOfPatronage,
 			@RequestParam String grossProfitPerSale, @RequestParam String averageCustomerValue,
@@ -101,6 +102,8 @@ public class PlanBLifetimeValuedPageController {
 		}
 
 		WizardData wizardData = new WizardData();
+		boolean shouldExclude = excluded != null ? true: false;
+		wizardData.setExcluded(shouldExclude);	
 		wizardData.setPagename(PageNameEnum.PlanBLifetimeValuedPage.toString());
 		wizardData.setPagesequence(Pages.PlanBLifetimeValuedPage.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {

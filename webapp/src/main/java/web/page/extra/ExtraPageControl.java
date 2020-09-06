@@ -60,6 +60,7 @@ public class ExtraPageControl {
 
 	@RequestMapping(value = "/saveMarketingStrategiesPage", method = RequestMethod.POST)
 	public String saveMarketingStrategiesPage(@RequestParam String wizardId,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam(defaultValue = "") String textareaId, @RequestParam String wizarddataid,
 			@RequestParam String previousPage, @RequestParam String publishPage,
 			@RequestParam(required = false, value = "next") String next,
@@ -77,6 +78,8 @@ public class ExtraPageControl {
 		}
 
 		WizardData wizardData = new WizardData();
+		boolean shouldExclude = excluded != null ? true: false;
+		wizardData.setExcluded(shouldExclude);	
 		wizardData.setPagename(PageNameEnum.MarketingStrategiesPage.toString());
 		wizardData.setPagesequence(Pages.MarketingStrategiesPage.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {
@@ -121,6 +124,7 @@ public class ExtraPageControl {
 
 	@RequestMapping(value = "/saveDigitalMobileSocialStrategiesPage", method = RequestMethod.POST)
 	public String saveDigitalMobileSocialStrategiesPage(@RequestParam String wizardId,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam(defaultValue = "") String textareaId, @RequestParam String wizarddataid,
 			@RequestParam String previousPage, @RequestParam String publishPage,
 			@RequestParam(required = false, value = "next") String next,
@@ -138,6 +142,8 @@ public class ExtraPageControl {
 		}
 
 		WizardData wizardData = new WizardData();
+		boolean shouldExclude = excluded != null ? true: false;
+		wizardData.setExcluded(shouldExclude);	
 		wizardData.setPagename(PageNameEnum.DigitalMobileSocialStrategiesPage.toString());
 		wizardData.setPagesequence(Pages.DigitalMobileSocialStrategiesPage.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {
@@ -184,6 +190,7 @@ public class ExtraPageControl {
 
 	@RequestMapping(value = "/saveProfileOfConsumersPage", method = RequestMethod.POST)
 	public String saveProfileOfConsumersPage(@RequestParam String wizardId,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam(defaultValue = "") String textareaId, @RequestParam String wizarddataid,
 			@RequestParam String previousPage, @RequestParam String publishPage,
 			@RequestParam(required = false, value = "next") String next,
@@ -201,6 +208,8 @@ public class ExtraPageControl {
 		}
 
 		WizardData wizardData = new WizardData();
+		boolean shouldExclude = excluded != null ? true: false;
+		wizardData.setExcluded(shouldExclude);
 		wizardData.setPagename(PageNameEnum.ProfileOfConsumersPage.toString());
 		wizardData.setPagesequence(Pages.ProfileOfConsumersPage.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {
@@ -253,6 +262,7 @@ public class ExtraPageControl {
 
 	@RequestMapping(value = "/saveCreateConceptOnePage", method = RequestMethod.POST)
 	public String saveCreateConceptOnePage(@RequestParam String wizardId,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam(defaultValue = "") String textareaId, @RequestParam String wizarddataid,
 			@RequestParam String previousPage, @RequestParam String publishPage,
 			@RequestParam(required = false, value = "next") String next,
@@ -270,6 +280,8 @@ public class ExtraPageControl {
 		}
 
 		WizardData wizardData = new WizardData();
+		boolean shouldExclude = excluded != null ? true: false;
+		wizardData.setExcluded(shouldExclude);
 		wizardData.setPagename(PageNameEnum.CreateConceptOnePage.toString());
 		wizardData.setPagesequence(Pages.CreateConceptOnePage.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {
@@ -322,6 +334,7 @@ public class ExtraPageControl {
 
 	@RequestMapping(value = "/saveCreateConceptTwoPage", method = RequestMethod.POST)
 	public String saveCreateConceptTwoPage(@RequestParam String wizardId,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam(defaultValue = "") String textareaId, @RequestParam String wizarddataid,
 			@RequestParam String previousPage, @RequestParam String publishPage,
 			@RequestParam(required = false, value = "next") String next,
@@ -339,6 +352,8 @@ public class ExtraPageControl {
 		}
 
 		WizardData wizardData = new WizardData();
+		boolean shouldExclude = excluded != null ? true: false;
+		wizardData.setExcluded(shouldExclude);
 		wizardData.setPagename(PageNameEnum.CreateConceptTwoPage.toString());
 		wizardData.setPagesequence(Pages.CreateConceptTwoPage.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {
@@ -426,6 +441,7 @@ public class ExtraPageControl {
 
 	@RequestMapping(value = "/savePlanBExcelPage", method = RequestMethod.POST)
 	public String savePlanBFlightDatesPage(@RequestParam String wizardId,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam(defaultValue = "") String textareaId, @RequestParam String wizarddataid,
 			@RequestParam String previousPage, @RequestParam String publishPage,
 			@RequestParam(required = false, value = "next") String next,
@@ -443,6 +459,8 @@ public class ExtraPageControl {
 		}
 
 		WizardData wizardData = new WizardData();
+		boolean shouldExclude = excluded != null ? true: false;
+		wizardData.setExcluded(shouldExclude);
 		wizardData.setPagename(PageNameEnum.PlanBExcelPage.toString());
 		wizardData.setPagesequence(Pages.PlanBExcelPage.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {
@@ -464,6 +482,7 @@ public class ExtraPageControl {
 
 	@RequestMapping(value = "/savePlanAExcelPage", method = RequestMethod.POST)
 	public String savePlanAFlightDatesPage(@RequestParam String wizardId,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam(defaultValue = "") String textareaId, @RequestParam String wizarddataid,
 			@RequestParam String previousPage, @RequestParam String publishPage,
 			@RequestParam(required = false, value = "next") String next,
@@ -481,6 +500,8 @@ public class ExtraPageControl {
 		}
 
 		WizardData wizardData = new WizardData();
+		boolean shouldExclude = excluded != null ? true: false;
+		wizardData.setExcluded(shouldExclude);
 		wizardData.setPagename(PageNameEnum.PlanAExcelPage.toString());
 		wizardData.setPagesequence(Pages.PlanAExcelPage.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {

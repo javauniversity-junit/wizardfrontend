@@ -60,6 +60,7 @@ public class ConfidentialClientEvaluationOnePageController {
 
 	@RequestMapping(value = "/saveConfidentialClientEvaluationOnePage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId, @RequestParam String wizarddataid,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam String lastYearLabel1, @RequestParam String lastYearLabel2,
 			@RequestParam String lastYearLabel3, @RequestParam String lastYearLabel4,
 			@RequestParam String lastYearLabel5, @RequestParam String lastYearLabel6,
@@ -123,6 +124,8 @@ public class ConfidentialClientEvaluationOnePageController {
 		String pageData = JSONManager.convertToJson(pageModel);
 
 		wizardData.setPagedata(pageData);
+		boolean shouldExclude = excluded != null ? true: false;
+		wizardData.setExcluded(shouldExclude);	
 		wizardDataRepository.save(wizardData);
 		// model.addAttribute("wizard", wizard);
 		return internalNextPage;

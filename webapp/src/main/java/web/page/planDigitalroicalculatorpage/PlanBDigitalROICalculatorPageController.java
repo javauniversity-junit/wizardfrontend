@@ -60,6 +60,7 @@ public class PlanBDigitalROICalculatorPageController {
 
 	@RequestMapping(value = "/savePlanBDigitalROICalculatorPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId, @RequestParam String wizarddataid,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam(defaultValue = "") String planAMonthlyDigitalInvestment,
 			@RequestParam(defaultValue = "") String planACostPerThousand,
 			@RequestParam(defaultValue = "") String planAClosingPctNumber,
@@ -87,6 +88,8 @@ public class PlanBDigitalROICalculatorPageController {
 			internalNextPage = previousPage;
 		}
 		WizardData wizardData = new WizardData();
+		boolean shouldExclude = excluded != null ? true: false;
+		wizardData.setExcluded(shouldExclude);	
 		wizardData.setPagename(PageNameEnum.PlanBDigitalROICalculatorPage.toString());
 		wizardData.setPagesequence(Pages.PlanBDigitalROICalculatorPage.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {

@@ -59,6 +59,7 @@ public class TargetMarketingPageController {
 
 	@RequestMapping(value = "/saveTargetMarketingPage", method = RequestMethod.POST)
 	public String save(@RequestParam String wizardId, @RequestParam String wizarddataid,
+			@RequestParam(value = "excluded", required = false) String excluded,
 			@RequestParam(name = "pctMen") String pctMenStr, @RequestParam(name = "pctWomen") String pctWomenStr
 			/* , @RequestParam (name="householdIncome") String householdIncomeStr, */
 			, @RequestParam(required = false, value = "householdIncome", defaultValue = "") String householdIncome,
@@ -153,6 +154,8 @@ public class TargetMarketingPageController {
 		}
 
 		WizardData wizardData = new WizardData();
+		boolean shouldExclude = excluded != null ? true: false;
+		wizardData.setExcluded(shouldExclude);
 		wizardData.setPagename(PageNameEnum.TargetMarketingPage.toString());
 		wizardData.setPagesequence(Pages.TargetMarketingPage.getPageSequence());
 		if (wizarddataid != null && wizarddataid.trim().length() > 0) {
