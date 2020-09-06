@@ -3,4 +3,7 @@
 			boolean shouldExclude = excluded != null ? true: false;
 			wizardData.setExcluded(shouldExclude);				
 					
-					
+						if (!data.isExcluded()) {
+						publish.setMarketPlaceCompetitionPage(true);
+						mLog.info("found page MarketPlaceCompetitionPageModel");
+					}		
