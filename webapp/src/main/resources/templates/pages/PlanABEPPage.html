@@ -20,6 +20,7 @@
 	integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
 	crossorigin="anonymous" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+<link rel="stylesheet" href="css/scr.css">
 
 <!-- Favicon-->
 <link rel="shortcut icon" href="./img/icon.png">
@@ -39,102 +40,119 @@
 	<div class="container" style="padding-top: 1%;">
 		<form method="post" action="savePlanABEPPage" autocomplete="off">
 			<fieldset>
-			
+
 				<legend>
 					(11 of 26) Plan A EDS Break Even Point Analysis (BEP) - <span
 						th:text="${wizard.name}"></span>
 				</legend>
 				<div class="form-group">
-					<label for="planAAverageSale">A. Average sale (ticket, transaction, invoice)</label> 
-					<input type="currency" class="form-control"
+					<label for="planAAverageSale">A. Average sale (ticket,
+						transaction, invoice)</label> <input type="currency" class="form-control"
 						id="planAAverageSale" oninput="calculate()"
-						th:value="${dataPageModel?.planAAverageSale}" 
-						data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"						 
-						name="planAAverageSale" />
+						th:value="${dataPageModel?.planAAverageSale}" data-type="currency"
+						pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="planAAverageSale" />
 				</div>
 				<div class="form-group">
-					<label for="planAGrossMargin">B. Gross profit margin on average sale (sale less cost of goods sold)</label> 
+					<label for="planAGrossMargin">B. Gross profit margin on
+						average sale (sale less cost of goods sold)</label>
 					<div class="input-group mb-3">
-					<input
-						type="number" th:value="${dataPageModel?.planAGrossMargin}"	 
-						 class="form-control" oninput="calculate()"
-						id="planAGrossMargin" name="planAGrossMargin" />
-					<div class="input-group-append"><span class="input-group-text">%</span></div>		
-				</div>
+						<input type="number" th:value="${dataPageModel?.planAGrossMargin}"
+							class="form-control" oninput="calculate()" id="planAGrossMargin"
+							name="planAGrossMargin" />
+						<div class="input-group-append">
+							<span class="input-group-text">%</span>
+						</div>
+					</div>
 				</div>
 				<div class="form-group">
-					<label for="planAClosingPct">C. Closing or conversion rate </label> 
+					<label for="planAClosingPct">C. Closing or conversion rate
+					</label>
 					<div class="input-group mb-3">
-					<input type="number" class="form-control"
-						id="planAClosingPct" name="planAClosingPct" oninput="calculate()"
-						th:value="${dataPageModel?.planAClosingPct}" 
-						aria-describedby="planAClosingPct" />
-					<div class="input-group-append"><span class="input-group-text">%</span></div>		
-				</div>
+						<input type="number" class="form-control" id="planAClosingPct"
+							name="planAClosingPct" oninput="calculate()"
+							th:value="${dataPageModel?.planAClosingPct}"
+							aria-describedby="planAClosingPct" />
+						<div class="input-group-append">
+							<span class="input-group-text">%</span>
+						</div>
+					</div>
 				</div>
 				<div class="form-group">
-					<label for="planAProspectValue">D. Projected prospect value (A*B*C)</label> 
-					<input type="text" onClick="this.setSelectionRange(0, this.value.length)"
-						th:value="${dataPageModel?.planAProspectValue}" 
-						class="form-control" id="planAProspectValue" readonly tabindex="-1" 
+					<label for="planAProspectValue">D. Projected prospect value
+						(A*B*C)</label> <input type="text"
+						onClick="this.setSelectionRange(0, this.value.length)"
+						th:value="${dataPageModel?.planAProspectValue}"
+						class="form-control" id="planAProspectValue" readonly
+						tabindex="-1" data-type="currency"
+						pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" name="planAProspectValue" />
+				</div>
+
+				<input id="planAProposedPage_planAMonthly"
+					name="planAProposedPage_planAMonthly" type="hidden"
+					th:value="${PlanAProposedPage?.planAMonthly}" />
+				<div class="form-group">
+					<label for="planAInvestment">E. Client monthly advertising
+						investment (base month)</label> <input type="text"
+						onClick="this.setSelectionRange(0, this.value.length)"
 						data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
-						name="planAProspectValue" />
-				</div>
-				
-				<input id="planAProposedPage_planAMonthly" name="planAProposedPage_planAMonthly" type="hidden" th:value="${PlanAProposedPage?.planAMonthly}" /> 
-				<div class="form-group">
-					<label for="planAInvestment">E. Client monthly advertising investment (base month)</label> 
-					<input type="text" onClick="this.setSelectionRange(0, this.value.length)"
-					    data-type="currency" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
-						name="planAInvestment" id="planAInvestment"
-						class="form-control" readonly tabindex="-1" 
-					    th:value="${dataPageModelOther?.planAMonthly}" />
-						
+						name="planAInvestment" id="planAInvestment" class="form-control"
+						readonly tabindex="-1"
+						th:value="${dataPageModelOther?.planAMonthly}" />
+
 				</div>
 				<div class="form-group">
-					<label for="planAProspectsNeeded">F. Monthly prospects needed to pay for advertising investment (E/D)</label> 
-					   <input type="text" onClick="this.setSelectionRange(0, this.value.length)" readonly tabindex="-1" 
-						th:value="${dataPageModel?.planAProspectsNeeded}" class="form-control"
-						id="planAProspectsNeeded"  name="planAProspectsNeeded" />
+					<label for="planAProspectsNeeded">F. Monthly prospects
+						needed to pay for advertising investment (E/D)</label> <input type="text"
+						onClick="this.setSelectionRange(0, this.value.length)" readonly
+						tabindex="-1" th:value="${dataPageModel?.planAProspectsNeeded}"
+						class="form-control" id="planAProspectsNeeded"
+						name="planAProspectsNeeded" />
 				</div>
 				<div class="form-group">
-					<label for="planAProspectSalesNeeded">G. Number of monthly sales needed to break even (F*C)</label> <input type="text" onClick="this.setSelectionRange(0, this.value.length)"
+					<label for="planAProspectSalesNeeded">G. Number of monthly
+						sales needed to break even (F*C)</label> <input type="text"
+						onClick="this.setSelectionRange(0, this.value.length)"
 						class="form-control" id="planAProspectSalesNeeded"
-						name="planAProspectSalesNeeded" readonly tabindex="-1"  
+						name="planAProspectSalesNeeded" readonly tabindex="-1"
 						th:value="${dataPageModel?.planAProspectSalesNeeded}"
 						aria-describedby="planAProspectSalesNeeded" oninput="calculate()" />
 				</div>
 				<div class="form-group">
-					<label for="planAGrossProfitOnSales">H. Gross sales per month needed to break even (G*A)</label> 
-					<input class="form-control" type="text" onClick="this.setSelectionRange(0, this.value.length)"
+					<label for="planAGrossProfitOnSales">H. Gross sales per
+						month needed to break even (G*A)</label> <input class="form-control"
+						type="text" onClick="this.setSelectionRange(0, this.value.length)"
 						id="planAGrossProfitOnSales"
 						th:value="${dataPageModel?.planAGrossProfitOnSales}"
 						name="planAGrossProfitOnSales" readonly tabindex="-1" />
 				</div>
 				<div class="form-group">
-					<label for="planAMonths">I. Number of months to run in proposed marketing plan</label> 
-					<input type="number" oninput="calculate()"
-						class="form-control" id="planAMonths"  
-						th:value="${dataPageModel?.planAMonths}"
-						name="planAMonths" />
+					<label for="planAMonths">I. Number of months to run in
+						proposed marketing plan</label> <input type="number" oninput="calculate()"
+						class="form-control" id="planAMonths"
+						th:value="${dataPageModel?.planAMonths}" name="planAMonths" />
 				</div>
 				<div class="form-group">
-					<label for="planAAdditionalGrossSales">J. Additional gross sales per year needed to break even (H*I)</label>
-					 <input type="text" onClick="this.setSelectionRange(0, this.value.length)"
-						class="form-control" id="planAAdditionalGrossSales" readonly tabindex="-1"  
+					<label for="planAAdditionalGrossSales">J. Additional gross
+						sales per year needed to break even (H*I)</label> <input type="text"
+						onClick="this.setSelectionRange(0, this.value.length)"
+						class="form-control" id="planAAdditionalGrossSales" readonly
+						tabindex="-1"
 						th:value="${dataPageModel?.planAAdditionalGrossSales}"
 						name="planAAdditionalGrossSales" />
+				</div>
+				<div
+					class="form-group custom-control custom-switch-extra custom-switch custom-switch-md">
+					<input name="excluded" id="excluded"
+						th:checked="${wizardData?.excluded}" type="checkbox"
+						class="custom-control-input"> <label for="excluded"
+						class="custom-control-label">Exclude from presentation</label>
 				</div>
 
 				<input type="hidden" id="nextPage"
 					th:value="'redirect:/PlanALifetimeValuedPage?ID=' + ${wizard.encrypt}"
-					name="nextPage" /> 
-					
-					<input type="hidden" id="previousPage"
+					name="nextPage" /> <input type="hidden" id="previousPage"
 					th:value="'redirect:/PlanAProposedPage?ID=' + ${wizard.encrypt}"
-					name="previousPage" /> 
-					
-					<input type="hidden" id="publishPage"
+					name="previousPage" /> <input type="hidden" id="publishPage"
 					th:value="'redirect:/Publish?ID=' + ${wizard.encrypt}"
 					name="publishPage" /> <input type="hidden" id="wizardId"
 					th:value="${wizard.encrypt}" name="wizardId" /> <input
@@ -162,8 +180,9 @@
 
 	</div>
 
-	<script	src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-	
+	<script
+		src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -178,9 +197,9 @@
 
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-formhelpers/2.3.0/js/bootstrap-formhelpers.min.js"></script>
-	
-	
-	
+
+
+
 	<script src="js/currency.js"></script>
 	<script src="js/planBEPCalculate.js"></script>
 
