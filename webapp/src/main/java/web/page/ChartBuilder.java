@@ -25,8 +25,8 @@ public class ChartBuilder {
 
 				int amount = parse(model.getLastYearValue1());
 				PieChart pieChart = new PieChart(model.getLastYearLabel1(), amount);
-				mLog.info(" add to piechart LastYear label [" + model.getLastYearLabel1() + "]");
-				mLog.info(" add to piechart LastYear amount [" + amount + "]");
+			//	mLog.info(" add to piechart LastYear label [" + model.getLastYearLabel1() + "]");
+			//	mLog.info(" add to piechart LastYear amount [" + amount + "]");
 				pieCharts.add(pieChart);
 
 			} catch (Exception ex) {
@@ -53,8 +53,8 @@ public class ChartBuilder {
 
 				int amount = parse(model.getLastYearValue3());
 				PieChart pieChart = new PieChart(model.getLastYearLabel3(), amount);
-				mLog.info(" add to piechart LastYear label [" + model.getLastYearLabel3() + "]");
-				mLog.info(" add to piechart LastYear amount [" + amount + "]");
+				//mLog.info(" add to piechart LastYear label [" + model.getLastYearLabel3() + "]");
+				//mLog.info(" add to piechart LastYear amount [" + amount + "]");
 				pieCharts.add(pieChart);
 
 			} catch (Exception ex) {
@@ -68,8 +68,8 @@ public class ChartBuilder {
 
 				int amount = parse(model.getLastYearValue4());
 				PieChart pieChart = new PieChart(model.getLastYearLabel4(), amount);
-				mLog.info(" add to piechart LastYear label [" + model.getLastYearLabel4() + "]");
-				mLog.info(" add to piechart LastYear amount [" + amount + "]");
+				//mLog.info(" add to piechart LastYear label [" + model.getLastYearLabel4() + "]");
+				//mLog.info(" add to piechart LastYear amount [" + amount + "]");
 				pieCharts.add(pieChart);
 
 			} catch (Exception ex) {
@@ -83,8 +83,8 @@ public class ChartBuilder {
 
 				int amount = parse(model.getLastYearValue5());
 				PieChart pieChart = new PieChart(model.getLastYearLabel5(), amount);
-				mLog.info(" add to piechart LastYear label [" + model.getLastYearLabel5() + "]");
-				mLog.info(" add to piechart  LastYearamount [" + amount + "]");
+				//mLog.info(" add to piechart LastYear label [" + model.getLastYearLabel5() + "]");
+				//mLog.info(" add to piechart  LastYearamount [" + amount + "]");
 				pieCharts.add(pieChart);
 
 			} catch (Exception ex) {
@@ -98,8 +98,8 @@ public class ChartBuilder {
 
 				int amount = parse(model.getLastYearValue6());
 				PieChart pieChart = new PieChart(model.getLastYearLabel6(), amount);
-				mLog.info(" add to piechart LastYear label [" + model.getLastYearLabel6() + "]");
-				mLog.info(" add to piechart LastYear amount [" + amount + "]");
+				//mLog.info(" add to piechart LastYear label [" + model.getLastYearLabel6() + "]");
+				//mLog.info(" add to piechart LastYear amount [" + amount + "]");
 				pieCharts.add(pieChart);
 
 			} catch (Exception ex) {
@@ -113,8 +113,8 @@ public class ChartBuilder {
 
 				int amount = parse(model.getLastYearValue7());
 				PieChart pieChart = new PieChart(model.getLastYearLabel7(), amount);
-				mLog.info(" add to piechart LastYear label [" + model.getLastYearLabel7() + "]");
-				mLog.info(" add to piechart LastYear amount [" + amount + "]");
+				//mLog.info(" add to piechart LastYear label [" + model.getLastYearLabel7() + "]");
+				//mLog.info(" add to piechart LastYear amount [" + amount + "]");
 				pieCharts.add(pieChart);
 
 			} catch (Exception ex) {
@@ -128,8 +128,8 @@ public class ChartBuilder {
 
 				int amount = parse(model.getLastYearValue8());
 				PieChart pieChart = new PieChart(model.getLastYearLabel8(), amount);
-				mLog.info(" add to piechart LastYear label [" + model.getLastYearLabel8() + "]");
-				mLog.info(" add to piechart LastYear amount [" + amount + "]");
+				//mLog.info(" add to piechart LastYear label [" + model.getLastYearLabel8() + "]");
+				//mLog.info(" add to piechart LastYear amount [" + amount + "]");
 				pieCharts.add(pieChart);
 
 			} catch (Exception ex) {
@@ -143,8 +143,8 @@ public class ChartBuilder {
 
 				int amount = parse(model.getLastYearValue9());
 				PieChart pieChart = new PieChart(model.getLastYearLabel9(), amount);
-				mLog.info(" add to piechart LastYear label [" + model.getLastYearLabel9() + "]");
-				mLog.info(" add to piechart LastYear amount [" + amount + "]");
+				//mLog.info(" add to piechart LastYear label [" + model.getLastYearLabel9() + "]");
+				//mLog.info(" add to piechart LastYear amount [" + amount + "]");
 				pieCharts.add(pieChart);
 
 			} catch (Exception ex) {
@@ -166,8 +166,8 @@ public class ChartBuilder {
 
 				int amount = parse(model.getProposedValue1());
 				PieChart pieChart = new PieChart(model.getProposedLabel1(), amount);
-				mLog.info(" add to piechart NextYear label [" + model.getProposedLabel1() + "]");
-				mLog.info(" add to piechart NextYear amount [" + amount + "]");
+				//mLog.info(" add to piechart NextYear label [" + model.getProposedLabel1() + "]");
+				//mLog.info(" add to piechart NextYear amount [" + amount + "]");
 				pieCharts.add(pieChart);
 
 			} catch (Exception ex) {
@@ -194,8 +194,8 @@ public class ChartBuilder {
 
 				int amount = parse(model.getProposedValue3());
 				PieChart pieChart = new PieChart(model.getProposedLabel3(), amount);
-				mLog.info(" add to piechart NextYearlabel [" + model.getProposedLabel3() + "]");
-				mLog.info(" add to piechart NextYear amount [" + amount + "]");
+				//mLog.info(" add to piechart NextYearlabel [" + model.getProposedLabel3() + "]");
+				//mLog.info(" add to piechart NextYear amount [" + amount + "]");
 				pieCharts.add(pieChart);
 
 			} catch (Exception ex) {
@@ -209,8 +209,8 @@ public class ChartBuilder {
 
 				int amount = parse(model.getProposedValue4());
 				PieChart pieChart = new PieChart(model.getProposedLabel4(), amount);
-				mLog.info(" add to piechart NextYear label [" + model.getProposedLabel4() + "]");
-				mLog.info(" add to piechart NextYear amount [" + amount + "]");
+				//mLog.info(" add to piechart NextYear label [" + model.getProposedLabel4() + "]");
+				//mLog.info(" add to piechart NextYear amount [" + amount + "]");
 				pieCharts.add(pieChart);
 
 			} catch (Exception ex) {
@@ -224,8 +224,8 @@ public class ChartBuilder {
 
 				int amount = parse(model.getProposedValue5());
 				PieChart pieChart = new PieChart(model.getProposedLabel5(), amount);
-				mLog.info(" add to piechart NextYear label [" + model.getProposedLabel5() + "]");
-				mLog.info(" add to piechart NextYear amount [" + amount + "]");
+				//mLog.info(" add to piechart NextYear label [" + model.getProposedLabel5() + "]");
+				//mLog.info(" add to piechart NextYear amount [" + amount + "]");
 				pieCharts.add(pieChart);
 
 			} catch (Exception ex) {
@@ -239,8 +239,8 @@ public class ChartBuilder {
 
 				int amount = parse(model.getProposedValue6());
 				PieChart pieChart = new PieChart(model.getProposedLabel6(), amount);
-				mLog.info(" add to piechart NextYear label [" + model.getProposedLabel6() + "]");
-				mLog.info(" add to piechart NextYear amount [" + amount + "]");
+				//mLog.info(" add to piechart NextYear label [" + model.getProposedLabel6() + "]");
+				//mLog.info(" add to piechart NextYear amount [" + amount + "]");
 				pieCharts.add(pieChart);
 
 			} catch (Exception ex) {
@@ -254,8 +254,8 @@ public class ChartBuilder {
 
 				int amount = parse(model.getProposedValue7());
 				PieChart pieChart = new PieChart(model.getProposedLabel7(), amount);
-				mLog.info(" add to piechart NextYear label [" + model.getProposedLabel7() + "]");
-				mLog.info(" add to piechart NextYear amount [" + amount + "]");
+				//mLog.info(" add to piechart NextYear label [" + model.getProposedLabel7() + "]");
+				//mLog.info(" add to piechart NextYear amount [" + amount + "]");
 				pieCharts.add(pieChart);
 
 			} catch (Exception ex) {
@@ -269,8 +269,8 @@ public class ChartBuilder {
 
 				int amount = parse(model.getProposedValue8());
 				PieChart pieChart = new PieChart(model.getProposedLabel8(), amount);
-				mLog.info(" add to piechart NextYear label [" + model.getProposedLabel8() + "]");
-				mLog.info(" add to piechart NextYear amount [" + amount + "]");
+				//mLog.info(" add to piechart NextYear label [" + model.getProposedLabel8() + "]");
+				//mLog.info(" add to piechart NextYear amount [" + amount + "]");
 				pieCharts.add(pieChart);
 
 			} catch (Exception ex) {
@@ -284,8 +284,8 @@ public class ChartBuilder {
 
 				int amount = parse(model.getProposedValue9());
 				PieChart pieChart = new PieChart(model.getProposedLabel9(), amount);
-				mLog.info(" add to piechart NextYear label [" + model.getProposedLabel9() + "]");
-				mLog.info(" add to piechart NextYear amount [" + amount + "]");
+				//mLog.info(" add to piechart NextYear label [" + model.getProposedLabel9() + "]");
+				//mLog.info(" add to piechart NextYear amount [" + amount + "]");
 				pieCharts.add(pieChart);
 
 			} catch (Exception ex) {
@@ -305,7 +305,7 @@ public class ChartBuilder {
 		stramount = stramount.replace(",", "");
 		Double doubleAmount = Double.parseDouble(stramount);
 		int convertedAmount = doubleAmount.intValue();
-		mLog.info("Converted amount = [" + convertedAmount + "]");
+		//mLog.info("Converted amount = [" + convertedAmount + "]");
 		return convertedAmount;
 	}
 }

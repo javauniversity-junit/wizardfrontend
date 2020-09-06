@@ -268,9 +268,10 @@ public class PublishController {
 							.convertFromJson(data.getPagedata(), ExtraPageModel.class);
 					model.addAttribute("DigitalMobileSocialStrategiesPageModel",
 							digitalMobileSocialStrategiesPageModel);
+					mLog.info("found page digitalMobileSocialStrategiesPage");
 					if (!data.isExcluded()) {
 						publish.setDigitalMobileSocialStrategiesPage(true);
-						mLog.info("found page digitalMobileSocialStrategiesPage");
+						mLog.info("set page digitalMobileSocialStrategiesPage");
 					}
 
 					break;
