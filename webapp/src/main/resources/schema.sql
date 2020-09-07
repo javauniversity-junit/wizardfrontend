@@ -68,7 +68,7 @@ CHANGE COLUMN `pagedata` `pagedata` LONGTEXT NOT NULL ;
 --ADD COLUMN  `excluded`  TINYINT(1) AFTER `pagesequence`;
 --update table wizarddata set excluded = 0;
 --update  wizarddata
---set excluded = 0
+----set excluded = 0
 --where wizarddataid >  0
 --ALTER TABLE `license`.`wizarddata` 
 --CHANGE COLUMN `excluded` `excluded` TINYINT(1) NULL DEFAULT 0 ;

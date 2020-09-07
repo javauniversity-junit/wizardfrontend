@@ -12,29 +12,32 @@
 <link rel="stylesheet" href="css/extra.css">
 <script src="https://www.gstatic.com/charts/loader.js"></script>
 
+
+
+
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-
+	
 <script src="js/ClientObjectivesOnePageControl.js"></script>
 <script src="js/media.js"></script>
 <script src="js/currency.js"></script>
+<script src="js/presentationNavigation.js"></script>
+
 
 <script>
-
 	function printPage() {
 		document.getElementById("shareForm").submit();
 	}
-	
+
 	function gotoSection(elementToScroll) {
-		  console.group("gotoSection");
-		  console.log("section [" + elementToScroll + "]");
-		  
-		  var elmnt = document.getElementById(elementToScroll);
-		  elmnt.scrollIntoView();
-		  console.groupEnd();
-     }
+		console.group("gotoSection");
+		console.log("section [" + elementToScroll + "]");
+
+		var elmnt = document.getElementById(elementToScroll);
+		elmnt.scrollIntoView();
+		console.groupEnd();
+	}
+
 
 	function share() {
 		window.print();
@@ -56,214 +59,234 @@
 		<input type="hidden" id="encryptId" th:value="${encryptId}"
 			name="encryptId" />
 	</form>
-	<div class="w3-container">
-		<!-- outer div  -->
-		<div th:if="${PublishModel.presentedToPage}">
-			<!-- replace presentToFragment slide 1 begin -->
+
+	<div class="content">
+    
+  
+  
+
+		<div class="w3-container" id="wizard">
+			<!-- outer div  -->
+			<code hidden>presentedToPage</code>
+			<section>
+				<div th:if="${PublishModel.presentedToPage}">
+					<!-- replace presentToFragment slide 1 begin -->
+					<div
+						th:replace="fragments/PresentedToPageFragment :: PresentedToPage"></div>
+					<!-- replace presentToFragment end -->
+				</div>
+
+			</section>
+			<code hidden>teamCommitmentPage</code>
+			<section>
+
+				<div th:if="${PublishModel.teamCommitmentPage}">
+					<!-- replace teamCommitmentPageFragment  slide 2 begin -->
+					<div
+						th:replace="fragments/TeamCommitmentPageFragment :: TeamCommitmentPage"></div>
+					<!-- replace TeamCommitmentPageFragment end -->
+				</div>
+			</section>
+
+			<!-- replace marketPlaceCompetitionPage slide 3 begin -->
+			<code hidden>marketPlaceCompetitionPage</code>
+			<section>
+				<div th:if="${PublishModel.marketPlaceCompetitionPage}">
+					<div
+						th:replace="fragments/MarketPlaceCompetitionPageFragment :: MarketPlaceCompetitionPage"></div>
+				</div>
+			</section>
+
+			<!-- replace ClientObjectivesFragment slide 4 begin -->
+			<code hidden>clientObjectivesPage</code>
+			<section>
+				<div th:if="${PublishModel.clientObjectivesPage}">
+					<div
+						th:replace="fragments/ClientObjectivesFragment :: ClientObjectivesPage"></div>
+				</div>
+			</section>
+
+
+			<!-- replace StrategicMarketingPageTwoFragment begin slide 5-->
+			<div th:if="${PublishModel.strategicMarketingPageOne}">
+				<div
+					th:replace="fragments/StrategicMarketingPageTwoFragment :: StrategicMarketingPageTwo"></div>
+			</div>
+
+			<!-- replace TargetMarketingPage begin slide 6-->
+			<div th:if="${PublishModel.targetMarketingPage}">
+				<div
+					th:replace="fragments/TargetMarketingPageFragment :: TargetMarketingPage"></div>
+			</div>
+
+
+			<!-- replace ConfidentialClientEvaluationPageDataFragment slide 7 begin -->
+			<div th:if="${PublishModel.confidentialClientEvaluationOnePage}">
+				<div
+					th:replace="fragments/ConfidentialClientEvaluationPageDataFragment :: ConfidentialClientEvaluationPageData"></div>
+			</div>
+
+
+
+			<!-- replace ConfidentialClientEvaluationLastYearPage slide 8 begin -->
+			<div th:if="${PublishModel.confidentialClientEvaluationOnePage}">
+				<div
+					th:replace="fragments/ConfidentialClientEvaluationLastYearPageFragment :: ConfidentialClientEvaluationLastYearPage"></div>
+			</div>
+
+
+
+
+			<!-- replace ConfidentialClientEvaluationProposedPage slide 9 begin -->
+			<div th:if="${PublishModel.confidentialClientEvaluationProposedPage}">
+				<div
+					th:replace="fragments/ConfidentialClientEvaluationProposedPageFragment :: ConfidentialClientEvaluationProposedPage"></div>
+			</div>
+
+
+			<!-- replace ProfileOfConsumersPageModel slide 10 begin -->
+			<div th:if="${PublishModel.profileOfConsumersPage}">
+				<div
+					th:replace="fragments/ProfileOfConsumersPageFragment :: ProfileOfConsumersPage"></div>
+			</div>
+
+			<!-- replace MarketingStrategiesPage slide 11 begin -->
+			<div th:if="${PublishModel.marketingStrategiesPage}">
+				<div
+					th:replace="fragments/MarketingStrategiesFragment :: MarketingStrategiesPage"></div>
+			</div>
+
+
+
+			<!-- replace CreateConceptOnePageModel slide 12 begin -->
+			<div th:if="${PublishModel.createConceptOnePage}">
+				<div
+					th:replace="fragments/CreateConceptOneFragment :: CreateConceptOne"></div>
+			</div>
+			<!-- replace CreateConceptTwoPageModel slide 13 begin -->
+			<div th:if="${PublishModel.createConceptTwoPage}">
+				<div
+					th:replace="fragments/CreateConceptTwoFragment :: CreateConceptTwo"></div>
+			</div>
+
+			<!-- replace DigitalMobileSocialStrategies slide 14 begin -->
+			<div th:if="${PublishModel.digitalMobileSocialStrategiesPage}">
+				<div
+					th:replace="fragments/DigitalMobileSocialStrategiesPageFragment :: DigitalMobileSocialStrategies"></div>
+			</div>
+
+			<!-- replace LongRangeStrategicPlansPage slide 15 begin -->
 			<div
-				th:replace="fragments/PresentedToPageFragment :: PresentedToPage"></div>
-			<!-- replace presentToFragment end -->
-		</div>
+				th:replace="fragments/LongRangeStrategicPlansFragment :: LongRangeStrategicPlansPage"></div>
 
-		<div th:if="${PublishModel.teamCommitmentPage}">
-			<!-- replace teamCommitmentPageFragment  slide 2 begin -->
+			<!-- replace AdvantagesLongRange slide 16 begin -->
 			<div
-				th:replace="fragments/TeamCommitmentPageFragment :: TeamCommitmentPage"></div>
-			<!-- replace TeamCommitmentPageFragment end -->
-		</div>
+				th:replace="fragments/AdvantagesLongRangeFragment :: AdvantagesLongRange"></div>
 
-		<!-- replace marketPlaceCompetitionPage slide 3 begin -->
-		<div th:if="${PublishModel.marketPlaceCompetitionPage}">
+
+
+
+			<!-- replace PlanAMediaPage slide 17 begin -->
+			<div th:if="${PublishModel.planAMediaPage}">
+				<div
+					th:replace="fragments/PlanAMediaPagePageFragment :: PlanAMediaPage"></div>
+			</div>
+
+			<!-- replace PlanAExcelPage Slide 18 begin -->
+			<div th:if="${PublishModel.planAExcelPage}">
+				<div th:replace="fragments/PlanAExcelPageFragment :: PlanAExcelPage"></div>
+			</div>
+
+			<!-- replace PlanAProposedPage begin slide 19-->
+			<div th:if="${PublishModel.planAProposedPage}">
+				<div
+					th:replace="fragments/PlanAProposedPageFragment :: PlanAProposedPage"></div>
+			</div>
+
+			<!-- replace PlanABEPPage slide 20 begin -->
+			<div th:if="${PublishModel.planABEPPage}">
+				<div th:replace="fragments/PlanABEPPageFragment :: PlanABEPPage"></div>
+			</div>
+
+			<!-- replace PlanALifetimeValuedPageFragment slide 21 begin -->
+			<div th:if="${PublishModel.planALifetimeValuedPage}">
+				<div
+					th:replace="fragments/PlanALifetimeValuedPageFragment :: PlanALifetimeValuedPage"></div>
+			</div>
+
+
+			<!-- replace PlanADigitalROICalculatorPageFragment slide 22 begin -->
+			<div th:if="${PublishModel.planADigitalROICalculatorPage}">
+				<div
+					th:replace="fragments/PlanADigitalROICalculatorPageFragment :: PlanADigitalROICalculator"></div>
+			</div>
+
+			<!-- replace PlanBMediaPage slide 23 begin -->
+			<div th:if="${PublishModel.planBMediaPage}">
+				<div
+					th:replace="fragments/PlanBMediaPagePageFragment :: PlanBMediaPage"></div>
+			</div>
+
+			<!-- replace PlanBExcelPage slide 24 begin -->
+			<div th:if="${PublishModel.planBExcelPage}">
+				<div th:replace="fragments/PlanBExcelPageFragment :: PlanBExcelPage"></div>
+			</div>
+
+
+
+
+
+			<!-- replace PlanBProposedPage slide 25 begin -->
+			<div th:if="${PublishModel.planBProposedPage}">
+				<div
+					th:replace="fragments/PlanBProposedPageFragment :: PlanBProposedPage"></div>
+			</div>
+
+			<!-- replace PlanBBEPPage  slide 26 begin -->
+			<div th:if="${PublishModel.planBBEPPage}">
+				<div th:replace="fragments/PlanBBEPPageFragment :: PlanBBEPPage"></div>
+			</div>
+
+
+			<!-- replace PlanBLifetimeValuedPageFragment slide 27 begin -->
+			<div th:if="${PublishModel.planBLifetimeValuedPage}">
+				<div
+					th:replace="fragments/PlanBLifetimeValuedPageFragment :: PlanBLifetimeValuedPage"></div>
+			</div>
+
+
+
+			<!-- replace PlanBDigitalROICalculatorPageFragment slide 28 begin -->
+			<div th:if="${PublishModel.planBDigitalROICalculatorPage}">
+				<div
+					th:replace="fragments/PlanBDigitalROICalculatorPageFragment :: PlanBDigitalROICalculator"></div>
+			</div>
+
+
+			<!-- replace PlanAMediaPageFlightDatesFragment slide 29 begin -->
+			<div th:if="${PublishModel.planAMediaPage}">
+				<div
+					th:replace="fragments/PlanAMediaPageFlightDatesFragment :: PlanAMediaPageFlightDates"></div>
+			</div>
+
+			<!-- replace PlanBMediaPageFlightDatesFragment slide 30 begin -->
+			<div th:if="${PublishModel.planBMediaPage}">
+				<div
+					th:replace="fragments/PlanBMediaPageFlightDatesFragment :: PlanBMediaPageFlightDates"></div>
+			</div>
+
+
+			<!-- replace ClientPolicyAgreementPageFragment slide 31 begin -->
 			<div
-				th:replace="fragments/MarketPlaceCompetitionPageFragment :: MarketPlaceCompetitionPage"></div>
-		</div>
+				th:replace="fragments/ClientPolicyAgreementPageFragment :: ClientPolicyAgreement"></div>
 
 
-		<!-- replace ClientObjectivesFragment slide 4 begin -->
-		<div th:if="${PublishModel.clientObjectivesPage}">
+			<!-- replace SalesServiceAgreementPageFragment slide 32 begin -->
 			<div
-				th:replace="fragments/ClientObjectivesFragment :: ClientObjectivesPage"></div>
+				th:replace="fragments/SalesServiceAgreementPageFragment :: SalesServiceAgreement"></div>
+
+
 		</div>
-
-		<!-- replace StrategicMarketingPageTwoFragment begin slide 5-->
-		<div th:if="${PublishModel.strategicMarketingPageOne}">
-			<div
-				th:replace="fragments/StrategicMarketingPageTwoFragment :: StrategicMarketingPageTwo"></div>
-		</div>
-
-		<!-- replace TargetMarketingPage begin slide 6-->
-		<div th:if="${PublishModel.targetMarketingPage}">
-			<div
-				th:replace="fragments/TargetMarketingPageFragment :: TargetMarketingPage"></div>
-		</div>
-
-
-		<!-- replace ConfidentialClientEvaluationPageDataFragment slide 7 begin -->
-		<div th:if="${PublishModel.confidentialClientEvaluationOnePage}">
-			<div
-				th:replace="fragments/ConfidentialClientEvaluationPageDataFragment :: ConfidentialClientEvaluationPageData"></div>
-		</div>
-
-
-
-		<!-- replace ConfidentialClientEvaluationLastYearPage slide 8 begin -->
-		<div th:if="${PublishModel.confidentialClientEvaluationOnePage}">
-			<div
-				th:replace="fragments/ConfidentialClientEvaluationLastYearPageFragment :: ConfidentialClientEvaluationLastYearPage"></div>
-		</div>
-
-
-
-
-		<!-- replace ConfidentialClientEvaluationProposedPage slide 9 begin -->
-		<div th:if="${PublishModel.confidentialClientEvaluationProposedPage}">
-			<div
-				th:replace="fragments/ConfidentialClientEvaluationProposedPageFragment :: ConfidentialClientEvaluationProposedPage"></div>
-		</div>
-
-
-		<!-- replace ProfileOfConsumersPageModel slide 10 begin -->
-		<div th:if="${PublishModel.profileOfConsumersPage}">
-			<div
-				th:replace="fragments/ProfileOfConsumersPageFragment :: ProfileOfConsumersPage"></div>
-		</div>
-
-		<!-- replace MarketingStrategiesPage slide 11 begin -->
-		<div th:if="${PublishModel.marketingStrategiesPage}">
-			<div
-				th:replace="fragments/MarketingStrategiesFragment :: MarketingStrategiesPage"></div>
-		</div>
-
-
-
-		<!-- replace CreateConceptOnePageModel slide 12 begin -->
-		<div th:if="${PublishModel.createConceptOnePage}">
-			<div
-				th:replace="fragments/CreateConceptOneFragment :: CreateConceptOne"></div>
-		</div>
-		<!-- replace CreateConceptTwoPageModel slide 13 begin -->
-		<div th:if="${PublishModel.createConceptTwoPage}">
-			<div
-				th:replace="fragments/CreateConceptTwoFragment :: CreateConceptTwo"></div>
-		</div>
-
-		<!-- replace DigitalMobileSocialStrategies slide 14 begin -->
-		<div th:if="${PublishModel.digitalMobileSocialStrategiesPage}">
-			<div
-				th:replace="fragments/DigitalMobileSocialStrategiesPageFragment :: DigitalMobileSocialStrategies"></div>
-		</div>
-
-		<!-- replace LongRangeStrategicPlansPage slide 15 begin -->
-		<div
-			th:replace="fragments/LongRangeStrategicPlansFragment :: LongRangeStrategicPlansPage"></div>
-
-		<!-- replace AdvantagesLongRange slide 16 begin -->
-		<div
-			th:replace="fragments/AdvantagesLongRangeFragment :: AdvantagesLongRange"></div>
-
-
-
-
-		<!-- replace PlanAMediaPage slide 17 begin -->
-		<div th:if="${PublishModel.planAMediaPage}">
-			<div
-				th:replace="fragments/PlanAMediaPagePageFragment :: PlanAMediaPage"></div>
-		</div>
-
-		<!-- replace PlanAExcelPage Slide 18 begin -->
-		<div th:if="${PublishModel.planAExcelPage}">
-			<div th:replace="fragments/PlanAExcelPageFragment :: PlanAExcelPage"></div>
-		</div>
-
-		<!-- replace PlanAProposedPage begin slide 19-->
-		<div th:if="${PublishModel.planAProposedPage}">
-			<div
-				th:replace="fragments/PlanAProposedPageFragment :: PlanAProposedPage"></div>
-		</div>
-
-		<!-- replace PlanABEPPage slide 20 begin -->
-		<div th:if="${PublishModel.planABEPPage}">
-			<div th:replace="fragments/PlanABEPPageFragment :: PlanABEPPage"></div>
-		</div>
-
-		<!-- replace PlanALifetimeValuedPageFragment slide 21 begin -->
-		<div th:if="${PublishModel.planALifetimeValuedPage}">
-			<div
-				th:replace="fragments/PlanALifetimeValuedPageFragment :: PlanALifetimeValuedPage"></div>
-		</div>
-
-
-		<!-- replace PlanADigitalROICalculatorPageFragment slide 22 begin -->
-		<div th:if="${PublishModel.planADigitalROICalculatorPage}">
-			<div
-				th:replace="fragments/PlanADigitalROICalculatorPageFragment :: PlanADigitalROICalculator"></div>
-		</div>
-
-		<!-- replace PlanBMediaPage slide 23 begin -->
-		<div th:if="${PublishModel.planBMediaPage}">
-			<div
-				th:replace="fragments/PlanBMediaPagePageFragment :: PlanBMediaPage"></div>
-		</div>
-
-		<!-- replace PlanBExcelPage slide 24 begin -->
-		<div th:if="${PublishModel.planBExcelPage}">
-			<div th:replace="fragments/PlanBExcelPageFragment :: PlanBExcelPage"></div>
-		</div>
-
-
-
-
-
-		<!-- replace PlanBProposedPage slide 25 begin -->
-		<div th:if="${PublishModel.planBProposedPage}">
-			<div
-				th:replace="fragments/PlanBProposedPageFragment :: PlanBProposedPage"></div>
-		</div>
-
-		<!-- replace PlanBBEPPage  slide 26 begin -->
-		<div th:if="${PublishModel.planBBEPPage}">
-			<div th:replace="fragments/PlanBBEPPageFragment :: PlanBBEPPage"></div>
-		</div>
-
-
-		<!-- replace PlanBLifetimeValuedPageFragment slide 27 begin -->
-		<div th:if="${PublishModel.planBLifetimeValuedPage}">
-			<div
-				th:replace="fragments/PlanBLifetimeValuedPageFragment :: PlanBLifetimeValuedPage"></div>
-		</div>
-
-
-
-		<!-- replace PlanBDigitalROICalculatorPageFragment slide 28 begin -->
-		<div th:if="${PublishModel.planBDigitalROICalculatorPage}">
-			<div
-				th:replace="fragments/PlanBDigitalROICalculatorPageFragment :: PlanBDigitalROICalculator"></div>
-		</div>
-
-
-		<!-- replace PlanAMediaPageFlightDatesFragment slide 29 begin -->
-		<div th:if="${PublishModel.planAMediaPage}">
-			<div
-				th:replace="fragments/PlanAMediaPageFlightDatesFragment :: PlanAMediaPageFlightDates"></div>
-		</div>
-
-		<!-- replace PlanBMediaPageFlightDatesFragment slide 30 begin -->
-		<div th:if="${PublishModel.planBMediaPage}">
-			<div
-				th:replace="fragments/PlanBMediaPageFlightDatesFragment :: PlanBMediaPageFlightDates"></div>
-		</div>
-
-
-		<!-- replace ClientPolicyAgreementPageFragment slide 31 begin -->
-		<div
-			th:replace="fragments/ClientPolicyAgreementPageFragment :: ClientPolicyAgreement"></div>
-
-
-		<!-- replace SalesServiceAgreementPageFragment slide 32 begin -->
-		<div
-			th:replace="fragments/SalesServiceAgreementPageFragment :: SalesServiceAgreement"></div>
-
-
 	</div>
 
 	<script>
@@ -287,10 +310,13 @@
 							'advlist autolink lists link image charmap print preview anchor',
 							'searchreplace visualblocks code fullscreen',
 							'insertdatetime media table paste code help wordcount' ],
-					content_css : ['css/extra.css' ],
-					content_style:['body { font-family: Verdana,sans-serif; }']
+					content_css : [ 'css/extra.css' ],
+					content_style : [ 'body { font-family: Verdana,sans-serif; }' ]
 				});
 	</script>
+
+
+
 
 </body>
 

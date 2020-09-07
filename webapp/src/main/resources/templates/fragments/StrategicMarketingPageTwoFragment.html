@@ -5,25 +5,28 @@
 		<!-- begin if StrategicMarketingPageTwo content -->
 		<div>
 			<a id="StrategicMarketingPageTwo"></a>
-			
+
 
 
 		</div>
 
 		<div class="whiteGrad">
 
-           <div class="text-justify">
+			<div class="text-justify">
 				<h1 class="text-center w3-text-black">Strategic Marketing II</h1>
 			</div>
-			<div class="w3-row strategicMarketingII_question" ><strong>5. What image does the client want the
-				company's name to project to their customers / consumers?</strong></div>
+			<div class="w3-row strategicMarketingII_question">
+				<strong>5. What image does the client want the company's
+					name to project to their customers / consumers?</strong>
+			</div>
 			<div class="w3-row strategicMarketingII_answer">
 				<span
 					th:text="${StrategicMarketingPageOne?.companyNameProjectImage}"></span>
 			</div>
 
-			<div class="w3-row strategicMarketingII_question_sub" ><strong>Current Company
-				Slogan</strong></div>
+			<div class="w3-row strategicMarketingII_question_sub">
+				<strong>Current Company Slogan</strong>
+			</div>
 			<div class="w3-row strategicMarketingII_answer_sub">
 				<span th:text="${StrategicMarketingPageOne?.currentCompanySlogan}"></span>
 			</div>
@@ -34,15 +37,18 @@
 
 
 
+
 				
 			</div>
 
 
 			<div class="w3-row strategicMarketingII_question">
-				<div class="w3-col m6"><strong>6. a. What are your poorest performing
-					months?</strong></div>
-				<div class="w3-col m6 left-indent-small"><strong>7 a. What is the most frequent compliment
-					you get?</strong></div>
+				<div class="w3-col m6">
+					<strong>6. a. What are your poorest performing months?</strong>
+				</div>
+				<div class="w3-col m6 left-indent-small">
+					<strong>7 a. What is the most frequent compliment you get?</strong>
+				</div>
 
 			</div>
 
@@ -50,7 +56,7 @@
 
 
 
-			<div class="w3-row strategicMarketingII_answer_sub" >
+			<div class="w3-row strategicMarketingII_answer_sub">
 				<div class="w3-col m6">
 					<span th:text="${StrategicMarketingHelper.poorestMonths}"></span>
 				</div>
@@ -58,9 +64,9 @@
 					<span th:text="${StrategicMarketingPageThree?.compliments}"></span>
 				</div>
 			</div>
-			
-			
-			
+
+
+
 			<div class="w3-row strategicMarketingII_question_sub">
 				<div class="w3-col m6">
 					<strong>b. What are your best performing months?</strong>
@@ -69,9 +75,9 @@
 					<strong>b. What is the most frequent complaint you get?</strong>
 				</div>
 			</div>
-			
-			
-			<div class="w3-row strategicMarketingII_answer_sub" >
+
+
+			<div class="w3-row strategicMarketingII_answer_sub">
 				<div class="w3-col m6">
 					<span th:text="${StrategicMarketingHelper.bestMonths}"></span>
 				</div>
@@ -79,31 +85,31 @@
 					<span th:text="${StrategicMarketingPageThree?.complaint}"></span>
 				</div>
 			</div>
-			
-			
-			
-			<div class="w3-row strategicMarketingII_question_sub2">	
-					<strong>c.  What are your best performing days?</strong>
+
+
+
+			<div class="w3-row strategicMarketingII_question_sub2">
+				<strong>c. What are your best performing days?</strong>
 			</div>
-			
-			<div class="w3-row strategicMarketingII_answer_sub">	
-					<span th:text="${StrategicMarketingHelper.bestDays}"></span>
+
+			<div class="w3-row strategicMarketingII_answer_sub">
+				<span th:text="${StrategicMarketingHelper.bestDays}"></span>
 			</div>
-				
+
 			<div class="w3-row strategicMarketingII_question">
 				<div class="w3-col m6 ">
-					<strong>8. What digital marketing
-								strategies are you currently utilizing? What are your goals and
-								how do you measure the effectiveness?</strong>
+					<strong>8. What digital marketing strategies are you
+						currently utilizing? What are your goals and how do you measure
+						the effectiveness?</strong>
 				</div>
 				<div class="w3-col m6 left-indent-small">
-					<strong>9. Do you have a social media strategy 
-								(i.e. Facebook, Google +, Twitter, Instagram, etc.)?  
-								If so, what are your goals and how do you measure the effectiveness?</strong>
+					<strong>9. Do you have a social media strategy (i.e.
+						Facebook, Google +, Twitter, Instagram, etc.)? If so, what are
+						your goals and how do you measure the effectiveness?</strong>
 				</div>
-			</div>	
-				
-				
+			</div>
+
+
 			<div class="w3-row strategicMarketingII_answer">
 				<div class="w3-col m6">
 					<span th:text="${StrategicMarketingPageThree?.marketingStrategy}"></span>
@@ -112,14 +118,18 @@
 					<span th:text="${StrategicMarketingPageThree?.socialStrategy}"></span>
 				</div>
 			</div>
-			
+
 
 		</div>
 
 		<div class="w3-container d-print-none" style="padding-top: 2%;">
 			<button class="w3-btn w3-white" onclick="javascript:printPage();">Share</button>
-			<a href="#TargetMarketingPage" class="w3-btn w3-white">Next</a>
-			<button class="w3-btn w3-white" onclick="javascript:goBack();">Previous</button>
+
+			<button class="w3-btn w3-white"
+				onclick="javascript:gotoAnchor(6,'down');">Next</button>
+			<button class="w3-btn w3-white"
+				onclick="javascript:gotoAnchor(4,'up');">Previous</button>
+
 		</div>
 		<div class="w3-row">
 			<div class="CopyRightId w3-col m8"></div>

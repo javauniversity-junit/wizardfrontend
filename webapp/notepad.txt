@@ -1,9 +1,5 @@
-			@RequestParam(value = "excluded", required = false) String excluded,
-			
-			boolean shouldExclude = excluded != null ? true: false;
-			wizardData.setExcluded(shouldExclude);				
-					
-						if (!data.isExcluded()) {
-						publish.setMarketPlaceCompetitionPage(true);
-						mLog.info("found page MarketPlaceCompetitionPageModel");
-					}		
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	
+    <button class="w3-btn w3-white" onclick="javascript:gotoAnchor(3,'down');">Next</button>
+	<button class="w3-btn w3-white" onclick="javascript:gotoAnchor(1,'up');">Previous</button>

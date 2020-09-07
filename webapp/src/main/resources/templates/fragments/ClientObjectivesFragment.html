@@ -3,62 +3,56 @@
 	class="grad w3-container pageBreakInside">
 	<div th:if="${PublishModel.clientObjectivesPage}" class="container"
 		style="padding-top: 1%;">
-		
+
 		<div>
 			<a id="ClientObjectivesPage"></a>
-			
-			
-			
-		
+
+
+
+
 		</div>
-		
+
 		<!-- content-->
 		<div class="whiteGrad  grid-container">
-		<div class="text-justify">
+			<div class="text-justify">
 				<h1 class="text-center w3-text-black">Strategic Marketing I</h1>
 			</div>
-		
-		
-		
-            <div>
-            <p class="bold-text">If you had the power to improve three things in your marketing, what would 
-            they be in order of their priority?
-            </p>
-            </div>
-            <div>
-            <ol>
-		<li th:each="selectedModel : ${ClientObjectivesPageModel}" 
-	            th:if="${selectedModel.sortOrder} != 0">
-				
-			
-			<span> 
-						
-						
-						<script th:inline="javascript">
-					          /*<![CDATA[*/
-					    console.group("translate label to text");
-						var label = /*[[${selectedModel?.label}]]*/'default';
-						console.log("label " + label);
-						//message = "'" + message + "'";
-						var text = getLabelText(label);
-						console.log("text	 " + text);
-						document.write(text);
-						console.groupEnd();
-						/*]]>*/
+
+
+
+			<div>
+				<p class="bold-text">If you had the power to improve three
+					things in your marketing, what would they be in order of their
+					priority?</p>
+			</div>
+			<div>
+				<ol>
+					<li th:each="selectedModel : ${ClientObjectivesPageModel}"
+						th:if="${selectedModel.sortOrder} != 0"><span> <script
+								th:inline="javascript">
+							/*<![CDATA[*/
+							console.group("translate label to text");
+							var label = /*[[${selectedModel?.label}]]*/'default';
+							console.log("label " + label);
+							//message = "'" + message + "'";
+							var text = getLabelText(label);
+							console.log("text	 " + text);
+							document.write(text);
+							console.groupEnd();
+							/*]]>*/
 						</script>
-						
-						</span>
-				  </li>
+
+					</span></li>
 
 
 
 				</ol>
-            
-            </div>
-            
-            
-            
-            
+
+			</div>
+
+
+
+
 			<fieldset>
 				<legend class="bold-text"> Client Objectives </legend>
 
@@ -68,8 +62,8 @@
 
 						<div>
 							<label> <span id="introduceNewDepartmentLabel"> <script>
-									addLabel("introduceNewDepartmentLabel");
-									</script>
+								addLabel("introduceNewDepartmentLabel");
+							</script>
 
 							</span>
 							</label>
@@ -80,8 +74,8 @@
 
 						<div>
 							<label> <span id="featureSpecificProductsLabel"> <script>
-									addLabel("featureSpecificProductsLabel");
-									</script>
+								addLabel("featureSpecificProductsLabel");
+							</script>
 
 							</span></label>
 						</div>
@@ -93,7 +87,7 @@
 							<label> <span
 								id="callAttentiontoBrandsPrivateLabelsCarriedLabel"> <script>
 									addLabel("callAttentiontoBrandsPrivateLabelsCarriedLabel");
-									</script>
+								</script>
 
 							</span></label>
 						</div>
@@ -104,7 +98,7 @@
 						<div>
 							<label> <span id="promoteOffPriceItemsServicesLabel">
 									<script>
-									addLabel("promoteOffPriceItemsServicesLabel");
+										addLabel("promoteOffPriceItemsServicesLabel");
 									</script>
 
 							</span></label>
@@ -116,7 +110,7 @@
 						<div>
 							<label> <span id="utilizeCoopVendorDollarsLabel">
 									<script>
-									addLabel("utilizeCoopVendorDollarsLabel");
+										addLabel("utilizeCoopVendorDollarsLabel");
 									</script>
 
 							</span></label>
@@ -132,8 +126,8 @@
 
 						<div>
 							<label> <span id="retainCurrentConsumersLabel"> <script>
-									addLabel("retainCurrentConsumersLabel");
-									</script>
+								addLabel("retainCurrentConsumersLabel");
+							</script>
 
 							</span></label>
 						</div>
@@ -143,8 +137,8 @@
 
 						<div>
 							<label> <span id="increaseCustomerVisitsLabel"> <script>
-									addLabel("increaseCustomerVisitsLabel");
-									</script>
+								addLabel("increaseCustomerVisitsLabel");
+							</script>
 
 							</span></label>
 						</div>
@@ -155,7 +149,7 @@
 						<div>
 							<label> <span id="increaseTrafficLeadCallsLabel">
 									<script>
-									addLabel("increaseTrafficLeadCallsLabel");
+										addLabel("increaseTrafficLeadCallsLabel");
 									</script>
 
 							</span></label>
@@ -166,8 +160,8 @@
 
 						<div>
 							<label> <span id="expandTargetConsumersLabel"> <script>
-									addLabel("expandTargetConsumersLabel");
-									</script>
+								addLabel("expandTargetConsumersLabel");
+							</script>
 
 							</span></label>
 						</div>
@@ -177,8 +171,8 @@
 
 						<div>
 							<label> <span id="changeConsumerAttitudesLabel"> <script>
-									addLabel("changeConsumerAttitudesLabel");
-									</script>
+								addLabel("changeConsumerAttitudesLabel");
+							</script>
 
 							</span></label>
 						</div>
@@ -194,7 +188,7 @@
 						<div>
 							<label> <span id="makePromotionalEventsStrongerLabel">
 									<script>
-									addLabel("makePromotionalEventsStrongerLabel");
+										addLabel("makePromotionalEventsStrongerLabel");
 									</script>
 
 							</span></label>
@@ -207,19 +201,19 @@
 							<label> <span
 								id="increaseDigitalMobileOnlineResponseLabel"> <script>
 									addLabel("increaseDigitalMobileOnlineResponseLabel");
-									</script>
+								</script>
 
 							</span></label>
 						</div>
 
 					</div>
-					
+
 					<div class="grid-item">
 
 						<div>
-							<label> <span
-								id="quarterlySeasonalCampaignLabel"> <script>
-									addLabel("quarterlySeasonalCampaignLabel");
+							<label> <span id="quarterlySeasonalCampaignLabel">
+									<script>
+										addLabel("quarterlySeasonalCampaignLabel");
 									</script>
 
 							</span></label>
@@ -231,7 +225,7 @@
 						<div>
 							<label> <span id="developDatabaseMarketingLabel">
 									<script>
-									addLabel("developDatabaseMarketingLabel");
+										addLabel("developDatabaseMarketingLabel");
 									</script>
 
 							</span></label>
@@ -243,7 +237,7 @@
 						<div>
 							<label> <span id="initiateCauseMarketingProgramLabel">
 									<script>
-									addLabel("initiateCauseMarketingProgramLabel");
+										addLabel("initiateCauseMarketingProgramLabel");
 									</script>
 
 							</span></label>
@@ -255,7 +249,7 @@
 						<div>
 							<label> <span id="developSpeciallyStagedEventLabel">
 									<script>
-									addLabel("developSpeciallyStagedEventLabel");
+										addLabel("developSpeciallyStagedEventLabel");
 									</script>
 
 							</span></label>
@@ -271,8 +265,8 @@
 
 						<div>
 							<label> <span id="maintainMarketDominanceLabel"> <script>
-									addLabel("maintainMarketDominanceLabel");
-									</script>
+								addLabel("maintainMarketDominanceLabel");
+							</script>
 
 							</span></label>
 						</div>
@@ -283,7 +277,7 @@
 						<div>
 							<label> <span id="improveBusinessNameBrandLabel">
 									<script>
-									addLabel("improveBusinessNameBrandLabel");
+										addLabel("improveBusinessNameBrandLabel");
 									</script>
 
 							</span></label>
@@ -296,7 +290,7 @@
 							<label> <span
 								id="establishorReestablishBusinessImageLabel"> <script>
 									addLabel("establishorReestablishBusinessImageLabel");
-									</script>
+								</script>
 
 							</span></label>
 						</div>
@@ -306,8 +300,8 @@
 
 						<div>
 							<label> <span id="createPentUpDemandLabel"> <script>
-									addLabel("createPentUpDemandLabel");
-									</script>
+								addLabel("createPentUpDemandLabel");
+							</script>
 
 							</span></label>
 						</div>
@@ -317,8 +311,8 @@
 
 						<div>
 							<label> <span id="increaseMarketShareLabel"> <script>
-									addLabel("increaseMarketShareLabel");
-									</script>
+								addLabel("increaseMarketShareLabel");
+							</script>
 
 							</span></label>
 						</div>
@@ -327,27 +321,24 @@
 					<div class="grid-item">
 
 						<div>
-							<label> <span id="otherLabel"> 
-								
-								
-								<!-- set other text -->
-		<script th:inline="javascript">
-		/*<![CDATA[*/
-			
-			console.group("other text");
+							<label> <span id="otherLabel"> <!-- set other text -->
+									<script th:inline="javascript">
+										/*<![CDATA[*/
 
-                        var label = /*[[${ClientObjectivesPage?.otherText}]]*/ 'label';
-			if (label != "") {
-			   addOtherText(label);
-			}
-			
-			console.groupEnd();
-			
-		/*]]>*/
-                </script>
-								
-								
-								
+										console.group("other text");
+
+										var label = /*[[${ClientObjectivesPage?.otherText}]]*/'label';
+										if (label != "") {
+											addOtherText(label);
+										}
+
+										console.groupEnd();
+
+										/*]]>*/
+									</script>
+
+
+
 
 							</span>
 							</label>
@@ -358,41 +349,45 @@
 				</fieldset>
 
 			</fieldset>
-            <div>
-            
-            <p class="bold-text">What are the biggest misconceptions consumers have about the business?</p>
-            <p style="padding-left: 5%;margin-top: -10px;" th:text="${StrategicMarketingPageOne?.misconceptions}" >
-            </p>
-            
-            <p class="bold-text"> What are the clients most distinctive selling advantages?</p>
-            <p style="padding-left: 5%;margin-top: -10px;;" th:text="${StrategicMarketingPageOne?.sellingAdvantages}" >
-            </p>
+			<div>
 
-           </div>
+				<p class="bold-text">What are the biggest misconceptions
+					consumers have about the business?</p>
+				<p style="padding-left: 5%; margin-top: -10px;"
+					th:text="${StrategicMarketingPageOne?.misconceptions}"></p>
+
+				<p class="bold-text">What are the clients most distinctive
+					selling advantages?</p>
+				<p style="padding-left: 5%; margin-top: -10px;"
+					th:text="${StrategicMarketingPageOne?.sellingAdvantages}"></p>
+
+			</div>
 		</div>
-			<div class="w3-container d-print-none" style="padding-top: 2%;">
-			    <button class="w3-btn w3-white" onclick="javascript:printPage();">Share</button>
-                 <a href="#StrategicMarketingPageTwo" class="w3-btn w3-white">Next</a>
-                <button class="w3-btn w3-white" onclick="javascript:goBack();">Previous</button>
+		<div class="w3-container d-print-none" style="padding-top: 2%;">
+			<button class="w3-btn w3-white" onclick="javascript:printPage();">Share</button>
+
+			<button class="w3-btn w3-white"
+				onclick="javascript:gotoAnchor(5,'down');">Next</button>
+			<button class="w3-btn w3-white"
+				onclick="javascript:gotoAnchor(3,'up');">Previous</button>
 		</div>
 		<div class="w3-row">
-		      <div class="CopyRightId w3-col m8"></div>
-		      <div class=" w3-col m2"></div>
-		      <div align="right" class="w3-col m2">
-			-CONFIDENTIAL- 4     
-		      </div>	      
+			<div class="CopyRightId w3-col m8"></div>
+			<div class=" w3-col m2"></div>
+			<div align="right" class="w3-col m2">-CONFIDENTIAL- 4</div>
 		</div>
-<!-- select items -->
-		<script th:each="selectedModel : ${ClientObjectivesPageModel}" th:inline="javascript">
-		/*<![CDATA[*/
-		var label = /*[[${selectedModel?.label}]]*/'default';
-		var key = /*[[${selectedModel?.key}]]*/'key';	
-		if (key == "other") {
-			label = 'otherLabel';
-		}
+		<!-- select items -->
+		<script th:each="selectedModel : ${ClientObjectivesPageModel}"
+			th:inline="javascript">
+			/*<![CDATA[*/
+			var label = /*[[${selectedModel?.label}]]*/'default';
+			var key = /*[[${selectedModel?.key}]]*/'key';
+			if (key == "other") {
+				label = 'otherLabel';
+			}
 			addSelection(label);
-		/*]]>*/
-       </script>
+			/*]]>*/
+		</script>
 
 	</div>
 
