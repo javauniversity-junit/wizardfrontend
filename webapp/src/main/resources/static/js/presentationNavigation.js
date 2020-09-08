@@ -1,6 +1,6 @@
 let navigationMap = new Map();
 //load map
-navigationMap.set(1,"PresentedToPagenavigationMap.set(1,"PresentedToPage");
+navigationMap.set(1,"PresentedToPage");
 navigationMap.set(2,"TeamCommitmentPage");
 navigationMap.set(3,"MarketPlaceCompetitionPage");
 navigationMap.set(4,"ClientObjectivesPage");
