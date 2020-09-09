@@ -304,9 +304,10 @@ public class PublishController {
 					marketingStrategiesPageModel = (ExtraPageModel) JSONManager.convertFromJson(data.getPagedata(),
 							ExtraPageModel.class);
 					model.addAttribute("MarketingStrategiesPageModel", marketingStrategiesPageModel);
+					mLog.info("found page marketingStrategiesPageModel");
 					if (!data.isExcluded()) {
 						publish.setMarketingStrategiesPage(true);
-						mLog.info("found page marketingStrategiesPageModel");
+						mLog.info("found page is on marketingStrategiesPageModel");
 					}
 
 					break;
