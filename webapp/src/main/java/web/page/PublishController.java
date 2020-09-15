@@ -145,7 +145,12 @@ public class PublishController {
 				mLog.severe("error " + ex.getMessage());
 				continue;
 			}
-			mLog.info("page name = " + pageName);
+		
+			// exculded
+			if (data.isExcluded()) {
+				mLog.info("PAGE Excluded name = " + pageName);
+				continue;
+			}
 			switch (pageName) {
 
 			/*
@@ -178,10 +183,9 @@ public class PublishController {
 							clientObjectivesOnePageModel);
 					model.addAttribute("ClientObjectivesPageModel", orderList);
 					model.addAttribute("ClientObjectivesPage", clientObjectivesOnePageModel);
-					if (!data.isExcluded()) {
-						publish.setClientObjectivesPage(true);
-						mLog.info("found page ClientObjectivesOnePageTwoModel");
-					}
+
+					publish.setClientObjectivesPage(true);
+					mLog.info("found page ClientObjectivesOnePageTwoModel");
 
 					break;
 				} catch (Exception ex) {
@@ -233,10 +237,9 @@ public class PublishController {
 					createConceptOnePageModel = (ExtraPageModel) JSONManager.convertFromJson(data.getPagedata(),
 							ExtraPageModel.class);
 					model.addAttribute("CreateConceptOnePageModel", createConceptOnePageModel);
-					if (!data.isExcluded()) {
-						publish.setCreateConceptOnePage(true);
-						mLog.info("found page createConceptOnePageModel");
-					}
+
+					publish.setCreateConceptOnePage(true);
+					mLog.info("found page createConceptOnePageModel");
 
 					break;
 				} catch (Exception ex) {
@@ -250,10 +253,9 @@ public class PublishController {
 					createConceptTwoPageModel = (ExtraPageModel) JSONManager.convertFromJson(data.getPagedata(),
 							ExtraPageModel.class);
 					model.addAttribute("CreateConceptTwoPageModel", createConceptTwoPageModel);
-					if (!data.isExcluded()) {
-						publish.setCreateConceptTwoPage(true);
-						mLog.info("found page createConceptTwoPageModel");
-					}
+
+					publish.setCreateConceptTwoPage(true);
+					mLog.info("found page createConceptTwoPageModel");
 
 					break;
 				} catch (Exception ex) {
@@ -269,11 +271,9 @@ public class PublishController {
 					model.addAttribute("DigitalMobileSocialStrategiesPageModel",
 							digitalMobileSocialStrategiesPageModel);
 					mLog.info("found page digitalMobileSocialStrategiesPage");
-					if (!data.isExcluded()) {
-						publish.setDigitalMobileSocialStrategiesPage(true);
-						mLog.info("set page digitalMobileSocialStrategiesPage");
-					}
 
+					publish.setDigitalMobileSocialStrategiesPage(true);
+					
 					break;
 				} catch (Exception ex) {
 					mLog.severe("error " + ex.getMessage());
@@ -287,10 +287,9 @@ public class PublishController {
 					marketPlaceCompetitionPageModel = (MarketPlaceCompetitionPageModel) JSONManager
 							.convertFromJson(data.getPagedata(), MarketPlaceCompetitionPageModel.class);
 					model.addAttribute("MarketPlaceCompetitionPageModel", marketPlaceCompetitionPageModel);
-					if (!data.isExcluded()) {
-						publish.setMarketPlaceCompetitionPage(true);
-						mLog.info("found page MarketPlaceCompetitionPageModel");
-					}
+
+					publish.setMarketPlaceCompetitionPage(true);
+					mLog.info("found page MarketPlaceCompetitionPageModel");
 
 					break;
 				} catch (Exception ex) {
@@ -305,11 +304,9 @@ public class PublishController {
 							ExtraPageModel.class);
 					model.addAttribute("MarketingStrategiesPageModel", marketingStrategiesPageModel);
 					mLog.info("found page marketingStrategiesPageModel");
-					if (!data.isExcluded()) {
-						publish.setMarketingStrategiesPage(true);
-						mLog.info("found page is on marketingStrategiesPageModel");
-					}
 
+					publish.setMarketingStrategiesPage(true);
+					
 					break;
 				} catch (Exception ex) {
 					mLog.severe("error " + ex.getMessage());
@@ -323,10 +320,9 @@ public class PublishController {
 					planABEPPageModel = (PlanABEPPageModel) JSONManager.convertFromJson(data.getPagedata(),
 							PlanABEPPageModel.class);
 					model.addAttribute("PlanABEPPageModel", planABEPPageModel);
-					if (!data.isExcluded()) {
-						publish.setPlanABEPPage(true);
-						mLog.info("found page PlanABEPPage");
-					}
+
+					publish.setPlanABEPPage(true);
+					mLog.info("found page PlanABEPPage");
 
 					break;
 				} catch (Exception ex) {
@@ -341,11 +337,10 @@ public class PublishController {
 					planADigitalROICalculatorPageModel = (PlanDigitalROICalculatorPageModel) JSONManager
 							.convertFromJson(data.getPagedata(), PlanDigitalROICalculatorPageModel.class);
 					model.addAttribute("PlanADigitalROICalculatorPage", planADigitalROICalculatorPageModel);
-					if (!data.isExcluded()) {
-						publish.setPlanADigitalROICalculatorPage(true);
 
-						mLog.info("found page PlanADigitalROICalculatorPage");
-					}
+					publish.setPlanADigitalROICalculatorPage(true);
+
+					mLog.info("found page PlanADigitalROICalculatorPage");
 
 					break;
 				} catch (Exception ex) {
@@ -361,14 +356,12 @@ public class PublishController {
 							ExtraPageModel.class);
 					String textArea = planAExcelPageModel.getTextArea();
 					textArea = textArea.replaceAll("\\r\\n", "");
-					mLog.info("text  planAExcelPageModel [" + textArea + "]");
+					//mLog.info("text  planAExcelPageModel [" + textArea + "]");
 					// planAExcelPageModel.setTextArea(textArea);
 					model.addAttribute("PlanAExcelPageModel", planAExcelPageModel);
 
-					if (!data.isExcluded()) {
-						publish.setPlanAExcelPage(true);
-						mLog.info("found page planAExcelPageModel");
-					}
+					publish.setPlanAExcelPage(true);
+					mLog.info("found page planAExcelPageModel");
 
 					break;
 				} catch (Exception ex) {
@@ -382,10 +375,9 @@ public class PublishController {
 					planAProposedPageModel = (PlanProposedPageModel) JSONManager.convertFromJson(data.getPagedata(),
 							PlanProposedPageModel.class);
 					model.addAttribute("PlanAProposedPageModel", planAProposedPageModel);
-					if (!data.isExcluded()) {
-						publish.setPlanAProposedPage(true);
-						mLog.info("found page planAProposedPage");
-					}
+
+					publish.setPlanAProposedPage(true);
+					mLog.info("found page planAProposedPage");
 
 					break;
 				} catch (Exception ex) {
@@ -400,10 +392,8 @@ public class PublishController {
 							PlanProposedPageModel.class);
 					model.addAttribute("PlanBProposedPageModel", planBProposedPageModel);
 
-					if (!data.isExcluded()) {
-						publish.setPlanBProposedPage(true);
-						mLog.info("found page planBProposedPage");
-					}
+					publish.setPlanBProposedPage(true);
+					mLog.info("found page planBProposedPage");
 
 					break;
 				} catch (Exception ex) {
@@ -417,10 +407,9 @@ public class PublishController {
 					planALifetimeValuedPageModel = (PlanALifetimeValuedPageModel) JSONManager
 							.convertFromJson(data.getPagedata(), PlanALifetimeValuedPageModel.class);
 					model.addAttribute("PlanALifetimeValuedPageModel", planALifetimeValuedPageModel);
-					if (!data.isExcluded()) {
-						publish.setPlanALifetimeValuedPage(true);
-						mLog.info("found page PlanALifetimeValuedPage");
-					}
+
+					publish.setPlanALifetimeValuedPage(true);
+					mLog.info("found page PlanALifetimeValuedPage");
 
 					break;
 				} catch (Exception ex) {
@@ -438,10 +427,9 @@ public class PublishController {
 					planBLifetimeValuedPageModel = (PlanBLifetimeValuedPageModel) JSONManager
 							.convertFromJson(data.getPagedata(), PlanBLifetimeValuedPageModel.class);
 					model.addAttribute("PlanBLifetimeValuedPageModel", planBLifetimeValuedPageModel);
-					if (!data.isExcluded()) {
-						publish.setPlanBLifetimeValuedPage(true);
-						mLog.info("found page PlanBLifetimeValuedPage");
-					}
+
+					publish.setPlanBLifetimeValuedPage(true);
+					mLog.info("found page PlanBLifetimeValuedPage");
 
 					break;
 				} catch (Exception ex) {
@@ -456,10 +444,9 @@ public class PublishController {
 					planBExcelPagePageModel = (ExtraPageModel) JSONManager.convertFromJson(data.getPagedata(),
 							ExtraPageModel.class);
 					model.addAttribute("PlanBExcelPageModel", planBExcelPagePageModel);
-					if (!data.isExcluded()) {
-						publish.setPlanBExcelPage(true);
-						mLog.info("found page PlanAExcelPage");
-					}
+
+					publish.setPlanBExcelPage(true);
+					mLog.info("found page PlanAExcelPage");
 
 					break;
 				} catch (Exception ex) {
@@ -473,10 +460,9 @@ public class PublishController {
 					planBBEPPageModel = (PlanBBEPPageModel) JSONManager.convertFromJson(data.getPagedata(),
 							PlanBBEPPageModel.class);
 					model.addAttribute("PlanBBEPPageModel", planBBEPPageModel);
-					if (!data.isExcluded()) {
-						publish.setPlanBBEPPage(true);
-						mLog.info("found page PlanBBEPPage");
-					}
+
+					publish.setPlanBBEPPage(true);
+					mLog.info("found page PlanBBEPPage");
 
 					break;
 				} catch (Exception ex) {
@@ -490,10 +476,9 @@ public class PublishController {
 					planBDigitalROICalculatorPageModel = (PlanDigitalROICalculatorPageModel) JSONManager
 							.convertFromJson(data.getPagedata(), PlanDigitalROICalculatorPageModel.class);
 					model.addAttribute("PlanBDigitalROICalculatorPage", planBDigitalROICalculatorPageModel);
-					if (!data.isExcluded()) {
-						publish.setPlanBDigitalROICalculatorPage(true);
-						mLog.info("found page PlanBDigitalROICalculatorPage");
-					}
+
+					publish.setPlanBDigitalROICalculatorPage(true);
+					mLog.info("found page PlanBDigitalROICalculatorPage");
 
 					break;
 				} catch (Exception ex) {
@@ -511,10 +496,8 @@ public class PublishController {
 					model.addAttribute("PlanAMediaPagedataPageModel", planAMediaPagedataPageModel);
 					if (mediaChartA != null) {
 
-						if (!data.isExcluded()) {
-							publish.setPlanAMediaPage(true);
-							mLog.info("found page PlanAMediaPage");
-						}
+						publish.setPlanAMediaPage(true);
+						mLog.info("found page PlanAMediaPage");
 
 					}
 					break;
@@ -534,10 +517,9 @@ public class PublishController {
 					model.addAttribute("PlanBMediaPagedataPageModel", planBMediaPagedataPageModel);
 					model.addAttribute("PlanBMediaPage", mediaChart);
 					if (mediaChart != null) {
-						if (!data.isExcluded()) {
-							publish.setPlanBMediaPage(true);
-							mLog.info("found page PlanBMediaPage");
-						}
+
+						publish.setPlanBMediaPage(true);
+						mLog.info("found page PlanBMediaPage");
 
 					}
 					break;
@@ -552,10 +534,10 @@ public class PublishController {
 					presentedToPageModel = (PresentedToPageModel) JSONManager.convertFromJson(data.getPagedata(),
 							PresentedToPageModel.class);
 					model.addAttribute("PresentedToPage", presentedToPageModel);
-					if (!data.isExcluded()) {
-						mLog.info("include page PresentedToPage");
-						publish.setPresentedToPage(true);
-					}
+
+					
+					publish.setPresentedToPage(true);
+
 					mLog.info("found page PresentedToPage");
 					break;
 				} catch (Exception ex) {
@@ -570,10 +552,8 @@ public class PublishController {
 					profileOfConsumersPageModel = (ExtraPageModel) JSONManager.convertFromJson(data.getPagedata(),
 							ExtraPageModel.class);
 					model.addAttribute("ProfileOfConsumersPageModel", profileOfConsumersPageModel);
-					if (!data.isExcluded()) {
-						publish.setProfileOfConsumersPage(true);
-						mLog.info("found page ProfileOfConsumersPage");
-					}
+
+					publish.setProfileOfConsumersPage(true);
 
 					mLog.info("found page profileOfConsumersPageModel");
 					break;
@@ -589,10 +569,8 @@ public class PublishController {
 					strategicMarketingPageOneModel = (StrategicMarketingPageOneModel) JSONManager
 							.convertFromJson(data.getPagedata(), StrategicMarketingPageOneModel.class);
 					model.addAttribute("StrategicMarketingPageOne", strategicMarketingPageOneModel);
-					if (!data.isExcluded()) {
-						publish.setStrategicMarketingPageOne(true);
-						mLog.info("found page StrategicMarketingPageOne");
-					}
+
+					publish.setStrategicMarketingPageOne(true);
 
 					mLog.info("value found page StrategicMarketingPageOne "
 							+ strategicMarketingPageOneModel.getYearsInBusiness());
@@ -612,10 +590,9 @@ public class PublishController {
 					StrategicMarketingHelper strategicMarketingHelper = new StrategicMarketingHelper(
 							strategicMarketingPageThreeModel);
 					model.addAttribute("StrategicMarketingHelper", strategicMarketingHelper);
-					if (!data.isExcluded()) {
-						publish.setStrategicMarketingPageThree(true);
-						mLog.info("found page StrategicMarketingPageThree");
-					}
+
+					publish.setStrategicMarketingPageThree(true);
+					mLog.info("found page StrategicMarketingPageThree");
 
 					break;
 				} catch (Exception ex) {
@@ -632,11 +609,8 @@ public class PublishController {
 							.convertFromJson(data.getPagedata(), StrategicMarketingPageTwoModel.class);
 					model.addAttribute("StrategicMarketingPageTwo", strategicMarketingPageTwoModel);
 
-					if (!data.isExcluded()) {
-						publish.setStrategicMarketingPageTwo(true);
-						mLog.info("found page StrategicMarketingPageTwo");
-
-					}
+					publish.setStrategicMarketingPageTwo(true);
+					mLog.info("found page StrategicMarketingPageTwo");
 
 					break;
 				} catch (Exception ex) {
@@ -654,10 +628,9 @@ public class PublishController {
 							targetMarketingPageModel);
 
 					model.addAttribute("targetMarketingHeaderRow", targetMarketingHeaderRow);
-					if (!data.isExcluded()) {
-						publish.setTargetMarketingPage(true);
-						mLog.info("found page targetMarketingPageModel");
-					}
+
+					publish.setTargetMarketingPage(true);
+					mLog.info("found page targetMarketingPageModel");
 
 					break;
 				} catch (Exception ex) {
@@ -672,10 +645,9 @@ public class PublishController {
 					teamCommitmentPageModel = (TeamCommitmentPageModel) JSONManager.convertFromJson(data.getPagedata(),
 							TeamCommitmentPageModel.class);
 					model.addAttribute("TeamCommitmentPage", teamCommitmentPageModel);
-					if (!data.isExcluded()) {
-						publish.setTeamCommitmentPage(true);
-						mLog.info("found page TeamCommitmentPage");
-					}
+
+					publish.setTeamCommitmentPage(true);
+					mLog.info("found page TeamCommitmentPage");
 
 					break;
 				} catch (Exception ex) {
