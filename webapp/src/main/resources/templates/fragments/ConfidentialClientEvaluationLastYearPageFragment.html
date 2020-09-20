@@ -77,22 +77,14 @@
         				};
 				
 				  // find total to calc % manually
+				  
   					var totalData = google.visualization.data.group( data,[{column: 0, modifier: function () {return 'total'}, type:'string'}],
     					[{column: 1, aggregation: google.visualization.data.sum, type: 'number'}]
   					);
-				
-				      // number formatter
-  					var formatPercent = new google.visualization.NumberFormat({
-  					  pattern: '0%'
-  				 // set formatted value for each row
-  					for (var i = 0; i < data.getNumberOfRows(); i++) {
-    					    var calcPercent = data.getValue(i, 1) / totalData.getValue(0, 1);
-    					    data.setFormattedValue(i, 1, formatPercent.formatValue(calcPercent));
- 					   }
+  					
+				  
+			
 					
-                                      //end of calculation
-
-				
 				        // Instantiate and draw our chart, passing in some options.
 				        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
 				        chart.draw(data,options);
