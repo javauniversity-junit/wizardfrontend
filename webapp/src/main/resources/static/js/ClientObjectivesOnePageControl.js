@@ -59,14 +59,14 @@ function addLabel(key) {
 	  var findString  = key.indexOf("-a");
 	  console.log("findString 1 [" + findString + "]")
       if (findString == -1 ) {
-    	  //did not find -a
+    	  // did not find -a
     	  console.log("did not find -a")
     	  findString  = key.indexOf("-b");
     	  console.log("findString 2 [" + findString + "]")
           if (findString == -1 ) {
         	  console.log("did not find -b")
           } else {
-        	  //found -b
+        	  // found -b
         	  lookupKey = key.replace("-b", "");
         	  console.log("lookupKey -b [" + lookupKey + "]");
         	  
@@ -75,7 +75,7 @@ function addLabel(key) {
     	  
     	  
       } else {
-    	  //found -a
+    	  // found -a
     	  lookupKey = key.replace("-a", "");
     	  console.log("lookupKey -a [" + lookupKey + "]");
     	  
@@ -87,12 +87,15 @@ function addLabel(key) {
 	
 	
 	
-	
-	if (map.has(lookupKey)) {
-	  var keyvalue = map.get(lookupKey);
-	  document.getElementById(key).innerHTML = keyvalue;
-	} else {
+	try {
+	   if (map.has(lookupKey)) {
+	     var keyvalue = map.get(lookupKey);
+	    document.getElementById(key).innerHTML = keyvalue;
+	   } else {
 		document.getElementById(key).innerHTML = key;
+	   }
+	} catch(err) {
+		console.log("error finding key [" + lookupKey + "]");
 	}
 	
 	console.groupEnd();
