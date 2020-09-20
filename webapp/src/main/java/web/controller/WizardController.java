@@ -74,11 +74,11 @@ public class WizardController {
 			wizardDataRepository.save(copyData);
 			mLog.info("new page data  page name " + copyData.getPagename());
 		}
+		String encodeId = EncryptionDecryptionManager.encode(encrypt);
 		
 		
 		
-		
-		return encrypt;
+		return encodeId;
 		
 	}
 	
