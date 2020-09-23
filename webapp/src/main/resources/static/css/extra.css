@@ -15,8 +15,7 @@
   
 }
 .slowPerformingMonthInvestment::before {
-  content: "Slow Performing Month
-Investment: ";
+  content: "Slow Performing Month Investment: ";
   font-weight: bold;
   
 }
