@@ -92,7 +92,7 @@ function addLabel(key) {
 	     var keyvalue = map.get(lookupKey);
 	    document.getElementById(key).innerHTML = keyvalue;
 	   } else {
-		document.getElementById(key).innerHTML = key;
+		document.getElementById(key).innerHTML = lookupKey;
 	   }
 	} catch(err) {
 		console.log("error finding key [" + lookupKey + "]");

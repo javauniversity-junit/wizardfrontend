@@ -37,7 +37,7 @@
 					<li style="color: red;"
 						th:each="selectedModel : ${ClientObjectivesPageModel}"
 						th:if="${selectedModel.sortOrder} != 0"><span
-						style='color: black;' th:id="${selectedModel?.label} 	 ">
+						style='color: black;' th:id="${selectedModel?.label} + '-b'	 ">
 
 
 							<script th:inline="javascript">

@@ -46,7 +46,7 @@
 				<ol class="center-ol">
 					<li style="color: red;" th:each="selectedModel : ${ClientObjectivesPageModel}"
 						th:if="${selectedModel.sortOrder} != 0"><span style='color:black;'
-						th:id="${selectedModel?.label}  "> <script
+						th:id="${selectedModel?.label} + '-a' "> <script
 								th:inline="javascript">
 							/*<![CDATA[*/
 							var message = /*[[${selectedModel?.label}]]*/'default';
