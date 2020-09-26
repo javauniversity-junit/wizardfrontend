@@ -42,8 +42,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		//http.failureHandler(customAuthenticationFailureHandler());
 		http.csrf().disable().authorizeRequests().antMatchers("/", "/copyright.html","/index.html", "/header.html", "/footer.html")
 				.permitAll().antMatchers("/css/**", "/fonts/**","/vendor/**", "/js/**", "/img/**","copyright.html").permitAll().anyRequest()
-				.permitAll().anyRequest().authenticated().and().formLogin().loginPage("/login").permitAll().and()
-				.logout().permitAll();
+				.permitAll().anyRequest().authenticated()
+			        .and()
+			        .formLogin().loginPage("/login").permitAll()
+			        .and()
+				.logout().permitAll()
+			         and()
+			      	.logout()
+      				.invalidateHttpSession(true)
+      				.clearAuthentication(true)
+      				.and()
+      				.httpBasic();;
 	}
 
 	@Override
