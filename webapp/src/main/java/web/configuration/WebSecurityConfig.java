@@ -52,7 +52,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
       				.invalidateHttpSession(true)
       				.clearAuthentication(true)
       				.and()
-      				.httpBasic();;
+      				.httpBasic();
 	}
 
 	@Override
