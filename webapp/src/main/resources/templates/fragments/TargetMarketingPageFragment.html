@@ -86,109 +86,8 @@
 							<div class='column  no-border'></div>
 							<div class='column no-border'></div>
 						</div>
-					</div>
-					
-					<div th:case="'Want19to25ToWant26to35'">
-						<!-- Want19to25ToWant26to35 -->
-						<div class='row'>
-							<div class='column no-border'></div>
-
-							<div class='column no-border'>
-							<!-- show left arrow -->
-						<img
-					src="./img/arrow.svg" alt="" class="img-fluid flip" 
-					height="100">
-							</div>
-
-
-							<div class='column-right column dark-left no-border-right dark-top top-header'>
-								<h2>Target 85%</h2></div>
-							<div class='column-left column dark-right dark-top top-header'></div>
-							<div class='column  no-border'>
-							<!-- show right arrow -->
-									<img
-					src="./img/arrow.svg" alt="" class="img-fluid" 
-					height="100">
-							</div>
-							<div class='column  no-border'></div>
-							<div class='column  no-border'></div>
-						</div>
-					</div>
-					<div th:case="'Want26to35ToWant36to45'">
-					<!-- Want26to35ToWant36to45 -->
-						<div class='row'>
-							<div class='column no-border'></div>
-							<div class='column no-border'></div>
-							<div class='column no-border'>
-							<!-- show left arrow -->
-								<img
-					src="./img/arrow.svg" alt="" class="img-fluid flip" 
-					height="100">
-							</div>
-							<div class='column-right dark-left no-border-right dark-top top-header'>
-								<h2>Target </h2></div>
-							<div class='column-left column-left dark-right dark-top top-header'><h2> 85%</h2></div>
-							<div class='column  no-border'>
-							<!-- show right arrow -->
-								<img
-					src="./img/arrow.svg" alt="" class="img-fluid" 
-					height="100">
-							</div>
-							<div class='column  no-border'></div>
-						</div>
-					</div>
-					<div th:case="'Want36to45ToWant46to55'">
-					<!-- Want36to45ToWant46to55 -->
-								<div class='row'>
-							<div class='column no-border'></div>
-							<div class='column no-border'></div>
-							<div class='column no-border'></div>
-							<div class='column no-border'>
-							<!-- show left arrow -->
-						<img
-					src="./img/arrow.svg" alt="" class="img-fluid flip" 
-					height="100">
-							</div>
-							<div class='column-right column dark-left no-border-right dark-top top-header'>
-								<h2>Target 85%</h2></div>
-							<div class='column-left column dark-right dark-top top-header'></div>
-							<div class='column  no-border'>
-							<!-- show right arrow -->
-									<img
-					src="./img/arrow.svg" alt="" class="img-fluid" 
-					height="100">
-							</div>
-							
-							<!--<div class='column  no-border'></div>  -->
-							
-							
-							
-						</div>
-					</div>
-					<div th:case="'Want46to55ToWant55Plus'">
-						<!-- Want46to55ToWant55Plus -->
-						<div class='row'>
-							<div class='column no-border'></div>
-							<div class='column no-border'></div>
-							<div class='column no-border'></div>
-							<div class='column no-border'></div>
-							<div class='column no-border'>
-							<!-- show left arrow -->
-								<img src="./img/arrow.svg" alt="" class="img-fluid flip"
-									height="100">
-							</div>
-							<div
-								class='column-right column dark-left no-border-right dark-top top-header'>
-								<h2>Target 85%</h2>
-							</div>
-							<div class='column dark-right dark-top top-header'></div>
-							
-
-
-						</div>
-					</div>
-				</th:block>
-
+						
+						
 				<div class='row'>
 					<div class='column no-border'></div>
 					<div class='column normal dark-left sub-header'>12-18</div>
@@ -228,6 +127,272 @@
 					<div class='column normal dark-left'
 						th:text="${targetMarketingPageModel?.want55Plus}"></div>
 				</div>
+					</div>
+					
+					<div th:case="'Want19to25ToWant26to35'">
+						<!-- Want19to25ToWant26to35 -->
+						<div class='row'>
+							<div class='column no-border'></div>
+
+							<div class='column no-border'>
+							<!-- show left arrow -->
+						<img
+					src="./img/arrow.svg" alt="" class="img-fluid flip" 
+					height="100">
+							</div>
+
+
+							<div class='column-right column dark-left no-border-right dark-top top-header'>
+								<h2>Target 85%</h2></div>
+							<div class='column-left column dark-right dark-top top-header'></div>
+							<div class='column  no-border'>
+							<!-- show right arrow -->
+									<img
+					src="./img/arrow.svg" alt="" class="img-fluid" 
+					height="100">
+							</div>
+							<div class='column  no-border'></div>
+							<div class='column  no-border'></div>
+						</div>
+						
+						
+				<div class='row'>
+					<div class='column no-border'></div>
+					<div class='column normal dark-left sub-header'>12-18</div>
+					<div class='column normal dark-left sub-header'>19-25</div>
+					<div class='column normal dark-left sub-header'>26-35</div>
+					<div class='column normal dark-right sub-header'>36-45</div>
+					<div class='column normal dark-left sub-header'>46-55</div>
+					<div class='column normal dark-left sub-header'>56 +</div>
+				</div>
+				<div class='row'>
+					<div class='column  no-border sub-header'>HAVE</div>
+					<div class='column normal'
+						th:text="${targetMarketingPageModel?.have12to18}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.have19to25}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.have26to35}"></div>
+					<div class='column normal dark-right'
+						th:text="${targetMarketingPageModel?.have36to45}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.have46to55}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.have56Plus}"></div>
+				</div>
+				<div class='row'>
+					<div class='column  no-border sub-header'>WANT</div>
+					<div class='column normal'
+						th:text="${targetMarketingPageModel?.want12to18}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.want19to25}"></div>
+					<div class='column normal dark-left dark-bottom'
+						th:text="${targetMarketingPageModel?.want26to35}"></div>
+					<div class='column normal dark-right dark-bottom'
+						th:text="${targetMarketingPageModel?.want36to45}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.want46to55}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.want55Plus}"></div>
+				</div>
+					</div>
+					<div th:case="'Want26to35ToWant36to45'">
+					<!-- Want26to35ToWant36to45 -->
+						<div class='row'>
+							<div class='column no-border'></div>
+							<div class='column no-border'></div>
+							<div class='column no-border'>
+							<!-- show left arrow -->
+								<img
+					src="./img/arrow.svg" alt="" class="img-fluid flip" 
+					height="100">
+							</div>
+							<div class='column-right dark-left no-border-right dark-top top-header'>
+								<h2>Target </h2></div>
+							<div class='column-left column-left dark-right dark-top top-header'><h2> 85%</h2></div>
+							<div class='column  no-border'>
+							<!-- show right arrow -->
+								<img
+					src="./img/arrow.svg" alt="" class="img-fluid" 
+					height="100">
+							</div>
+							<div class='column  no-border'></div>
+						</div>
+						
+						
+				<div class='row'>
+					<div class='column no-border'></div>
+					<div class='column normal dark-left sub-header'>12-18</div>
+					<div class='column normal dark-left sub-header'>19-25</div>
+					<div class='column normal dark-left sub-header'>26-35</div>
+					<div class='column normal dark-right sub-header'>36-45</div>
+					<div class='column normal dark-left sub-header'>46-55</div>
+					<div class='column normal dark-left sub-header'>56 +</div>
+				</div>
+				<div class='row'>
+					<div class='column  no-border sub-header'>HAVE</div>
+					<div class='column normal'
+						th:text="${targetMarketingPageModel?.have12to18}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.have19to25}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.have26to35}"></div>
+					<div class='column normal dark-right'
+						th:text="${targetMarketingPageModel?.have36to45}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.have46to55}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.have56Plus}"></div>
+				</div>
+				<div class='row'>
+					<div class='column  no-border sub-header'>WANT</div>
+					<div class='column normal'
+						th:text="${targetMarketingPageModel?.want12to18}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.want19to25}"></div>
+					<div class='column normal dark-left dark-bottom'
+						th:text="${targetMarketingPageModel?.want26to35}"></div>
+					<div class='column normal dark-right dark-bottom'
+						th:text="${targetMarketingPageModel?.want36to45}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.want46to55}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.want55Plus}"></div>
+				</div>
+					</div>
+					<div th:case="'Want36to45ToWant46to55'">
+					<!-- Want36to45ToWant46to55 -->
+								<div class='row'>
+							<div class='column no-border'></div>
+							<div class='column no-border'></div>
+							<div class='column no-border'></div>
+							<div class='column no-border'>
+							<!-- show left arrow -->
+						<img
+					src="./img/arrow.svg" alt="" class="img-fluid flip" 
+					height="100">
+							</div>
+							<div class='column-right column dark-left no-border-right dark-top top-header'>
+								<h2>Target 85%</h2></div>
+							<div class='column-left column dark-right dark-top top-header'></div>
+							<div class='column  no-border'>
+							<!-- show right arrow -->
+									<img
+					src="./img/arrow.svg" alt="" class="img-fluid" 
+					height="100">
+							</div>
+							
+							<!--<div class='column  no-border'></div>  -->
+							
+							
+							
+						</div>
+						
+						
+				<div class='row'>
+					<div class='column no-border'></div>
+					<div class='column normal dark-left sub-header'>12-18</div>
+					<div class='column normal dark-left sub-header'>19-25</div>
+					<div class='column normal dark-left sub-header'>26-35</div>
+					<div class='column normal dark-right sub-header'>36-45</div>
+					<div class='column normal dark-left sub-header'>46-55</div>
+					<div class='column normal dark-left sub-header'>56 +</div>
+				</div>
+				<div class='row'>
+					<div class='column  no-border sub-header'>HAVE</div>
+					<div class='column normal'
+						th:text="${targetMarketingPageModel?.have12to18}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.have19to25}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.have26to35}"></div>
+					<div class='column normal dark-right'
+						th:text="${targetMarketingPageModel?.have36to45}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.have46to55}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.have56Plus}"></div>
+				</div>
+				<div class='row'>
+					<div class='column  no-border sub-header'>WANT</div>
+					<div class='column normal'
+						th:text="${targetMarketingPageModel?.want12to18}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.want19to25}"></div>
+					<div class='column normal dark-left dark-bottom'
+						th:text="${targetMarketingPageModel?.want26to35}"></div>
+					<div class='column normal dark-right dark-bottom'
+						th:text="${targetMarketingPageModel?.want36to45}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.want46to55}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.want55Plus}"></div>
+				</div>
+					</div>
+					<div th:case="'Want46to55ToWant55Plus'">
+						<!-- Want46to55ToWant55Plus -->
+						<div class='row'>
+							<div class='column no-border'></div>
+							<div class='column no-border'></div>
+							<div class='column no-border'></div>
+							<div class='column no-border'></div>
+							<div class='column no-border'>
+							<!-- show left arrow -->
+								<img src="./img/arrow.svg" alt="" class="img-fluid flip"
+									height="100">
+							</div>
+							<div
+								class='column-right column dark-left no-border-right dark-top top-header'>
+								<h2>Target 85%</h2>
+							</div>
+							<div class='column dark-right dark-top top-header'></div>
+							
+
+
+						</div>
+						
+				<div class='row'>
+					<div class='column no-border'></div>
+					<div class='column normal dark-left sub-header'>12-18</div>
+					<div class='column normal dark-left sub-header'>19-25</div>
+					<div class='column normal dark-left sub-header'>26-35</div>
+					<div class='column normal dark-right sub-header'>36-45</div>
+					<div class='column normal dark-left sub-header'>46-55</div>
+					<div class='column normal dark-left sub-header'>56 +</div>
+				</div>
+				<div class='row'>
+					<div class='column  no-border sub-header'>HAVE</div>
+					<div class='column normal'
+						th:text="${targetMarketingPageModel?.have12to18}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.have19to25}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.have26to35}"></div>
+					<div class='column normal dark-right'
+						th:text="${targetMarketingPageModel?.have36to45}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.have46to55}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.have56Plus}"></div>
+				</div>
+				<div class='row'>
+					<div class='column  no-border sub-header'>WANT</div>
+					<div class='column normal'
+						th:text="${targetMarketingPageModel?.want12to18}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.want19to25}"></div>
+					<div class='column normal dark-left dark-bottom'
+						th:text="${targetMarketingPageModel?.want26to35}"></div>
+					<div class='column normal dark-right dark-bottom'
+						th:text="${targetMarketingPageModel?.want36to45}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.want46to55}"></div>
+					<div class='column normal dark-left'
+						th:text="${targetMarketingPageModel?.want55Plus}"></div>
+				</div>
+					</div>
+				</th:block>
+
 			</div>
 
 
