@@ -73,14 +73,14 @@
 					<!-- IF dataPageModel != null -->
 
 					<div class="w3-row">
-						<div class="w3-col m9" th:if="${dataPageModel != null}">
+						<div class="w3-col m12" th:if="${dataPageModel != null}">
 							<!-- data saved -->
 							<textarea id="textareaId" name="textareaId"
 								th:text="${dataPageModel?.textArea}" />
 						</div>
 
 						<!-- ELSE -->
-						<div class="w3-col m9" th:unless="${dataPageModel != null}">
+						<div class="w3-col m12" th:unless="${dataPageModel != null}">
 							<textarea id="textareaId" name="textareaId"> <!-- equal no data saved -->
 
 <fieldset>
