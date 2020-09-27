@@ -98,7 +98,7 @@
 				<h2>Rename Wizard/SCR</h2>
 			</div>
 
-			<form method="post" action="add">
+			<form id="formId" method="post" action="add">
 				<dxa:csrf-token />
 				<div class="form-group">
 					<div class="col-2">
@@ -113,15 +113,41 @@
 					</div>
 				</div>
 
-
+                <script>
+                function deleteSCR() {
+                	  var txt="Are you sure to delete " + document.getElementById('name').value + "?";
+                	  if (confirm(txt)) {
+                		  document.getElementById('delete').value="delete";
+                		  document.getElementById('formId').submit();
+                	    // Do the delete when you click ok
+                	  } else {
+                	    return;
+                	    // If you click cancel, remove the alert box
+                	  }
+                	  console.log(txt);
+                	}
+                
+                  function copySCR() {
+                	  document.getElementById('copy').value="copy";
+            		  document.getElementById('formId').submit();
+                  }
+                </script>
 
 
 
 
 
 				<button type="submit" class="btn btn-primary">Save</button>
-				<input name="copy"
-						value="Copy" type="submit" class="btn btn-primary" />
+				
+				<button  onclick="copySCR()" class="btn btn-primary">Copy</button>
+			
+				
+				<button  onclick="deleteSCR()" class="btn btn-primary">Delete</button>
+				
+				<input name="copy" id="copy"
+						value="" type="hidden"   class="btn btn-primary" />
+				<input name="delete" id="delete"
+						value="" type="hidden"   class="btn btn-primary" />
 			</form>
 
 		</div>

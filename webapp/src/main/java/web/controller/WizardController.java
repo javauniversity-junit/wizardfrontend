@@ -48,6 +48,28 @@ public class WizardController {
 		return "detail";
 	}
 
+	private void delete(String ID) {
+		mLog.info("starting delete");
+		mLog.info("from Wizard id " + ID);
+		ID= EncryptionDecryptionManager.decrypt(ID);
+		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
+		Wizard wizard = wizardOpt.orElse(null);
+		//loop thru and save pages
+		Iterable<WizardData> dataPages = wizardDataRepository.findByWizardid(wizard.getWizardid());
+		for (WizardData wizardData : dataPages) {	
+			wizardDataRepository.delete(wizardData);
+			mLog.info("page deleted " + wizardData.getPagename());
+		}
+		wizardRepository.delete(wizard);
+		mLog.info("wizard deleted ");
+		
+		
+	}
+	
+	
+	
+	
+	
 	private String copy(Wizard fromWizard) {
 		mLog.info("starting COPY");
 		mLog.info("from Wizard id " + fromWizard.getWizardid());
@@ -83,8 +105,12 @@ public class WizardController {
 	}
 	
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public String add(@RequestParam String name,@RequestParam(required = false, value = "copy") String copy, @RequestParam(required = false, value = "") String wizardId,
-			Authentication authentication) throws SQLException {
+	public String add(@RequestParam String name,
+			@RequestParam(required = false, value = "copy") String copy,
+			@RequestParam(required = false, value = "delete") String delete,
+			@RequestParam(required = false, value = "") String wizardId,
+			Authentication authentication) 
+					throws SQLException {
 		// @ResponseBody means the returned String is the response, not a view name
 		// @RequestParam means it is a parameter from the GET or POST request
 		mLog.info("starting add");
@@ -104,11 +130,12 @@ public class WizardController {
 		wizard.setName(name);
 		wizard.setAgentid(userDetails.getAgent().getAgentid());
 		String encodeId = null;
+		String encrypt = null;
 		try {
 			wizard = wizardRepository.save(wizard);
 			//add encrypt
 			mLog.info("wizardId [" + wizard.getWizardid() + "]");
-			String encrypt = EncryptionDecryptionManager.encrypt(wizard.getWizardid());
+			encrypt = EncryptionDecryptionManager.encrypt(wizard.getWizardid());
 			wizard.setEncrypt(encrypt);
 			wizard = wizardRepository.save(wizard);
 			mLog.info("encrypt [" + encrypt + "]");
@@ -120,12 +147,18 @@ public class WizardController {
 			throw new DataIntegrityViolationException("Duplicate name");
 		}
 		//String encodeId = URLEncoder.encode(wizard.getEncrypt(), StandardCharsets.UTF_8);
-		
-		if (copy != null) {
+		mLog.info("delete [" + delete + "]");
+		mLog.info("copy [" + copy + "]");
+		if (delete.equals("delete")) {
+			delete(encrypt);
+			return "redirect:/wizards";
+		}
+		if (copy.equals("copy")) {
 			encodeId = this.copy(wizard);
 		}
 		
 		String nextPage = "redirect:/PresentedToPage?ID=" + encodeId;
+	
 ////PresentedToPage?ID=PresentedToPage
 		return nextPage;
 
