@@ -1,6 +1,5 @@
 package web.controller;
 
-
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
@@ -41,7 +40,7 @@ public class WizardController {
 
 	@RequestMapping(value = "/detail", method = RequestMethod.GET)
 	public String detail(Model model, @RequestParam String ID) {
-		ID= EncryptionDecryptionManager.decrypt(ID);
+		ID = EncryptionDecryptionManager.decrypt(ID);
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
 		model.addAttribute("wizard", wizard);
@@ -51,25 +50,20 @@ public class WizardController {
 	private void delete(String ID) {
 		mLog.info("starting delete");
 		mLog.info("from Wizard id " + ID);
-		ID= EncryptionDecryptionManager.decrypt(ID);
+		ID = EncryptionDecryptionManager.decrypt(ID);
 		Optional<Wizard> wizardOpt = wizardRepository.findById(Integer.valueOf(ID));
 		Wizard wizard = wizardOpt.orElse(null);
-		//loop thru and save pages
+		// loop thru and save pages
 		Iterable<WizardData> dataPages = wizardDataRepository.findByWizardid(wizard.getWizardid());
-		for (WizardData wizardData : dataPages) {	
+		for (WizardData wizardData : dataPages) {
 			wizardDataRepository.delete(wizardData);
 			mLog.info("page deleted " + wizardData.getPagename());
 		}
 		wizardRepository.delete(wizard);
 		mLog.info("wizard deleted ");
-		
-		
+
 	}
-	
-	
-	
-	
-	
+
 	private String copy(Wizard fromWizard) {
 		mLog.info("starting COPY");
 		mLog.info("from Wizard id " + fromWizard.getWizardid());
@@ -77,14 +71,14 @@ public class WizardController {
 		String name = "copyOf_" + fromWizard.getName();
 		toWizard.setName(name);
 		toWizard.setAgentid(fromWizard.getAgentid());
-		
+
 		toWizard = wizardRepository.save(toWizard);
-		
+
 		String encrypt = EncryptionDecryptionManager.encrypt(toWizard.getWizardid());
 		toWizard.setEncrypt(encrypt);
 		toWizard = wizardRepository.save(toWizard);
-		
-		//loop thru and save pages
+
+		// loop thru and save pages
 		Iterable<WizardData> dataPages = wizardDataRepository.findByWizardid(fromWizard.getWizardid());
 		for (WizardData fromData : dataPages) {
 			WizardData copyData = new WizardData();
@@ -97,26 +91,22 @@ public class WizardController {
 			mLog.info("new page data  page name " + copyData.getPagename());
 		}
 		String encodeId = EncryptionDecryptionManager.encode(encrypt);
-		
-		
-		
+
 		return encodeId;
-		
+
 	}
-	
+
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public String add(@RequestParam String name,
-			@RequestParam(required = false, value = "copy") String copy,
+	public String add(@RequestParam String name, @RequestParam(required = false, value = "copy") String copy,
 			@RequestParam(required = false, value = "delete") String delete,
-			@RequestParam(required = false, value = "") String wizardId,
-			Authentication authentication) 
-					throws SQLException {
+			@RequestParam(required = false, value = "") String wizardId, Authentication authentication)
+			throws SQLException {
 		// @ResponseBody means the returned String is the response, not a view name
 		// @RequestParam means it is a parameter from the GET or POST request
 		mLog.info("starting add");
 		mLog.info("name " + name);
 		mLog.info("wizardId " + wizardId);
-	
+
 		Wizard wizard = new Wizard();
 		MyUserPrincipal userDetails = (MyUserPrincipal) authentication.getPrincipal();
 		if (wizardId != null && !wizardId.equals("")) {
@@ -133,32 +123,37 @@ public class WizardController {
 		String encrypt = null;
 		try {
 			wizard = wizardRepository.save(wizard);
-			//add encrypt
+			// add encrypt
 			mLog.info("wizardId [" + wizard.getWizardid() + "]");
 			encrypt = EncryptionDecryptionManager.encrypt(wizard.getWizardid());
 			wizard.setEncrypt(encrypt);
 			wizard = wizardRepository.save(wizard);
 			mLog.info("encrypt [" + encrypt + "]");
-			//encodeId = java.net.URLEncoder.encode(encrypt, "UTF_8");
+			// encodeId = java.net.URLEncoder.encode(encrypt, "UTF_8");
 			encodeId = EncryptionDecryptionManager.encode(encrypt);
 			mLog.info("encodeId [" + encodeId + "]");
 		} catch (Exception ex) {
-			mLog.severe("EROOR [" + ex.getMessage() +"]");
+			mLog.severe("EROOR [" + ex.getMessage() + "]");
 			throw new DataIntegrityViolationException("Duplicate name");
 		}
-		//String encodeId = URLEncoder.encode(wizard.getEncrypt(), StandardCharsets.UTF_8);
+		// String encodeId = URLEncoder.encode(wizard.getEncrypt(),
+		// StandardCharsets.UTF_8);
 		mLog.info("delete [" + delete + "]");
 		mLog.info("copy [" + copy + "]");
-		if (delete.equals("delete")) {
-			delete(encrypt);
-			return "redirect:/wizards";
+		if (delete != null) {
+			if (delete.equals("delete")) {
+				delete(encrypt);
+				return "redirect:/wizards";
+			}
 		}
-		if (copy.equals("copy")) {
-			encodeId = this.copy(wizard);
+		if (copy != null) {
+			if (copy.equals("copy")) {
+				encodeId = this.copy(wizard);
+			}
 		}
-		
+
 		String nextPage = "redirect:/PresentedToPage?ID=" + encodeId;
-	
+
 ////PresentedToPage?ID=PresentedToPage
 		return nextPage;
 
@@ -182,8 +177,8 @@ public class WizardController {
 				hasRows = true;
 			}
 		}
-		List <Wizard> listEncode= new ArrayList();  
-		//loop en encode
+		List<Wizard> listEncode = new ArrayList();
+		// loop en encode
 		for (Wizard wizard : wizards) {
 			try {
 				String encodeIdValue = EncryptionDecryptionManager.encode(wizard.getEncrypt());
@@ -193,11 +188,11 @@ public class WizardController {
 				mLog.severe(e.getMessage());
 				e.printStackTrace();
 			}
-        }
+		}
 
 		mLog.info("has rows [" + hasRows + "]");
 		// add to model
-		//model.addAttribute("wizards", listEncode);
+		// model.addAttribute("wizards", listEncode);
 		model.addAttribute("wizards", wizards);
 		// add to model
 		model.addAttribute("hasRows", hasRows);
@@ -205,8 +200,7 @@ public class WizardController {
 		return "wizards";
 
 	}
-	
-	
+
 	@GetMapping(path = "/updateAllWizards")
 	public String updateAll(Model model, Authentication authentication) {
 		mLog.info("starting getAll wizards");
@@ -218,16 +212,14 @@ public class WizardController {
 		Sort sort = new Sort(Direction.ASC, "name");
 
 		Iterable<Wizard> wizards = wizardRepository.findByAgentid(userDetails.getAgent().getAgentid(), sort);
-		
-		
-		
+
 		if (wizards != null) {
-			
-          for (Wizard wizard : wizards) {
-        	  String encrypt= EncryptionDecryptionManager.encrypt(wizard.getWizardid());
-        	  wizard.setEncrypt(encrypt);
-        	  wizardRepository.save(wizard);
-          }
+
+			for (Wizard wizard : wizards) {
+				String encrypt = EncryptionDecryptionManager.encrypt(wizard.getWizardid());
+				wizard.setEncrypt(encrypt);
+				wizardRepository.save(wizard);
+			}
 		}
 
 		mLog.info("completed update");
@@ -235,8 +227,7 @@ public class WizardController {
 		return "updateWizards";
 
 	}
-	
-	
+
 	@GetMapping(path = "/about")
 	public String about(Model model, Authentication authentication) {
 		mLog.info("starting about");
@@ -245,13 +236,9 @@ public class WizardController {
 
 		model.addAttribute("agent", userDetails.getAgent());
 		model.addAttribute("contact", userDetails.getContact());
-		
 
 		return "about";
 
 	}
-	
-	
-
 
 }

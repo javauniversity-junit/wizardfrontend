@@ -115,21 +115,25 @@
 
                 <script>
                 function deleteSCR() {
+                	console.group("delete");
+
                 	  var txt="Are you sure to delete " + document.getElementById('name').value + "?";
                 	  if (confirm(txt)) {
+                		  console.log("remove scr");
                 		  document.getElementById('delete').value="delete";
                 		  document.getElementById('formId').submit();
                 	    // Do the delete when you click ok
                 	  } else {
-                	    return;
-                	    // If you click cancel, remove the alert box
+                		  return false;
                 	  }
-                	  console.log(txt);
+                	  console.groupEnd();
                 	}
                 
                   function copySCR() {
+                	  console.group("copy");
                 	  document.getElementById('copy').value="copy";
             		  document.getElementById('formId').submit();
+            		  console.groupEnd();
                   }
                 </script>
 
