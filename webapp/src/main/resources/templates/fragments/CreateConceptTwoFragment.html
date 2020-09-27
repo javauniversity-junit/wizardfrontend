@@ -12,11 +12,18 @@
       
   
 		<div class="whiteGrad mce-content-body">
+		<div class="w3-row">
+				
+					<textarea class="editor mce-content-body" id="textareaId" name="textareaId"
+						th:text="${CreateConceptTwoPageModel?.textArea}" />
+				
+				
+			</div>
 		<script th:inline="javascript">
 			/*<![CDATA[*/
 
     			var message = /*[[${CreateConceptTwoPageModel?.textArea}]]*/ 'default';
-    			 document.write(unescape(message));
+    			 //document.write(unescape(message));
 			     console.log(message);
 
 			/*]]>*/
