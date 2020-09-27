@@ -335,47 +335,9 @@
 					<!-- first row -->
 					<div class="w3-row" style="padding-top: 4%;"></div>
 					<div class="w3-row" style="padding-top: 4%;">
-						<div class="w3-col m1 w3-center"><strong>B.</strong></div>
-						
-						<div class="w3-col m3 w3-center underline"
-							th:text="${ConfidentialClientEvaluationPageDataModel?.totalMediaInvestment}">
-           
-
-						</div>
-						
-						
-						<div class="w3-col m1 w3-center ">/</div>
-						<div class="w3-col m3 w3-center underline"
-							th:text="${ConfidentialClientEvaluationPageDataModel?.pctTAIGrossSalesLastYear + '%'}">
-						</div>
-
-
-
-						<div class="w3-col m1 w3-center">=</div>
-						<div class="w3-col m3 w3-center underline"
-							th:text="${ConfidentialClientEvaluationPageDataModel?.grossSalesLastyear}">
-
-						</div>
-
-					</div>
-
-					<!-- second row -->
-					<div class="w3-row">
-						<div class="w3-col m1 w3-center">&nbsp;</div>
-						<div class="w3-col m3 w3-center bold-text">Total Adv Investment Next
-							12 Months</div>
-						<div class="w3-col m1 w3-center ">&nbsp;</div>
-						<div class="w3-col m3 w3-center bold-text">Adv % of Gross Sales</div>
-						<div class="w3-col m1 w3-center">&nbsp;</div>
-						<div class="w3-col m3 w3-center bold-text">Estimated Gross Sales next
-							12 mos.</div>
-
-					</div>
-
-					<!-- third row -->
-
+					
 					<div class="w3-row" style="padding-top: 1%";>
-						<div class="w3-col m1 w3-center"><strong>C.</strong></div>
+						<div class="w3-col m1 w3-center"><strong>B.</strong></div>
 						
 						<div class="w3-col m3 w3-center underline"
 							th:text="${ConfidentialClientEvaluationPageDataModel?.taiNext12Months}">$100,000</div>
@@ -389,19 +351,63 @@
 							th:text="${ConfidentialClientEvaluationPageDataModel?.estimatedGrossSalesNext12Months }"></div>
 
 					</div>
+					
+					<div class="w3-row">
+						<div class="w3-col m1 w3-center">&nbsp;</div>
+						<div class="w3-col m3 w3-center bold-text">Total Adv Investment Next
+							12 Months</div>
+						<div class="w3-col m1 w3-center ">&nbsp;</div>
+						<div class="w3-col m3 w3-center bold-text">Adv % of Gross Sales</div>
+						<div class="w3-col m1 w3-center">&nbsp;</div>
+						<div class="w3-col m3 w3-center bold-text">Estimated Gross Sales next
+							12 mos.</div>
+
+					</div>
+				
+
+					<!-- third row -->
+
 
 					<!-- fifth row -->
+					
+
+					</div>
+					<div class="w3-col m1 w3-center"><strong>C.</strong></div>
+						
+						<div class="w3-col m3 w3-center underline"
+							th:text="${ConfidentialClientEvaluationPageDataModel?.taiShouldBe}">
+           
+
+						</div>
+						
+						
+						<div class="w3-col m1 w3-center ">/</div>
+						<div class="w3-col m3 w3-center underline"
+							th:text="${ConfidentialClientEvaluationPageDataModel?.industryAverage + '%'}">
+						</div>
+
+
+
+						<div class="w3-col m1 w3-center">=</div>
+						<div class="w3-col m3 w3-center underline"
+							th:text="${ConfidentialClientEvaluationPageDataModel?.salesGoals}">
+
+						</div>
+
+					</div>
+
+					<!-- second row -->
 					<div class="w3-row">
 						<div class="w3-col m1 w3-center">&nbsp;</div>
 						<div class="w3-col m3 w3-center bold-text">Stretch Goal Total Adv
-							Investment</div>
+							Investment (TAI) Next 12 Months</div>
 						<div class="w3-col m1 w3-center ">&nbsp;</div>
 						<div class="w3-col m3 w3-center bold-text">Adv % of Gross Sales</div>
 						<div class="w3-col m1 w3-center">&nbsp;</div>
 						<div class="w3-col m3 w3-center bold-text">Stretch Gross Sales Goals
 							Next 12 Months</div>
-
-					</div>
+							
+					
 
 
 				</div>
