@@ -38,13 +38,14 @@ public class PresentedToPageController {
 		mLog.info("starting detail");
 		mLog.info("ID [" + ID + "]");
 		String decryptID = null;
-		if (session.getAttribute("ID") == null) {
-			decryptID = EncryptionDecryptionManager.decrypt(ID);
+		// determine if value is in session
+		//if (session.getAttribute("ID") == null) {
+			decryptID = EncryptionDecryptionManager.decrypt(ID); //value not in session
 			mLog.info("decryptID [" + decryptID + "]");
-		} else {
-			decryptID = session.getAttribute("ID").toString();
+		/*} else {
+			decryptID = session.getAttribute("ID").toString(); // value is in session
 			mLog.info("session id [" + decryptID + "]");
-		}
+		}*/
 
 		// get wizard header
 		
@@ -58,7 +59,7 @@ public class PresentedToPageController {
 					PresentedToPageModel.class);
 
 		}
-		session.setAttribute("ID", decryptID);
+		session.setAttribute("ID", decryptID); //put in session
 		// DemographicManager.convertFromJson(json)
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("dataPageModel", dataPageModel);

@@ -120,7 +120,7 @@
                 	  var txt="Are you sure to delete " + document.getElementById('name').value + "?";
                 	  if (confirm(txt)) {
                 		  console.log("remove scr");
-                		  document.getElementById('delete').value="delete";
+                		  document.getElementById("formId").action = "delete";
                 		  document.getElementById('formId').submit();
                 	    // Do the delete when you click ok
                 	  } else {
@@ -131,9 +131,17 @@
                 
                   function copySCR() {
                 	  console.group("copy");
-                	  document.getElementById('copy').value="copy";
+                	  document.getElementById("formId").action = "copy";
             		  document.getElementById('formId').submit();
             		  console.groupEnd();
+                  }
+                  
+                  //I added in this code first to begin separting the code and giving each button its own ID
+                  function updateSCR() {
+                	  console.group("update");
+                	  document.getElementById("formId").action = "update";
+                	  document.getElementByID('formId').submit();
+                	  console.groupEnd();
                   }
                 </script>
 
@@ -141,17 +149,14 @@
 
 
 
-				<button type="submit" class="btn btn-primary">Save</button>
+				<button onclick="updateSCR()" class="btn btn-primary">Update</button>
 				
 				<button  onclick="copySCR()" class="btn btn-primary">Copy</button>
 			
 				
 				<button  onclick="return deleteSCR();" class="btn btn-primary">Delete</button>
+
 				
-				<input name="copy" id="copy"
-						value="" type="hidden"   class="btn btn-primary" />
-				<input name="delete" id="delete"
-						value="" type="hidden"   class="btn btn-primary" />
 			</form>
 
 		</div>
