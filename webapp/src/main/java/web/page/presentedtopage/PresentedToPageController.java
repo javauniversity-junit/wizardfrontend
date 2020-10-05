@@ -34,13 +34,14 @@ public class PresentedToPageController {
 	private static final Logger mLog = Logger.getLogger(PresentedToPageController.class.getName());
 
 	@RequestMapping(value = "/PresentedToPage", method = RequestMethod.GET)
-	public String detail(Model model, @RequestParam String ID,HttpSession session) {
+	public String detail(Model model, @RequestParam(required = false, value = "") String ID,HttpSession session) {
 		mLog.info("starting detail");
-		mLog.info("ID [" + ID + "]");
-		String decryptID = null;
+		
+		String decryptID = session.getAttribute("ID").toString();
+		
 		// determine if value is in session
 		//if (session.getAttribute("ID") == null) {
-			decryptID = EncryptionDecryptionManager.decrypt(ID); //value not in session
+			//decryptID = EncryptionDecryptionManager.decrypt(ID); //value not in session
 			mLog.info("decryptID [" + decryptID + "]");
 		/*} else {
 			decryptID = session.getAttribute("ID").toString(); // value is in session
@@ -59,7 +60,7 @@ public class PresentedToPageController {
 					PresentedToPageModel.class);
 
 		}
-		session.setAttribute("ID", decryptID); //put in session
+		//session.setAttribute("ID", decryptID); //put in session
 		// DemographicManager.convertFromJson(json)
 		model.addAttribute("wizardData", wizardData);
 		model.addAttribute("dataPageModel", dataPageModel);
