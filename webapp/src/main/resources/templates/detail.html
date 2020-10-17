@@ -100,18 +100,7 @@
 
 			<form id="formId" method="post" action="add">
 				<dxa:csrf-token />
-				<div class="form-group">
-					<div class="col-2">
-						<label for="Name" class="displayMedium">Name</label>
-					</div>
-					<div class="col-10">
-						<input placeholder="Enter name for Wizard/SCR"
-							th:value="${wizard.name}" required="required"
-							class="form-control" maxlength="75" type="text" name="name"
-							id="name" /> <input type="hidden" id="wizardId"
-							th:value="${wizard.encrypt}" name="wizardId" />
-					</div>
-				</div>
+				
 
                 <script>
                 function deleteSCR() {
@@ -145,16 +134,60 @@
                   }
                 </script>
 
-
-
-
-
-				<button onclick="updateSCR()" class="btn btn-primary">Update</button>
+<style>
+mark {
+  background-color: yellow;
+  color: black;
+}
+</style>
+<div class="card">
+ 
+  <div class="card-body">
+    <h5 class="card-title">Renaming the Wizard/SCR Name</h5>
+	  
+	<div class="form-group">
+					<div class="col-2">
+						<label for="Name" class="displayMedium">Name</label>
+					</div>
+					<div class="col-10">
+						<input placeholder="Enter name for Wizard/SCR"
+							th:value="${wizard.name}" required="required"
+							class="form-control" maxlength="75" type="text" name="name"
+							id="name" /> <input type="hidden" id="wizardId"
+							th:value="${wizard.encrypt}" name="wizardId" />
+					</div>
+				</div>  
+	  
+	  
+    <p class="card-text">Renamng the existing Wizard/SCR with the new name for the wizard/SCR. Remember that each Wizard/SCR should have a unique and meaningful name. The name distinguishes the wizards that you create.</p>
+    <button onclick="updateSCR()" class="btn btn-primary">Renaming Wizard/SCR </button>
+  </div>
+</div
 				
-				<button  onclick="copySCR()" class="btn btn-primary">Copy</button>
+				
+	<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Copying the Wizard/SCR </h5>
+    <p class="card-text">Copying the existing Wizard/SCR will copy all the data from the Wizard/SCR. </p>
+    <button  onclick="copySCR()" class="btn btn-primary">Copy Wizard/SCR</button>
+  </div>
+</div>			
+
+
+<div class="card">
+ 
+  <div class="card-body">
+    <h5 class="card-title" style="color:red;">Deleting the Wizard/SCR </h5>
+    <p class="card-text">Deleting the existing Wizard/SCR will remove the Wizard/SCR from the system. <mark>You will not be able to recover the Wizard/SCR</mark></p>
+    <button  onclick="return deleteSCR();" class="btn btn-primary">Delete Wizard/SCR</button>
+  </div>
+</div>
+				
+				
+				
 			
 				
-				<button  onclick="return deleteSCR();" class="btn btn-primary">Delete</button>
+				
 
 				
 			</form>
