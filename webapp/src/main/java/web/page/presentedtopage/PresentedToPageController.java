@@ -34,7 +34,7 @@ public class PresentedToPageController {
 	private static final Logger mLog = Logger.getLogger(PresentedToPageController.class.getName());
 
 	@RequestMapping(value = "/PresentedToPage", method = RequestMethod.GET)
-	public String detail(Model model, @RequestParam(required = false, value = "") String ID,HttpSession session) {
+	public String detail(Model model, @RequestParam(required = false) String ID,HttpSession session) {
 		mLog.info("starting detail");
 		
 		String decryptID = session.getAttribute("ID").toString();
