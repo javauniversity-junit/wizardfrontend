@@ -68,7 +68,7 @@
 							class="nav-link link-scroll">Home</a></li>
 						<li class="nav-item"><a href="wizards"
 							class="nav-link link-scroll">Wizard/SCR</a></li>
-							<li class="nav-item"><a href="about"
+						<li class="nav-item"><a href="about"
 							class="nav-link link-scroll">About</a></li>
 						<li class="nav-item"><a href="logout"
 							class="nav-link link-scroll">Logout</a></li>
@@ -90,116 +90,134 @@
 
 
 		<div class="container" style="background-color: white; color: black;">
-		
+
 
 			<form id="formId" method="post" action="add">
 				<dxa:csrf-token />
-				
 
-                <script>
-                function deleteSCR() {
-                	console.group("delete");
 
-                	  var txt="Are you sure to delete " + document.getElementById('name').value + "?";
-                	  if (confirm(txt)) {
-                		  console.log("remove scr");
-                		  document.getElementById("formId").action = "delete";
-                		  document.getElementById('formId').submit();
-                	    // Do the delete when you click ok
-                	  } else {
-                		  return false;
-                	  }
-                	  console.groupEnd();
-                	}
-                
-                  function copySCR() {
-                	  console.group("copy");
-                	  document.getElementById("formId").action = "copy";
-            		  document.getElementById('formId').submit();
-            		  console.groupEnd();
-                  }
-                  
-                  //I added in this code first to begin separting the code and giving each button its own ID
-                  function updateSCR() {
-                	  console.group("update");
-                	  document.getElementById("formId").action = "update";
-                	  document.getElementByID('formId').submit();
-                	  console.groupEnd();
-                  }
-                </script>
+				<script>
+					function deleteSCR() {
+						console.group("delete");
 
-<style>
+						var txt = "Are you sure to delete "
+								+ document.getElementById('name').value + "?";
+						if (confirm(txt)) {
+							console.log("remove scr");
+							document.getElementById("formId").action = "delete";
+							document.getElementById('formId').submit();
+							// Do the delete when you click ok
+						} else {
+							return false;
+						}
+						console.groupEnd();
+					}
+
+					function copySCR() {
+						console.group("copy");
+						document.getElementById("formId").action = "copy";
+						document.getElementById('formId').submit();
+						console.groupEnd();
+					}
+
+					//I added in this code first to begin separting the code and giving each button its own ID
+					function updateSCR() {
+						console.group("update");
+						document.getElementById("formId").action = "update";
+						document.getElementByID('formId').submit();
+						console.groupEnd();
+					}
+				</script>
+
+				<style>
 mark {
-  background-color: yellow;
-  color: black;
+	background-color: yellow;
+	color: black;
 }
 </style>
-<div class="card">
- 
-  <div class="card-body">
-    <h5 class="card-title">Renaming the Wizard/SCR Name</h5>
-	  
-	<div class="form-group">
-					<div class="col-2">
-						<label for="Name" class="displayMedium">Name</label>
+				<div class="card">
+					<div class="card-header">Renaming the Wizard/SCR Name</div>
+					<div class="card-body">
+
+
+						<div class="form-group">
+							<div class="col-2">
+								<label for="Name" class="displayMedium">Name</label>
+							</div>
+							<div class="col-10">
+								<input placeholder="Enter name for Wizard/SCR"
+									th:value="${wizard.name}" required="required"
+									class="form-control" maxlength="75" type="text" name="name"
+									id="name" /> <input type="hidden" id="wizardId"
+									th:value="${wizard.encrypt}" name="wizardId" />
+							</div>
+						</div>
+
+
+						<p class="card-text">Renaming the existing Wizard/SCR with the
+							new name for the wizard/SCR. Remember that each Wizard/SCR should
+							have a unique and meaningful name. The name distinguishes the
+							wizards that you create.</p>
+						<button onclick="updateSCR()" class="btn btn-primary">Renaming
+							Wizard/SCR</button>
 					</div>
-					<div class="col-10">
-						<input placeholder="Enter name for Wizard/SCR"
-							th:value="${wizard.name}" required="required"
-							class="form-control" maxlength="75" type="text" name="name"
-							id="name" /> <input type="hidden" id="wizardId"
-							th:value="${wizard.encrypt}" name="wizardId" />
+				</div>
+
+
+				<div class="card">
+					<div class="card-header">Copying the Wizard/SCR</div>
+					<div class="card-body">
+
+						<p class="card-text">Copying the existing Wizard/SCR will copy
+							all the data from the Wizard/SCR.</p>
+						<button onclick="copySCR()" class="btn btn-primary">Copy
+							Wizard/SCR data.</button>
 					</div>
-				</div>  
-	  
-	  
-    <p class="card-text">Renamng the existing Wizard/SCR with the new name for the wizard/SCR. Remember that each Wizard/SCR should have a unique and meaningful name. The name distinguishes the wizards that you create.</p>
-    <button onclick="updateSCR()" class="btn btn-primary">Renaming Wizard/SCR </button>
-  </div>
-</div
-				
-				
-	<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">Copying the Wizard/SCR </h5>
-    <p class="card-text">Copying the existing Wizard/SCR will copy all the data from the Wizard/SCR. </p>
-    <button  onclick="copySCR()" class="btn btn-primary">Copy Wizard/SCR</button>
-  </div>
-</div>			
+				</div>
 
 
-<div class="card">
- 
-  <div class="card-body">
-    <h5 class="card-title" style="color:red;">Deleting the Wizard/SCR </h5>
-    <p class="card-text">Deleting the existing Wizard/SCR will remove the Wizard/SCR from the system. <mark>You will not be able to recover the Wizard/SCR</mark></p>
-    <button  onclick="return deleteSCR();" class="btn btn-primary">Delete Wizard/SCR</button>
-  </div>
-</div>
-				
-				
-				
-			
-				
-				
+				<div class="card">
+					<div class="card-header" style="color: red;">Deleting the
+						Wizard/SCR</div>
+					<div class="card-body">
 
-				
+						<p class="card-text">
+							Deleting the existing Wizard/SCR will remove the Wizard/SCR from
+							the system.
+							<mark>You will not be able to recover the Wizard/SCR</mark>
+						</p>
+						<button onclick="return deleteSCR();" class="btn btn-primary">Delete
+							Wizard/SCR</button>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
 			</form>
 
 		</div>
 	</section>
 	<div class="container">
-<footer class="page-footer font-small gray pt-4 border border-dark border-right-0 border-left-0">
+		<footer
+			class="page-footer font-small gray pt-4 border border-dark border-right-0 border-left-0">
 
-  <p>Copyright © 1984-2020 Executive Decision Systems, Inc. and 
-  The Guld Resource Group, LLC. The data, formulas, and all other content
-   in these materials are the property of Executive Decision Systems, Inc. 
-   and The Guld Resource Group, LLC and are protected by copyright and 
-   other intellectual property laws. No part of these materials may be reproduced, distributed, or used in any way without a license agreement or other written consent of The Guld Resource Group, LLC permitting such use. All rights reserved. 
-  To report violations, please call (804) 356-7006.</p>
+			<p>Copyright © 1984-2020 Executive Decision Systems, Inc. and The
+				Guld Resource Group, LLC. The data, formulas, and all other content
+				in these materials are the property of Executive Decision Systems,
+				Inc. and The Guld Resource Group, LLC and are protected by copyright
+				and other intellectual property laws. No part of these materials may
+				be reproduced, distributed, or used in any way without a license
+				agreement or other written consent of The Guld Resource Group, LLC
+				permitting such use. All rights reserved. To report violations,
+				please call (804) 356-7006.</p>
 
-</footer>
-</div>
+		</footer>
+	</div>
 	<!-- JavaScript files-->
 	<script
 		src="https://d19m59y37dris4.cloudfront.net/blackandwhite/2-0-0/vendor/jquery/jquery.min.js"></script>
