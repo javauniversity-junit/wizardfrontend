@@ -19,38 +19,26 @@
 			</div>
 
 			<div class="w3-row" style="padding-bottom: 2%;">
-				<div class="w3-col s3 left-indent">
+				<div class="w3-col m5 l6 left-indent">
 
-					<span class="bold-text">1. How long have you been in business?</span>
-
-				</div>
-				<div class="w3-col m1">
-
+					<span class="bold-text">1. How long have you been in business?&nbsp; &nbsp;</span>
 					<span th:text="${StrategicMarketingPageOne?.yearsInBusiness}"></span>
 
 				</div>
+			
 
-				<div class="w3-col m3">
+				<div class="w3-col m3 l3">
 
-					<span class="bold-text">How many locations?</span>
-
-				</div>
-				<div class="w3-col m1">
-
-					<span><span
-						th:text="${StrategicMarketingPageOne?.numberOfLocations}"></span></span>
+					<span class="bold-text">How many locations? &nbsp; &nbsp;</span>
+					<span th:text="${StrategicMarketingPageOne?.numberOfLocations}"></span>
 
 				</div>
 
-				<div class="w3-col m2">
+				<div class="w3-col m3 l3">
 
-					<span><strong>Plan to Expand?</strong></span>
-
-				</div>
-				<div class="w3-col m2">
-                                   <span th:text="${StrategicMarketingPageOne?.planToExpand} ? 'Yes' : 'No'">/span>
+					<span><strong>Plan to Expand?&nbsp; &nbsp; </strong></span>
+					<span th:text="${StrategicMarketingPageOne?.planToExpand} ? 'Yes' : 'No'">/span>
 					
-
 				</div>
 			</div>
 
