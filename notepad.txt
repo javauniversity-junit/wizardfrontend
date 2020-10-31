@@ -1,0 +1,2 @@
+<div id="wizardCopyRightId"></div>
+$("#wizardCopyRightId").load("wizardcopyright.html");
