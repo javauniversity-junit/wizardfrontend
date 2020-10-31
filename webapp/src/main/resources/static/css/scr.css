@@ -91,3 +91,6 @@
 .custom-switch.custom-switch-xl .custom-control-input:checked ~ .custom-control-label::after {
     transform: translateX(calc(2.5rem - 0.25rem));
 }
+.wizardcopyright {
+	padding-top: 5px; color: black;
+}
