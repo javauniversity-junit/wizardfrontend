@@ -132,7 +132,7 @@
 						th:value="'redirect:/PlanBMediaPage?ID=' + ${wizard.encrypt}"
 						name="nextPage" /> <input type="hidden" id="wizarddataid"
 						th:value="${wizardData?.wizarddataid}" name="wizarddataid" />
-				</form>
+				</form><div id="wizardCopyRightId"></div>
 
 				<form id="myForm">
 					<fieldset>
@@ -284,7 +284,7 @@
 
 					</fieldset>
 
-				</form>
+				</form><div id="wizardCopyRightId"></div>
 			</div>
 			<div class="container" style="padding-top: 2%;">
 				<form method="post" action="savePlanBMediaPage">
@@ -491,7 +491,7 @@
 							value="Previous" type="submit" class="btn btn-primary"
 							style="background-color: #C0B879;" />
 					</fieldset>
-				</form>
+				</form><div id="wizardCopyRightId"></div>
 
 			</div>
 			<div class="container" style="padding-top: 2%;">
@@ -540,7 +540,7 @@
 		$(function() {
 			// Store
             sessionStorage.setItem("ID", /*[[${wizard.encrypt}]]*/);
-			$("#headerId").load("header.html");
+			$("#headerId").load("header.html"); $("#wizardCopyRightId").load("wizardcopyright.html");
 		});
 		/*]]>*/
 	</script>

@@ -146,7 +146,7 @@
 							class="custom-control-input"> <label for="excluded"
 							class="custom-control-label">Exclude from presentation</label>
 					</div>
-			</form>
+			</form><div id="wizardCopyRightId"></div>
 			<div id="wizardCopyRightId"></div>
 			<div class="container" style="padding-top:2%;">
 
@@ -185,8 +185,8 @@
 		$(function() {
 			// Store
             sessionStorage.setItem("ID", /*[[${wizard.encrypt}]]*/);
-			$("#headerId").load("header.html");
-			$("#wizardCopyRightId").load("wizardcopyright.html");
+			$("#headerId").load("header.html"); $("#wizardCopyRightId").load("wizardcopyright.html");
+			
 		});
 		/*]]>*/
 	</script>

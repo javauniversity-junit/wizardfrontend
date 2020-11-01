@@ -4,5 +4,7 @@ keytool -genkey -alias tomcat -keyalg RSA \
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	
+   $("#headerId").load("header.html"); $("#wizardCopyRightId").load("wizardcopyright.html"); $("#wizardCopyRightId").load("wizardcopyright.html");$("#wizardCopyRightId").load("wizardcopyright.html");
+    
     <button class="w3-btn w3-white" onclick="javascript:gotoAnchor(3,'down');">Next</button>
 	<button class="w3-btn w3-white" onclick="javascript:gotoAnchor(1,'up');">Previous</button>
