@@ -4,7 +4,7 @@
   
 }
 .averageSpikeInvestment::before {
-  content: "Average Spike Investment:";
+  content: "Average Spike Investment:  ";
   font-weight: bold;
   
 }
